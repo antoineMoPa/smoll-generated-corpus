@@ -1,2 +1,4 @@
 # Override parent's *.corpus ignore — these cost money to generate
 !*.corpus
+# But still ignore the generated one.
+corpus.corpus
