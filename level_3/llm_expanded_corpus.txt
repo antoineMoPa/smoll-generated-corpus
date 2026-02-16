@@ -1,0 +1,480 @@
+The dog barked loudly, and the cat darted under the couch. Q: What did the dog do? A: Barked loudly.<stop>
+The dog barked loudly, and the cat darted under the couch. Q: Where did the cat go? A: Under the couch.<stop>
+The dog barked loudly, and the cat darted under the couch. Q: How did the cat move? A: Darted quickly.<stop>
+The dog barked loudly, and the cat darted under the couch. Q: Why did the cat hide? A: Dog barked loudly.<stop>
+The cat meowed loudly, and the dog darted under the couch. Q: What animal meowed? A: The cat.<stop>
+The cat meowed loudly, and the dog darted under the couch. Q: Where did the dog go? A: Under the couch.<stop>
+The cat meowed loudly, and the dog darted under the couch. Q: How did the dog react? A: Darted away.<stop>
+The dog barked loudly, and the cat went under the couch. Q: What sound did the dog make? A: Barked loudly.<stop>
+The dog barked loudly, and the cat went under the couch. Q: Where is the cat now? A: Under the couch.<stop>
+The dog barked loudly, and the cat went under the couch. Q: How did the cat move? A: Went slowly.<stop>
+After resting on the mat, the cat stretched and yawned lazily. Q: Where was the cat resting? A: On the mat.<stop>
+After resting on the mat, the cat stretched and yawned lazily. Q: What did the cat do? A: Stretched and yawned.<stop>
+After resting on the mat, the cat stretched and yawned lazily. Q: How did the cat yawn? A: Lazily.<stop>
+After resting on the mat, the dog stretched and yawned lazily. Q: Which animal rested on the mat? A: The dog.<stop>
+After resting on the mat, the dog stretched and yawned lazily. Q: What actions did the dog take? A: Stretched and yawned.<stop>
+After resting on the mat, the dog stretched and yawned lazily. Q: When did the dog stretch? A: After resting.<stop>
+After resting on the mat, the dog yawned lazily. Q: Where had the dog been? A: On the mat.<stop>
+After resting on the mat, the dog yawned lazily. Q: What did the dog do next? A: Yawned lazily.<stop>
+Two birds were flying high above the sea while the sun was setting. Q: How many birds were flying? A: Two birds.<stop>
+Two birds were flying high above the sea while the sun was setting. Q: Where were the birds flying? A: Above the sea.<stop>
+Two birds were flying high above the sea while the sun was setting. Q: When were the birds flying? A: While sun setting.<stop>
+Three birds were flying high above the sea while the sun was setting. Q: How many birds flew high? A: Three birds.<stop>
+Three birds were flying high above the sea while the sun was setting. Q: What was happening to the sun? A: It was setting.<stop>
+Three birds were flying high above the sea while the sun was setting. Q: Where did the birds fly? A: Above the sea.<stop>
+The fish swam swiftly through the coral reef, dodging tiny bubbles. Q: What animal swam swiftly? A: The fish.<stop>
+The fish swam swiftly through the coral reef, dodging tiny bubbles. Q: Where did the fish swim? A: Through coral reef.<stop>
+The fish swam swiftly through the coral reef, dodging tiny bubbles. Q: How did the fish swim? A: Swiftly.<stop>
+The fish swam swiftly through the coral reef, dodging tiny bubbles. Q: What did the fish dodge? A: Tiny bubbles.<stop>
+Although it was tired, the old dog still chased the bouncing ball. Q: How was the dog feeling? A: Tired.<stop>
+Although it was tired, the old dog still chased the bouncing ball. Q: What did the dog chase? A: The bouncing ball.<stop>
+Although it was tired, the old dog still chased the bouncing ball. Q: Which dog chased the ball? A: The old dog.<stop>
+Although it was tired, the old dog still chased the bouncing ball. Q: Did the dog stop chasing? A: No, it chased.<stop>
+Although it was tired, the old cat still chased the bouncing ball. Q: What chased the ball? A: The old cat.<stop>
+Although it was tired, the old cat still chased the bouncing ball. Q: How did the cat feel? A: Tired.<stop>
+Although it was tired, the old cat still chased the bouncing ball. Q: What was bouncing? A: The ball.<stop>
+Although it was tired, the old cat still chased the bouncing ball. Q: Did the cat stop? A: No, it chased.<stop>
+Although it was tired, the cat chased the mouse. Q: What did the cat chase? A: The mouse.<stop>
+Although it was tired, the cat chased the mouse. Q: How was the cat feeling? A: Tired.<stop>
+Although it was tired, the cat chased the mouse. Q: Who chased the mouse? A: The cat.<stop>
+A sailboat is drifting toward the shore as the wind begins to fade. Q: What is drifting? A: A sailboat.<stop>
+A sailboat is drifting toward the shore as the wind begins to fade. Q: Where is it going? A: Toward the shore.<stop>
+A sailboat is drifting toward the shore as the wind begins to fade. Q: What is happening to the wind? A: It is fading.<stop>
+The man sat quietly on the wooden bench under the shady tree. Q: Who sat quietly? A: The man.<stop>
+The man sat quietly on the wooden bench under the shady tree. Q: Where did he sit? A: On a bench.<stop>
+The man sat quietly on the wooden bench under the shady tree. Q: What kind of bench? A: A wooden bench.<stop>
+The man sat quietly on the wooden bench under the shady tree. Q: Where was the bench? A: Under a tree.<stop>
+Because it was raining, the birds hid in the thick branches. Q: Why did birds hide? A: Because it rained.<stop>
+Because it was raining, the birds hid in the thick branches. Q: Where did they hide? A: In thick branches.<stop>
+Because it was raining, the birds hid in the thick branches. Q: Who hid from rain? A: The birds.<stop>
+Because it was raining, the birds hid in the branches. Q: What caused the hiding? A: The rain.<stop>
+Because it was raining, the birds hid in the branches. Q: Where did birds go? A: Into the branches.<stop>
+It was raining, so the birds hid in the branches. Q: Why hide in branches? A: It was raining.<stop>
+It was raining, so the birds hid in the branches. Q: Who hid in branches? A: The birds.<stop>
+It was raining, so the birds hid in the trees. Q: Where did birds hide? A: In the trees.<stop>
+It was raining, so the birds hid in the trees. Q: What was the weather? A: Raining.<stop>
+The cat saw the fish in the bowl, but it didn't make a sound. Q: What did the cat see? A: The fish.<stop>
+The cat saw the fish in the bowl, but it didn't make a sound. Q: Where was the fish? A: In the bowl.<stop>
+The cat saw the fish in the bowl, but it didn't make a sound. Q: Did the cat speak? A: No, no sound.<stop>
+The dog sat beside the boy, wagging its tail with excitement. Q: Who sat beside the boy? A: The dog.<stop>
+The dog sat beside the boy, wagging its tail with excitement. Q: What was the dog doing? A: Wagging its tail.<stop>
+The dog sat beside the boy, wagging its tail with excitement. Q: How did the dog feel? A: Excited.<stop>
+The dog sat beside the boy, wagging its tail with excitement. Q: Where was the dog? A: Beside the boy.<stop>
+A tired seagull landed on the sailboat, then quickly flew away. Q: What kind of seagull landed? A: A tired one.<stop>
+A tired seagull landed on the sailboat, then quickly flew away. Q: Where did the seagull land? A: On the sailboat.<stop>
+A tired seagull landed on the sailboat, then quickly flew away. Q: How did the seagull fly away? A: Quickly.<stop>
+A tired seagull landed on the sailboat, then quickly flew away. Q: What did the seagull do first? A: Landed on the sailboat.<stop>
+An old seagull landed on the sailboat, then flew away. Q: How old was the seagull? A: Old.<stop>
+An old seagull landed on the sailboat, then flew away. Q: Where did the bird land? A: On the sailboat.<stop>
+An old seagull landed on the sailboat, then flew away. Q: What did the seagull do last? A: Flew away.<stop>
+Before the sun rose, the birds were already singing in the trees. Q: When were the birds singing? A: Before sunrise.<stop>
+Before the sun rose, the birds were already singing in the trees. Q: Where were the birds singing? A: In the trees.<stop>
+Before the sun rose, the birds were already singing in the trees. Q: What were the birds doing? A: Singing.<stop>
+Before the sun rose, the birds were already singing. Q: When did the birds start singing? A: Before sunrise.<stop>
+Before the sun rose, the birds were already singing. Q: Were the birds silent? A: No, they sang.<stop>
+The garden was silent, except for a bee buzzing near the carrots. Q: How was the garden? A: Silent.<stop>
+The garden was silent, except for a bee buzzing near the carrots. Q: What made noise in the garden? A: A bee.<stop>
+The garden was silent, except for a bee buzzing near the carrots. Q: Where was the bee buzzing? A: Near the carrots.<stop>
+The dog barked again and again until the mailman finally left. Q: Who was barking? A: The dog.<stop>
+The dog barked again and again until the mailman finally left. Q: How did the dog bark? A: Again and again.<stop>
+The dog barked again and again until the mailman finally left. Q: When did the barking stop? A: When the mailman left.<stop>
+The cat meowed again and again until the mailman finally left. Q: Who was meowing? A: The cat.<stop>
+The cat meowed again and again until the mailman finally left. Q: Why did the cat stop meowing? A: The mailman left.<stop>
+Although the cat looked peaceful, it was ready to pounce. Q: How did the cat look? A: Peaceful.<stop>
+Although the cat looked peaceful, it was ready to pounce. Q: What was the cat ready to do? A: Pounce.<stop>
+Although the cat looked peaceful, it was ready to pounce. Q: Was the cat actually calm? A: No, ready to pounce.<stop>
+A soft breeze moved through the tall grass where the dog was lying. Q: What moved through the grass? A: A soft breeze.<stop>
+A soft breeze moved through the tall grass where the dog was lying. Q: Where was the dog lying? A: In the tall grass.<stop>
+A soft breeze moved through the tall grass where the dog was lying. Q: How was the breeze? A: Soft.<stop>
+The fish circled in its bowl, unaware of the curious kitten nearby. Q: What was the fish doing? A: Circling in its bowl.<stop>
+The fish circled in its bowl, unaware of the curious kitten nearby. Q: Who was nearby? A: A curious kitten.<stop>
+The fish circled in its bowl, unaware of the curious kitten nearby. Q: Was the fish aware of the kitten? A: No.<stop>
+The man leaned back, closed his eyes, and listened to the wind. Q: Who leaned back? A: The man<stop>
+The man leaned back, closed his eyes, and listened to the wind. Q: What did he close? A: His eyes<stop>
+The man leaned back, closed his eyes, and listened to the wind. Q: What did he listen to? A: The wind<stop>
+The man leaned back, closed his eyes, and listened to the wind. Q: How many actions did he take? A: Three<stop>
+If the rain stops, the dog will go outside and play in the mud. Q: What must stop first? A: The rain<stop>
+If the rain stops, the dog will go outside and play in the mud. Q: Who will go outside? A: The dog<stop>
+If the rain stops, the dog will go outside and play in the mud. Q: Where will the dog play? A: In the mud<stop>
+If the rain stops, the dog will go outside and play in the mud. Q: What will the dog do? A: Play in the mud<stop>
+The cat darted under the couch when the dog barked loudly. Q: Who darted under the couch? A: The cat<stop>
+The cat darted under the couch when the dog barked loudly. Q: Where did the cat go? A: Under the couch<stop>
+The cat darted under the couch when the dog barked loudly. Q: Why did the cat hide? A: Dog barked loudly<stop>
+The cat darted under the couch when the dog barked loudly. Q: How did the dog bark? A: Loudly<stop>
+Loud barking from the dog sent the cat hiding beneath the couch. Q: What caused the cat to hide? A: Loud barking<stop>
+Loud barking from the dog sent the cat hiding beneath the couch. Q: Who was barking? A: The dog<stop>
+Loud barking from the dog sent the cat hiding beneath the couch. Q: Where did the cat hide? A: Beneath the couch<stop>
+Loud barking from the dog sent the cat hiding beneath the couch. Q: What animal hid? A: The cat<stop>
+After yawning lazily, the cat stretched on the mat. Q: What did the cat do first? A: Yawned lazily<stop>
+After yawning lazily, the cat stretched on the mat. Q: Who stretched on the mat? A: The cat<stop>
+After yawning lazily, the cat stretched on the mat. Q: Where did the cat stretch? A: On the mat<stop>
+After yawning lazily, the cat stretched on the mat. Q: How did the cat yawn? A: Lazily<stop>
+The cat, tired from resting, gave a long stretch on the mat. Q: Why was the cat tired? A: From resting<stop>
+The cat, tired from resting, gave a long stretch on the mat. Q: What kind of stretch? A: A long stretch<stop>
+The cat, tired from resting, gave a long stretch on the mat. Q: Where did the stretch happen? A: On the mat<stop>
+The cat, tired from resting, gave a long stretch on the mat. Q: Who gave a stretch? A: The cat<stop>
+While the sun set, two birds flew high above the sea. Q: When did the birds fly? A: While sun set<stop>
+While the sun set, two birds flew high above the sea. Q: How many birds flew? A: Two birds<stop>
+While the sun set, two birds flew high above the sea. Q: Where did they fly? A: Above the sea<stop>
+While the sun set, two birds flew high above the sea. Q: How high did they fly? A: High<stop>
+Two birds soared in the sky as the sun slowly sank into the sea. Q: Who soared in the sky? A: Two birds<stop>
+Two birds soared in the sky as the sun slowly sank into the sea. Q: What did the sun do? A: Sank into sea<stop>
+Two birds soared in the sky as the sun slowly sank into the sea. Q: How did the sun sink? A: Slowly<stop>
+Two birds soared in the sky as the sun slowly sank into the sea. Q: Where did the sun sink? A: Into the sea<stop>
+The fish weaved through coral, swimming quickly past bubbles. Q: Who weaved through coral? A: The fish<stop>
+The fish weaved through coral, swimming quickly past bubbles. Q: How did the fish swim? A: Quickly<stop>
+The fish weaved through coral, swimming quickly past bubbles. Q: What did it swim past? A: Bubbles<stop>
+The fish weaved through coral, swimming quickly past bubbles. Q: Where did the fish weave? A: Through coral<stop>
+Swift and nimble, the fish darted through the bubbling reef. Q: How was the fish described? A: Swift and nimble<stop>
+Swift and nimble, the fish darted through the bubbling reef. Q: What did the fish do? A: Darted through reef<stop>
+Swift and nimble, the fish darted through the bubbling reef. Q: Where did the fish dart? A: Through bubbling reef<stop>
+Swift and nimble, the fish darted through the bubbling reef. Q: What kind of reef? A: Bubbling reef<stop>
+Though it was tired, the old dog chased the bouncing ball anyway. Q: Who chased the ball? A: The old dog.<stop>
+Though it was tired, the old dog chased the bouncing ball anyway. Q: How did the dog feel? A: Tired.<stop>
+Though it was tired, the old dog chased the bouncing ball anyway. Q: What did the dog chase? A: The bouncing ball.<stop>
+Though it was tired, the old dog chased the bouncing ball anyway. Q: Did the dog stop? A: No, it chased anyway.<stop>
+The old dog, tired but determined, ran after the ball. Q: Who ran after the ball? A: The old dog.<stop>
+The old dog, tired but determined, ran after the ball. Q: How was the dog feeling? A: Tired but determined.<stop>
+The old dog, tired but determined, ran after the ball. Q: What did the dog run after? A: The ball.<stop>
+The wind began to fade as the sailboat drifted toward shore. Q: What began to fade? A: The wind.<stop>
+The wind began to fade as the sailboat drifted toward shore. Q: Where did the sailboat drift? A: Toward shore.<stop>
+The wind began to fade as the sailboat drifted toward shore. Q: What was drifting? A: The sailboat.<stop>
+Drifting quietly, the sailboat moved toward the shore while the wind weakened. Q: How did the sailboat drift? A: Quietly.<stop>
+Drifting quietly, the sailboat moved toward the shore while the wind weakened. Q: What happened to the wind? A: It weakened.<stop>
+Drifting quietly, the sailboat moved toward the shore while the wind weakened. Q: Where did the boat move? A: Toward the shore.<stop>
+Beneath the shady tree, the man sat quietly on the wooden bench. Q: Where did the man sit? A: Beneath the shady tree.<stop>
+Beneath the shady tree, the man sat quietly on the wooden bench. Q: What did the man sit on? A: The wooden bench.<stop>
+Beneath the shady tree, the man sat quietly on the wooden bench. Q: How did the man sit? A: Quietly.<stop>
+The man rested on the bench, enjoying the shade of the tree. Q: Who rested on the bench? A: The man.<stop>
+The man rested on the bench, enjoying the shade of the tree. Q: What was the man enjoying? A: The shade.<stop>
+The man rested on the bench, enjoying the shade of the tree. Q: Where did the man rest? A: On the bench.<stop>
+Since it was raining, the birds stayed hidden in the thick branches. Q: Why did the birds hide? A: Since it was raining.<stop>
+Since it was raining, the birds stayed hidden in the thick branches. Q: Where did the birds stay? A: In the thick branches.<stop>
+Since it was raining, the birds stayed hidden in the thick branches. Q: Who stayed hidden? A: The birds.<stop>
+The birds, hiding in dense branches, waited for the rain to stop. Q: What were the birds doing? A: Hiding in dense branches.<stop>
+The birds, hiding in dense branches, waited for the rain to stop. Q: What did the birds wait for? A: The rain to stop.<stop>
+The birds, hiding in dense branches, waited for the rain to stop. Q: Where were the birds hiding? A: In dense branches.<stop>
+The cat didn't make a sound when it saw the fish in the bowl. Q: Who saw the fish? A: The cat.<stop>
+The cat didn't make a sound when it saw the fish in the bowl. Q: What did the cat see? A: The fish.<stop>
+The cat didn't make a sound when it saw the fish in the bowl. Q: Where was the fish? A: In the bowl.<stop>
+The cat didn't make a sound when it saw the fish in the bowl. Q: Did the cat make noise? A: No, it didn't.<stop>
+Seeing the fish in the bowl, the cat stayed completely silent. Q: Why did the cat stay silent? A: Seeing the fish.<stop>
+Seeing the fish in the bowl, the cat stayed completely silent. Q: How silent was the cat? A: Completely silent.<stop>
+Seeing the fish in the bowl, the cat stayed completely silent. Q: What did the cat see? A: The fish in the bowl.<stop>
+As the carrot grew in the garden, a rabbit watched from a distance. Q: What grew in the garden? A: A carrot.<stop>
+As the carrot grew in the garden, a rabbit watched from a distance. Q: Who watched the garden? A: A rabbit.<stop>
+As the carrot grew in the garden, a rabbit watched from a distance. Q: Where did the rabbit watch from? A: From a distance.<stop>
+As the carrot grew in the garden, a rabbit watched from a distance. Q: What was the rabbit doing? A: Watching from a distance.<stop>
+The rabbit kept its eyes on the garden while the carrot sprouted. Q: What kept its eyes on the garden? A: The rabbit.<stop>
+The rabbit kept its eyes on the garden while the carrot sprouted. Q: Where did the rabbit look? A: On the garden.<stop>
+The rabbit kept its eyes on the garden while the carrot sprouted. Q: When did the rabbit watch? A: While the carrot sprouted.<stop>
+The rabbit kept its eyes on the garden while the carrot sprouted. Q: What sprouted in the garden? A: The carrot.<stop>
+Wagging with excitement, the dog sat next to the boy. Q: Who wagged with excitement? A: The dog.<stop>
+Wagging with excitement, the dog sat next to the boy. Q: How was the dog feeling? A: Excited.<stop>
+Wagging with excitement, the dog sat next to the boy. Q: Where did the dog sit? A: Next to the boy.<stop>
+Wagging with excitement, the dog sat next to the boy. Q: What did the dog do? A: Sat next to the boy.<stop>
+The boy sat quietly while the dog wagged its tail beside him. Q: Who sat quietly? A: The boy.<stop>
+The boy sat quietly while the dog wagged its tail beside him. Q: How did the boy sit? A: Quietly.<stop>
+The boy sat quietly while the dog wagged its tail beside him. Q: What did the dog do? A: Wagged its tail.<stop>
+The boy sat quietly while the dog wagged its tail beside him. Q: Where was the dog? A: Beside the boy.<stop>
+A seagull, tired and restless, landed briefly on the sailboat. Q: What landed on the sailboat? A: A seagull.<stop>
+A seagull, tired and restless, landed briefly on the sailboat. Q: How did the seagull feel? A: Tired and restless.<stop>
+A seagull, tired and restless, landed briefly on the sailboat. Q: Where did the seagull land? A: On the sailboat.<stop>
+A seagull, tired and restless, landed briefly on the sailboat. Q: How long did it land? A: Briefly.<stop>
+The sailboat became a perch for the seagull before it took off again. Q: What became a perch? A: The sailboat.<stop>
+The sailboat became a perch for the seagull before it took off again. Q: For whom was it a perch? A: The seagull.<stop>
+The sailboat became a perch for the seagull before it took off again. Q: What did the seagull do next? A: Took off again.<stop>
+The sailboat became a perch for the seagull before it took off again. Q: When did it take off? A: After perching.<stop>
+The birds were already singing before the first light of dawn. Q: Who was singing? A: The birds.<stop>
+The birds were already singing before the first light of dawn. Q: What were the birds doing? A: Singing.<stop>
+The birds were already singing before the first light of dawn. Q: When were they singing? A: Before dawn.<stop>
+The birds were already singing before the first light of dawn. Q: How early were they singing? A: Before first light.<stop>
+Before sunrise, bird songs echoed through the trees. Q: When did bird songs echo? A: Before sunrise.<stop>
+Before sunrise, bird songs echoed through the trees. Q: What echoed through the trees? A: Bird songs.<stop>
+Before sunrise, bird songs echoed through the trees. Q: Where did the songs echo? A: Through the trees.<stop>
+Before sunrise, bird songs echoed through the trees. Q: Whose songs echoed? A: The birds'.<stop>
+The only sound in the garden was a bee buzzing near the carrots. Q: What was the only sound? A: A bee buzzing.<stop>
+The only sound in the garden was a bee buzzing near the carrots. Q: Where was the sound heard? A: In the garden.<stop>
+The only sound in the garden was a bee buzzing near the carrots. Q: What was buzzing? A: A bee.<stop>
+The only sound in the garden was a bee buzzing near the carrots. Q: Near what was the bee? A: The carrots.<stop>
+A gentle buzz from a bee was the garden's only noise. Q: What was the garden's only noise? A: A gentle buzz.<stop>
+A gentle buzz from a bee was the garden's only noise. Q: Where was the noise heard? A: In the garden.<stop>
+A gentle buzz from a bee was the garden's only noise. Q: What made the noise? A: A bee.<stop>
+A gentle buzz from a bee was the garden's only noise. Q: How was the buzz described? A: Gentle.<stop>
+The dog barked over and over until the mailman went away. Q: Who barked repeatedly? A: The dog.<stop>
+The dog barked over and over until the mailman went away. Q: What did the dog do? A: Barked over and over.<stop>
+The dog barked over and over until the mailman went away. Q: When did the barking stop? A: When the mailman left.<stop>
+The dog barked over and over until the mailman went away. Q: Who went away? A: The mailman.<stop>
+Persistent barking from the dog finally drove the mailman off. Q: What drove the mailman off? A: Persistent barking.<stop>
+Persistent barking from the dog finally drove the mailman off. Q: Whose barking was persistent? A: The dog's.<stop>
+Persistent barking from the dog finally drove the mailman off. Q: Who was driven off? A: The mailman.<stop>
+Persistent barking from the dog finally drove the mailman off. Q: How did the dog act? A: Persistently.<stop>
+Though the cat looked calm, it was ready to leap. Q: How did the cat look? A: Calm.<stop>
+Though the cat looked calm, it was ready to leap. Q: What was the cat ready to do? A: Leap.<stop>
+Though the cat looked calm, it was ready to leap. Q: Was the cat actually relaxed? A: No, ready to leap.<stop>
+The peaceful-looking cat had tension in its body, ready to strike. Q: How did the cat appear? A: Peaceful-looking.<stop>
+The peaceful-looking cat had tension in its body, ready to strike. Q: What was in the cat's body? A: Tension.<stop>
+The peaceful-looking cat had tension in its body, ready to strike. Q: What was the cat ready to do? A: Strike.<stop>
+The tall grass swayed as a breeze brushed over the resting dog. Q: What swayed in the breeze? A: The tall grass.<stop>
+The tall grass swayed as a breeze brushed over the resting dog. Q: Who was resting? A: The dog.<stop>
+The tall grass swayed as a breeze brushed over the resting dog. Q: What brushed over the dog? A: A breeze.<stop>
+A soft breeze ruffled the grass where the dog lay quietly. Q: What ruffled the grass? A: A soft breeze.<stop>
+A soft breeze ruffled the grass where the dog lay quietly. Q: How did the dog lie? A: Quietly.<stop>
+A soft breeze ruffled the grass where the dog lay quietly. Q: Where did the dog lie? A: In the grass.<stop>
+Unaware of the kitten, the fish circled peacefully in its bowl. Q: Who was unaware of the kitten? A: The fish.<stop>
+Unaware of the kitten, the fish circled peacefully in its bowl. Q: How did the fish circle? A: Peacefully.<stop>
+Unaware of the kitten, the fish circled peacefully in its bowl. Q: Where did the fish circle? A: In its bowl.<stop>
+The kitten watched silently as the fish swam round and round. Q: Who watched silently? A: The kitten.<stop>
+The kitten watched silently as the fish swam round and round. Q: What did the fish do? A: Swam round and round.<stop>
+The kitten watched silently as the fish swam round and round. Q: How did the kitten watch? A: Silently.<stop>
+Closing his eyes, the man leaned back and listened to the wind. Q: What did the man close? A: His eyes.<stop>
+Closing his eyes, the man leaned back and listened to the wind. Q: What did the man do? A: Leaned back and listened.<stop>
+Closing his eyes, the man leaned back and listened to the wind. Q: What did the man listen to? A: The wind.<stop>
+The wind whispered as the man sat still, eyes closed. Q: What did the wind do? A: Whispered.<stop>
+The wind whispered as the man sat still, eyes closed. Q: How did the man sit? A: Still.<stop>
+The wind whispered as the man sat still, eyes closed. Q: Were the man's eyes open? A: No, closed.<stop>
+The dog will go play in the mud if the rain finally stops. Q: Who will play in the mud? A: the dog<stop>
+The dog will go play in the mud if the rain finally stops. Q: Where will the dog play? A: in the mud<stop>
+The dog will go play in the mud if the rain finally stops. Q: When will the dog play? A: if rain stops<stop>
+The dog will go play in the mud if the rain finally stops. Q: What will the dog do? A: play in mud<stop>
+The dog will go play in the mud if the rain finally stops. Q: Why is the dog waiting? A: for rain to stop<stop>
+If the weather clears, the dog's heading straight for the mud. Q: Who is heading for the mud? A: the dog<stop>
+If the weather clears, the dog's heading straight for the mud. Q: Where is the dog going? A: straight for mud<stop>
+If the weather clears, the dog's heading straight for the mud. Q: When will the dog go? A: if weather clears<stop>
+If the weather clears, the dog's heading straight for the mud. Q: What condition must be met? A: weather must clear<stop>
+If the weather clears, the dog's heading straight for the mud. Q: How fast is the dog going? A: straight there<stop>
+A fish swam in the sea. Q: What swam in the sea? A: A fish.<stop>
+A fish swam in the sea. Q: Where did the fish swim? A: in the sea.<stop>
+A fish swam in the sea. Q: How did the fish move? A: swam.<stop>
+Two birds flew overhead. Q: How many birds flew? A: Two.<stop>
+Two birds flew overhead. Q: What did the birds do? A: flew overhead.<stop>
+Two birds flew overhead. Q: Where did the birds fly? A: overhead.<stop>
+The wind whispered through the trees. Q: What made a whispering sound? A: The wind.<stop>
+The wind whispered through the trees. Q: Where did the wind whisper? A: through the trees.<stop>
+The wind whispered through the trees. Q: How did the wind sound? A: whispered.<stop>
+The man closed his eyes. Q: Who closed their eyes? A: The man.<stop>
+The man closed his eyes. Q: What did the man close? A: his eyes.<stop>
+The man closed his eyes. Q: What action did the man take? A: closed his eyes.<stop>
+The carrot grew in the garden. Q: What vegetable grew in the garden? A: The carrot.<stop>
+The carrot grew in the garden. Q: Where did the carrot grow? A: in the garden.<stop>
+The carrot grew in the garden. Q: What happened to the carrot? A: It grew.<stop>
+The radish grew in the garden. Q: What grew in the garden? A: The radish.<stop>
+The radish grew in the garden. Q: Where did the radish grow? A: in the garden.<stop>
+The radish grew in the garden. Q: Which root vegetable grew there? A: The radish.<stop>
+The carrot grew. Q: What grew? A: The carrot.<stop>
+The carrot grew. Q: Did the carrot shrink? A: No, it grew.<stop>
+The tomato grew in the garden. Q: What fruit grew in the garden? A: The tomato.<stop>
+The tomato grew in the garden. Q: Where did the tomato grow? A: in the garden.<stop>
+The tomato grew in the garden. Q: What plant grew there? A: The tomato.<stop>
+The sailboat drifted quietly. Q: What drifted quietly? A: the sailboat.<stop>
+The sailboat drifted quietly. Q: How did the sailboat drift? A: quietly.<stop>
+The dog chased the ball. Q: What did the dog chase? A: the ball.<stop>
+The dog chased the ball. Q: Who chased the ball? A: the dog.<stop>
+The cat chased the ball. Q: Who chased the ball? A: the cat.<stop>
+The cat watched the fish. Q: Who watched the fish? A: the cat.<stop>
+The cat watched the fish. Q: What did the cat watch? A: the fish.<stop>
+A bee buzzed near the flowers. Q: What buzzed near the flowers? A: a bee.<stop>
+A bee buzzed near the flowers. Q: Where did the bee buzz? A: near the flowers.<stop>
+The cat ran across the field. Q: What ran across the field? A: the cat.<stop>
+The dog ran across the field. Q: What ran across the field? A: the dog.<stop>
+The dog ran across the field. Q: Where did the dog run? A: across the field.<stop>
+The dog ran across the field. Q: How did the dog move? A: it ran.<stop>
+The birds flew across the field. Q: What flew across the field? A: the birds.<stop>
+The birds flew across the field. Q: Where did the birds fly? A: across the field.<stop>
+The birds flew across the field. Q: How did the birds move? A: they flew.<stop>
+The child ran across the field. Q: Who ran across the field? A: the child.<stop>
+The child ran across the field. Q: Where did the child run? A: across the field.<stop>
+The child ran across the field. Q: What did the child do? A: ran across field.<stop>
+A tired man sat on a bench. Q: What was the man doing? A: sitting on a bench.<stop>
+A tired man sat on a bench. Q: Who was tired? A: the man.<stop>
+A tired man sat on a bench. Q: Where did the man sit? A: on a bench.<stop>
+The fish circled in the bowl. Q: Where did the fish circle? A: in the bowl.<stop>
+The fish circled in the bowl. Q: What circled in the bowl? A: the fish.<stop>
+The fish circled in the bowl. Q: How did the fish move? A: it circled.<stop>
+The sun set behind the hills. Q: What set behind the hills? A: the sun.<stop>
+The sun set behind the hills. Q: Where did the sun set? A: behind the hills.<stop>
+The sun set behind the hills. Q: When did the sun set? A: behind the hills.<stop>
+The dog slept near the fire. Q: Where did the dog sleep? A: near the fire.<stop>
+The dog slept near the fire. Q: What slept near the fire? A: the dog.<stop>
+The rabbit hopped into the garden. Q: What hopped into the garden? A: the rabbit.<stop>
+The rabbit hopped into the garden. Q: Where did the rabbit hop? A: into the garden.<stop>
+The boat rocked gently. Q: How did the boat rock? A: gently.<stop>
+The boat rocked gently. Q: What rocked gently? A: the boat.<stop>
+The girl laughed at the joke. Q: Who laughed at the joke? A: the girl.<stop>
+The girl laughed at the joke. Q: What did the girl laugh at? A: the joke.<stop>
+The leaves rustled in the breeze. Q: What rustled in the breeze? A: the leaves.<stop>
+The leaves rustled in the breeze. Q: Where did the leaves rustle? A: in the breeze.<stop>
+The man drank cold water. Q: What did the man drink? A: cold water<stop>
+The man drank cold water. Q: Who drank cold water? A: the man<stop>
+The man drank cold water. Q: How was the water? A: cold<stop>
+A bird landed on the branch. Q: What landed on the branch? A: a bird<stop>
+A bird landed on the branch. Q: Where did the bird land? A: on the branch<stop>
+A bird landed on the branch. Q: Who landed on the branch? A: a bird<stop>
+The boy kicked the ball. Q: What did the boy kick? A: the ball<stop>
+The boy kicked the ball. Q: Who kicked the ball? A: the boy<stop>
+The boy kicked the ball. Q: What action did the boy take? A: kicked the ball<stop>
+A cloud floated above the trees. Q: What floated above the trees? A: a cloud<stop>
+A cloud floated above the trees. Q: Where did the cloud float? A: above the trees<stop>
+A cloud floated above the trees. Q: What was below the cloud? A: the trees<stop>
+The woman smiled at the child. Q: Who smiled at the child? A: the woman<stop>
+The woman smiled at the child. Q: Who did the woman smile at? A: the child<stop>
+The woman smiled at the child. Q: What did the woman do? A: smiled<stop>
+The candle flickered in the dark. Q: What flickered in the dark? A: the candle.<stop>
+The candle flickered in the dark. Q: Where did the candle flicker? A: in the dark.<stop>
+The candle flickered in the dark. Q: How did the candle behave? A: it flickered.<stop>
+The horse galloped across the field. Q: What galloped across the field? A: the horse.<stop>
+The horse galloped across the field. Q: Where did the horse gallop? A: across the field.<stop>
+The horse galloped across the field. Q: What action did the horse take? A: galloped.<stop>
+The bell rang loudly. Q: What rang loudly? A: the bell.<stop>
+The bell rang loudly. Q: How did the bell ring? A: loudly.<stop>
+The bell rang loudly. Q: What made a loud sound? A: the bell.<stop>
+The girl painted a picture. Q: Who painted a picture? A: the girl.<stop>
+The girl painted a picture. Q: What did the girl paint? A: a picture.<stop>
+The girl painted a picture. Q: What activity did the girl do? A: painted.<stop>
+The leaves turned orange. Q: What turned orange? A: the leaves.<stop>
+The leaves turned orange. Q: What color did the leaves turn? A: orange.<stop>
+The leaves turned orange. Q: What changed color? A: the leaves.<stop>
+The baby cried softly. Q: Who cried softly? A: the baby.<stop>
+The baby cried softly. Q: How did the baby cry? A: softly.<stop>
+A squirrel climbed the tree. Q: What climbed the tree? A: a squirrel.<stop>
+A squirrel climbed the tree. Q: Where did the squirrel climb? A: the tree.<stop>
+The stars twinkled at night. Q: What twinkled at night? A: the stars.<stop>
+The stars twinkled at night. Q: When did the stars twinkle? A: at night.<stop>
+The boy read a book. Q: What did the boy read? A: a book.<stop>
+The boy read a book. Q: Who read a book? A: the boy.<stop>
+Rain fell on the roof. Q: What fell on the roof? A: rain.<stop>
+Rain fell on the roof. Q: Where did the rain fall? A: on the roof.<stop>
+The fire crackled in the fireplace. Q: What made a crackling sound? A: the fire.<stop>
+The fire crackled in the fireplace. Q: Where was the fire? A: in the fireplace.<stop>
+The dog barked at the mailman. Q: What did the dog do? A: barked at mailman.<stop>
+The dog barked at the mailman. Q: Who received the barking? A: the mailman.<stop>
+The wind howled through the trees. Q: How did the wind sound? A: it howled.<stop>
+The wind howled through the trees. Q: What did the wind pass through? A: the trees.<stop>
+The cat slept on the windowsill. Q: What was the cat doing? A: sleeping.<stop>
+The cat slept on the windowsill. Q: Where was the cat? A: on the windowsill.<stop>
+The teacher wrote on the notebook. Q: Who performed the writing? A: the teacher.<stop>
+The teacher wrote on the notebook. Q: What did the teacher use? A: the notebook.<stop>
+The teacher wrote on the board. Q: Where did the teacher write? A: on the board.<stop>
+The teacher wrote on the board. Q: What action did the teacher take? A: wrote on board.<stop>
+The teacher wrote on the board. Q: Who wrote on the board? A: The teacher.<stop>
+The teacher wrote on the board. Q: What did the teacher do? A: wrote on the board.<stop>
+The teacher wrote on the board. Q: Where did the teacher write? A: on the board.<stop>
+The teacher wrote on the notebook. Q: Who wrote on the notebook? A: The teacher.<stop>
+The teacher wrote on the notebook. Q: What did the teacher use? A: the notebook.<stop>
+The teacher wrote on the notebook. Q: Where was the writing done? A: on the notebook.<stop>
+The snow fell quickly. Q: What fell quickly? A: The snow.<stop>
+The snow fell quickly. Q: How did the snow fall? A: quickly.<stop>
+The snow fell quickly. Q: When did the snow fall? A: quickly.<stop>
+The snow fell fast. Q: What fell fast? A: The snow.<stop>
+The snow fell fast. Q: How fast did it fall? A: fast.<stop>
+The snow fell fast. Q: What moved fast? A: The snow.<stop>
+The snow fell quietly. Q: What fell quietly? A: The snow.<stop>
+The snow fell quietly. Q: How did the snow fall? A: quietly.<stop>
+The snow fell quietly. Q: Did the snow make noise? A: No, quietly.<stop>
+The frog jumped into the pond. Q: What jumped into the pond? A: The frog.<stop>
+The frog jumped into the pond. Q: Where did the frog jump? A: into the pond.<stop>
+The frog jumped into the pond. Q: Who jumped into the water? A: The frog.<stop>
+The phone rang suddenly. Q: What rang suddenly? A: The phone.<stop>
+The phone rang suddenly. Q: How did the phone ring? A: suddenly.<stop>
+The phone rang suddenly. Q: When did the phone ring? A: suddenly.<stop>
+The man closed the door. Q: Who closed the door? A: The man.<stop>
+The man closed the door. Q: What did the man close? A: The door.<stop>
+The man closed the door. Q: What action did the man take? A: Closed the door.<stop>
+The birds flew over the hills. Q: What flew over the hills? A: The birds.<stop>
+The birds flew over the hills. Q: Where did the birds fly? A: Over the hills.<stop>
+The birds flew over the hills. Q: How did the birds move? A: They flew.<stop>
+The sun rose over the hills. Q: What rose over the hills? A: The sun.<stop>
+The sun rose over the hills. Q: Where did the sun rise? A: Over the hills.<stop>
+The sun rose over the hills. Q: What happened over the hills? A: The sun rose.<stop>
+The child drew a house. Q: Who drew a house? A: The child.<stop>
+The child drew a house. Q: What did the child draw? A: A house.<stop>
+The child drew a house. Q: What kind of building was drawn? A: A house.<stop>
+The bird sang in the morning. Q: What sang in the morning? A: The bird.<stop>
+The bird sang in the morning. Q: When did the bird sing? A: In the morning.<stop>
+The bird sang in the morning. Q: What did the bird do? A: Sang.<stop>
+The boy kicked the ball. Q: Who kicked the ball? A: The boy.<stop>
+The boy kicked the ball. Q: What did the boy kick? A: The ball.<stop>
+The boy kicked the ball. Q: What action did the boy perform? A: Kicked the ball.<stop>
+The boy kicked the ball. Q: Who kicked the ball? A: the boy.<stop>
+The boy kicked the ball. Q: What did the boy do? A: kicked the ball.<stop>
+The boy kicked the ball. Q: How did the boy act? A: he kicked.<stop>
+Spring arrived late. Q: When did spring arrive? A: late.<stop>
+Spring arrived late. Q: What season arrived late? A: spring.<stop>
+Spring arrived late. Q: Did spring arrive early? A: no.<stop>
+The dog arrived late. Q: Who arrived late? A: the dog.<stop>
+The dog arrived late. Q: When did the dog arrive? A: late.<stop>
+The dog arrived late. Q: What animal arrived late? A: the dog.<stop>
+The mailman arrived late. Q: Who arrived late? A: the mailman.<stop>
+The mailman arrived late. Q: What job did he have? A: mailman.<stop>
+The mailman arrived late. Q: When did he arrive? A: late.<stop>
+The train arrived late. Q: What vehicle arrived late? A: the train.<stop>
+The train arrived late. Q: Who operated the train? A: conductor.<stop>
+The train arrived late. Q: Was the train early? A: no.<stop>
+The children laughed together. Q: Who laughed together? A: the children.<stop>
+The children laughed together. Q: What did the children do? A: laughed.<stop>
+The children laughed together. Q: How many laughed? A: multiple.<stop>
+The dog barked at night. Q: When did the dog bark? A: at night.<stop>
+The dog barked at night. Q: What sound did it make? A: barked.<stop>
+The dog barked at night. Q: Who barked at night? A: the dog.<stop>
+The owl hooted at night. Q: What bird hooted? A: the owl.<stop>
+The owl hooted at night. Q: When did the owl hoot? A: at night.<stop>
+The owl hooted at night. Q: What sound did it make? A: hooted.<stop>
+The owl hooted at night. Q: What hooted at night? A: the owl.<stop>
+The owl hooted at night. Q: Why did the owl hoot? A: unknown reason.<stop>
+The mailman opened the window. Q: What did the mailman open? A: the window.<stop>
+The mailman opened the window. Q: How did the mailman act? A: opened window.<stop>
+The man opened the window. Q: When did the man open it? A: unspecified time.<stop>
+The man opened the window. Q: Why did the man open it? A: for fresh air.<stop>
+The lightning flashed across the sky. Q: When did lightning flash? A: during storm.<stop>
+The lightning flashed across the sky. Q: How bright was the flash? A: very bright.<stop>
+The rabbit hid under the bush. Q: Why did the rabbit hide? A: to stay safe.<stop>
+The rabbit hid under the bush. Q: What kind of animal hid? A: a rabbit.<stop>
+The girl danced gracefully. Q: What did the girl do? A: danced gracefully.<stop>
+The girl danced gracefully. Q: Where did the girl dance? A: unspecified place.<stop>
+The baby drank milk. Q: Who drank milk? A: the baby.<stop>
+The baby drank milk. Q: What did the baby drink? A: milk.<stop>
+The fox ran through the forest. Q: What ran through the forest? A: the fox.<stop>
+The fox ran through the forest. Q: Where did the fox run? A: through the forest.<stop>
+The boat floated on the lake. Q: What floated on the lake? A: the boat.<stop>
+The boat floated on the lake. Q: Where did the boat float? A: on the lake.<stop>
+The flowers bloomed in spring. Q: What bloomed in spring? A: the flowers.<stop>
+The flowers bloomed in spring. Q: When did the flowers bloom? A: in spring.<stop>
+The chef cooked dinner. Q: Who cooked dinner? A: the chef.<stop>
+Dad cooked dinner. Q: Who cooked dinner? A: dad.<stop>
+Mom cooked dinner. Q: Who cooked dinner? A: Mom.<stop>
+Mom cooked dinner. Q: What did Mom cook? A: dinner.<stop>
+Mom cooked dinner. Q: When did Mom cook? A: dinner time.<stop>
+The chef cooked dinner. Q: Who cooked dinner? A: The chef.<stop>
+The chef cooked dinner. Q: What did the chef cook? A: dinner.<stop>
+The chef cooked dinner. Q: How was dinner prepared? A: cooked.<stop>
+The chef cooked a chicken. Q: Who cooked a chicken? A: The chef.<stop>
+The chef cooked a chicken. Q: What did the chef cook? A: a chicken.<stop>
+The chef cooked a chicken. Q: What kind of food? A: chicken.<stop>
+The chef baked cookies. Q: Who baked cookies? A: The chef.<stop>
+The chef baked cookies. Q: What did the chef bake? A: cookies.<stop>
+The chef baked cookies. Q: How were cookies made? A: baked.<stop>
+The chef baked bread. Q: Who baked bread? A: The chef.<stop>
+The chef baked bread. Q: What did the chef bake? A: bread.<stop>
+The chef baked bread. Q: What type of food? A: bread.<stop>
+The clouds covered the sky. Q: What covered the sky? A: The clouds.<stop>
+The clouds covered the sky. Q: What did the clouds cover? A: the sky.<stop>
+The clouds covered the sky. Q: Where did clouds go? A: the sky.<stop>
+The clouds covered the sky. Q: How much sky covered? A: all of it.<stop>
+The lion roared loudly. Q: What roared loudly? A: The lion.<stop>
+The lion roared loudly. Q: How did the lion roar? A: loudly.<stop>
+The lion roared loudly. Q: Who made a noise? A: The lion.<stop>
+The bee landed on the flower. Q: What landed on the flower? A: The bee.<stop>
+The bee landed on the flower. Q: Where did the bee land? A: on the flower.<stop>
+The bee landed on the flower. Q: What did the bee do? A: landed.<stop>
+The bee landed on the flower. Q: Where did the bee land? A: on the flower.<stop>
+The bee landed on the leaf. Q: Where did the bee land? A: on the leaf.<stop>
+The bee landed on the flower. Q: On what did the bee land? A: on the flower.<stop>
+The bee landed on the flower. Q: On what did the bee land? A: the flower.<stop>
+The sun warmed the earth. Q: What warmed the earth? A: the sun.<stop>
+The sun warmed the earth. Q: What did the sun warm? A: the earth.<stop>
+The kids built a sandcastle. Q: Who built a sandcastle? A: the kids.<stop>
+The kids built a sandcastle. Q: What did the kids build? A: a sandcastle.<stop>
+The door creaked open. Q: What creaked open? A: the door.<stop>
+The door creaked open. Q: How did the door open? A: creaked.<stop>
+The door creaked open. Q: How did the door open? A: it creaked.<stop>
+The door creaked open. Q: What opened? A: the door.<stop>

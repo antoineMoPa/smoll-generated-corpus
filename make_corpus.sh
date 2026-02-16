@@ -26,6 +26,10 @@ shuf ../level_2/corpus.txt >> corpus.1.corpus
 shuf ../level_2/corpus.txt >> corpus.1.corpus
 shuf corpus.txt >> corpus.1.corpus
 ./auto_corpus.sh >> corpus.1.corpus
+# Include LLM-expanded rewrites if they exist
+if [ -f llm_expanded_corpus.txt ]; then
+    cat llm_expanded_corpus.txt >> corpus.1.corpus
+fi
 shuf corpus.1.corpus > corpus.corpus
 shuf corpus.1.corpus >> corpus.corpus
 shuf corpus.1.corpus >> corpus.corpus
