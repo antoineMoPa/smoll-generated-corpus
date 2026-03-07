@@ -1,0 +1,59 @@
+Context: The red box weighs 45 kg, while the blue box weighs 32 kg.
+Input: {"question": "How much more does the red box weigh than the blue box?"}
+Output: {"answer": "13 kg"}
+
+Context: In 2021, the factory produced 1,200 units, but in 2022 production dropped to 950 units.
+Input: {"question": "By how much did production decrease from 2021 to 2022?"}
+Output: {"answer": "250 units"}
+
+Context: Sarah ran 15.5 kilometers on Saturday and 12.2 kilometers on Sunday.
+Input: {"question": "How much farther did Sarah run on Saturday compared to Sunday?"}
+Output: {"answer": "3.3 kilometers"}
+
+Context: The old server processes 450 requests per second, whereas the new server handles 820 requests per second.
+Input: {"question": "By how many requests per second does the new server exceed the old one?"}
+Output: {"answer": "370 requests per second"}
+
+Context: Apartment A costs $1,850 per month, and Apartment B costs $2,100 per month.
+Input: {"question": "How much more expensive is Apartment B than Apartment A?"}
+Output: {"answer": "$250"}
+
+Context: The first tank holds 500 liters of water, while the second tank holds 325 liters.
+Input: {"question": "By how much is the capacity of the first tank greater than the second?"}
+Output: {"answer": "175 liters"}
+
+Context: Team Alpha scored 89 points in the final game, and Team Beta scored 76 points.
+Input: {"question": "How many more points did Team Alpha score than Team Beta?"}
+Output: {"answer": "13 points"}
+
+Context: The flight to London takes 7 hours, but the flight to Tokyo takes 11 hours.
+Input: {"question": "By how many hours is the flight to Tokyo longer than the flight to London?"}
+Output: {"answer": "4 hours"}
+
+Context: Store X sold 3,400 items last week, while Store Y sold 2,950 items.
+Input: {"question": "How much higher were Store X's sales compared to Store Y's?"}
+Output: {"answer": "450 items"}
+
+Context: The battery life of Device A is 18 hours, whereas Device B lasts for 24 hours.
+Input: {"question": "By how many hours does Device B outlast Device A?"}
+Output: {"answer": "6 hours"}
+
+Context: Mountain Peak A rises to 3,200 meters, and Mountain Peak B reaches 2,850 meters.
+Input: {"question": "How much taller is Mountain Peak A than Mountain Peak B?"}
+Output: {"answer": "350 meters"}
+
+Context: The chemical solution requires 50 ml of acid, but the current mixture only has 32 ml.
+Input: {"question": "By how many milliliters is the current mixture lacking compared to the requirement?"}
+Output: {"answer": "18 ml"}
+
+Context: Project Alpha was completed in 45 days, while Project Beta took 62 days.
+Input: {"question": "How many more days did Project Beta take than Project Alpha?"}
+Output: {"answer": "17 days"}
+
+Context: The temperature in Phoenix was 98°F, while the temperature in Seattle was 65°F.
+Input: {"question": "By how many degrees was Phoenix hotter than Seattle?"}
+Output: {"answer": "33°F"}
+
+Context: Library Branch 1 has 12,500 books, and Library Branch 2 has 9,800 books.
+Input: {"question": "How much larger is the collection at Branch 1 compared to Branch 2?"}
+Output: {"answer": "2,700 books"}

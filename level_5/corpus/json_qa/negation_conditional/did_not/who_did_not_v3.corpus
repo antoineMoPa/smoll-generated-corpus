@@ -1,0 +1,59 @@
+Context: The design review included feedback from Nina, Oscar, and Zoe, but Felix offered no comments on the prototypes.
+Input: {"question": "Who did not offer feedback during the design review?"}
+Output: {"answer": "Felix"}
+
+Context: During the marathon, runners like Carlos, Dia, and Evan crossed the finish line before sunset, while Grace stopped miles short due to an injury.
+Input: {"question": "Who did not cross the finish line before sunset?"}
+Output: {"answer": "Grace"}
+
+Context: The zoning committee granted permits to developers Mr. Ross, Ms. Chen, and Dr. Singh, but Mrs. Miller's application was the only one rejected.
+Input: {"question": "Who did not receive a zoning permit?"}
+Output: {"answer": "Mrs. Miller"}
+
+Context: At the auction, bidders named Arthur, Beatrice, and Clyde secured several lots, yet Daisy left without purchasing a single item.
+Input: {"question": "Who did not purchase any items at the auction?"}
+Output: {"answer": "Daisy"}
+
+Context: The security patch was applied to systems administered by Luca, Mia, and Noor, whereas the system managed by Omar remained vulnerable.
+Input: {"question": "Who did not apply the security patch to their system?"}
+Output: {"answer": "Omar"}
+
+Context: While the choir members, including Quinn, Ruby, and Sam, learned the new anthem by heart, Tina forgot the lyrics completely.
+Input: {"question": "Who did not learn the new anthem by heart?"}
+Output: {"answer": "Tina"}
+
+Context: The research group led by Uma, Victor, and Wendy published their findings on climate change, but Xavier failed to submit his paper.
+Input: {"question": "Who did not publish findings on climate change?"}
+Output: {"answer": "Xavier"}
+
+Context: Every team leader, namely Yasmin, Zack, and Alicia, endorsed the project timeline, except for Boris who voiced strong opposition.
+Input: {"question": "Who did not endorse the project timeline?"}
+Output: {"answer": "Boris"}
+
+Context: During the neighborhood watch patrol, residents like Mr. Kim, Mrs. Gupta, and teen Jay walked the streets, while Mr. Ford remained asleep.
+Input: {"question": "Who did not walk the streets during the patrol?"}
+Output: {"answer": "Mr. Ford"}
+
+Context: The orchestra players, Finn, Gia, and Hugo, played the final movement together, but the violinist, Iris, had broken a string and stopped playing.
+Input: {"question": "Who did not play the final movement?"}
+Output: {"answer": "Iris"}
+
+Context: Backers including Prof. Stone, Ms. Diaz, and Mr. O'Connor contributed to the museum renovation, while Lady Thorne declined to donate.
+Input: {"question": "Who did not contribute to the museum renovation?"}
+Output: {"answer": "Lady Thorne"}
+
+Context: In the science fair, students Leo, Maya, and Nate displayed their projects by 9 AM, but Olivia arrived too late to set up her display.
+Input: {"question": "Who did not display their project by 9 AM?"}
+Output: {"answer": "Olivia"}
+
+Context: The film society screened the classic movie, and attendees like Paul, Quinn, and Rosa wrote reviews, while Steve fell asleep during the screening.
+Input: {"question": "Who did not write a review of the classic movie?"}
+Output: {"answer": "Steve"}
+
+Context: Interns named Tara, Uri, and Vera organized the filing cabinets last week, but Will skipped his task to go on a break.
+Input: {"question": "Who did not organize the filing cabinets last week?"}
+Output: {"answer": "Will"}
+
+Context: The strategy session included participation from VP Jane, Director Mark, and Manager Kelly, but the Supervisor, Ian, missed the call due to a conflict.
+Input: {"question": "Who did not participate in the strategy session?"}
+Output: {"answer": "Ian"}

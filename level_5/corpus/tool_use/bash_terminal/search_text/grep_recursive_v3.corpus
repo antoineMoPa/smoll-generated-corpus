@@ -1,0 +1,51 @@
+Available Tools: grep_file | grep_recursive | grep_case_insensitive | grep_count
+Call Schema: { "func_call": "string", "pattern": "string", "path": "string", "flags": "string" }
+Response Schema: { "matches": [{ "file": "string", "line": "number", "text": "string" }], "count": "number" }
+---
+Question: Locate all instances of "segmentation fault" in /var/crash recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "segmentation fault", "path": "/var/crash", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/crash/core.dump.1024", "line": 5, "text": "Process crashed: segmentation fault at 0x00007f" }, { "file": "/var/crash/app.log", "line": 89, "text": "FATAL: segmentation fault detected in module X" }], "count": 2 }
+
+Question: Search for "FIXME" in ~/codebase ignoring case and displaying line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "FIXME", "path": "~/codebase", "flags": "-i -n" }
+Response: { "matches": [{ "file": "~/codebase/lib/utils.js", "line": 120, "text": "// FIXME: Handle null pointer exception here" }, { "file": "~/codebase/src/controller.ts", "line": 45, "text": "/* fixme: optimize database query */" }], "count": 2 }
+
+Question: Tally occurrences of "secret_key" in /home/user/config recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "secret_key", "path": "/home/user/config", "flags": "-i -r" }
+Response: { "matches": [], "count": 8 }
+
+Question: Recursively identify "disk full" messages in /var/log/syslog with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "disk full", "path": "/var/log/syslog", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/syslog", "line": 4055, "text": "Oct 14 03:00:00 host kernel: [crit] disk full on /dev/sda1" }], "count": 1 }
+
+Question: Find "import numpy" in ~/data-science recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "import numpy", "path": "~/data-science", "flags": "-n" }
+Response: { "matches": [{ "file": "~/data-science/analysis.py", "line": 2, "text": "import numpy as np" }, { "file": "~/data-science/models/train.py", "line": 4, "text": "import numpy" }, { "file": "~/data-science/preprocess/clean.py", "line": 1, "text": "import numpy as np" }], "count": 3 }
+
+Question: Search for "critical" in /var/log/messages recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "critical", "path": "/var/log/messages", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/messages", "line": 3002, "text": "Oct 14 12:00:00 host systemd: CRITICAL service failure" }, { "file": "/var/log/messages", "line": 3105, "text": "Oct 14 12:05:00 host kernel: Critical temperature reached" }], "count": 2 }
+
+Question: Count mentions of "admin" in /etc/passwd recursively.
+Call: { "func_call": "grep_count", "pattern": "admin", "path": "/etc/passwd", "flags": "-r" }
+Response: { "matches": [], "count": 3 }
+
+Question: Look for "class App" in ~/web-app recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "class App", "path": "~/web-app", "flags": "-n" }
+Response: { "matches": [{ "file": "~/web-app/src/main.dart", "line": 15, "text": "class App extends StatelessWidget {" }, { "file": "~/web-app/test/widget_test.dart", "line": 20, "text": "class AppTest extends StatelessWidget {" }], "count": 2 }
+
+Question: Detect "permission denied" in /var/log recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "permission denied", "path": "/var/log", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/auth.log", "line": 204, "text": "Oct 14 09:00:00 server sshd: Permission denied for user root" }, { "file": "/var/log/apache2/error.log", "line": 112, "text": "[Fri Oct 14 09:05:00 2023] [error] Permission denied: access to /admin" }], "count": 2 }
+
+Question: Recursively scan for "192.168.1.1" in /etc/network with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "192.168.1.1", "path": "/etc/network", "flags": "-n" }
+Response: { "matches": [{ "file": "/etc/network/interfaces", "line": 10, "text": "gateway 192.168.1.1" }, { "file": "/etc/network/config.yaml", "line": 5, "text": "dns_server: 192.168.1.1" }], "count": 2 }
+
+Question: Count "redis" in ~/backend-services recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "redis", "path": "~/backend-services", "flags": "-i -r" }
+Response: { "matches": [], "count": 19 }
+
+Question: Identify "500" status codes in /var/log/nginx recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "500", "path": "/var/log/nginx", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/nginx/error.log", "line": 6002, "text": "2023/10/14 16:00:00 [error] upstream returned 500" }, { "file": "/var/log/nginx/access.log", "line": 99, "text": "10.0.0.5 - - [14/Oct/2023:16:01:00 +0000] \"POST /api/data HTTP/1.1\" 500 210" }], "count": 2 }

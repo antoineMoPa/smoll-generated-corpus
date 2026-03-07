@@ -1,0 +1,20 @@
+{"func_call": "calculate_shipping", "cart_id": "CART-8921", "promo_code": "", "shipping_address": {"country": "US", "state": "CA", "zip": "90210"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-7734", "promo_code": "FREESHIP50", "shipping_address": {"country": "US", "state": "NY", "zip": "10001"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-5512", "promo_code": "", "shipping_address": {"country": "CA", "state": "ON", "zip": "M5V 2T6"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-9988", "promo_code": "", "shipping_address": {"country": "DE", "state": "BY", "zip": "80331"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-3341", "promo_code": "SUMMER20", "shipping_address": {"country": "US", "state": "TX", "zip": "75001"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-1129", "promo_code": "", "shipping_address": {"country": "FR", "state": "IDF", "zip": "75001"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-6654", "promo_code": "", "shipping_address": {"country": "US", "state": "FL", "zip": "33101"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-4472", "promo_code": "WINTER15", "shipping_address": {"country": "GB", "state": "ENG", "zip": "SW1A 1AA"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-2238", "promo_code": "", "shipping_address": {"country": "CA", "state": "BC", "zip": "V6B 1A1"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-8876", "promo_code": "", "shipping_address": {"country": "IT", "state": "LOM", "zip": "20121"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-5593", "promo_code": "FLASH10", "shipping_address": {"country": "US", "state": "WA", "zip": "98101"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-7712", "promo_code": "", "shipping_address": {"country": "ES", "state": "MD", "zip": "28001"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-3398", "promo_code": "", "shipping_address": {"country": "US", "state": "IL", "zip": "60601"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-9921", "promo_code": "VIPSHIP", "shipping_address": {"country": "CA", "state": "QC", "zip": "H3A 0G4"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-1145", "promo_code": "", "shipping_address": {"country": "NL", "state": "NH", "zip": "1012 AB"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-6689", "promo_code": "", "shipping_address": {"country": "US", "state": "GA", "zip": "30301"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-4456", "promo_code": "SAVE25", "shipping_address": {"country": "AU", "state": "NSW", "zip": "2000"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-2267", "promo_code": "", "shipping_address": {"country": "SE", "state": "AB", "zip": "111 29"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-8834", "promo_code": "", "shipping_address": {"country": "US", "state": "PA", "zip": "19101"}}
+{"func_call": "calculate_shipping", "cart_id": "CART-5571", "promo_code": "HOLIDAY", "shipping_address": {"country": "CH", "state": "ZH", "zip": "8001"}}

@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: The client is reporting unauthorized transactions on their credit card; escalate this urgently to the fraud department.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-1029", "reason": "Unauthorized credit card transactions reported", "target_team": "fraud_team" }
+Response: { "ticket_id": "TKT-1029", "escalated_to": "fraud_team", "reason": "Unauthorized credit card transactions reported", "sla_hours": 2, "status": "escalated" }
+
+Question: Transfer ticket 3387 to a specialist because the user is unable to sync contacts with their Outlook account.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-3387", "reason": "Outlook contact synchronization failure", "target_team": "integration_support" }
+Response: { "ticket_id": "TKT-3387", "escalated_to": "integration_support", "reason": "Outlook contact synchronization failure", "sla_hours": 10, "status": "transferred" }
+
+Question: We have a severe latency issue affecting video streaming for premium subscribers; escalate to network operations immediately.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7742", "reason": "High latency impacting premium video streaming", "target_team": "network_ops" }
+Response: { "ticket_id": "TKT-7742", "escalated_to": "network_ops", "reason": "High latency impacting premium video streaming", "sla_hours": 1, "status": "escalated" }
+
+Question: Move ticket 9901 to tier 3 support as the customer needs custom API rate limit adjustments not permitted in standard plans.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-9901", "reason": "Request for custom API rate limit configuration", "target_team": "tier_3_support" }
+Response: { "ticket_id": "TKT-9901", "escalated_to": "tier_3_support", "reason": "Request for custom API rate limit configuration", "sla_hours": 24, "status": "transferred" }
+
+Question: Escalate ticket 6612 because the compliance team has not reviewed the data retention request within the mandated 48 hours.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-6612", "reason": "Data retention request pending beyond compliance window", "target_team": "compliance_team" }
+Response: { "ticket_id": "TKT-6612", "escalated_to": "compliance_team", "reason": "Data retention request pending beyond compliance window", "sla_hours": 4, "status": "escalated" }
+
+Question: Transfer this case to security operations since multiple failed login attempts from suspicious IP addresses were detected.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-5599", "reason": "Suspicious login attempts from unknown IP ranges", "target_team": "security_ops" }
+Response: { "ticket_id": "TKT-5599", "escalated_to": "security_ops", "reason": "Suspicious login attempts from unknown IP ranges", "sla_hours": 1, "status": "transferred" }
+
+Question: The customer is disputing a late fee charged despite having an active grace period; escalate to billing for reversal.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-2245", "reason": "Disputed late fee during active grace period", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-2245", "escalated_to": "billing_team", "reason": "Disputed late fee during active grace period", "sla_hours": 6, "status": "escalated" }
+
+Question: Send ticket 8834 to integration support because the webhook payloads are being rejected by the third-party CRM.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-8834", "reason": "Webhook payload rejection by external CRM", "target_team": "integration_support" }
+Response: { "ticket_id": "TKT-8834", "escalated_to": "integration_support", "reason": "Webhook payload rejection by external CRM", "sla_hours": 8, "status": "transferred" }
+
+Question: Escalate ticket 1156 to security operations due to evidence of SQL injection attempts in the application logs.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-1156", "reason": "Detected SQL injection attempts in app logs", "target_team": "security_ops" }
+Response: { "ticket_id": "TKT-1156", "escalated_to": "security_ops", "reason": "Detected SQL injection attempts in app logs", "sla_hours": 1, "status": "escalated" }
+
+Question: Transfer ticket 4478 to the compliance team as the user is requesting full account deletion under GDPR regulations.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-4478", "reason": "GDPR account deletion request", "target_team": "compliance_team" }
+Response: { "ticket_id": "TKT-4478", "escalated_to": "compliance_team", "reason": "GDPR account deletion request", "sla_hours": 48, "status": "transferred" }
+
+Question: Escalate ticket 7723 to network ops because the CDN is serving expired SSL certificates to users in the EU region.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7723", "reason": "CDN serving expired SSL certificates in EU", "target_team": "network_ops" }
+Response: { "ticket_id": "TKT-7723", "escalated_to": "network_ops", "reason": "CDN serving expired SSL certificates in EU", "sla_hours": 2, "status": "escalated" }
+
+Question: Move ticket 3091 to tier 3 support as the batch processing job fails consistently when handling files larger than 5GB.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-3091", "reason": "Batch job failure for files exceeding 5GB", "target_team": "tier_3_support" }
+Response: { "ticket_id": "TKT-3091", "escalated_to": "tier_3_support", "reason": "Batch job failure for files exceeding 5GB", "sla_hours": 12, "status": "transferred" }

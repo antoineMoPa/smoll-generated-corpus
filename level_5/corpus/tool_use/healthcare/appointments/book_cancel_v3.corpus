@@ -1,0 +1,51 @@
+Available Tools: book_appointment | cancel_appointment | reschedule_appointment | get_upcoming_appointments | get_available_slots
+Call Schema: { "func_call": "string", "patient_id": "string", "doctor_id": "string", "specialty": "string", "date": "string", "reason": "string" }
+Response Schema: { "appointment_id": "string", "doctor": "string", "date": "string", "time": "string", "location": "string", "status": "string" }
+---
+Question: Schedule a neurology consultation with Dr. Alan Grant for recurring migraines on December 5th. My patient ID is P1029.
+Call: { "func_call": "book_appointment", "patient_id": "P1029", "doctor_id": "D501", "specialty": "neurology", "date": "2023-12-05", "reason": "Recurring migraines" }
+Response: { "appointment_id": "APT-8832", "doctor": "Dr. Alan Grant", "date": "2023-12-05", "time": "10:00", "location": "Neurology Wing C", "status": "confirmed" }
+
+Question: Please cancel my orthopedic surgery follow-up with Dr. Lisa Wong. Patient ID is P3344 and the appointment is APT-9988.
+Call: { "func_call": "cancel_appointment", "patient_id": "P3344", "doctor_id": "D602", "specialty": "orthopedics", "date": "2023-12-08", "reason": "Surgery postponed" }
+Response: { "appointment_id": "APT-9988", "doctor": "Dr. Lisa Wong", "date": "2023-12-08", "time": "13:15", "location": "Ortho Suite 5", "status": "cancelled" }
+
+Question: Book an urgent dermatology visit for Dr. Samuel Lee regarding a severe allergic reaction tomorrow. Patient ID P7755.
+Call: { "func_call": "book_appointment", "patient_id": "P7755", "doctor_id": "D211", "specialty": "dermatology", "date": "2023-12-02", "reason": "Severe allergic reaction" }
+Response: { "appointment_id": "APT-4421", "doctor": "Dr. Samuel Lee", "date": "2023-12-02", "time": "08:30", "location": "Dermatology Wing A", "status": "confirmed" }
+
+Question: I need to reschedule my endocrinology appointment with Dr. Rachel Green from Thursday to Friday due to travel. Patient ID P9988.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P9988", "doctor_id": "D703", "specialty": "endocrinology", "date": "2023-12-09", "reason": "Travel conflict" }
+Response: { "appointment_id": "APT-3310", "doctor": "Dr. Rachel Green", "date": "2023-12-09", "time": "15:45", "location": "Endo Clinic Room 2", "status": "rescheduled" }
+
+Question: Book a routine eye exam with Dr. Peter Parker for next Wednesday. My patient ID is P2244.
+Call: { "func_call": "book_appointment", "patient_id": "P2244", "doctor_id": "D804", "specialty": "ophthalmology", "date": "2023-12-06", "reason": "Routine eye exam" }
+Response: { "appointment_id": "APT-5567", "doctor": "Dr. Peter Parker", "date": "2023-12-06", "time": "11:30", "location": "Vision Center 1", "status": "confirmed" }
+
+Question: Cancel my cardiology stress test with Dr. Bruce Banner scheduled for December 12th. Patient ID P6655.
+Call: { "func_call": "cancel_appointment", "patient_id": "P6655", "doctor_id": "D405", "specialty": "cardiology", "date": "2023-12-12", "reason": "Feeling unwell" }
+Response: { "appointment_id": "APT-7799", "doctor": "Dr. Bruce Banner", "date": "2023-12-12", "time": "09:00", "location": "Heart Center Suite 1", "status": "cancelled" }
+
+Question: Please book a pediatric fever check with Dr. Tony Stark for this afternoon. Patient ID P1133.
+Call: { "func_call": "book_appointment", "patient_id": "P1133", "doctor_id": "D309", "specialty": "pediatrics", "date": "2023-12-01", "reason": "High fever check" }
+Response: { "appointment_id": "APT-2244", "doctor": "Dr. Tony Stark", "date": "2023-12-01", "time": "16:20", "location": "Pediatrics Unit 3", "status": "confirmed" }
+
+Question: Reschedule my gastroenterology consultation with Dr. Natasha Romanoff to December 15th morning. Patient ID P4466.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P4466", "doctor_id": "D906", "specialty": "gastroenterology", "date": "2023-12-15", "reason": "Morning preference" }
+Response: { "appointment_id": "APT-6688", "doctor": "Dr. Natasha Romanoff", "date": "2023-12-15", "time": "08:45", "location": "GI Lab 4", "status": "rescheduled" }
+
+Question: Book a psychiatry follow-up with Dr. Steve Rogers for anxiety management on December 10th. Patient ID P5577.
+Call: { "func_call": "book_appointment", "patient_id": "P5577", "doctor_id": "D1007", "specialty": "psychiatry", "date": "2023-12-10", "reason": "Anxiety management" }
+Response: { "appointment_id": "APT-9911", "doctor": "Dr. Steve Rogers", "date": "2023-12-10", "time": "14:00", "location": "Mental Health Wing B", "status": "confirmed" }
+
+Question: Cancel my orthopedic physiotherapy session with Dr. Clint Barton. Patient ID P8800.
+Call: { "func_call": "cancel_appointment", "patient_id": "P8800", "doctor_id": "D608", "specialty": "orthopedics", "date": "2023-12-07", "reason": "Session completed elsewhere" }
+Response: { "appointment_id": "APT-1122", "doctor": "Dr. Clint Barton", "date": "2023-12-07", "time": "10:30", "location": "Rehab Center 2", "status": "cancelled" }
+
+Question: Book a general practice vaccine booster with Dr. Diana Prince for next Tuesday. Patient ID P3355.
+Call: { "func_call": "book_appointment", "patient_id": "P3355", "doctor_id": "D110", "specialty": "GP", "date": "2023-12-05", "reason": "Vaccine booster" }
+Response: { "appointment_id": "APT-3344", "doctor": "Dr. Diana Prince", "date": "2023-12-05", "time": "12:15", "location": "Clinic Room 5", "status": "confirmed" }
+
+Question: Reschedule my neurology MRI review with Dr. Thor Odinson to December 20th. Patient ID P7799.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P7799", "doctor_id": "D512", "specialty": "neurology", "date": "2023-12-20", "reason": "Doctor availability" }
+Response: { "appointment_id": "APT-8877", "doctor": "Dr. Thor Odinson", "date": "2023-12-20", "time": "13:30", "location": "Neurology Wing D", "status": "rescheduled" }

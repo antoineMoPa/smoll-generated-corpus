@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": "number", "color": "string" }
+Response Schema: { "light_id": "string", "state": "string", "brightness": "number", "color": "string" }
+---
+Question: Turn the library reading lamp to a cool daylight shade.
+Call: { "func_call": "set_color", "light_id": "read_lib_13", "brightness": null, "color": "cool daylight" }
+Response: { "light_id": "read_lib_13", "state": "on", "brightness": 230, "color": "cool daylight" }
+
+Question: Modify the staircase strip lights to hex code #800080 for purple ambiance.
+Call: { "func_call": "set_color", "light_id": "strip_stair_14", "brightness": null, "color": "#800080" }
+Response: { "light_id": "strip_stair_14", "state": "on", "brightness": 140, "color": "#800080" }
+
+Question: Is the laundry room overhead light currently active?
+Call: { "func_call": "get_light_status", "light_id": "over_laun_15", "brightness": null, "color": null }
+Response: { "light_id": "over_laun_15", "state": "off", "brightness": 0, "color": "neutral white" }
+
+Question: Adjust the garden path lights to a soft amber tone.
+Call: { "func_call": "set_color", "light_id": "path_gard_16", "brightness": null, "color": "soft amber" }
+Response: { "light_id": "path_gard_16", "state": "on", "brightness": 110, "color": "soft amber" }
+
+Question: Set the attic storage bulb to hex value #00FF00.
+Call: { "func_call": "set_color", "light_id": "store_attic_17", "brightness": null, "color": "#00FF00" }
+Response: { "light_id": "store_attic_17", "state": "on", "brightness": 190, "color": "#00FF00" }
+
+Question: Verify the state and hue of the elevator lobby light.
+Call: { "func_call": "get_light_status", "light_id": "lobby_elev_18", "brightness": null, "color": null }
+Response: { "light_id": "lobby_elev_18", "state": "on", "brightness": 210, "color": "silver mist" }
+
+Question: Change the playroom ceiling fixture to a vibrant cyan using #00FFFF.
+Call: { "func_call": "set_color", "light_id": "ceil_play_19", "brightness": null, "color": "#00FFFF" }
+Response: { "light_id": "ceil_play_19", "state": "on", "brightness": 175, "color": "#00FFFF" }
+
+Question: Set the wine cellar spotlight to a deep red hue.
+Call: { "func_call": "set_color", "light_id": "spot_wine_20", "brightness": null, "color": "deep red" }
+Response: { "light_id": "spot_wine_20", "state": "on", "brightness": 85, "color": "deep red" }
+
+Question: What is the current color setting for the sunroom skylight?
+Call: { "func_call": "get_light_status", "light_id": "sky_sun_21", "brightness": null, "color": null }
+Response: { "light_id": "sky_sun_21", "state": "on", "brightness": 250, "color": "natural sun" }
+
+Question: Switch the guest room bedside lamp to hex #FFD700 for gold.
+Call: { "func_call": "set_color", "light_id": "bed_guest_22", "brightness": null, "color": "#FFD700" }
+Response: { "light_id": "bed_guest_22", "state": "on", "brightness": 130, "color": "#FFD700" }
+
+Question: Set the pool deck floodlights to a tropical turquoise.
+Call: { "func_call": "set_color", "light_id": "flood_pool_23", "brightness": null, "color": "tropical turquoise" }
+Response: { "light_id": "flood_pool_23", "state": "on", "brightness": 205, "color": "tropical turquoise" }
+
+Question: Retrieve the status and brightness of the driveway beacon.
+Call: { "func_call": "get_light_status", "light_id": "beacon_drive_24", "brightness": null, "color": null }
+Response: { "light_id": "beacon_drive_24", "state": "off", "brightness": 0, "color": "ice blue" }

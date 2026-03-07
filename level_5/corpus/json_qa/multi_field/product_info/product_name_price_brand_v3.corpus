@@ -1,0 +1,59 @@
+Context: I ordered the Keurig K-Elite coffee maker for $169.99 from the home goods store, and it is made by Keurig.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "K-Elite", "price": "$169.99", "brand": "Keurig"}
+
+Context: The new Apple MacBook Air M2 is priced at $1,099.00 and features a sleek midnight finish.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "MacBook Air M2", "price": "$1,099.00", "brand": "Apple"}
+
+Context: My neighbor recommended the Roomba j7+, which costs $599.99 and is manufactured by iRobot.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Roomba j7+", "price": "$599.99", "brand": "iRobot"}
+
+Context: We picked up a container of Ben & Jerry's Chunky Monkey ice cream for $5.49 last night.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Chunky Monkey", "price": "$5.49", "brand": "Ben & Jerry's"}
+
+Context: The GoPro HERO11 Black action camera is available now for $399.99 at most electronics outlets.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "HERO11 Black", "price": "$399.99", "brand": "GoPro"}
+
+Context: I found a great deal on the Adidas Ultraboost 22 running shoes, paying only $190.00 for the pair.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Ultraboost 22", "price": "$190.00", "brand": "Adidas"}
+
+Context: This tube of Colgate Total Whitening toothpaste retails for $3.75 and is great for daily use.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Total Whitening", "price": "$3.75", "brand": "Colgate"}
+
+Context: The Ninja Foodi Personal Blender in silver is listed at $79.99 on their official website.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Foodi Personal Blender", "price": "$79.99", "brand": "Ninja"}
+
+Context: After comparing options, I settled on the Razer BlackWidow V3 keyboard for $139.99.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "BlackWidow V3", "price": "$139.99", "brand": "Razer"}
+
+Context: The Google Pixel 7 Pro smartphone has a starting price of $899.00 and features an advanced camera system.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Pixel 7 Pro", "price": "$899.00", "brand": "Google"}
+
+Context: I purchased a box of Kellogg's Frosted Flakes cereal for $4.99 to stock up the pantry.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Frosted Flakes", "price": "$4.99", "brand": "Kellogg's"}
+
+Context: The JBL Flip 6 portable speaker is selling for $129.95 and provides deep bass.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Flip 6", "price": "$129.95", "brand": "JBL"}
+
+Context: You can get the Garmin Fenix 7 smartwatch for $699.99, a product by Garmin.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Fenix 7", "price": "$699.99", "brand": "Garmin"}
+
+Context: The LEGO Harry Potter Hogwarts Castle set costs $469.99 and is a favorite among fans.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Harry Potter Hogwarts Castle", "price": "$469.99", "brand": "LEGO"}
+
+Context: I recently switched to the Philips Sonicare DiamondClean toothbrush, priced at $229.96.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "DiamondClean", "price": "$229.96", "brand": "Philips"}

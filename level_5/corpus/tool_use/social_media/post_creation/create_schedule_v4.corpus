@@ -1,0 +1,51 @@
+Available Tools: create_post | create_story | schedule_post | delete_post
+Call Schema: { "func_call": "string", "content": "string", "media_url": "string", "hashtags": ["string"], "scheduled_at": "string" }
+Response Schema: { "post_id": "string", "status": "published|scheduled|draft", "url": "string", "timestamp": "string" }
+---
+Question: Share a picture of my new bicycle with the caption "Ready for the road" and tag it #cycling and #fitness.
+Call: { "func_call": "create_post", "content": "Ready for the road", "media_url": "https://cdn.social.com/users/u456/img_bike_02.jpg", "hashtags": ["#cycling", "#fitness"], "scheduled_at": null }
+Response: { "post_id": "pst_901122", "status": "published", "url": "https://social.com/p/pst_901122", "timestamp": "2023-11-01T07:45:12Z" }
+
+Question: Schedule an announcement for next Tuesday at 10 AM regarding our webinar registration with link https://events.example.com/webinar and tags #webinar #learning.
+Call: { "func_call": "schedule_post", "content": "Join us for an exclusive webinar! Register now: https://events.example.com/webinar", "media_url": "https://cdn.social.com/campaigns/webinar_promo.png", "hashtags": ["#webinar", "#learning"], "scheduled_at": "2023-11-07T10:00:00Z" }
+Response: { "post_id": "pst_901123", "status": "scheduled", "url": "https://social.com/p/pst_901123", "timestamp": "2023-11-01T08:30:45Z" }
+
+Question: Create a story snippet showing "Sunset views from the balcony" with no hashtags and the video at https://media.site.com/sunset_view.mp4.
+Call: { "func_call": "create_story", "content": "Sunset views from the balcony", "media_url": "https://media.site.com/sunset_view.mp4", "hashtags": [], "scheduled_at": null }
+Response: { "post_id": "sty_882301", "status": "published", "url": "https://social.com/stories/sty_882301", "timestamp": "2023-11-01T18:20:33Z" }
+
+Question: Post a summary of the city marathon with the caption "Running strong" and hashtags #marathon #running, using the image https://photos.me/marathon_finish.jpg.
+Call: { "func_call": "create_post", "content": "Running strong", "media_url": "https://photos.me/marathon_finish.jpg", "hashtags": ["#marathon", "#running"], "scheduled_at": null }
+Response: { "post_id": "pst_901125", "status": "published", "url": "https://social.com/p/pst_901125", "timestamp": "2023-11-01T14:15:22Z" }
+
+Question: Schedule an inspirational message for Wednesday morning at 6:30 AM with the text "Every day is a fresh start" and tags #inspiration #wednesday.
+Call: { "func_call": "schedule_post", "content": "Every day is a fresh start", "media_url": "https://assets.brand.com/quotes/fresh_start_bg.png", "hashtags": ["#inspiration", "#wednesday"], "scheduled_at": "2023-11-08T06:30:00Z" }
+Response: { "post_id": "pst_901130", "status": "scheduled", "url": "https://social.com/p/pst_901130", "timestamp": "2023-11-01T16:45:10Z" }
+
+Question: Create a quick update about the snowfall today with the caption "Winter wonderland outside" and tags #snow #winter.
+Call: { "func_call": "create_post", "content": "Winter wonderland outside", "media_url": "https://img.user.net/snow_yard_view.jpg", "hashtags": ["#snow", "#winter"], "scheduled_at": null }
+Response: { "post_id": "pst_901135", "status": "published", "url": "https://social.com/p/pst_901135", "timestamp": "2023-11-01T19:05:18Z" }
+
+Question: Schedule a clearance sale alert for Saturday at 12 PM with the message "Up to 70% off selected items!" and tags #clearance #deals.
+Call: { "func_call": "schedule_post", "content": "Up to 70% off selected items!", "media_url": "https://cdn.store.com/promo/clearance_banner.jpg", "hashtags": ["#clearance", "#deals"], "scheduled_at": "2023-11-04T12:00:00Z" }
+Response: { "post_id": "pst_901140", "status": "scheduled", "url": "https://social.com/p/pst_901140", "timestamp": "2023-11-01T20:30:55Z" }
+
+Question: Post a snapshot from the art gallery visit with the caption "Art speaks louder than words" and hashtags #art #gallery.
+Call: { "func_call": "create_post", "content": "Art speaks louder than words", "media_url": "https://uploads.social.net/gallery_exhibit_photo.jpg", "hashtags": ["#art", "#gallery"], "scheduled_at": null }
+Response: { "post_id": "pst_901145", "status": "published", "url": "https://social.com/p/pst_901145", "timestamp": "2023-11-02T15:40:27Z" }
+
+Question: Schedule a travel vlog teaser for Thursday evening at 9 PM with the title "Exploring Kyoto" and tags #travel #japan.
+Call: { "func_call": "schedule_post", "content": "Exploring Kyoto", "media_url": "https://video.cdn.io/kyoto_teaser_nov23.mp4", "hashtags": ["#travel", "#japan"], "scheduled_at": "2023-11-09T21:00:00Z" }
+Response: { "post_id": "pst_901150", "status": "scheduled", "url": "https://social.com/p/pst_901150", "timestamp": "2023-11-02T10:15:40Z" }
+
+Question: Create a story question sticker asking "What's your favorite book?" with the image https://gfx.design.com/book_q_bg.png and no hashtags.
+Call: { "func_call": "create_story", "content": "What's your favorite book?", "media_url": "https://gfx.design.com/book_q_bg.png", "hashtags": [], "scheduled_at": null }
+Response: { "post_id": "sty_882315", "status": "published", "url": "https://social.com/stories/sty_882315", "timestamp": "2023-11-02T11:25:18Z" }
+
+Question: Post an introduction for the new team member with the caption "Welcome Sarah to the design team" and tags #newhire #team.
+Call: { "func_call": "create_post", "content": "Welcome Sarah to the design team", "media_url": "https://photos.company.internal/sarah_headshot.jpg", "hashtags": ["#newhire", "#team"], "scheduled_at": null }
+Response: { "post_id": "pst_901155", "status": "published", "url": "https://social.com/p/pst_901155", "timestamp": "2023-11-02T13:50:33Z" }
+
+Question: Schedule a New Year's Eve countdown post for December 31st at 11:55 PM with the message "Happy New Year everyone!" and tags #newyear #celebration.
+Call: { "func_call": "schedule_post", "content": "Happy New Year everyone!", "media_url": "https://assets.brand.com/seasonal/nye_fireworks.png", "hashtags": ["#newyear", "#celebration"], "scheduled_at": "2023-12-31T23:55:00Z" }
+Response: { "post_id": "pst_901160", "status": "scheduled", "url": "https://social.com/p/pst_901160", "timestamp": "2023-11-02T14:45:50Z" }

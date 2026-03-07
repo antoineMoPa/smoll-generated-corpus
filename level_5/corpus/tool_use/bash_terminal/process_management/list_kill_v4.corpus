@@ -1,0 +1,51 @@
+Available Tools: list_processes | kill_process | get_process_info | top_processes
+Call Schema: { "func_call": "string", "pid": number, "name": "string", "signal": "string" }
+Response Schema: { "processes": [{ "pid": number, "name": "string", "cpu": number, "mem": number }] }
+---
+Question: Display a list of all active processes on the machine.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 2048, "name": "apache2", "cpu": 1.2, "mem": 3.4 }, { "pid": 2049, "name": "postgres", "cpu": 4.5, "mem": 12.1 }, { "pid": 2050, "name": "redis", "cpu": 0.8, "mem": 2.2 }] }
+
+Question: Forcefully stop the java application running under process ID 8832.
+Call: { "func_call": "kill_process", "pid": 8832, "name": "java", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 8832, "name": "java", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Which processes are currently using the highest amount of memory?
+Call: { "func_call": "top_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 5512, "name": "docker", "cpu": 22.4, "mem": 45.6 }, { "pid": 5513, "name": "kubernetes", "cpu": 18.9, "mem": 38.2 }, { "pid": 4102, "name": "elasticsearch", "cpu": 10.2, "mem": 29.5 }] }
+
+Question: Send a hangup signal to the apache2 worker with PID 3099.
+Call: { "func_call": "kill_process", "pid": 3099, "name": "apache2", "signal": "SIGHUP" }
+Response: { "processes": [{ "pid": 3099, "name": "apache2", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Find all running instances of postgres and report their stats.
+Call: { "func_call": "list_processes", "pid": 0, "name": "postgres", "signal": "" }
+Response: { "processes": [{ "pid": 6601, "name": "postgres", "cpu": 2.1, "mem": 8.4 }, { "pid": 6602, "name": "postgres", "cpu": 1.5, "mem": 6.2 }] }
+
+Question: The redis server on port 6379 (PID 4455) has frozen, kill it immediately.
+Call: { "func_call": "kill_process", "pid": 4455, "name": "redis", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 4455, "name": "redis", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Retrieve detailed information for process 7788, expected to be a docker container.
+Call: { "func_call": "get_process_info", "pid": 7788, "name": "docker", "signal": "" }
+Response: { "processes": [{ "pid": 7788, "name": "docker", "cpu": 8.9, "mem": 19.4 }] }
+
+Question: Show me every java process currently executing and their resource consumption.
+Call: { "func_call": "list_processes", "pid": 0, "name": "java", "signal": "" }
+Response: { "processes": [{ "pid": 9001, "name": "java", "cpu": 15.2, "mem": 24.5 }, { "pid": 9005, "name": "java", "cpu": 0.5, "mem": 4.1 }, { "pid": 9012, "name": "java", "cpu": 7.8, "mem": 11.3 }] }
+
+Question: Terminate the kubernetes pod manager process 5544 using the standard interrupt signal.
+Call: { "func_call": "kill_process", "pid": 5544, "name": "kubernetes", "signal": "SIGINT" }
+Response: { "processes": [{ "pid": 5544, "name": "kubernetes", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Check the current CPU and memory usage for the systemd process 1.
+Call: { "func_call": "get_process_info", "pid": 1, "name": "systemd", "signal": "" }
+Response: { "processes": [{ "pid": 1, "name": "systemd", "cpu": 0.2, "mem": 1.1 }] }
+
+Question: There is a stuck elasticsearch process 3322 that needs to be removed.
+Call: { "func_call": "kill_process", "pid": 3322, "name": "elasticsearch", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 3322, "name": "elasticsearch", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Output a complete list of all processes running on this host without filtering.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 100, "name": "init", "cpu": 0.0, "mem": 0.4 }, { "pid": 305, "name": "udev", "cpu": 0.1, "mem": 0.6 }, { "pid": 510, "name": "journald", "cpu": 0.3, "mem": 1.2 }] }

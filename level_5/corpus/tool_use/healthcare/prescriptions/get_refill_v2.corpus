@@ -1,0 +1,51 @@
+Available Tools: get_prescriptions | request_refill | check_drug_interaction | get_medication_info
+Call Schema: { "func_call": "string", "patient_id": "string", "medication": "string", "dosage": "string" }
+Response Schema: { "prescription_id": "string", "medication": "string", "dosage": "string", "refills_remaining": number, "status": "string" }
+---
+Question: What are the current details for patient P72910 regarding their amoxicillin 250mg prescription?
+Call: { "func_call": "get_prescriptions", "patient_id": "P72910", "medication": "amoxicillin", "dosage": "250mg" }
+Response: { "prescription_id": "RX-2024-9921", "medication": "amoxicillin", "dosage": "250mg", "refills_remaining": 0, "status": "completed" }
+
+Question: Please submit a refill order for patient P58392 who takes omeprazole 20mg.
+Call: { "func_call": "request_refill", "patient_id": "P58392", "medication": "omeprazole", "dosage": "20mg" }
+Response: { "prescription_id": "RX-2024-8810", "medication": "omeprazole", "dosage": "20mg", "refills_remaining": 5, "status": "refill_requested" }
+
+Question: Can you check the status of the levothyroxine 50mcg script for patient P41029?
+Call: { "func_call": "get_prescriptions", "patient_id": "P41029", "medication": "levothyroxine", "dosage": "50mcg" }
+Response: { "prescription_id": "RX-2024-7709", "medication": "levothyroxine", "dosage": "50mcg", "refills_remaining": 8, "status": "active" }
+
+Question: I need to request more refills for patient P63817 on their albuterol 90mcg inhaler.
+Call: { "func_call": "request_refill", "patient_id": "P63817", "medication": "albuterol", "dosage": "90mcg" }
+Response: { "prescription_id": "RX-2024-6698", "medication": "albuterol", "dosage": "90mcg", "refills_remaining": 2, "status": "refill_requested" }
+
+Question: Retrieve the prescription record for patient P90234 taking ibuprofen 600mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P90234", "medication": "ibuprofen", "dosage": "600mg" }
+Response: { "prescription_id": "RX-2024-5587", "medication": "ibuprofen", "dosage": "600mg", "refills_remaining": 1, "status": "active" }
+
+Question: Patient P15678 requires an immediate refill on their sertraline 100mg medication.
+Call: { "func_call": "request_refill", "patient_id": "P15678", "medication": "sertraline", "dosage": "100mg" }
+Response: { "prescription_id": "RX-2024-4476", "medication": "sertraline", "dosage": "100mg", "refills_remaining": 0, "status": "refill_requested" }
+
+Question: Look up the active prescription for patient P28456 who is on azithromycin 500mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P28456", "medication": "azithromycin", "dosage": "500mg" }
+Response: { "prescription_id": "RX-2024-3365", "medication": "azithromycin", "dosage": "500mg", "refills_remaining": 0, "status": "expired" }
+
+Question: Please verify the details for patient P73901's hydrochlorothiazide 25mg prescription.
+Call: { "func_call": "get_prescriptions", "patient_id": "P73901", "medication": "hydrochlorothiazide", "dosage": "25mg" }
+Response: { "prescription_id": "RX-2024-2254", "medication": "hydrochlorothiazide", "dosage": "25mg", "refills_remaining": 4, "status": "active" }
+
+Question: Initiate a refill process for patient P82109 taking gabapentin 300mg.
+Call: { "func_call": "request_refill", "patient_id": "P82109", "medication": "gabapentin", "dosage": "300mg" }
+Response: { "prescription_id": "RX-2024-1143", "medication": "gabapentin", "dosage": "300mg", "refills_remaining": 6, "status": "refill_requested" }
+
+Question: What is the current status of the prednisone 10mg prescription for patient P39482?
+Call: { "func_call": "get_prescriptions", "patient_id": "P39482", "medication": "prednisone", "dosage": "10mg" }
+Response: { "prescription_id": "RX-2024-0032", "medication": "prednisone", "dosage": "10mg", "refills_remaining": 0, "status": "discontinued" }
+
+Question: Can you pull the prescription data for patient P50193 regarding their montelukast 10mg?
+Call: { "func_call": "get_prescriptions", "patient_id": "P50193", "medication": "montelukast", "dosage": "10mg" }
+Response: { "prescription_id": "RX-2025-1928", "medication": "montelukast", "dosage": "10mg", "refills_remaining": 3, "status": "active" }
+
+Question: Submit a request to refill patient P67284's prescription for fluoxetine 20mg.
+Call: { "func_call": "request_refill", "patient_id": "P67284", "medication": "fluoxetine", "dosage": "20mg" }
+Response: { "prescription_id": "RX-2025-3847", "medication": "fluoxetine", "dosage": "20mg", "refills_remaining": 0, "status": "refill_requested" }

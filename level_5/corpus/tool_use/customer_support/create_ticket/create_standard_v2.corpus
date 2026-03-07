@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: My smart thermostat disconnects from WiFi every few hours requiring a restart.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-5512", "subject": "Smart thermostat WiFi connectivity loss", "description": "Device model TH-300 loses connection to home network approximately every 3 hours. Firmware is up to date.", "priority": "medium", "category": "connectivity_issue" }
+Response: { "ticket_id": "TKT-550112", "status": "open", "priority": "medium", "assigned_to": "iot_support_05", "created_at": "2023-11-14T11:20:15Z" }
+
+Question: Emergency: The fire alarm system in our warehouse is sounding false alarms continuously.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-BIZ-992", "subject": "False fire alarm触发 continuously", "description": "Warehouse zone B sensors are triggering alarms without smoke or heat present. Evacuation protocols activated unnecessarily.", "priority": "urgent", "category": "safety_system_failure" }
+Response: { "ticket_id": "TKT-550113", "status": "open", "priority": "urgent", "assigned_to": "safety_engineer_lead", "created_at": "2023-11-14T11:22:40Z" }
+
+Question: I was refunded the wrong amount for my returned jacket.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-8843", "subject": "Incorrect refund amount issued", "description": "Returned winter jacket priced at $120 resulted in a refund of only $85. Receipt attached showing full price payment.", "priority": "high", "category": "refund_discrepancy" }
+Response: { "ticket_id": "TKT-550114", "status": "open", "priority": "high", "assigned_to": "finance_agent_09", "created_at": "2023-11-14T11:25:33Z" }
+
+Question: The mobile app fails to sync my workout data with the cloud server.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-2276", "subject": "Workout data sync failure", "description": "Android app version 3.1.0 shows 'Sync Failed' error for all activities recorded after November 1st.", "priority": "medium", "category": "data_sync_error" }
+Response: { "ticket_id": "TKT-550115", "status": "open", "priority": "medium", "assigned_to": "mobile_dev_team_02", "created_at": "2023-11-14T11:30:18Z" }
+
+Question: My replacement keyboard has not arrived despite the tracking showing delivered.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-6699", "subject": "Package marked delivered but not received", "description": "Tracking number TRK-998877 shows delivery on Nov 12th, but no package was found at the doorstep or with neighbors.", "priority": "high", "category": "missing_shipment" }
+Response: { "ticket_id": "TKT-550116", "status": "open", "priority": "high", "assigned_to": "logistics_investigator_04", "created_at": "2023-11-14T11:35:50Z" }
+
+Question: The blender blade assembly came loose during the first use and leaked.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-4421", "subject": "Blender blade assembly defect", "description": "Model BL-500 blade unit detached while blending, causing liquid leakage and motor struggle. Potential safety hazard.", "priority": "high", "category": "product_safety" }
+Response: { "ticket_id": "TKT-550117", "status": "open", "priority": "high", "assigned_to": "quality_control_08", "created_at": "2023-11-14T11:40:22Z" }
+
+Question: I am unable to change my notification preferences; the toggle buttons are unresponsive.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-1155", "subject": "Notification settings UI unresponsive", "description": "On the web portal, toggling email or SMS notifications does not save changes. Browser console shows no errors.", "priority": "low", "category": "ui_glitch" }
+Response: { "ticket_id": "TKT-550118", "status": "open", "priority": "low", "assigned_to": "frontend_support_03", "created_at": "2023-11-14T11:45:05Z" }
+
+Question: Critical: Our payment gateway is rejecting all valid credit card transactions.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-MERCH-77", "subject": "Payment gateway total failure", "description": "All customer transactions since 11:00 AM are being declined with error code 503. Revenue loss accumulating rapidly.", "priority": "urgent", "category": "payment_outage" }
+Response: { "ticket_id": "TKT-550119", "status": "open", "priority": "urgent", "assigned_to": "payments_incident_team", "created_at": "2023-11-14T11:48:30Z" }
+
+Question: The 'Buy One Get One' offer is not reflecting in my final cart total.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-9933", "subject": "BOGO promotion not calculating correctly", "description": "Added two eligible items to cart but only one price was deducted. Promo code AUTO-BOGO applied but ineffective.", "priority": "medium", "category": "promo_calculation" }
+Response: { "ticket_id": "TKT-550120", "status": "open", "priority": "medium", "assigned_to": "ecommerce_analyst_01", "created_at": "2023-11-14T11:52:44Z" }
+
+Question: I ordered a blue rug but received a red one of a different size.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-7744", "subject": "Completely wrong item and size delivered", "description": "Order #5543 requested 8x10 Blue Rug, received 5x7 Red Rug. Need immediate return label and correct shipment.", "priority": "high", "category": "fulfillment_error" }
+Response: { "ticket_id": "TKT-550121", "status": "open", "priority": "high", "assigned_to": "warehouse_ops_06", "created_at": "2023-11-14T11:55:12Z" }
+
+Question: The API response time for our inventory check endpoint has spiked to 5 seconds.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-DEV-402", "subject": "High latency on inventory API endpoint", "description": "Endpoint /api/v1/stock-check showing average latency of 5000ms since morning deployment. Causing timeout errors.", "priority": "high", "category": "api_performance" }
+Response: { "ticket_id": "TKT-550122", "status": "open", "priority": "high", "assigned_to": "backend_sre_04", "created_at": "2023-11-14T12:01:38Z" }
+
+Question: I cannot access my purchase history for the year 2022; the page is blank.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-3367", "subject": "Blank purchase history for 2022", "description": "Navigating to Order History and filtering for 2022 results in an empty white page. Other years load correctly.", "priority": "low", "category": "data_retrieval" }
+Response: { "ticket_id": "TKT-550123", "status": "open", "priority": "low", "assigned_to": "database_support_02", "created_at": "2023-11-14T12:05:55Z" }

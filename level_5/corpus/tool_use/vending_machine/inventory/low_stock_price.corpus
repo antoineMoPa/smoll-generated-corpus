@@ -1,0 +1,51 @@
+Available Tools: list_inventory | restock_item | get_low_stock | update_price
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number, "price": number }
+Response Schema: { "inventory": [{ "slot_id": "string", "name": "string", "quantity": number, "price": number }] }
+---
+Question: Check which items are running low in the downtown office machine.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "A1", "name": "Sparkling Water", "quantity": 2, "price": 1.50 }, { "slot_id": "B3", "name": "Almond Bar", "quantity": 1, "price": 2.25 }] }
+
+Question: We need to raise the price of the Premium Coffee in slot C2 to $3.50 due to supplier costs.
+Call: { "func_call": "update_price", "slot_id": "C2", "quantity": 0, "price": 3.50 }
+Response: { "inventory": [{ "slot_id": "C2", "name": "Premium Coffee", "quantity": 15, "price": 3.50 }] }
+
+Question: Show me the current stock levels for everything in the gym lobby vending machine.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "A1", "name": "Protein Shake", "quantity": 12, "price": 4.00 }, { "slot_id": "A2", "name": "Energy Drink", "quantity": 8, "price": 3.00 }, { "slot_id": "B1", "name": "Granola Bar", "quantity": 20, "price": 1.75 }] }
+
+Question: The chocolate chips in slot D4 are selling fast; update the price to $1.99.
+Call: { "func_call": "update_price", "slot_id": "D4", "quantity": 0, "price": 1.99 }
+Response: { "inventory": [{ "slot_id": "D4", "name": "Chocolate Chips", "quantity": 5, "price": 1.99 }] }
+
+Question: Alert me if any snacks have dropped below 3 units in the school cafeteria machine.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "E2", "name": "Fruit Gummies", "quantity": 2, "price": 1.25 }, { "slot_id": "E3", "name": "Cheese Crackers", "quantity": 0, "price": 1.50 }] }
+
+Question: Increase the cost of the Iced Tea in slot A5 to $2.75 effective immediately.
+Call: { "func_call": "update_price", "slot_id": "A5", "quantity": 0, "price": 2.75 }
+Response: { "inventory": [{ "slot_id": "A5", "name": "Iced Tea", "quantity": 18, "price": 2.75 }] }
+
+Question: Pull a report of all items currently under the reorder threshold for the airport terminal machine.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "F1", "name": "Travel Mints", "quantity": 1, "price": 0.99 }, { "slot_id": "F2", "name": "Sandwich Wrap", "quantity": 2, "price": 5.50 }] }
+
+Question: Adjust the price of the Salted Peanuts in slot B2 to $2.00 to match competitor pricing.
+Call: { "func_call": "update_price", "slot_id": "B2", "quantity": 0, "price": 2.00 }
+Response: { "inventory": [{ "slot_id": "B2", "name": "Salted Peanuts", "quantity": 9, "price": 2.00 }] }
+
+Question: Which items in the hospital waiting room machine need immediate restocking?
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "G3", "name": "Ginger Ale", "quantity": 1, "price": 1.75 }, { "slot_id": "G4", "name": "Crackers", "quantity": 0, "price": 1.25 }] }
+
+Question: Update the vending price for the Organic Juice in slot C1 to $4.25.
+Call: { "func_call": "update_price", "slot_id": "C1", "quantity": 0, "price": 4.25 }
+Response: { "inventory": [{ "slot_id": "C1", "name": "Organic Juice", "quantity": 7, "price": 4.25 }] }
+
+Question: Scan the inventory at the tech park and identify any slots with less than 5 items remaining.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "H1", "name": "USB Cable", "quantity": 3, "price": 9.99 }, { "slot_id": "H2", "name": "Energy Bar", "quantity": 4, "price": 2.50 }] }
+
+Question: Change the price of the Lemon Soda in slot A3 to $1.85 due to a promotional discount.
+Call: { "func_call": "update_price", "slot_id": "A3", "quantity": 0, "price": 1.85 }
+Response: { "inventory": [{ "slot_id": "A3", "name": "Lemon Soda", "quantity": 22, "price": 1.85 }] }

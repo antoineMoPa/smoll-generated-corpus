@@ -1,0 +1,51 @@
+Available Tools: get_balance | get_account_summary | get_available_credit | get_account_details
+Call Schema: { "func_call": "string", "account_id": "string", "account_type": "checking|savings|credit" }
+Response Schema: { "account_id": "string", "balance": number, "currency": "string", "available": number }
+---
+Question: What is the remaining balance on my auto loan checking account ending in 3382?
+Call: { "func_call": "get_balance", "account_id": "CHK-5512-3382", "account_type": "checking" }
+Response: { "account_id": "CHK-5512-3382", "balance": 4120.90, "currency": "USD", "available": 4120.90 }
+
+Question: Can you show me the total funds in my retirement savings bucket?
+Call: { "func_call": "get_balance", "account_id": "SAV-8843-2219", "account_type": "savings" }
+Response: { "account_id": "SAV-8843-2219", "balance": 67300.45, "currency": "USD", "available": 67300.45 }
+
+Question: How much do I currently owe on my gold status credit card?
+Call: { "func_call": "get_balance", "account_id": "CRD-1192-7764", "account_type": "credit" }
+Response: { "account_id": "CRD-1192-7764", "balance": -2105.33, "currency": "USD", "available": 7894.67 }
+
+Question: Please check the balance of my rent payment checking account.
+Call: { "func_call": "get_balance", "account_id": "CHK-9921-4456", "account_type": "checking" }
+Response: { "account_id": "CHK-9921-4456", "balance": 1540.20, "currency": "USD", "available": 1540.20 }
+
+Question: What is the current amount in my holiday gift savings fund?
+Call: { "func_call": "get_balance", "account_id": "SAV-2234-8871", "account_type": "savings" }
+Response: { "account_id": "SAV-2234-8871", "balance": 890.15, "currency": "USD", "available": 890.15 }
+
+Question: Tell me the outstanding balance on my secured credit builder card.
+Call: { "func_call": "get_balance", "account_id": "CRD-6655-3309", "account_type": "credit" }
+Response: { "account_id": "CRD-6655-3309", "balance": -450.00, "currency": "USD", "available": 550.00 }
+
+Question: How much money is left in my freelance income checking account?
+Call: { "func_call": "get_balance", "account_id": "CHK-7788-1123", "account_type": "checking" }
+Response: { "account_id": "CHK-7788-1123", "balance": 3345.88, "currency": "USD", "available": 3345.88 }
+
+Question: Retrieve the balance for my home down payment savings account.
+Call: { "func_call": "get_balance", "account_id": "SAV-4456-9982", "account_type": "savings" }
+Response: { "account_id": "SAV-4456-9982", "balance": 22450.75, "currency": "USD", "available": 22450.75 }
+
+Question: What is the current debt on my cashback rewards credit card?
+Call: { "func_call": "get_balance", "account_id": "CRD-3344-5567", "account_type": "credit" }
+Response: { "account_id": "CRD-3344-5567", "balance": -1876.42, "currency": "USD", "available": 8123.58 }
+
+Question: Show me the available funds in my monthly bills checking account.
+Call: { "func_call": "get_balance", "account_id": "CHK-2211-6654", "account_type": "checking" }
+Response: { "account_id": "CHK-2211-6654", "balance": 980.30, "currency": "USD", "available": 980.30 }
+
+Question: How much have I accumulated in my medical emergency savings?
+Call: { "func_call": "get_balance", "account_id": "SAV-5567-1122", "account_type": "savings" }
+Response: { "account_id": "SAV-5567-1122", "balance": 5600.00, "currency": "USD", "available": 5600.00 }
+
+Question: What is the balance and available limit on my airline miles credit card?
+Call: { "func_call": "get_balance", "account_id": "CRD-8899-2233", "account_type": "credit" }
+Response: { "account_id": "CRD-8899-2233", "balance": -3421.10, "currency": "USD", "available": 6578.90 }

@@ -1,0 +1,51 @@
+Available Tools: list_processes | kill_process | get_process_info | top_processes
+Call Schema: { "func_call": "string", "pid": "number", "name": "string", "signal": "string" }
+Response Schema: { "processes": [{ "pid": "number", "name": "string", "cpu": "number", "mem": "number" }] }
+---
+Question: Display the top 4 processes sorted by CPU utilization.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 7821, "name": "redis-server", "cpu": 38.9, "mem": 15.2 }, { "pid": 4102, "name": "code", "cpu": 29.4, "mem": 21.3 }, { "pid": 905, "name": "slack", "cpu": 18.7, "mem": 19.8 }, { "pid": 3340, "name": "zoom", "cpu": 14.2, "mem": 11.5 }] }
+
+Question: Retrieve statistics for the process with ID 5512.
+Call: { "func_call": "get_process_info", "pid": 5512, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 5512, "name": "mongod", "cpu": 12.3, "mem": 28.9 }] }
+
+Question: Enumerate every active process on this machine.
+Call: { "func_call": "list_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 1, "name": "init", "cpu": 0.0, "mem": 0.2 }, { "pid": 302, "name": "cron", "cpu": 0.1, "mem": 0.4 }, { "pid": 7821, "name": "redis-server", "cpu": 38.9, "mem": 15.2 }, { "pid": 5512, "name": "mongod", "cpu": 12.3, "mem": 28.9 }] }
+
+Question: Locate the 'apache2' daemon and report its metrics.
+Call: { "func_call": "get_process_info", "pid": null, "name": "apache2", "signal": null }
+Response: { "processes": [{ "pid": 8890, "name": "apache2", "cpu": 3.5, "mem": 4.2 }] }
+
+Question: Identify which applications are draining the most RAM currently.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 5512, "name": "mongod", "cpu": 12.3, "mem": 28.9 }, { "pid": 4102, "name": "code", "cpu": 29.4, "mem": 21.3 }, { "pid": 905, "name": "slack", "cpu": 18.7, "mem": 19.8 }, { "pid": 7821, "name": "redis-server", "cpu": 38.9, "mem": 15.2 }, { "pid": 3340, "name": "zoom", "cpu": 14.2, "mem": 11.5 }] }
+
+Question: Fetch details for the ruby interpreter instance.
+Call: { "func_call": "get_process_info", "pid": null, "name": "ruby", "signal": null }
+Response: { "processes": [{ "pid": 6743, "name": "ruby", "cpu": 22.1, "mem": 31.6 }] }
+
+Question: Show me the top 2 most CPU-intensive tasks.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 7821, "name": "redis-server", "cpu": 38.9, "mem": 15.2 }, { "pid": 4102, "name": "code", "cpu": 29.4, "mem": 21.3 }] }
+
+Question: Inspect the current state of process 302.
+Call: { "func_call": "get_process_info", "pid": 302, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 302, "name": "cron", "cpu": 0.1, "mem": 0.4 }] }
+
+Question: Get resource data for the elasticsearch service.
+Call: { "func_call": "get_process_info", "pid": null, "name": "elasticsearch", "signal": null }
+Response: { "processes": [{ "pid": 9921, "name": "elasticsearch", "cpu": 9.8, "mem": 45.3 }] }
+
+Question: Rank processes by their total resource footprint.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 6743, "name": "ruby", "cpu": 22.1, "mem": 31.6 }, { "pid": 7821, "name": "redis-server", "cpu": 38.9, "mem": 15.2 }, { "pid": 5512, "name": "mongod", "cpu": 12.3, "mem": 28.9 }, { "pid": 4102, "name": "code", "cpu": 29.4, "mem": 21.3 }, { "pid": 905, "name": "slack", "cpu": 18.7, "mem": 19.8 }] }
+
+Question: How much CPU is process 8890 utilizing?
+Call: { "func_call": "get_process_info", "pid": 8890, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 8890, "name": "apache2", "cpu": 3.5, "mem": 4.2 }] }
+
+Question: List the processes consuming the largest amount of memory.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 9921, "name": "elasticsearch", "cpu": 9.8, "mem": 45.3 }, { "pid": 6743, "name": "ruby", "cpu": 22.1, "mem": 31.6 }, { "pid": 5512, "name": "mongod", "cpu": 12.3, "mem": 28.9 }, { "pid": 4102, "name": "code", "cpu": 29.4, "mem": 21.3 }, { "pid": 905, "name": "slack", "cpu": 18.7, "mem": 19.8 }] }

@@ -1,0 +1,51 @@
+Available Tools: pull_image | push_image | build_image | list_images | remove_image | tag_image
+Call Schema: { "func_call": "string", "image": "string", "tag": "string", "registry": "string", "dockerfile": "string" }
+Response Schema: { "image_id": "string", "repository": "string", "tag": "string", "size_mb": number, "created": "string" }
+---
+Question: Assemble the order-processing service with tag v2.0.0 using the standard Dockerfile.
+Call: { "func_call": "build_image", "image": "order-processing", "tag": "v2.0.0", "registry": "docker.io", "dockerfile": "./Dockerfile" }
+Response: { "image_id": "sha256:1a2b3c4d5e6f", "repository": "docker.io/order-processing", "tag": "v2.0.0", "size_mb": 156.4, "created": "2023-11-01T09:10:15Z" }
+
+Question: Construct the email-sender module tagged latest from the containers directory Dockerfile.
+Call: { "func_call": "build_image", "image": "email-sender", "tag": "latest", "registry": "gcr.io/messaging", "dockerfile": "./containers/Dockerfile" }
+Response: { "image_id": "sha256:2b3c4d5e6f7a", "repository": "gcr.io/messaging/email-sender", "tag": "latest", "size_mb": 88.9, "created": "2023-11-01T10:22:30Z" }
+
+Question: Build the analytics-dashboard with version v1.2.5 using the lightweight Dockerfile.
+Call: { "func_call": "build_image", "image": "analytics-dashboard", "tag": "v1.2.5", "registry": "quay.io/data", "dockerfile": "./Dockerfile.light" }
+Response: { "image_id": "sha256:3c4d5e6f7a8b", "repository": "quay.io/data/analytics-dashboard", "tag": "v1.2.5", "size_mb": 203.7, "created": "2023-11-01T11:45:00Z" }
+
+Question: Generate a dev build for the config-server using the debug Dockerfile path.
+Call: { "func_call": "build_image", "image": "config-server", "tag": "dev", "registry": "artifactory.dev", "dockerfile": "./debug/Dockerfile" }
+Response: { "image_id": "sha256:4d5e6f7a8b9c", "repository": "artifactory.dev/config-server", "tag": "dev", "size_mb": 112.3, "created": "2023-11-01T12:30:45Z" }
+
+Question: Compile the video-transcoder service tagged v3.1.0 from the gpu-optimized Dockerfile.
+Call: { "func_call": "build_image", "image": "video-transcoder", "tag": "v3.1.0", "registry": "docker.io", "dockerfile": "./Dockerfile.gpu" }
+Response: { "image_id": "sha256:5e6f7a8b9c0d", "repository": "docker.io/video-transcoder", "tag": "v3.1.0", "size_mb": 450.2, "created": "2023-11-01T13:15:20Z" }
+
+Question: Create the scheduler-worker image with tag staging using the minimal base Dockerfile.
+Call: { "func_call": "build_image", "image": "scheduler-worker", "tag": "staging", "registry": "gcr.io/jobs", "dockerfile": "./base/Dockerfile.min" }
+Response: { "image_id": "sha256:6f7a8b9c0d1e", "repository": "gcr.io/jobs/scheduler-worker", "tag": "staging", "size_mb": 54.6, "created": "2023-11-01T14:05:10Z" }
+
+Question: Build the chat-bot application version v0.5.0-beta using the experimental Dockerfile.
+Call: { "func_call": "build_image", "image": "chat-bot", "tag": "v0.5.0-beta", "registry": "quay.io/ai", "dockerfile": "./exp/Dockerfile.ai" }
+Response: { "image_id": "sha256:7a8b9c0d1e2f", "repository": "quay.io/ai/chat-bot", "tag": "v0.5.0-beta", "size_mb": 320.1, "created": "2023-11-01T15:40:55Z" }
+
+Question: Assemble the backup-agent with the latest tag from the secure Dockerfile location.
+Call: { "func_call": "build_image", "image": "backup-agent", "tag": "latest", "registry": "docker.io", "dockerfile": "./secure/Dockerfile" }
+Response: { "image_id": "sha256:8b9c0d1e2f3a", "repository": "docker.io/backup-agent", "tag": "latest", "size_mb": 95.8, "created": "2023-11-01T16:20:30Z" }
+
+Question: Generate the metric-collector service tagged v2.2.2 using the alpine Dockerfile.
+Call: { "func_call": "build_image", "image": "metric-collector", "tag": "v2.2.2", "registry": "gcr.io/monitoring", "dockerfile": "./Dockerfile.alpine" }
+Response: { "image_id": "sha256:9c0d1e2f3a4b", "repository": "gcr.io/monitoring/metric-collector", "tag": "v2.2.2", "size_mb": 38.4, "created": "2023-11-01T17:10:15Z" }
+
+Question: Build the file-storage handler with version v1.0.1 from the root Dockerfile.
+Call: { "func_call": "build_image", "image": "file-storage", "tag": "v1.0.1", "registry": "artifactory.storage", "dockerfile": "./Dockerfile" }
+Response: { "image_id": "sha256:0d1e2f3a4b5c", "repository": "artifactory.storage/file-storage", "tag": "v1.0.1", "size_mb": 178.5, "created": "2023-11-01T18:00:40Z" }
+
+Question: Compile the session-manager module tagged rc2 using the production-ready Dockerfile.
+Call: { "func_call": "build_image", "image": "session-manager", "tag": "rc2", "registry": "quay.io/auth", "dockerfile": "./prod/Dockerfile.ready" }
+Response: { "image_id": "sha256:1e2f3a4b5c6d", "repository": "quay.io/auth/session-manager", "tag": "rc2", "size_mb": 142.9, "created": "2023-11-01T19:25:50Z" }
+
+Question: Create a test build of the load-balancer service using the custom Dockerfile path.
+Call: { "func_call": "build_image", "image": "load-balancer", "tag": "test", "registry": "docker.io", "dockerfile": "./custom/Dockerfile.lb" }
+Response: { "image_id": "sha256:2f3a4b5c6d7e", "repository": "docker.io/load-balancer", "tag": "test", "size_mb": 67.2, "created": "2023-11-01T20:45:05Z" }

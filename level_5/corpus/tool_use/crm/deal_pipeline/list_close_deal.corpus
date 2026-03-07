@@ -1,0 +1,62 @@
+Available Tools: create_deal | update_deal_stage | get_deal | list_deals_by_stage | close_deal
+Call Schema: { "func_call": "string", "deal_id": "string", "contact_id": "string", "stage": "string", "value": number }
+Response Schema: { "deal_id": "string", "name": "string", "stage": "string", "value": number, "probability": number }
+---
+Question: Show me all deals currently in the negotiation phase.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Negotiation", "value": 0 }
+Response: { "deal_id": "DL-8821", "name": "Acme Corp Enterprise License", "stage": "Negotiation", "value": 125000, "probability": 75 }
+
+---
+Question: List every opportunity we have in the discovery stage right now.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Discovery", "value": 0 }
+Response: { "deal_id": "DL-9904", "name": "TechStart Initial Consult", "stage": "Discovery", "value": 15000, "probability": 20 }
+
+---
+Question: I need to see the pipeline for deals marked as proposal sent.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Proposal Sent", "value": 0 }
+Response: { "deal_id": "DL-3342", "name": "Global Logistics Software Upgrade", "stage": "Proposal Sent", "value": 340000, "probability": 60 }
+
+---
+Question: What deals are waiting for legal review?
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Legal Review", "value": 0 }
+Response: { "deal_id": "DL-7712", "name": "FinSecure Compliance Package", "stage": "Legal Review", "value": 89000, "probability": 85 }
+
+---
+Question: Pull up the list of deals currently in the qualification stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Qualification", "value": 0 }
+Response: { "deal_id": "DL-1129", "name": "RetailPlus POS Integration", "stage": "Qualification", "value": 42000, "probability": 30 }
+
+---
+Question: Close deal DL-5501 as won because the contract was signed yesterday.
+Call: { "func_call": "close_deal", "deal_id": "DL-5501", "contact_id": "CT-209", "stage": "Closed Won", "value": 210000 }
+Response: { "deal_id": "DL-5501", "name": "Manufacturing Co Automation Suite", "stage": "Closed Won", "value": 210000, "probability": 100 }
+
+---
+Question: Mark deal DL-6632 as lost; the client decided to go with a competitor.
+Call: { "func_call": "close_deal", "deal_id": "DL-6632", "contact_id": "CT-445", "stage": "Closed Lost", "value": 75000 }
+Response: { "deal_id": "DL-6632", "name": "HealthNet Data Migration", "stage": "Closed Lost", "value": 75000, "probability": 0 }
+
+---
+Question: Update deal DL-8890 to closed won status due to budget approval.
+Call: { "func_call": "close_deal", "deal_id": "DL-8890", "contact_id": "CT-771", "stage": "Closed Won", "value": 450000 }
+Response: { "deal_id": "DL-8890", "name": "MegaCorp Cloud Infrastructure", "stage": "Closed Won", "value": 450000, "probability": 100 }
+
+---
+Question: Close deal DL-2214 as lost because the project was postponed indefinitely.
+Call: { "func_call": "close_deal", "deal_id": "DL-2214", "contact_id": "CT-118", "stage": "Closed Lost", "value": 12500 }
+Response: { "deal_id": "DL-2214", "name": "Local Cafe POS System", "stage": "Closed Lost", "value": 12500, "probability": 0 }
+
+---
+Question: Finalize deal DL-4455 as won; the procurement team gave the green light.
+Call: { "func_call": "close_deal", "deal_id": "DL-4455", "contact_id": "CT-332", "stage": "Closed Won", "value": 185000 }
+Response: { "deal_id": "DL-4455", "name": "EduTech LMS Annual Subscription", "stage": "Closed Won", "value": 185000, "probability": 100 }
+
+---
+Question: Show me all deals in the demo scheduled stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Demo Scheduled", "value": 0 }
+Response: { "deal_id": "DL-5567", "name": "Creative Agency Marketing Tool", "stage": "Demo Scheduled", "value": 28000, "probability": 40 }
+
+---
+Question: Close deal DL-9988 as lost; the budget was cut for this quarter.
+Call: { "func_call": "close_deal", "deal_id": "DL-9988", "contact_id": "CT-889", "stage": "Closed Lost", "value": 310000 }
+Response: { "deal_id": "DL-9988", "name": "LogiTrans Fleet Management", "stage": "Closed Lost", "value": 310000, "probability": 0 }

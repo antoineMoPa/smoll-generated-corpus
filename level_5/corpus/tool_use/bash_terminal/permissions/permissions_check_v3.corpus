@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Inspect the access rights of the Apache virtual host config at /etc/apache2/sites-available/default.conf.
+Call: { "func_call": "check_permissions", "path": "/etc/apache2/sites-available/default.conf", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Enroll the service account 'jenkins_ci' into the 'kvm' group to enable virtual machine management.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "jenkins_ci:kvm" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Restrict access to the database credentials file /etc/myapp/db_secrets.env so only the owner can read it.
+Call: { "func_call": "chmod", "path": "/etc/myapp/db_secrets.env", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-------" }
+
+Question: Reassign the log archive directory /var/log/archives to the 'log_aggregator' user and group.
+Call: { "func_call": "chown", "path": "/var/log/archives", "mode": "", "owner": "log_aggregator:log_aggregator" }
+Response: { "success": true, "previous_mode": "drwxr-xr-x", "new_mode": "drwxr-xr-x" }
+
+Question: Validate the permission settings on the SSH daemon config /etc/ssh/sshd_config prior to restart.
+Call: { "func_call": "check_permissions", "path": "/etc/ssh/sshd_config", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Include the analyst 'mike' in the 'finance_data' group for accessing quarterly reports.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "mike:finance_data" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Allow all users to execute the monitoring script located at /usr/local/bin/health_check.sh.
+Call: { "func_call": "chmod", "path": "/usr/local/bin/health_check.sh", "mode": "755", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rwxr-xr-x" }
+
+Question: Update the ownership of the container volume /srv/docker/volumes/app_data to the 'docker' user.
+Call: { "func_call": "chown", "path": "/srv/docker/volumes/app_data", "mode": "", "owner": "docker:docker" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Confirm that the kernel module list /etc/modules.load.d/custom.conf has secure permissions.
+Call: { "func_call": "check_permissions", "path": "/etc/modules.load.d/custom.conf", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Add the intern 'jdoe' to the 'developers' group to grant repository access.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "jdoe:developers" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Apply the sticky bit to the collaborative upload folder /srv/uploads/public so users cannot delete others' files.
+Call: { "func_call": "chmod", "path": "/srv/uploads/public", "mode": "1777", "owner": "" }
+Response: { "success": true, "previous_mode": "drwxrwxrwx", "new_mode": "drwxrwxrwt" }
+
+Question: Switch the group ownership of the printer spool /var/spool/cups to 'lp' while retaining 'root' as user.
+Call: { "func_call": "chown", "path": "/var/spool/cups", "mode": "", "owner": "root:lp" }
+Response: { "success": true, "previous_mode": "drwxrwsr-x", "new_mode": "drwxrwsr-x" }

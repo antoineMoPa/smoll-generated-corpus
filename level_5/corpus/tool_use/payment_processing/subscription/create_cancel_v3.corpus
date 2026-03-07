@@ -1,0 +1,51 @@
+Available Tools: create_subscription | cancel_subscription | pause_subscription | update_plan | get_subscription
+Call Schema: { "func_call": "string", "customer_id": "string", "plan_id": "string", "trial_days": number }
+Response Schema: { "subscription_id": "string", "status": "active|canceled|paused|trialing", "plan": "string", "current_period_end": "string" }
+
+Question: Activate a basic plan for client cust_4051 including a 10-day trial window.
+Call: { "func_call": "create_subscription", "customer_id": "cust_4051", "plan_id": "basic", "trial_days": 10 }
+Response: { "subscription_id": "sub_7719m", "status": "trialing", "plan": "basic", "current_period_end": "2023-12-05T00:00:00Z" }
+
+Question: End the premium service for user cust_2093 associated with subscription sub_3381n.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_2093", "plan_id": "premium", "trial_days": 0 }
+Response: { "subscription_id": "sub_3381n", "status": "canceled", "plan": "premium", "current_period_end": "2023-11-12T16:20:00Z" }
+
+Question: Provision an advanced tier account for customer cust_6182 with a 45-day evaluation period.
+Call: { "func_call": "create_subscription", "customer_id": "cust_6182", "plan_id": "advanced", "trial_days": 45 }
+Response: { "subscription_id": "sub_9942o", "status": "trialing", "plan": "advanced", "current_period_end": "2024-01-15T00:00:00Z" }
+
+Question: Discontinue the basic plan usage for customer cust_7254 effective immediately via sub_1163p.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_7254", "plan_id": "basic", "trial_days": 0 }
+Response: { "subscription_id": "sub_1163p", "status": "canceled", "plan": "basic", "current_period_end": "2023-11-14T10:30:00Z" }
+
+Question: Start a premium membership for cust_8376 featuring a 5-day introductory trial.
+Call: { "func_call": "create_subscription", "customer_id": "cust_8376", "plan_id": "premium", "trial_days": 5 }
+Response: { "subscription_id": "sub_5524q", "status": "trialing", "plan": "premium", "current_period_end": "2023-12-10T00:00:00Z" }
+
+Question: Remove the advanced subscription sub_8895r from the account of customer cust_9410.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_9410", "plan_id": "advanced", "trial_days": 0 }
+Response: { "subscription_id": "sub_8895r", "status": "canceled", "plan": "advanced", "current_period_end": "2023-11-13T22:45:00Z" }
+
+Question: Sign up customer cust_1527 for the basic package without any trial days.
+Call: { "func_call": "create_subscription", "customer_id": "cust_1527", "plan_id": "basic", "trial_days": 0 }
+Response: { "subscription_id": "sub_2236s", "status": "active", "plan": "basic", "current_period_end": "2023-12-20T00:00:00Z" }
+
+Question: Invalidate the premium access for cust_3648 by terminating subscription sub_6659t.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_3648", "plan_id": "premium", "trial_days": 0 }
+Response: { "subscription_id": "sub_6659t", "status": "canceled", "plan": "premium", "current_period_end": "2023-11-11T07:15:00Z" }
+
+Question: Generate a new advanced plan subscription for client cust_4759 with a 28-day trial.
+Call: { "func_call": "create_subscription", "customer_id": "cust_4759", "plan_id": "advanced", "trial_days": 28 }
+Response: { "subscription_id": "sub_3370u", "status": "trialing", "plan": "advanced", "current_period_end": "2023-12-18T00:00:00Z" }
+
+Question: Halt charges for customer cust_5860 on the basic tier, reference sub_9981v.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_5860", "plan_id": "basic", "trial_days": 0 }
+Response: { "subscription_id": "sub_9981v", "status": "canceled", "plan": "basic", "current_period_end": "2023-11-15T13:00:00Z" }
+
+Question: Onboard customer cust_6971 to the premium tier granting a 15-day free trial.
+Call: { "func_call": "create_subscription", "customer_id": "cust_6971", "plan_id": "premium", "trial_days": 15 }
+Response: { "subscription_id": "sub_4492w", "status": "trialing", "plan": "premium", "current_period_end": "2023-12-25T00:00:00Z" }
+
+Question: Complete the termination process for advanced subscription sub_7703x owned by cust_8082.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_8082", "plan_id": "advanced", "trial_days": 0 }
+Response: { "subscription_id": "sub_7703x", "status": "canceled", "plan": "advanced", "current_period_end": "2023-11-16T05:50:00Z" }

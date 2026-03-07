@@ -1,0 +1,51 @@
+Available Tools: grep_file | grep_recursive | grep_case_insensitive | grep_count
+Call Schema: { "func_call": "string", "pattern": "string", "path": "string", "flags": "string" }
+Response Schema: { "matches": [{ "file": "string", "line": number, "text": "string" }], "count": number }
+---
+Question: Locate all lines mentioning 'timeout' in the network daemon log.
+Call: { "func_call": "grep_file", "pattern": "timeout", "path": "/var/log/networkd.log", "flags": "" }
+Response: { "matches": [{ "file": "/var/log/networkd.log", "line": 112, "text": "2023-11-01 08:30:15 timeout waiting for DHCP offer" }, { "file": "/var/log/networkd.log", "line": 118, "text": "2023-11-01 08:31:02 connection timeout on interface eth0" }], "count": 2 }
+
+Question: Recursively search for 'FIXME' markers in the legacy codebase.
+Call: { "func_call": "grep_recursive", "pattern": "FIXME", "path": "./legacy/cpp", "flags": "" }
+Response: { "matches": [{ "file": "./legacy/cpp/memory.cpp", "line": 88, "text": "// FIXME: Memory leak detected here on exit" }, { "file": "./legacy/cpp/network.cpp", "line": 204, "text": "/* FIXME: Handle socket closure gracefully */" }], "count": 2 }
+
+Question: Count the occurrences of 'admin' in the user database dump, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "admin", "path": "/db/dumps/users.csv", "flags": "-i" }
+Response: { "matches": [], "count": 15 }
+
+Question: Find all references to 'lodash' in the JavaScript dependency files.
+Call: { "func_call": "grep_recursive", "pattern": "require\\('lodash'\\)", "path": "./jsapp/modules", "flags": "" }
+Response: { "matches": [{ "file": "./jsapp/modules/format.js", "line": 2, "text": "const _ = require('lodash');" }, { "file": "./jsapp/modules/validation.js", "line": 4, "text": "var lodash = require('lodash');" }], "count": 2 }
+
+Question: Search for 'bind_address' in the server configuration ignoring case sensitivity.
+Call: { "func_call": "grep_case_insensitive", "pattern": "bind_address", "path": "/etc/nginx/nginx.conf", "flags": "-i" }
+Response: { "matches": [{ "file": "/etc/nginx/nginx.conf", "line": 45, "text": "bind_address 192.168.1.10;" }, { "file": "/etc/nginx/nginx.conf", "line": 46, "text": "# Bind_address setting for internal network" }], "count": 2 }
+
+Question: Identify all 'FATAL' errors in the application crash reports.
+Call: { "func_call": "grep_recursive", "pattern": "FATAL", "path": "/var/crash/reports", "flags": "" }
+Response: { "matches": [{ "file": "/var/crash/reports/app_20231102.dmp", "line": 5, "text": "FATAL: Null pointer exception in module core" }], "count": 1 }
+
+Question: Extract lines containing 'secret_token' from the deployment secrets file.
+Call: { "func_call": "grep_file", "pattern": "secret_token", "path": "./secrets/vault.txt", "flags": "" }
+Response: { "matches": [{ "file": "./secrets/vault.txt", "line": 3, "text": "secret_token=9f8a7b6c5d4e3f2a1b0c" }, { "file": "./secrets/vault.txt", "line": 7, "text": "# Rotate secret_token every 30 days" }], "count": 2 }
+
+Question: Recursively find 'debug=true' settings in the development configuration directory.
+Call: { "func_call": "grep_recursive", "pattern": "debug=true", "path": "./config/dev", "flags": "" }
+Response: { "matches": [{ "file": "./config/dev/app.yaml", "line": 10, "text": "settings:\n  debug=true" }, { "file": "./config/dev/logger.ini", "line": 2, "text": "debug=true" }], "count": 2 }
+
+Question: Count how many times 'retry' appears in the message queue logs.
+Call: { "func_call": "grep_count", "pattern": "retry", "path": "/var/log/rabbitmq.log", "flags": "" }
+Response: { "matches": [], "count": 23 }
+
+Question: Find all SQL statements updating the 'users' table in the migration scripts.
+Call: { "func_call": "grep_recursive", "pattern": "UPDATE users", "path": "./db/migrations", "flags": "" }
+Response: { "matches": [{ "file": "./db/migrations/001_add_column.sql", "line": 12, "text": "UPDATE users SET status = 'active' WHERE created_at < '2023-01-01';" }, { "file": "./db/migrations/005_fix_roles.sql", "line": 8, "text": "UPDATE users SET role = 'member';" }], "count": 2 }
+
+Question: Search for 'permission denied' in the access logs, case-insensitive.
+Call: { "func_call": "grep_case_insensitive", "pattern": "permission denied", "path": "/var/log/access.log", "flags": "-i" }
+Response: { "matches": [{ "file": "/var/log/access.log", "line": 302, "text": "10.0.0.5 - - [02/Nov/2023:10:00:00] \"GET /admin\" 403 Permission Denied" }, { "file": "/var/log/access.log", "line": 315, "text": "192.168.1.2 - - [02/Nov/2023:10:05:22] \"POST /upload\" 403 Permission Denied" }], "count": 2 }
+
+Question: Locate all 'author' fields in the project metadata files.
+Call: { "func_call": "grep_recursive", "pattern": "\"author\"", "path": "./project/meta", "flags": "" }
+Response: { "matches": [{ "file": "./project/meta/libA.json", "line": 5, "text": "  \"author\": \"Jane Doe\"," }, { "file": "./project/meta/libB.json", "line": 5, "text": "  \"author\": \"John Smith\"," }], "count": 2 }

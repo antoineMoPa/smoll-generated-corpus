@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Start the idle analytics engine i-analytics-01 in us-west-2 to process the nightly batch.
+Call: { "func_call": "start_instance", "instance_id": "i-analytics-01", "region": "us-west-2" }
+Response: { "instance_id": "i-analytics-01", "state": "running", "message": "Analytics engine started successfully for batch processing." }
+
+Question: Stop the staging web server i-stage-web-04 in eu-west-1 to save costs during the weekend.
+Call: { "func_call": "stop_instance", "instance_id": "i-stage-web-04", "region": "eu-west-1" }
+Response: { "instance_id": "i-stage-web-04", "state": "stopped", "message": "Staging web server stopped for weekend cost savings." }
+
+Question: Restart the payment gateway instance i-pay-gw-22 in ap-southeast-2 to apply security patches.
+Call: { "func_call": "restart_instance", "instance_id": "i-pay-gw-22", "region": "ap-southeast-2" }
+Response: { "instance_id": "i-pay-gw-22", "state": "rebooting", "message": "Payment gateway restarting to apply critical security updates." }
+
+Question: Terminate the obsolete load balancer helper i-lb-helper-09 in us-east-1 as it has been replaced.
+Call: { "func_call": "terminate_instance", "instance_id": "i-lb-helper-09", "region": "us-east-1" }
+Response: { "instance_id": "i-lb-helper-09", "state": "shutting-down", "message": "Obsolete load balancer helper terminated after replacement." }
+
+Question: Start the backup verification node i-backup-ver-03 in ca-central-1 to begin the daily check.
+Call: { "func_call": "start_instance", "instance_id": "i-backup-ver-03", "region": "ca-central-1" }
+Response: { "instance_id": "i-backup-ver-03", "state": "running", "message": "Backup verification node started for daily integrity check." }
+
+Question: Stop the development database i-dev-db-11 in eu-central-1 while the team is on holiday.
+Call: { "func_call": "stop_instance", "instance_id": "i-dev-db-11", "region": "eu-central-1" }
+Response: { "instance_id": "i-dev-db-11", "state": "stopped", "message": "Development database stopped during team holiday." }
+
+Question: Restart the log aggregator i-log-agg-07 in ap-northeast-2 to clear the buffer overflow.
+Call: { "func_call": "restart_instance", "instance_id": "i-log-agg-07", "region": "ap-northeast-2" }
+Response: { "instance_id": "i-log-agg-07", "state": "rebooting", "message": "Log aggregator restarting to resolve buffer overflow." }
+
+Question: Terminate the temporary stress-test worker i-stress-88 in sa-east-1 now that testing is done.
+Call: { "func_call": "terminate_instance", "instance_id": "i-stress-88", "region": "sa-east-1" }
+Response: { "instance_id": "i-stress-88", "state": "shutting-down", "message": "Stress-test worker terminated after completion of tests." }
+
+Question: Start the machine learning trainer i-ml-train-05 in us-east-2 to begin the new model run.
+Call: { "func_call": "start_instance", "instance_id": "i-ml-train-05", "region": "us-east-2" }
+Response: { "instance_id": "i-ml-train-05", "state": "running", "message": "Machine learning trainer started for new model execution." }
+
+Question: Stop the reporting service i-report-svc-14 in eu-north-1 pending data source migration.
+Call: { "func_call": "stop_instance", "instance_id": "i-report-svc-14", "region": "eu-north-1" }
+Response: { "instance_id": "i-report-svc-14", "state": "stopped", "message": "Reporting service stopped pending data source migration." }
+
+Question: Restart the authentication service i-auth-svc-02 in ap-south-1 to rotate encryption keys.
+Call: { "func_call": "restart_instance", "instance_id": "i-auth-svc-02", "region": "ap-south-1" }
+Response: { "instance_id": "i-auth-svc-02", "state": "rebooting", "message": "Authentication service restarting to rotate encryption keys." }
+
+Question: Terminate the legacy file server i-file-legacy-06 in us-west-1 as all data has been archived.
+Call: { "func_call": "terminate_instance", "instance_id": "i-file-legacy-06", "region": "us-west-1" }
+Response: { "instance_id": "i-file-legacy-06", "state": "shutting-down", "message": "Legacy file server terminated after successful data archival." }

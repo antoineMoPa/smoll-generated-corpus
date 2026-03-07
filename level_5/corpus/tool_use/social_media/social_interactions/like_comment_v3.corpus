@@ -1,0 +1,51 @@
+Available Tools: like_post | comment_on_post | share_post | follow_user | unfollow_user | send_dm
+Call Schema: { "func_call": "string", "post_id": "string", "user_id": "string", "content": "string" }
+Response Schema: { "action": "string", "status": "string", "timestamp": "string" }
+---
+Question: Could you drop a like on post_3347 for me?
+Call: { "func_call": "like_post", "post_id": "post_3347", "user_id": "user_7153", "content": "" }
+Response: { "action": "like_post", "status": "success", "timestamp": "2023-11-15T09:12:44Z" }
+
+Question: Post "The lighting in this photo is perfect!" as a comment on post_8821.
+Call: { "func_call": "comment_on_post", "post_id": "post_8821", "user_id": "user_7153", "content": "The lighting in this photo is perfect!" }
+Response: { "action": "comment_on_post", "status": "success", "timestamp": "2023-11-15T09:14:20Z" }
+
+Question: I want to give a like to post_5502 immediately.
+Call: { "func_call": "like_post", "post_id": "post_5502", "user_id": "user_7153", "content": "" }
+Response: { "action": "like_post", "status": "success", "timestamp": "2023-11-15T09:16:55Z" }
+
+Question: Write "Thanks for the tutorial, very helpful!" on post_9910.
+Call: { "func_call": "comment_on_post", "post_id": "post_9910", "user_id": "user_7153", "content": "Thanks for the tutorial, very helpful!" }
+Response: { "action": "comment_on_post", "status": "success", "timestamp": "2023-11-15T09:18:33Z" }
+
+Question: Please like the content at post_6674.
+Call: { "func_call": "like_post", "post_id": "post_6674", "user_id": "user_7153", "content": "" }
+Response: { "action": "like_post", "status": "success", "timestamp": "2023-11-15T09:20:10Z" }
+
+Question: Add a comment saying "This song is on repeat all day 🎵" to post_2238.
+Call: { "func_call": "comment_on_post", "post_id": "post_2238", "user_id": "user_7153", "content": "This song is on repeat all day 🎵" }
+Response: { "action": "comment_on_post", "status": "success", "timestamp": "2023-11-15T09:22:45Z" }
+
+Question: Go ahead and like post_4491 for me.
+Call: { "func_call": "like_post", "post_id": "post_4491", "user_id": "user_7153", "content": "" }
+Response: { "action": "like_post", "status": "success", "timestamp": "2023-11-15T09:24:18Z" }
+
+Question: Comment "I can't believe how fast time flies!" on post_7765.
+Call: { "func_call": "comment_on_post", "post_id": "post_7765", "user_id": "user_7153", "content": "I can't believe how fast time flies!" }
+Response: { "action": "comment_on_post", "status": "success", "timestamp": "2023-11-15T09:26:52Z" }
+
+Question: I need you to like post_1183 right now.
+Call: { "func_call": "like_post", "post_id": "post_1183", "user_id": "user_7153", "content": "" }
+Response: { "action": "like_post", "status": "success", "timestamp": "2023-11-15T09:28:30Z" }
+
+Question: Please write "Safe travels! Can't wait to see the pics." on post_3309.
+Call: { "func_call": "comment_on_post", "post_id": "post_3309", "user_id": "user_7153", "content": "Safe travels! Can't wait to see the pics." }
+Response: { "action": "comment_on_post", "status": "success", "timestamp": "2023-11-15T09:30:15Z" }
+
+Question: Could you hit the like button on post_8856?
+Call: { "func_call": "like_post", "post_id": "post_8856", "user_id": "user_7153", "content": "" }
+Response: { "action": "like_post", "status": "success", "timestamp": "2023-11-15T09:32:40Z" }
+
+Question: Post a comment asking "Is this available in other colors?" on post_5527.
+Call: { "func_call": "comment_on_post", "post_id": "post_5527", "user_id": "user_7153", "content": "Is this available in other colors?" }
+Response: { "action": "comment_on_post", "status": "success", "timestamp": "2023-11-15T09:34:22Z" }

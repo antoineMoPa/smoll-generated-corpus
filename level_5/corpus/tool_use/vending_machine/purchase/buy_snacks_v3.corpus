@@ -1,0 +1,51 @@
+Available Tools: purchase_item | get_item_info | check_availability
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number }
+Response Schema: { "slot_id": "string", "item_name": "string", "price": number, "status": "string" }
+---
+Question: Could you dispense a can of Root Beer from slot E3?
+Call: { "func_call": "purchase_item", "slot_id": "E3", "quantity": 1 }
+Response: { "slot_id": "E3", "item_name": "Root Beer", "price": 1.60, "status": "dispensed" }
+
+Question: I need five packs of gum from slot F2.
+Call: { "func_call": "purchase_item", "slot_id": "F2", "quantity": 5 }
+Response: { "slot_id": "F2", "item_name": "Peppermint Gum", "price": 0.75, "status": "dispensed" }
+
+Question: Buy a bottle of sports drink from slot G4.
+Call: { "func_call": "purchase_item", "slot_id": "G4", "quantity": 1 }
+Response: { "slot_id": "G4", "item_name": "Blue Sports Drink", "price": 2.50, "status": "dispensed" }
+
+Question: Please get me three bags of popcorn from slot H1.
+Call: { "func_call": "purchase_item", "slot_id": "H1", "quantity": 3 }
+Response: { "slot_id": "H1", "item_name": "Butter Popcorn", "price": 1.85, "status": "dispensed" }
+
+Question: I want to purchase a box of raisins from slot E6.
+Call: { "func_call": "purchase_item", "slot_id": "E6", "quantity": 1 }
+Response: { "slot_id": "E6", "item_name": "Seedless Raisins", "price": 1.10, "status": "dispensed" }
+
+Question: Dispense two bottles of apple juice from slot F8.
+Call: { "func_call": "purchase_item", "slot_id": "F8", "quantity": 2 }
+Response: { "slot_id": "F8", "item_name": "Apple Juice", "price": 2.10, "status": "dispensed" }
+
+Question: Get me a single bag of tortilla chips from slot G5.
+Call: { "func_call": "purchase_item", "slot_id": "G5", "quantity": 1 }
+Response: { "slot_id": "G5", "item_name": "Tortilla Chips", "price": 2.00, "status": "dispensed" }
+
+Question: I'd like four donuts from slot H3.
+Call: { "func_call": "purchase_item", "slot_id": "H3", "quantity": 4 }
+Response: { "slot_id": "H3", "item_name": "Glazed Donuts", "price": 1.20, "status": "dispensed" }
+
+Question: Purchase a can of ginger ale from slot E9.
+Call: { "func_call": "purchase_item", "slot_id": "E9", "quantity": 1 }
+Response: { "slot_id": "E9", "item_name": "Ginger Ale", "price": 1.55, "status": "dispensed" }
+
+Question: Buy three protein bars from slot F4.
+Call: { "func_call": "purchase_item", "slot_id": "F4", "quantity": 3 }
+Response: { "slot_id": "F4", "item_name": "Chocolate Protein Bar", "price": 2.75, "status": "dispensed" }
+
+Question: I need one bag of jelly beans from slot G7.
+Call: { "func_call": "purchase_item", "slot_id": "G7", "quantity": 1 }
+Response: { "slot_id": "G7", "item_name": "Mixed Jelly Beans", "price": 1.90, "status": "dispensed" }
+
+Question: Please dispense two cans of coffee from slot H6.
+Call: { "func_call": "purchase_item", "slot_id": "H6", "quantity": 2 }
+Response: { "slot_id": "H6", "item_name": "Cold Brew Coffee", "price": 3.25, "status": "dispensed" }

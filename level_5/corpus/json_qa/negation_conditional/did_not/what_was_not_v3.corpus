@@ -1,0 +1,59 @@
+Context: The grocery list included milk, bread, and apples, but we realized we did not have any almond butter in the cupboard.
+Input: {"question": "What was not available in the cupboard?"}
+Output: {"answer": "almond butter"}
+
+Context: During the presentation, Mark reviewed the Q3 earnings and the product roadmap, yet he did not address the customer retention metrics.
+Input: {"question": "What did Mark not address during the presentation?"}
+Output: {"answer": "the customer retention metrics"}
+
+Context: The vacation rental offered a private pool, a hot tub, and a BBQ grill, but it did not feature a fireplace as described online.
+Input: {"question": "What was not featured in the vacation rental?"}
+Output: {"answer": "a fireplace"}
+
+Context: For the chemistry lab, Lisa collected pipettes, petri dishes, and gloves, but she forgot that she did not bring the microscope.
+Input: {"question": "What did Lisa not bring for the chemistry lab?"}
+Output: {"answer": "the microscope"}
+
+Context: The app patch corrected the crash error and enhanced battery life, but it did not fix the problem with the notification sounds.
+Input: {"question": "What did the app patch not fix?"}
+Output: {"answer": "the problem with the notification sounds"}
+
+Context: Alex packed his hiking boots, a compass, and a first aid kit for the trek, but he noticed he did not pack his rain jacket before departing.
+Input: {"question": "What did Alex not pack before departing?"}
+Output: {"answer": "his rain jacket"}
+
+Context: The renovation crew painted the walls and installed new flooring, but they did not upgrade the kitchen cabinets as requested.
+Input: {"question": "What did the renovation crew not upgrade?"}
+Output: {"answer": "the kitchen cabinets"}
+
+Context: The festival schedule featured two jazz trios and a folk singer, but the coordinator confirmed that a metal band was not scheduled to play.
+Input: {"question": "Who was not scheduled to play at the festival?"}
+Output: {"answer": "a metal band"}
+
+Context: The document upload contained the contract and the addendum, but the signature page was not included in the submission.
+Input: {"question": "What was not included in the document upload?"}
+Output: {"answer": "the signature page"}
+
+Context: They purchased glue, cardboard, and scissors to build the model, but they discovered they did not have enough paint to finish the surface.
+Input: {"question": "What did they not have enough of to finish the surface?"}
+Output: {"answer": "paint"}
+
+Context: The gallery showcase featured modern sculptures and oil paintings, yet no digital installations were found in the main hall.
+Input: {"question": "What were not found in the main hall of the gallery?"}
+Output: {"answer": "digital installations"}
+
+Context: The boat charter came with fishing rods and life vests, but it did not include a cooler with ice upon arrival.
+Input: {"question": "What did the boat charter not include upon arrival?"}
+Output: {"answer": "a cooler with ice"}
+
+Context: The board ratified the merger agreement and the branding strategy, but they did not approve the request for a salary increase.
+Input: {"question": "What did the board not approve?"}
+Output: {"answer": "the request for a salary increase"}
+
+Context: She washed the dishes, wiped the counters, and swept the floor, but she did not clean the windows in the dining room.
+Input: {"question": "What did she not clean?"}
+Output: {"answer": "the windows in the dining room"}
+
+Context: The orchard produced cherries, peaches, and plums this summer, but there were no apricots grown in the southern row.
+Input: {"question": "What were not grown in the southern row of the orchard?"}
+Output: {"answer": "apricots"}

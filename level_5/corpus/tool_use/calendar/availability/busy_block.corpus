@@ -1,0 +1,51 @@
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Can you check if Sarah Jenkins is available on October 12th for a 45-minute meeting?
+Call: { "func_call": "check_availability", "user_id": "sarah.jenkins@corp.com", "date": "2023-10-12", "duration_minutes": 45 }
+Response: { "available": false, "free_slots": [{ "start": "2023-10-12T09:00:00Z", "end": "2023-10-12T09:30:00Z" }, { "start": "2023-10-12T14:00:00Z", "end": "2023-10-12T16:00:00Z" }] }
+
+Question: I need to block off 90 minutes for deep work on Marcus Chen's calendar this Friday.
+Call: { "func_call": "block_time", "user_id": "marcus.chen@corp.com", "date": "2023-10-13", "duration_minutes": 90 }
+Response: { "available": true, "free_slots": [{ "start": "2023-10-13T08:00:00Z", "end": "2023-10-13T09:30:00Z" }] }
+
+Question: Find out when Priya Patel is busy next Tuesday so we can avoid scheduling conflicts.
+Call: { "func_call": "get_busy_times", "user_id": "priya.patel@corp.com", "date": "2023-10-17", "duration_minutes": 0 }
+Response: { "available": false, "free_slots": [{ "start": "2023-10-17T10:00:00Z", "end": "2023-10-17T11:00:00Z" }, { "start": "2023-10-17T13:00:00Z", "end": "2023-10-17T13:30:00Z" }] }
+
+Question: Block a 30-minute travel buffer for David Kim immediately after his 2 PM appointment on Monday.
+Call: { "func_call": "block_time", "user_id": "david.kim@corp.com", "date": "2023-10-16", "duration_minutes": 30 }
+Response: { "available": true, "free_slots": [{ "start": "2023-10-16T14:30:00Z", "end": "2023-10-16T15:00:00Z" }] }
+
+Question: Check availability for Elena Rodriguez on November 1st for a short 15-minute sync.
+Call: { "func_call": "check_availability", "user_id": "elena.rodriguez@corp.com", "date": "2023-11-01", "duration_minutes": 15 }
+Response: { "available": true, "free_slots": [{ "start": "2023-11-01T11:00:00Z", "end": "2023-11-01T11:15:00Z" }, { "start": "2023-11-01T15:45:00Z", "end": "2023-11-01T16:00:00Z" }] }
+
+Question: Please reserve a 2-hour focus block for James Wilson on Thursday morning to finish the quarterly report.
+Call: { "func_call": "block_time", "user_id": "james.wilson@corp.com", "date": "2023-10-19", "duration_minutes": 120 }
+Response: { "available": true, "free_slots": [{ "start": "2023-10-19T08:00:00Z", "end": "2023-10-19T10:00:00Z" }] }
+
+Question: Get the busy times for the whole team lead, Amanda Foster, on Wednesday to see her gaps.
+Call: { "func_call": "get_busy_times", "user_id": "amanda.foster@corp.com", "date": "2023-10-18", "duration_minutes": 0 }
+Response: { "available": false, "free_slots": [{ "start": "2023-10-18T09:00:00Z", "end": "2023-10-18T09:45:00Z" }, { "start": "2023-10-18T12:00:00Z", "end": "2023-10-18T13:00:00Z" }] }
+
+Question: Block 45 minutes for Robert Taylor to prepare for his client presentation on Friday afternoon.
+Call: { "func_call": "block_time", "user_id": "robert.taylor@corp.com", "date": "2023-10-20", "duration_minutes": 45 }
+Response: { "available": true, "free_slots": [{ "start": "2023-10-20T13:15:00Z", "end": "2023-10-20T14:00:00Z" }] }
+
+Question: Is Linda Green free for a 60-minute brainstorming session on October 25th?
+Call: { "func_call": "check_availability", "user_id": "linda.green@corp.com", "date": "2023-10-25", "duration_minutes": 60 }
+Response: { "available": false, "free_slots": [{ "start": "2023-10-25T16:00:00Z", "end": "2023-10-25T17:00:00Z" }] }
+
+Question: Add a 15-minute travel buffer for Michael Brown before his off-site meeting on Tuesday.
+Call: { "func_call": "block_time", "user_id": "michael.brown@corp.com", "date": "2023-10-24", "duration_minutes": 15 }
+Response: { "available": true, "free_slots": [{ "start": "2023-10-24T08:45:00Z", "end": "2023-10-24T09:00:00Z" }] }
+
+Question: Retrieve all busy slots for Jessica Lee on Monday to identify potential meeting windows.
+Call: { "func_call": "get_busy_times", "user_id": "jessica.lee@corp.com", "date": "2023-10-23", "duration_minutes": 0 }
+Response: { "available": false, "free_slots": [{ "start": "2023-10-23T11:30:00Z", "end": "2023-10-23T12:30:00Z" }] }
+
+Question: Block a 3-hour uninterrupted coding session for Alex Turner on Wednesday morning.
+Call: { "func_call": "block_time", "user_id": "alex.turner@corp.com", "date": "2023-10-25", "duration_minutes": 180 }
+Response: { "available": true, "free_slots": [{ "start": "2023-10-25T09:00:00Z", "end": "2023-10-25T12:00:00Z" }] }

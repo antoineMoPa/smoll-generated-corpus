@@ -1,0 +1,51 @@
+Available Tools: curl_get | curl_post | wget_download | ssh_command | ping_host
+Call Schema: { "func_call": "string", "url": "string", "host": "string", "options": "string" }
+Response Schema: { "status_code": number, "output": "string", "elapsed_ms": number }
+---
+Question: Query the inventory database for stock levels of item SKU-9921 in the Tokyo warehouse via a GET request.
+Call: { "func_call": "curl_get", "url": "https://inventory-api.retail-jp.com/stock?sku=SKU-9921&warehouse=tokyo", "host": "inventory-api.retail-jp.com", "options": "-H \"X-API-Key: retail_key_776655\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"sku\": \"SKU-9921\", \"warehouse\": \"tokyo\", \"quantity\": 450, \"last_updated\": \"2023-11-15T09:12:00Z\", \"status\": \"in_stock\"}", "elapsed_ms": 67 }
+
+Question: Register a new IoT device sensor with the cloud platform using a POST request containing device ID and location.
+Call: { "func_call": "curl_post", "url": "https://iot-cloud.provider.net/v2/devices/register", "host": "iot-cloud.provider.net", "options": "-H \"Content-Type: application/json\" -d \"{\\\"device_id\\\": \\\"sens_4421\\\", \\\"location\\\": \\\"warehouse_b\\\", \\\"type\\\": \\\"temperature\\\"}\"" }
+Response: { "status_code": 201, "output": "{\"device_id\": \"sens_4421\", \"token\": \"dev_tok_xyz987\", \"registered_at\": \"2023-11-15T09:15:22Z\", \"status\": \"active\"}", "elapsed_ms": 198 }
+
+Question: Download the latest Kubernetes cluster configuration manifest from the internal Git server.
+Call: { "func_call": "wget_download", "url": "https://git.internal.dev/raw/cluster-configs/prod/v1.28/manifest.yaml", "host": "git.internal.dev", "options": "-O ./k8s/prod-manifest.yaml --header=\"Authorization: Bearer git_token_abc\"" }
+Response: { "status_code": 200, "output": "manifest.yaml  100%[===================>]  12.45K  --.-KB/s    in 0.1s     \n2023-11-15 09:16:05 (124.5 KB/s) - './k8s/prod-manifest.yaml' saved [12748/12748]", "elapsed_ms": 145 }
+
+Question: Fetch the current exchange rates for EUR to USD from the financial data API.
+Call: { "func_call": "curl_get", "url": "https://fx-data.finance-global.com/rates?base=EUR&target=USD", "host": "fx-data.finance-global.com", "options": "-H \"Accept: application/json\" -H \"X-Auth-Token: fin_tok_112233\"" }
+Response: { "status_code": 200, "output": "{\"base\": \"EUR\", \"target\": \"USD\", \"rate\": 1.0842, \"timestamp\": 1700040000, \"source\": \"ECB\"}", "elapsed_ms": 52 }
+
+Question: Submit a support ticket to the helpdesk system regarding a network outage in sector 4.
+Call: { "func_call": "curl_post", "url": "https://helpdesk.ops-center.org/api/tickets", "host": "helpdesk.ops-center.org", "options": "-H \"Content-Type: application/json\" -H \"Authorization: Bearer ops_user_99\" -d \"{\\\"title\\\": \\\"Network Outage Sector 4\\\", \\\"priority\\\": \\\"high\\\", \\\"description\\\": \\\"Complete loss of connectivity\\\"}\"" }
+Response: { "status_code": 201, "output": "{\"ticket_id\": \"TKT-88921\", \"status\": \"open\", \"created_by\": \"ops_user_99\", \"created_at\": \"2023-11-15T09:20:11Z\"}", "elapsed_ms": 134 }
+
+Question: Download the quarterly compliance report archive from the legal document server.
+Call: { "func_call": "wget_download", "url": "https://legal-docs.corp-law.com/reports/2023/q3/compliance_archive.zip", "host": "legal-docs.corp-law.com", "options": "-P ./legal/archives --user=\"legal_bot\" --password=\"secure_pass_123\"" }
+Response: { "status_code": 200, "output": "compliance_archive.zip  100%[===================>]   5.20M  2.1MB/s    in 2.5s     \n2023-11-15 09:22:45 (2.1 MB/s) - './legal/archives/compliance_archive.zip' saved [5452590/5452590]", "elapsed_ms": 2540 }
+
+Question: Check the latency to the primary database replica using a ping command.
+Call: { "func_call": "ping_host", "url": "", "host": "db-replica-01.internal.db", "options": "-c 4 -i 0.5" }
+Response: { "status_code": 0, "output": "PING db-replica-01.internal.db (10.0.5.22) 56(84) bytes of data.\n64 bytes from 10.0.5.22: icmp_seq=1 ttl=64 time=1.2 ms\n64 bytes from 10.0.5.22: icmp_seq=2 ttl=64 time=1.1 ms\n64 bytes from 10.0.5.22: icmp_seq=3 ttl=64 time=1.3 ms\n64 bytes from 10.0.5.22: icmp_seq=4 ttl=64 time=1.2 ms", "elapsed_ms": 2100 }
+
+Question: Update the DNS records for the marketing subdomain by posting a new A record to the DNS manager API.
+Call: { "func_call": "curl_post", "url": "https://dns-manager.cloud-net.com/zones/marketing.com/records", "host": "dns-manager.cloud-net.com", "options": "-H \"Content-Type: application/json\" -H \"X-API-Key: dns_key_556677\" -d \"{\\\"type\\\": \\\"A\\\", \\\"name\\\": \\\"promo\\\", \\\"content\\\": \\\"203.0.113.45\\\", \\\"ttl\\\": 300}\"" }
+Response: { "status_code": 200, "output": "{\"record_id\": \"rec_998877\", \"zone\": \"marketing.com\", \"updated\": true, \"propagation_status\": \"pending\"}", "elapsed_ms": 88 }
+
+Question: Retrieve the list of active sessions for user admin_01 from the session management service.
+Call: { "func_call": "curl_get", "url": "https://session-mgr.auth-secure.com/v1/sessions?user=admin_01&state=active", "host": "session-mgr.auth-secure.com", "options": "-H \"Accept: application/json\" -H \"Authorization: Bearer mgr_token_xyz\"" }
+Response: { "status_code": 200, "output": "{\"user\": \"admin_01\", \"sessions\": [{\"id\": \"sess_1122\", \"ip\": \"192.168.1.10\", \"created\": \"2023-11-15T08:00:00Z\"}, {\"id\": \"sess_3344\", \"ip\": \"10.0.0.5\", \"created\": \"2023-11-15T08:45:00Z\"}], \"count\": 2}", "elapsed_ms": 76 }
+
+Question: Download the nightly backup tarball of the customer database from the secure storage bucket.
+Call: { "func_call": "wget_download", "url": "https://backup-storage.secure-cloud.io/dumps/prod/customers_20231114.sql.tar.gz", "host": "backup-storage.secure-cloud.io", "options": "-O ./backups/customers_20231114.sql.tar.gz --limit-rate=100m" }
+Response: { "status_code": 200, "output": "customers_20231114.sql.tar.gz  100%[===================>]  1.20G  95.0MB/s    in 13s      \n2023-11-15 09:30:12 (95.0 MB/s) - './backups/customers_20231114.sql.tar.gz' saved [1288490188/1288490188]", "elapsed_ms": 13200 }
+
+Question: Trigger a cache flush for the CDN edge nodes via a PURGE request to the caching API.
+Call: { "func_call": "curl_post", "url": "https://cdn-edge.fast-deliver.net/purge", "host": "cdn-edge.fast-deliver.net", "options": "-X PURGE -H \"X-Cache-Key: assets/images/*\" -H \"Authorization: Bearer cdn_admin_key\"" }
+Response: { "status_code": 200, "output": "{\"status\": \"purged\", \"paths_affected\": 1420, \"nodes_updated\": 45, \"time_ms\": 340}", "elapsed_ms": 345 }
+
+Question: Fetch the system uptime and load average from the monitoring agent endpoint.
+Call: { "func_call": "curl_get", "url": "http://localhost:9100/metrics/node_exporter", "host": "localhost", "options": "-H \"Accept: text/plain\"" }
+Response: { "status_code": 200, "output": "# HELP node_boot_time_seconds Node boot time, in unixtime.\n# TYPE node_boot_time_seconds gauge\nnode_boot_time_seconds 1699950000\n# HELP node_load1 1m load average.\n# TYPE node_load1 gauge\nnode_load1 0.45", "elapsed_ms": 12 }

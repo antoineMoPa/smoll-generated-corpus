@@ -1,0 +1,51 @@
+Available Tools: update_record | update_batch | soft_delete | restore_record
+Call Schema: { "func_call": "string", "table": "string", "id": number, "data": {}, "where": "string" }
+Response Schema: { "affected_rows": number, "status": "string", "updated_at": "string" }
+---
+Question: Deactivate the employee profile with ID 3055 due to contract expiration.
+Call: { "func_call": "soft_delete", "table": "employees", "id": 3055, "data": { "deactivation_reason": "contract_expired" }, "where": "id = 3055" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-02-10T08:15:22Z" }
+
+Question: Archive all support tickets from the 'Legacy_System' project closed before January 15th.
+Call: { "func_call": "update_batch", "table": "tickets", "id": 0, "data": { "status": "archived", "archive_date": "2024-02-10" }, "where": "project_id = 'Legacy_System' AND closed_date < '2024-01-15'" }
+Response: { "affected_rows": 89, "status": "success", "updated_at": "2024-02-10T09:45:33Z" }
+
+Question: Restore the mistakenly removed inventory item with ID 4421.
+Call: { "func_call": "restore_record", "table": "stock_items", "id": 4421, "data": {}, "where": "id = 4421" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-02-10T10:30:15Z" }
+
+Question: Soft delete the forum post ID 7782 containing prohibited links.
+Call: { "func_call": "soft_delete", "table": "forum_posts", "id": 7782, "data": { "flag_reason": "prohibited_links" }, "where": "id = 7782" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-02-10T11:20:40Z" }
+
+Question: Update the price for all services in the 'Consulting' tier by increasing cost by 10 percent.
+Call: { "func_call": "update_batch", "table": "services", "id": 0, "data": { "price": "price * 1.10" }, "where": "tier = 'Consulting'" }
+Response: { "affected_rows": 12, "status": "success", "updated_at": "2024-02-10T12:05:50Z" }
+
+Question: Reactivate the blocked API key with ID 998 after security audit clearance.
+Call: { "func_call": "restore_record", "table": "api_keys", "id": 998, "data": { "audited_by": "sec_team_lead" }, "where": "id = 998" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-02-10T13:45:12Z" }
+
+Question: Mark all whitepapers tagged 'obsolete_2021' as archived to streamline the resource library.
+Call: { "func_call": "update_batch", "table": "whitepapers", "id": 0, "data": { "is_archived": true, "archived_at": "2024-02-10T14:00:00Z" }, "where": "tags LIKE '%obsolete_2021%'" }
+Response: { "affected_rows": 24, "status": "success", "updated_at": "2024-02-10T14:00:08Z" }
+
+Question: Soft delete the access log entry ID 55401 pursuant to GDPR erasure request.
+Call: { "func_call": "soft_delete", "table": "access_logs", "id": 55401, "data": { "gdpr_request_id": "GDPR-2024-12" }, "where": "id = 55401" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-02-10T15:30:45Z" }
+
+Question: Restore the deleted discussion thread ID 229 linked to case file 88.
+Call: { "func_call": "restore_record", "table": "discussions", "id": 229, "data": {}, "where": "id = 229" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-02-10T16:15:20Z" }
+
+Question: Batch update the delivery status to 'held' for all shipments in zone 'SW-09' impacted by road closures.
+Call: { "func_call": "update_batch", "table": "shipments", "id": 0, "data": { "status": "held", "hold_reason": "road_closure" }, "where": "zone_code = 'SW-09' AND status = 'out_for_delivery'" }
+Response: { "affected_rows": 43, "status": "success", "updated_at": "2024-02-10T17:22:18Z" }
+
+Question: Permanently flag and soft delete the abuse report entry ID 6654.
+Call: { "func_call": "soft_delete", "table": "abuse_reports", "id": 6654, "data": { "classification": "abuse", "action_taken": "soft_delete" }, "where": "id = 6654" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-02-10T18:40:33Z" }
+
+Question: Restore the cancelled membership subscription for user ID 882 who renewed their plan.
+Call: { "func_call": "restore_record", "table": "memberships", "id": 882, "data": { "renewal_date": "2024-02-10" }, "where": "user_id = 882" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-02-10T19:55:42Z" }

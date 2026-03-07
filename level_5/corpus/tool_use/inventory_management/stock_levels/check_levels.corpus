@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: How many units of the wireless keyboard model KB-2024 do we have in the New York distribution center?
+Call: { "func_call": "get_stock_level", "sku": "KB-2024-BLK", "location_id": "NYC-DC-01", "threshold": 50 }
+Response: { "sku": "KB-2024-BLK", "product_name": "Wireless Ergonomic Keyboard", "quantity": 342, "location": "NYC-DC-01", "status": "in_stock" }
+
+Question: Check if the 15-inch laptop stand is available in the Chicago warehouse and tell me its status relative to a threshold of 20.
+Call: { "func_call": "check_availability", "sku": "LS-15-SLV", "location_id": "CHI-WH-04", "threshold": 20 }
+Response: { "sku": "LS-15-SLV", "product_name": "Aluminum Laptop Stand 15-inch", "quantity": 18, "location": "CHI-WH-04", "status": "low_stock" }
+
+Question: What is the current stock level for the USB-C hub in the Seattle fulfillment center?
+Call: { "func_call": "get_stock_level", "sku": "HUB-USBC-07", "location_id": "SEA-FC-02", "threshold": 100 }
+Response: { "sku": "HUB-USBC-07", "product_name": "7-in-1 USB-C Hub", "quantity": 0, "location": "SEA-FC-02", "status": "out_of_stock" }
+
+Question: I need to know the inventory count for the noise-canceling headphones at the Dallas depot.
+Call: { "func_call": "get_stock_level", "sku": "HP-NC-500", "location_id": "DAL-DEP-03", "threshold": 25 }
+Response: { "sku": "HP-NC-500", "product_name": "Pro Noise Canceling Headphones", "quantity": 89, "location": "DAL-DEP-03", "status": "in_stock" }
+
+Question: Is the mechanical gaming mouse running low in the Austin warehouse if our alert threshold is 15 units?
+Call: { "func_call": "check_availability", "sku": "MS-GM-RGB", "location_id": "AUS-WH-05", "threshold": 15 }
+Response: { "sku": "MS-GM-RGB", "product_name": "RGB Mechanical Gaming Mouse", "quantity": 12, "location": "AUS-WH-05", "status": "low_stock" }
+
+Question: Retrieve the stock details for the 27-inch 4K monitor located in the Boston storage facility.
+Call: { "func_call": "get_stock_by_location", "sku": "MON-4K-27", "location_id": "BOS-ST-08", "threshold": 10 }
+Response: { "sku": "MON-4K-27", "product_name": "Ultra HD 4K Monitor 27-inch", "quantity": 45, "location": "BOS-ST-08", "status": "in_stock" }
+
+Question: Check the availability of the portable SSD drive in the Miami logistics hub with a minimum threshold of 30.
+Call: { "func_call": "check_availability", "sku": "SSD-PORT-1TB", "location_id": "MIA-LOG-06", "threshold": 30 }
+Response: { "sku": "SSD-PORT-1TB", "product_name": "Portable SSD 1TB", "quantity": 5, "location": "MIA-LOG-06", "status": "low_stock" }
+
+Question: How many webcams are currently stored in the Phoenix regional center?
+Call: { "func_call": "get_stock_level", "sku": "WC-1080-PRO", "location_id": "PHX-REG-09", "threshold": 40 }
+Response: { "sku": "WC-1080-PRO", "product_name": "1080p Pro Webcam", "quantity": 210, "location": "PHX-REG-09", "status": "in_stock" }
+
+Question: Verify the stock status of the wireless charging pad in the Denver warehouse against a threshold of 50.
+Call: { "func_call": "check_availability", "sku": "CHG-WRL-15W", "location_id": "DEN-WH-07", "threshold": 50 }
+Response: { "sku": "CHG-WRL-15W", "product_name": "15W Fast Wireless Charger", "quantity": 0, "location": "DEN-WH-07", "status": "out_of_stock" }
+
+Question: What is the inventory level for the Bluetooth speaker in the Atlanta distribution point?
+Call: { "func_call": "get_stock_level", "sku": "SPK-BT-XL", "location_id": "ATL-DIST-10", "threshold": 20 }
+Response: { "sku": "SPK-BT-XL", "product_name": "XL Bluetooth Waterproof Speaker", "quantity": 67, "location": "ATL-DIST-10", "status": "in_stock" }
+
+Question: Check if the HDMI cable bundle is available in the Portland facility and if it's below 100 units.
+Call: { "func_call": "check_availability", "sku": "CBL-HDMI-2M", "location_id": "PDX-FAC-11", "threshold": 100 }
+Response: { "sku": "CBL-HDMI-2M", "product_name": "Braided HDMI Cable 2M Bundle", "quantity": 88, "location": "PDX-FAC-11", "status": "low_stock" }
+
+Question: Get the current stock count for the tablet stylus pen in the San Diego warehouse.
+Call: { "func_call": "get_stock_by_location", "sku": "PEN-STY-02", "location_id": "SAN-WH-12", "threshold": 15 }
+Response: { "sku": "PEN-STY-02", "product_name": "Precision Tablet Stylus Pen", "quantity": 154, "location": "SAN-WH-12", "status": "in_stock" }

@@ -1,0 +1,59 @@
+Context: The design review included feedback from Nina, Oscar, and Paula, but Quentin offered no comments on the prototypes.
+Input: {"question": "Who did not offer feedback during the design review?"}
+Output: {"answer": "Quentin"}
+
+Context: During the marathon, runners like Felix, Grace, and Henry crossed the finish line before sunset, whereas Ivy stopped running at the twenty-mile mark.
+Input: {"question": "Who did not cross the finish line before sunset?"}
+Output: {"answer": "Ivy"}
+
+Context: The board ratified the merger agreement with signatures from Mr. Stone, Ms. Wu, and Dr. Khan, while Mrs. Miller voted against the motion.
+Input: {"question": "Who did not ratify the merger agreement?"}
+Output: {"answer": "Mrs. Miller"}
+
+Context: At the art auction, collectors such as Lucas, Mia, and Noah bid on the paintings, but Oliver only observed without placing any bids.
+Input: {"question": "Who did not bid on the paintings at the art auction?"}
+Output: {"answer": "Oliver"}
+
+Context: The security patch was applied to the networks managed by Sam, Tina, and Uma, yet the system administered by Victor remained vulnerable.
+Input: {"question": "Who did not apply the security patch to their network?"}
+Output: {"answer": "Victor"}
+
+Context: While the choir members, including Wendy, Xavier, and Yolanda, practiced the hymn daily, Zachary missed every rehearsal due to work conflicts.
+Input: {"question": "Who did not practice the hymn daily?"}
+Output: {"answer": "Zachary"}
+
+Context: The research group led by Ana, Boris, and Clara published the findings on climate change, but Dimitri failed to contribute any data to the report.
+Input: {"question": "Who did not contribute data to the climate change report?"}
+Output: {"answer": "Dimitri"}
+
+Context: All team leaders, specifically Eva, Frank, and Gina, endorsed the new project timeline, except for Hugo who rejected the schedule outright.
+Input: {"question": "Who did not endorse the new project timeline?"}
+Output: {"answer": "Hugo"}
+
+Context: During the neighborhood watch, residents like Mr. Brown, Mrs. Clark, and teen Dylan patrolled the streets, while Mr. Evans watched television indoors.
+Input: {"question": "Who did not patrol the streets during the neighborhood watch?"}
+Output: {"answer": "Mr. Evans"}
+
+Context: The orchestra members, Ian, Julia, and Kevin, played the finale together, but the violinist, Laura, had already exited the hall.
+Input: {"question": "Who did not play the finale with the orchestra?"}
+Output: {"answer": "Laura"}
+
+Context: Sponsors including Ms. Ford, Mr. Ghosh, and Dr. Hill supported the conference, whereas Mr. Irvine pulled his funding before the event started.
+Input: {"question": "Who did not support the conference?"}
+Output: {"answer": "Mr. Irvine"}
+
+Context: In the baking contest, bakers named Rosa, Sato, and Theo delivered their cakes by noon, but Chef Ursa was eliminated for missing the deadline.
+Input: {"question": "Who did not deliver their cake by noon?"}
+Output: {"answer": "Chef Ursa"}
+
+Context: The film society analyzed the classic movie, and enthusiasts like Vera, Will, and Xena debated its themes, while York never watched the film.
+Input: {"question": "Who did not watch the classic movie?"}
+Output: {"answer": "York"}
+
+Context: Interns named Zoe, Adam, and Bella organized the filing cabinets last week, but Charlie skipped his assignment due to a family emergency.
+Input: {"question": "Who did not organize the filing cabinets last week?"}
+Output: {"answer": "Charlie"}
+
+Context: The strategy session included VP Sarah, Director Tom, and Manager Uma, but the lead analyst, Vince, was missing due to a car breakdown.
+Input: {"question": "Who did not attend the strategy session?"}
+Output: {"answer": "Vince"}

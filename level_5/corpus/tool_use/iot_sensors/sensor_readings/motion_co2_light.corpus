@@ -1,0 +1,51 @@
+Available Tools: get_sensor_reading | get_all_sensors | get_sensor_by_location | get_sensor_battery
+Call Schema: { "func_call": "string", "sensor_id": "string", "location": "string", "type": "temperature|humidity|motion|co2|light" }
+Response Schema: { "sensor_id": "string", "type": "string", "value": number, "unit": "string", "timestamp": "string", "battery_pct": number }
+---
+Question: What is the current motion status in the main conference room?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "CONF-MOT-01", "location": "Main Conference Room", "type": "motion" }
+Response: { "sensor_id": "CONF-MOT-01", "type": "motion", "value": 1, "unit": "boolean", "timestamp": "2023-10-27T14:32:15Z", "battery_pct": 92 }
+
+Question: Check the CO2 levels in the open plan office area.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "OPEN-CO2-04", "location": "Open Plan Office", "type": "co2" }
+Response: { "sensor_id": "OPEN-CO2-04", "type": "co2", "value": 680, "unit": "ppm", "timestamp": "2023-10-27T14:32:18Z", "battery_pct": 88 }
+
+Question: How bright is the lighting in the living room right now?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "LIVING-LGT-02", "location": "Living Room", "type": "light" }
+Response: { "sensor_id": "LIVING-LGT-02", "type": "light", "value": 340, "unit": "lux", "timestamp": "2023-10-27T14:32:20Z", "battery_pct": 76 }
+
+Question: Is there any motion detected in the kitchen?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "KITCH-MOT-03", "location": "Kitchen", "type": "motion" }
+Response: { "sensor_id": "KITCH-MOT-03", "type": "motion", "value": 0, "unit": "boolean", "timestamp": "2023-10-27T14:32:22Z", "battery_pct": 45 }
+
+Question: Get the carbon dioxide reading for the small meeting room.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "SMALL-CO2-02", "location": "Small Meeting Room", "type": "co2" }
+Response: { "sensor_id": "SMALL-CO2-02", "type": "co2", "value": 420, "unit": "ppm", "timestamp": "2023-10-27T14:32:25Z", "battery_pct": 95 }
+
+Question: What is the light level in the hallway near the elevator?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "HALL-LGT-01", "location": "Hallway Near Elevator", "type": "light" }
+Response: { "sensor_id": "HALL-LGT-01", "type": "light", "value": 120, "unit": "lux", "timestamp": "2023-10-27T14:32:28Z", "battery_pct": 82 }
+
+Question: Check if the bedroom has detected any movement.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "BED-MOT-05", "location": "Bedroom", "type": "motion" }
+Response: { "sensor_id": "BED-MOT-05", "type": "motion", "value": 0, "unit": "boolean", "timestamp": "2023-10-27T14:32:30Z", "battery_pct": 63 }
+
+Question: Retrieve the CO2 concentration in the server room.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "SRV-CO2-01", "location": "Server Room", "type": "co2" }
+Response: { "sensor_id": "SRV-CO2-01", "type": "co2", "value": 510, "unit": "ppm", "timestamp": "2023-10-27T14:32:33Z", "battery_pct": 98 }
+
+Question: How much light is entering the home office?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "HOME-LGT-03", "location": "Home Office", "type": "light" }
+Response: { "sensor_id": "HOME-LGT-03", "type": "light", "value": 550, "unit": "lux", "timestamp": "2023-10-27T14:32:35Z", "battery_pct": 71 }
+
+Question: Detect motion in the reception area.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "REC-MOT-02", "location": "Reception Area", "type": "motion" }
+Response: { "sensor_id": "REC-MOT-02", "type": "motion", "value": 1, "unit": "boolean", "timestamp": "2023-10-27T14:32:38Z", "battery_pct": 89 }
+
+Question: What are the current CO2 levels in the break room?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "BRK-CO2-03", "location": "Break Room", "type": "co2" }
+Response: { "sensor_id": "BRK-CO2-03", "type": "co2", "value": 850, "unit": "ppm", "timestamp": "2023-10-27T14:32:40Z", "battery_pct": 54 }
+
+Question: Measure the ambient light in the garage.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "GAR-LGT-01", "location": "Garage", "type": "light" }
+Response: { "sensor_id": "GAR-LGT-01", "type": "light", "value": 45, "unit": "lux", "timestamp": "2023-10-27T14:32:42Z", "battery_pct": 38 }

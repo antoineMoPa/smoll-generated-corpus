@@ -1,0 +1,87 @@
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Import four new electric vehicle models into the automotive inventory database.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "AUTO-EV-201", "name": "Volt Storm Sedan", "price": 45000.00, "stock": 25 }, { "sku": "AUTO-EV-202", "name": "EcoCharge Hatchback", "price": 32500.00, "stock": 40 }, { "sku": "AUTO-EV-203", "name": "Titan Electric Truck", "price": 58900.00, "stock": 15 }, { "sku": "AUTO-EV-204", "name": "CityZip Compact", "price": 28000.00, "stock": 60 } ] }
+Response: { "id": 9101, "table": "products", "inserted": 4, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Record three payment gateway timeout errors from the Tokyo region server.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-05T09:12:33Z", "level": "ERROR", "service": "payment-jp", "message": "Gateway timeout during token exchange" }, { "timestamp": "2023-11-05T09:12:45Z", "level": "CRITICAL", "service": "payment-jp", "message": "Circuit breaker triggered for Stripe API" }, { "timestamp": "2023-11-05T09:13:01Z", "level": "ERROR", "service": "payment-jp", "message": "Retry limit exceeded for transaction TX-9981" } ] }
+Response: { "id": 55012, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Onboard six new interns to the engineering department for the summer program.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "intern.01@university.edu", "role": "intern", "department": "Backend", "active": true }, { "email": "intern.02@university.edu", "role": "intern", "department": "Frontend", "active": true }, { "email": "intern.03@university.edu", "role": "intern", "department": "Data", "active": true }, { "email": "intern.04@university.edu", "role": "intern", "department": "DevOps", "active": true }, { "email": "intern.05@university.edu", "role": "intern", "department": "QA", "active": true }, { "email": "intern.06@university.edu", "role": "intern", "department": "Security", "active": true } ] }
+Response: { "id": 11500, "table": "users", "inserted": 6, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Populate the bookstore catalog with five new science fiction bestsellers.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "BOOK-SF-501", "name": "Stars Beyond Horizon", "price": 16.99, "stock": 300 }, { "sku": "BOOK-SF-502", "name": "The Quantum Paradox", "price": 18.50, "stock": 250 }, { "sku": "BOOK-SF-503", "name": "Neon City Blues", "price": 14.99, "stock": 400 }, { "sku": "BOOK-SF-504", "name": "Android Dreams", "price": 19.99, "stock": 150 }, { "sku": "BOOK-SF-505", "name": "Void Walker", "price": 17.25, "stock": 200 } ] }
+Response: { "id": 9102, "table": "products", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log a sequence of cache invalidation events triggered by the deployment pipeline.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-05T14:00:10Z", "level": "INFO", "service": "redis-manager", "message": "Cache flush initiated for key pattern user_*" }, { "timestamp": "2023-11-05T14:00:12Z", "level": "INFO", "service": "redis-manager", "message": "5000 keys invalidated successfully" }, { "timestamp": "2023-11-05T14:00:15Z", "level": "INFO", "service": "redis-manager", "message": "Cache warm-up started" } ] }
+Response: { "id": 55013, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add eight new yoga accessories to the wellness product line.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "YOG-MAT-01", "name": "Cork Yoga Mat", "price": 65.00, "stock": 100 }, { "sku": "YOG-BLK-02", "name": "Foam Block Set", "price": 12.99, "stock": 300 }, { "sku": "YOG-STR-03", "name": "Cotton Strap", "price": 8.50, "stock": 250 }, { "sku": "YOG-BOL-04", "name": "Meditation Bolster", "price": 45.00, "stock": 80 }, { "sku": "YOG-TOW-05", "name": "Microfiber Towel", "price": 18.00, "stock": 200 }, { "sku": "YOG-BAG-06", "name": "Canvas Carrier", "price": 22.50, "stock": 150 }, { "sku": "YOG-CUB-07", "name": "Wooden Cube", "price": 9.99, "stock": 120 }, { "sku": "YOG-EYE-08", "name": "Silk Eye Pillow", "price": 14.50, "stock": 180 } ] }
+Response: { "id": 9103, "table": "products", "inserted": 8, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Register two external auditors with read-only access for the compliance review.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "auditor.x@compliance.org", "role": "auditor", "department": "External", "active": true }, { "email": "auditor.y@compliance.org", "role": "auditor", "department": "External", "active": true } ] }
+Response: { "id": 11501, "table": "users", "inserted": 2, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Insert a batch of SSL certificate expiration warnings generated by the security scanner.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-05T06:00:00Z", "level": "WARN", "service": "sec-scanner", "message": "Certificate expires in 30 days: api.example.com" }, { "timestamp": "2023-11-05T06:00:01Z", "level": "WARN", "service": "sec-scanner", "message": "Certificate expires in 14 days: shop.example.com" }, { "timestamp": "2023-11-05T06:00:02Z", "level": "CRITICAL", "service": "sec-scanner", "message": "Certificate expires in 2 days: legacy.example.com" } ] }
+Response: { "id": 55014, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Upload three new smart home devices to the electronics inventory.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "SMART-HUB-01", "name": "Voice Control Hub", "price": 89.99, "stock": 200 }, { "sku": "SMART-LCK-02", "name": "Biometric Door Lock", "price": 149.50, "stock": 75 }, { "sku": "SMART-CAM-03", "name": "4K Security Camera", "price": 129.00, "stock": 150 } ] }
+Response: { "id": 9104, "table": "products", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add five regional managers to the user directory for the EMEA division.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "mgr.berlin@company.eu", "role": "manager", "department": "Sales", "active": true }, { "email": "mgr.paris@company.eu", "role": "manager", "department": "Marketing", "active": true }, { "email": "mgr.london@company.eu", "role": "manager", "department": "Ops", "active": true }, { "email": "mgr.madrid@company.eu", "role": "manager", "department": "Support", "active": true }, { "email": "mgr.rome@company.eu", "role": "manager", "department": "HR", "active": true } ] }
+Response: { "id": 11502, "table": "users", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log four microservice health check failures detected during the morning spike.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-05T08:30:10Z", "level": "ERROR", "service": "health-monitor", "message": "Service notification-svc unresponsive" }, { "timestamp": "2023-11-05T08:30:15Z", "level": "ERROR", "service": "health-monitor", "message": "Service search-index high latency" }, { "timestamp": "2023-11-05T08:30:20Z", "level": "WARN", "service": "health-monitor", "message": "Service image-proc memory usage critical" }, { "timestamp": "2023-11-05T08:30:25Z", "level": "ERROR", "service": "health-monitor", "message": "Service recommendation-engine timeout" } ] }
+Response: { "id": 55015, "table": "event_logs", "inserted": 4, "status": "success" }

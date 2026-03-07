@@ -1,0 +1,51 @@
+Available Tools: get_prescriptions | request_refill | check_drug_interaction | get_medication_info
+Call Schema: { "func_call": "string", "patient_id": "string", "medication": "string", "dosage": "string" }
+Response Schema: { "prescription_id": "string", "medication": "string", "dosage": "string", "refills_remaining": number, "status": "string" }
+---
+Question: Check if there are any interactions between Warfarin and Aspirin for patient P-8821.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-8821", "medication": "Warfarin, Aspirin", "dosage": "5mg, 81mg" }
+Response: { "prescription_id": "RX-99201", "medication": "Warfarin, Aspirin", "dosage": "5mg, 81mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: Increased risk of bleeding" }
+
+Question: Get detailed information about Lisinopril for patient P-3342.
+Call: { "func_call": "get_medication_info", "patient_id": "P-3342", "medication": "Lisinopril", "dosage": "10mg" }
+Response: { "prescription_id": "RX-11023", "medication": "Lisinopril", "dosage": "10mg", "refills_remaining": 3, "status": "INFO_RETRIEVED: ACE inhibitor used for hypertension" }
+
+Question: Verify potential side effects when combining Simvastatin and Grapefruit for patient P-5519.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-5519", "medication": "Simvastatin, Grapefruit", "dosage": "20mg, Dietary" }
+Response: { "prescription_id": "RX-77432", "medication": "Simvastatin, Grapefruit", "dosage": "20mg, Dietary", "refills_remaining": 0, "status": "MODERATE_INTERACTION: Grapefruit increases statin levels" }
+
+Question: Retrieve medication details for Metformin prescribed to patient P-9001.
+Call: { "func_call": "get_medication_info", "patient_id": "P-9001", "medication": "Metformin", "dosage": "500mg" }
+Response: { "prescription_id": "RX-33812", "medication": "Metformin", "dosage": "500mg", "refills_remaining": 5, "status": "INFO_RETRIEVED: First-line treatment for type 2 diabetes" }
+
+Question: Assess the safety of taking Ibuprofen with Lithium for patient P-2210.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-2210", "medication": "Ibuprofen, Lithium", "dosage": "400mg, 300mg" }
+Response: { "prescription_id": "RX-55671", "medication": "Ibuprofen, Lithium", "dosage": "400mg, 300mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: NSAIDs reduce lithium clearance" }
+
+Question: Look up usage instructions for Amoxicillin for patient P-7734.
+Call: { "func_call": "get_medication_info", "patient_id": "P-7734", "medication": "Amoxicillin", "dosage": "500mg" }
+Response: { "prescription_id": "RX-88291", "medication": "Amoxicillin", "dosage": "500mg", "refills_remaining": 0, "status": "INFO_RETRIEVED: Antibiotic, take with food to reduce stomach upset" }
+
+Question: Check for conflicts between Clopidogrel and Omeprazole in patient P-4455.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-4455", "medication": "Clopidogrel, Omeprazole", "dosage": "75mg, 20mg" }
+Response: { "prescription_id": "RX-22908", "medication": "Clopidogrel, Omeprazole", "dosage": "75mg, 20mg", "refills_remaining": 0, "status": "MODERATE_INTERACTION: Omeprazole may reduce Clopidogrel efficacy" }
+
+Question: Get current prescription status and info for Atorvastatin for patient P-6621.
+Call: { "func_call": "get_medication_info", "patient_id": "P-6621", "medication": "Atorvastatin", "dosage": "40mg" }
+Response: { "prescription_id": "RX-44129", "medication": "Atorvastatin", "dosage": "40mg", "refills_remaining": 2, "status": "INFO_RETRIEVED: Statin for lowering cholesterol" }
+
+Question: Analyze interaction risks between Sertraline and Tramadol for patient P-1192.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-1192", "medication": "Sertraline, Tramadol", "dosage": "50mg, 50mg" }
+Response: { "prescription_id": "RX-66543", "medication": "Sertraline, Tramadol", "dosage": "50mg, 50mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: Risk of Serotonin Syndrome" }
+
+Question: Provide details on the dosage and usage of Levothyroxine for patient P-8833.
+Call: { "func_call": "get_medication_info", "patient_id": "P-8833", "medication": "Levothyroxine", "dosage": "75mcg" }
+Response: { "prescription_id": "RX-99812", "medication": "Levothyroxine", "dosage": "75mcg", "refills_remaining": 4, "status": "INFO_RETRIEVED: Thyroid hormone replacement, take on empty stomach" }
+
+Question: Evaluate the combination of Digoxin and Verapamil for patient P-3399.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-3399", "medication": "Digoxin, Verapamil", "dosage": "0.125mg, 240mg" }
+Response: { "prescription_id": "RX-12399", "medication": "Digoxin, Verapamil", "dosage": "0.125mg, 240mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: Verapamil increases Digoxin toxicity risk" }
+
+Question: Fetch medication profile for Albuterol inhaler for patient P-5544.
+Call: { "func_call": "get_medication_info", "patient_id": "P-5544", "medication": "Albuterol", "dosage": "90mcg" }
+Response: { "prescription_id": "RX-77221", "medication": "Albuterol", "dosage": "90mcg", "refills_remaining": 1, "status": "INFO_RETRIEVED: Short-acting beta agonist for asthma rescue" }

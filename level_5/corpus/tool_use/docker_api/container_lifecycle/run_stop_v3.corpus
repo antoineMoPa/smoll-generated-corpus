@@ -1,0 +1,51 @@
+Available Tools: run_container | stop_container | start_container | remove_container | list_containers
+Call Schema: { "func_call": "string", "container_id": "string", "image": "string", "name": "string", "ports": "string", "env": ["string"] }
+Response Schema: { "container_id": "string", "name": "string", "image": "string", "state": "running|stopped|exited", "ports": "string" }
+---
+Question: Deploy a rabbitmq message broker named msg-queue with port 5672 exposed and default credentials.
+Call: { "func_call": "run_container", "container_id": "", "image": "rabbitmq:3-management", "name": "msg-queue", "ports": "5672:5672", "env": ["RABBITMQ_DEFAULT_USER=guest", "RABBITMQ_DEFAULT_PASS=guest"] }
+Response: { "container_id": "b9c8d7e6f5g4", "name": "msg-queue", "image": "rabbitmq:3-management", "state": "running", "ports": "5672:5672" }
+
+Question: Initialize an elasticsearch search engine called search-core on port 9200 with memory lock enabled.
+Call: { "func_call": "run_container", "container_id": "", "image": "elasticsearch:8.10", "name": "search-core", "ports": "9200:9200", "env": ["discovery.type=single-node", "xpack.security.enabled=false"] }
+Response: { "container_id": "h3i4j5k6l7m8", "name": "search-core", "image": "elasticsearch:8.10", "state": "running", "ports": "9200:9200" }
+
+Question: Halt the rabbitmq container msg-queue safely.
+Call: { "func_call": "stop_container", "container_id": "b9c8d7e6f5g4", "image": "", "name": "msg-queue", "ports": "", "env": [] }
+Response: { "container_id": "b9c8d7e6f5g4", "name": "msg-queue", "image": "rabbitmq:3-management", "state": "stopped", "ports": "5672:5672" }
+
+Question: Spin up a grafana dashboard named viz-board mapping host port 3001 to container port 3000.
+Call: { "func_call": "run_container", "container_id": "", "image": "grafana/grafana:latest", "name": "viz-board", "ports": "3001:3000", "env": ["GF_SECURITY_ADMIN_PASSWORD=admin123"] }
+Response: { "container_id": "n9o8p7q6r5s4", "name": "viz-board", "image": "grafana/grafana:latest", "state": "running", "ports": "3001:3000" }
+
+Question: Launch a java spring boot app named order-svc on port 8082 with JAVA_OPTS configured.
+Call: { "func_call": "run_container", "container_id": "", "image": "eclipse-temurin:17-jre", "name": "order-svc", "ports": "8082:8080", "env": ["JAVA_OPTS=-Xmx512m"] }
+Response: { "container_id": "t3u4v5w6x7y8", "name": "order-svc", "image": "eclipse-temurin:17-jre", "state": "running", "ports": "8082:8080" }
+
+Question: Terminate the elasticsearch instance search-core immediately.
+Call: { "func_call": "stop_container", "container_id": "h3i4j5k6l7m8", "image": "", "name": "search-core", "ports": "", "env": [] }
+Response: { "container_id": "h3i4j5k6l7m8", "name": "search-core", "image": "elasticsearch:8.10", "state": "stopped", "ports": "9200:9200" }
+
+Question: Run a prometheus monitor named metrics-collector exposing port 9090.
+Call: { "func_call": "run_container", "container_id": "", "image": "prom/prometheus:v2.45", "name": "metrics-collector", "ports": "9090:9090", "env": [] }
+Response: { "container_id": "z1a2b3c4d5e6", "name": "metrics-collector", "image": "prom/prometheus:v2.45", "state": "running", "ports": "9090:9090" }
+
+Question: Stop the grafana dashboard viz-board gracefully.
+Call: { "func_call": "stop_container", "container_id": "n9o8p7q6r5s4", "image": "", "name": "viz-board", "ports": "", "env": [] }
+Response: { "container_id": "n9o8p7q6r5s4", "name": "viz-board", "image": "grafana/grafana:latest", "state": "stopped", "ports": "3001:3000" }
+
+Question: Start a go microservice named payment-gateway on port 8083 with LOG_LEVEL set to debug.
+Call: { "func_call": "run_container", "container_id": "", "image": "golang:1.21", "name": "payment-gateway", "ports": "8083:8083", "env": ["LOG_LEVEL=debug"] }
+Response: { "container_id": "f7g8h9i0j1k2", "name": "payment-gateway", "image": "golang:1.21", "state": "running", "ports": "8083:8083" }
+
+Question: Halt the prometheus container metrics-collector.
+Call: { "func_call": "stop_container", "container_id": "z1a2b3c4d5e6", "image": "", "name": "metrics-collector", "ports": "", "env": [] }
+Response: { "container_id": "z1a2b3c4d5e6", "name": "metrics-collector", "image": "prom/prometheus:v2.45", "state": "stopped", "ports": "9090:9090" }
+
+Question: Deploy a memcached session store named session-cache mapping port 11211.
+Call: { "func_call": "run_container", "container_id": "", "image": "memcached:1.6", "name": "session-cache", "ports": "11211:11211", "env": [] }
+Response: { "container_id": "l3m4n5o6p7q8", "name": "session-cache", "image": "memcached:1.6", "state": "running", "ports": "11211:11211" }
+
+Question: Stop the go payment-gateway service.
+Call: { "func_call": "stop_container", "container_id": "f7g8h9i0j1k2", "image": "", "name": "payment-gateway", "ports": "", "env": [] }
+Response: { "container_id": "f7g8h9i0j1k2", "name": "payment-gateway", "image": "golang:1.21", "state": "stopped", "ports": "8083:8083" }

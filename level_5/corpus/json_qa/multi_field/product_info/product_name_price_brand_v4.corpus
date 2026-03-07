@@ -1,0 +1,59 @@
+Context: I picked up a bottle of Neutrogena Hydro Boost moisturizer for $18.75 at the drugstore yesterday.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Hydro Boost", "price": "$18.75", "brand": "Neutrogena"}
+
+Context: The Apple MacBook Air M2 is currently listed at $1,099.00 on the electronics store website.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "MacBook Air M2", "price": "$1,099.00", "brand": "Apple"}
+
+Context: We bought a box of Tide Pods Laundry Detergent for $22.49 during the weekend sale.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Pods Laundry Detergent", "price": "$22.49", "brand": "Tide"}
+
+Context: My brother gifted me the Canon EOS R6 camera, which retails for $2,499.00 and takes amazing photos.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "EOS R6", "price": "$2,499.00", "brand": "Canon"}
+
+Context: You can find the Keurig K-Elite coffee maker for $169.99 at most home goods retailers.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "K-Elite", "price": "$169.99", "brand": "Keurig"}
+
+Context: I grabbed a tube of Colgate Total Whitening toothpaste for just $3.99 this morning.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Total Whitening", "price": "$3.99", "brand": "Colgate"}
+
+Context: The Microsoft Surface Pro 9 tablet starts at $999.99 and comes with a detachable keyboard.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Surface Pro 9", "price": "$999.99", "brand": "Microsoft"}
+
+Context: We ordered a bag of Purina Pro Plan dog treats online for $14.50 last night.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Pro Plan", "price": "$14.50", "brand": "Purina"}
+
+Context: The Adidas Ultraboost 22 running shoes are priced at $190.00 and offer great support.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Ultraboost 22", "price": "$190.00", "brand": "Adidas"}
+
+Context: I replaced my old blender with the Vitamix E310 Explorian for $349.95.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "E310 Explorian", "price": "$349.95", "brand": "Vitamix"}
+
+Context: The HP Spectre x360 laptop is available for $1,399.99 with a bundled stylus pen.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Spectre x360", "price": "$1,399.99", "brand": "HP"}
+
+Context: She bought a jar of Skippy Creamy Peanut Butter for $5.29 to make sandwiches for lunch.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Creamy Peanut Butter", "price": "$5.29", "brand": "Skippy"}
+
+Context: The Garmin Fenix 7 smartwatch costs $699.99 and includes advanced GPS tracking features.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Fenix 7", "price": "$699.99", "brand": "Garmin"}
+
+Context: I found a deal on the Razer BlackWidow V3 keyboard for $139.99 at the gaming shop.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "BlackWidow V3", "price": "$139.99", "brand": "Razer"}
+
+Context: The CeraVe Hydrating Facial Cleanser is selling for $15.98 and is recommended by dermatologists.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Hydrating Facial Cleanser", "price": "$15.98", "brand": "CeraVe"}

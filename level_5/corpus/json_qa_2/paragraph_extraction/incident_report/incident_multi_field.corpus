@@ -1,0 +1,20 @@
+{"incident_type": "Server Outage", "date": "2023-11-14", "location": "Data Center 4, Ashburn", "cause": "Cooling system failure", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Data Breach", "date": "2024-02-03", "location": "Remote Office, Berlin", "cause": "Phishing attack on admin account", "severity": "High", "resolved": "No"}
+{"incident_type": "Network Latency", "date": "2023-09-22", "location": "Cloud Region US-East-1", "cause": "ISP routing error", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Hardware Failure", "date": "2023-12-05", "location": "Warehouse B, Chicago", "cause": "Power surge damaging RAID controller", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Software Bug", "date": "2024-01-18", "location": "Production Environment", "cause": "Memory leak in payment module", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Physical Security", "date": "2023-10-30", "location": "Headquarters Lobby, New York", "cause": "Unauthorized access attempt", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "DDoS Attack", "date": "2024-03-12", "location": "Global CDN Edge", "cause": "Botnet traffic spike", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Database Corruption", "date": "2023-08-15", "location": "Backup Site, Dallas", "cause": "Disk write error during replication", "severity": "High", "resolved": "Yes"}
+{"incident_type": "API Timeout", "date": "2024-04-01", "location": "Microservices Cluster A", "cause": "Third-party vendor downtime", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "Insider Threat", "date": "2023-07-20", "location": "DevOps Team, San Francisco", "cause": "Malicious script deployment by contractor", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Fire Suppression Alert", "date": "2023-11-02", "location": "Server Room 2, London", "cause": "False positive from smoke detector", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "Credential Leak", "date": "2024-05-10", "location": "Public GitHub Repository", "cause": "Accidental commit of .env file", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Storage Full", "date": "2023-06-14", "location": "Log Aggregation Server", "cause": "Unrotated log files consuming disk", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Ransomware", "date": "2024-02-28", "location": "Finance Department, Toronto", "cause": "Infected USB drive", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Configuration Error", "date": "2023-12-19", "location": "Load Balancer Pool", "cause": "Incorrect SSL certificate path", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Power Failure", "date": "2024-01-05", "location": "Colocation Facility, Singapore", "cause": "Grid instability during storm", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Service Degradation", "date": "2023-09-08", "location": "Mobile App Backend", "cause": "Database connection pool exhaustion", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "DNS Hijacking", "date": "2024-03-25", "location": "Domain Registrar Account", "cause": "Compromised registrar credentials", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Backup Failure", "date": "2023-10-12", "location": "Offsite Storage Vault", "cause": "Network interruption during transfer", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Compliance Violation", "date": "2024-04-15", "location": "HR Database System", "cause": "Unencrypted PII storage", "severity": "Medium", "resolved": "No"}

@@ -1,0 +1,51 @@
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Lock the side gate for user mike_b before leaving.
+Call: { "func_call": "lock_door", "lock_id": "side_gate", "user_id": "mike_b", "code": "" }
+Response: { "lock_id": "side_gate", "state": "locked", "last_action_by": "mike_b", "timestamp": "2023-10-28T08:15:00Z" }
+
+Question: Please unlock the patio door so sara_v can access the garden.
+Call: { "func_call": "unlock_door", "lock_id": "patio_door", "user_id": "sara_v", "code": "" }
+Response: { "lock_id": "patio_door", "state": "unlocked", "last_action_by": "sara_v", "timestamp": "2023-10-28T09:22:15Z" }
+
+Question: Secure the basement entrance by locking it for user tom_h.
+Call: { "func_call": "lock_door", "lock_id": "basement_entrance", "user_id": "tom_h", "code": "" }
+Response: { "lock_id": "basement_entrance", "state": "locked", "last_action_by": "tom_h", "timestamp": "2023-10-28T10:05:30Z" }
+
+Question: Let user nina_q in by unlocking the side gate.
+Call: { "func_call": "unlock_door", "lock_id": "side_gate", "user_id": "nina_q", "code": "" }
+Response: { "lock_id": "side_gate", "state": "unlocked", "last_action_by": "nina_q", "timestamp": "2023-10-28T11:40:12Z" }
+
+Question: Set the new pin 3045 for the patio door for user oscar_d.
+Call: { "func_call": "set_access_code", "lock_id": "patio_door", "user_id": "oscar_d", "code": "3045" }
+Response: { "lock_id": "patio_door", "state": "locked", "last_action_by": "oscar_d", "timestamp": "2023-10-28T12:18:45Z" }
+
+Question: Lock the basement entrance immediately for user peta_g.
+Call: { "func_call": "lock_door", "lock_id": "basement_entrance", "user_id": "peta_g", "code": "" }
+Response: { "lock_id": "basement_entrance", "state": "locked", "last_action_by": "peta_g", "timestamp": "2023-10-28T13:00:00Z" }
+
+Question: Unlock the side gate for the contractor using user quinn_f credentials.
+Call: { "func_call": "unlock_door", "lock_id": "side_gate", "user_id": "quinn_f", "code": "" }
+Response: { "lock_id": "side_gate", "state": "unlocked", "last_action_by": "quinn_f", "timestamp": "2023-10-28T14:25:33Z" }
+
+Question: Update the code on the basement entrance to 7720 for user rachel_y.
+Call: { "func_call": "set_access_code", "lock_id": "basement_entrance", "user_id": "rachel_y", "code": "7720" }
+Response: { "lock_id": "basement_entrance", "state": "locked", "last_action_by": "rachel_y", "timestamp": "2023-10-28T15:10:20Z" }
+
+Question: Please unlock the patio door for user sam_x so he can bring in groceries.
+Call: { "func_call": "unlock_door", "lock_id": "patio_door", "user_id": "sam_x", "code": "" }
+Response: { "lock_id": "patio_door", "state": "unlocked", "last_action_by": "sam_x", "timestamp": "2023-10-28T16:45:55Z" }
+
+Question: Secure the side gate by locking it for user tina_z.
+Call: { "func_call": "lock_door", "lock_id": "side_gate", "user_id": "tina_z", "code": "" }
+Response: { "lock_id": "side_gate", "state": "locked", "last_action_by": "tina_z", "timestamp": "2023-10-28T17:30:10Z" }
+
+Question: Change the access code for the patio door to 9988 for user umar_c.
+Call: { "func_call": "set_access_code", "lock_id": "patio_door", "user_id": "umar_c", "code": "9988" }
+Response: { "lock_id": "patio_door", "state": "locked", "last_action_by": "umar_c", "timestamp": "2023-10-28T18:15:42Z" }
+
+Question: Unlock the basement entrance for user vicky_n to retrieve storage items.
+Call: { "func_call": "unlock_door", "lock_id": "basement_entrance", "user_id": "vicky_n", "code": "" }
+Response: { "lock_id": "basement_entrance", "state": "unlocked", "last_action_by": "vicky_n", "timestamp": "2023-10-28T19:05:28Z" }

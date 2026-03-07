@@ -1,0 +1,59 @@
+Context: Marcus put on his heavy winter coat and gloves before stepping outside into the snow.
+Input: {"question": "What is the weather like outside?"}
+Output: {"answer": "snow"}
+
+Context: The teacher collected the pencils and erased the whiteboard as the bell rang.
+Input: {"question": "What event just occurred?"}
+Output: {"answer": "bell rang"}
+
+Context: Sarah yawned loudly and rubbed her eyes while waiting for the coffee to brew.
+Input: {"question": "How is Sarah feeling?"}
+Output: {"answer": "yawned"}
+
+Context: The crowd cheered wildly when the home team scored the winning goal in the final second.
+Input: {"question": "Who won the game?"}
+Output: {"answer": "home team"}
+
+Context: James looked at his empty wallet and sighed before putting the candy bar back on the shelf.
+Input: {"question": "Why didn't James buy the candy?"}
+Output: {"answer": "empty wallet"}
+
+Context: The flowers in the garden wilted and turned brown after a week without rain.
+Input: {"question": "What caused the flowers to wilt?"}
+Output: {"answer": "without rain"}
+
+Context: Elena packed her swimsuit and sunscreen into her bag for the trip to Florida.
+Input: {"question": "What activity does Elena plan to do?"}
+Output: {"answer": "swimsuit"}
+
+Context: The driver slammed on the brakes to avoid hitting the deer that jumped onto the road.
+Input: {"question": "What appeared on the road?"}
+Output: {"answer": "deer"}
+
+Context: The baby cried continuously until his mother picked him up and rocked him gently.
+Input: {"question": "Who stopped the baby from crying?"}
+Output: {"answer": "mother"}
+
+Context: Tom searched through the cupboard but could not find any plates, so he ordered pizza.
+Input: {"question": "What item was missing from the cupboard?"}
+Output: {"answer": "plates"}
+
+Context: The sky turned dark gray and the wind began to howl just before the storm hit.
+Input: {"question": "What was approaching?"}
+Output: {"answer": "storm"}
+
+Context: Lisa forgot her passport at home and was denied boarding at the airport gate.
+Input: {"question": "What document did Lisa forget?"}
+Output: {"answer": "passport"}
+
+Context: The chef tasted the soup and added more salt to improve the flavor.
+Input: {"question": "What ingredient did the chef add?"}
+Output: {"answer": "salt"}
+
+Context: The dog wagged its tail and barked happily when its owner walked through the door.
+Input: {"question": "Who arrived home?"}
+Output: {"answer": "owner"}
+
+Context: The student raised his hand to ask a question about the homework assignment.
+Input: {"question": "What did the student want to do?"}
+Output: {"answer": "ask a question"}

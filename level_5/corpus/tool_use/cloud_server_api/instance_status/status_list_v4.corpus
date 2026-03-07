@@ -1,0 +1,95 @@
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: What is the IP address of instance i-01a2b3c4d5e6f7g8h in af-south-1?
+Call: { "func_call": "get_instance_status", "instance_id": "i-01a2b3c4d5e6f7g8h", "region": "af-south-1", "filter": "" }
+Response: { "instances": [{ "id": "i-01a2b3c4d5e6f7g8h", "type": "m6g.large", "state": "running", "ip": "13.245.67.89" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Show me every p3.2xlarge instance currently active in us-west-1.
+Call: { "func_call": "list_instances", "instance_id": "", "region": "us-west-1", "filter": "type=p3.2xlarge,state=running" }
+Response: { "instances": [{ "id": "i-09z8y7x6w5v4u3t2s", "type": "p3.2xlarge", "state": "running", "ip": "54.183.22.11" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Check if instance i-0qqwweerrttyyuuii is shutting down in eu-north-1.
+Call: { "func_call": "get_instance_status", "instance_id": "i-0qqwweerrttyyuuii", "region": "eu-north-1", "filter": "" }
+Response: { "instances": [{ "id": "i-0qqwweerrttyyuuii", "type": "t3.small", "state": "shutting-down", "ip": "176.34.55.66" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: List all instances in me-central-1 that are in a pending state.
+Call: { "func_call": "list_instances", "instance_id": "", "region": "me-central-1", "filter": "state=pending" }
+Response: { "instances": [{ "id": "i-0ppooiiuuyyttpplk", "type": "c5.large", "state": "pending", "ip": "" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Retrieve the configuration for web server i-0mnbvcxzlkjhgfdsa in ap-southeast-2.
+Call: { "func_call": "get_instance_status", "instance_id": "i-0mnbvcxzlkjhgfdsa", "region": "ap-southeast-2", "filter": "" }
+Response: { "instances": [{ "id": "i-0mnbvcxzlkjhgfdsa", "type": "t3.medium", "state": "running", "ip": "54.251.99.88" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Find all r6i.xlarge instances that are stopped in ca-west-1.
+Call: { "func_call": "list_instances", "instance_id": "", "region": "ca-west-1", "filter": "type=r6i.xlarge,state=stopped" }
+Response: { "instances": [{ "id": "i-0asdfghjklzxcvbnm", "type": "r6i.xlarge", "state": "stopped", "ip": "" }, { "id": "i-0qwertzuiopasdfgh", "type": "r6i.xlarge", "state": "stopped", "ip": "" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Is the cache node i-0123987456abcdef0 operational in eu-west-3?
+Call: { "func_call": "get_instance_status", "instance_id": "i-0123987456abcdef0", "region": "eu-west-3", "filter": "" }
+Response: { "instances": [{ "id": "i-0123987456abcdef0", "type": "r5.large", "state": "running", "ip": "35.180.44.55" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Display all instances in il-central-1 with no state filter applied.
+Call: { "func_call": "list_instances", "instance_id": "", "region": "il-central-1", "filter": "" }
+Response: { "instances": [{ "id": "i-0zyxwvutsrqponmlk", "type": "m5.large", "state": "running", "ip": "176.120.10.20" }, { "id": "i-0jihgfedcba987654", "type": "t3.micro", "state": "stopped", "ip": "" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Verify the status of batch job instance i-0fedcba0987654321 in us-east-2.
+Call: { "func_call": "get_instance_status", "instance_id": "i-0fedcba0987654321", "region": "us-east-2", "filter": "" }
+Response: { "instances": [{ "id": "i-0fedcba0987654321", "type": "c5.4xlarge", "state": "running", "ip": "3.14.159.26" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Get a list of all t4g.micro instances running in ap-northeast-2.
+Call: { "func_call": "list_instances", "instance_id": "", "region": "ap-northeast-2", "filter": "type=t4g.micro,state=running" }
+Response: { "instances": [{ "id": "i-0lmnopqrstuvwxyza", "type": "t4g.micro", "state": "running", "ip": "3.36.100.200" }, { "id": "i-0bcdefghijklmnopq", "type": "t4g.micro", "state": "running", "ip": "3.36.100.201" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: Check whether instance i-0987654321fedcba0 is terminated in sa-east-1.
+Call: { "func_call": "get_instance_status", "instance_id": "i-0987654321fedcba0", "region": "sa-east-1", "filter": "" }
+Response: { "instances": [{ "id": "i-0987654321fedcba0", "type": "m5.xlarge", "state": "terminated", "ip": "" }] }
+
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: List every c6gn.large instance located in eu-central-2 regardless of status.
+Call: { "func_call": "list_instances", "instance_id": "", "region": "eu-central-2", "filter": "type=c6gn.large" }
+Response: { "instances": [{ "id": "i-0rstuvwxyz1234567", "type": "c6gn.large", "state": "running", "ip": "34.100.200.50" }, { "id": "i-0876543210zyxwvut", "type": "c6gn.large", "state": "stopped", "ip": "" }] }

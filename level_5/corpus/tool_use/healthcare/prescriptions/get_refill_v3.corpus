@@ -1,0 +1,51 @@
+Available Tools: get_prescriptions | request_refill | check_drug_interaction | get_medication_info
+Call Schema: { "func_call": "string", "patient_id": "string", "medication": "string", "dosage": "string" }
+Response Schema: { "prescription_id": "string", "medication": "string", "dosage": "string", "refills_remaining": number, "status": "string" }
+---
+Question: Could you retrieve the active prescription data for patient P99001 concerning their omeprazole 20mg?
+Call: { "func_call": "get_prescriptions", "patient_id": "P99001", "medication": "omeprazole", "dosage": "20mg" }
+Response: { "prescription_id": "RX-2024-7712", "medication": "omeprazole", "dosage": "20mg", "refills_remaining": 4, "status": "active" }
+
+Question: We need to submit a refill order for patient P82345 taking levothyroxine 50mcg.
+Call: { "func_call": "request_refill", "patient_id": "P82345", "medication": "levothyroxine", "dosage": "50mcg" }
+Response: { "prescription_id": "RX-2024-8823", "medication": "levothyroxine", "dosage": "50mcg", "refills_remaining": 0, "status": "refill_requested" }
+
+Question: What are the current details for patient P71298's prescription of amlodipine 5mg?
+Call: { "func_call": "get_prescriptions", "patient_id": "P71298", "medication": "amlodipine", "dosage": "5mg" }
+Response: { "prescription_id": "RX-2024-9934", "medication": "amlodipine", "dosage": "5mg", "refills_remaining": 2, "status": "active" }
+
+Question: Please look up the record for patient P60512 who is on metoprolol 25mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P60512", "medication": "metoprolol", "dosage": "25mg" }
+Response: { "prescription_id": "RX-2024-1045", "medication": "metoprolol", "dosage": "25mg", "refills_remaining": 1, "status": "active" }
+
+Question: Initiate a refill process for patient P54879 regarding their gabapentin 300mg dosage.
+Call: { "func_call": "request_refill", "patient_id": "P54879", "medication": "gabapentin", "dosage": "300mg" }
+Response: { "prescription_id": "RX-2024-2156", "medication": "gabapentin", "dosage": "300mg", "refills_remaining": 5, "status": "refill_requested" }
+
+Question: Fetch the prescription status for patient P43267 taking sertraline 100mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P43267", "medication": "sertraline", "dosage": "100mg" }
+Response: { "prescription_id": "RX-2024-3267", "medication": "sertraline", "dosage": "100mg", "refills_remaining": 0, "status": "expired" }
+
+Question: Patient P32156 requires an urgent refill for their hydrocodone-acetaminophen 5-325mg.
+Call: { "func_call": "request_refill", "patient_id": "P32156", "medication": "hydrocodone-acetaminophen", "dosage": "5-325mg" }
+Response: { "prescription_id": "RX-2024-4378", "medication": "hydrocodone-acetaminophen", "dosage": "5-325mg", "refills_remaining": 3, "status": "refill_requested" }
+
+Question: Can you check the active prescription info for patient P21045 on losartan 50mg?
+Call: { "func_call": "get_prescriptions", "patient_id": "P21045", "medication": "losartan", "dosage": "50mg" }
+Response: { "prescription_id": "RX-2024-5489", "medication": "losartan", "dosage": "50mg", "refills_remaining": 6, "status": "active" }
+
+Question: I need the full details for patient P10934's pantoprazole 40mg prescription.
+Call: { "func_call": "get_prescriptions", "patient_id": "P10934", "medication": "pantoprazole", "dosage": "40mg" }
+Response: { "prescription_id": "RX-2024-6590", "medication": "pantoprazole", "dosage": "40mg", "refills_remaining": 2, "status": "active" }
+
+Question: Submit a refill request for patient P98723 currently prescribed fluoxetine 20mg.
+Call: { "func_call": "request_refill", "patient_id": "P98723", "medication": "fluoxetine", "dosage": "20mg" }
+Response: { "prescription_id": "RX-2024-7601", "medication": "fluoxetine", "dosage": "20mg", "refills_remaining": 1, "status": "refill_requested" }
+
+Question: Verify the prescription record for patient P87612 taking pravastatin 40mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P87612", "medication": "pravastatin", "dosage": "40mg" }
+Response: { "prescription_id": "RX-2024-8712", "medication": "pravastatin", "dosage": "40mg", "refills_remaining": 4, "status": "active" }
+
+Question: Please handle a refill application for patient P76501 who uses albuterol 90mcg.
+Call: { "func_call": "request_refill", "patient_id": "P76501", "medication": "albuterol", "dosage": "90mcg" }
+Response: { "prescription_id": "RX-2024-9823", "medication": "albuterol", "dosage": "90mcg", "refills_remaining": 0, "status": "refill_requested" }

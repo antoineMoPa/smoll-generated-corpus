@@ -1,0 +1,51 @@
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Check if we need to reorder SKU-9921 based on current safety stock levels and suggest a purchase order if the threshold is breached.
+Call: { "func_call": "get_reorder_suggestions", "sku": "SKU-9921", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": null, "sku": "SKU-9921", "quantity": 450, "supplier": "Global Parts Inc", "status": "suggestion_pending", "expected_delivery": "2023-11-15" }
+
+Question: What is the current status of purchase order PO-7734 for SKU-1029?
+Call: { "func_call": "get_po_status", "sku": "SKU-1029", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": "PO-7734", "sku": "SKU-1029", "quantity": 200, "supplier": "TechSupply Co", "status": "in_transit", "expected_delivery": "2023-10-28" }
+
+Question: The inventory for SKU-5502 dropped below the auto-reorder trigger; generate a suggestion for replenishment.
+Call: { "func_call": "get_reorder_suggestions", "sku": "SKU-5502", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": null, "sku": "SKU-5502", "quantity": 1200, "supplier": "BulkWarehouses Ltd", "status": "suggestion_pending", "expected_delivery": "2023-11-05" }
+
+Question: Retrieve the delivery status and expected arrival date for PO-8812 containing SKU-3341.
+Call: { "func_call": "get_po_status", "sku": "SKU-3341", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": "PO-8812", "sku": "SKU-3341", "quantity": 75, "supplier": "FastLogistics", "status": "delayed", "expected_delivery": "2023-11-02" }
+
+Question: Analyze safety stock calculations for SKU-7788 and provide a reorder recommendation if current levels are insufficient for the next 30 days.
+Call: { "func_call": "get_reorder_suggestions", "sku": "SKU-7788", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": null, "sku": "SKU-7788", "quantity": 300, "supplier": "Prime Components", "status": "suggestion_pending", "expected_delivery": "2023-11-20" }
+
+Question: Has purchase order PO-9901 for SKU-4455 been shipped yet?
+Call: { "func_call": "get_po_status", "sku": "SKU-4455", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": "PO-9901", "sku": "SKU-4455", "quantity": 500, "supplier": "Industrial Solutions", "status": "shipped", "expected_delivery": "2023-10-30" }
+
+Question: Trigger a reorder suggestion for SKU-2233 as the system detected a safety stock violation due to increased demand.
+Call: { "func_call": "get_reorder_suggestions", "sku": "SKU-2233", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": null, "sku": "SKU-2233", "quantity": 850, "supplier": "MegaSupply Chain", "status": "suggestion_pending", "expected_delivery": "2023-11-12" }
+
+Question: Check the status of the urgent order PO-1122 for SKU-6677 and confirm the supplier's estimated delivery window.
+Call: { "func_call": "get_po_status", "sku": "SKU-6677", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": "PO-1122", "sku": "SKU-6677", "quantity": 150, "supplier": "Express Goods", "status": "processing", "expected_delivery": "2023-11-01" }
+
+Question: Calculate if SKU-8899 requires restocking based on the updated safety stock formula and return the suggested quantity.
+Call: { "func_call": "get_reorder_suggestions", "sku": "SKU-8899", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": null, "sku": "SKU-8899", "quantity": 600, "supplier": "Reliable Vendors Inc", "status": "suggestion_pending", "expected_delivery": "2023-11-18" }
+
+Question: Is purchase order PO-3345 for SKU-9988 still pending confirmation from the supplier?
+Call: { "func_call": "get_po_status", "sku": "SKU-9988", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": "PO-3345", "sku": "SKU-9988", "quantity": 250, "supplier": "TopTier Supplies", "status": "pending_confirmation", "expected_delivery": "2023-11-10" }
+
+Question: Run a safety stock analysis for SKU-1100 and generate a reorder proposal if the projected inventory falls below the minimum threshold next week.
+Call: { "func_call": "get_reorder_suggestions", "sku": "SKU-1100", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": null, "sku": "SKU-1100", "quantity": 950, "supplier": "Wholesale Direct", "status": "suggestion_pending", "expected_delivery": "2023-11-25" }
+
+Question: Verify the current shipment status and expected delivery date for PO-5566 containing SKU-2211.
+Call: { "func_call": "get_po_status", "sku": "SKU-2211", "quantity": 0, "supplier_id": "", "expected_delivery": "" }
+Response: { "po_id": "PO-5566", "sku": "SKU-2211", "quantity": 320, "supplier": "QuickShip Logistics", "status": "out_for_delivery", "expected_delivery": "2023-10-29" }

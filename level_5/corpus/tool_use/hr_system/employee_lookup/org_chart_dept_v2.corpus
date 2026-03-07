@@ -1,0 +1,51 @@
+Available Tools: search_employee | get_employee_by_id | get_org_chart | list_employees_by_department
+Call Schema: { "func_call": "string", "query": "string", "department": "string", "employee_id": "string" }
+Response Schema: { "employees": [{ "id": "string", "name": "string", "title": "string", "department": "string", "email": "string", "manager": "string" }] }
+---
+Question: Can you show me the reporting lines for the Legal department?
+Call: { "func_call": "get_org_chart", "query": "", "department": "Legal", "employee_id": "" }
+Response: { "employees": [{ "id": "LEG-050", "name": "Arthur Dent", "title": "General Counsel", "department": "Legal", "email": "a.dent@company.com", "manager": "" }, { "id": "LEG-051", "name": "Beatrice Prior", "title": "Senior Legal Advisor", "department": "Legal", "email": "b.prior@company.com", "manager": "LEG-050" }, { "id": "LEG-052", "name": "Charlie Brown", "title": "Compliance Officer", "department": "Legal", "email": "c.brown@company.com", "manager": "LEG-050" }] }
+
+Question: I need the complete employee list for the Operations team.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Operations", "employee_id": "" }
+Response: { "employees": [{ "id": "OPS-060", "name": "Diana Prince", "title": "VP of Operations", "department": "Operations", "email": "d.prince@company.com", "manager": "" }, { "id": "OPS-061", "name": "Ethan Hunt", "title": "Logistics Manager", "department": "Operations", "email": "e.hunt@company.com", "manager": "OPS-060" }, { "id": "OPS-062", "name": "Fiona Shrek", "title": "Supply Chain Analyst", "department": "Operations", "email": "f.shrek@company.com", "manager": "OPS-060" }] }
+
+Question: Who is currently working in the Customer Support department?
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Support", "employee_id": "" }
+Response: { "employees": [{ "id": "SUP-070", "name": "George Lucas", "title": "Head of Support", "department": "Support", "email": "g.lucas@company.com", "manager": "" }, { "id": "SUP-071", "name": "Hermione Granger", "title": "Support Team Lead", "department": "Support", "email": "h.granger@company.com", "manager": "SUP-070" }, { "id": "SUP-072", "name": "Indiana Jones", "title": "Customer Success Agent", "department": "Support", "email": "i.jones@company.com", "manager": "SUP-071" }] }
+
+Question: Pull up the hierarchy for the Product department.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Product", "employee_id": "" }
+Response: { "employees": [{ "id": "PRD-080", "name": "Jack Sparrow", "title": "CPO", "department": "Product", "email": "j.sparrow@company.com", "manager": "" }, { "id": "PRD-081", "name": "Katniss Everdeen", "title": "Senior Product Manager", "department": "Product", "email": "k.everdeen@company.com", "manager": "PRD-080" }, { "id": "PRD-082", "name": "Luke Skywalker", "title": "Product Owner", "department": "Product", "email": "l.skywalker@company.com", "manager": "PRD-081" }] }
+
+Question: Show me everyone employed in the IT department.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "IT", "employee_id": "" }
+Response: { "employees": [{ "id": "IT-090", "name": "Marty McFly", "title": "CIO", "department": "IT", "email": "m.mcfly@company.com", "manager": "" }, { "id": "IT-091", "name": "Neo Anderson", "title": "System Administrator", "department": "IT", "email": "n.anderson@company.com", "manager": "IT-090" }, { "id": "IT-092", "name": "Olivia Pope", "title": "Network Engineer", "department": "IT", "email": "o.pope@company.com", "manager": "IT-090" }] }
+
+Question: What does the organizational chart for the Design team look like?
+Call: { "func_call": "get_org_chart", "query": "", "department": "Design", "employee_id": "" }
+Response: { "employees": [{ "id": "DSN-100", "name": "Peter Parker", "title": "Creative Director", "department": "Design", "email": "p.parker@company.com", "manager": "" }, { "id": "DSN-101", "name": "Quasimodo", "title": "UX Lead", "department": "Design", "email": "q.quasimodo@company.com", "manager": "DSN-100" }, { "id": "DSN-102", "name": "Ripley", "title": "UI Designer", "department": "Design", "email": "r.ripley@company.com", "manager": "DSN-101" }] }
+
+Question: List all staff members in the Research division.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Research", "employee_id": "" }
+Response: { "employees": [{ "id": "RES-110", "name": "Sherlock Holmes", "title": "Head of Research", "department": "Research", "email": "s.holmes@company.com", "manager": "" }, { "id": "RES-111", "name": "Tony Stark", "title": "Senior Scientist", "department": "Research", "email": "t.stark@company.com", "manager": "RES-110" }, { "id": "RES-112", "name": "Uma Thurman", "title": "Data Researcher", "department": "Research", "email": "u.thurman@company.com", "manager": "RES-110" }] }
+
+Question: Get me the full roster for the Legal team.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Legal", "employee_id": "" }
+Response: { "employees": [{ "id": "LEG-050", "name": "Arthur Dent", "title": "General Counsel", "department": "Legal", "email": "a.dent@company.com", "manager": "" }, { "id": "LEG-053", "name": "Victor Hugo", "title": "Contract Lawyer", "department": "Legal", "email": "v.hugo@company.com", "manager": "LEG-050" }, { "id": "LEG-054", "name": "Walter White", "title": "Paralegal", "department": "Legal", "email": "w.white@company.com", "manager": "LEG-050" }] }
+
+Question: Display the structure of the Operations organization.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Operations", "employee_id": "" }
+Response: { "employees": [{ "id": "OPS-060", "name": "Diana Prince", "title": "VP of Operations", "department": "Operations", "email": "d.prince@company.com", "manager": "" }, { "id": "OPS-063", "name": "Xena Warrior", "title": "Warehouse Manager", "department": "Operations", "email": "x.warrior@company.com", "manager": "OPS-060" }, { "id": "OPS-064", "name": "Yoda Master", "title": "Inventory Controller", "department": "Operations", "email": "y.master@company.com", "manager": "OPS-063" }] }
+
+Question: Who are the people in the Customer Support hierarchy?
+Call: { "func_call": "get_org_chart", "query": "", "department": "Support", "employee_id": "" }
+Response: { "employees": [{ "id": "SUP-070", "name": "George Lucas", "title": "Head of Support", "department": "Support", "email": "g.lucas@company.com", "manager": "" }, { "id": "SUP-073", "name": "Zelda Princess", "title": "Escalation Manager", "department": "Support", "email": "z.princess@company.com", "manager": "SUP-070" }, { "id": "SUP-074", "name": "Adam West", "title": "Support Specialist", "department": "Support", "email": "a.west@company.com", "manager": "SUP-073" }] }
+
+Question: Retrieve the team list for the Product department.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Product", "employee_id": "" }
+Response: { "employees": [{ "id": "PRD-080", "name": "Jack Sparrow", "title": "CPO", "department": "Product", "email": "j.sparrow@company.com", "manager": "" }, { "id": "PRD-083", "name": "Bruce Wayne", "title": "Technical Product Manager", "department": "Product", "email": "b.wayne@company.com", "manager": "PRD-080" }, { "id": "PRD-084", "name": "Carol Danvers", "title": "Associate Product Manager", "department": "Product", "email": "c.danvers@company.com", "manager": "PRD-080" }] }
+
+Question: Show me the breakdown of the IT department staff.
+Call: { "func_call": "get_org_chart", "query": "", "department": "IT", "employee_id": "" }
+Response: { "employees": [{ "id": "IT-090", "name": "Marty McFly", "title": "CIO", "department": "IT", "email": "m.mcfly@company.com", "manager": "" }, { "id": "IT-093", "name": "Donna Noble", "title": "Security Analyst", "department": "IT", "email": "d.noble@company.com", "manager": "IT-090" }, { "id": "IT-094", "name": "Ellen Ripley2", "title": "Help Desk Technician", "department": "IT", "email": "e.ripley2@company.com", "manager": "IT-093" }] }

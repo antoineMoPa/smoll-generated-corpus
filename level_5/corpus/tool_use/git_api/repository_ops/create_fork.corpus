@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+---
+Question: Create a new public repository named "weather-dashboard" for user "dev-sarah" with the description "Real-time weather visualization using React".
+Call: { "func_call": "create_repo", "owner": "dev-sarah", "repo": "weather-dashboard", "description": "Real-time weather visualization using React", "private": false }
+Response: { "repo": "weather-dashboard", "owner": "dev-sarah", "url": "https://github.com/dev-sarah/weather-dashboard", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "neural-net-core" owned by "ai-research-lab" into my account without adding a description.
+Call: { "func_call": "fork_repo", "owner": "ai-research-lab", "repo": "neural-net-core", "description": "", "private": false }
+Response: { "repo": "neural-net-core", "owner": "current-user", "url": "https://github.com/current-user/neural-net-core", "stars": 1240, "forks": 89, "default_branch": "master" }
+
+Question: Please create a private repository called "finance-tracker" for user "john-doe" described as "Personal expense tracking system in Python".
+Call: { "func_call": "create_repo", "owner": "john-doe", "repo": "finance-tracker", "description": "Personal expense tracking system in Python", "private": true }
+Response: { "repo": "finance-tracker", "owner": "john-doe", "url": "https://github.com/john-doe/finance-tracker", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I want to fork the open source project "css-framework-lite" from owner "frontend-wizards" to my workspace.
+Call: { "func_call": "fork_repo", "owner": "frontend-wizards", "repo": "css-framework-lite", "description": "", "private": false }
+Response: { "repo": "css-framework-lite", "owner": "current-user", "url": "https://github.com/current-user/css-framework-lite", "stars": 342, "forks": 56, "default_branch": "main" }
+
+Question: Set up a new public repo "iot-simulator" for user "embedded-dev" with the description "Simulates MQTT devices for testing".
+Call: { "func_call": "create_repo", "owner": "embedded-dev", "repo": "iot-simulator", "description": "Simulates MQTT devices for testing", "private": false }
+Response: { "repo": "iot-simulator", "owner": "embedded-dev", "url": "https://github.com/embedded-dev/iot-simulator", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "docker-templates" owned by "devops-guru" so I can contribute to it.
+Call: { "func_call": "fork_repo", "owner": "devops-guru", "repo": "docker-templates", "description": "", "private": false }
+Response: { "repo": "docker-templates", "owner": "current-user", "url": "https://github.com/current-user/docker-templates", "stars": 890, "forks": 210, "default_branch": "master" }
+
+Question: Create a private repository named "auth-service" for user "secure-corp" described as "Microservice handling OAuth2 flows".
+Call: { "func_call": "create_repo", "owner": "secure-corp", "repo": "auth-service", "description": "Microservice handling OAuth2 flows", "private": true }
+Response: { "repo": "auth-service", "owner": "secure-corp", "url": "https://github.com/secure-corp/auth-service", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Make a fork of "data-pipeline-utils" from the user "big-data-team" for my personal use.
+Call: { "func_call": "fork_repo", "owner": "big-data-team", "repo": "data-pipeline-utils", "description": "", "private": false }
+Response: { "repo": "data-pipeline-utils", "owner": "current-user", "url": "https://github.com/current-user/data-pipeline-utils", "stars": 156, "forks": 42, "default_branch": "main" }
+
+Question: Initialize a new public project "mobile-app-ui" for user "ux-designer" with the description "Flutter components for e-commerce apps".
+Call: { "func_call": "create_repo", "owner": "ux-designer", "repo": "mobile-app-ui", "description": "Flutter components for e-commerce apps", "private": false }
+Response: { "repo": "mobile-app-ui", "owner": "ux-designer", "url": "https://github.com/ux-designer/mobile-app-ui", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "game-engine-2d" owned by "indie-dev-studio" to start working on a plugin.
+Call: { "func_call": "fork_repo", "owner": "indie-dev-studio", "repo": "game-engine-2d", "description": "", "private": false }
+Response: { "repo": "game-engine-2d", "owner": "current-user", "url": "https://github.com/current-user/game-engine-2d", "stars": 2105, "forks": 340, "default_branch": "develop" }
+
+Question: Create a private repo "legacy-migration" for user "sys-admin-01" described as "Scripts for migrating SQL Server to Postgres".
+Call: { "func_call": "create_repo", "owner": "sys-admin-01", "repo": "legacy-migration", "description": "Scripts for migrating SQL Server to Postgres", "private": true }
+Response: { "repo": "legacy-migration", "owner": "sys-admin-01", "url": "https://github.com/sys-admin-01/legacy-migration", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I need to fork "cli-toolkit" from user "rust-community" to add a new command.
+Call: { "func_call": "fork_repo", "owner": "rust-community", "repo": "cli-toolkit", "description": "", "private": false }
+Response: { "repo": "cli-toolkit", "owner": "current-user", "url": "https://github.com/current-user/cli-toolkit", "stars": 567, "forks": 123, "default_branch": "main" }

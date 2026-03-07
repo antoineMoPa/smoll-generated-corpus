@@ -1,0 +1,59 @@
+Context: I just bought the UltraGlide Pro razor for $24.99 from the local pharmacy, and it's made by Gillette.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "UltraGlide Pro", "price": "$24.99", "brand": "Gillette"}
+
+Context: The new Sony WH-1000XM5 headphones are priced at $348.00 and offer incredible noise cancellation.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "WH-1000XM5", "price": "$348.00", "brand": "Sony"}
+
+Context: My sister recommended the Instant Pot Duo, which costs $89.95 and is manufactured by Instant Brands.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Instant Pot Duo", "price": "$89.95", "brand": "Instant Brands"}
+
+Context: We picked up a bag of Blue Buffalo Life Protection Formula dog food for $54.98 last weekend.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Life Protection Formula", "price": "$54.98", "brand": "Blue Buffalo"}
+
+Context: The Dyson V15 Detect vacuum cleaner is available now for $749.99 at most major retailers.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "V15 Detect", "price": "$749.99", "brand": "Dyson"}
+
+Context: I found a great deal on the Nike Air Max 90 sneakers, paying only $120.00 for the pair.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Air Max 90", "price": "$120.00", "brand": "Nike"}
+
+Context: This bottle of La Roche-Posay Anthelios sunscreen retails for $19.50 and is perfect for sensitive skin.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Anthelios", "price": "$19.50", "brand": "La Roche-Posay"}
+
+Context: The KitchenAid Artisan Stand Mixer in empire red is listed at $429.99 on their official website.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Artisan Stand Mixer", "price": "$429.99", "brand": "KitchenAid"}
+
+Context: After testing several models, I settled on the Logitech MX Master 3S mouse for $99.99.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "MX Master 3S", "price": "$99.99", "brand": "Logitech"}
+
+Context: The Samsung Galaxy S23 Ultra smartphone has a starting price of $1,199.99 and features a stunning display.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Galaxy S23 Ultra", "price": "$1,199.99", "brand": "Samsung"}
+
+Context: I purchased a jar of Nutella Hazelnut Spread for $4.29 to make breakfast for the kids.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Hazelnut Spread", "price": "$4.29", "brand": "Nutella"}
+
+Context: The Bose QuietComfort Earbuds II are selling for $279.00 and provide excellent sound quality.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "QuietComfort Earbuds II", "price": "$279.00", "brand": "Bose"}
+
+Context: You can get the Fitbit Charge 6 fitness tracker for $159.95, a product by Google.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Charge 6", "price": "$159.95", "brand": "Fitbit"}
+
+Context: The Lego Star Wars Millennium Falcon set costs $849.99 and is a must-have for collectors.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Star Wars Millennium Falcon", "price": "$849.99", "brand": "Lego"}
+
+Context: I recently switched to the Oral-B iO Series 9 electric toothbrush, priced at $299.94.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "iO Series 9", "price": "$299.94", "brand": "Oral-B"}

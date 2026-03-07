@@ -1,0 +1,51 @@
+Available Tools: like_post | comment_on_post | share_post | follow_user | unfollow_user | send_dm
+Call Schema: { "func_call": "string", "post_id": "string", "user_id": "string", "content": "string" }
+Response Schema: { "action": "string", "status": "string", "timestamp": "string" }
+---
+Question: I need to start following the chef Mario Rossi to see his new pasta recipes.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "mario_rossi_kitchen", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:15:30Z" }
+
+Question: Send a direct message to Lisa Wong asking if she can review my portfolio before the interview.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "lisa_wong_hr", "content": "Hi Lisa, do you have time to glance at my portfolio before Thursday's interview? Thanks!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:22:45Z" }
+
+Question: Please follow the astronomy club 'StargazersUnited' so I don't miss the meteor shower event.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "stargazers_united", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:30:12Z" }
+
+Question: Message James O'Connor to congratulate him on winning the local marathon yesterday.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "james_o_runner", "content": "Hey James, huge congrats on winning the marathon yesterday! That was an incredible run." }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:35:50Z" }
+
+Question: I need to follow the vintage car restoration account 'ClassicRides' to get tips on my project.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "classic_rides_garage", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:42:18Z" }
+
+Question: Send a DM to Sofia Garcia confirming our lunch reservation at the Italian place for noon.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "sofia_g_foodie", "content": "Hi Sofia, just confirming our table at Luigi's for 12:00 PM today?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:48:33Z" }
+
+Question: Follow the pottery studio 'ClayCreations' because their workshop videos are so relaxing.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "clay_creations_studio", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:55:05Z" }
+
+Question: Message the event coordinator 'PartyPlanPro' to inquire about booking a venue for next month.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "party_plan_pro", "content": "Hello, I'm looking to book a venue for a corporate event in November. Are you available?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T10:02:41Z" }
+
+Question: Start following the yoga instructor 'ZenMasterYogi' to get morning meditation guides.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "zen_master_yogi", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T10:10:15Z" }
+
+Question: Send a direct message to Tom Harris inviting him to the coding bootcamp reunion next Saturday.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "tom_h_dev", "content": "Hey Tom! We're having the bootcamp reunion next Saturday at 6 PM. Hope you can make it!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T10:18:29Z" }
+
+Question: I want to follow the street artist 'UrbanSpray' to keep up with their latest mural projects.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "urban_spray_art", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T10:25:44Z" }
+
+Question: Message Aisha Khan to ask if she has the contact info for the graphic designer we met.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "aisha_khan_design", "content": "Hi Aisha, could you share that graphic designer's contact info from the conference? Thanks!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T10:33:58Z" }

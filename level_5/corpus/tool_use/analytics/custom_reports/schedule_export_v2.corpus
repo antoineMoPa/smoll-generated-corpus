@@ -1,0 +1,51 @@
+Available Tools: create_report | get_report | list_reports | schedule_report | export_report
+Call Schema: { "func_call": "string", "report_id": "string", "name": "string", "metrics": ["string"], "dimensions": ["string"], "from_date": "string", "to_date": "string" }
+Response Schema: { "report_id": "string", "name": "string", "rows": [{}], "total_rows": number, "generated_at": "string" }
+---
+Question: Generate a one-time report on energy consumption per building for last week.
+Call: { "func_call": "create_report", "report_id": "rpt_energy_weekly", "name": "Weekly Energy Consumption", "metrics": ["kwh_used", "cost_per_kwh"], "dimensions": ["building_id", "floor"], "from_date": "2023-11-01", "to_date": "2023-11-07" }
+Response: { "report_id": "rpt_energy_weekly", "name": "Weekly Energy Consumption", "rows": [{"building_id": "BLD-A", "floor": "1", "kwh_used": 1250, "cost_per_kwh": 0.12}, {"building_id": "BLD-B", "floor": "2", "kwh_used": 980, "cost_per_kwh": 0.14}], "total_rows": 2, "generated_at": "2023-11-08T10:00:00Z" }
+
+Question: Schedule a bi-weekly email summary of social media engagement metrics.
+Call: { "func_call": "schedule_report", "report_id": "rpt_social_biweekly", "name": "Bi-Weekly Social Engagement", "metrics": ["likes", "shares", "comments"], "dimensions": ["platform", "post_type"], "from_date": "2023-10-15", "to_date": "2023-10-28" }
+Response: { "report_id": "rpt_social_biweekly", "name": "Bi-Weekly Social Engagement", "rows": [], "total_rows": 0, "generated_at": "2023-10-29T09:00:00Z" }
+
+Question: Export the customer satisfaction survey results for November to CSV.
+Call: { "func_call": "export_report", "report_id": "rpt_csat_nov", "name": "November CSAT Results", "metrics": ["satisfaction_score", "response_rate"], "dimensions": ["survey_channel", "customer_segment"], "from_date": "2023-11-01", "to_date": "2023-11-30" }
+Response: { "report_id": "rpt_csat_nov", "name": "November CSAT Results", "rows": [{"survey_channel": "Email", "customer_segment": "Premium", "satisfaction_score": 4.7, "response_rate": 0.25}, {"survey_channel": "SMS", "customer_segment": "Standard", "satisfaction_score": 4.2, "response_rate": 0.18}], "total_rows": 2, "generated_at": "2023-12-01T14:30:00Z" }
+
+Question: Create an immediate snapshot of warehouse temperature sensors for compliance.
+Call: { "func_call": "create_report", "report_id": "rpt_temp_snapshot", "name": "Warehouse Temperature Snapshot", "metrics": ["avg_temp", "min_temp", "max_temp"], "dimensions": ["zone_id", "sensor_type"], "from_date": "2023-11-15", "to_date": "2023-11-15" }
+Response: { "report_id": "rpt_temp_snapshot", "name": "Warehouse Temperature Snapshot", "rows": [{"zone_id": "COLD-01", "sensor_type": "Digital", "avg_temp": -18.5, "min_temp": -20.0, "max_temp": -17.2}, {"zone_id": "DRY-02", "sensor_type": "Analog", "avg_temp": 22.0, "min_temp": 21.5, "max_temp": 22.8}], "total_rows": 2, "generated_at": "2023-11-15T11:20:15Z" }
+
+Question: Schedule a monthly PDF report on cloud infrastructure costs by project.
+Call: { "func_call": "schedule_report", "report_id": "rpt_cloud_cost_monthly", "name": "Monthly Cloud Costs", "metrics": ["total_spend", "compute_cost", "storage_cost"], "dimensions": ["project_name", "environment"], "from_date": "2023-10-01", "to_date": "2023-10-31" }
+Response: { "report_id": "rpt_cloud_cost_monthly", "name": "Monthly Cloud Costs", "rows": [], "total_rows": 0, "generated_at": "2023-11-01T08:00:00Z" }
+
+Question: Export the training completion rates for all departments in Q4.
+Call: { "func_call": "export_report", "report_id": "rpt_training_q4", "name": "Q4 Training Completion", "metrics": ["completion_rate", "avg_score"], "dimensions": ["department", "course_id"], "from_date": "2023-10-01", "to_date": "2023-12-31" }
+Response: { "report_id": "rpt_training_q4", "name": "Q4 Training Completion", "rows": [{"department": "HR", "course_id": "SEC-101", "completion_rate": 0.95, "avg_score": 88}, {"department": "IT", "course_id": "DEV-202", "completion_rate": 0.88, "avg_score": 92}], "total_rows": 2, "generated_at": "2024-01-05T16:00:00Z" }
+
+Question: Generate a daily alert report for failed login attempts by IP range.
+Call: { "func_call": "schedule_report", "report_id": "rpt_failed_logins", "name": "Daily Failed Login Alerts", "metrics": ["failure_count", "unique_ips"], "dimensions": ["ip_range", "user_agent"], "from_date": "2023-11-14", "to_date": "2023-11-14" }
+Response: { "report_id": "rpt_failed_logins", "name": "Daily Failed Login Alerts", "rows": [], "total_rows": 0, "generated_at": "2023-11-15T07:30:00Z" }
+
+Question: Export the vehicle maintenance logs for the fleet in October to CSV.
+Call: { "func_call": "export_report", "report_id": "rpt_fleet_maint_oct", "name": "October Fleet Maintenance", "metrics": ["maintenance_cost", "downtime_hours"], "dimensions": ["vehicle_id", "service_type"], "from_date": "2023-10-01", "to_date": "2023-10-31" }
+Response: { "report_id": "rpt_fleet_maint_oct", "name": "October Fleet Maintenance", "rows": [{"vehicle_id": "TRK-05", "service_type": "Oil Change", "maintenance_cost": 150.00, "downtime_hours": 2}, {"vehicle_id": "VAN-12", "service_type": "Tire Rotation", "maintenance_cost": 80.00, "downtime_hours": 1}], "total_rows": 2, "generated_at": "2023-11-02T09:45:00Z" }
+
+Question: Schedule a weekly email report on new subscriber growth by region.
+Call: { "func_call": "schedule_report", "report_id": "rpt_sub_growth_weekly", "name": "Weekly Subscriber Growth", "metrics": ["new_subscribers", "unsubscribes"], "dimensions": ["region", "signup_source"], "from_date": "2023-11-06", "to_date": "2023-11-12" }
+Response: { "report_id": "rpt_sub_growth_weekly", "name": "Weekly Subscriber Growth", "rows": [], "total_rows": 0, "generated_at": "2023-11-13T08:15:00Z" }
+
+Question: Create a real-time dashboard view of current call center queue lengths.
+Call: { "func_call": "create_report", "report_id": "rpt_call_queue_now", "name": "Real-time Call Queue", "metrics": ["queue_length", "avg_wait_time"], "dimensions": ["queue_name", "priority_level"], "from_date": "2023-11-16", "to_date": "2023-11-16" }
+Response: { "report_id": "rpt_call_queue_now", "name": "Real-time Call Queue", "rows": [{"queue_name": "Support", "priority_level": "High", "queue_length": 15, "avg_wait_time": 180}, {"queue_name": "Sales", "priority_level": "Normal", "queue_length": 8, "avg_wait_time": 90}], "total_rows": 2, "generated_at": "2023-11-16T14:10:30Z" }
+
+Question: Export the product return reasons analysis for the holiday season.
+Call: { "func_call": "export_report", "report_id": "rpt_returns_holiday", "name": "Holiday Return Analysis", "metrics": ["return_count", "refund_amount"], "dimensions": ["reason_code", "product_category"], "from_date": "2023-11-20", "to_date": "2023-12-25" }
+Response: { "report_id": "rpt_returns_holiday", "name": "Holiday Return Analysis", "rows": [{"reason_code": "DEFECTIVE", "product_category": "Toys", "return_count": 45, "refund_amount": 1200.50}, {"reason_code": "WRONG_SIZE", "product_category": "Clothing", "return_count": 120, "refund_amount": 3400.00}], "total_rows": 2, "generated_at": "2023-12-26T10:00:00Z" }
+
+Question: Schedule a daily SMS notification for critical database error counts.
+Call: { "func_call": "schedule_report", "report_id": "rpt_db_errors_daily", "name": "Daily DB Error Count", "metrics": ["error_count", "critical_flag"], "dimensions": ["database_name", "error_type"], "from_date": "2023-11-15", "to_date": "2023-11-15" }
+Response: { "report_id": "rpt_db_errors_daily", "name": "Daily DB Error Count", "rows": [], "total_rows": 0, "generated_at": "2023-11-16T06:00:00Z" }

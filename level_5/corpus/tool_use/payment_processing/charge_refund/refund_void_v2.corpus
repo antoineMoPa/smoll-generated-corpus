@@ -1,0 +1,51 @@
+Available Tools: charge_card | partial_refund | full_refund | capture_payment | void_payment
+Call Schema: { "func_call": "string", "customer_id": "string", "amount": number, "currency": "string", "payment_method_id": "string", "description": "string" }
+Response Schema: { "transaction_id": "string", "status": "succeeded|failed|pending", "amount": number, "currency": "string" }
+---
+Question: Process a full refund for customer CUST-1029 because the product arrived expired.
+Call: { "func_call": "full_refund", "customer_id": "CUST-1029", "amount": 54.99, "currency": "USD", "payment_method_id": "pm_visa_8181", "description": "Full refund: Expired product received" }
+Response: { "transaction_id": "txn_ref_102901", "status": "succeeded", "amount": 54.99, "currency": "USD" }
+
+Question: Issue a partial refund of $30.25 to customer CUST-4451 for a delayed delivery penalty.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-4451", "amount": 30.25, "currency": "EUR", "payment_method_id": "pm_mc_9292", "description": "Partial refund: Delivery delay compensation" }
+Response: { "transaction_id": "txn_ref_445102", "status": "succeeded", "amount": 30.25, "currency": "EUR" }
+
+Question: Void the pending authorization for customer CUST-6632 as the item is no longer available for immediate dispatch.
+Call: { "func_call": "void_payment", "customer_id": "CUST-6632", "amount": 185.00, "currency": "GBP", "payment_method_id": "pm_amex_3434", "description": "Void payment: Item unavailable for dispatch" }
+Response: { "transaction_id": "txn_void_663203", "status": "succeeded", "amount": 185.00, "currency": "GBP" }
+
+Question: Execute a full refund for customer CUST-7788 due to an accidental double booking of the service.
+Call: { "func_call": "full_refund", "customer_id": "CUST-7788", "amount": 220.50, "currency": "CAD", "payment_method_id": "pm_visa_5656", "description": "Full refund: Accidental double booking" }
+Response: { "transaction_id": "txn_ref_778804", "status": "succeeded", "amount": 220.50, "currency": "CAD" }
+
+Question: Process a partial refund of $8.75 for customer CUST-9912 representing a price adjustment after a sale.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-9912", "amount": 8.75, "currency": "USD", "payment_method_id": "pm_disc_7878", "description": "Partial refund: Post-purchase price adjustment" }
+Response: { "transaction_id": "txn_ref_991205", "status": "succeeded", "amount": 8.75, "currency": "USD" }
+
+Question: Void the payment authorization for customer CUST-2245 because the card was reported stolen during processing.
+Call: { "func_call": "void_payment", "customer_id": "CUST-2245", "amount": 950.00, "currency": "USD", "payment_method_id": "pm_visa_9090", "description": "Void payment: Card reported stolen" }
+Response: { "transaction_id": "txn_void_224506", "status": "succeeded", "amount": 950.00, "currency": "USD" }
+
+Question: Issue a full refund to customer CUST-3366 after the vendor cancelled the bulk order unexpectedly.
+Call: { "func_call": "full_refund", "customer_id": "CUST-3366", "amount": 1250.00, "currency": "AUD", "payment_method_id": "pm_mc_1212", "description": "Full refund: Vendor cancelled bulk order" }
+Response: { "transaction_id": "txn_ref_336607", "status": "succeeded", "amount": 1250.00, "currency": "AUD" }
+
+Question: Apply a partial refund of $42.00 to customer CUST-5577 for incorrect color selection in the shipment.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-5577", "amount": 42.00, "currency": "USD", "payment_method_id": "pm_visa_3434", "description": "Partial refund: Wrong color shipped" }
+Response: { "transaction_id": "txn_ref_557708", "status": "succeeded", "amount": 42.00, "currency": "USD" }
+
+Question: Void the uncaptured payment for customer CUST-8899 as the shipping address could not be verified.
+Call: { "func_call": "void_payment", "customer_id": "CUST-8899", "amount": 77.25, "currency": "CHF", "payment_method_id": "pm_visa_5656", "description": "Void payment: Address verification failed" }
+Response: { "transaction_id": "txn_void_889909", "status": "succeeded", "amount": 77.25, "currency": "CHF" }
+
+Question: Process a full refund for customer CUST-1144 due to a system error that charged the wrong plan tier.
+Call: { "func_call": "full_refund", "customer_id": "CUST-1144", "amount": 299.99, "currency": "USD", "payment_method_id": "pm_amex_7878", "description": "Full refund: Wrong plan tier charged" }
+Response: { "transaction_id": "txn_ref_114410", "status": "succeeded", "amount": 299.99, "currency": "USD" }
+
+Question: Issue a partial refund of $15.50 to customer CUST-6622 for a scratched surface on the delivered furniture.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-6622", "amount": 15.50, "currency": "USD", "payment_method_id": "pm_mc_9090", "description": "Partial refund: Furniture surface damage" }
+Response: { "transaction_id": "txn_ref_662211", "status": "succeeded", "amount": 15.50, "currency": "USD" }
+
+Question: Void the pending transaction for customer CUST-9933 because the promotional code applied was invalid.
+Call: { "func_call": "void_payment", "customer_id": "CUST-9933", "amount": 63.80, "currency": "SEK", "payment_method_id": "pm_visa_1313", "description": "Void payment: Invalid promotional code" }
+Response: { "transaction_id": "txn_void_993312", "status": "succeeded", "amount": 63.80, "currency": "SEK" }

@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: Complete network segmentation failure in the London office; internal VLANs are bridging incorrectly. Immediate escalation required.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-3041", "subject": "Network Segmentation Breach: London Office VLANs", "description": "Internal VLANs 10 and 20 are unexpectedly bridging, allowing unauthorized cross-segment traffic. Affecting all local services.", "priority": "urgent", "category": "networking" }
+Response: { "ticket_id": "TKT-100501", "status": "open", "priority": "urgent", "assigned_to": "Network Operations Center", "created_at": "2023-11-05T09:12:45Z" }
+
+Question: Urgent: Detected brute force attack on the admin portal from a botnet. Creating ticket and attaching the firewall block log screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-5529", "subject": "Brute Force Attack on Admin Portal", "description": "Over 50,000 failed login attempts detected in the last 10 minutes from IP range 203.0.113.0/24. Firewall rules updated temporarily.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-100502", "status": "open", "priority": "urgent", "assigned_to": "Cybersecurity Incident Response", "created_at": "2023-11-05T09:15:22Z" }
+
+Question: The invoice generation service is failing with timeout errors for all EU customers. Uploading the service trace log now.
+Call: { "func_call": "attach_file", "customer_id": "CUST-8834", "subject": "Invoice Service Timeout for EU Region", "description": "Invoice PDF generation hangs indefinitely for EU-based accounts. Attached distributed trace showing latency spike in the rendering microservice.", "priority": "urgent", "category": "billing" }
+Response: { "ticket_id": "TKT-100503", "status": "open", "priority": "urgent", "assigned_to": "Billing Systems Team", "created_at": "2023-11-05T09:18:50Z" }
+
+Question: Critical: Unencrypted backup files found on public web server. Creating urgent ticket and attaching the directory listing screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-2190", "subject": "Data Exposure: Unencrypted Backups on Web Server", "description": "Daily database dumps are accessible via HTTP at /backups/daily without authentication. Contains sensitive customer records.", "priority": "urgent", "category": "compliance" }
+Response: { "ticket_id": "TKT-100504", "status": "open", "priority": "urgent", "assigned_to": "Data Privacy Office", "created_at": "2023-11-05T09:21:33Z" }
+
+Question: Order fulfillment queue is stalled; no packages are being marked as shipped. Attaching the message broker error screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-6672", "subject": "Order Fulfillment Queue Stalled", "description": "RabbitMQ consumer group 'shippers' has stopped acknowledging messages. No orders have moved to 'Shipped' status in 45 minutes.", "priority": "urgent", "category": "logistics" }
+Response: { "ticket_id": "TKT-100505", "status": "open", "priority": "urgent", "assigned_to": "Supply Chain Engineering", "created_at": "2023-11-05T09:24:11Z" }
+
+Question: Severe latency in the video streaming CDN for Asian regions. Creating urgent ticket and attaching the latency heatmap screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-4458", "subject": "High Latency: Video CDN in APAC Region", "description": "Average TTFB increased to 4 seconds for users in Tokyo and Seoul. Video buffering occurring on 80% of sessions.", "priority": "urgent", "category": "media" }
+Response: { "ticket_id": "TKT-100506", "status": "open", "priority": "urgent", "assigned_to": "CDN Performance Team", "created_at": "2023-11-05T09:27:48Z" }
+
+Question: Crypto-mining malware detected on development server DEV-12. Urgent ticket needed with attached process list screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-9901", "subject": "Malware Infection: Crypto Miner on DEV-12", "description": "Unknown process 'xmrig' consuming 99% CPU on DEV-12. Suspicious outbound connection to mining pool detected.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-100507", "status": "open", "priority": "urgent", "assigned_to": "Endpoint Security", "created_at": "2023-11-05T09:30:15Z" }
+
+Question: SMS notification gateway is returning invalid number errors for all US carriers. Attaching the provider response log screenshot immediately.
+Call: { "func_call": "attach_file", "customer_id": "CUST-1123", "subject": "SMS Gateway Failure: Invalid Number Errors", "description": "Twilio API returning error 21211 for all valid US mobile numbers. Attached raw API response logs from the last hour.", "priority": "urgent", "category": "communications" }
+Response: { "ticket_id": "TKT-100508", "status": "open", "priority": "urgent", "assigned_to": "Telecom Integration Team", "created_at": "2023-11-05T09:33:42Z" }
+
+Question: Android app failing to refresh tokens, causing constant logouts. Creating urgent ticket and attaching the OkHttp interceptor log screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-7745", "subject": "Token Refresh Failure on Android Clients", "description": "OAuth refresh token endpoint returning 401 Unauthorized for Android v4.2 users. Sessions expire every 15 minutes.", "priority": "urgent", "category": "mobile" }
+Response: { "ticket_id": "TKT-100509", "status": "open", "priority": "urgent", "assigned_to": "Android Engineering", "created_at": "2023-11-05T09:36:59Z" }
+
+Question: Elasticsearch cluster status is red; two primary shards are unassigned. Attaching the cluster health API output screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-3387", "subject": "Elasticsearch Cluster Red Status: Shard Loss", "description": "Cluster health is RED. Two primary shards for index 'logs-2023.11' are unassigned due to node failure. Search functionality broken.", "priority": "urgent", "category": "search" }
+Response: { "ticket_id": "TKT-100510", "status": "open", "priority": "urgent", "assigned_to": "Search Infrastructure", "created_at": "2023-11-05T09:40:20Z" }
+
+Question: DNS propagation failed for new subdomain; site unreachable globally. Urgent ticket with attached DNS lookup diagnostic screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-5012", "subject": "DNS Propagation Failure for shop.newdomain.com", "description": "New A records for shop.newdomain.com are not resolving outside the primary DNS server. NXDOMAIN errors globally.", "priority": "urgent", "category": "infrastructure" }
+Response: { "ticket_id": "TKT-100511", "status": "open", "priority": "urgent", "assigned_to": "DNS Management Team", "created_at": "2023-11-05T09:43:37Z" }
+
+Question: Webhook delivery success rate dropped to 10% for partner integrations. Attaching the retry queue monitor screenshot showing backlog.
+Call: { "func_call": "attach_file", "customer_id": "CUST-6299", "subject": "Webhook Delivery Degradation for Partners", "description": "Only 10% of webhooks are being delivered successfully. Retry queue has accumulated 50,000 failed events in the last hour.", "priority": "urgent", "category": "integrations" }
+Response: { "ticket_id": "TKT-100512", "status": "open", "priority": "urgent", "assigned_to": "Partner API Team", "created_at": "2023-11-05T09:46:55Z" }

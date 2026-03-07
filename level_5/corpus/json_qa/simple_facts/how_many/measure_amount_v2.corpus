@@ -1,0 +1,59 @@
+Context: The ancient oak tree stands at a height of 32 meters and has survived three major storms. Its roots extend deep into the clay soil.
+Input: {"question": "How tall is the oak tree?"}
+Output: {"answer": "32 meters"}
+
+Context: Marcus filled the propane tank with 18.5 liters of fuel before heading out for the weekend camping trip. The stove consumes about two liters per day.
+Input: {"question": "How much fuel was added to the tank?"}
+Output: {"answer": "18.5 liters"}
+
+Context: The vintage wristwatch was appraised at €3,200 due to its rare movement and pristine condition. The owner decided to keep it in a safe deposit box.
+Input: {"question": "What is the appraised value of the watch?"}
+Output: {"answer": "€3,200"}
+
+Context: The cargo ship traveled 4,500 nautical miles from the port of Singapore to the coast of Australia. The journey took exactly twelve days.
+Input: {"question": "How far did the cargo ship travel?"}
+Output: {"answer": "4,500 nautical miles"}
+
+Context: The bakery uses 750 grams of sourdough starter for every batch of artisan bread. This ensures the dough rises properly overnight.
+Input: {"question": "How much starter is used per batch?"}
+Output: {"answer": "750 grams"}
+
+Context: The elevator can safely carry a maximum load of 1,000 kilograms or twelve people at once. Exceeding this limit triggers an alarm.
+Input: {"question": "What is the maximum weight capacity?"}
+Output: {"answer": "1,000 kilograms"}
+
+Context: The lightning strike occurred 2.3 seconds after the flash was seen, indicating the storm was roughly 800 meters away. Residents were advised to stay indoors.
+Input: {"question": "How long after the flash did the strike occur?"}
+Output: {"answer": "2.3 seconds"}
+
+Context: The gold bar stored in the vault weighs 12.4 kilograms and is composed of 99.9% pure metal. Its market value fluctuates daily.
+Input: {"question": "How heavy is the gold bar?"}
+Output: {"answer": "12.4 kilograms"}
+
+Context: The irrigation system dispenses 3,400 gallons of water across the fields every evening during the dry season. Sensors monitor soil moisture levels.
+Input: {"question": "How much water does the system dispense?"}
+Output: {"answer": "3,400 gallons"}
+
+Context: The concert ticket for the front row section cost $275.00 and included a meet-and-greet pass. Sales opened last Friday morning.
+Input: {"question": "How much did the front row ticket cost?"}
+Output: {"answer": "$275.00"}
+
+Context: The fiber optic cable runs underground for a distance of 18.7 kilometers connecting the two data centers. Installation took four weeks to complete.
+Input: {"question": "How long is the fiber optic cable?"}
+Output: {"answer": "18.7 kilometers"}
+
+Context: The laboratory sample requires cooling to -40 degrees Celsius before analysis can begin. Specialized freezers maintain this temperature constantly.
+Input: {"question": "To what temperature must the sample be cooled?"}
+Output: {"answer": "-40 degrees Celsius"}
+
+Context: The delivery drone can carry a payload of up to 2.5 kilograms for medical supplies. Its battery lasts for approximately 45 minutes of flight.
+Input: {"question": "What is the maximum payload weight?"}
+Output: {"answer": "2.5 kilograms"}
+
+Context: The historical manuscript dates back 600 years and contains maps of lost cities. It is currently displayed in the national museum.
+Input: {"question": "How old is the manuscript?"}
+Output: {"answer": "600 years"}
+
+Context: The new software license costs $450.00 per year and covers up to five user accounts. Renewal is automatic unless cancelled.
+Input: {"question": "How much is the annual software license?"}
+Output: {"answer": "$450.00"}

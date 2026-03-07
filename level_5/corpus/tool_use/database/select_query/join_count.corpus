@@ -1,0 +1,51 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Join users and orders to find the names and order dates for the first 5 customers who placed an order.
+Call: { "func_call": "select_with_join", "table": "users", "columns": ["users.name", "orders.order_date"], "where": "users.id = orders.user_id", "limit": 5 }
+Response: { "rows": [{"name": "Alice Johnson", "order_date": "2023-10-01"}, {"name": "Bob Smith", "order_date": "2023-10-02"}, {"name": "Charlie Brown", "order_date": "2023-10-03"}, {"name": "Diana Prince", "order_date": "2023-10-04"}, {"name": "Evan Wright", "order_date": "2023-10-05"}], "count": 5, "query_ms": 12 }
+---
+Question: Count the total number of records in the inventory table.
+Call: { "func_call": "count_records", "table": "inventory", "columns": ["*"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 1450, "query_ms": 4 }
+---
+Question: Join orders and products to retrieve product names and quantities for order ID 1024.
+Call: { "func_call": "select_with_join", "table": "orders", "columns": ["products.name", "order_items.quantity"], "where": "orders.id = order_items.order_id AND order_items.product_id = products.id AND orders.id = 1024", "limit": 20 }
+Response: { "rows": [{"name": "Wireless Mouse", "quantity": 2}, {"name": "USB-C Cable", "quantity": 5}, {"name": "Laptop Stand", "quantity": 1}], "count": 3, "query_ms": 18 }
+---
+Question: How many users are currently registered in the database?
+Call: { "func_call": "count_records", "table": "users", "columns": ["*"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 8932, "query_ms": 3 }
+---
+Question: Select user emails and their total order value by joining users, orders, and order_items, limited to the top 10 spenders.
+Call: { "func_call": "select_with_join", "table": "users", "columns": ["users.email", "SUM(order_items.price * order_items.quantity) as total_spent"], "where": "users.id = orders.user_id AND orders.id = order_items.order_id", "limit": 10 }
+Response: { "rows": [{"email": "richard@techcorp.com", "total_spent": 15400.50}, {"email": "sarah@designs.net", "total_spent": 12300.00}, {"email": "mike@startups.io", "total_spent": 9850.25}], "count": 3, "query_ms": 45 }
+---
+Question: Count the number of products that have a stock level greater than zero.
+Call: { "func_call": "count_records", "table": "products", "columns": ["*"], "where": "stock_level > 0", "limit": 0 }
+Response: { "rows": [], "count": 342, "query_ms": 6 }
+---
+Question: Retrieve product names and warehouse locations by joining products and inventory for items with less than 10 units.
+Call: { "func_call": "select_with_join", "table": "products", "columns": ["products.name", "inventory.warehouse_location"], "where": "products.id = inventory.product_id AND inventory.quantity < 10", "limit": 50 }
+Response: { "rows": [{"name": "Red Hoodie", "warehouse_location": "WH-B2"}, {"name": "Blue Jeans", "warehouse_location": "WH-A1"}, {"name": "Black Socks", "warehouse_location": "WH-C3"}], "count": 3, "query_ms": 22 }
+---
+Question: What is the total count of orders placed in the year 2023?
+Call: { "func_call": "count_records", "table": "orders", "columns": ["*"], "where": "order_date >= '2023-01-01' AND order_date <= '2023-12-31'", "limit": 0 }
+Response: { "rows": [], "count": 4521, "query_ms": 8 }
+---
+Question: Join users and orders to find the status of the most recent order for user ID 55.
+Call: { "func_call": "select_with_join", "table": "users", "columns": ["orders.status", "orders.order_date"], "where": "users.id = orders.user_id AND users.id = 55", "limit": 1 }
+Response: { "rows": [{"status": "shipped", "order_date": "2023-11-15"}], "count": 1, "query_ms": 9 }
+---
+Question: Count how many distinct categories exist in the products table.
+Call: { "func_call": "count_records", "table": "products", "columns": ["DISTINCT category"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 12, "query_ms": 5 }
+---
+Question: List supplier names and product titles by joining suppliers and products where the supplier is based in 'Germany'.
+Call: { "func_call": "select_with_join", "table": "suppliers", "columns": ["suppliers.name", "products.title"], "where": "suppliers.id = products.supplier_id AND suppliers.country = 'Germany'", "limit": 25 }
+Response: { "rows": [{"name": "Berlin Parts GmbH", "title": "Precision Gear"}, {"name": "Munich Electronics", "title": "Logic Board v2"}, {"name": "Hamburg Textiles", "title": "Cotton Fabric Roll"}], "count": 3, "query_ms": 15 }
+---
+Question: Determine the number of inventory records associated with warehouse 'WH-NORTH'.
+Call: { "func_call": "count_records", "table": "inventory", "columns": ["*"], "where": "warehouse_location = 'WH-NORTH'", "limit": 0 }
+Response: { "rows": [], "count": 289, "query_ms": 4 }

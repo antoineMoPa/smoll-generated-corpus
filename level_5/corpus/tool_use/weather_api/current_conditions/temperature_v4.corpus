@@ -1,0 +1,51 @@
+Available Tools: get_temperature | get_humidity | get_wind_speed | get_uv_index
+Call Schema: { "func_call": "string", "location": "string", "unit": "celsius|fahrenheit" }
+Response Schema: { "value": number, "unit": "string", "timestamp": "string" }
+---
+Question: What is the temperature in Berlin right now in Celsius?
+Call: { "func_call": "get_temperature", "location": "Berlin", "unit": "celsius" }
+Response: { "value": 9.4, "unit": "celsius", "timestamp": "2023-10-28T11:20:00Z" }
+
+Question: How hot is it in Dubai? Please use Fahrenheit.
+Call: { "func_call": "get_temperature", "location": "Dubai", "unit": "fahrenheit" }
+Response: { "value": 95.6, "unit": "fahrenheit", "timestamp": "2023-10-28T14:45:00Z" }
+
+Question: Give me the current temperature for Singapore in Celsius.
+Call: { "func_call": "get_temperature", "location": "Singapore", "unit": "celsius" }
+Response: { "value": 28.7, "unit": "celsius", "timestamp": "2023-10-28T19:30:00Z" }
+
+Question: Check the heat in Chicago using Fahrenheit.
+Call: { "func_call": "get_temperature", "location": "Chicago", "unit": "fahrenheit" }
+Response: { "value": 48.2, "unit": "fahrenheit", "timestamp": "2023-10-28T08:15:00Z" }
+
+Question: What is the temperature reading for Paris? Use Celsius.
+Call: { "func_call": "get_temperature", "location": "Paris", "unit": "celsius" }
+Response: { "value": 14.3, "unit": "celsius", "timestamp": "2023-10-28T12:50:00Z" }
+
+Question: Tell me the temperature in Los Angeles in Fahrenheit.
+Call: { "func_call": "get_temperature", "location": "Los Angeles", "unit": "fahrenheit" }
+Response: { "value": 72.8, "unit": "fahrenheit", "timestamp": "2023-10-28T06:40:00Z" }
+
+Question: Is it freezing in Oslo? Get the temp in Celsius.
+Call: { "func_call": "get_temperature", "location": "Oslo", "unit": "celsius" }
+Response: { "value": -2.5, "unit": "celsius", "timestamp": "2023-10-28T10:05:00Z" }
+
+Question: Current temperature in Seoul please, in Fahrenheit.
+Call: { "func_call": "get_temperature", "location": "Seoul", "unit": "fahrenheit" }
+Response: { "value": 59.1, "unit": "fahrenheit", "timestamp": "2023-10-28T21:10:00Z" }
+
+Question: What's the weather like temperature-wise in Mexico City? Use Celsius.
+Call: { "func_call": "get_temperature", "location": "Mexico City", "unit": "celsius" }
+Response: { "value": 22.6, "unit": "celsius", "timestamp": "2023-10-28T07:55:00Z" }
+
+Question: Get the temperature for Istanbul in Fahrenheit.
+Call: { "func_call": "get_temperature", "location": "Istanbul", "unit": "fahrenheit" }
+Response: { "value": 63.4, "unit": "fahrenheit", "timestamp": "2023-10-28T13:25:00Z" }
+
+Question: How warm is it in Nairobi right now? Celsius please.
+Call: { "func_call": "get_temperature", "location": "Nairobi", "unit": "celsius" }
+Response: { "value": 25.9, "unit": "celsius", "timestamp": "2023-10-28T15:40:00Z" }
+
+Question: What is the current temperature in Vancouver using Fahrenheit?
+Call: { "func_call": "get_temperature", "location": "Vancouver", "unit": "fahrenheit" }
+Response: { "value": 51.7, "unit": "fahrenheit", "timestamp": "2023-10-28T05:30:00Z" }

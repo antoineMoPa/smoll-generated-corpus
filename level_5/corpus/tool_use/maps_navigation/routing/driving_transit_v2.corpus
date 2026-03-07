@@ -1,0 +1,47 @@
+Question: How do I cycle from the Alamo to the River Walk in San Antonio?
+Call: { "func_call": "get_directions", "origin": "The Alamo, San Antonio, TX", "destination": "San Antonio River Walk, San Antonio, TX", "mode": "cycling" }
+Response: { "distance_km": 0.8, "duration_minutes": 5, "steps": [ { "instruction": "Head east on Alamo Plaza toward Commerce St", "distance_km": 0.2 }, { "instruction": "Turn right onto Commerce St", "distance_km": 0.3 }, { "instruction": "Turn left onto River Walk access path", "distance_km": 0.3 } ] }
+
+Question: What are the walking directions from the Liberty Bell to Independence Hall in Philadelphia?
+Call: { "func_call": "get_directions", "origin": "Liberty Bell Center, Philadelphia, PA", "destination": "Independence Hall, Philadelphia, PA", "mode": "walking" }
+Response: { "distance_km": 0.1, "duration_minutes": 2, "steps": [ { "instruction": "Exit Liberty Bell Center and head north on 6th St", "distance_km": 0.05 }, { "instruction": "Turn right onto Chestnut St", "distance_km": 0.05 }, { "instruction": "Enter Independence Hall visitor center", "distance_km": 0.0 } ] }
+
+Question: Give me transit directions from Heathrow Terminal 5 to Big Ben in London.
+Call: { "func_call": "get_directions", "origin": "Heathrow Airport Terminal 5, London, UK", "destination": "Big Ben, Westminster, London, UK", "mode": "transit" }
+Response: { "distance_km": 24.6, "duration_minutes": 45, "steps": [ { "instruction": "Board the Elizabeth Line at Heathrow Terminal 5", "distance_km": 0.2 }, { "instruction": "Ride to Tottenham Court Road station", "distance_km": 23.8 }, { "instruction": "Transfer to the Jubilee Line towards Stratford", "distance_km": 0.0 }, { "instruction": "Alight at Westminster Station and follow signs to Big Ben", "distance_km": 0.6 } ] }
+
+Question: How can I drive from the CN Tower to Niagara Falls in Ontario?
+Call: { "func_call": "get_directions", "origin": "CN Tower, Toronto, ON", "destination": "Niagara Falls, ON", "mode": "driving" }
+Response: { "distance_km": 128.4, "duration_minutes": 95, "steps": [ { "instruction": "Head south on Bremner Blvd toward Gardiner Expy W", "distance_km": 1.2 }, { "instruction": "Merge onto Gardiner Expy W and continue to QEW", "distance_km": 18.5 }, { "instruction": "Follow QEW southwest towards Niagara Falls", "distance_km": 105.0 }, { "instruction": "Take exit 377 for Falls Ave", "distance_km": 3.7 } ] }
+
+Question: I need cycling instructions from Bondi Beach to Coogee Beach in Sydney.
+Call: { "func_call": "get_directions", "origin": "Bondi Beach, Sydney, NSW", "destination": "Coogee Beach, Sydney, NSW", "mode": "cycling" }
+Response: { "distance_km": 6.2, "duration_minutes": 22, "steps": [ { "instruction": "Head south on Campbell Pde toward Notts Ave", "distance_km": 0.4 }, { "instruction": "Join the Bondi to Coogee Coastal Walk path", "distance_km": 5.5 }, { "instruction": "Continue past Clovelly Beach to Coogee Bay Rd", "distance_km": 0.3 } ] }
+
+Question: What is the walking route from the Colosseum to the Trevi Fountain in Rome?
+Call: { "func_call": "get_directions", "origin": "Colosseum, Rome, Italy", "destination": "Trevi Fountain, Rome, Italy", "mode": "walking" }
+Response: { "distance_km": 1.9, "duration_minutes": 24, "steps": [ { "instruction": "Head northwest on Via dei Fori Imperiali", "distance_km": 0.8 }, { "instruction": "Turn right onto Via IV Novembre", "distance_km": 0.4 }, { "instruction": "Turn left onto Via delle Muratte", "distance_km": 0.5 }, { "instruction": "Arrive at Piazza di Trevi", "distance_km": 0.2 } ] }
+
+Question: Walk me from Shibuya Crossing to Meiji Shrine in Tokyo.
+Call: { "func_call": "get_directions", "origin": "Shibuya Crossing, Tokyo, Japan", "destination": "Meiji Shrine, Tokyo, Japan", "mode": "walking" }
+Response: { "distance_km": 2.1, "duration_minutes": 26, "steps": [ { "instruction": "Head north on Koen-dori Ave", "distance_km": 0.6 }, { "instruction": "Turn right onto Omotesando Ave", "distance_km": 1.2 }, { "instruction": "Enter the forest path at the shrine torii gate", "distance_km": 0.3 } ] }
+
+Question: How do I get from the Louvre Museum to the Eiffel Tower via public transit in Paris?
+Call: { "func_call": "get_directions", "origin": "Louvre Museum, Paris, France", "destination": "Eiffel Tower, Paris, France", "mode": "transit" }
+Response: { "distance_km": 4.3, "duration_minutes": 20, "steps": [ { "instruction": "Enter Palais Royal - Musée du Louvre Metro station", "distance_km": 0.1 }, { "instruction": "Board Line 1 towards La Défense", "distance_km": 0.0 }, { "instruction": "Transfer at Charles de Gaulle - Étoile to Line 6", "distance_km": 0.0 }, { "instruction": "Alight at Bir-Hakeim and walk to the tower", "distance_km": 0.6 } ] }
+
+Question: Provide driving directions from the Space Coast to Disney World in Orlando.
+Call: { "func_call": "get_directions", "origin": "Kennedy Space Center, Merritt Island, FL", "destination": "Magic Kingdom, Lake Buena Vista, FL", "mode": "driving" }
+Response: { "distance_km": 72.5, "duration_minutes": 65, "steps": [ { "instruction": "Head west on FL-528 W (Beachline Expy)", "distance_km": 58.2 }, { "instruction": "Merge onto I-4 W towards Tampa", "distance_km": 12.8 }, { "instruction": "Take exit 64B for World Dr", "distance_km": 1.5 } ] }
+
+Question: What are the cycling directions from Fisherman's Wharf to Golden Gate Park in San Francisco?
+Call: { "func_call": "get_directions", "origin": "Fisherman's Wharf, San Francisco, CA", "destination": "Golden Gate Park, San Francisco, CA", "mode": "cycling" }
+Response: { "distance_km": 8.4, "duration_minutes": 35, "steps": [ { "instruction": "Head west on Jefferson St toward Hyde St", "distance_km": 0.5 }, { "instruction": "Turn right onto Van Ness Ave and cross the park", "distance_km": 3.2 }, { "instruction": "Turn left onto Fell St bike lane", "distance_km": 4.5 }, { "instruction": "Enter Golden Gate Park at Stanyan St", "distance_km": 0.2 } ] }
+
+Question: Driving from the Burj Khalifa to Dubai Marina Mall.
+Call: { "func_call": "get_directions", "origin": "Burj Khalifa, Dubai, UAE", "destination": "Dubai Marina Mall, Dubai, UAE", "mode": "driving" }
+Response: { "distance_km": 28.9, "duration_minutes": 32, "steps": [ { "instruction": "Head southwest on Sheikh Mohammed bin Rashid Blvd", "distance_km": 1.4 }, { "instruction": "Merge onto Sheikh Zayed Rd (E11) southbound", "distance_km": 25.5 }, { "instruction": "Take exit for Dubai Marina/JLT", "distance_km": 1.2 }, { "instruction": "Turn left onto Al Marsa St", "distance_km": 0.8 } ] }
+
+Question: Transit route from Gangnam Station to Gyeongbokgung Palace in Seoul.
+Call: { "func_call": "get_directions", "origin": "Gangnam Station, Seoul, South Korea", "destination": "Gyeongbokgung Palace, Seoul, South Korea", "mode": "transit" }
+Response: { "distance_km": 14.2, "duration_minutes": 38, "steps": [ { "instruction": "Board Subway Line 2 (Green Line) towards City Hall", "distance_km": 0.1 }, { "instruction": "Ride to City Hall Station", "distance_km": 11.5 }, { "instruction": "Transfer to Line 3 (Orange Line) towards Gupabal", "distance_km": 0.0 }, { "instruction": "Alight at Gyeongbokgung Station and exit Gate 5", "distance_km": 0.3 } ] }

@@ -1,0 +1,51 @@
+Available Tools: share_file | set_permissions | get_shared_link | revoke_access | list_collaborators
+Call Schema: { "func_call": "string", "file_id": "string", "user_email": "string", "permission": "view|comment|edit", "expires_at": "string" }
+Response Schema: { "file_id": "string", "shared_link": "string", "collaborators": [{ "email": "string", "permission": "string" }] }
+---
+Question: Revoke access for brian.taylor@globaltech.com on the Q4 sales report and display the remaining collaborators.
+Call: { "func_call": "revoke_access", "file_id": "file_7712_sales_q4", "user_email": "brian.taylor@globaltech.com", "permission": "edit", "expires_at": "" }
+Response: { "file_id": "file_7712_sales_q4", "shared_link": "https://storage.example.com/s/q4s7a2", "collaborators": [{ "email": "jessica.brown@globaltech.com", "permission": "edit" }, { "email": "tom.wilson@globaltech.com", "permission": "view" }] }
+
+Question: List all users with access to the training manual, then remove permissions for trainee@newhire.org.
+Call: { "func_call": "list_collaborators", "file_id": "file_3341_training_man", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_3341_training_man", "shared_link": "https://storage.example.com/s/t8r3m4", "collaborators": [{ "email": "hr_lead@globaltech.com", "permission": "edit" }, { "email": "trainee@newhire.org", "permission": "view" }, { "email": "manager_ops@globaltech.com", "permission": "comment" }] }
+
+Question: The shared link for the product launch plan is leaked; revoke access for freelance_writer@media.net and list current team members.
+Call: { "func_call": "revoke_access", "file_id": "file_9982_launch_plan", "user_email": "freelance_writer@media.net", "permission": "comment", "expires_at": "" }
+Response: { "file_id": "file_9982_launch_plan", "shared_link": "https://storage.example.com/s/p9l2n3", "collaborators": [{ "email": "product_mgr@globaltech.com", "permission": "edit" }, { "email": "design_team@globaltech.com", "permission": "edit" }] }
+
+Question: Remove view rights for auditor.external@checkfirm.com from the compliance logs and show the active collaborator list.
+Call: { "func_call": "revoke_access", "file_id": "file_5567_compliance", "user_email": "auditor.external@checkfirm.com", "permission": "view", "expires_at": "" }
+Response: { "file_id": "file_5567_compliance", "shared_link": "https://storage.example.com/s/c5o6m7", "collaborators": [{ "email": "compliance_officer@globaltech.com", "permission": "edit" }, { "email": "legal_head@globaltech.com", "permission": "edit" }] }
+
+Question: Revoke access for the intern group starting with sum_intern@university.edu on the research data and list who remains.
+Call: { "func_call": "revoke_access", "file_id": "file_1123_research_data", "user_email": "sum_intern@university.edu", "permission": "view", "expires_at": "" }
+Response: { "file_id": "file_1123_research_data", "shared_link": "https://storage.example.com/s/r2d4a6", "collaborators": [{ "email": "senior_scientist@globaltech.com", "permission": "edit" }, { "email": "lab_director@globaltech.com", "permission": "edit" }] }
+
+Question: List collaborators on the security policy document, then revoke edit access for retired_admin@oldmail.net.
+Call: { "func_call": "list_collaborators", "file_id": "file_8834_sec_policy", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_8834_sec_policy", "shared_link": "https://storage.example.com/s/s1p2o3", "collaborators": [{ "email": "ciso@globaltech.com", "permission": "edit" }, { "email": "retired_admin@oldmail.net", "permission": "edit" }] }
+
+Question: Disable comment permissions for supplier_contact@logistics.inc on the supply chain map and display the updated sharing list.
+Call: { "func_call": "revoke_access", "file_id": "file_6699_supply_map", "user_email": "supplier_contact@logistics.inc", "permission": "comment", "expires_at": "" }
+Response: { "file_id": "file_6699_supply_map", "shared_link": "https://storage.example.com/s/s9c8u7", "collaborators": [{ "email": "procurement_lead@globaltech.com", "permission": "edit" }, { "email": "supply_analyst@globaltech.com", "permission": "view" }] }
+
+Question: Revoke permissions for guest_speaker@webinar.org on the presentation slides and list all internal staff with access.
+Call: { "func_call": "revoke_access", "file_id": "file_4421_pres_slides", "user_email": "guest_speaker@webinar.org", "permission": "edit", "expires_at": "" }
+Response: { "file_id": "file_4421_pres_slides", "shared_link": "https://storage.example.com/s/w3e4b5", "collaborators": [{ "email": "comm_mgr@globaltech.com", "permission": "edit" }, { "email": "content_team@globaltech.com", "permission": "comment" }] }
+
+Question: List who has access to the database schema file, then revoke view access for db_consultant@sqlpros.com.
+Call: { "func_call": "list_collaborators", "file_id": "file_7756_db_schema", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_7756_db_schema", "shared_link": "https://storage.example.com/s/d7b8s9", "collaborators": [{ "email": "db_admin@globaltech.com", "permission": "edit" }, { "email": "db_consultant@sqlpros.com", "permission": "view" }] }
+
+Question: Remove edit access for board_member@investors LLC from the strategic plan and show the current list of collaborators.
+Call: { "func_call": "revoke_access", "file_id": "file_2298_strat_plan", "user_email": "board_member@investors LLC", "permission": "edit", "expires_at": "" }
+Response: { "file_id": "file_2298_strat_plan", "shared_link": "https://storage.example.com/s/s1t2r3", "collaborators": [{ "email": "strategy_dir@globaltech.com", "permission": "edit" }, { "email": "ceo_office@globaltech.com", "permission": "edit" }] }
+
+Question: Revoke access for monitoring_bot@sysops.io on the server metrics file and list human collaborators only.
+Call: { "func_call": "revoke_access", "file_id": "file_3312_srv_metrics", "user_email": "monitoring_bot@sysops.io", "permission": "view", "expires_at": "" }
+Response: { "file_id": "file_3312_srv_metrics", "shared_link": "https://storage.example.com/s/m4e5t6", "collaborators": [{ "email": "infra_lead@globaltech.com", "permission": "edit" }, { "email": "dev_ops@globaltech.com", "permission": "view" }] }
+
+Question: List collaborators on the partnership agreement, then immediately revoke access for expired_lawyer@legalfirm.com.
+Call: { "func_call": "list_collaborators", "file_id": "file_9945_partner_agree", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_9945_partner_agree", "shared_link": "https://storage.example.com/s/p9a0r1", "collaborators": [{ "email": "partnerships_vp@globaltech.com", "permission": "edit" }, { "email": "expired_lawyer@legalfirm.com", "permission": "comment" }] }

@@ -1,0 +1,51 @@
+Available Tools: find_by_name | find_by_extension | find_by_size | find_by_date
+Call Schema: { "func_call": "string", "path": "string", "pattern": "string", "type": "string" }
+Response Schema: { "matches": ["string"], "count": number }
+---
+Question: Retrieve all Python scripts located in the dev workspace.
+Call: { "func_call": "find_by_extension", "path": "/home/dev/workspace", "pattern": ".py", "type": "file" }
+Response: { "matches": ["/home/dev/workspace/main.py", "/home/dev/workspace/utils.py", "/home/dev/workspace/test_runner.py"], "count": 3 }
+
+Question: Search for Markdown documentation files in the project root.
+Call: { "func_call": "find_by_extension", "path": "/srv/project", "pattern": ".md", "type": "file" }
+Response: { "matches": ["/srv/project/README.md", "/srv/project/CONTRIBUTING.md"], "count": 2 }
+
+Question: Identify all log rotation archives in the system logs.
+Call: { "func_call": "find_by_extension", "path": "/var/log/syslog", "pattern": ".gz", "type": "file" }
+Response: { "matches": ["/var/log/syslog/auth.log.1.gz", "/var/log/syslog/kern.log.2.gz", "/var/log/syslog/mail.log.3.gz"], "count": 3 }
+
+Question: Find all Docker Compose files in the deployment folder.
+Call: { "func_call": "find_by_extension", "path": "/opt/docker/deploy", "pattern": ".yaml", "type": "file" }
+Response: { "matches": ["/opt/docker/deploy/web-stack.yaml", "/opt/docker/deploy/db-cluster.yaml"], "count": 2 }
+
+Question: Locate any temporary swap files in the memory mount.
+Call: { "func_call": "find_by_extension", "path": "/mnt/ramdisk", "pattern": ".swap", "type": "file" }
+Response: { "matches": ["/mnt/ramdisk/process_404.swap", "/mnt/ramdisk/process_992.swap"], "count": 2 }
+
+Question: List all CSV export files in the reports directory.
+Call: { "func_call": "find_by_extension", "path": "/data/reports/2024", "pattern": ".csv", "type": "file" }
+Response: { "matches": ["/data/reports/2024/sales_q1.csv", "/data/reports/2024/inventory_q1.csv", "/data/reports/2024/users_q1.csv"], "count": 3 }
+
+Question: Search for Ruby gem specifications in the vendor bundle.
+Call: { "func_call": "find_by_extension", "path": "/app/vendor/bundle", "pattern": ".gemspec", "type": "file" }
+Response: { "matches": ["/app/vendor/bundle/rails.gemspec", "/app/vendor/bundle/puma.gemspec"], "count": 2 }
+
+Question: Find all compressed tar archives in the backup volume.
+Call: { "func_call": "find_by_extension", "path": "/mnt/backup/daily", "pattern": ".tar", "type": "file" }
+Response: { "matches": ["/mnt/backup/daily/full_backup_mon.tar", "/mnt/backup/daily/full_backup_tue.tar", "/mnt/backup/daily/full_backup_wed.tar"], "count": 3 }
+
+Question: Identify directories marked as obsolete in the archive path.
+Call: { "func_call": "find_by_extension", "path": "/archive/legacy", "pattern": ".obsolete", "type": "dir" }
+Response: { "matches": ["/archive/legacy/module_alpha.obsolete", "/archive/legacy/module_beta.obsolete"], "count": 2 }
+
+Question: Locate all YAML configuration files in the kubernetes manifests.
+Call: { "func_call": "find_by_extension", "path": "/k8s/manifests/prod", "pattern": ".yml", "type": "file" }
+Response: { "matches": ["/k8s/manifests/prod/deployment.yml", "/k8s/manifests/prod/service.yml", "/k8s/manifests/prod/ingress.yml"], "count": 3 }
+
+Question: Find all binary executable files in the local bin directory.
+Call: { "func_call": "find_by_extension", "path": "/usr/local/bin", "pattern": ".bin", "type": "file" }
+Response: { "matches": ["/usr/local/bin/custom_tool.bin", "/usr/local/bin/legacy_app.bin"], "count": 2 }
+
+Question: Search for HTML template files in the web views folder.
+Call: { "func_call": "find_by_extension", "path": "/var/www/html/views", "pattern": ".html", "type": "file" }
+Response: { "matches": ["/var/www/html/views/index.html", "/var/www/html/views/about.html", "/var/www/html/views/contact.html"], "count": 3 }

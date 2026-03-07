@@ -1,0 +1,59 @@
+Context: The design review included feedback from Nina, Oscar, and Quinn, but Roger submitted no comments on the prototype.
+Input: {"question": "Who did not submit comments on the prototype?"}
+Output: {"answer": "Roger"}
+
+Context: During the marathon, runners like Carlos, Diana, and Evan crossed the finish line under four hours, while Fiona stopped running at mile twenty.
+Input: {"question": "Who did not cross the finish line under four hours?"}
+Output: {"answer": "Fiona"}
+
+Context: The grant committee awarded funds to projects led by Dr. Nguyen, Prof. O'Connor, and Ms. Zhang, but the proposal by Mr. Khan was rejected.
+Input: {"question": "Who did not receive grant funding?"}
+Output: {"answer": "Mr. Khan"}
+
+Context: At the wedding reception, guests including Henry, Ivy, and Jack danced until midnight, whereas Kate left the venue immediately after dinner.
+Input: {"question": "Who did not dance until midnight?"}
+Output: {"answer": "Kate"}
+
+Context: The security patch was applied to systems owned by Lucas, Mia, and Noah, but the device managed by Olivia remained vulnerable.
+Input: {"question": "Who did not apply the security patch to their system?"}
+Output: {"answer": "Olivia"}
+
+Context: While the choir members, such as Peter, Qing, and Rosa, learned the new anthem by heart, Sam struggled to remember the lyrics.
+Input: {"question": "Who did not learn the new anthem by heart?"}
+Output: {"answer": "Sam"}
+
+Context: The research group comprising Taro, Uma, and Victor published their findings in the journal, but Wendy failed to submit her paper before the deadline.
+Input: {"question": "Who did not publish their findings in the journal?"}
+Output: {"answer": "Wendy"}
+
+Context: Every team lead, namely Xavier, Yolanda, and Zach, completed the compliance training, except for Aaron who missed the final session.
+Input: {"question": "Who did not complete the compliance training?"}
+Output: {"answer": "Aaron"}
+
+Context: During the neighborhood watch, residents like Mrs. Brown, Mr. Clark, and teen Dylan patrolled the streets, while Mrs. Evans did not leave her porch.
+Input: {"question": "Who did not patrol the streets?"}
+Output: {"answer": "Mrs. Evans"}
+
+Context: The orchestra musicians, Felix, Grace, and Hugo, played the final movement perfectly, but the cellist, Iris, missed her cue entirely.
+Input: {"question": "Who did not play the final movement perfectly?"}
+Output: {"answer": "Iris"}
+
+Context: Backers including Lord Sterling, Lady Chen, and Baron Frost contributed to the restoration fund, whereas Duke Miller declined to donate.
+Input: {"question": "Who did not contribute to the restoration fund?"}
+Output: {"answer": "Duke Miller"}
+
+Context: In the baking show, contestants named Julio, Keiko, and Lars delivered their loaves on schedule, but Chef Maria burned her bread and had no entry.
+Input: {"question": "Who did not deliver their loaf on schedule?"}
+Output: {"answer": "Chef Maria"}
+
+Context: The film society screened the classic movie, and attendees like Nora, Otto, and Paula wrote reviews, while Quentin fell asleep during the screening.
+Input: {"question": "Who did not write a review of the classic movie?"}
+Output: {"answer": "Quentin"}
+
+Context: Interns named Rachel, Steven, and Tina filed the official records this morning, but Ulysses forgot to submit his paperwork.
+Input: {"question": "Who did not file the official records this morning?"}
+Output: {"answer": "Ulysses"}
+
+Context: The strategy session included VP Alan, Director Beth, and Manager Chris, but the supervisor, Dave, was stuck in traffic and arrived late.
+Input: {"question": "Who did not arrive on time for the strategy session?"}
+Output: {"answer": "Dave"}

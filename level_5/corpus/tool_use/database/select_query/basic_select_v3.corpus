@@ -1,0 +1,87 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Fetch the first 15 employee names and departments from the staff table.
+Call: { "func_call": "select_records", "table": "staff", "columns": ["name", "department"], "where": "1=1", "limit": 15 }
+Response: { "rows": [{"name": "Sarah Jenkins", "department": "HR"}, {"name": "Mike Ross", "department": "IT"}, {"name": "Lisa Wong", "department": "Sales"}], "count": 3, "query_ms": 14 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Find all discontinued items with a discount rate higher than 20 percent.
+Call: { "func_call": "select_with_filter", "table": "inventory", "columns": ["item_code", "description", "discount_rate"], "where": "status = 'discontinued' AND discount_rate > 0.20", "limit": 40 }
+Response: { "rows": [{"item_code": "A99", "description": "Old Model Fan", "discount_rate": 0.25}, {"item_code": "B12", "description": "Legacy Lamp", "discount_rate": 0.30}], "count": 2, "query_ms": 19 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve invoice amounts joined with client company names for billing city London.
+Call: { "func_call": "select_with_join", "table": "invoices", "columns": ["invoices.ref_num", "invoices.amount", "clients.company_name"], "where": "clients.billing_city = 'London'", "limit": 25 }
+Response: { "rows": [{"ref_num": "INV-202", "amount": 1500.75, "company_name": "Tech Solutions Ltd"}, {"ref_num": "INV-205", "amount": 320.00, "company_name": "Green Energy Co"}], "count": 2, "query_ms": 27 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count how many appointments were scheduled for tomorrow.
+Call: { "func_call": "count_records", "table": "appointments", "columns": ["appointment_id"], "where": "scheduled_date = CURRENT_DATE + INTERVAL '1 day'", "limit": 1 }
+Response: { "rows": [], "count": 28, "query_ms": 3 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List the top 3 cheapest flights available next month.
+Call: { "func_call": "select_with_filter", "table": "flights", "columns": ["flight_number", "price", "destination"], "where": "departure_date >= NOW() + INTERVAL '30 days'", "limit": 3 }
+Response: { "rows": [{"flight_number": "FL882", "price": 120.00, "destination": "Paris"}, {"flight_number": "FL901", "price": 145.50, "destination": "Berlin"}], "count": 2, "query_ms": 21 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Get all support tickets submitted by agent ID 77 in the last 48 hours.
+Call: { "func_call": "select_with_filter", "table": "tickets", "columns": ["ticket_id", "created_at", "priority"], "where": "agent_id = 77 AND created_at >= NOW() - INTERVAL '48 hours'", "limit": 50 }
+Response: { "rows": [{"ticket_id": 5501, "created_at": "2023-11-01T10:00:00Z", "priority": "High"}, {"ticket_id": 5503, "created_at": "2023-11-01T14:30:00Z", "priority": "Medium"}], "count": 2, "query_ms": 13 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Fetch book titles and their author names using a join for published books.
+Call: { "func_call": "select_with_join", "table": "books", "columns": ["books.title", "authors.full_name"], "where": "books.published = true", "limit": 60 }
+Response: { "rows": [{"title": "The Silent Ocean", "full_name": "Elena Fisher"}, {"title": "Code of Ethics", "full_name": "Marcus Thorne"}], "count": 2, "query_ms": 16 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Show me the first 10 movie titles and genres where the genre is 'Sci-Fi'.
+Call: { "func_call": "select_with_filter", "table": "movies", "columns": ["title", "genre"], "where": "genre = 'Sci-Fi'", "limit": 10 }
+Response: { "rows": [{"title": "Star Voyager", "genre": "Sci-Fi"}, {"title": "Neon Dreams", "genre": "Sci-Fi"}, {"title": "Time Loop", "genre": "Sci-Fi"}], "count": 3, "query_ms": 9 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve all columns for the patient with ID 'P-9988'.
+Call: { "func_call": "select_records", "table": "patients", "columns": ["*"], "where": "patient_id = 'P-9988'", "limit": 1 }
+Response: { "rows": [{"patient_id": "P-9988", "name": "Robert Chen", "dob": "1985-04-12", "insurance": "Active"}], "count": 1, "query_ms": 5 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List reservations with status 'confirmed' joined with room numbers.
+Call: { "func_call": "select_with_join", "table": "reservations", "columns": ["reservations.booking_id", "rooms.room_number", "rooms.floor"], "where": "reservations.status = 'confirmed'", "limit": 35 }
+Response: { "rows": [{"booking_id": "BK-404", "room_number": "305", "floor": 3}, {"booking_id": "BK-410", "room_number": "112", "floor": 1}], "count": 2, "query_ms": 20 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count the number of vehicles manufactured after 2020.
+Call: { "func_call": "count_records", "table": "vehicles", "columns": ["vin"], "where": "manufacture_year > 2020", "limit": 1 }
+Response: { "rows": [], "count": 89, "query_ms": 7 }

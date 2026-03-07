@@ -1,0 +1,29 @@
+Context: The waterproof hiking boots are in the footwear category, have a 4.1 rating from trail runners, but are sold out for the season. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "footwear", "rating": "4.1", "in_stock": "false"}
+
+Context: This organic face mask belongs to the skincare category, boasts a 4.9 rating, and is available for instant checkout. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "skincare", "rating": "4.9", "in_stock": "true"}
+
+Context: The programmable coffee maker is listed under kitchen appliances, holds a 3.6 rating, and is currently on backorder. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "kitchen appliances", "rating": "3.6", "in_stock": "false"}
+
+Context: These noise-canceling earbuds fall into the electronics category, received a 4.7 rating, and are ready to ship immediately. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "electronics", "rating": "4.7", "in_stock": "true"}
+
+Context: The plush teddy bear is categorized as toys and games, has a 4.5 rating from parents, but the warehouse is out of stock. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "toys and games", "rating": "4.5", "in_stock": "false"}
+
+Context: This ergonomic office chair belongs to the furniture category, enjoys a 3.9 rating, and is in stock at the downtown location. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "furniture", "rating": "3.9", "in_stock": "true"}
+
+Context: The historical fiction novel is in the books category, has a 4.3 rating, but all copies are currently reserved. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "books", "rating": "4.3", "in_stock": "false"}
+
+Context: These yoga pants are part of the activewear category, hold a 4.8 rating, and are available for same-day delivery. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "activewear", "rating": "4.8", "in_stock": "true"}
+
+Context: The digital camera lens is listed in the photography category, has a 4.0 rating, and is temporarily unavailable. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "photography", "rating": "4.0", "in_stock": "false"}
+
+Context: This scented candle fits into the home decor category, received a 4.6 rating, and is fully stocked on shelves. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "home decor", "rating": "4.6", "in_stock": "true"}
+
+Context: The electric toothbrush is in the personal care category, boasts a 4.2 rating, but is out of stock until next week. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "personal care", "rating": "4.2", "in_stock": "false"}
+
+Context: These winter gloves belong to the accessories category, have a 3.7 rating, and are ready for pickup today. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "accessories", "rating": "3.7", "in_stock": "true"}
+
+Context: The stand mixer is categorized under kitchen appliances, holds a 4.4 rating, but is currently backordered. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "kitchen appliances", "rating": "4.4", "in_stock": "false"}
+
+Context: This fantasy board game is in the toys and games category, has a 5.0 rating, and is available for immediate purchase. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "toys and games", "rating": "5.0", "in_stock": "true"}
+
+Context: The silk pillowcase is listed in the bedding category, received a 4.1 rating, and is out of stock due to high demand. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "bedding", "rating": "4.1", "in_stock": "false"}

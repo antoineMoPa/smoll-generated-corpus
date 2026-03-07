@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": number, "color": "string" }
+Response Schema: { "light_id": "string", "state": "on|off", "brightness": number, "color": "string" }
+---
+Question: Illuminate the garage light at 90% brightness.
+Call: { "func_call": "turn_on_light", "light_id": "garage", "brightness": 90, "color": "white" }
+Response: { "light_id": "garage", "state": "on", "brightness": 90, "color": "white" }
+
+Question: Deactivate the hallway light completely.
+Call: { "func_call": "turn_off_light", "light_id": "hallway", "brightness": 0, "color": "white" }
+Response: { "light_id": "hallway", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Set the office light brightness to 75%.
+Call: { "func_call": "set_brightness", "light_id": "office", "brightness": 75, "color": "white" }
+Response: { "light_id": "office", "state": "on", "brightness": 75, "color": "white" }
+
+Question: Dim the porch light to 30%.
+Call: { "func_call": "set_brightness", "light_id": "porch", "brightness": 30, "color": "white" }
+Response: { "light_id": "porch", "state": "on", "brightness": 30, "color": "white" }
+
+Question: Turn on the office light but keep it low at 20%.
+Call: { "func_call": "turn_on_light", "light_id": "office", "brightness": 20, "color": "white" }
+Response: { "light_id": "office", "state": "on", "brightness": 20, "color": "white" }
+
+Question: Power down the garage lights.
+Call: { "func_call": "turn_off_light", "light_id": "garage", "brightness": 0, "color": "white" }
+Response: { "light_id": "garage", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Adjust the hallway brightness to 65%.
+Call: { "func_call": "set_brightness", "light_id": "hallway", "brightness": 65, "color": "white" }
+Response: { "light_id": "hallway", "state": "on", "brightness": 65, "color": "white" }
+
+Question: Activate the porch light at full brightness.
+Call: { "func_call": "turn_on_light", "light_id": "porch", "brightness": 100, "color": "white" }
+Response: { "light_id": "porch", "state": "on", "brightness": 100, "color": "white" }
+
+Question: Turn off the office light immediately.
+Call: { "func_call": "turn_off_light", "light_id": "office", "brightness": 0, "color": "white" }
+Response: { "light_id": "office", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Set the garage light to a bright 85% intensity.
+Call: { "func_call": "set_brightness", "light_id": "garage", "brightness": 85, "color": "white" }
+Response: { "light_id": "garage", "state": "on", "brightness": 85, "color": "white" }
+
+Question: Turn on the hallway light at 45% brightness.
+Call: { "func_call": "turn_on_light", "light_id": "hallway", "brightness": 45, "color": "white" }
+Response: { "light_id": "hallway", "state": "on", "brightness": 45, "color": "white" }
+
+Question: Dim the porch light to 5% for night mode.
+Call: { "func_call": "set_brightness", "light_id": "porch", "brightness": 5, "color": "white" }
+Response: { "light_id": "porch", "state": "on", "brightness": 5, "color": "white" }

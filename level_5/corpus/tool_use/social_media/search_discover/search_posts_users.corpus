@@ -1,0 +1,87 @@
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find recent posts about vegan recipes in Portland.
+Call: { "func_call": "search_posts", "query": "vegan recipes", "hashtag": "", "location": "Portland", "limit": 10 }
+Response: { "results": [{ "id": "p_8921", "type": "post", "content": "Easy 15-minute vegan pasta recipe! 🍝 #vegan #foodie", "likes": 342 }, { "id": "p_8922", "type": "post", "content": "My favorite plant-based burger spot in Portland.", "likes": 128 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for users who are professional photographers in Tokyo.
+Call: { "func_call": "search_users", "query": "professional photographer", "hashtag": "", "location": "Tokyo", "limit": 5 }
+Response: { "results": [{ "id": "u_4410", "type": "user", "content": "Kenji Tanaka | Street Photography Tokyo", "likes": 15400 }, { "id": "u_4411", "type": "user", "content": "Yumi Sato | Portrait & Landscape", "likes": 8920 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Show me posts tagged with #sunset from California.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "sunset", "location": "California", "limit": 20 }
+Response: { "results": [{ "id": "p_1102", "type": "post", "content": "Golden hour at Santa Monica Pier 🌅 #sunset", "likes": 5621 }, { "id": "p_1103", "type": "post", "content": "Driving down PCH during sunset.", "likes": 3100 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find fitness influencers in Miami.
+Call: { "func_call": "search_users", "query": "fitness influencer", "hashtag": "", "location": "Miami", "limit": 8 }
+Response: { "results": [{ "id": "u_7721", "type": "user", "content": "Carlos Fit | Miami Personal Trainer", "likes": 45000 }, { "id": "u_7722", "type": "user", "content": "Beach Body Bootcamp with Sofia", "likes": 32100 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Look for posts about remote work tips.
+Call: { "func_call": "search_posts", "query": "remote work tips", "hashtag": "", "location": "", "limit": 15 }
+Response: { "results": [{ "id": "p_3301", "type": "post", "content": "5 essential tools for working from home effectively.", "likes": 890 }, { "id": "p_3302", "type": "post", "content": "How I stay productive without an office.", "likes": 450 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for users interested in cryptocurrency in New York.
+Call: { "func_call": "search_users", "query": "cryptocurrency", "hashtag": "", "location": "New York", "limit": 10 }
+Response: { "results": [{ "id": "u_9901", "type": "user", "content": "Crypto King NYC | Daily Analysis", "likes": 102000 }, { "id": "u_9902", "type": "user", "content": "Blockchain Dev & Investor", "likes": 67500 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts with #travelgram from Paris.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "travelgram", "location": "Paris", "limit": 25 }
+Response: { "results": [{ "id": "p_5540", "type": "post", "content": "Morning coffee near the Eiffel Tower ☕ #travelgram", "likes": 8900 }, { "id": "p_5541", "type": "post", "content": "Lost in the streets of Montmartre.", "likes": 7200 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for graphic designers in London.
+Call: { "func_call": "search_users", "query": "graphic designer", "hashtag": "", "location": "London", "limit": 6 }
+Response: { "results": [{ "id": "u_2230", "type": "user", "content": "Emma Design Studio | Branding London", "likes": 23400 }, { "id": "u_2231", "type": "user", "content": "Freelance Illustrator & Designer", "likes": 18900 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts discussing electric vehicles.
+Call: { "func_call": "search_posts", "query": "electric vehicles", "hashtag": "", "location": "", "limit": 12 }
+Response: { "results": [{ "id": "p_6670", "type": "post", "content": "Just test drove the new Model Y, amazing range!", "likes": 1200 }, { "id": "p_6671", "type": "post", "content": "Comparison of top EVs in 2024.", "likes": 980 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for users who post about gardening in Seattle.
+Call: { "func_call": "search_users", "query": "gardening", "hashtag": "", "location": "Seattle", "limit": 7 }
+Response: { "results": [{ "id": "u_3345", "type": "user", "content": "Seattle Garden Guild | Tips & Tricks", "likes": 12300 }, { "id": "u_3346", "type": "user", "content": "Urban Gardening with Mike", "likes": 9800 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts tagged #fitnessmotivation from Austin.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "fitnessmotivation", "location": "Austin", "limit": 18 }
+Response: { "results": [{ "id": "p_7780", "type": "post", "content": "Morning run at Lady Bird Lake 🏃‍♀️ #fitnessmotivation", "likes": 2100 }, { "id": "p_7781", "type": "post", "content": "Leg day complete! Who's with me?", "likes": 1850 }], "total": 2 }

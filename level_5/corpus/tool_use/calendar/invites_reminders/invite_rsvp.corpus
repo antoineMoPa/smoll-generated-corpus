@@ -1,0 +1,87 @@
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Send an invitation for the Q3 Board Review to the executive team.
+Call: { "func_call": "send_invite", "event_id": "evt_99283", "attendee_email": "ceo@acmecorp.com", "reminder_minutes": 30 }
+Response: { "event_id": "evt_99283", "status": "sent", "attendees": [{ "email": "ceo@acmecorp.com", "rsvp": "pending" }, { "email": "cfo@acmecorp.com", "rsvp": "pending" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Sarah just confirmed she can make it to the design sprint; mark her as accepted.
+Call: { "func_call": "accept_invite", "event_id": "evt_77412", "attendee_email": "sarah.j@designstudio.io", "reminder_minutes": 15 }
+Response: { "event_id": "evt_77412", "status": "updated", "attendees": [{ "email": "sarah.j@designstudio.io", "rsvp": "accepted" }, { "email": "mike.t@designstudio.io", "rsvp": "pending" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: David cannot attend the lunch meeting due to a conflict; decline on his behalf.
+Call: { "func_call": "decline_invite", "event_id": "evt_55109", "attendee_email": "david.ross@techstart.net", "reminder_minutes": 0 }
+Response: { "event_id": "evt_55109", "status": "updated", "attendees": [{ "email": "david.ross@techstart.net", "rsvp": "declined" }, { "email": "lisa.wong@techstart.net", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Set a 45-minute reminder for the client kickoff call so I don't miss it.
+Call: { "func_call": "set_reminder", "event_id": "evt_33821", "attendee_email": "account_mgr@globalclient.com", "reminder_minutes": 45 }
+Response: { "event_id": "evt_33821", "status": "reminder_set", "attendees": [{ "email": "account_mgr@globalclient.com", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Check who has responded to the all-hands meeting invitation yet.
+Call: { "func_call": "get_rsvp_status", "event_id": "evt_11204", "attendee_email": "", "reminder_minutes": 0 }
+Response: { "event_id": "evt_11204", "status": "success", "attendees": [{ "email": "hr@company.org", "rsvp": "accepted" }, { "email": "dev_team@company.org", "rsvp": "pending" }, { "email": "sales@company.org", "rsvp": "declined" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Invite the external consultant to the strategy workshop next Tuesday.
+Call: { "func_call": "send_invite", "event_id": "evt_88392", "attendee_email": "consultant@strategyfirm.co.uk", "reminder_minutes": 60 }
+Response: { "event_id": "evt_88392", "status": "sent", "attendees": [{ "email": "consultant@strategyfirm.co.uk", "rsvp": "pending" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Mark the project manager as accepted for the daily standup.
+Call: { "func_call": "accept_invite", "event_id": "evt_22910", "attendee_email": "pm.jenkins@agileflow.com", "reminder_minutes": 5 }
+Response: { "event_id": "evt_22910", "status": "updated", "attendees": [{ "email": "pm.jenkins@agileflow.com", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: The marketing director is out of office; decline the invite for the budget review.
+Call: { "func_call": "decline_invite", "event_id": "evt_66543", "attendee_email": "marketing.dir@brandco.com", "reminder_minutes": 0 }
+Response: { "event_id": "evt_66543", "status": "updated", "attendees": [{ "email": "marketing.dir@brandco.com", "rsvp": "declined" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Remind me 2 hours before the webinar starts.
+Call: { "func_call": "set_reminder", "event_id": "evt_44771", "attendee_email": "user@mydomain.com", "reminder_minutes": 120 }
+Response: { "event_id": "evt_44771", "status": "reminder_set", "attendees": [{ "email": "user@mydomain.com", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Send the monthly sync invite to the remote engineering team in Berlin.
+Call: { "func_call": "send_invite", "event_id": "evt_10293", "attendee_email": "lead.eng@berlin-tech.de", "reminder_minutes": 15 }
+Response: { "event_id": "evt_10293", "status": "sent", "attendees": [{ "email": "lead.eng@berlin-tech.de", "rsvp": "pending" }, { "email": "qa.lead@berlin-tech.de", "rsvp": "pending" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Confirm attendance for the investor update call for the CFO.
+Call: { "func_call": "accept_invite", "event_id": "evt_99001", "attendee_email": "cfo@venturecap.inc", "reminder_minutes": 30 }
+Response: { "event_id": "evt_99001", "status": "updated", "attendees": [{ "email": "cfo@venturecap.inc", "rsvp": "accepted" }, { "email": "founder@venturecap.inc", "rsvp": "accepted" }] }

@@ -1,0 +1,10 @@
+{"incident_type": "Firmware Corruption", "date": "2024-06-22", "location": "IoT Gateway Hub, Seattle", "cause": "Interrupted OTA update process", "severity": "High", "resolved": "Yes"}
+{"incident_type": "SSL Expiration", "date": "2023-05-11", "location": "Customer Portal, Dublin", "cause": "Automated renewal script failure", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Logic Bomb", "date": "2024-07-09", "location": "Legacy Billing System", "cause": "Dormant code triggered by date change", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Bandwidth Saturation", "date": "2023-04-03", "location": "Branch Office, Mumbai", "cause": "Unauthorized crypto mining activity", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Container Crash", "date": "2024-08-14", "location": "Kubernetes Cluster B", "cause": "Resource limit exceeded by pod", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "Social Engineering", "date": "2023-03-28", "location": "Support Call Center, Austin", "cause": "Impersonation of IT staff", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Cache Invalidation", "date": "2024-09-05", "location": "CDN Edge Node, Tokyo", "cause": "Misconfigured purge rule", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Supply Chain Attack", "date": "2023-02-17", "location": "Build Pipeline Server", "cause": "Compromised third-party library", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Memory Exhaustion", "date": "2024-10-30", "location": "Analytics Engine, Frankfurt", "cause": "Inefficient query execution", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Physical Tampering", "date": "2023-01-09", "location": "Network Closet, Phoenix", "cause": "Unauthorized device insertion", "severity": "Critical", "resolved": "Yes"}

@@ -1,0 +1,51 @@
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Can I get a large espresso with strong strength and oat milk?
+Call: { "func_call": "brew_espresso", "size": "large", "strength": "strong", "milk": "oat" }
+Response: { "order_id": "ESP-2023-001", "status": "brewing", "estimated_seconds": 45 }
+
+Question: I need a small latte with mild strength and almond milk.
+Call: { "func_call": "brew_latte", "size": "small", "strength": "mild", "milk": "almond" }
+Response: { "order_id": "LAT-2023-002", "status": "brewing", "estimated_seconds": 60 }
+
+Question: Make me a medium espresso with medium strength and whole milk.
+Call: { "func_call": "brew_espresso", "size": "medium", "strength": "medium", "milk": "whole" }
+Response: { "order_id": "ESP-2023-003", "status": "brewing", "estimated_seconds": 40 }
+
+Question: Please brew a large latte with strong strength and oat milk.
+Call: { "func_call": "brew_latte", "size": "large", "strength": "strong", "milk": "oat" }
+Response: { "order_id": "LAT-2023-004", "status": "brewing", "estimated_seconds": 75 }
+
+Question: I'd like a small espresso with mild strength and almond milk.
+Call: { "func_call": "brew_espresso", "size": "small", "strength": "mild", "milk": "almond" }
+Response: { "order_id": "ESP-2023-005", "status": "brewing", "estimated_seconds": 35 }
+
+Question: Can you make a medium latte with strong strength and whole milk?
+Call: { "func_call": "brew_latte", "size": "medium", "strength": "strong", "milk": "whole" }
+Response: { "order_id": "LAT-2023-006", "status": "brewing", "estimated_seconds": 65 }
+
+Question: Brew a large espresso with mild strength and whole milk.
+Call: { "func_call": "brew_espresso", "size": "large", "strength": "mild", "milk": "whole" }
+Response: { "order_id": "ESP-2023-007", "status": "brewing", "estimated_seconds": 50 }
+
+Question: I want a small latte with medium strength and oat milk.
+Call: { "func_call": "brew_latte", "size": "small", "strength": "medium", "milk": "oat" }
+Response: { "order_id": "LAT-2023-008", "status": "brewing", "estimated_seconds": 55 }
+
+Question: Prepare a medium espresso with strong strength and almond milk.
+Call: { "func_call": "brew_espresso", "size": "medium", "strength": "strong", "milk": "almond" }
+Response: { "order_id": "ESP-2023-009", "status": "brewing", "estimated_seconds": 42 }
+
+Question: Can I have a large latte with mild strength and almond milk?
+Call: { "func_call": "brew_latte", "size": "large", "strength": "mild", "milk": "almond" }
+Response: { "order_id": "LAT-2023-010", "status": "brewing", "estimated_seconds": 70 }
+
+Question: Make a small espresso with strong strength and whole milk.
+Call: { "func_call": "brew_espresso", "size": "small", "strength": "strong", "milk": "whole" }
+Response: { "order_id": "ESP-2023-011", "status": "brewing", "estimated_seconds": 38 }
+
+Question: Brew a medium latte with medium strength and oat milk.
+Call: { "func_call": "brew_latte", "size": "medium", "strength": "medium", "milk": "oat" }
+Response: { "order_id": "LAT-2023-012", "status": "brewing", "estimated_seconds": 62 }

@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Purge the stale lock file preventing the scheduler from starting.
+Call: { "func_call": "delete_file", "source": "/var/run/scheduler_lock_7734.pid", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /var/run/scheduler_lock_7734.pid" }
+
+Question: Establish a folder hierarchy for the legal department's contract archives.
+Call: { "func_call": "create_dir", "source": "/srv/legal/contracts/2024_archive", "destination": "" }
+Response: { "success": true, "message": "Directory /srv/legal/contracts/2024_archive created successfully" }
+
+Question: Discard the corrupted video render output from the morning batch job.
+Call: { "func_call": "delete_file", "source": "/home/render/output_corrupt_102.mkv", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /home/render/output_corrupt_102.mkv" }
+
+Question: Provision a new storage path for incoming email attachments.
+Call: { "func_call": "create_dir", "source": "/var/mail/incoming/attachments_bulk", "destination": "" }
+Response: { "success": true, "message": "Directory /var/mail/incoming/attachments_bulk created successfully" }
+
+Question: Eliminate the outdated SSL certificate file that expired last month.
+Call: { "func_call": "delete_file", "source": "/etc/ssl/certs/domain_old_2023.crt", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /etc/ssl/certs/domain_old_2023.crt" }
+
+Question: Generate a directory to hold temporary exports for the analytics dashboard.
+Call: { "func_call": "create_dir", "source": "/tmp/analytics/exports_pending", "destination": "" }
+Response: { "success": true, "message": "Directory /tmp/analytics/exports_pending created successfully" }
+
+Question: Remove the debug trace file generated during the network timeout incident.
+Call: { "func_call": "delete_file", "source": "/var/log/net/debug_trace_5592.log", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /var/log/net/debug_trace_5592.log" }
+
+Question: Create a dedicated folder for storing user upload thumbnails.
+Call: { "func_call": "create_dir", "source": "/cdn/users/thumbnails/new_batch", "destination": "" }
+Response: { "success": true, "message": "Directory /cdn/users/thumbnails/new_batch created successfully" }
+
+Question: Delete the residual migration script left over after the database upgrade.
+Call: { "func_call": "delete_file", "source": "/opt/db/migrate_v2_residual.sh", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /opt/db/migrate_v2_residual.sh" }
+
+Question: Initialize a workspace for the mobile team's beta build assets.
+Call: { "func_call": "create_dir", "source": "/builds/mobile/beta_assets_v3", "destination": "" }
+Response: { "success": true, "message": "Directory /builds/mobile/beta_assets_v3 created successfully" }
+
+Question: Clean up the temporary compression buffer used during the zip operation.
+Call: { "func_call": "delete_file", "source": "/tmp/compress_buffer_8812.tmp", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/compress_buffer_8812.tmp" }
+
+Question: Set up a directory for archiving completed CI/CD pipeline logs.
+Call: { "func_call": "create_dir", "source": "/var/ci/logs/completed_runs", "destination": "" }
+Response: { "success": true, "message": "Directory /var/ci/logs/completed_runs created successfully" }

@@ -1,0 +1,51 @@
+Available Tools: create_network | list_networks | create_volume | list_volumes | mount_volume
+Call Schema: { "func_call": "string", "name": "string", "driver": "string", "container_id": "string", "mount_path": "string" }
+Response Schema: { "id": "string", "name": "string", "driver": "string", "scope": "string", "containers": ["string"] }
+---
+Question: Generate a bridge network called auth-service-link for secure token validation modules.
+Call: { "func_call": "create_network", "name": "auth-service-link", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_brd_auth_4k5l6m7n", "name": "auth-service-link", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: Enumerate existing networks to confirm the presence of the analytics-data-pipe.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_spark", "cnt_kafka", "cnt_elastic"] }
+
+Question: Deploy an overlay network named geo-replica-sync for cross-region database synchronization.
+Call: { "func_call": "create_network", "name": "geo-replica-sync", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_geo_8p9o0i1u", "name": "geo-replica-sync", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Instantiate a host network labeled gpu-render-farm for direct graphics processing access.
+Call: { "func_call": "create_network", "name": "gpu-render-farm", "driver": "host", "container_id": "", "mount_path": "" }
+Response: { "id": "net_host_gpu_2a3s4d5f", "name": "gpu-render-farm", "driver": "host", "scope": "local", "containers": [] }
+
+Question: Construct a standard bridge network for the internal-mail-relay system.
+Call: { "func_call": "create_network", "name": "internal-mail-relay", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_brd_mail_6g7h8j9k", "name": "internal-mail-relay", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: Fetch the network registry to inspect connectivity for the log-aggregator cluster.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_fluentd", "cnt_kibana"] }
+
+Question: Establish an overlay network titled edge-compute-grid for distributed IoT processing.
+Call: { "func_call": "create_network", "name": "edge-compute-grid", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_edge_1q2w3e4r", "name": "edge-compute-grid", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Define a bridge network named staging-env-isolate for pre-production validation.
+Call: { "func_call": "create_network", "name": "staging-env-isolate", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_brd_stg_5t6y7u8i", "name": "staging-env-isolate", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: Survey all active networks to validate the configuration of the backup-archive-net.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_rclone", "cnt_minio", "cnt_restic"] }
+
+Question: Provisions a host driver network called low-latency-trader for high-frequency trading bots.
+Call: { "func_call": "create_network", "name": "low-latency-trader", "driver": "host", "container_id": "", "mount_path": "" }
+Response: { "id": "net_host_trd_9o0p1a2s", "name": "low-latency-trader", "driver": "host", "scope": "local", "containers": [] }
+
+Question: Form an overlay network designated service-discovery-mesh to link dynamic microservices.
+Call: { "func_call": "create_network", "name": "service-discovery-mesh", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_disc_3d4f5g6h", "name": "service-discovery-mesh", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Audit the network list to ensure the ml-training-cluster-net is operational.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_tensorflow", "cnt_pytorch", "cnt_scheduler"] }

@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: Determine if we have sufficient Bluetooth speakers in the Boston warehouse, given a reorder point of 40 units.
+Call: { "func_call": "check_availability", "sku": "SPK-BT-RED", "location_id": "BOS-WH-13", "threshold": 40 }
+Response: { "sku": "SPK-BT-RED", "product_name": "Bluetooth Speaker Red", "quantity": 18, "location": "BOS-WH-13", "status": "low_stock" }
+
+Question: What is the current inventory count for standing desks at our Phoenix distribution center?
+Call: { "func_call": "get_stock_level", "sku": "DSK-STD-WHT", "location_id": "PHX-DC-14", "threshold": 0 }
+Response: { "sku": "DSK-STD-WHT", "product_name": "Standing Desk White", "quantity": 55, "location": "PHX-DC-14", "status": "in_stock" }
+
+Question: List all products in the Denver facility that have fallen below the safety threshold of 15 units.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "DEN-FAC-15", "threshold": 15 }
+Response: { "sku": "CHR-ERG-BLK", "product_name": "Ergonomic Chair Black", "quantity": 7, "location": "DEN-FAC-15", "status": "low_stock" }
+
+Question: Retrieve the stock numbers for Ethernet cables across all racks in the Atlanta depot.
+Call: { "func_call": "get_stock_by_location", "sku": "CBL-ETH-25FT", "location_id": "ATL-DEP-16", "threshold": 0 }
+Response: { "sku": "CBL-ETH-25FT", "product_name": "Ethernet Cable 25ft", "quantity": 420, "location": "ATL-DEP-16", "status": "in_stock" }
+
+Question: Is the noise-canceling headphone completely out of stock in the Dublin hub if our minimum is 5?
+Call: { "func_call": "check_availability", "sku": "HP-NC-SLV", "location_id": "DUB-HUB-17", "threshold": 5 }
+Response: { "sku": "HP-NC-SLV", "product_name": "Noise Canceling Headphone Silver", "quantity": 0, "location": "DUB-HUB-17", "status": "out_of_stock" }
+
+Question: Check the inventory status for tablet stands in the Vancouver warehouse against a threshold of 30.
+Call: { "func_call": "get_stock_level", "sku": "STD-TAB-ALU", "location_id": "VAN-WH-18", "threshold": 30 }
+Response: { "sku": "STD-TAB-ALU", "product_name": "Tablet Stand Aluminum", "quantity": 28, "location": "VAN-WH-18", "status": "low_stock" }
+
+Question: Find any items in the Mumbai fulfillment center where stock is below the threshold of 60 units.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "MUM-FUL-19", "threshold": 60 }
+Response: { "sku": "TAB-PRO-11", "product_name": "Tablet Pro 11 inch", "quantity": 22, "location": "MUM-FUL-19", "status": "low_stock" }
+
+Question: How many laser printers are currently held in the Sydney regional office?
+Call: { "func_call": "get_stock_by_location", "sku": "PRT-LSR-BW", "location_id": "SYD-REG-20", "threshold": 0 }
+Response: { "sku": "PRT-LSR-BW", "product_name": "Laser Printer B&W", "quantity": 34, "location": "SYD-REG-20", "status": "in_stock" }
+
+Question: Verify availability of surge protectors in the Seoul node, alerting if stock drops below 50.
+Call: { "func_call": "check_availability", "sku": "PWR-SRG-12", "location_id": "SEL-NODE-21", "threshold": 50 }
+Response: { "sku": "PWR-SRG-12", "product_name": "Surge Protector 12 Outlet", "quantity": 85, "location": "SEL-NODE-21", "status": "in_stock" }
+
+Question: Get the stock level for microphones in the Rome warehouse with a critical threshold of 8.
+Call: { "func_call": "get_stock_level", "sku": "MIC-USB-COND", "location_id": "ROM-WH-22", "threshold": 8 }
+Response: { "sku": "MIC-USB-COND", "product_name": "USB Condenser Microphone", "quantity": 4, "location": "ROM-WH-22", "status": "low_stock" }
+
+Question: Identify all products in the Houston storage unit that are below the reorder point of 75.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "HOU-STO-23", "threshold": 75 }
+Response: { "sku": "CBL-USC-3PK", "product_name": "USB-C Cable 3-Pack", "quantity": 30, "location": "HOU-STO-23", "status": "low_stock" }
+
+Question: Check the quantity of monitor arms available in the Osaka logistics center.
+Call: { "func_call": "get_stock_by_location", "sku": "ARM-MON-DUL", "location_id": "OSA-LOG-24", "threshold": 0 }
+Response: { "sku": "ARM-MON-DUL", "product_name": "Dual Monitor Arm", "quantity": 102, "location": "OSA-LOG-24", "status": "in_stock" }

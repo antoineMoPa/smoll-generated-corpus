@@ -1,0 +1,51 @@
+Available Tools: pull_image | push_image | build_image | list_images | remove_image | tag_image
+Call Schema: { "func_call": "string", "image": "string", "tag": "string", "registry": "string", "dockerfile": "string" }
+Response Schema: { "image_id": "string", "repository": "string", "tag": "string", "size_mb": number, "created": "string" }
+---
+Question: Pull the latest version of the official nginx image from Docker Hub.
+Call: { "func_call": "pull_image", "image": "nginx", "tag": "latest", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:a6bd71f48f6839d9faae1f29d3b2b7c3c7a5b3d2e1f0a9b8c7d6e5f4a3b2c1d0", "repository": "docker.io/library/nginx", "tag": "latest", "size_mb": 142.5, "created": "2023-10-15T08:30:00Z" }
+
+Question: Push the custom backend API image tagged v1.2.0 to our private registry at registry.internal.corp.
+Call: { "func_call": "push_image", "image": "backend-api", "tag": "v1.2.0", "registry": "registry.internal.corp", "dockerfile": "" }
+Response: { "image_id": "sha256:b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8", "repository": "registry.internal.corp/dev/backend-api", "tag": "v1.2.0", "size_mb": 315.8, "created": "2023-10-14T14:22:10Z" }
+
+Question: Retrieve the python 3.9-slim image from the official library.
+Call: { "func_call": "pull_image", "image": "python", "tag": "3.9-slim", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9", "repository": "docker.io/library/python", "tag": "3.9-slim", "size_mb": 118.2, "created": "2023-09-20T11:45:30Z" }
+
+Question: Upload the redis cache image with tag 7.0-alpine to the cloud registry at gcr.io/my-project.
+Call: { "func_call": "push_image", "image": "redis", "tag": "7.0-alpine", "registry": "gcr.io/my-project", "dockerfile": "" }
+Response: { "image_id": "sha256:d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0", "repository": "gcr.io/my-project/redis", "tag": "7.0-alpine", "size_mb": 32.4, "created": "2023-10-16T09:15:45Z" }
+
+Question: Download the node 18 image specifically from the Docker Hub mirror.
+Call: { "func_call": "pull_image", "image": "node", "tag": "18", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1", "repository": "docker.io/library/node", "tag": "18", "size_mb": 950.1, "created": "2023-10-10T16:00:00Z" }
+
+Question: Push the frontend react application built with tag prod-v3 to our AWS ECR repository.
+Call: { "func_call": "push_image", "image": "frontend-react", "tag": "prod-v3", "registry": "123456789012.dkr.ecr.us-east-1.amazonaws.com", "dockerfile": "" }
+Response: { "image_id": "sha256:f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2", "repository": "123456789012.dkr.ecr.us-east-1.amazonaws.com/frontend-react", "tag": "prod-v3", "size_mb": 420.7, "created": "2023-10-17T10:30:22Z" }
+
+Question: Pull the postgres database image version 15.2 for local development.
+Call: { "func_call": "pull_image", "image": "postgres", "tag": "15.2", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3", "repository": "docker.io/library/postgres", "tag": "15.2", "size_mb": 385.3, "created": "2023-08-05T13:20:15Z" }
+
+Question: Push the microservice auth-service tagged stable to the internal Harbor registry.
+Call: { "func_call": "push_image", "image": "auth-service", "tag": "stable", "registry": "harbor.company.local", "dockerfile": "" }
+Response: { "image_id": "sha256:b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4", "repository": "harbor.company.local/microservices/auth-service", "tag": "stable", "size_mb": 178.9, "created": "2023-10-12T08:45:33Z" }
+
+Question: Fetch the ubuntu 22.04 base image from the default registry.
+Call: { "func_call": "pull_image", "image": "ubuntu", "tag": "22.04", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5", "repository": "docker.io/library/ubuntu", "tag": "22.04", "size_mb": 77.8, "created": "2023-04-20T09:00:00Z" }
+
+Question: Upload the data-processor image with the nightly build tag to the GitLab container registry.
+Call: { "func_call": "push_image", "image": "data-processor", "tag": "nightly", "registry": "registry.gitlab.com", "dockerfile": "" }
+Response: { "image_id": "sha256:d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6", "repository": "registry.gitlab.com/group/data-processor", "tag": "nightly", "size_mb": 512.4, "created": "2023-10-18T02:15:10Z" }
+
+Question: Pull the mongo 6.0 image for the database cluster setup.
+Call: { "func_call": "pull_image", "image": "mongo", "tag": "6.0", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7", "repository": "docker.io/library/mongo", "tag": "6.0", "size_mb": 690.2, "created": "2023-07-11T15:40:55Z" }
+
+Question: Push the logging-agent image tagged v2.1.5 to the Azure Container Registry.
+Call: { "func_call": "push_image", "image": "logging-agent", "tag": "v2.1.5", "registry": "myregistry.azurecr.io", "dockerfile": "" }
+Response: { "image_id": "sha256:f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8", "repository": "myregistry.azurecr.io/logging-agent", "tag": "v2.1.5", "size_mb": 145.6, "created": "2023-10-13T11:25:40Z" }

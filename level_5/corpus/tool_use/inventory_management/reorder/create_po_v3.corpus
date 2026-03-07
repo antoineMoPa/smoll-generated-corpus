@@ -1,0 +1,95 @@
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Procure 850 resistors (SKU-RES-15) from CircuitWorld Ltd, with delivery set for January 10th.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-RES-15", "quantity": 850, "supplier_id": "SUP-CW-442", "expected_delivery": "2024-01-10" }
+Response: { "po_id": "PO-2024-00114", "sku": "SKU-RES-15", "quantity": 850, "supplier": "CircuitWorld Ltd", "status": "Pending", "expected_delivery": "2024-01-10" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: We require 420 valves, model SKU-VLV-29, from PressurePro Systems, arriving by January 5.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-VLV-29", "quantity": 420, "supplier_id": "SUP-PP-559", "expected_delivery": "2024-01-05" }
+Response: { "po_id": "PO-2024-00115", "sku": "SKU-VLV-29", "quantity": 420, "supplier": "PressurePro Systems", "status": "Confirmed", "expected_delivery": "2024-01-05" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Initiate an order for 2200 filters (SKU-FLT-03) via CleanAir Technologies, expected delivery December 28.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-FLT-03", "quantity": 2200, "supplier_id": "SUP-CA-667", "expected_delivery": "2023-12-28" }
+Response: { "po_id": "PO-2023-99116", "sku": "SKU-FLT-03", "quantity": 2200, "supplier": "CleanAir Technologies", "status": "Processing", "expected_delivery": "2023-12-28" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Place a request for 95 gearboxes (SKU-GBX-77) from MechDrive Inc., to be delivered on January 15.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-GBX-77", "quantity": 95, "supplier_id": "SUP-MD-881", "expected_delivery": "2024-01-15" }
+Response: { "po_id": "PO-2024-00117", "sku": "SKU-GBX-77", "quantity": 95, "supplier": "MechDrive Inc.", "status": "Pending", "expected_delivery": "2024-01-15" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Order 1600 bearings (SKU-BRG-50) from RollTech Solutions, delivery needed by December 30.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-BRG-50", "quantity": 1600, "supplier_id": "SUP-RT-994", "expected_delivery": "2023-12-30" }
+Response: { "po_id": "PO-2023-99118", "sku": "SKU-BRG-50", "quantity": 1600, "supplier": "RollTech Solutions", "status": "Confirmed", "expected_delivery": "2023-12-30" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: We need to restock 330 switches (SKU-SWT-11) from ElectroSwitch Corp, expected arrival January 8.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-SWT-11", "quantity": 330, "supplier_id": "SUP-ES-102", "expected_delivery": "2024-01-08" }
+Response: { "po_id": "PO-2024-00119", "sku": "SKU-SWT-11", "quantity": 330, "supplier": "ElectroSwitch Corp", "status": "Processing", "expected_delivery": "2024-01-08" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Generate a PO for 550 tubes (SKU-TUB-66) supplied by MetalForm Industries, arriving January 20.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-TUB-66", "quantity": 550, "supplier_id": "SUP-MF-215", "expected_delivery": "2024-01-20" }
+Response: { "po_id": "PO-2024-00120", "sku": "SKU-TUB-66", "quantity": 550, "supplier": "MetalForm Industries", "status": "Pending", "expected_delivery": "2024-01-20" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Request 1100 clamps (SKU-CLP-24) from GripStrong LLC, delivery scheduled for January 3.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-CLP-24", "quantity": 1100, "supplier_id": "SUP-GS-328", "expected_delivery": "2024-01-03" }
+Response: { "po_id": "PO-2024-00121", "sku": "SKU-CLP-24", "quantity": 1100, "supplier": "GripStrong LLC", "status": "Confirmed", "expected_delivery": "2024-01-03" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Order 65 connectors (SKU-CON-92) from LinkUp Distributors with an expected delivery date of December 25.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-CON-92", "quantity": 65, "supplier_id": "SUP-LU-431", "expected_delivery": "2023-12-25" }
+Response: { "po_id": "PO-2023-99122", "sku": "SKU-CON-92", "quantity": 65, "supplier": "LinkUp Distributors", "status": "Processing", "expected_delivery": "2023-12-25" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: We need to restock 2800 washers (SKU-WSH-05) from FastenRight Co. by January 12.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-WSH-05", "quantity": 2800, "supplier_id": "SUP-FR-544", "expected_delivery": "2024-01-12" }
+Response: { "po_id": "PO-2024-00123", "sku": "SKU-WSH-05", "quantity": 2800, "supplier": "FastenRight Co.", "status": "Pending", "expected_delivery": "2024-01-12" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Create a purchase order for 720 relays (SKU-RLY-38) from PowerControl Systems, delivery expected January 18.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-RLY-38", "quantity": 720, "supplier_id": "SUP-PC-657", "expected_delivery": "2024-01-18" }
+Response: { "po_id": "PO-2024-00124", "sku": "SKU-RLY-38", "quantity": 720, "supplier": "PowerControl Systems", "status": "Confirmed", "expected_delivery": "2024-01-18" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Order 45 nozzles (SKU-NZL-71) from SprayTech Inc, to be delivered by January 25.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-NZL-71", "quantity": 45, "supplier_id": "SUP-ST-760", "expected_delivery": "2024-01-25" }
+Response: { "po_id": "PO-2024-00125", "sku": "SKU-NZL-71", "quantity": 45, "supplier": "SprayTech Inc", "status": "Processing", "expected_delivery": "2024-01-25" }

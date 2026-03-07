@@ -1,0 +1,51 @@
+Available Tools: get_sensor_reading | get_all_sensors | get_sensor_by_location | get_sensor_battery
+Call Schema: { "func_call": "string", "sensor_id": "string", "location": "string", "type": "temperature|humidity|motion|co2|light" }
+Response Schema: { "sensor_id": "string", "type": "string", "value": number, "unit": "string", "timestamp": "string", "battery_pct": number }
+---
+Question: What is the temperature reading in the warehouse loading dock?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "WH-TEMP-09", "location": "Warehouse Loading Dock", "type": "temperature" }
+Response: { "sensor_id": "WH-TEMP-09", "type": "temperature", "value": 18.5, "unit": "celsius", "timestamp": "2023-10-27T15:10:05Z", "battery_pct": 84 }
+
+Question: Check the humidity levels inside the greenhouse sector B.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "GH-HUM-12", "location": "Greenhouse Sector B", "type": "humidity" }
+Response: { "sensor_id": "GH-HUM-12", "type": "humidity", "value": 62, "unit": "percent", "timestamp": "2023-10-27T15:10:08Z", "battery_pct": 77 }
+
+Question: Is there any movement detected in the north stairwell?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "N-STAIR-MOT-04", "location": "North Stairwell", "type": "motion" }
+Response: { "sensor_id": "N-STAIR-MOT-04", "type": "motion", "value": 1, "unit": "boolean", "timestamp": "2023-10-27T15:10:11Z", "battery_pct": 91 }
+
+Question: How high is the CO2 concentration in the executive boardroom?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "EXEC-CO2-07", "location": "Executive Boardroom", "type": "co2" }
+Response: { "sensor_id": "EXEC-CO2-07", "type": "co2", "value": 920, "unit": "ppm", "timestamp": "2023-10-27T15:10:14Z", "battery_pct": 65 }
+
+Question: What is the current light intensity in the library study area?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "LIB-LGT-05", "location": "Library Study Area", "type": "light" }
+Response: { "sensor_id": "LIB-LGT-05", "type": "light", "value": 280, "unit": "lux", "timestamp": "2023-10-27T15:10:17Z", "battery_pct": 88 }
+
+Question: Retrieve the temperature data for the cold storage unit.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "COLD-TEMP-02", "location": "Cold Storage Unit", "type": "temperature" }
+Response: { "sensor_id": "COLD-TEMP-02", "type": "temperature", "value": -4.2, "unit": "celsius", "timestamp": "2023-10-27T15:10:20Z", "battery_pct": 93 }
+
+Question: Monitor the humidity in the basement archive room.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "BASE-HUM-08", "location": "Basement Archive Room", "type": "humidity" }
+Response: { "sensor_id": "BASE-HUM-08", "type": "humidity", "value": 45, "unit": "percent", "timestamp": "2023-10-27T15:10:23Z", "battery_pct": 72 }
+
+Question: Detect if anyone is present in the west corridor.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "W-CORR-MOT-06", "location": "West Corridor", "type": "motion" }
+Response: { "sensor_id": "W-CORR-MOT-06", "type": "motion", "value": 0, "unit": "boolean", "timestamp": "2023-10-27T15:10:26Z", "battery_pct": 56 }
+
+Question: What are the carbon dioxide levels in the gymnasium?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "GYM-CO2-11", "location": "Gymnasium", "type": "co2" }
+Response: { "sensor_id": "GYM-CO2-11", "type": "co2", "value": 1100, "unit": "ppm", "timestamp": "2023-10-27T15:10:29Z", "battery_pct": 49 }
+
+Question: Measure the ambient lighting in the rooftop garden.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "ROOF-LGT-03", "location": "Rooftop Garden", "type": "light" }
+Response: { "sensor_id": "ROOF-LGT-03", "type": "light", "value": 1250, "unit": "lux", "timestamp": "2023-10-27T15:10:32Z", "battery_pct": 81 }
+
+Question: Get the current temperature in the server rack aisle 4.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "SRV-TEMP-15", "location": "Server Rack Aisle 4", "type": "temperature" }
+Response: { "sensor_id": "SRV-TEMP-15", "type": "temperature", "value": 24.8, "unit": "celsius", "timestamp": "2023-10-27T15:10:35Z", "battery_pct": 96 }
+
+Question: Check the relative humidity in the printing press room.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "PRINT-HUM-09", "location": "Printing Press Room", "type": "humidity" }
+Response: { "sensor_id": "PRINT-HUM-09", "type": "humidity", "value": 38, "unit": "percent", "timestamp": "2023-10-27T15:10:38Z", "battery_pct": 67 }

@@ -1,0 +1,59 @@
+Context: After the meeting, Marcus told David that he would handle the presentation slides.
+Input: {"question": "Who does 'he' refer to in the sentence?"}
+Output: {"answer": "Marcus"}
+
+Context: Sarah and Emily went to the bakery, but she forgot her wallet at home.
+Input: {"question": "Who does 'she' refer to in this context?"}
+Output: {"answer": "Sarah"}
+
+Context: The twins, Leo and Mia, argued until they finally agreed on a movie.
+Input: {"question": "Who does 'they' refer to in the story?"}
+Output: {"answer": "Leo and Mia"}
+
+Context: When James confronted Robert about the missing file, he admitted to deleting it by mistake.
+Input: {"question": "Who does 'he' refer to when admitting the mistake?"}
+Output: {"answer": "Robert"}
+
+Context: Dr. Chen explained the diagnosis to Mrs. Patel, but she seemed confused by the terminology.
+Input: {"question": "Who does 'she' refer to in this scenario?"}
+Output: {"answer": "Mrs. Patel"}
+
+Context: Alex and Jordan practiced for hours, yet they still felt unprepared for the audition.
+Input: {"question": "Who does 'they' refer to in the sentence?"}
+Output: {"answer": "Alex and Jordan"}
+
+Context: Before leaving the house, Tom reminded Kevin that he needed to lock the back door.
+Input: {"question": "Who does 'he' refer to regarding the door?"}
+Output: {"answer": "Kevin"}
+
+Context: Linda showed the painting to her sister, Grace, because she thought it needed a second opinion.
+Input: {"question": "Who does 'she' refer to when seeking an opinion?"}
+Output: {"answer": "Linda"}
+
+Context: The coach spoke to the captain and the referee, but they ignored his warning.
+Input: {"question": "Who does 'they' refer to in this interaction?"}
+Output: {"answer": "the captain and the referee"}
+
+Context: While hiking, Daniel tripped over a root and hurt his ankle, so Sam helped him up.
+Input: {"question": "Who does 'him' refer to in the sentence?"}
+Output: {"answer": "Daniel"}
+
+Context: Maria asked Elena if she could borrow the car for the weekend.
+Input: {"question": "Who does 'she' refer to when asking to borrow the car?"}
+Output: {"answer": "Maria"}
+
+Context: The CEO and the CFO reviewed the budget, and they decided to cut travel expenses.
+Input: {"question": "Who does 'they' refer to in the decision?"}
+Output: {"answer": "The CEO and the CFO"}
+
+Context: Peter watched as William fixed the engine, amazed that he could do it so quickly.
+Input: {"question": "Who does 'he' refer to regarding the engine repair?"}
+Output: {"answer": "William"}
+
+Context: Alice gave the book to Betty, but she returned it the next day saying it was too difficult.
+Input: {"question": "Who does 'she' refer to when returning the book?"}
+Output: {"answer": "Betty"}
+
+Context: Noah and Oliver built a treehouse, and they painted it blue yesterday.
+Input: {"question": "Who does 'they' refer to in the painting activity?"}
+Output: {"answer": "Noah and Oliver"}

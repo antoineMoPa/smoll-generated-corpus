@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Locate any individual named Thomas Anderson in the records.
+Call: { "func_call": "search_contact", "query": "Thomas Anderson", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_2041", "name": "Thomas Anderson", "email": "t.anderson@matrix-sys.com", "company": "Matrix Systems", "phone": "+1-555-0112" }], "total": 1 }
+
+Question: Retrieve the profile for the email address jennifer.lee@oceanic-airlines.net.
+Call: { "func_call": "search_contact", "query": "jennifer.lee@oceanic-airlines.net", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_3912", "name": "Jennifer Lee", "email": "jennifer.lee@oceanic-airlines.net", "company": "Oceanic Airlines", "phone": "+1-555-0887" }], "total": 1 }
+
+Question: Search for all entries matching the name Christopher Martin.
+Call: { "func_call": "search_contact", "query": "Christopher Martin", "field": "name", "limit": 20 }
+Response: { "contacts": [{ "id": "c_5501", "name": "Christopher Martin", "email": "c.martin@redwood-builders.io", "company": "Redwood Builders", "phone": "+1-555-0234" }, { "id": "c_6723", "name": "Chris Martin", "email": "chris.m@skyline-arch.org", "company": "Skyline Architecture", "phone": "+1-555-0991" }], "total": 2 }
+
+Question: Determine the identity behind the email r.jackson@velocity-motors.com.
+Call: { "func_call": "search_contact", "query": "r.jackson@velocity-motors.com", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_8844", "name": "Rachel Jackson", "email": "r.jackson@velocity-motors.com", "company": "Velocity Motors", "phone": "+1-555-0456" }], "total": 1 }
+
+Question: Find every contact listed as Amanda White.
+Call: { "func_call": "search_contact", "query": "Amanda White", "field": "name", "limit": 15 }
+Response: { "contacts": [{ "id": "c_1123", "name": "Amanda White", "email": "a.white@pure-water-tech.com", "company": "Pure Water Tech", "phone": "+1-555-0678" }, { "id": "c_2234", "name": "Amanda L. White", "email": "awhite@crystal-clear.org", "company": "Crystal Clear Services", "phone": "+1-555-0345" }], "total": 2 }
+
+Question: Look up the user associated with b.kumar@spice-route-imports.co.
+Call: { "func_call": "search_contact", "query": "b.kumar@spice-route-imports.co", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_4455", "name": "Raj Kumar", "email": "b.kumar@spice-route-imports.co", "company": "Spice Route Imports", "phone": "+91-22-555-0199" }], "total": 1 }
+
+Question: Scan the database for anyone named Patrick O'Brien.
+Call: { "func_call": "search_contact", "query": "Patrick O'Brien", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_7766", "name": "Patrick O'Brien", "email": "pobrien@emerald-insurance.biz", "company": "Emerald Insurance", "phone": "+353-1-555-0821" }], "total": 1 }
+
+Question: Identify the person using the email address sophie.dubois@paris-fashion.fr.
+Call: { "func_call": "search_contact", "query": "sophie.dubois@paris-fashion.fr", "field": "email", "limit": 3 }
+Response: { "contacts": [{ "id": "c_9901", "name": "Sophie Dubois", "email": "sophie.dubois@paris-fashion.fr", "company": "Paris Fashion House", "phone": "+33-1-555-0432" }], "total": 1 }
+
+Question: Search for contacts with the name Daniel Brown.
+Call: { "func_call": "search_contact", "query": "Daniel Brown", "field": "name", "limit": 25 }
+Response: { "contacts": [{ "id": "c_3321", "name": "Daniel Brown", "email": "d.brown@titan-logistics.com", "company": "Titan Logistics", "phone": "+1-555-0119" }, { "id": "c_4432", "name": "Dan Brown", "email": "dan.b@urban-planning.gov", "company": "Urban Planning Dept", "phone": "+1-555-0287" }, { "id": "c_5543", "name": "Daniel J. Brown", "email": "djbrown@coastal-realty.org", "company": "Coastal Realty", "phone": "+1-555-0398" }], "total": 3 }
+
+Question: Who is the owner of h.nakamura@sakura-electronics.jp?
+Call: { "func_call": "search_contact", "query": "h.nakamura@sakura-electronics.jp", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_6654", "name": "Hiroshi Nakamura", "email": "h.nakamura@sakura-electronics.jp", "company": "Sakura Electronics", "phone": "+81-3-555-0765" }], "total": 1 }
+
+Question: Find a contact named Elizabeth Taylor.
+Call: { "func_call": "search_contact", "query": "Elizabeth Taylor", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_8876", "name": "Elizabeth Taylor", "email": "e.taylor@grand-hotel-group.com", "company": "Grand Hotel Group", "phone": "+44-20-555-0912" }], "total": 1 }
+
+Question: Which contact uses the email address carlos.rivera@fiesta-foods.mx?
+Call: { "func_call": "search_contact", "query": "carlos.rivera@fiesta-foods.mx", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_1098", "name": "Carlos Rivera", "email": "carlos.rivera@fiesta-foods.mx", "company": "Fiesta Foods", "phone": "+52-55-555-0334" }], "total": 1 }

@@ -1,0 +1,51 @@
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a welcome message to a new subscriber in Madrid.
+Call: { "func_call": "send_sms", "to": "+34612345678", "message": "Welcome to FitLife! Your journey starts now. Reply STOP to opt out.", "from": "FitLifeES" }
+Response: { "message_id": "msg_es_7738291", "to": "+34612345678", "status": "sent", "cost": 0.039, "timestamp": "2023-10-27T15:01:12Z" }
+
+Question: Distribute concert ticket updates to fans in Seoul.
+Call: { "func_call": "send_bulk_sms", "to": "+821012345678,+821012345679,+821012345680", "message": "Concert rescheduled to Oct 30. Tickets remain valid. Details: kpop.link/tix", "from": "KPopLive" }
+Response: { "message_id": "bulk_kr_9921003", "to": "+821012345678,+821012345679,+821012345680", "status": "processing", "cost": 0.018, "timestamp": "2023-10-27T15:03:45Z" }
+
+Question: Verify the delivery of a banking alert sent to a client in Rome.
+Call: { "func_call": "get_sms_status", "to": "+393312345678", "message": "STATUS_CHECK", "from": "BankIT" }
+Response: { "message_id": "msg_it_4429102", "to": "+393312345678", "status": "delivered", "cost": 0.044, "timestamp": "2023-10-27T15:05:22Z" }
+
+Question: Fetch the log of all promotional texts sent during the Amsterdam festival.
+Call: { "func_call": "get_sms_history", "to": "campaign_amsterdam_fest", "message": "HISTORY_REQUEST", "from": "EventNL" }
+Response: { "message_id": "hist_nl_1102938", "to": "campaign_amsterdam_fest", "status": "retrieved", "cost": 0.00, "timestamp": "2023-10-27T15:07:18Z" }
+
+Question: Alert drivers in Mexico City about traffic delays.
+Call: { "func_call": "send_bulk_sms", "to": "+525512345678,+525512345679", "message": "Heavy traffic on Reforma Ave. Expect 20min delay. Alternative route suggested.", "from": "WazeMX" }
+Response: { "message_id": "bulk_mx_6671290", "to": "+525512345678,+525512345679", "status": "sent", "cost": 0.025, "timestamp": "2023-10-27T15:09:33Z" }
+
+Question: Send a reservation confirmation to a diner in Vancouver.
+Call: { "func_call": "send_sms", "to": "+16045550199", "message": "Table for 4 confirmed at 7 PM tonight. See you soon! - BistoVan", "from": "BistoVan" }
+Response: { "message_id": "msg_ca_8821092", "to": "+16045550199", "status": "sent", "cost": 0.008, "timestamp": "2023-10-27T15:11:05Z" }
+
+Question: Check the read status of a survey link sent to respondents in Stockholm.
+Call: { "func_call": "get_sms_status", "to": "+46701234567", "message": "STATUS_CHECK_SURVEY", "from": "ResearchSE" }
+Response: { "message_id": "msg_se_3391022", "to": "+46701234567", "status": "read", "cost": 0.041, "timestamp": "2023-10-27T15:13:48Z" }
+
+Question: Dispatch a shipping notification to a buyer in Cape Town.
+Call: { "func_call": "send_sms", "to": "+27821234567", "message": "Your order #ZA9921 has shipped. Track: track.co.za/ZA9921", "from": "ShopZA" }
+Response: { "message_id": "msg_za_5510283", "to": "+27821234567", "status": "sent", "cost": 0.019, "timestamp": "2023-10-27T15:15:29Z" }
+
+Question: Broadcast an emergency weather warning to residents in Miami.
+Call: { "func_call": "send_bulk_sms", "to": "+13055550101,+13055550102,+13055550103", "message": "URGENT: Hurricane warning in effect. Seek shelter immediately. Updates: weather.gov", "from": "AlertUS" }
+Response: { "message_id": "bulk_us_2219384", "to": "+13055550101,+13055550102,+13055550103", "status": "sent", "cost": 0.0075, "timestamp": "2023-10-27T15:17:11Z" }
+
+Question: Retrieve history of expired coupons sent to users in Bangkok.
+Call: { "func_call": "get_sms_history", "to": "filter:type=coupon,loc=TH,status=expired", "message": "HISTORY_REQUEST", "from": "DealTH" }
+Response: { "message_id": "hist_th_7729103", "to": "filter:type=coupon,loc=TH,status=expired", "status": "retrieved", "cost": 0.00, "timestamp": "2023-10-27T15:19:42Z" }
+
+Question: Send a class cancellation notice to students in Oslo.
+Call: { "func_call": "send_bulk_sms", "to": "+4791234567,+4791234568", "message": "Chemistry 101 cancelled today due to instructor illness. Check email for updates.", "from": "UniNO" }
+Response: { "message_id": "bulk_no_4420193", "to": "+4791234567,+4791234568", "status": "sent", "cost": 0.046, "timestamp": "2023-10-27T15:21:15Z" }
+
+Question: Confirm the status of a login alert sent to a user in Buenos Aires.
+Call: { "func_call": "get_sms_status", "to": "+5491123456789", "message": "STATUS_CHECK", "from": "SecureAR" }
+Response: { "message_id": "msg_ar_9928371", "to": "+5491123456789", "status": "failed", "cost": 0.031, "timestamp": "2023-10-27T15:23:50Z" }

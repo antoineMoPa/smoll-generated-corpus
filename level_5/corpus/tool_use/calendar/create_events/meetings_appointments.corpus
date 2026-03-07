@@ -1,0 +1,51 @@
+Available Tools: create_event | create_recurring_event | create_all_day_event
+Call Schema: { "func_call": "string", "title": "string", "start": "string", "end": "string", "location": "string", "description": "string" }
+Response Schema: { "event_id": "string", "title": "string", "start": "string", "end": "string", "calendar": "string" }
+---
+Question: Schedule a team standup meeting for tomorrow at 9 AM in the main conference room.
+Call: { "func_call": "create_event", "title": "Team Standup", "start": "2023-10-25T09:00:00Z", "end": "2023-10-25T09:30:00Z", "location": "Conference Room A", "description": "Daily sync with the engineering team." }
+Response: { "event_id": "evt_8923jk2", "title": "Team Standup", "start": "2023-10-25T09:00:00Z", "end": "2023-10-25T09:30:00Z", "calendar": "Work" }
+
+Question: Book a one-on-one with Sarah regarding the Q4 budget review next Tuesday at 2 PM via Zoom.
+Call: { "func_call": "create_event", "title": "1:1 with Sarah - Q4 Budget", "start": "2023-10-31T14:00:00Z", "end": "2023-10-31T14:45:00Z", "location": "https://zoom.us/j/123456789", "description": "Review Q4 budget allocations and approve final numbers." }
+Response: { "event_id": "evt_9921lm3", "title": "1:1 with Sarah - Q4 Budget", "start": "2023-10-31T14:00:00Z", "end": "2023-10-31T14:45:00Z", "calendar": "Work" }
+
+Question: Set up a client kickoff call with Acme Corp for Friday at 10:30 AM.
+Call: { "func_call": "create_event", "title": "Acme Corp Kickoff", "start": "2023-10-27T10:30:00Z", "end": "2023-10-27T11:30:00Z", "location": "Google Meet", "description": "Initial project scope discussion with Acme Corp stakeholders." }
+Response: { "event_id": "evt_7732pq4", "title": "Acme Corp Kickoff", "start": "2023-10-27T10:30:00Z", "end": "2023-10-27T11:30:00Z", "calendar": "Clients" }
+
+Question: Create an appointment for a dentist visit on November 3rd at 3 PM.
+Call: { "func_call": "create_event", "title": "Dentist Appointment", "start": "2023-11-03T15:00:00Z", "end": "2023-11-03T16:00:00Z", "location": "Smile Dental Clinic, 45 Main St", "description": "Routine cleaning and checkup." }
+Response: { "event_id": "evt_5541rs5", "title": "Dentist Appointment", "start": "2023-11-03T15:00:00Z", "end": "2023-11-03T16:00:00Z", "calendar": "Personal" }
+
+Question: Schedule a product demo for the new feature set with the marketing team on Monday at 11 AM in the Boardroom.
+Call: { "func_call": "create_event", "title": "Product Demo: New Features", "start": "2023-10-30T11:00:00Z", "end": "2023-10-30T12:00:00Z", "location": "Boardroom", "description": "Walkthrough of the latest UI updates for the marketing campaign." }
+Response: { "event_id": "evt_3320tu6", "title": "Product Demo: New Features", "start": "2023-10-30T11:00:00Z", "end": "2023-10-30T12:00:00Z", "calendar": "Work" }
+
+Question: Book a lunch meeting with John to discuss the hiring plan at The Green Cafe on Wednesday at 12:30 PM.
+Call: { "func_call": "create_event", "title": "Lunch with John - Hiring Plan", "start": "2023-11-01T12:30:00Z", "end": "2023-11-01T13:30:00Z", "location": "The Green Cafe", "description": "Discuss Q1 hiring needs and budget." }
+Response: { "event_id": "evt_1109vw7", "title": "Lunch with John - Hiring Plan", "start": "2023-11-01T12:30:00Z", "end": "2023-11-01T13:30:00Z", "calendar": "Work" }
+
+Question: Set up a weekly recurring status update every Monday at 9 AM starting next week.
+Call: { "func_call": "create_recurring_event", "title": "Weekly Status Update", "start": "2023-10-30T09:00:00Z", "end": "2023-10-30T09:30:00Z", "location": "Microsoft Teams", "description": "Weekly team progress report." }
+Response: { "event_id": "evt_rec_8821xy8", "title": "Weekly Status Update", "start": "2023-10-30T09:00:00Z", "end": "2023-10-30T09:30:00Z", "calendar": "Work" }
+
+Question: Schedule a training session for new hires on October 28th from 1 PM to 4 PM in Training Room B.
+Call: { "func_call": "create_event", "title": "New Hire Training", "start": "2023-10-28T13:00:00Z", "end": "2023-10-28T16:00:00Z", "location": "Training Room B", "description": "Onboarding session for the October cohort." }
+Response: { "event_id": "evt_6650za9", "title": "New Hire Training", "start": "2023-10-28T13:00:00Z", "end": "2023-10-28T16:00:00Z", "calendar": "HR" }
+
+Question: Create a doctor's appointment for a flu shot on November 5th at 8:30 AM.
+Call: { "func_call": "create_event", "title": "Flu Shot Appointment", "start": "2023-11-05T08:30:00Z", "end": "2023-11-05T09:00:00Z", "location": "City Health Center", "description": "Annual flu vaccination." }
+Response: { "event_id": "evt_4439bc0", "title": "Flu Shot Appointment", "start": "2023-11-05T08:30:00Z", "end": "2023-11-05T09:00:00Z", "calendar": "Personal" }
+
+Question: Book a strategy session with the executive team for next Thursday at 4 PM via Webex.
+Call: { "func_call": "create_event", "title": "Executive Strategy Session", "start": "2023-11-02T16:00:00Z", "end": "2023-11-02T17:30:00Z", "location": "Webex", "description": "Q4 strategic planning and goal setting." }
+Response: { "event_id": "evt_2218de1", "title": "Executive Strategy Session", "start": "2023-11-02T16:00:00Z", "end": "2023-11-02T17:30:00Z", "calendar": "Exec" }
+
+Question: Schedule a code review meeting with the backend team on Friday at 3:30 PM in the Dev Lab.
+Call: { "func_call": "create_event", "title": "Backend Code Review", "start": "2023-10-27T15:30:00Z", "end": "2023-10-27T16:30:00Z", "location": "Dev Lab", "description": "Review pull requests for the authentication module." }
+Response: { "event_id": "evt_9907fg2", "title": "Backend Code Review", "start": "2023-10-27T15:30:00Z", "end": "2023-10-27T16:30:00Z", "calendar": "Engineering" }
+
+Question: Set up a monthly all-hands meeting on the first Friday of every month at 10 AM starting November 3rd.
+Call: { "func_call": "create_recurring_event", "title": "Monthly All-Hands", "start": "2023-11-03T10:00:00Z", "end": "2023-11-03T11:00:00Z", "location": "Main Hall / Zoom Hybrid", "description": "Company-wide updates and Q&A." }
+Response: { "event_id": "evt_rec_7786hi3", "title": "Monthly All-Hands", "start": "2023-11-03T10:00:00Z", "end": "2023-11-03T11:00:00Z", "calendar": "Company" }

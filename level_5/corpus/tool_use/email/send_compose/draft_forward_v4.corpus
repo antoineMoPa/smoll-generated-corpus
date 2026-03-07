@@ -1,0 +1,95 @@
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Draft a welcome email for new interns including the employee handbook and schedule.
+Call: { "func_call": "compose_draft", "to": ["interns-2024@techfirm.com"], "cc": ["hr-manager@techfirm.com"], "subject": "Welcome to the Team - Intern Orientation", "body": "Welcome aboard! We are excited to have you join us for the summer internship program. Please review the attached handbook and your first-week schedule before Monday.", "attachments": ["employee_handbook_2024.pdf", "week1_schedule.xlsx"] }
+Response: { "message_id": "draft_10293", "status": "draft", "timestamp": "2024-05-15T08:30:00Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Forward the invoice from the cloud provider to the accounts payable department.
+Call: { "func_call": "forward_email", "to": ["ap@cloudservices.net"], "cc": ["finance-director@cloudservices.net"], "subject": "Fwd: Invoice #9982 - Monthly Server Costs", "body": "AP Team, please process the attached invoice for last month's server usage. The payment terms are net-30. Let me know if you need the purchase order number.", "attachments": ["invoice_9982.pdf", "usage_report.csv"] }
+Response: { "message_id": "msg_44521", "status": "sent", "timestamp": "2024-05-15T11:15:42Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Create a draft appointment confirmation for Dr. Evans with the patient intake forms.
+Call: { "func_call": "compose_draft", "to": ["patient.jones@email.com"], "cc": [], "subject": "Appointment Confirmation - May 20th with Dr. Evans", "body": "Hello, this confirms your dental cleaning appointment on May 20th at 2:00 PM. Please fill out the attached intake forms and bring them with you.", "attachments": ["intake_form_new.pdf", "insurance_verification.docx"] }
+Response: { "message_id": "draft_33882", "status": "draft", "timestamp": "2024-05-16T09:45:12Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Forward the press release draft to the PR agency for final edits.
+Call: { "func_call": "forward_email", "to": ["editor@prpartners.com"], "cc": ["ceo@innovatech.io"], "subject": "Fwd: Draft Press Release - Product Launch", "body": "Hi Team, here is the latest draft of the press release for the XYZ launch. Please review the technical specs and ensure the tone matches our brand guidelines.", "attachments": ["press_release_xyz_v2.docx", "brand_guidelines.pdf"] }
+Response: { "message_id": "msg_77123", "status": "sent", "timestamp": "2024-05-16T14:20:33Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Draft a feedback request to attendees of the webinar with a survey link.
+Call: { "func_call": "compose_draft", "to": ["webinar-attendees@edutech.org"], "cc": [], "subject": "How was our Webinar on AI Trends?", "body": "Thank you for attending yesterday's session. We value your opinion! Please take a moment to complete the attached survey so we can improve future events.", "attachments": ["feedback_survey_link.txt", "slide_deck_summary.pdf"] }
+Response: { "message_id": "draft_55671", "status": "draft", "timestamp": "2024-05-17T10:05:55Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Forward the maintenance schedule to the facility manager for the office building.
+Call: { "func_call": "forward_email", "to": ["facilities@realestatecorp.com"], "cc": ["building-admin@realestatecorp.com"], "subject": "Fwd: Q2 HVAC Maintenance Schedule", "body": "Please find the upcoming maintenance schedule for the HVAC systems. Work will be performed over the weekend to minimize disruption. Coordinates are in the attachment.", "attachments": ["hvac_schedule_q2.pdf", "floor_plan_levels.pdf"] }
+Response: { "message_id": "msg_88932", "status": "sent", "timestamp": "2024-05-17T16:40:19Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Create a draft partnership proposal to a local nonprofit with our mission statement.
+Call: { "func_call": "compose_draft", "to": ["director@greenearth.org"], "cc": ["outreach@ourcompany.com"], "subject": "Partnership Opportunity - Green Earth & OurCompany", "body": "Dear Director, we admire your work in sustainability and would like to propose a joint initiative. Attached is our mission statement and a preliminary proposal for collaboration.", "attachments": ["mission_statement.pdf", "partnership_proposal_draft.docx"] }
+Response: { "message_id": "draft_22109", "status": "draft", "timestamp": "2024-05-18T13:25:47Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Forward the software bug report to the development team lead with reproduction steps.
+Call: { "func_call": "forward_email", "to": ["dev-lead@softwarehouse.io"], "cc": ["qa-manager@softwarehouse.io"], "subject": "Fwd: Critical Bug - Checkout Page Crash", "body": "Dev Lead, users are reporting crashes on the checkout page when using Safari. I've attached the video reproduction and the console logs. Priority is high.", "attachments": ["crash_video.mp4", "console_logs.txt"] }
+Response: { "message_id": "msg_55443", "status": "sent", "timestamp": "2024-05-18T17:55:03Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Draft a thank you note to the speakers of the conference with the event photos.
+Call: { "func_call": "compose_draft", "to": ["speakers@techconf2024.com"], "cc": ["event-coord@techconf2024.com"], "subject": "Thank You for Speaking at TechConf 2024", "body": "Dear Speakers, thank you for making our conference a success. Your insights were invaluable. We have attached a selection of photos from your sessions for your personal use.", "attachments": ["conference_highlights.zip", "speaker_certificate.pdf"] }
+Response: { "message_id": "draft_66788", "status": "draft", "timestamp": "2024-05-19T09:10:28Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Forward the insurance claim documents to the adjuster for review.
+Call: { "func_call": "forward_email", "to": ["adjuster@safeinsure.com"], "cc": ["policy-holder@myemail.com"], "subject": "Fwd: Claim #55432 - Vehicle Damage Documentation", "body": "Please find attached all necessary documentation for claim #55432 regarding the collision on May 10th. The police report and repair estimates are included.", "attachments": ["police_report.pdf", "repair_estimate_1.pdf", "repair_estimate_2.pdf"] }
+Response: { "message_id": "msg_99210", "status": "sent", "timestamp": "2024-05-19T14:35:51Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Create a draft menu update email to the catering client with seasonal options.
+Call: { "func_call": "compose_draft", "to": ["events@weddingplanner.com"], "cc": ["chef@gourmetcatering.net"], "subject": "Updated Seasonal Menu Options for June Event", "body": "Hello, as we approach June, we have updated our menu to include fresh seasonal ingredients. Please review the attached options and let us know your preferences by Friday.", "attachments": ["summer_menu_2024.pdf", "wine_pairing_list.xlsx"] }
+Response: { "message_id": "draft_44321", "status": "draft", "timestamp": "2024-05-20T11:50:14Z" }
+
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Forward the compliance audit results to the board of directors.
+Call: { "func_call": "forward_email", "to": ["board@healthcareplus.org"], "cc": ["compliance-officer@healthcareplus.org"], "subject": "Fwd: Annual Compliance Audit Results - FY2023", "body": "Board Members, the annual compliance audit has been completed. Overall results are positive with minor recommendations noted in section 4. The full report is attached.", "attachments": ["audit_report_fy2023.pdf", "executive_summary.docx"] }
+Response: { "message_id": "msg_11987", "status": "sent", "timestamp": "2024-05-20T16:05:39Z" }

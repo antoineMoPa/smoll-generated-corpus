@@ -1,0 +1,39 @@
+| Context: The garden center stocked 200 bags of mulch, 150 bags of soil, and 80 bags of fertilizer for the spring season. Each pallet was tagged with the product name and weight. The delivery manifest listed these items separately. | Input: {"question": "What quantities are listed in the stock report?"} | Output: {"answer": ["200 bags", "150 bags", "80 bags"]}
+
+| Context: At the auction, the vintage car sold for $45,000, the motorcycle went for $12,500, and the classic truck fetched $28,750. Bidders competed fiercely for each vehicle. The final hammer fall confirmed all three sales. | Input: {"question": "List all final sale prices mentioned."} | Output: {"answer": ["$45,000", "$12,500", "$28,750"]}
+
+| Context: The swimmer finished the freestyle leg in 55 seconds, the backstroke in 1 minute, and the breaststroke in 1 minute 10 seconds. The referee timed each segment precisely. Her total race time was a new personal best. | Input: {"question": "What were the split times for each stroke?"} | Output: {"answer": ["55 seconds", "1 minute", "1 minute 10 seconds"]}
+
+| Context: The office manager ordered 200 reams of paper, 50 boxes of pens, and 30 packs of sticky notes for the new quarter. The vendor guaranteed shipment by Friday. Supplies will be distributed to departments next Monday. | Input: {"question": "What quantities were requested in the order?"} | Output: {"answer": ["200 reams", "50 boxes", "30 packs"]}
+
+| Context: The smoothie recipe needs 300ml of orange juice, 150g of frozen berries, and 20ml of honey. Blend until smooth and serve immediately over ice. Garnish with a mint leaf if desired. | Input: {"question": "List all ingredient measurements specified."} | Output: {"answer": ["300ml", "150g", "20ml"]}
+
+| Context: The landscaping job required 25 cubic yards of topsoil, 10 cubic yards of compost, and 5 cubic yards of mulch. The crew spread the materials evenly across the yard. The homeowner inspected the work upon completion. | Input: {"question": "What volumes of materials were used?"} | Output: {"answer": ["25 cubic yards", "10 cubic yards", "5 cubic yards"]}
+
+| Context: Admission fees for the museum are $15.00 for adults, $10.00 for students, and $5.00 for children under 12. Group rates are available for parties of ten or more. The gallery opens at 9 AM daily. | Input: {"question": "List all ticket prices mentioned."} | Output: {"answer": ["$15.00", "$10.00", "$5.00"]}
+
+| Context: The sapling increased in height by 15cm in spring, 20cm in summer, and 10cm in autumn. The botanist tracked the growth weekly. The tree showed signs of robust health throughout the year. | Input: {"question": "What growth increments were observed?"} | Output: {"answer": ["15cm", "20cm", "10cm"]}
+
+| Context: The laboratory records show a pressure of 980 hPa, a temperature of 22°C, and a humidity level of 60%. Data loggers capture these metrics hourly. Staff review the trends every morning. | Input: {"question": "List all environmental values recorded."} | Output: {"answer": ["980 hPa", "22°C", "60%"]}
+
+| Context: He purchased 4 crates of apples, 10 sacks of potatoes, and 6 baskets of onions for the market stand. The produce was unloaded before dawn. Sales begin as soon as the stall is set up. | Input: {"question": "What quantities of produce were bought?"} | Output: {"answer": ["4 crates", "10 sacks", "6 baskets"]}
+
+| Context: The water utility bill listed charges of $45.30 for April, $52.10 for May, and $68.90 for June. Consumption rose significantly during the hot weather. The homeowner planned to install saving devices. | Input: {"question": "List all monthly charges shown on the bill."} | Output: {"answer": ["$45.30", "$52.10", "$68.90"]}
+
+| Context: The cycling route covers 30 kilometers total, divided into a 10km uphill climb, a 15km flat stretch, and a 5km descent. Riders often stop at the summit for water. The path is marked with colorful flags. | Input: {"question": "What distances are given for the route segments?"} | Output: {"answer": ["30 kilometers", "10km", "15km", "5km"]}
+
+| Context: The bakery baked 800 croissants on Thursday, 950 on Friday, and 720 on Saturday. Demand surged over the weekend due to the holiday. Extra staff were hired to handle the rush. | Input: {"question": "What production numbers were recorded?"} | Output: {"answer": ["800 croissants", "950 croissants", "720 croissants"]}
+
+| Context: Combine 15ml of solution X, 40ml of solution Y, and 8ml of reagent Z in the beaker. Heat the mixture gently until it boils. Cool down before filtering the precipitate. | Input: {"question": "What volumes of liquids are required?"} | Output: {"answer": ["15ml", "40ml", "8ml"]}
+
+| Context: The rental agency advertised an apartment for $1,800, a studio for $1,200, and a penthouse for $3,500 per month. Prospective tenants filled out applications online. Viewings are scheduled by appointment only. | Input: {"question": "List all rental prices mentioned in the ad."} | Output: {"answer": ["$1,800", "$1,200", "$3,500"]}
+
+| Context: The train ride took 3 hours to Chicago, included a 45-minute stop, and continued for 2.5 hours to Detroit. Travelers enjoyed the scenic views along the lake. The conductor announced arrivals at each station. | Input: {"question": "What time durations are mentioned for the journey?"} | Output: {"answer": ["3 hours", "45 minutes", "2.5 hours"]}
+
+| Context: The spa package costs $90.00 for a massage, $45.00 for a facial, and $150.00 for the full day retreat. Clients can book individual services or the bundle. Appointments fill up quickly during weekends. | Input: {"question": "List all service prices mentioned."} | Output: {"answer": ["$90.00", "$45.00", "$150.00"]}
+
+| Context: The pond project needs 1000 liters of water, 30kg of aquatic plants, and 15kg of decorative stones. Installation requires a weekend of hard work. The ecosystem will balance after a few weeks. | Input: {"question": "What amounts are needed for the pond?"} | Output: {"answer": ["1000 liters", "30kg", "15kg"]}
+
+| Context: The warehouse audit found 60 tablets, 25 printers, and 90 scanners on the shelves. Some devices needed firmware updates before shipping. The supervisor signed off on the count. | Input: {"question": "What item counts were verified?"} | Output: {"answer": ["60 tablets", "25 printers", "90 scanners"]}
+
+| Context: The concrete mix calls for 4 buckets of cement, 2 buckets of sand, and 1 bucket of gravel. Add water gradually to achieve the right consistency. Pour immediately to prevent setting in the mixer. | Input: {"question": "List all component measurements for the mix."} | Output: {"answer": ["4 buckets", "2 buckets", "1 bucket"]}

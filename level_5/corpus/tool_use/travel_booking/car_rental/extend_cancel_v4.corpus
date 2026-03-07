@@ -1,0 +1,51 @@
+Available Tools: search_cars | book_car | cancel_rental | get_rental_details | extend_rental
+Call Schema: { "func_call": "string", "location": "string", "pickup_date": "string", "return_date": "string", "car_type": "economy|compact|suv|luxury" }
+Response Schema: { "rental_id": "string", "car": "string", "pickup_location": "string", "daily_rate": number, "total_cost": number }
+---
+Question: I need to add two days to my economy car rental in Austin due to a conference extension.
+Call: { "func_call": "extend_rental", "location": "Austin-Bergstrom International Airport", "pickup_date": "2024-01-10", "return_date": "2024-01-14", "car_type": "economy" }
+Response: { "rental_id": "EXT-AUS-3321", "car": "Chevrolet Spark", "pickup_location": "Austin-Bergstrom International Airport", "daily_rate": 32.00, "total_cost": 64.00 }
+
+Question: Please cancel my SUV reservation in Detroit scheduled for this coming Friday.
+Call: { "func_call": "cancel_rental", "location": "Detroit Metropolitan Wayne County Airport", "pickup_date": "2024-02-09", "return_date": "2024-02-12", "car_type": "suv" }
+Response: { "rental_id": "CXL-DTW-7745", "car": "Ford Escape", "pickup_location": "Detroit Metropolitan Wayne County Airport", "daily_rate": 78.00, "total_cost": 39.00 }
+
+Question: Can you extend my luxury car return in San Diego by one day? I missed my flight.
+Call: { "func_call": "extend_rental", "location": "San Diego International Airport", "pickup_date": "2024-03-05", "return_date": "2024-03-09", "car_type": "luxury" }
+Response: { "rental_id": "EXT-SAN-9912", "car": "Lexus ES", "pickup_location": "San Diego International Airport", "daily_rate": 110.00, "total_cost": 110.00 }
+
+Question: I need to cancel my compact car booking in Minneapolis because of a snowstorm.
+Call: { "func_call": "cancel_rental", "location": "Minneapolis-St. Paul International Airport", "pickup_date": "2024-01-20", "return_date": "2024-01-23", "car_type": "compact" }
+Response: { "rental_id": "CXL-MSP-4456", "car": "Toyota Corolla", "pickup_location": "Minneapolis-St. Paul International Airport", "daily_rate": 44.00, "total_cost": 0.00 }
+
+Question: Extend my economy rental in Portland for the weekend; I need more time to explore.
+Call: { "func_call": "extend_rental", "location": "Portland International Airport", "pickup_date": "2024-04-12", "return_date": "2024-04-16", "car_type": "economy" }
+Response: { "rental_id": "EXT-PDX-2287", "car": "Nissan Sentra", "pickup_location": "Portland International Airport", "daily_rate": 36.00, "total_cost": 72.00 }
+
+Question: Cancel my luxury vehicle pickup in Philadelphia immediately; plans have changed.
+Call: { "func_call": "cancel_rental", "location": "Philadelphia International Airport", "pickup_date": "2024-05-01", "return_date": "2024-05-05", "car_type": "luxury" }
+Response: { "rental_id": "CXL-PHL-8833", "car": "Cadillac CT5", "pickup_location": "Philadelphia International Airport", "daily_rate": 125.00, "total_cost": 62.50 }
+
+Question: I need to add three days to my SUV rental in Houston for a family visit.
+Call: { "func_call": "extend_rental", "location": "George Bush Intercontinental Airport", "pickup_date": "2024-02-14", "return_date": "2024-02-20", "car_type": "suv" }
+Response: { "rental_id": "EXT-IAH-5599", "car": "GMC Acadia", "pickup_location": "George Bush Intercontinental Airport", "daily_rate": 88.00, "total_cost": 264.00 }
+
+Question: Please process a cancellation for my compact car in Charlotte due to illness.
+Call: { "func_call": "cancel_rental", "location": "Charlotte Douglas International Airport", "pickup_date": "2024-03-18", "return_date": "2024-03-21", "car_type": "compact" }
+Response: { "rental_id": "CXL-CLT-1166", "car": "Honda Civic", "pickup_location": "Charlotte Douglas International Airport", "daily_rate": 41.00, "total_cost": 20.50 }
+
+Question: Extend my luxury car rental in Salt Lake City by 48 hours for a ski trip extension.
+Call: { "func_call": "extend_rental", "location": "Salt Lake City International Airport", "pickup_date": "2024-01-25", "return_date": "2024-01-30", "car_type": "luxury" }
+Response: { "rental_id": "EXT-SLC-7722", "car": "BMW X3", "pickup_location": "Salt Lake City International Airport", "daily_rate": 140.00, "total_cost": 280.00 }
+
+Question: Cancel my economy car reservation in Nashville; I decided to take a train instead.
+Call: { "func_call": "cancel_rental", "location": "Nashville International Airport", "pickup_date": "2024-04-05", "return_date": "2024-04-08", "car_type": "economy" }
+Response: { "rental_id": "CXL-BNA-3399", "car": "Mitsubishi Mirage", "pickup_location": "Nashville International Airport", "daily_rate": 30.00, "total_cost": 0.00 }
+
+Question: I need to extend my compact car return in St. Louis by one day due to traffic.
+Call: { "func_call": "extend_rental", "location": "St. Louis Lambert International Airport", "pickup_date": "2024-05-10", "return_date": "2024-05-14", "car_type": "compact" }
+Response: { "rental_id": "EXT-STL-6644", "car": "Hyundai Elantra", "pickup_location": "St. Louis Lambert International Airport", "daily_rate": 39.00, "total_cost": 39.00 }
+
+Question: Please cancel my SUV booking in Raleigh-Durham effective immediately.
+Call: { "func_call": "cancel_rental", "location": "Raleigh-Durham International Airport", "pickup_date": "2024-06-01", "return_date": "2024-06-04", "car_type": "suv" }
+Response: { "rental_id": "CXL-RDU-9955", "car": "Nissan Rogue", "pickup_location": "Raleigh-Durham International Airport", "daily_rate": 72.00, "total_cost": 36.00 }

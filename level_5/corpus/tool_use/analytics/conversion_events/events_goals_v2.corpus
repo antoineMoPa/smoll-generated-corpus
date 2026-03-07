@@ -1,0 +1,87 @@
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Log a user viewing the 'Pricing Page' on the mobile app.
+Call: { "func_call": "track_event", "event_name": "page_view_pricing_mobile", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "page_view_pricing_mobile", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Calculate the conversion rate for 'Video Play' events during the holiday sale (2023-12-20 to 2023-12-26).
+Call: { "func_call": "get_conversion_rate", "event_name": "video_play_promo", "funnel_id": "", "from_date": "2023-12-20", "to_date": "2023-12-26" }
+Response: { "event": "video_play_promo", "total_events": 890, "unique_users": 750, "conversion_rate": 0.115, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Retrieve metrics for the 'Account Deletion' funnel (ID: fun_del_99) for January 2024.
+Call: { "func_call": "get_funnel_data", "event_name": "", "funnel_id": "fun_del_99", "from_date": "2024-01-01", "to_date": "2024-01-31" }
+Response: { "event": "", "total_events": 320, "unique_users": 310, "conversion_rate": 0.65, "funnel_steps": [{ "name": "Settings Opened", "completions": 320 }, { "name": "Delete Requested", "completions": 210 }, { "name": "Confirmation Verified", "completions": 208 }] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Count completions for the 'Referral Link Shared' goal in the last quarter.
+Call: { "func_call": "get_goal_completions", "event_name": "share_referral_link", "funnel_id": "", "from_date": "2023-10-01", "to_date": "2023-12-31" }
+Response: { "event": "share_referral_link", "total_events": 1540, "unique_users": 1200, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Track a user adding an item to their wishlist with ID 'wish_551'.
+Call: { "func_call": "track_event", "event_name": "add_to_wishlist", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "add_to_wishlist", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Analyze the 'Podcast Subscription' funnel (ID: fun_pod_22) for February 2024.
+Call: { "func_call": "get_funnel_data", "event_name": "", "funnel_id": "fun_pod_22", "from_date": "2024-02-01", "to_date": "2024-02-29" }
+Response: { "event": "", "total_events": 2200, "unique_users": 1950, "conversion_rate": 0.18, "funnel_steps": [{ "name": "Episode Played", "completions": 2200 }, { "name": "Show Notes Viewed", "completions": 800 }, { "name": "Subscribe Clicked", "completions": 396 }] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: What is the conversion rate for 'App Install' events from the Google Ads campaign last week?
+Call: { "func_call": "get_conversion_rate", "event_name": "app_install_gads", "funnel_id": "", "from_date": "2024-03-01", "to_date": "2024-03-07" }
+Response: { "event": "app_install_gads", "total_events": 3100, "unique_users": 3050, "conversion_rate": 0.095, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Record a user completing the 'Password Reset' flow.
+Call: { "func_call": "track_event", "event_name": "password_reset_complete", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "password_reset_complete", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Get the number of users who achieved the 'Premium Feature Unlock' goal in Q1.
+Call: { "func_call": "get_goal_completions", "event_name": "unlock_premium_feature", "funnel_id": "", "from_date": "2024-01-01", "to_date": "2024-03-31" }
+Response: { "event": "unlock_premium_feature", "total_events": 560, "unique_users": 480, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Track a click on the 'Contact Support' chat widget.
+Call: { "func_call": "track_event", "event_name": "chat_widget_click", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "chat_widget_click", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Examine the 'Survey Completion' funnel (ID: fun_surv_05) for the month of April.
+Call: { "func_call": "get_funnel_data", "event_name": "", "funnel_id": "fun_surv_05", "from_date": "2024-04-01", "to_date": "2024-04-30" }
+Response: { "event": "", "total_events": 1800, "unique_users": 1650, "conversion_rate": 0.35, "funnel_steps": [{ "name": "Survey Invited", "completions": 1800 }, { "name": "Survey Started", "completions": 900 }, { "name": "Survey Submitted", "completions": 630 }] }

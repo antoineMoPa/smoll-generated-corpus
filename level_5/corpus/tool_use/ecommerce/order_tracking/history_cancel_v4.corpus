@@ -1,0 +1,51 @@
+Available Tools: get_order_status | track_shipment | get_order_history | cancel_order
+Call Schema: { "func_call": "string", "order_id": "string", "tracking_number": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_delivery": "string", "tracking_events": [{ "date": "string", "location": "string", "status": "string" }] }
+---
+Question: Can you check my order history and then cancel order #ORD-3391 because I found a cheaper option at another store?
+Call: { "func_call": "get_order_history", "order_id": "ORD-3391", "tracking_number": "" }
+Response: { "order_id": "ORD-3391", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I need to cancel order #ORD-4482 right away as I selected the wrong color by accident.
+Call: { "func_call": "cancel_order", "order_id": "ORD-4482", "tracking_number": "" }
+Response: { "order_id": "ORD-4482", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Please show my recent purchases and cancel #ORD-5573 because the estimated arrival is too late for my event.
+Call: { "func_call": "get_order_history", "order_id": "ORD-5573", "tracking_number": "" }
+Response: { "order_id": "ORD-5573", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Cancel order #ORD-6664 immediately; I have decided I do not need this product anymore.
+Call: { "func_call": "cancel_order", "order_id": "ORD-6664", "tracking_number": "" }
+Response: { "order_id": "ORD-6664", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Pull up my order list and cancel #ORD-7755 because the website showed it was in stock but it isn't.
+Call: { "func_call": "get_order_history", "order_id": "ORD-7755", "tracking_number": "" }
+Response: { "order_id": "ORD-7755", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I want to cancel order #ORD-8846 due to an accidental duplicate submission during checkout.
+Call: { "func_call": "cancel_order", "order_id": "ORD-8846", "tracking_number": "" }
+Response: { "order_id": "ORD-8846", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Retrieve my past orders and cancel #ORD-9937 because I managed to find the item locally.
+Call: { "func_call": "get_order_history", "order_id": "ORD-9937", "tracking_number": "" }
+Response: { "order_id": "ORD-9937", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Please cancel order #ORD-1028 as the shipping address I entered has a typo and needs correction.
+Call: { "func_call": "cancel_order", "order_id": "ORD-1028", "tracking_number": "" }
+Response: { "order_id": "ORD-1028", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Look at my order history and cancel #ORD-2119 because the discount code failed to apply at checkout.
+Call: { "func_call": "get_order_history", "order_id": "ORD-2119", "tracking_number": "" }
+Response: { "order_id": "ORD-2119", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I need to cancel order #ORD-3200 due to new information regarding a manufacturer recall.
+Call: { "func_call": "cancel_order", "order_id": "ORD-3200", "tracking_number": "" }
+Response: { "order_id": "ORD-3200", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Display my previous orders and cancel #ORD-4391 because I was unhappy with the support chat interaction.
+Call: { "func_call": "get_order_history", "order_id": "ORD-4391", "tracking_number": "" }
+Response: { "order_id": "ORD-4391", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Cancel order #ORD-5482 immediately since I will be out of town and unable to accept delivery.
+Call: { "func_call": "cancel_order", "order_id": "ORD-5482", "tracking_number": "" }
+Response: { "order_id": "ORD-5482", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }

@@ -1,0 +1,51 @@
+Available Tools: get_exchange_rate | convert_currency | buy_foreign_currency | get_supported_currencies
+Call Schema: { "func_call": "string", "from_currency": "string", "to_currency": "string", "amount": number }
+Response Schema: { "from": "string", "to": "string", "rate": number, "converted_amount": number, "fee": number }
+---
+Question: What is the current exchange rate for converting 500 US Dollars to Euros?
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "EUR", "amount": 500 }
+Response: { "from": "USD", "to": "EUR", "rate": 0.92, "converted_amount": 460.00, "fee": 2.50 }
+
+Question: I need to know how many Japanese Yen I get for 1000 British Pounds.
+Call: { "func_call": "get_exchange_rate", "from_currency": "GBP", "to_currency": "JPY", "amount": 1000 }
+Response: { "from": "GBP", "to": "JPY", "rate": 188.45, "converted_amount": 188450.00, "fee": 5.00 }
+
+Question: Can you check the rate for exchanging 2500 Euros into Swiss Francs?
+Call: { "func_call": "get_exchange_rate", "from_currency": "EUR", "to_currency": "CHF", "amount": 2500 }
+Response: { "from": "EUR", "to": "CHF", "rate": 0.95, "converted_amount": 2375.00, "fee": 3.75 }
+
+Question: How much Canadian Dollar will I receive if I convert 750 US Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "CAD", "amount": 750 }
+Response: { "from": "USD", "to": "CAD", "rate": 1.36, "converted_amount": 1020.00, "fee": 4.00 }
+
+Question: What is the conversion value for 10000 Australian Dollars to US Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "AUD", "to_currency": "USD", "amount": 10000 }
+Response: { "from": "AUD", "to": "USD", "rate": 0.65, "converted_amount": 6500.00, "fee": 12.50 }
+
+Question: I want to see the rate for turning 50000 Japanese Yen into Euros.
+Call: { "func_call": "get_exchange_rate", "from_currency": "JPY", "to_currency": "EUR", "amount": 50000 }
+Response: { "from": "JPY", "to": "EUR", "rate": 0.0061, "converted_amount": 305.00, "fee": 1.50 }
+
+Question: Calculate the exchange for 200 British Pounds to Canadian Dollars.
+Call: { "func_call": "get_exchange_rate", "from_currency": "GBP", "to_currency": "CAD", "amount": 200 }
+Response: { "from": "GBP", "to": "CAD", "rate": 1.72, "converted_amount": 344.00, "fee": 2.00 }
+
+Question: How many Swiss Francs do I get for 1500 US Dollars today?
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "CHF", "amount": 1500 }
+Response: { "from": "USD", "to": "CHF", "rate": 0.88, "converted_amount": 1320.00, "fee": 3.00 }
+
+Question: Check the rate for converting 800 Euros to British Pounds.
+Call: { "func_call": "get_exchange_rate", "from_currency": "EUR", "to_currency": "GBP", "amount": 800 }
+Response: { "from": "EUR", "to": "GBP", "rate": 0.85, "converted_amount": 680.00, "fee": 2.25 }
+
+Question: What is the result of exchanging 5000 Canadian Dollars to Australian Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "CAD", "to_currency": "AUD", "amount": 5000 }
+Response: { "from": "CAD", "to": "AUD", "rate": 1.08, "converted_amount": 5400.00, "fee": 6.50 }
+
+Question: I need the exchange rate for 3000 Swiss Francs to Japanese Yen.
+Call: { "func_call": "get_exchange_rate", "from_currency": "CHF", "to_currency": "JPY", "amount": 3000 }
+Response: { "from": "CHF", "to": "JPY", "rate": 165.20, "converted_amount": 495600.00, "fee": 8.00 }
+
+Question: How much is 1200 US Dollars in British Pounds right now?
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "GBP", "amount": 1200 }
+Response: { "from": "USD", "to": "GBP", "rate": 0.79, "converted_amount": 948.00, "fee": 3.50 }

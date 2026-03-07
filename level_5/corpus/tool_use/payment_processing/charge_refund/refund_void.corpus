@@ -1,0 +1,51 @@
+Available Tools: charge_card | partial_refund | full_refund | capture_payment | void_payment
+Call Schema: { "func_call": "string", "customer_id": "string", "amount": number, "currency": "string", "payment_method_id": "string", "description": "string" }
+Response Schema: { "transaction_id": "string", "status": "succeeded|failed|pending", "amount": number, "currency": "string" }
+---
+Question: Process a full refund for customer CUST-8821 because the ordered item was out of stock.
+Call: { "func_call": "full_refund", "customer_id": "CUST-8821", "amount": 129.99, "currency": "USD", "payment_method_id": "pm_visa_4242", "description": "Full refund: Item out of stock for Order #9921" }
+Response: { "transaction_id": "txn_ref_882101", "status": "succeeded", "amount": 129.99, "currency": "USD" }
+
+Question: Issue a partial refund of $45.50 to customer CUST-3392 for a damaged component in their shipment.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-3392", "amount": 45.50, "currency": "USD", "payment_method_id": "pm_mc_5555", "description": "Partial refund: Damaged component in Order #4402" }
+Response: { "transaction_id": "txn_ref_339202", "status": "succeeded", "amount": 45.50, "currency": "USD" }
+
+Question: Void the pending authorization for customer CUST-7710 as they cancelled the service before capture.
+Call: { "func_call": "void_payment", "customer_id": "CUST-7710", "amount": 250.00, "currency": "EUR", "payment_method_id": "pm_amex_1111", "description": "Void payment: Customer cancelled service subscription" }
+Response: { "transaction_id": "txn_void_771003", "status": "succeeded", "amount": 250.00, "currency": "EUR" }
+
+Question: Execute a full refund for customer CUST-5544 due to a duplicate charge error on their account.
+Call: { "func_call": "full_refund", "customer_id": "CUST-5544", "amount": 89.95, "currency": "GBP", "payment_method_id": "pm_visa_9999", "description": "Full refund: Duplicate charge correction" }
+Response: { "transaction_id": "txn_ref_554404", "status": "succeeded", "amount": 89.95, "currency": "GBP" }
+
+Question: Process a partial refund of $12.00 for customer CUST-2238 representing a shipping discount applied post-purchase.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-2238", "amount": 12.00, "currency": "USD", "payment_method_id": "pm_disc_8888", "description": "Partial refund: Post-purchase shipping discount" }
+Response: { "transaction_id": "txn_ref_223805", "status": "succeeded", "amount": 12.00, "currency": "USD" }
+
+Question: Void the payment authorization for customer CUST-9901 because the fraud detection system flagged the transaction.
+Call: { "func_call": "void_payment", "customer_id": "CUST-9901", "amount": 1500.00, "currency": "USD", "payment_method_id": "pm_visa_0000", "description": "Void payment: Fraud detection flag" }
+Response: { "transaction_id": "txn_void_990106", "status": "succeeded", "amount": 1500.00, "currency": "USD" }
+
+Question: Issue a full refund to customer CUST-1123 after they returned the entire order within the 30-day window.
+Call: { "func_call": "full_refund", "customer_id": "CUST-1123", "amount": 345.20, "currency": "CAD", "payment_method_id": "pm_mc_3333", "description": "Full refund: Return within 30-day window" }
+Response: { "transaction_id": "txn_ref_112307", "status": "succeeded", "amount": 345.20, "currency": "CAD" }
+
+Question: Apply a partial refund of $75.00 to customer CUST-6655 for a service outage lasting three hours.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-6655", "amount": 75.00, "currency": "USD", "payment_method_id": "pm_visa_7777", "description": "Partial refund: Service outage compensation" }
+Response: { "transaction_id": "txn_ref_665508", "status": "succeeded", "amount": 75.00, "currency": "USD" }
+
+Question: Void the uncaptured payment for customer CUST-4488 as the inventory check failed after authorization.
+Call: { "func_call": "void_payment", "customer_id": "CUST-4488", "amount": 62.50, "currency": "AUD", "payment_method_id": "pm_visa_2222", "description": "Void payment: Inventory check failure" }
+Response: { "transaction_id": "txn_void_448809", "status": "succeeded", "amount": 62.50, "currency": "AUD" }
+
+Question: Process a full refund for customer CUST-3377 due to a billing address mismatch that prevented fulfillment.
+Call: { "func_call": "full_refund", "customer_id": "CUST-3377", "amount": 199.00, "currency": "USD", "payment_method_id": "pm_amex_6666", "description": "Full refund: Billing address mismatch" }
+Response: { "transaction_id": "txn_ref_337710", "status": "succeeded", "amount": 199.00, "currency": "USD" }
+
+Question: Issue a partial refund of $20.00 to customer CUST-5599 for a missing accessory in their package.
+Call: { "func_call": "partial_refund", "customer_id": "CUST-5599", "amount": 20.00, "currency": "USD", "payment_method_id": "pm_mc_4444", "description": "Partial refund: Missing accessory compensation" }
+Response: { "transaction_id": "txn_ref_559911", "status": "succeeded", "amount": 20.00, "currency": "USD" }
+
+Question: Void the pending transaction for customer CUST-8800 because the customer requested an immediate cancellation.
+Call: { "func_call": "void_payment", "customer_id": "CUST-8800", "amount": 410.75, "currency": "JPY", "payment_method_id": "pm_jcb_1212", "description": "Void payment: Immediate customer cancellation request" }
+Response: { "transaction_id": "txn_void_880012", "status": "succeeded", "amount": 410.75, "currency": "JPY" }

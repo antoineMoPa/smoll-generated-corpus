@@ -1,0 +1,51 @@
+Available Tools: like_post | comment_on_post | share_post | follow_user | unfollow_user | send_dm
+Call Schema: { "func_call": "string", "post_id": "string", "user_id": "string", "content": "string" }
+Response Schema: { "action": "string", "status": "string", "timestamp": "string" }
+---
+Question: Can you share the post with ID post_3041 for me?
+Call: { "func_call": "share_post", "post_id": "post_3041", "user_id": "user_7123", "content": "" }
+Response: { "action": "share_post", "status": "success", "timestamp": "2023-11-05T09:15:22Z" }
+
+Question: Please follow user_8829 immediately.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "user_8829", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-11-05T09:16:45Z" }
+
+Question: I want to send a DM to user_5512 saying "Hey, are we still on for lunch?"
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "user_5512", "content": "Hey, are we still on for lunch?" }
+Response: { "action": "send_dm", "status": "success", "timestamp": "2023-11-05T09:18:10Z" }
+
+Question: Go ahead and unfollow user_9901 for me.
+Call: { "func_call": "unfollow_user", "post_id": "", "user_id": "user_9901", "content": "" }
+Response: { "action": "unfollow_user", "status": "success", "timestamp": "2023-11-05T09:20:33Z" }
+
+Question: Could you share post_6674 to my story?
+Call: { "func_call": "share_post", "post_id": "post_6674", "user_id": "user_7123", "content": "" }
+Response: { "action": "share_post", "status": "success", "timestamp": "2023-11-05T09:22:15Z" }
+
+Question: Send a message to user_2238 that says "Thanks for the update!"
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "user_2238", "content": "Thanks for the update!" }
+Response: { "action": "send_dm", "status": "success", "timestamp": "2023-11-05T09:24:50Z" }
+
+Question: Please follow user_4456 right now.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "user_4456", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-11-05T09:26:12Z" }
+
+Question: I need you to share post_1198 immediately.
+Call: { "func_call": "share_post", "post_id": "post_1198", "user_id": "user_7123", "content": "" }
+Response: { "action": "share_post", "status": "success", "timestamp": "2023-11-05T09:28:40Z" }
+
+Question: Unfollow user_7765 for me, please.
+Call: { "func_call": "unfollow_user", "post_id": "", "user_id": "user_7765", "content": "" }
+Response: { "action": "unfollow_user", "status": "success", "timestamp": "2023-11-05T09:30:05Z" }
+
+Question: DM user_3321 with "Can you send me the files?"
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "user_3321", "content": "Can you send me the files?" }
+Response: { "action": "send_dm", "status": "success", "timestamp": "2023-11-05T09:32:28Z" }
+
+Question: Please share the update at post_9982.
+Call: { "func_call": "share_post", "post_id": "post_9982", "user_id": "user_7123", "content": "" }
+Response: { "action": "share_post", "status": "success", "timestamp": "2023-11-05T09:34:55Z" }
+
+Question: Follow user_6040 as soon as possible.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "user_6040", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-11-05T09:36:18Z" }

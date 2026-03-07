@@ -1,0 +1,51 @@
+Available Tools: get_prescriptions | request_refill | check_drug_interaction | get_medication_info
+Call Schema: { "func_call": "string", "patient_id": "string", "medication": "string", "dosage": "string" }
+Response Schema: { "prescription_id": "string", "medication": "string", "dosage": "string", "refills_remaining": number, "status": "string" }
+---
+Question: Investigate possible interactions between Fluoxetine and St. John's Wort for patient P-7788.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-7788", "medication": "Fluoxetine, St. John's Wort", "dosage": "20mg, 300mg" }
+Response: { "prescription_id": "RX-33445", "medication": "Fluoxetine, St. John's Wort", "dosage": "20mg, 300mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: High risk of Serotonin Syndrome" }
+
+Question: Obtain usage guidelines for Prednisone prescribed to patient P-9921.
+Call: { "func_call": "get_medication_info", "patient_id": "P-9921", "medication": "Prednisone", "dosage": "10mg" }
+Response: { "prescription_id": "RX-55667", "medication": "Prednisone", "dosage": "10mg", "refills_remaining": 2, "status": "INFO_RETRIEVED: Corticosteroid, taper dose gradually to avoid withdrawal" }
+
+Question: Determine safety of mixing Potassium Chloride with Spironolactone for patient P-1123.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-1123", "medication": "Potassium Chloride, Spironolactone", "dosage": "20mEq, 50mg" }
+Response: { "prescription_id": "RX-88990", "medication": "Potassium Chloride, Spironolactone", "dosage": "20mEq, 50mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: Risk of severe hyperkalemia" }
+
+Question: Retrieve current prescription details for Gabapentin for patient P-4456.
+Call: { "func_call": "get_medication_info", "patient_id": "P-4456", "medication": "Gabapentin", "dosage": "300mg" }
+Response: { "prescription_id": "RX-22334", "medication": "Gabapentin", "dosage": "300mg", "refills_remaining": 4, "status": "INFO_RETRIEVED: Anticonvulsant used for neuropathic pain" }
+
+Question: Assess interaction potential between Methotrexate and Ibuprofen for patient P-6677.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-6677", "medication": "Methotrexate, Ibuprofen", "dosage": "15mg, 600mg" }
+Response: { "prescription_id": "RX-99112", "medication": "Methotrexate, Ibuprofen", "dosage": "15mg, 600mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: NSAIDs increase Methotrexate toxicity" }
+
+Question: Look up administration instructions for Insulin Glargine for patient P-3321.
+Call: { "func_call": "get_medication_info", "patient_id": "P-3321", "medication": "Insulin Glargine", "dosage": "20 units" }
+Response: { "prescription_id": "RX-77889", "medication": "Insulin Glargine", "dosage": "20 units", "refills_remaining": 1, "status": "INFO_RETRIEVED: Long-acting basal insulin, inject subcutaneously once daily" }
+
+Question: Check for adverse effects when combining Ciprofloxacin and Tizanidine for patient P-5599.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-5599", "medication": "Ciprofloxacin, Tizanidine", "dosage": "500mg, 4mg" }
+Response: { "prescription_id": "RX-44556", "medication": "Ciprofloxacin, Tizanidine", "dosage": "500mg, 4mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: Ciprofloxacin significantly increases Tizanidine levels" }
+
+Question: Get medication profile for Montelukast for patient P-8844.
+Call: { "func_call": "get_medication_info", "patient_id": "P-8844", "medication": "Montelukast", "dosage": "10mg" }
+Response: { "prescription_id": "RX-11223", "medication": "Montelukast", "dosage": "10mg", "refills_remaining": 3, "status": "INFO_RETRIEVED: Leukotriene receptor antagonist for asthma maintenance" }
+
+Question: Evaluate risks of taking Warfarin with Vitamin K supplements for patient P-2233.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-2233", "medication": "Warfarin, Vitamin K", "dosage": "5mg, 100mcg" }
+Response: { "prescription_id": "RX-66778", "medication": "Warfarin, Vitamin K", "dosage": "5mg, 100mcg", "refills_remaining": 0, "status": "MODERATE_INTERACTION: Vitamin K antagonizes Warfarin effect" }
+
+Question: Provide details on usage and side effects for Hydrocodone for patient P-9988.
+Call: { "func_call": "get_medication_info", "patient_id": "P-9988", "medication": "Hydrocodone", "dosage": "5mg" }
+Response: { "prescription_id": "RX-33221", "medication": "Hydrocodone", "dosage": "5mg", "refills_remaining": 0, "status": "INFO_RETRIEVED: Opioid analgesic, may cause drowsiness and constipation" }
+
+Question: Analyze compatibility of Amlodipine and Sildenafil for patient P-4411.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-4411", "medication": "Amlodipine, Sildenafil", "dosage": "5mg, 50mg" }
+Response: { "prescription_id": "RX-55443", "medication": "Amlodipine, Sildenafil", "dosage": "5mg, 50mg", "refills_remaining": 0, "status": "MODERATE_INTERACTION: Additive hypotensive effects possible" }
+
+Question: Fetch prescription status for Rosuvastatin for patient P-7766.
+Call: { "func_call": "get_medication_info", "patient_id": "P-7766", "medication": "Rosuvastatin", "dosage": "20mg" }
+Response: { "prescription_id": "RX-88776", "medication": "Rosuvastatin", "dosage": "20mg", "refills_remaining": 5, "status": "INFO_RETRIEVED: HMG-CoA reductase inhibitor for cholesterol management" }

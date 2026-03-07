@@ -1,0 +1,87 @@
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Inform a student in Boston about a class cancellation.
+Call: { "func_call": "send_sms", "to": "+16175550199", "message": "NOTICE: Biology 101 scheduled for 9 AM is canceled due to instructor illness. Check portal for updates.", "from": "UniAlert" }
+Response: { "message_id": "msg_a1b2c3d4e5f6", "to": "+16175550199", "status": "sent", "cost": 0.008, "timestamp": "2023-10-28T08:15:30Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a low balance warning to a cardholder in Madrid.
+Call: { "func_call": "send_sms", "to": "+34912345678", "message": "ALERT: Your EuroCard ending in 4492 has a balance of €12.40. Please top up to avoid declined transactions.", "from": "EuroBank" }
+Response: { "message_id": "msg_g7h8i9j0k1l2", "to": "+34912345678", "status": "delivered", "cost": 0.051, "timestamp": "2023-10-28T09:22:15Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a technician in Seoul about a new service ticket.
+Call: { "func_call": "send_sms", "to": "+821098765432", "message": "NEW TICKET: AC repair required at Gangnam Office Tower, Floor 14. Priority: High. Dispatch ID: KR-992.", "from": "FixItNow" }
+Response: { "message_id": "msg_m3n4o5p6q7r8", "to": "+821098765432", "status": "sent", "cost": 0.048, "timestamp": "2023-10-28T10:05:45Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a reservation confirmation to a diner in Rome.
+Call: { "func_call": "send_sms", "to": "+390612345678", "message": "Confirmed: Table for 4 at La Bella Vita tonight at 8:00 PM. Ref #RM-2023-55. Arrive 10 mins early.", "from": "DineBook" }
+Response: { "message_id": "msg_s9t0u1v2w3x4", "to": "+390612345678", "status": "delivered", "cost": 0.053, "timestamp": "2023-10-28T11:30:20Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Alert a driver in Vancouver about a road closure.
+Call: { "func_call": "send_sms", "to": "+16045550177", "message": "TRAFFIC: Main St bridge closed due to accident. Use alternate route via Granville. Delay approx 20 mins.", "from": "VanTraffic" }
+Response: { "message_id": "msg_y5z6a7b8c9d0", "to": "+16045550177", "status": "sent", "cost": 0.009, "timestamp": "2023-10-28T12:45:10Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a login attempt notification to a user in Cape Town.
+Call: { "func_call": "send_sms", "to": "+27219876543", "message": "SECURITY: Login attempt detected from device Pixel 7 in Johannesburg. If this was you, ignore this message.", "from": "SafeNetZA" }
+Response: { "message_id": "msg_e1f2g3h4i5j6", "to": "+27219876543", "status": "delivered", "cost": 0.031, "timestamp": "2023-10-28T13:12:55Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a voter in Austin about polling location changes.
+Call: { "func_call": "send_sms", "to": "+15125550133", "message": "VOTER ALERT: Your polling place has moved to Austin Community College, Building B. Original location is closed.", "from": "VoteTex" }
+Response: { "message_id": "msg_k7l8m9n0o1p2", "to": "+15125550133", "status": "sent", "cost": 0.0075, "timestamp": "2023-10-28T14:00:00Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a warranty expiration reminder to a car owner in Detroit.
+Call: { "func_call": "send_sms", "to": "+13135550166", "message": "REMINDER: Your Ford F-150 warranty expires in 30 days. Schedule a free inspection at your local dealer.", "from": "AutoCare" }
+Response: { "message_id": "msg_q3r4s5t6u7v8", "to": "+13135550166", "status": "delivered", "cost": 0.008, "timestamp": "2023-10-28T15:20:35Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Alert a farmer in Nairobi about incoming weather conditions.
+Call: { "func_call": "send_sms", "to": "+254712345678", "message": "WEATHER WARNING: Heavy rains expected in Rift Valley region starting tonight. Secure livestock and crops.", "from": "AgriWatch" }
+Response: { "message_id": "msg_w9x0y1z2a3b4", "to": "+254712345678", "status": "sent", "cost": 0.025, "timestamp": "2023-10-28T16:45:12Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a gym class cancellation notice to a member in Los Angeles.
+Call: { "func_call": "send_sms", "to": "+13235550155", "message": "CLASS UPDATE: Yoga session at 6 PM is cancelled due to instructor unavailability. Credits refunded to account.", "from": "FitLifeLA" }
+Response: { "message_id": "msg_c5d6e7f8g9h0", "to": "+13235550155", "status": "delivered", "cost": 0.0075, "timestamp": "2023-10-28T17:10:40Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a hotel guest in Bangkok about a late checkout approval.
+Call: { "func_call": "send_sms", "to": "+66812345678", "message": "APPROVED: Late checkout until 2:00 PM granted for Room 305. Enjoy your extra time in Bangkok!", "from": "GrandSiam" }
+Response: { "message_id": "msg_i1j2k3l4m5n6", "to": "+66812345678", "status": "sent", "cost": 0.033, "timestamp": "2023-10-28T08:30:25Z" }

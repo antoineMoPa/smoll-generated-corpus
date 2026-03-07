@@ -1,0 +1,51 @@
+Available Tools: find_by_name | find_by_extension | find_by_size | find_by_date
+Call Schema: { "func_call": "string", "path": "string", "pattern": "string", "type": "string" }
+Response Schema: { "matches": ["string"], "count": number }
+---
+Question: Find all log files in the /var/log directory.
+Call: { "func_call": "find_by_extension", "path": "/var/log", "pattern": "*.log", "type": "file" }
+Response: { "matches": ["/var/log/syslog", "/var/log/auth.log", "/var/log/kern.log", "/var/log/dpkg.log"], "count": 4 }
+
+Question: Locate the main configuration file named config.yml in the /etc folder.
+Call: { "func_call": "find_by_name", "path": "/etc", "pattern": "config.yml", "type": "file" }
+Response: { "matches": ["/etc/app/config.yml"], "count": 1 }
+
+Question: Search for all Python scripts in the /home/user/projects directory.
+Call: { "func_call": "find_by_extension", "path": "/home/user/projects", "pattern": "*.py", "type": "file" }
+Response: { "matches": ["/home/user/projects/main.py", "/home/user/projects/utils/helpers.py", "/home/user/projects/tests/test_api.py"], "count": 3 }
+
+Question: Find the README.md file in the root of the /home/dev/workspace folder.
+Call: { "func_call": "find_by_name", "path": "/home/dev/workspace", "pattern": "README.md", "type": "file" }
+Response: { "matches": ["/home/dev/workspace/README.md"], "count": 1 }
+
+Question: List all JSON data files located in /var/lib/app/data.
+Call: { "func_call": "find_by_extension", "path": "/var/lib/app/data", "pattern": "*.json", "type": "file" }
+Response: { "matches": ["/var/lib/app/data/users.json", "/var/lib/app/data/settings.json", "/var/lib/app/data/cache.json"], "count": 3 }
+
+Question: Find any file named .env in the /home/webapp directory and its subdirectories.
+Call: { "func_call": "find_by_name", "path": "/home/webapp", "pattern": ".env", "type": "file" }
+Response: { "matches": ["/home/webapp/.env", "/home/webapp/services/auth/.env"], "count": 2 }
+
+Question: Search for all shell scripts in the /etc/init.d directory.
+Call: { "func_call": "find_by_extension", "path": "/etc/init.d", "pattern": "*.sh", "type": "file" }
+Response: { "matches": ["/etc/init.d/networking.sh", "/etc/init.d/cron.sh", "/etc/init.d/ssh.sh"], "count": 3 }
+
+Question: Locate all XML configuration files in /var/www/html/config.
+Call: { "func_call": "find_by_extension", "path": "/var/www/html/config", "pattern": "*.xml", "type": "file" }
+Response: { "matches": ["/var/www/html/config/site.xml", "/var/www/html/config/database.xml"], "count": 2 }
+
+Question: Find the specific file named docker-compose.yml in /home/devops/infrastructure.
+Call: { "func_call": "find_by_name", "path": "/home/devops/infrastructure", "pattern": "docker-compose.yml", "type": "file" }
+Response: { "matches": ["/home/devops/infrastructure/docker-compose.yml"], "count": 1 }
+
+Question: List all text files in the /var/backups directory.
+Call: { "func_call": "find_by_extension", "path": "/var/backups", "pattern": "*.txt", "type": "file" }
+Response: { "matches": ["/var/backups/manifest.txt", "/var/backups/error_log.txt"], "count": 2 }
+
+Question: Search for any file named Makefile in the /home/student/cs101 folder.
+Call: { "func_call": "find_by_name", "path": "/home/student/cs101", "pattern": "Makefile", "type": "file" }
+Response: { "matches": ["/home/student/cs101/Makefile", "/home/student/cs101/lib/Makefile"], "count": 2 }
+
+Question: Find all CSV export files in /var/data/exports.
+Call: { "func_call": "find_by_extension", "path": "/var/data/exports", "pattern": "*.csv", "type": "file" }
+Response: { "matches": ["/var/data/exports/sales_2023.csv", "/var/data/exports/inventory.csv", "/var/data/exports/users_export.csv"], "count": 3 }

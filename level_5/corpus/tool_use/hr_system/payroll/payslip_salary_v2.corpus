@@ -1,0 +1,51 @@
+Available Tools: get_payslip | get_salary_info | run_payroll | update_tax_info | get_ytd_earnings
+Call Schema: { "func_call": "string", "employee_id": "string", "period": "string" }
+Response Schema: { "employee_id": "string", "period": "string", "gross": number, "deductions": number, "net": number, "currency": "string" }
+---
+Question: Can you pull the payslip for employee E-7721 for the month of January 2025?
+Call: { "func_call": "get_payslip", "employee_id": "E-7721", "period": "2025-01" }
+Response: { "employee_id": "E-7721", "period": "2025-01", "gross": 6100.00, "deductions": 1342.00, "net": 4758.00, "currency": "USD" }
+
+Question: I require the salary breakdown for Marcus Thorne, ID E-8834, covering the biweekly period ending February 28, 2025.
+Call: { "func_call": "get_salary_info", "employee_id": "E-8834", "period": "2025-02-28" }
+Response: { "employee_id": "E-8834", "period": "2025-02-28", "gross": 2450.50, "deductions": 514.61, "net": 1935.89, "currency": "USD" }
+
+Question: Fetch the March 2025 payslip for worker E-9912.
+Call: { "func_call": "get_payslip", "employee_id": "E-9912", "period": "2025-03" }
+Response: { "employee_id": "E-9912", "period": "2025-03", "gross": 4325.75, "deductions": 908.41, "net": 3417.34, "currency": "USD" }
+
+Question: What was the total compensation for employee E-1098 during the cycle ending April 11, 2025?
+Call: { "func_call": "get_salary_info", "employee_id": "E-1098", "period": "2025-04-11" }
+Response: { "employee_id": "E-1098", "period": "2025-04-11", "gross": 2050.00, "deductions": 348.50, "net": 1701.50, "currency": "USD" }
+
+Question: Retrieve the payslip data for E-2245 spanning May 2025.
+Call: { "func_call": "get_payslip", "employee_id": "E-2245", "period": "2025-05" }
+Response: { "employee_id": "E-2245", "period": "2025-05", "gross": 7200.00, "deductions": 1872.00, "net": 5328.00, "currency": "USD" }
+
+Question: Display the salary details for employee E-3367 for the pay period concluding June 13, 2025.
+Call: { "func_call": "get_salary_info", "employee_id": "E-3367", "period": "2025-06-13" }
+Response: { "employee_id": "E-3367", "period": "2025-06-13", "gross": 2680.25, "deductions": 562.85, "net": 2117.40, "currency": "USD" }
+
+Question: Please obtain the July 2025 payslip for staff member E-4489.
+Call: { "func_call": "get_payslip", "employee_id": "E-4489", "period": "2025-07" }
+Response: { "employee_id": "E-4489", "period": "2025-07", "gross": 4150.00, "deductions": 788.50, "net": 3361.50, "currency": "USD" }
+
+Question: I need the earnings statement for E-5501 regarding the biweekly date of August 22, 2025.
+Call: { "func_call": "get_salary_info", "employee_id": "E-5501", "period": "2025-08-22" }
+Response: { "employee_id": "E-5501", "period": "2025-08-22", "gross": 2225.00, "deductions": 422.75, "net": 1802.25, "currency": "USD" }
+
+Question: Show the payslip for employee E-6623 for September 2025.
+Call: { "func_call": "get_payslip", "employee_id": "E-6623", "period": "2025-09" }
+Response: { "employee_id": "E-6623", "period": "2025-09", "gross": 5850.00, "deductions": 1287.00, "net": 4563.00, "currency": "USD" }
+
+Question: Retrieve salary information for E-7745 associated with the pay date October 3, 2025.
+Call: { "func_call": "get_salary_info", "employee_id": "E-7745", "period": "2025-10-03" }
+Response: { "employee_id": "E-7745", "period": "2025-10-03", "gross": 1975.80, "deductions": 316.13, "net": 1659.67, "currency": "USD" }
+
+Question: Get the November 2025 payslip for team member E-8867.
+Call: { "func_call": "get_payslip", "employee_id": "E-8867", "period": "2025-11" }
+Response: { "employee_id": "E-8867", "period": "2025-11", "gross": 4990.50, "deductions": 1048.01, "net": 3942.49, "currency": "USD" }
+
+Question: What are the payroll figures for employee E-9989 for the biweekly period ending December 19, 2025?
+Call: { "func_call": "get_salary_info", "employee_id": "E-9989", "period": "2025-12-19" }
+Response: { "employee_id": "E-9989", "period": "2025-12-19", "gross": 2550.00, "deductions": 535.50, "net": 2014.50, "currency": "USD" }

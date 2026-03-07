@@ -1,0 +1,51 @@
+Available Tools: move_to_folder | create_label | delete_email | archive_email | unsubscribe
+Call Schema: { "func_call": "string", "message_id": "string", "folder": "string", "label": "string" }
+Response Schema: { "message_id": "string", "action": "string", "status": "string" }
+---
+Question: Remove the phishing attempt email with ID msg_1029 right now.
+Call: { "func_call": "delete_email", "message_id": "msg_1029", "folder": "", "label": "" }
+Response: { "message_id": "msg_1029", "action": "delete_email", "status": "success" }
+
+Question: Store the invoice document msg_5512 in the archives for future reference.
+Call: { "func_call": "archive_email", "message_id": "msg_5512", "folder": "", "label": "" }
+Response: { "message_id": "msg_5512", "action": "archive_email", "status": "success" }
+
+Question: Please opt me out of the Fitness Blog updates using message msg_8899.
+Call: { "func_call": "unsubscribe", "message_id": "msg_8899", "folder": "", "label": "" }
+Response: { "message_id": "msg_8899", "action": "unsubscribe", "status": "success" }
+
+Question: Delete the expired coupon notification msg_2234 immediately.
+Call: { "func_call": "delete_email", "message_id": "msg_2234", "folder": "", "label": "" }
+Response: { "message_id": "msg_2234", "action": "delete_email", "status": "success" }
+
+Question: Archive the shipping confirmation email msg_7766 to keep my inbox clean.
+Call: { "func_call": "archive_email", "message_id": "msg_7766", "folder": "", "label": "" }
+Response: { "message_id": "msg_7766", "action": "archive_email", "status": "success" }
+
+Question: Stop receiving alerts from this service by unsubscribing via msg_3309.
+Call: { "func_call": "unsubscribe", "message_id": "msg_3309", "folder": "", "label": "" }
+Response: { "message_id": "msg_3309", "action": "unsubscribe", "status": "success" }
+
+Question: Delete the failed login warning message msg_6641.
+Call: { "func_call": "delete_email", "message_id": "msg_6641", "folder": "", "label": "" }
+Response: { "message_id": "msg_6641", "action": "delete_email", "status": "success" }
+
+Question: Archive the birthday party invitation msg_9987 for later review.
+Call: { "func_call": "archive_email", "message_id": "msg_9987", "folder": "", "label": "" }
+Response: { "message_id": "msg_9987", "action": "archive_email", "status": "success" }
+
+Question: Unsubscribe me from the Travel Deals newsletter associated with msg_4478.
+Call: { "func_call": "unsubscribe", "message_id": "msg_4478", "folder": "", "label": "" }
+Response: { "message_id": "msg_4478", "action": "unsubscribe", "status": "success" }
+
+Question: Delete the automated system alert msg_1155 regarding server maintenance.
+Call: { "func_call": "delete_email", "message_id": "msg_1155", "folder": "", "label": "" }
+Response: { "message_id": "msg_1155", "action": "delete_email", "status": "success" }
+
+Question: Archive the customer feedback survey response msg_8823.
+Call: { "func_call": "archive_email", "message_id": "msg_8823", "folder": "", "label": "" }
+Response: { "message_id": "msg_8823", "action": "archive_email", "status": "success" }
+
+Question: Cancel my subscription to the Foodie Magazine list using message msg_5590.
+Call: { "func_call": "unsubscribe", "message_id": "msg_5590", "folder": "", "label": "" }
+Response: { "message_id": "msg_5590", "action": "unsubscribe", "status": "success" }

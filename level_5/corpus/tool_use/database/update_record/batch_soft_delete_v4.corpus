@@ -1,0 +1,51 @@
+Available Tools: update_record | update_batch | soft_delete | restore_record
+Call Schema: { "func_call": "string", "table": "string", "id": number, "data": {}, "where": "string" }
+Response Schema: { "affected_rows": number, "status": "string", "updated_at": "string" }
+---
+Question: Deactivate the merchant profile with ID 3091 due to repeated fraud alerts.
+Call: { "func_call": "soft_delete", "table": "merchants", "id": 3091, "data": { "deactivation_reason": "fraud_alert" }, "where": "id = 3091" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-01-15T08:12:33Z" }
+
+Question: Archive all support tickets from the 'Beta_Test' phase that were closed before December 15th.
+Call: { "func_call": "update_batch", "table": "tickets", "id": 0, "data": { "status": "archived", "archive_date": "2024-01-15" }, "where": "phase_id = 'Beta_Test' AND closed_date < '2023-12-15'" }
+Response: { "affected_rows": 89, "status": "success", "updated_at": "2024-01-15T09:45:22Z" }
+
+Question: Restore the accidentally deleted invoice record with ID 4450.
+Call: { "func_call": "restore_record", "table": "invoices", "id": 4450, "data": {}, "where": "id = 4450" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-01-15T10:30:15Z" }
+
+Question: Soft delete the community post ID 6672 containing copyrighted material.
+Call: { "func_call": "soft_delete", "table": "community_posts", "id": 6672, "data": { "flag_reason": "copyright_violation" }, "where": "id = 6672" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-01-15T11:20:40Z" }
+
+Question: Update the price for all items in the 'Clearance' aisle by reducing cost by 10% for the weekend sale.
+Call: { "func_call": "update_batch", "table": "products", "id": 0, "data": { "price": "price * 0.90" }, "where": "aisle = 'Clearance'" }
+Response: { "affected_rows": 54, "status": "success", "updated_at": "2024-01-15T12:05:18Z" }
+
+Question: Reactivate the banned IP address entry with ID 88 after manual verification.
+Call: { "func_call": "restore_record", "table": "ip_blacklist", "id": 88, "data": { "verified_by": "sec_admin" }, "where": "id = 88" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-01-15T13:15:55Z" }
+
+Question: Mark all draft articles tagged 'legacy_content' as archived to improve site performance.
+Call: { "func_call": "update_batch", "table": "articles", "id": 0, "data": { "is_archived": true, "archived_at": "2024-01-15T14:00:00Z" }, "where": "tags LIKE '%legacy_content%'" }
+Response: { "affected_rows": 23, "status": "success", "updated_at": "2024-01-15T14:00:08Z" }
+
+Question: Soft delete the audit log with ID 11205 due to GDPR compliance request.
+Call: { "func_call": "soft_delete", "table": "audit_logs", "id": 11205, "data": { "compliance_request_id": "GDPR-2024-12" }, "where": "id = 11205" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-01-15T15:45:10Z" }
+
+Question: Restore the deleted review thread ID 992 associated with product 505.
+Call: { "func_call": "restore_record", "table": "reviews", "id": 992, "data": {}, "where": "id = 992" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-01-15T16:22:30Z" }
+
+Question: Batch update the delivery status to 'returned' for all shipments in zone 'SW-09' affected by the flood.
+Call: { "func_call": "update_batch", "table": "shipments", "id": 0, "data": { "status": "returned", "return_reason": "natural_disaster" }, "where": "zone_code = 'SW-09' AND status = 'out_for_delivery'" }
+Response: { "affected_rows": 42, "status": "success", "updated_at": "2024-01-15T17:10:45Z" }
+
+Question: Permanently flag and soft delete the phishing attempt report ID 7744.
+Call: { "func_call": "soft_delete", "table": "security_reports", "id": 7744, "data": { "classification": "phishing", "action_taken": "soft_delete" }, "where": "id = 7744" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2024-01-15T18:33:20Z" }
+
+Question: Restore the cancelled membership subscription for user ID 882 who renewed their plan.
+Call: { "func_call": "restore_record", "table": "memberships", "id": 882, "data": { "renewal_date": "2024-01-15" }, "where": "user_id = 882" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2024-01-15T19:50:12Z" }

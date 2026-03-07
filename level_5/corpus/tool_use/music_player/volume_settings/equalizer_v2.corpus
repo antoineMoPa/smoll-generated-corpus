@@ -1,0 +1,51 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: Adjust the sound profile to electronic for the dance party.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "electronic" }
+Response: { "volume": 82, "muted": false, "equalizer_preset": "electronic" }
+
+Question: Can you switch the equalizer to the acoustic preset?
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "acoustic" }
+Response: { "volume": 35, "muted": false, "equalizer_preset": "acoustic" }
+
+Question: Set the audio mode to cinema for this movie night.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "cinema" }
+Response: { "volume": 68, "muted": false, "equalizer_preset": "cinema" }
+
+Question: I need the vocal booster preset enabled for the karaoke session.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "vocal booster" }
+Response: { "volume": 58, "muted": false, "equalizer_preset": "vocal booster" }
+
+Question: Change the equalizer settings to the flat profile.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "flat" }
+Response: { "volume": 50, "muted": false, "equalizer_preset": "flat" }
+
+Question: Apply the electronic preset for the techno track.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "electronic" }
+Response: { "volume": 78, "muted": false, "equalizer_preset": "electronic" }
+
+Question: Please activate the acoustic equalizer for the folk song.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "acoustic" }
+Response: { "volume": 44, "muted": false, "equalizer_preset": "acoustic" }
+
+Question: Switch to cinema mode so I can hear the explosions better.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "cinema" }
+Response: { "volume": 72, "muted": false, "equalizer_preset": "cinema" }
+
+Question: Turn on the vocal booster preset for the speech recording.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "vocal booster" }
+Response: { "volume": 62, "muted": false, "equalizer_preset": "vocal booster" }
+
+Question: Set the system to the flat equalizer preset now.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "flat" }
+Response: { "volume": 46, "muted": false, "equalizer_preset": "flat" }
+
+Question: Configure the sound for electronic music immediately.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "electronic" }
+Response: { "volume": 85, "muted": false, "equalizer_preset": "electronic" }
+
+Question: I want to listen to unplugged songs, so use the acoustic preset.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "acoustic" }
+Response: { "volume": 39, "muted": false, "equalizer_preset": "acoustic" }

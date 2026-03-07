@@ -1,0 +1,59 @@
+Context: The playful otter slid down the muddy bank into the rushing river.
+Input: {"question": "What animal slid down the muddy bank?"}
+Output: {"answer": "playful otter"}
+
+Context: A spotted leopard rested on a thick branch high in the jungle canopy.
+Input: {"question": "What creature rested on a jungle branch?"}
+Output: {"answer": "spotted leopard"}
+
+Context: The busy bee collected nectar from the bright yellow sunflowers.
+Input: {"question": "What insect collected nectar from the sunflowers?"}
+Output: {"answer": "busy bee"}
+
+Context: My neighbor rescued a stray husky from the storm yesterday evening.
+Input: {"question": "What dog did my neighbor rescue?"}
+Output: {"answer": "stray husky"}
+
+Context: A pod of dolphins leaped over the waves near the moving boat.
+Input: {"question": "What animals leaped over the waves?"}
+Output: {"answer": "dolphins"}
+
+Context: The tiny hummingbird hovered beside the red trumpet flower.
+Input: {"question": "What bird hovered beside the red flower?"}
+Output: {"answer": "tiny hummingbird"}
+
+Context: During the migration, the monarch butterfly traveled thousands of miles south.
+Input: {"question": "What insect traveled south during migration?"}
+Output: {"answer": "monarch butterfly"}
+
+Context: A sleek black panther stalked silently through the tall grass at dusk.
+Input: {"question": "What animal stalked through the tall grass?"}
+Output: {"answer": "sleek black panther"}
+
+Context: The wise owl hooted softly from the hollow of the ancient elm.
+Input: {"question": "What bird hooted from the ancient elm?"}
+Output: {"answer": "wise owl"}
+
+Context: A group of penguins huddled together on the icy Antarctic shore.
+Input: {"question": "What animals huddled on the icy shore?"}
+Output: {"answer": "penguins"}
+
+Context: My cousin's parrot, a macaw named Rio, mimics every sound it hears.
+Input: {"question": "What parrot mimics every sound?"}
+Output: {"answer": "macaw"}
+
+Context: The camouflaged chameleon changed colors to match the dry leaf.
+Input: {"question": "What reptile changed colors to match the leaf?"}
+Output: {"answer": "camouflaged chameleon"}
+
+Context: A school of tuna swam rapidly through the cool blue waters.
+Input: {"question": "What fish swam rapidly through the blue waters?"}
+Output: {"answer": "tuna"}
+
+Context: The grey wolf howled at the full moon from the rocky ridge.
+Input: {"question": "What animal howled at the full moon?"}
+Output: {"answer": "grey wolf"}
+
+Context: A curious raccoon rummaged through the trash bins behind the restaurant.
+Input: {"question": "What animal rummaged through the trash bins?"}
+Output: {"answer": "curious raccoon"}

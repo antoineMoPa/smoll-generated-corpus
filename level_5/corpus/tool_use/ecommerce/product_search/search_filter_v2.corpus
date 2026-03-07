@@ -1,0 +1,51 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Locate mechanical keyboards for gaming under $150.
+Call: { "func_call": "search_products", "query": "mechanical gaming keyboard", "category": "electronics", "min_price": 40, "max_price": 150, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_101", "name": "KeyStrike RGB Pro", "price": 89.99, "rating": 4.7, "in_stock": true }, { "id": "elec_102", "name": "TitanType Mechanical", "price": 129.00, "rating": 4.8, "in_stock": true }, { "id": "elec_103", "name": "SwiftKeys Blue Switch", "price": 65.50, "rating": 4.4, "in_stock": false } ], "total": 3 }
+
+Question: Show me organic dog food bags larger than 20lbs.
+Call: { "func_call": "search_products", "query": "organic dog food large bag", "category": "pet_supplies", "min_price": 30, "max_price": 80, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "pet_001", "name": "NaturePaws Organic Blend", "price": 45.00, "rating": 4.6, "in_stock": true }, { "id": "pet_002", "name": "GreenBone Premium Kibble", "price": 52.99, "rating": 4.5, "in_stock": true }, { "id": "pet_003", "name": "WildHarvest Dog Chow", "price": 68.00, "rating": 4.8, "in_stock": true } ], "total": 3 }
+
+Question: Find yoga mats made of cork under $60.
+Call: { "func_call": "search_products", "query": "cork yoga mat", "category": "sports", "min_price": 20, "max_price": 60, "sort_by": "relevance" }
+Response: { "products": [ { "id": "sport_050", "name": "EcoGrip Cork Mat", "price": 39.99, "rating": 4.7, "in_stock": true }, { "id": "sport_051", "name": "ZenFlow Natural", "price": 49.50, "rating": 4.9, "in_stock": false }, { "id": "sport_052", "name": "PureEarth Yoga Surface", "price": 35.00, "rating": 4.3, "in_stock": true } ], "total": 3 }
+
+Question: Search for stainless steel water bottles with insulation.
+Call: { "func_call": "search_products", "query": "insulated stainless steel bottle", "category": "sports", "min_price": 15, "max_price": 45, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "sport_060", "name": "ThermoKeep 32oz", "price": 24.99, "rating": 4.8, "in_stock": true }, { "id": "sport_061", "name": "IceLock Steel Flask", "price": 29.00, "rating": 4.6, "in_stock": true }, { "id": "sport_062", "name": "HydraSteel Pro", "price": 19.95, "rating": 4.4, "in_stock": true } ], "total": 3 }
+
+Question: I need a leather wallet for men under $50.
+Call: { "func_call": "search_products", "query": "men leather wallet", "category": "accessories", "min_price": 10, "max_price": 50, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "acc_010", "name": "SlimFold Brown Leather", "price": 22.00, "rating": 4.5, "in_stock": true }, { "id": "acc_011", "name": "Classic Bifold Black", "price": 34.99, "rating": 4.7, "in_stock": true }, { "id": "acc_012", "name": "Rustic Hide Wallet", "price": 45.00, "rating": 4.3, "in_stock": false } ], "total": 3 }
+
+Question: Find toddler rain boots in size 8.
+Call: { "func_call": "search_products", "query": "toddler rain boots size 8", "category": "clothing", "min_price": 15, "max_price": 35, "sort_by": "relevance" }
+Response: { "products": [ { "id": "cloth_401", "name": "SplashJump Yellow Boots", "price": 18.50, "rating": 4.6, "in_stock": true }, { "id": "cloth_402", "name": "CloudPuddle Rain Gear", "price": 24.00, "rating": 4.8, "in_stock": true }, { "id": "cloth_403", "name": "DinoStomp Waterproof", "price": 29.99, "rating": 4.4, "in_stock": true } ], "total": 3 }
+
+Question: Look for Bluetooth speakers with waterproof rating.
+Call: { "func_call": "search_products", "query": "waterproof bluetooth speaker", "category": "electronics", "min_price": 30, "max_price": 100, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_110", "name": "AquaSound Blast", "price": 59.99, "rating": 4.7, "in_stock": true }, { "id": "elec_111", "name": "StormBeat Portable", "price": 79.00, "rating": 4.9, "in_stock": false }, { "id": "elec_112", "name": "RiverFlow Mini", "price": 45.50, "rating": 4.5, "in_stock": true } ], "total": 3 }
+
+Question: Search for historical fiction novels set in WWII.
+Call: { "func_call": "search_products", "query": "WWII historical fiction", "category": "books", "min_price": 12, "max_price": 28, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "book_501", "name": "Echoes of War", "price": 14.99, "rating": 4.6, "in_stock": true }, { "id": "book_502", "name": "The Last Battalion", "price": 17.50, "rating": 4.8, "in_stock": true }, { "id": "book_503", "name": "Secrets of 1944", "price": 21.00, "rating": 4.4, "in_stock": true } ], "total": 3 }
+
+Question: Find non-stick frying pans 12 inches or larger.
+Call: { "func_call": "search_products", "query": "non-stick frying pan 12 inch", "category": "home_goods", "min_price": 25, "max_price": 70, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "home_501", "name": "ChefMaster Non-Stick", "price": 39.99, "rating": 4.7, "in_stock": true }, { "id": "home_502", "name": "EasyFlip Skillet", "price": 45.00, "rating": 4.5, "in_stock": true }, { "id": "home_503", "name": " duraCook Professional", "price": 62.50, "rating": 4.9, "in_stock": false } ], "total": 3 }
+
+Question: Show me wireless mouse options for office use.
+Call: { "func_call": "search_products", "query": "wireless office mouse", "category": "electronics", "min_price": 20, "max_price": 60, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "elec_120", "name": "ErgoClick Wireless", "price": 25.00, "rating": 4.4, "in_stock": true }, { "id": "elec_121", "name": "SilentTrack Mouse", "price": 32.99, "rating": 4.6, "in_stock": true }, { "id": "elec_122", "name": "ProGlide Office", "price": 48.50, "rating": 4.8, "in_stock": true } ], "total": 3 }
+
+Question: Find children's picture books about animals.
+Call: { "func_call": "search_products", "query": "children animal picture book", "category": "books", "min_price": 5, "max_price": 15, "sort_by": "relevance" }
+Response: { "products": [ { "id": "book_601", "name": "The Little Fox", "price": 8.99, "rating": 4.9, "in_stock": true }, { "id": "book_602", "name": "Jungle Friends", "price": 10.50, "rating": 4.7, "in_stock": true }, { "id": "book_603", "name": "Ocean Creatures Tale", "price": 12.00, "rating": 4.5, "in_stock": false } ], "total": 3 }
+
+Question: Search for velvet throw pillows in navy blue.
+Call: { "func_call": "search_products", "query": "navy blue velvet pillow", "category": "home_goods", "min_price": 15, "max_price": 40, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "home_601", "name": "LuxVelvet Navy Square", "price": 22.99, "rating": 4.8, "in_stock": true }, { "id": "home_602", "name": "RoyalBlue Cushion", "price": 18.50, "rating": 4.6, "in_stock": true }, { "id": "home_603", "name": "SoftTouch Velvet Set", "price": 35.00, "rating": 4.9, "in_stock": true } ], "total": 3 }

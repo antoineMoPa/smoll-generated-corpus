@@ -1,0 +1,51 @@
+Available Tools: open_garage | close_garage | get_garage_status | set_garage_timer
+Call Schema: { "func_call": "string", "door_id": "string", "delay_seconds": number }
+Response Schema: { "door_id": "string", "state": "open|closed|opening|closing", "timestamp": "string" }
+---
+Question: Can you tell me if the north garage door is currently shut?
+Call: { "func_call": "get_garage_status", "door_id": "garage_north_05", "delay_seconds": 0 }
+Response: { "door_id": "garage_north_05", "state": "closed", "timestamp": "2023-11-01T09:15:30Z" }
+
+Question: Please configure the east entry door to close automatically in 8 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_east_06", "delay_seconds": 480 }
+Response: { "door_id": "garage_east_06", "state": "open", "timestamp": "2023-11-01T09:18:45Z" }
+
+Question: I need to know the real-time status of the boat house garage door.
+Call: { "func_call": "get_garage_status", "door_id": "garage_boathouse_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_boathouse_07", "state": "opening", "timestamp": "2023-11-01T09:22:10Z" }
+
+Question: Hurry, set the north door to close in 3 minutes before it rains.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_north_05", "delay_seconds": 180 }
+Response: { "door_id": "garage_north_05", "state": "open", "timestamp": "2023-11-01T09:25:55Z" }
+
+Question: What is the current position of the south storage garage door?
+Call: { "func_call": "get_garage_status", "door_id": "garage_south_08", "delay_seconds": 0 }
+Response: { "door_id": "garage_south_08", "state": "open", "timestamp": "2023-11-01T09:40:20Z" }
+
+Question: Program the east garage door to shut automatically after 25 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_east_06", "delay_seconds": 1500 }
+Response: { "door_id": "garage_east_06", "state": "open", "timestamp": "2023-11-01T09:45:33Z" }
+
+Question: Has the boat house door completed its closing sequence yet?
+Call: { "func_call": "get_garage_status", "door_id": "garage_boathouse_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_boathouse_07", "state": "closing", "timestamp": "2023-11-01T09:50:15Z" }
+
+Question: Set a quick 90-second timer for the south storage door to close.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_south_08", "delay_seconds": 90 }
+Response: { "door_id": "garage_south_08", "state": "open", "timestamp": "2023-11-01T10:05:42Z" }
+
+Question: Check the status of the north door first thing this morning.
+Call: { "func_call": "get_garage_status", "door_id": "garage_north_05", "delay_seconds": 0 }
+Response: { "door_id": "garage_north_05", "state": "closed", "timestamp": "2023-11-01T10:12:08Z" }
+
+Question: Activate the auto-close feature for the east garage in 12 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_east_06", "delay_seconds": 720 }
+Response: { "door_id": "garage_east_06", "state": "open", "timestamp": "2023-11-01T10:20:50Z" }
+
+Question: Is the boat house door currently moving or fully open?
+Call: { "func_call": "get_garage_status", "door_id": "garage_boathouse_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_boathouse_07", "state": "open", "timestamp": "2023-11-01T10:35:25Z" }
+
+Question: Set the south storage door timer for 45 minutes so I don't forget.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_south_08", "delay_seconds": 2700 }
+Response: { "door_id": "garage_south_08", "state": "open", "timestamp": "2023-11-01T10:50:00Z" }

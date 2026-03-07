@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: Set a 4-hour SLA for ticket TKT-2045 concerning the inventory sync failure and assign it to the Supply Chain Logistics team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-2045", "reason": "Inventory sync failure causing stock discrepancies", "target_team": "Supply Chain Logistics" }
+Response: { "ticket_id": "TKT-2045", "escalated_to": "Supply Chain Logistics", "reason": "Inventory sync failure causing stock discrepancies", "sla_hours": 4, "status": "SLA_ACTIVE" }
+
+Question: Check the current escalation status for ticket TKT-3198 which was transferred to the Fraud Prevention unit this morning.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-3198", "reason": "Status update on flagged fraudulent transaction review", "target_team": "Fraud Prevention" }
+Response: { "ticket_id": "TKT-3198", "escalated_to": "Fraud Prevention", "reason": "Status update on flagged fraudulent transaction review", "sla_hours": 12, "status": "IN_REVIEW" }
+
+Question: Escalate ticket TKT-4521 immediately to the Cloud Architecture team due to unauthorized resource provisioning and set a 30-minute response window.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-4521", "reason": "Unauthorized cloud resource provisioning detected", "target_team": "Cloud Architecture" }
+Response: { "ticket_id": "TKT-4521", "escalated_to": "Cloud Architecture", "reason": "Unauthorized cloud resource provisioning detected", "sla_hours": 0.5, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Transfer ticket TKT-5632 to the Customer Success Managers and apply a 24-hour SLA for the enterprise contract renewal dispute.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-5632", "reason": "Dispute regarding enterprise contract renewal terms", "target_team": "Customer Success Managers" }
+Response: { "ticket_id": "TKT-5632", "escalated_to": "Customer Success Managers", "reason": "Dispute regarding enterprise contract renewal terms", "sla_hours": 24, "status": "SLA_ACTIVE" }
+
+Question: Retrieve the escalation details for TKT-6789 to verify if the 72-hour deadline for the legacy system migration has been breached.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-6789", "reason": "Verification of legacy system migration timeline", "target_team": "Legacy Systems" }
+Response: { "ticket_id": "TKT-6789", "escalated_to": "Legacy Systems", "reason": "Verification of legacy system migration timeline", "sla_hours": 72, "status": "SLA_BREACHED" }
+
+Question: Set a 10-hour SLA on ticket TKT-7843 regarding the authentication service latency and route it to the Identity Management team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-7843", "reason": "High latency in authentication service affecting logins", "target_team": "Identity Management" }
+Response: { "ticket_id": "TKT-7843", "escalated_to": "Identity Management", "reason": "High latency in authentication service affecting logins", "sla_hours": 10, "status": "SLA_ACTIVE" }
+
+Question: Escalate ticket TKT-8954 to the Backup Recovery Specialists because the nightly backup job failed for three consecutive days.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-8954", "reason": "Nightly backup job failure for three consecutive days", "target_team": "Backup Recovery Specialists" }
+Response: { "ticket_id": "TKT-8954", "escalated_to": "Backup Recovery Specialists", "reason": "Nightly backup job failure for three consecutive days", "sla_hours": 6, "status": "BREACH_WARNING_ISSUED" }
+
+Question: Check the status of ticket TKT-9012 assigned to the Telecommunications group to see if theVoIP outage repair is within the 2-hour window.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-9012", "reason": "Status check on VoIP service outage resolution", "target_team": "Telecommunications" }
+Response: { "ticket_id": "TKT-9012", "escalated_to": "Telecommunications", "reason": "Status check on VoIP service outage resolution", "sla_hours": 2, "status": "ON_TRACK" }
+
+Question: Transfer ticket TKT-1234 to the Legal Compliance Team for a subpoena data retrieval request and enforce a strict 48-hour SLA.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-1234", "reason": "Subpoena data retrieval request from legal counsel", "target_team": "Legal Compliance Team" }
+Response: { "ticket_id": "TKT-1234", "escalated_to": "Legal Compliance Team", "reason": "Subpoena data retrieval request from legal counsel", "sla_hours": 48, "status": "SLA_ACTIVE" }
+
+Question: Apply an urgent 15-minute SLA to ticket TKT-5555 for the core router firewall breach and assign it to the Network Security team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-5555", "reason": "Core router firewall breach detected", "target_team": "Network Security" }
+Response: { "ticket_id": "TKT-5555", "escalated_to": "Network Security", "reason": "Core router firewall breach detected", "sla_hours": 0.25, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Get the escalation status for TKT-6666 to confirm if the report generation timeout issue was resolved before the 5-hour deadline.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-6666", "reason": "Confirmation of report generation timeout resolution", "target_team": "Data Analytics" }
+Response: { "ticket_id": "TKT-6666", "escalated_to": "Data Analytics", "reason": "Confirmation of report generation timeout resolution", "sla_hours": 5, "status": "RESOLVED_WITHIN_SLA" }
+
+Question: Escalate ticket TKT-7777 to the Vendor Management team due to a critical API key expiration and set a 3-hour resolution target.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7777", "reason": "Critical third-party API key expiration", "target_team": "Vendor Management" }
+Response: { "ticket_id": "TKT-7777", "escalated_to": "Vendor Management", "reason": "Critical third-party API key expiration", "sla_hours": 3, "status": "SLA_ACTIVE" }

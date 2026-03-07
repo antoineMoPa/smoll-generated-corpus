@@ -1,0 +1,51 @@
+Available Tools: create_folder | move_file | copy_file | rename_file | delete_file | list_folder
+Call Schema: { "func_call": "string", "path": "string", "destination": "string", "new_name": "string" }
+Response Schema: { "path": "string", "entries": [{ "name": "string", "type": "file|folder", "size_bytes": number }], "status": "string" }
+---
+Question: Show me everything inside the media assets directory to identify unused images.
+Call: { "func_call": "list_folder", "path": "/assets/media", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media", "entries": [{ "name": "logo_v1.png", "type": "file", "size_bytes": 15400 }, { "name": "banner_old.jpg", "type": "file", "size_bytes": 89000 }, { "name": "icons", "type": "folder", "size_bytes": 0 }, { "name": "temp_render.mp4", "type": "file", "size_bytes": 1250000 }], "status": "success" }
+
+Question: Rename the temporary video render to final_product_demo.mp4 for the presentation.
+Call: { "func_call": "rename_file", "path": "/assets/media/temp_render.mp4", "destination": "", "new_name": "final_product_demo.mp4" }
+Response: { "path": "/assets/media", "entries": [{ "name": "logo_v1.png", "type": "file", "size_bytes": 15400 }, { "name": "banner_old.jpg", "type": "file", "size_bytes": 89000 }, { "name": "icons", "type": "folder", "size_bytes": 0 }, { "name": "final_product_demo.mp4", "type": "file", "size_bytes": 1250000 }], "status": "renamed" }
+
+Question: Remove the outdated banner image since we are using the new design system.
+Call: { "func_call": "delete_file", "path": "/assets/media/banner_old.jpg", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media", "entries": [{ "name": "logo_v1.png", "type": "file", "size_bytes": 15400 }, { "name": "icons", "type": "folder", "size_bytes": 0 }, { "name": "final_product_demo.mp4", "type": "file", "size_bytes": 1250000 }], "status": "deleted" }
+
+Question: Check what files are inside the icons subfolder to see if any are duplicates.
+Call: { "func_call": "list_folder", "path": "/assets/media/icons", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media/icons", "entries": [{ "name": "user.svg", "type": "file", "size_bytes": 2100 }, { "name": "settings.svg", "type": "file", "size_bytes": 1900 }, { "name": "user_copy.svg", "type": "file", "size_bytes": 2100 }, { "name": "backup", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Delete the duplicate user icon file named user_copy.svg from the icons directory.
+Call: { "func_call": "delete_file", "path": "/assets/media/icons/user_copy.svg", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media/icons", "entries": [{ "name": "user.svg", "type": "file", "size_bytes": 2100 }, { "name": "settings.svg", "type": "file", "size_bytes": 1900 }, { "name": "backup", "type": "folder", "size_bytes": 0 }], "status": "deleted" }
+
+Question: Rename the main logo file to include the year, changing logo_v1.png to company_logo_2024.png.
+Call: { "func_call": "rename_file", "path": "/assets/media/logo_v1.png", "destination": "", "new_name": "company_logo_2024.png" }
+Response: { "path": "/assets/media", "entries": [{ "name": "company_logo_2024.png", "type": "file", "size_bytes": 15400 }, { "name": "icons", "type": "folder", "size_bytes": 0 }, { "name": "final_product_demo.mp4", "type": "file", "size_bytes": 1250000 }], "status": "renamed" }
+
+Question: List the media root directory again to ensure the deletions and renames applied correctly.
+Call: { "func_call": "list_folder", "path": "/assets/media", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media", "entries": [{ "name": "company_logo_2024.png", "type": "file", "size_bytes": 15400 }, { "name": "icons", "type": "folder", "size_bytes": 0 }, { "name": "final_product_demo.mp4", "type": "file", "size_bytes": 1250000 }], "status": "success" }
+
+Question: Remove the empty backup folder within the icons directory as it serves no purpose now.
+Call: { "func_call": "delete_file", "path": "/assets/media/icons/backup", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media/icons", "entries": [{ "name": "user.svg", "type": "file", "size_bytes": 2100 }, { "name": "settings.svg", "type": "file", "size_bytes": 1900 }], "status": "deleted" }
+
+Question: Rename the settings icon to settings_gear.svg for better clarity in the codebase.
+Call: { "func_call": "rename_file", "path": "/assets/media/icons/settings.svg", "destination": "", "new_name": "settings_gear.svg" }
+Response: { "path": "/assets/media/icons", "entries": [{ "name": "user.svg", "type": "file", "size_bytes": 2100 }, { "name": "settings_gear.svg", "type": "file", "size_bytes": 1900 }], "status": "renamed" }
+
+Question: Display the contents of the icons folder one final time to verify the current state.
+Call: { "func_call": "list_folder", "path": "/assets/media/icons", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media/icons", "entries": [{ "name": "user.svg", "type": "file", "size_bytes": 2100 }, { "name": "settings_gear.svg", "type": "file", "size_bytes": 1900 }], "status": "success" }
+
+Question: Delete the product demo video because the marketing team requested a reshoot.
+Call: { "func_call": "delete_file", "path": "/assets/media/final_product_demo.mp4", "destination": "", "new_name": "" }
+Response: { "path": "/assets/media", "entries": [{ "name": "company_logo_2024.png", "type": "file", "size_bytes": 15400 }, { "name": "icons", "type": "folder", "size_bytes": 0 }], "status": "deleted" }
+
+Question: Rename the media folder to "brand_assets_2024" to align with the new fiscal year naming convention.
+Call: { "func_call": "rename_file", "path": "/assets/media", "destination": "", "new_name": "brand_assets_2024" }
+Response: { "path": "/assets", "entries": [{ "name": "brand_assets_2024", "type": "folder", "size_bytes": 0 }, { "name": "fonts", "type": "folder", "size_bytes": 0 }], "status": "renamed" }

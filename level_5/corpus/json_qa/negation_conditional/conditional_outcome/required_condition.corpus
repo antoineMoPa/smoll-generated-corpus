@@ -1,0 +1,59 @@
+Context: Users cannot access the admin panel unless they have a verified email address. The system checks this status upon every login attempt.
+Input: {"question": "What is required to access the admin panel?"}
+Output: {"answer": "a verified email address"}
+
+Context: The loan application will be rejected if the applicant does not provide two forms of government-issued identification. Additional documents may be requested later.
+Input: {"question": "What is required to avoid rejection of the loan application?"}
+Output: {"answer": "two forms of government-issued identification"}
+
+Context: Compilation of the software package fails without the latest version of the GCC compiler installed on the build server. Developers should update their environments before pushing code.
+Input: {"question": "What is required to successfully compile the software package?"}
+Output: {"answer": "the latest version of the GCC compiler"}
+
+Context: Entry to the secure laboratory is denied unless the visitor wears a full hazmat suit and signs the liability waiver. Safety officers monitor the entrance continuously.
+Input: {"question": "What is required to gain entry to the secure laboratory?"}
+Output: {"answer": "wears a full hazmat suit and signs the liability waiver"}
+
+Context: The warranty becomes void if the customer attempts to repair the device themselves before contacting support. Only authorized technicians should open the casing.
+Input: {"question": "What is required to keep the warranty valid?"}
+Output: {"answer": "contacting support before attempting to repair the device themselves"}
+
+Context: Registration for the marathon closes immediately unless the runner submits a medical clearance certificate from a licensed physician. Late entries are not accepted under any circumstances.
+Input: {"question": "What is required to complete registration for the marathon?"}
+Output: {"answer": "submits a medical clearance certificate from a licensed physician"}
+
+Context: The database migration script will not execute if the backup file is smaller than 500 megabytes. Administrators must verify file integrity before starting the process.
+Input: {"question": "What is required for the database migration script to execute?"}
+Output: {"answer": "the backup file is smaller than 500 megabytes"}
+
+Context: Passengers cannot board the international flight without a passport that remains valid for at least six months beyond the travel date. Airline agents check this strictly at the gate.
+Input: {"question": "What is required to board the international flight?"}
+Output: {"answer": "a passport that remains valid for at least six months beyond the travel date"}
+
+Context: The smart thermostat will not activate the heating system unless the indoor temperature drops below 68 degrees Fahrenheit. Users can override this setting via the mobile app.
+Input: {"question": "What is required for the smart thermostat to activate the heating system?"}
+Output: {"answer": "the indoor temperature drops below 68 degrees Fahrenheit"}
+
+Context: Access to the archival records is prohibited unless the researcher presents a letter of authorization signed by the department head. Copies of the letter must be kept on file.
+Input: {"question": "What is required to access the archival records?"}
+Output: {"answer": "presents a letter of authorization signed by the department head"}
+
+Context: The chemical reaction does not proceed if the solution pH level is above 7.0. Technicians must add the acid catalyst to lower the pH before mixing reagents.
+Input: {"question": "What is required for the chemical reaction to proceed?"}
+Output: {"answer": "the solution pH level is above 7.0"}
+
+Context: Employees are ineligible for the remote work program unless they have completed the cybersecurity training module within the last twelve months. HR tracks completion dates automatically.
+Input: {"question": "What is required to be eligible for the remote work program?"}
+Output: {"answer": "completed the cybersecurity training module within the last twelve months"}
+
+Context: The website checkout process halts if the billing address does not match the address on file with the credit card issuer. Customers should update their profile information first.
+Input: {"question": "What is required to complete the website checkout process?"}
+Output: {"answer": "the billing address matches the address on file with the credit card issuer"}
+
+Context: Graduation ceremonies exclude students who have not returned all borrowed library books by the deadline. Fines must be paid in full before diplomas are released.
+Input: {"question": "What is required to participate in the graduation ceremonies?"}
+Output: {"answer": "returned all borrowed library books by the deadline"}
+
+Context: The automated door remains locked unless the motion sensor detects a valid RFID badge within three feet. Maintenance staff should test the sensor range weekly.
+Input: {"question": "What is required for the automated door to unlock?"}
+Output: {"answer": "the motion sensor detects a valid RFID badge within three feet"}

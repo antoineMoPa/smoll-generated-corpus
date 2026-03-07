@@ -1,0 +1,51 @@
+Available Tools: list_processes | kill_process | get_process_info | top_processes
+Call Schema: { "func_call": "string", "pid": "number", "name": "string", "signal": "string" }
+Response Schema: { "processes": [{ "pid": "number", "name": "string", "cpu": "number", "mem": "number" }] }
+---
+Question: Show me the top 5 processes consuming the most CPU right now.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 1420, "name": "chrome", "cpu": 45.2, "mem": 12.4 }, { "pid": 890, "name": "firefox", "cpu": 32.1, "mem": 18.7 }, { "pid": 2301, "name": "node", "cpu": 28.5, "mem": 9.2 }, { "pid": 1105, "name": "python3", "cpu": 15.3, "mem": 6.8 }, { "pid": 304, "name": "docker", "cpu": 12.9, "mem": 14.1 }] }
+
+Question: What are the details for process ID 4592?
+Call: { "func_call": "get_process_info", "pid": 4592, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 4592, "name": "mysqld", "cpu": 8.4, "mem": 22.6 }] }
+
+Question: List all processes currently running on the system.
+Call: { "func_call": "list_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 1, "name": "systemd", "cpu": 0.1, "mem": 0.5 }, { "pid": 245, "name": "sshd", "cpu": 0.0, "mem": 0.3 }, { "pid": 1024, "name": "bash", "cpu": 0.2, "mem": 0.4 }, { "pid": 1420, "name": "chrome", "cpu": 45.2, "mem": 12.4 }, { "pid": 4592, "name": "mysqld", "cpu": 8.4, "mem": 22.6 }] }
+
+Question: Find the process named 'nginx' and show its resource usage.
+Call: { "func_call": "get_process_info", "pid": null, "name": "nginx", "signal": null }
+Response: { "processes": [{ "pid": 3301, "name": "nginx", "cpu": 2.1, "mem": 1.8 }] }
+
+Question: Which processes are using the most memory at the moment?
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 4592, "name": "mysqld", "cpu": 8.4, "mem": 22.6 }, { "pid": 890, "name": "firefox", "cpu": 32.1, "mem": 18.7 }, { "pid": 304, "name": "docker", "cpu": 12.9, "mem": 14.1 }, { "pid": 1420, "name": "chrome", "cpu": 45.2, "mem": 12.4 }, { "pid": 2301, "name": "node", "cpu": 28.5, "mem": 9.2 }] }
+
+Question: Get info for the java process running on port 8080.
+Call: { "func_call": "get_process_info", "pid": null, "name": "java", "signal": null }
+Response: { "processes": [{ "pid": 5670, "name": "java", "cpu": 18.9, "mem": 35.4 }] }
+
+Question: Show me the top 3 CPU hogs.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 1420, "name": "chrome", "cpu": 45.2, "mem": 12.4 }, { "pid": 890, "name": "firefox", "cpu": 32.1, "mem": 18.7 }, { "pid": 2301, "name": "node", "cpu": 28.5, "mem": 9.2 }] }
+
+Question: Check the status of process 1024.
+Call: { "func_call": "get_process_info", "pid": 1024, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 1024, "name": "bash", "cpu": 0.2, "mem": 0.4 }] }
+
+Question: Retrieve details for the postgres server process.
+Call: { "func_call": "get_process_info", "pid": null, "name": "postgres", "signal": null }
+Response: { "processes": [{ "pid": 6102, "name": "postgres", "cpu": 5.6, "mem": 11.2 }] }
+
+Question: List the top processes by resource consumption.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 5670, "name": "java", "cpu": 18.9, "mem": 35.4 }, { "pid": 1420, "name": "chrome", "cpu": 45.2, "mem": 12.4 }, { "pid": 4592, "name": "mysqld", "cpu": 8.4, "mem": 22.6 }, { "pid": 890, "name": "firefox", "cpu": 32.1, "mem": 18.7 }, { "pid": 304, "name": "docker", "cpu": 12.9, "mem": 14.1 }] }
+
+Question: What is the CPU usage for process ID 3301?
+Call: { "func_call": "get_process_info", "pid": 3301, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 3301, "name": "nginx", "cpu": 2.1, "mem": 1.8 }] }
+
+Question: Show me the highest memory consuming processes.
+Call: { "func_call": "top_processes", "pid": null, "name": null, "signal": null }
+Response: { "processes": [{ "pid": 5670, "name": "java", "cpu": 18.9, "mem": 35.4 }, { "pid": 4592, "name": "mysqld", "cpu": 8.4, "mem": 22.6 }, { "pid": 890, "name": "firefox", "cpu": 32.1, "mem": 18.7 }, { "pid": 304, "name": "docker", "cpu": 12.9, "mem": 14.1 }, { "pid": 1420, "name": "chrome", "cpu": 45.2, "mem": 12.4 }] }

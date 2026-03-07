@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "string", "head": "string", "base": "string" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Initiate a pull request in the geo-mapping service owned by map-core to merge feature/3d-terrain into main with the title "Enable 3D Terrain Rendering".
+Call: { "func_call": "create_pr", "owner": "map-core", "repo": "geo-mapping", "pr_number": 0, "title": "Enable 3D Terrain Rendering", "head": "feature/3d-terrain", "base": "main" }
+Response: { "pr_number": 412, "title": "Enable 3D Terrain Rendering", "state": "open", "author": "map-core", "changed_files": 24, "mergeable": true }
+
+Question: Display all active pull requests for the log-aggregator repository under the dev-ops-unity organization.
+Call: { "func_call": "list_prs", "owner": "dev-ops-unity", "repo": "log-aggregator", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 76, "title": "Implement Elasticsearch Sink", "state": "open", "author": "ops_lisa", "changed_files": 13, "mergeable": false }
+
+Question: Create a PR in the chat-bot-engine repo owned by ai-interact to merge hotfix/memory-leak-fix into develop titled "Resolve Memory Leak in Session Handler".
+Call: { "func_call": "create_pr", "owner": "ai-interact", "repo": "chat-bot-engine", "pr_number": 0, "title": "Resolve Memory Leak in Session Handler", "head": "hotfix/memory-leak-fix", "base": "develop" }
+Response: { "pr_number": 99, "title": "Resolve Memory Leak in Session Handler", "state": "open", "author": "ai-interact", "changed_files": 2, "mergeable": true }
+
+Question: What are the current pull requests for the video-transcoder project managed by media-stream?
+Call: { "func_call": "list_prs", "owner": "media-stream", "repo": "video-transcoder", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 155, "title": "Add H.265 Encoding Support", "state": "open", "author": "codec_roy", "changed_files": 19, "mergeable": true }
+
+Question: Submit a new pull request for the weather-dashboard repo owned by climate-data merging feature/radar-overlay into main with the title "Integrate Live Radar Overlay".
+Call: { "func_call": "create_pr", "owner": "climate-data", "repo": "weather-dashboard", "pr_number": 0, "title": "Integrate Live Radar Overlay", "head": "feature/radar-overlay", "base": "main" }
+Response: { "pr_number": 203, "title": "Integrate Live Radar Overlay", "state": "open", "author": "climate-data", "changed_files": 16, "mergeable": true }
+
+Question: List pending pull requests for the order-processing system under the retail-giant organization.
+Call: { "func_call": "list_prs", "owner": "retail-giant", "repo": "order-processing", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 321, "title": "Optimize Database Indexes", "state": "open", "author": "db_admin", "changed_files": 7, "mergeable": true }
+
+Question: Open a PR to the crypto-wallet repo owned by block-chain-labs to merge refactor/gas-estimation into master titled "Improve Gas Estimation Algorithm".
+Call: { "func_call": "create_pr", "owner": "block-chain-labs", "repo": "crypto-wallet", "pr_number": 0, "title": "Improve Gas Estimation Algorithm", "head": "refactor/gas-estimation", "base": "master" }
+Response: { "pr_number": 84, "title": "Improve Gas Estimation Algorithm", "state": "open", "author": "block-chain-labs", "changed_files": 9, "mergeable": false }
+
+Question: Retrieve the list of open PRs for the image-recognition repository under the vision-tech organization.
+Call: { "func_call": "list_prs", "owner": "vision-tech", "repo": "image-recognition", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 167, "title": "Upgrade TensorFlow Version", "state": "open", "author": "ml_expert", "changed_files": 21, "mergeable": true }
+
+Question: Create a pull request in the email-scheduler repo owned by comm-tools to merge feature/delayed-send into main with the title "Add Delayed Send Functionality".
+Call: { "func_call": "create_pr", "owner": "comm-tools", "repo": "email-scheduler", "pr_number": 0, "title": "Add Delayed Send Functionality", "head": "feature/delayed-send", "base": "main" }
+Response: { "pr_number": 55, "title": "Add Delayed Send Functionality", "state": "open", "author": "comm-tools", "changed_files": 6, "mergeable": true }
+
+Question: Show me the current pull requests for the fleet-tracker repository managed by logistics-pro.
+Call: { "func_call": "list_prs", "owner": "logistics-pro", "repo": "fleet-tracker", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 128, "title": "Integrate GPS Tracking API", "state": "open", "author": "gps_dev", "changed_files": 14, "mergeable": true }
+
+Question: Submit a PR for the task-manager repo owned by productivity-hub merging bugfix/due-date-timezone into main titled "Fix Due Date Timezone Conversion".
+Call: { "func_call": "create_pr", "owner": "productivity-hub", "repo": "task-manager", "pr_number": 0, "title": "Fix Due Date Timezone Conversion", "head": "bugfix/due-date-timezone", "base": "main" }
+Response: { "pr_number": 92, "title": "Fix Due Date Timezone Conversion", "state": "open", "author": "productivity-hub", "changed_files": 3, "mergeable": true }
+
+Question: List all pull requests for the music-streaming-api repo managed by audio-flow.
+Call: { "func_call": "list_prs", "owner": "audio-flow", "repo": "music-streaming-api", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 214, "title": "Add Playlist Collaboration Feature", "state": "open", "author": "audio_dev", "changed_files": 10, "mergeable": false }

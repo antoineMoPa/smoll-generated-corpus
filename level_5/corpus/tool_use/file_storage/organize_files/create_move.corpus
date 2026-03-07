@@ -1,0 +1,51 @@
+Available Tools: create_folder | move_file | copy_file | rename_file | delete_file | list_folder
+Call Schema: { "func_call": "string", "path": "string", "destination": "string", "new_name": "string" }
+Response Schema: { "path": "string", "entries": [{ "name": "string", "type": "file|folder", "size_bytes": number }], "status": "string" }
+---
+Question: Create a new folder named "Q4_Reports" inside the projects directory.
+Call: { "func_call": "create_folder", "path": "/projects/Q4_Reports", "destination": "", "new_name": "" }
+Response: { "path": "/projects", "entries": [{ "name": "Q4_Reports", "type": "folder", "size_bytes": 0 }, { "name": "budget.xlsx", "type": "file", "size_bytes": 24500 }], "status": "success" }
+
+Question: Move the file "invoice_2023.pdf" from the root downloads folder to the archives folder.
+Call: { "func_call": "move_file", "path": "/downloads/invoice_2023.pdf", "destination": "/archives", "new_name": "" }
+Response: { "path": "/archives", "entries": [{ "name": "invoice_2023.pdf", "type": "file", "size_bytes": 1048576 }, { "name": "old_logs", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Create a folder called "Design_Assets" within the shared directory.
+Call: { "func_call": "create_folder", "path": "/shared/Design_Assets", "destination": "", "new_name": "" }
+Response: { "path": "/shared", "entries": [{ "name": "Design_Assets", "type": "folder", "size_bytes": 0 }, { "name": "meeting_notes.docx", "type": "file", "size_bytes": 15200 }], "status": "success" }
+
+Question: Move "prototype_v2.sketch" from the projects/drafts folder to the shared/Design_Assets folder.
+Call: { "func_call": "move_file", "path": "/projects/drafts/prototype_v2.sketch", "destination": "/shared/Design_Assets", "new_name": "" }
+Response: { "path": "/shared/Design_Assets", "entries": [{ "name": "prototype_v2.sketch", "type": "file", "size_bytes": 4500200 }], "status": "success" }
+
+Question: Create a subfolder named "2024_Tax_Docs" inside the archives directory.
+Call: { "func_call": "create_folder", "path": "/archives/2024_Tax_Docs", "destination": "", "new_name": "" }
+Response: { "path": "/archives", "entries": [{ "name": "2024_Tax_Docs", "type": "folder", "size_bytes": 0 }, { "name": "invoice_2023.pdf", "type": "file", "size_bytes": 1048576 }], "status": "success" }
+
+Question: Move the file "client_contract_signed.pdf" from the projects/legal folder to the archives/2024_Tax_Docs folder.
+Call: { "func_call": "move_file", "path": "/projects/legal/client_contract_signed.pdf", "destination": "/archives/2024_Tax_Docs", "new_name": "" }
+Response: { "path": "/archives/2024_Tax_Docs", "entries": [{ "name": "client_contract_signed.pdf", "type": "file", "size_bytes": 890000 }], "status": "success" }
+
+Question: Create a new folder named "Marketing_Campaigns" in the projects root.
+Call: { "func_call": "create_folder", "path": "/projects/Marketing_Campaigns", "destination": "", "new_name": "" }
+Response: { "path": "/projects", "entries": [{ "name": "Marketing_Campaigns", "type": "folder", "size_bytes": 0 }, { "name": "Q4_Reports", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Move "brand_guidelines.pdf" from the shared folder into the newly created Marketing_Campaigns folder.
+Call: { "func_call": "move_file", "path": "/shared/brand_guidelines.pdf", "destination": "/projects/Marketing_Campaigns", "new_name": "" }
+Response: { "path": "/projects/Marketing_Campaigns", "entries": [{ "name": "brand_guidelines.pdf", "type": "file", "size_bytes": 3200400 }], "status": "success" }
+
+Question: Create a folder called "Legacy_Code" inside the archives directory.
+Call: { "func_call": "create_folder", "path": "/archives/Legacy_Code", "destination": "", "new_name": "" }
+Response: { "path": "/archives", "entries": [{ "name": "Legacy_Code", "type": "folder", "size_bytes": 0 }, { "name": "2024_Tax_Docs", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Move the file "app_v1_source.zip" from the projects/old_versions folder to the archives/Legacy_Code folder.
+Call: { "func_call": "move_file", "path": "/projects/old_versions/app_v1_source.zip", "destination": "/archives/Legacy_Code", "new_name": "" }
+Response: { "path": "/archives/Legacy_Code", "entries": [{ "name": "app_v1_source.zip", "type": "file", "size_bytes": 15728640 }], "status": "success" }
+
+Question: Create a folder named "HR_Policies" within the shared directory.
+Call: { "func_call": "create_folder", "path": "/shared/HR_Policies", "destination": "", "new_name": "" }
+Response: { "path": "/shared", "entries": [{ "name": "HR_Policies", "type": "folder", "size_bytes": 0 }, { "name": "Design_Assets", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Move "employee_handbook_2024.pdf" from the projects/admin folder to the shared/HR_Policies folder.
+Call: { "func_call": "move_file", "path": "/projects/admin/employee_handbook_2024.pdf", "destination": "/shared/HR_Policies", "new_name": "" }
+Response: { "path": "/shared/HR_Policies", "entries": [{ "name": "employee_handbook_2024.pdf", "type": "file", "size_bytes": 2100500 }], "status": "success" }

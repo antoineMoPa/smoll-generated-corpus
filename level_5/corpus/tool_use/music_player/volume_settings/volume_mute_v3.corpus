@@ -1,0 +1,62 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: Lower the sound to 20 for the bedtime story session.
+Call: { "func_call": "set_volume", "level": 20, "preset": "bedtime" }
+Response: { "volume": 20, "muted": false, "equalizer_preset": "bedtime" }
+
+---
+Question: Crank the volume up to 95 for the concert livestream.
+Call: { "func_call": "set_volume", "level": 95, "preset": "live_event" }
+Response: { "volume": 95, "muted": false, "equalizer_preset": "live_event" }
+
+---
+Question: Silence the output right now, I have a visitor at the door.
+Call: { "func_call": "mute", "level": 55, "preset": "standard" }
+Response: { "volume": 55, "muted": true, "equalizer_preset": "standard" }
+
+---
+Question: Bring the audio back online and maintain the previous loudness.
+Call: { "func_call": "unmute", "level": 55, "preset": "standard" }
+Response: { "volume": 55, "muted": false, "equalizer_preset": "standard" }
+
+---
+Question: Adjust the level to 40 and enable the electronic music profile.
+Call: { "func_call": "set_volume", "level": 40, "preset": "electronic" }
+Response: { "volume": 40, "muted": false, "equalizer_preset": "electronic" }
+
+---
+Question: Please hush the system while I record a voice memo.
+Call: { "func_call": "mute", "level": 70, "preset": "podcast" }
+Response: { "volume": 70, "muted": true, "equalizer_preset": "podcast" }
+
+---
+Question: Drop the volume to 25 for ambient study and load the lo-fi preset.
+Call: { "func_call": "set_volume", "level": 25, "preset": "lo_fi" }
+Response: { "volume": 25, "muted": false, "equalizer_preset": "lo_fi" }
+
+---
+Question: Unmute the speakers and push the volume to 88 for the workout mix.
+Call: { "func_call": "unmute", "level": 88, "preset": "high_energy" }
+Response: { "volume": 88, "muted": false, "equalizer_preset": "high_energy" }
+
+---
+Question: Set the dial to 5 which is nearly silent, but do not engage mute.
+Call: { "func_call": "set_volume", "level": 5, "preset": "neutral" }
+Response: { "volume": 5, "muted": false, "equalizer_preset": "neutral" }
+
+---
+Question: Engage the mute function while keeping the level at 80 intact.
+Call: { "func_call": "mute", "level": 80, "preset": "orchestral" }
+Response: { "volume": 80, "muted": true, "equalizer_preset": "orchestral" }
+
+---
+Question: Increase the audio to 65 and select the country radio preset.
+Call: { "func_call": "set_volume", "level": 65, "preset": "country" }
+Response: { "volume": 65, "muted": false, "equalizer_preset": "country" }
+
+---
+Question: Unmute the stream and settle the volume at 35 for the morning podcast.
+Call: { "func_call": "unmute", "level": 35, "preset": "talk_radio" }
+Response: { "volume": 35, "muted": false, "equalizer_preset": "talk_radio" }

@@ -1,0 +1,62 @@
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: What hashtags are trending in Tokyo right now?
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "", "location": "Tokyo", "limit": 10 }
+Response: { "results": [{ "id": "tag_001", "type": "post", "content": "#TokyoNightLife", "likes": 45200 }, { "id": "tag_002", "type": "post", "content": "#SakuraSeason", "likes": 38900 }, { "id": "tag_003", "type": "post", "content": "#ShibuyaCrossing", "likes": 29100 }], "total": 3 }
+
+---
+Question: Show me the top 5 global trending hashtags.
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "", "location": "", "limit": 5 }
+Response: { "results": [{ "id": "tag_101", "type": "post", "content": "#WorldCup2026", "likes": 1205000 }, { "id": "tag_102", "type": "post", "content": "#AIRevolution", "likes": 980000 }, { "id": "tag_103", "type": "post", "content": "#ClimateAction", "likes": 875000 }], "total": 3 }
+
+---
+Question: Get the explore feed for technology news.
+Call: { "func_call": "get_explore_feed", "query": "technology news", "hashtag": "", "location": "", "limit": 20 }
+Response: { "results": [{ "id": "post_501", "type": "post", "content": "New quantum processor breaks speed records", "likes": 15400 }, { "id": "post_502", "type": "post", "content": "Top 10 gadgets of the month", "likes": 12300 }, { "id": "post_503", "type": "post", "content": "Silicon Valley startup raises $50M", "likes": 9800 }], "total": 3 }
+
+---
+Question: Show me trending food hashtags in Paris.
+Call: { "func_call": "get_trending_hashtags", "query": "food", "hashtag": "", "location": "Paris", "limit": 8 }
+Response: { "results": [{ "id": "tag_201", "type": "post", "content": "#ParisEats", "likes": 67000 }, { "id": "tag_202", "type": "post", "content": "#FrenchPastry", "likes": 54200 }, { "id": "tag_203", "type": "post", "content": "#CroissantLove", "likes": 41000 }], "total": 3 }
+
+---
+Question: Fetch the explore feed for travel photography in Bali.
+Call: { "func_call": "get_explore_feed", "query": "travel photography", "hashtag": "", "location": "Bali", "limit": 15 }
+Response: { "results": [{ "id": "post_601", "type": "post", "content": "Sunrise at Mount Batur", "likes": 22100 }, { "id": "post_602", "type": "post", "content": "Hidden waterfalls of Ubud", "likes": 18900 }, { "id": "post_603", "type": "post", "content": "Bali beach sunset vibes", "likes": 16500 }], "total": 3 }
+
+---
+Question: What is trending under the hashtag #Fitness in New York?
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "#Fitness", "location": "New York", "limit": 12 }
+Response: { "results": [{ "id": "tag_301", "type": "post", "content": "#NYCMarathon", "likes": 89000 }, { "id": "tag_302", "type": "post", "content": "#CentralParkRun", "likes": 72000 }, { "id": "tag_303", "type": "post", "content": "#GymLifeNY", "likes": 65000 }], "total": 3 }
+
+---
+Question: Get the general explore feed for comedy sketches.
+Call: { "func_call": "get_explore_feed", "query": "comedy sketches", "hashtag": "", "location": "", "limit": 25 }
+Response: { "results": [{ "id": "post_701", "type": "post", "content": "When your coffee spills before work", "likes": 34000 }, { "id": "post_702", "type": "post", "content": "Office pranks gone wrong", "likes": 29500 }, { "id": "post_703", "type": "post", "content": "Cat vs printer compilation", "likes": 27800 }], "total": 3 }
+
+---
+Question: Show trending fashion hashtags in Milan during fashion week.
+Call: { "func_call": "get_trending_hashtags", "query": "fashion", "hashtag": "", "location": "Milan", "limit": 10 }
+Response: { "results": [{ "id": "tag_401", "type": "post", "content": "#MilanFashionWeek", "likes": 150000 }, { "id": "tag_402", "type": "post", "content": "#RunwayReady", "likes": 112000 }, { "id": "tag_403", "type": "post", "content": "#ItalianStyle", "likes": 98000 }], "total": 3 }
+
+---
+Question: Fetch explore feed results for DIY home improvement.
+Call: { "func_call": "get_explore_feed", "query": "DIY home improvement", "hashtag": "", "location": "", "limit": 18 }
+Response: { "results": [{ "id": "post_801", "type": "post", "content": "How to paint a room like a pro", "likes": 19200 }, { "id": "post_802", "type": "post", "content": "Budget kitchen makeover ideas", "likes": 17600 }, { "id": "post_803", "type": "post", "content": "Building a backyard deck", "likes": 14300 }], "total": 3 }
+
+---
+Question: What music hashtags are trending in Nashville?
+Call: { "func_call": "get_trending_hashtags", "query": "music", "hashtag": "", "location": "Nashville", "limit": 7 }
+Response: { "results": [{ "id": "tag_501", "type": "post", "content": "#NashvilleSounds", "likes": 43000 }, { "id": "tag_502", "type": "post", "content": "#CountryMusicLive", "likes": 38500 }, { "id": "tag_503", "type": "post", "content": "#BroadwayBeats", "likes": 31000 }], "total": 3 }
+
+---
+Question: Get the explore feed for sustainable living tips.
+Call: { "func_call": "get_explore_feed", "query": "sustainable living", "hashtag": "", "location": "", "limit": 22 }
+Response: { "results": [{ "id": "post_901", "type": "post", "content": "Zero waste grocery shopping guide", "likes": 25600 }, { "id": "post_902", "type": "post", "content": "Composting for beginners", "likes": 21400 }, { "id": "post_903", "type": "post", "content": "Reducing plastic in your home", "likes": 19800 }], "total": 3 }
+
+---
+Question: Show trending gaming hashtags in Seoul.
+Call: { "func_call": "get_trending_hashtags", "query": "gaming", "hashtag": "", "location": "Seoul", "limit": 9 }
+Response: { "results": [{ "id": "tag_601", "type": "post", "content": "#SeoulGaming", "likes": 76000 }, { "id": "tag_602", "type": "post", "content": "#EsportsKorea", "likes": 68000 }, { "id": "tag_603", "type": "post", "content": "#PCBangLife", "likes": 59000 }], "total": 3 }

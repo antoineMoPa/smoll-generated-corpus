@@ -1,0 +1,51 @@
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find all shipping notifications from FedEx regarding my recent package.
+Call: { "func_call": "search_emails", "query": "shipping notification", "from": "fedex.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_1001", "from": "tracking@fedex.com", "subject": "Your FedEx Shipment #79283741 is Out for Delivery", "date": "2023-11-01T08:15:00Z" }, { "id": "msg_1002", "from": "updates@fedex.com", "subject": "Delivery Update: Package Arrived at Local Facility", "date": "2023-10-31T19:45:00Z" }], "count": 2 }
+
+Question: Search for subscription renewals sent by Netflix.
+Call: { "func_call": "search_emails", "query": "subscription renewal", "from": "netflix.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_2005", "from": "billing@netflix.com", "subject": "Your Netflix Subscription Has Renewed", "date": "2023-11-02T06:00:00Z" }], "count": 1 }
+
+Question: Look for flight itinerary emails from Delta Airlines.
+Call: { "func_call": "search_emails", "query": "flight itinerary", "from": "delta.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_3012", "from": "reservations@delta.com", "subject": "Your Delta eTicket Receipt #DL-882910", "date": "2023-10-28T14:20:00Z" }, { "id": "msg_3013", "from": "checkin@delta.com", "subject": "Check-in Open for Your Upcoming Flight", "date": "2023-10-30T09:00:00Z" }], "count": 2 }
+
+Question: Find webinar registration confirmations from TechConf 2023.
+Call: { "func_call": "search_emails", "query": "webinar registration", "from": "events@techconf2023.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_4055", "from": "register@techconf2023.com", "subject": "Confirmation: You are Registered for AI Trends Webinar", "date": "2023-11-03T11:30:00Z" }], "count": 1 }
+
+Question: Search for receipt emails from Starbucks for coffee purchases.
+Call: { "func_call": "search_emails", "query": "receipt", "from": "starbucks.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_5021", "from": "rewards@starbucks.com", "subject": "Starbucks Receipt #SB-99283", "date": "2023-11-01T07:45:00Z" }, { "id": "msg_5022", "from": "rewards@starbucks.com", "subject": "Your Recent Purchase Receipt", "date": "2023-10-29T16:10:00Z" }, { "id": "msg_5023", "from": "rewards@starbucks.com", "subject": "Receipt for Mobile Order #MO-1122", "date": "2023-10-27T08:30:00Z" }], "count": 3 }
+
+Question: Retrieve all project updates from the Engineering Lead at DevCorp.
+Call: { "func_call": "search_emails", "query": "project update", "from": "lead.eng@devcorp.io", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_6009", "from": "john.doe@devcorp.io", "subject": "Weekly Project Update: Sprint 42 Complete", "date": "2023-11-03T17:00:00Z" }, { "id": "msg_6010", "from": "john.doe@devcorp.io", "subject": "Urgent: Database Migration Status", "date": "2023-10-31T10:15:00Z" }], "count": 2 }
+
+Question: Find any two-factor authentication codes from Microsoft Azure.
+Call: { "func_call": "search_emails", "query": "two-factor authentication", "from": "azure.microsoft.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_7033", "from": "no-reply@azure.microsoft.com", "subject": "Microsoft Azure Verification Code", "date": "2023-11-02T13:22:00Z" }], "count": 1 }
+
+Question: Search for holiday party invites from the Social Committee.
+Call: { "func_call": "search_emails", "query": "holiday party", "from": "social@office.net", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_8044", "from": "events@office.net", "subject": "Invite: Annual Holiday Celebration", "date": "2023-11-01T09:00:00Z" }, { "id": "msg_8045", "from": "planning@office.net", "subject": "RSVP Reminder: Holiday Party", "date": "2023-10-30T14:45:00Z" }, { "id": "msg_8046", "from": "social@office.net", "subject": "Venue Change for Holiday Gathering", "date": "2023-10-28T11:20:00Z" }], "count": 3 }
+
+Question: Locate refund confirmation emails from Shopify stores.
+Call: { "func_call": "search_emails", "query": "refund confirmation", "from": "shopify.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_9011", "from": "billing@shopify.com", "subject": "Refund Processed for Order #SH-776655", "date": "2023-11-02T15:30:00Z" }, { "id": "msg_9012", "from": "support@shopify.com", "subject": "Your Refund Has Been Issued", "date": "2023-10-29T12:00:00Z" }], "count": 2 }
+
+Question: Find utility bills from CityPower regarding electricity usage.
+Call: { "func_call": "search_emails", "query": "utility bill", "from": "billing@citypower.gov", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_1122", "from": "statements@citypower.gov", "subject": "Your November Electricity Bill is Ready", "date": "2023-11-01T05:00:00Z" }], "count": 1 }
+
+Question: Search for interview scheduling emails from the Talent Acquisition team.
+Call: { "func_call": "search_emails", "query": "interview", "from": "talent@hireme.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_2233", "from": "recruiter@hireme.com", "subject": "Interview Scheduled: Senior Developer Role", "date": "2023-10-31T16:45:00Z" }, { "id": "msg_2234", "from": "coordinator@hireme.com", "subject": "Technical Interview Details and Link", "date": "2023-10-28T09:15:00Z" }], "count": 2 }
+
+Question: Look for warranty registration confirmations from Apple Support.
+Call: { "func_call": "search_emails", "query": "warranty registration", "from": "support.apple.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_3344", "from": "warranty@apple.com", "subject": "AppleCare+ Registration Confirmed", "date": "2023-11-03T10:10:00Z" }], "count": 1 }

@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Grant execute permissions to the group for the monitoring daemon binary.
+Call: { "func_call": "chmod", "path": "/usr/bin/monitor_daemon", "mode": "750", "owner": "" }
+Response: { "success": true, "previous_mode": "700", "new_mode": "750" }
+
+Question: Transfer the ownership of the cache directory to the redis user and the redis group.
+Call: { "func_call": "chown", "path": "/var/lib/redis", "mode": "", "owner": "redis:redis" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "755" }
+
+Question: Make the installation wizard script writable only by the root user.
+Call: { "func_call": "chmod", "path": "/opt/installer/wizard.sh", "mode": "700", "owner": "" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "700" }
+
+Question: Change the owner of the message queue folder to the rabbitmq user and the developers group.
+Call: { "func_call": "chown", "path": "/var/lib/rabbitmq/mnesia", "mode": "", "owner": "rabbitmq:developers" }
+Response: { "success": true, "previous_mode": "700", "new_mode": "700" }
+
+Question: Allow the group to read the system audit log while preventing write access.
+Call: { "func_call": "chmod", "path": "/var/log/audit/audit.log", "mode": "640", "owner": "" }
+Response: { "success": true, "previous_mode": "600", "new_mode": "640" }
+
+Question: Assign the container volume mount point to the docker user and the operators group.
+Call: { "func_call": "chown", "path": "/srv/volumes/data_vol", "mode": "", "owner": "docker:operators" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "755" }
+
+Question: Restrict the encryption key file so that only the owner can read it.
+Call: { "func_call": "chmod", "path": "/etc/secrets/master.key", "mode": "400", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "400" }
+
+Question: Update the ownership of the print spooler directory to the lp user and the lp group.
+Call: { "func_call": "chown", "path": "/var/spool/cups", "mode": "", "owner": "lp:lp" }
+Response: { "success": true, "previous_mode": "710", "new_mode": "710" }
+
+Question: Set the backup verification script to be executable by everyone but writable only by the owner.
+Call: { "func_call": "chmod", "path": "/usr/local/sbin/verify_backup.sh", "mode": "755", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "755" }
+
+Question: Change the owner of the metrics database file to the prometheus user and the monitoring group.
+Call: { "func_call": "chown", "path": "/var/lib/prometheus/data.db", "mode": "", "owner": "prometheus:monitoring" }
+Response: { "success": true, "previous_mode": "660", "new_mode": "660" }
+
+Question: Secure the network configuration file so only the root user can read or modify it.
+Call: { "func_call": "chmod", "path": "/etc/network/interfaces.d/main.cfg", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "600" }
+
+Question: Reassign the game server save directory to the game_svc user and the players group.
+Call: { "func_call": "chown", "path": "/home/game_svc/saves", "mode": "", "owner": "game_svc:players" }
+Response: { "success": true, "previous_mode": "750", "new_mode": "750" }

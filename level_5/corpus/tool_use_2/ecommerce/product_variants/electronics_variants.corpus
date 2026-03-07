@@ -1,0 +1,20 @@
+{"func_call": "get_product_with_variants", "product_id": "ELEC-PHN-001", "options": {"color": "Midnight Black", "size": "128GB", "material": "Aluminum"}}
+{"func_call": "get_variant_inventory", "product_id": "ELEC-PHN-001", "options": {"color": "Starlight Silver", "size": "256GB", "material": "Aluminum"}}
+{"func_call": "configure_product", "product_id": "ELEC-LAP-042", "options": {"color": "Space Gray", "size": "16GB RAM", "material": "512GB SSD"}}
+{"func_call": "get_product_with_variants", "product_id": "ELEC-PHN-003", "options": {"color": "Deep Purple", "size": "512GB", "material": "Titanium"}}
+{"func_call": "get_variant_inventory", "product_id": "ELEC-LAP-015", "options": {"color": "Silver", "size": "32GB RAM", "material": "1TB SSD"}}
+{"func_call": "configure_product", "product_id": "ELEC-TAB-009", "options": {"color": "Rose Gold", "size": "128GB", "material": "Wi-Fi"}}
+{"func_call": "get_product_with_variants", "product_id": "ELEC-PHN-007", "options": {"color": "Green", "size": "128GB", "material": "Glass Back"}}
+{"func_call": "get_variant_inventory", "product_id": "ELEC-LAP-022", "options": {"color": "Black", "size": "8GB RAM", "material": "256GB SSD"}}
+{"func_call": "configure_product", "product_id": "ELEC-PHN-011", "options": {"color": "Blue", "size": "256GB", "material": "Plastic Frame"}}
+{"func_call": "get_product_with_variants", "product_id": "ELEC-LAP-030", "options": {"color": "Red", "size": "64GB RAM", "material": "2TB SSD"}}
+{"func_call": "get_variant_inventory", "product_id": "ELEC-TAB-014", "options": {"color": "Graphite", "size": "256GB", "material": "5G"}}
+{"func_call": "configure_product", "product_id": "ELEC-PHN-019", "options": {"color": "White", "size": "1TB", "material": "Ceramic"}}
+{"func_call": "get_product_with_variants", "product_id": "ELEC-LAP-005", "options": {"color": "Gold", "size": "16GB RAM", "material": "512GB SSD"}}
+{"func_call": "get_variant_inventory", "product_id": "ELEC-PHN-024", "options": {"color": "Coral", "size": "64GB", "material": "Aluminum"}}
+{"func_call": "configure_product", "product_id": "ELEC-LAP-038", "options": {"color": "Navy Blue", "size": "32GB RAM", "material": "1TB SSD"}}
+{"func_call": "get_product_with_variants", "product_id": "ELEC-TAB-021", "options": {"color": "Mint", "size": "512GB", "material": "Wi-Fi + Cellular"}}
+{"func_call": "get_variant_inventory", "product_id": "ELEC-PHN-033", "options": {"color": "Phantom Black", "size": "256GB", "material": "Gorilla Glass"}}
+{"func_call": "configure_product", "product_id": "ELEC-LAP-049", "options": {"color": "Platinum", "size": "128GB RAM", "material": "4TB SSD"}}
+{"func_call": "get_product_with_variants", "product_id": "ELEC-PHN-041", "options": {"color": "Lavender", "size": "128GB", "material": "Recycled Plastic"}}
+{"func_call": "get_variant_inventory", "product_id": "ELEC-LAP-055", "options": {"color": "Bronze", "size": "16GB RAM", "material": "256GB SSD"}}

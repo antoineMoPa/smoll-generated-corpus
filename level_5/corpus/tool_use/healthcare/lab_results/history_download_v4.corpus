@@ -1,0 +1,51 @@
+Available Tools: get_lab_results | get_latest_results | get_result_history | download_report
+Call Schema: { "func_call": "string", "patient_id": "string", "test_type": "string", "from_date": "string" }
+Response Schema: { "results": [{ "test": "string", "value": number, "unit": "string", "reference_range": "string", "status": "normal|high|low" }] }
+---
+Question: Fetch the most recent uric acid measurement for patient P-2048.
+Call: { "func_call": "get_latest_results", "patient_id": "P-2048", "test_type": "uric_acid", "from_date": "" }
+Response: { "results": [{ "test": "Uric Acid", "value": 7.8, "unit": "mg/dL", "reference_range": "3.4-7.0", "status": "high" }] }
+
+Question: Retrieve the historical data for iron levels in patient P-8812 starting from February 15th, 2023.
+Call: { "func_call": "get_result_history", "patient_id": "P-8812", "test_type": "iron", "from_date": "2023-02-15" }
+Response: { "results": [{ "test": "Serum Iron", "value": 45, "unit": "mcg/dL", "reference_range": "60-170", "status": "low" }, { "test": "Serum Iron", "value": 52, "unit": "mcg/dL", "reference_range": "60-170", "status": "low" }, { "test": "Serum Iron", "value": 88, "unit": "mcg/dL", "reference_range": "60-170", "status": "normal" }] }
+
+Question: Generate a PDF summary of the cardiac marker panel for patient P-3399 conducted on September 5th, 2023.
+Call: { "func_call": "download_report", "patient_id": "P-3399", "test_type": "cardiac_markers", "from_date": "2023-09-05" }
+Response: { "results": [{ "test": "Report Generated", "value": 20230906, "unit": "file_id", "reference_range": "N/A", "status": "normal" }] }
+
+Question: Show the progression of cortisol levels for patient P-7721 since the start of August 2022.
+Call: { "func_call": "get_result_history", "patient_id": "P-7721", "test_type": "cortisol", "from_date": "2022-08-01" }
+Response: { "results": [{ "test": "Cortisol", "value": 18.5, "unit": "mcg/dL", "reference_range": "6-23", "status": "normal" }, { "test": "Cortisol", "value": 25.1, "unit": "mcg/dL", "reference_range": "6-23", "status": "high" }, { "test": "Cortisol", "value": 12.0, "unit": "mcg/dL", "reference_range": "6-23", "status": "normal" }] }
+
+Question: Get the latest rheumatoid factor test result for patient P-4156.
+Call: { "func_call": "get_latest_results", "patient_id": "P-4156", "test_type": "rheumatoid_factor", "from_date": "" }
+Response: { "results": [{ "test": "RF", "value": 14, "unit": "IU/mL", "reference_range": "0-14", "status": "normal" }] }
+
+Question: Pull all specific lab entries for magnesium levels for patient P-9901 recorded after May 10th, 2023.
+Call: { "func_call": "get_lab_results", "patient_id": "P-9901", "test_type": "magnesium", "from_date": "2023-05-10" }
+Response: { "results": [{ "test": "Magnesium", "value": 1.5, "unit": "mg/dL", "reference_range": "1.7-2.2", "status": "low" }] }
+
+Question: Download the complete analysis report for the autoimmune panel of patient P-6543 from the last six months.
+Call: { "func_call": "download_report", "patient_id": "P-6543", "test_type": "autoimmune_panel", "from_date": "2023-04-01" }
+Response: { "results": [{ "test": "Report Generated", "value": 20231010, "unit": "file_id", "reference_range": "N/A", "status": "normal" }] }
+
+Question: Check the trend of PSA levels for patient P-1122 starting from January 2022 to monitor prostate health.
+Call: { "func_call": "get_result_history", "patient_id": "P-1122", "test_type": "PSA", "from_date": "2022-01-01" }
+Response: { "results": [{ "test": "PSA", "value": 1.2, "unit": "ng/mL", "reference_range": "0-4.0", "status": "normal" }, { "test": "PSA", "value": 2.8, "unit": "ng/mL", "reference_range": "0-4.0", "status": "normal" }, { "test": "PSA", "value": 4.5, "unit": "ng/mL", "reference_range": "0-4.0", "status": "high" }] }
+
+Question: Retrieve the most recent arterial blood gas (ABG) results for patient P-8899.
+Call: { "func_call": "get_latest_results", "patient_id": "P-8899", "test_type": "ABG", "from_date": "" }
+Response: { "results": [{ "test": "pH", "value": 7.32, "unit": "pH", "reference_range": "7.35-7.45", "status": "low" }, { "test": "pCO2", "value": 48, "unit": "mmHg", "reference_range": "35-45", "status": "high" }, { "test": "pO2", "value": 85, "unit": "mmHg", "reference_range": "75-100", "status": "normal" }] }
+
+Question: Get all records for C-Reactive Protein (CRP) for patient P-3344 since July 2023 to assess inflammation.
+Call: { "func_call": "get_result_history", "patient_id": "P-3344", "test_type": "CRP", "from_date": "2023-07-01" }
+Response: { "results": [{ "test": "CRP", "value": 12.5, "unit": "mg/L", "reference_range": "0-10", "status": "high" }, { "test": "CRP", "value": 8.2, "unit": "mg/L", "reference_range": "0-10", "status": "normal" }, { "test": "CRP", "value": 4.1, "unit": "mg/L", "reference_range": "0-10", "status": "normal" }] }
+
+Question: Download the official PDF document for the toxicology screen of patient P-7700 performed on October 12th.
+Call: { "func_call": "download_report", "patient_id": "P-7700", "test_type": "toxicology", "from_date": "2023-10-12" }
+Response: { "results": [{ "test": "Report Generated", "value": 20231013, "unit": "file_id", "reference_range": "N/A", "status": "normal" }] }
+
+Question: Fetch the specific lactate dehydrogenase (LDH) value for patient P-2233 recorded during their admission on September 28th.
+Call: { "func_call": "get_lab_results", "patient_id": "P-2233", "test_type": "LDH", "from_date": "2023-09-28" }
+Response: { "results": [{ "test": "LDH", "value": 310, "unit": "U/L", "reference_range": "140-280", "status": "high" }] }

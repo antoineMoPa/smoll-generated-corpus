@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+---
+Question: Establish a new public repository called "crypto-wallet" for user "blockchain-bob" with the description "Secure Ethereum wallet interface built with Vue".
+Call: { "func_call": "create_repo", "owner": "blockchain-bob", "repo": "crypto-wallet", "description": "Secure Ethereum wallet interface built with Vue", "private": false }
+Response: { "repo": "crypto-wallet", "owner": "blockchain-bob", "url": "https://github.com/blockchain-bob/crypto-wallet", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Please fork the project "image-processor" owned by "photo-labs" into my workspace for experimentation.
+Call: { "func_call": "fork_repo", "owner": "photo-labs", "repo": "image-processor", "description": "", "private": false }
+Response: { "repo": "image-processor", "owner": "current-user", "url": "https://github.com/current-user/image-processor", "stars": 782, "forks": 145, "default_branch": "main" }
+
+Question: Create a private repository named "hr-portal" for user "corp-admin" described as "Internal employee management dashboard using Angular".
+Call: { "func_call": "create_repo", "owner": "corp-admin", "repo": "hr-portal", "description": "Internal employee management dashboard using Angular", "private": true }
+Response: { "repo": "hr-portal", "owner": "corp-admin", "url": "https://github.com/corp-admin/hr-portal", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I want to duplicate the "nlp-toolbox" repository from owner "linguistics-ai" to my account.
+Call: { "func_call": "fork_repo", "owner": "linguistics-ai", "repo": "nlp-toolbox", "description": "", "private": false }
+Response: { "repo": "nlp-toolbox", "owner": "current-user", "url": "https://github.com/current-user/nlp-toolbox", "stars": 430, "forks": 67, "default_branch": "master" }
+
+Question: Set up a new public repo "drone-control" for user "aero-engineer" with the description "Flight control algorithms for quadcopters".
+Call: { "func_call": "create_repo", "owner": "aero-engineer", "repo": "drone-control", "description": "Flight control algorithms for quadcopters", "private": false }
+Response: { "repo": "drone-control", "owner": "aero-engineer", "url": "https://github.com/aero-engineer/drone-control", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "cloud-backup-script" owned by "sys-ops-team" so I can modify the retention policy.
+Call: { "func_call": "fork_repo", "owner": "sys-ops-team", "repo": "cloud-backup-script", "description": "", "private": false }
+Response: { "repo": "cloud-backup-script", "owner": "current-user", "url": "https://github.com/current-user/cloud-backup-script", "stars": 215, "forks": 38, "default_branch": "main" }
+
+Question: Initialize a private project "medical-records" for user "health-tech-inc" described as "HIPAA compliant patient data storage system".
+Call: { "func_call": "create_repo", "owner": "health-tech-inc", "repo": "medical-records", "description": "HIPAA compliant patient data storage system", "private": true }
+Response: { "repo": "medical-records", "owner": "health-tech-inc", "url": "https://github.com/health-tech-inc/medical-records", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Make a copy of "robotics-sdk" from the user "automation-labs" for my research project.
+Call: { "func_call": "fork_repo", "owner": "automation-labs", "repo": "robotics-sdk", "description": "", "private": false }
+Response: { "repo": "robotics-sdk", "owner": "current-user", "url": "https://github.com/current-user/robotics-sdk", "stars": 1890, "forks": 450, "default_branch": "develop" }
+
+Question: Create a new public repository "recipe-app" for user "foodie-dev" with the description "React Native app for sharing cooking recipes".
+Call: { "func_call": "create_repo", "owner": "foodie-dev", "repo": "recipe-app", "description": "React Native app for sharing cooking recipes", "private": false }
+Response: { "repo": "recipe-app", "owner": "foodie-dev", "url": "https://github.com/foodie-dev/recipe-app", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "audio-synth" owned by "music-coders" to build a new plugin.
+Call: { "func_call": "fork_repo", "owner": "music-coders", "repo": "audio-synth", "description": "", "private": false }
+Response: { "repo": "audio-synth", "owner": "current-user", "url": "https://github.com/current-user/audio-synth", "stars": 654, "forks": 98, "default_branch": "main" }
+
+Question: Set up a private repo "tax-calculator" for user "finance-bot" described as "Automated tax computation engine for freelancers".
+Call: { "func_call": "create_repo", "owner": "finance-bot", "repo": "tax-calculator", "description": "Automated tax computation engine for freelancers", "private": true }
+Response: { "repo": "tax-calculator", "owner": "finance-bot", "url": "https://github.com/finance-bot/tax-calculator", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I need to fork "ui-kit-pro" from user "design-systems" to customize the color palette.
+Call: { "func_call": "fork_repo", "owner": "design-systems", "repo": "ui-kit-pro", "description": "", "private": false }
+Response: { "repo": "ui-kit-pro", "owner": "current-user", "url": "https://github.com/current-user/ui-kit-pro", "stars": 3200, "forks": 510, "default_branch": "main" }

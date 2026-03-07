@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Please启动 the logging aggregator i-x9y8z7w6 in the Canada Central region.
+Call: { "func_call": "start_instance", "instance_id": "i-x9y8z7w6", "region": "ca-central-1" }
+Response: { "instance_id": "i-x9y8z7w6", "state": "running", "message": "Instance i-x9y8z7w6 successfully started in ca-central-1." }
+
+Question: I need to halt the authentication service i-m1n2o3p4 located in South America East.
+Call: { "func_call": "stop_instance", "instance_id": "i-m1n2o3p4", "region": "sa-east-1" }
+Response: { "instance_id": "i-m1n2o3p4", "state": "stopped", "message": "Instance i-m1n2o3p4 successfully stopped in sa-east-1." }
+
+Question: Can you reboot the payment gateway i-q5r6s7t8 in the Africa South zone?
+Call: { "func_call": "restart_instance", "instance_id": "i-q5r6s7t8", "region": "af-south-1" }
+Response: { "instance_id": "i-q5r6s7t8", "state": "running", "message": "Instance i-q5r6s7t8 successfully restarted in af-south-1." }
+
+Question: Permanently delete the obsolete test server i-u9v0w1x2 in ap-northeast-1 immediately.
+Call: { "func_call": "terminate_instance", "instance_id": "i-u9v0w1x2", "region": "ap-northeast-1" }
+Response: { "instance_id": "i-u9v0w1x2", "state": "terminated", "message": "Instance i-u9v0w1x2 successfully terminated in ap-northeast-1." }
+
+Question: Start the image rendering farm i-y3z4a5b6 in the eu-north-1 region.
+Call: { "func_call": "start_instance", "instance_id": "i-y3z4a5b6", "region": "eu-north-1" }
+Response: { "instance_id": "i-y3z4a5b6", "state": "running", "message": "Instance i-y3z4a5b6 successfully started in eu-north-1." }
+
+Question: Please power down the staging database i-c7d8e9f0 in sa-east-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-c7d8e9f0", "region": "sa-east-1" }
+Response: { "instance_id": "i-c7d8e9f0", "state": "stopped", "message": "Instance i-c7d8e9f0 successfully stopped in sa-east-1." }
+
+Question: Bring the message queue broker i-g1h2i3j4 online in us-west-2.
+Call: { "func_call": "start_instance", "instance_id": "i-g1h2i3j4", "region": "us-west-2" }
+Response: { "instance_id": "i-g1h2i3j4", "state": "running", "message": "Instance i-g1h2i3j4 successfully started in us-west-2." }
+
+Question: Restart the load balancer i-k5l6m7n8 running in eu-central-1.
+Call: { "func_call": "restart_instance", "instance_id": "i-k5l6m7n8", "region": "eu-central-1" }
+Response: { "instance_id": "i-k5l6m7n8", "state": "running", "message": "Instance i-k5l6m7n8 successfully restarted in eu-central-1." }
+
+Question: Activate the disaster recovery node i-o9p0q1r2 in the ap-south-1 datacenter.
+Call: { "func_call": "start_instance", "instance_id": "i-o9p0q1r2", "region": "ap-south-1" }
+Response: { "instance_id": "i-o9p0q1r2", "state": "running", "message": "Instance i-o9p0q1r2 successfully started in ap-south-1." }
+
+Question: Destroy the temporary build instance i-s3t4u5v6 in us-east-2.
+Call: { "func_call": "terminate_instance", "instance_id": "i-s3t4u5v6", "region": "us-east-2" }
+Response: { "instance_id": "i-s3t4u5v6", "state": "terminated", "message": "Instance i-s3t4u5v6 successfully terminated in us-east-2." }
+
+Question: Start the video transcoding host i-w7x8y9z0 in eu-west-3.
+Call: { "func_call": "start_instance", "instance_id": "i-w7x8y9z0", "region": "eu-west-3" }
+Response: { "instance_id": "i-w7x8y9z0", "state": "running", "message": "Instance i-w7x8y9z0 successfully started in eu-west-3." }
+
+Question: Shut off the legacy API gateway i-a0b1c2d3 by stopping it in ca-central-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-a0b1c2d3", "region": "ca-central-1" }
+Response: { "instance_id": "i-a0b1c2d3", "state": "stopped", "message": "Instance i-a0b1c2d3 successfully stopped in ca-central-1." }

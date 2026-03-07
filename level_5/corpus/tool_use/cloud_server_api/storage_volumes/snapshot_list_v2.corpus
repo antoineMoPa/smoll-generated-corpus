@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: Enumerate all storage devices in the eu-west-2 zone to find any unassigned blocks.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-9z8y7x6w5v4u3t2s1", "size_gb": 50, "state": "available", "attached_to": "" }
+
+Question: Generate a recovery point for the transaction log volume vol-tx-log-prod before the midnight maintenance.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-tx-log-prod", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-tx-log-prod", "size_gb": 320, "state": "snapshotting", "attached_to": "i-db-primary-az1" }
+
+Question: Verify the configuration of the fresh block device vol-ml-training-set to ensure it is ready for mounting.
+Call: { "func_call": "list_volumes", "volume_id": "vol-ml-training-set", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-ml-training-set", "size_gb": 4096, "state": "available", "attached_to": "" }
+
+Question: Capture an image of the application binary volume vol-app-bin-v2 immediately following the release deployment.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-app-bin-v2", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-app-bin-v2", "size_gb": 85, "state": "snapshotting", "attached_to": "i-app-worker-05" }
+
+Question: Display all disks connected to compute node i-render-farm-09 to validate the scratch space is active.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "i-render-farm-09", "size_gb": 0 }
+Response: { "volume_id": "vol-scratch-render-09", "size_gb": 1024, "state": "in-use", "attached_to": "i-render-farm-09" }
+
+Question: Perform a point-in-time copy of the audit trail volume vol-audit-archive before the quarterly cleanup.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-audit-archive", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-audit-archive", "size_gb": 210, "state": "snapshotting", "attached_to": "i-compliance-server-01" }
+
+Question: Inspect the status of volume vol-swap-temp to confirm it has been successfully detached from the legacy host.
+Call: { "func_call": "list_volumes", "volume_id": "vol-swap-temp", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-swap-temp", "size_gb": 32, "state": "available", "attached_to": "" }
+
+Question: Secure a snapshot of the secrets vault volume vol-secret-mgr during the monthly security audit.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-secret-mgr", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-secret-mgr", "size_gb": 15, "state": "snapshotting", "attached_to": "i-vault-master-00" }
+
+Question: Query all volumes exceeding 2TB in capacity to plan for the new cold storage tier migration.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-media-archive-old", "size_gb": 8192, "state": "in-use", "attached_to": "i-storage-gateway-02" }
+
+Question: Trigger a backup for the session store volume vol-sess-store right before the cluster reboot sequence.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-sess-store", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-sess-store", "size_gb": 48, "state": "snapshotting", "attached_to": "i-session-leader-01" }
+
+Question: Fetch the current metadata for volume vol-stale-check to decide if it should be terminated.
+Call: { "func_call": "list_volumes", "volume_id": "vol-stale-check", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-stale-check", "size_gb": 95, "state": "available", "attached_to": "" }
+
+Question: Execute a snapshot of the shared project volume vol-project-alpha prior to the major code merge.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-project-alpha", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-project-alpha", "size_gb": 650, "state": "snapshotting", "attached_to": "i-dev-server-04" }

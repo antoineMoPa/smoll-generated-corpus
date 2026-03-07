@@ -1,0 +1,87 @@
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Locate posts about hiking trails in Denver.
+Call: { "func_call": "search_posts", "query": "hiking trails", "hashtag": "", "location": "Denver", "limit": 14 }
+Response: { "results": [{ "id": "p_9001", "type": "post", "content": "Best views from Mount Evans today! 🏔️ #hiking", "likes": 450 }, { "id": "p_9002", "type": "post", "content": "Guide to Rocky Mountain National Park paths.", "likes": 320 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find users who are jazz musicians in New Orleans.
+Call: { "func_call": "search_users", "query": "jazz musician", "hashtag": "", "location": "New Orleans", "limit": 9 }
+Response: { "results": [{ "id": "u_5501", "type": "user", "content": "Louis Armstrong Tribute Band | Live Nights", "likes": 28900 }, { "id": "u_5502", "type": "user", "content": "French Quarter Saxophone Soloist", "likes": 19400 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Show me posts with #streetfood from Bangkok.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "streetfood", "location": "Bangkok", "limit": 30 }
+Response: { "results": [{ "id": "p_2205", "type": "post", "content": "Spicy Pad Thai from the night market 🍜 #streetfood", "likes": 6700 }, { "id": "p_2206", "type": "post", "content": "Mango sticky rice heaven in Chinatown.", "likes": 5400 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for interior designers in Berlin.
+Call: { "func_call": "search_users", "query": "interior designer", "hashtag": "", "location": "Berlin", "limit": 4 }
+Response: { "results": [{ "id": "u_8812", "type": "user", "content": "Minimalist Spaces Berlin | Hans Weber", "likes": 34500 }, { "id": "u_8813", "type": "user", "content": "Modern Loft Renovations", "likes": 21200 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Look for posts about sustainable fashion.
+Call: { "func_call": "search_posts", "query": "sustainable fashion", "hashtag": "", "location": "", "limit": 11 }
+Response: { "results": [{ "id": "p_4455", "type": "post", "content": "How to build a capsule wardrobe with eco-friendly brands.", "likes": 1120 }, { "id": "p_4456", "type": "post", "content": "Thrifting haul: vintage finds under $20.", "likes": 890 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find users who teach yoga in San Francisco.
+Call: { "func_call": "search_users", "query": "yoga instructor", "hashtag": "", "location": "San Francisco", "limit": 6 }
+Response: { "results": [{ "id": "u_6633", "type": "user", "content": "Golden Gate Yoga | Daily Flow Classes", "likes": 41000 }, { "id": "u_6634", "type": "user", "content": "Mindfulness & Meditation with Sarah", "likes": 36700 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts tagged #architecture from Chicago.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "architecture", "location": "Chicago", "limit": 22 }
+Response: { "results": [{ "id": "p_1199", "type": "post", "content": "The Willis Tower looking majestic today 🏙️ #architecture", "likes": 9300 }, { "id": "p_1200", "type": "post", "content": "Historic details of the Art Institute building.", "likes": 7800 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for tech startups in Austin.
+Call: { "func_call": "search_users", "query": "tech startup", "hashtag": "", "location": "Austin", "limit": 5 }
+Response: { "results": [{ "id": "u_1010", "type": "user", "content": "Austin AI Labs | Future Tech", "likes": 55000 }, { "id": "u_1011", "type": "user", "content": "Green Energy Solutions Inc.", "likes": 42300 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts discussing home brewing coffee.
+Call: { "func_call": "search_posts", "query": "home brewing coffee", "hashtag": "", "location": "", "limit": 16 }
+Response: { "results": [{ "id": "p_7722", "type": "post", "content": "Perfect pour-over technique for beginners.", "likes": 1450 }, { "id": "p_7723", "type": "post", "content": "My new espresso machine setup review.", "likes": 1100 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for users who love skateboarding in Los Angeles.
+Call: { "func_call": "search_users", "query": "skateboarding", "hashtag": "", "location": "Los Angeles", "limit": 8 }
+Response: { "results": [{ "id": "u_4545", "type": "user", "content": "LA Skate Crew | Venice Beach Sessions", "likes": 67800 }, { "id": "u_4546", "type": "user", "content": "Pro Skater Jake | Trick Tutorials", "likes": 54200 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts tagged #dogsofinstagram from Seattle.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "dogsofinstagram", "location": "Seattle", "limit": 19 }
+Response: { "results": [{ "id": "p_3388", "type": "post", "content": "Rainy day walk with my Golden Retriever 🐕 #dogsofinstagram", "likes": 3400 }, { "id": "p_3389", "type": "post", "content": "Puppy playdate at Discovery Park.", "likes": 2900 }], "total": 2 }

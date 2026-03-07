@@ -1,0 +1,79 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: What are the full specifications for the Dyson V15 Detect vacuum cleaner?
+Call: { "func_call": "get_product_details", "query": "Dyson V15 Detect", "category": "Home Appliances", "min_price": 500, "max_price": 900, "sort_by": "relevance" }
+Response: { "products": [{ "id": "DYS-V15-DET", "name": "Dyson V15 Detect Absolute Vacuum", "price": 749.99, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Can you suggest some yoga mats similar to the Manduka PRO?
+Call: { "func_call": "get_recommendations", "query": "Manduka PRO Yoga Mat", "category": "Fitness Equipment", "min_price": 80, "max_price": 150, "sort_by": "rating" }
+Response: { "products": [{ "id": "LULU-REV-5MM", "name": "Lululemon The Reversible Mat 5mm", "price": 88.00, "rating": 4.6, "in_stock": true }, { "id": "JADE-HARMONY", "name": "Jade Harmony Yoga Mat", "price": 79.95, "rating": 4.7, "in_stock": true }, { "id": "GAIAM-PREMIUM", "name": "Gaiam Premium Print Yoga Mat", "price": 49.98, "rating": 4.4, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Retrieve the price and availability for the Kindle Paperwhite Signature Edition.
+Call: { "func_call": "get_product_details", "query": "Kindle Paperwhite Signature", "category": "Electronics", "min_price": 100, "max_price": 250, "sort_by": "relevance" }
+Response: { "products": [{ "id": "AMZ-KND-PW-SE", "name": "Kindle Paperwhite Signature Edition 32GB", "price": 189.99, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Show me alternatives to the Herman Miller Aeron chair.
+Call: { "func_call": "get_recommendations", "query": "Herman Miller Aeron", "category": "Office Furniture", "min_price": 800, "max_price": 1500, "sort_by": "popularity" }
+Response: { "products": [{ "id": "STL-LEAP-V2", "name": "Steelcase Leap V2", "price": 1029.00, "rating": 4.7, "in_stock": true }, { "id": "SEC-FREEDOM", "name": "Secretlab TITAN Evo 2022", "price": 549.00, "rating": 4.6, "in_stock": true }, { "id": "AUT-KIN-BK", "name": "Autonomous ErgoChair Pro", "price": 449.00, "rating": 4.3, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: I need details on the Nikon Z6 II mirrorless camera body.
+Call: { "func_call": "get_product_details", "query": "Nikon Z6 II", "category": "Cameras", "min_price": 1500, "max_price": 2500, "sort_by": "relevance" }
+Response: { "products": [{ "id": "NIK-Z6II-BODY", "name": "Nikon Z6 II Mirrorless Camera Body", "price": 1996.95, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Recommend some noise-canceling earbuds comparable to the Bose QuietComfort Earbuds II.
+Call: { "func_call": "get_recommendations", "query": "Bose QuietComfort Earbuds II", "category": "Audio", "min_price": 200, "max_price": 350, "sort_by": "rating" }
+Response: { "products": [{ "id": "APL-AIR-PRO2", "name": "Apple AirPods Pro (2nd Gen)", "price": 249.00, "rating": 4.8, "in_stock": true }, { "id": "SNY-WF1000XM5", "name": "Sony WF-1000XM5", "price": 299.99, "rating": 4.7, "in_stock": true }, { "id": "SAM-GAL-BUD2", "name": "Samsung Galaxy Buds2 Pro", "price": 229.99, "rating": 4.5, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Look up the current stock status for the Le Creuset Dutch Oven, 5.5 Qt, Cherry Red.
+Call: { "func_call": "get_product_details", "query": "Le Creuset 5.5 Qt Cherry", "category": "Cookware", "min_price": 300, "max_price": 500, "sort_by": "relevance" }
+Response: { "products": [{ "id": "LC-DO-55-CHR", "name": "Le Creuset Signature Round Dutch Oven 5.5 Qt", "price": 429.95, "rating": 4.9, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Find me some smart thermostats similar to the Google Nest Learning Thermostat.
+Call: { "func_call": "get_recommendations", "query": "Google Nest Learning Thermostat", "category": "Smart Home", "min_price": 150, "max_price": 300, "sort_by": "popularity" }
+Response: { "products": [{ "id": "ECO-SMART-3E", "name": "ecobee SmartThermostat with Voice Control", "price": 249.99, "rating": 4.6, "in_stock": true }, { "id": "HON-T9-SENS", "name": "Honeywell Home T9 Smart Thermostat", "price": 199.00, "rating": 4.4, "in_stock": true }, { "id": "AMY-STARR-LITE", "name": "Emerson Sensi Touch Wi-Fi Thermostat", "price": 169.00, "rating": 4.5, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Get me the product details for the Peloton Bike+ including accessories.
+Call: { "func_call": "get_product_details", "query": "Peloton Bike+", "category": "Fitness Equipment", "min_price": 2000, "max_price": 3000, "sort_by": "relevance" }
+Response: { "products": [{ "id": "PEL-BIKE-PLUS", "name": "Peloton Bike+ with Auto-Follow Resistance", "price": 2495.00, "rating": 4.7, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Suggest some mechanical keyboards comparable to the Keychron K2.
+Call: { "func_call": "get_recommendations", "query": "Keychron K2 Mechanical Keyboard", "category": "Computer Accessories", "min_price": 70, "max_price": 150, "sort_by": "rating" }
+Response: { "products": [{ "id": "LOG-G-PRO-X", "name": "Logitech G Pro X Mechanical Gaming Keyboard", "price": 129.99, "rating": 4.6, "in_stock": true }, { "id": "COR-K70-RGB", "name": "Corsair K70 RGB MK.2", "price": 139.99, "rating": 4.7, "in_stock": false }, { "id": "DUC-ONE-2", "name": "Ducky One 2 Mini Pure White", "price": 99.00, "rating": 4.8, "in_stock": true }], "total": 3 }

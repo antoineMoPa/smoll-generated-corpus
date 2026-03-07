@@ -1,0 +1,59 @@
+Context: The international art exhibition opens on April 10, 2025, in Paris. Visitors are advised to book tickets online in advance.
+Input: {"question": "When does the international art exhibition open?"}
+Output: {"answer": "April 10, 2025"}
+
+Context: The Great Fire of London began in September 1666 and destroyed a large part of the city. It lasted for four days before being extinguished.
+Input: {"question": "What year did the Great Fire of London begin?"}
+Output: {"answer": "1666"}
+
+Context: Your meeting with the marketing team is scheduled for next Thursday at 10:30 AM. Please prepare the quarterly sales report beforehand.
+Input: {"question": "What day is the meeting with the marketing team?"}
+Output: {"answer": "next Thursday"}
+
+Context: The construction of the Great Pyramid of Giza is estimated to have started around 2580 BC. It served as a tomb for Pharaoh Khufu.
+Input: {"question": "When did the construction of the Great Pyramid start?"}
+Output: {"answer": "around 2580 BC"}
+
+Context: The software update rollout has been rescheduled to Monday, December 4, 2023, to address critical security patches. Users should save their work before restarting.
+Input: {"question": "What is the new date for the software update rollout?"}
+Output: {"answer": "Monday, December 4, 2023"}
+
+Context: Marie Curie was born in Warsaw in November 1867. She became the first woman to win a Nobel Prize.
+Input: {"question": "What year was Marie Curie born?"}
+Output: {"answer": "1867"}
+
+Context: The database backup process will run tonight from 1:00 AM to 4:00 AM PST. Access to the system may be intermittent during this window.
+Input: {"question": "When will the database backup process run?"}
+Output: {"answer": "tonight"}
+
+Context: The invention of the printing press by Johannes Gutenberg occurred around 1440, revolutionizing the spread of information in Europe.
+Input: {"question": "When was the printing press invented?"}
+Output: {"answer": "around 1440"}
+
+Context: Please be aware that the library will be closed on Friday, July 4, 2024, for Independence Day. Regular hours will return on Saturday.
+Input: {"question": "When will the library be closed for Independence Day?"}
+Output: {"answer": "Friday, July 4, 2024"}
+
+Context: The Declaration of Independence was adopted by the Continental Congress in 1776, announcing the separation of the thirteen colonies from Britain.
+Input: {"question": "In what year was the Declaration of Independence adopted?"}
+Output: {"answer": "1776"}
+
+Context: The train to Berlin leaves on Tuesday, February 14, 2024, from Platform 9. Travelers must validate their tickets before boarding.
+Input: {"question": "What date does the train to Berlin leave?"}
+Output: {"answer": "Tuesday, February 14, 2024"}
+
+Context: The startup was established on August 20, 2015, in a shared workspace in Berlin. It now operates in over thirty countries.
+Input: {"question": "When was the startup established?"}
+Output: {"answer": "August 20, 2015"}
+
+Context: The partial lunar eclipse will be observable in Asia on March 25, 2024. Astronomers recommend using telescopes for better visibility.
+Input: {"question": "When will the partial lunar eclipse be observable?"}
+Output: {"answer": "March 25, 2024"}
+
+Context: His graduation ceremony is planned for next Friday at the university auditorium. Approximately two hundred students will receive their degrees.
+Input: {"question": "What day is his graduation ceremony?"}
+Output: {"answer": "next Friday"}
+
+Context: The armistice ending World War I was signed on November 11, 1918, halting hostilities on the Western Front. This date is now commemorated as Veterans Day.
+Input: {"question": "What date was the armistice ending World War I signed?"}
+Output: {"answer": "November 11, 1918"}

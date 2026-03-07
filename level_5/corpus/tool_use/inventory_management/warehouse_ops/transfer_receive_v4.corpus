@@ -1,0 +1,51 @@
+Available Tools: transfer_stock | receive_shipment | adjust_inventory | get_receiving_log
+Call Schema: { "func_call": "string", "sku": "string", "from_location": "string", "to_location": "string", "quantity": number, "reason": "string" }
+Response Schema: { "transaction_id": "string", "sku": "string", "quantity": number, "from": "string", "to": "string", "status": "string" }
+---
+Question: Relocate 420 units of SKU-5590 from the central depot WH-D to the local outlet STORE-05 for holiday stock replenishment.
+Call: { "func_call": "transfer_stock", "sku": "SKU-5590", "from_location": "WH-D", "to_location": "STORE-05", "quantity": 420, "reason": "Holiday stock replenishment" }
+Response: { "transaction_id": "TXN-10001", "sku": "SKU-5590", "quantity": 420, "from": "WH-D", "to": "STORE-05", "status": "completed" }
+
+Question: Process an incoming batch of 1800 units of SKU-3321 arriving at WH-C from the primary manufacturer.
+Call: { "func_call": "receive_shipment", "sku": "SKU-3321", "from_location": "MFG-PLANT-02", "to_location": "WH-C", "quantity": 1800, "reason": "Primary manufacturer batch" }
+Response: { "transaction_id": "TXN-10002", "sku": "SKU-3321", "quantity": 1800, "from": "MFG-PLANT-02", "to": "WH-C", "status": "completed" }
+
+Question: Move 95 units of SKU-7712 from STORE-03 to WH-B to clear excess floor inventory.
+Call: { "func_call": "transfer_stock", "sku": "SKU-7712", "from_location": "STORE-03", "to_location": "WH-B", "quantity": 95, "reason": "Clear excess floor inventory" }
+Response: { "transaction_id": "TXN-10003", "sku": "SKU-7712", "quantity": 95, "from": "STORE-03", "to": "WH-B", "status": "completed" }
+
+Question: Accept a delivery of 550 units of SKU-9045 into WH-A from a third-party logistics provider.
+Call: { "func_call": "receive_shipment", "sku": "SKU-9045", "from_location": "3PL-HUB", "to_location": "WH-A", "quantity": 550, "reason": "Third-party logistics delivery" }
+Response: { "transaction_id": "TXN-10004", "sku": "SKU-9045", "quantity": 550, "from": "3PL-HUB", "to": "WH-A", "status": "completed" }
+
+Question: Transfer 600 units of SKU-2288 from WH-D to STORE-02 to support a flash sale event.
+Call: { "func_call": "transfer_stock", "sku": "SKU-2288", "from_location": "WH-D", "to_location": "STORE-02", "quantity": 600, "reason": "Flash sale event support" }
+Response: { "transaction_id": "TXN-10005", "sku": "SKU-2288", "quantity": 600, "from": "WH-D", "to": "STORE-02", "status": "completed" }
+
+Question: Receive 230 units of SKU-4156 at WH-B returned from a wholesale distributor.
+Call: { "func_call": "receive_shipment", "sku": "SKU-4156", "from_location": "WHOLESALE-DIST", "to_location": "WH-B", "quantity": 230, "reason": "Wholesale distributor return" }
+Response: { "transaction_id": "TXN-10006", "sku": "SKU-4156", "quantity": 230, "from": "WHOLESALE-DIST", "to": "WH-B", "status": "completed" }
+
+Question: Shift 1100 units of SKU-6633 from WH-C to WH-D to optimize regional storage capacity.
+Call: { "func_call": "transfer_stock", "sku": "SKU-6633", "from_location": "WH-C", "to_location": "WH-D", "quantity": 1100, "reason": "Optimize regional storage" }
+Response: { "transaction_id": "TXN-10007", "sku": "SKU-6633", "quantity": 1100, "from": "WH-C", "to": "WH-D", "status": "completed" }
+
+Question: Intake 780 units of SKU-8899 at STORE-04 transferred from the overflow facility WH-E.
+Call: { "func_call": "receive_shipment", "sku": "SKU-8899", "from_location": "WH-E", "to_location": "STORE-04", "quantity": 780, "reason": "Overflow facility transfer" }
+Response: { "transaction_id": "TXN-10008", "sku": "SKU-8899", "quantity": 780, "from": "WH-E", "to": "STORE-04", "status": "completed" }
+
+Question: Move 40 units of SKU-1177 from WH-A to STORE-06 to replace defective items on display.
+Call: { "func_call": "transfer_stock", "sku": "SKU-1177", "from_location": "WH-A", "to_location": "STORE-06", "quantity": 40, "reason": "Replace defective display items" }
+Response: { "transaction_id": "TXN-10009", "sku": "SKU-1177", "quantity": 40, "from": "WH-A", "to": "STORE-06", "status": "completed" }
+
+Question: Receive a large consignment of 3200 units of SKU-5050 into WH-C from the overseas port.
+Call: { "func_call": "receive_shipment", "sku": "SKU-5050", "from_location": "PORT-EAST", "to_location": "WH-C", "quantity": 3200, "reason": "Overseas port consignment" }
+Response: { "transaction_id": "TXN-10010", "sku": "SKU-5050", "quantity": 3200, "from": "PORT-EAST", "to": "WH-C", "status": "completed" }
+
+Question: Transfer 125 units of SKU-9922 from STORE-05 back to WH-B for routine quality assurance checks.
+Call: { "func_call": "transfer_stock", "sku": "SKU-9922", "from_location": "STORE-05", "to_location": "WH-B", "quantity": 125, "reason": "Routine quality assurance" }
+Response: { "transaction_id": "TXN-10011", "sku": "SKU-9922", "quantity": 125, "from": "STORE-05", "to": "WH-B", "status": "completed" }
+
+Question: Accept 1500 units of SKU-3344 at WH-D from a domestic supplier restock order.
+Call: { "func_call": "receive_shipment", "sku": "SKU-3344", "from_location": "DOM-SUPPLIER", "to_location": "WH-D", "quantity": 1500, "reason": "Domestic supplier restock" }
+Response: { "transaction_id": "TXN-10012", "sku": "SKU-3344", "quantity": 1500, "from": "DOM-SUPPLIER", "to": "WH-D", "status": "completed" }

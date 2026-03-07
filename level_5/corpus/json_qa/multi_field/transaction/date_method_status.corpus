@@ -1,0 +1,29 @@
+Context: On March 14, 2023, a payment of $45.99 was processed via Credit Card and the transaction status is confirmed. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "March 14, 2023", "method": "Credit Card", "status": "confirmed"}
+
+Context: The wire transfer initiated on January 5th failed due to insufficient funds, leaving the status as pending review. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "January 5th", "method": "wire transfer", "status": "pending review"}
+
+Context: A PayPal transaction dated 11/20/2022 was successfully completed with a status of settled. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "11/20/2022", "method": "PayPal", "status": "settled"}
+
+Context: Using Apple Pay on February 28, 2024, the customer completed the purchase, resulting in a status of approved. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "February 28, 2024", "method": "Apple Pay", "status": "approved"}
+
+Context: The check payment recorded on October 10, 2021, has a current status of cleared after three business days. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "October 10, 2021", "method": "check payment", "status": "cleared"}
+
+Context: A debit card transaction from September 3, 2023, was declined, marking the final status as rejected. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "September 3, 2023", "method": "debit card", "status": "rejected"}
+
+Context: On 07/15/2022, an automated clearing house (ACH) transfer was initiated and the system shows the status as processing. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "07/15/2022", "method": "automated clearing house (ACH) transfer", "status": "processing"}
+
+Context: The Venmo payment sent on December 25, 2023, appears in the ledger with a status of completed. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "December 25, 2023", "method": "Venmo", "status": "completed"}
+
+Context: A cash deposit made at the branch on April 1, 2022, was verified and the status is now finalized. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "April 1, 2022", "method": "cash deposit", "status": "finalized"}
+
+Context: The cryptocurrency transfer executed on June 30, 2024, via Bitcoin wallet is currently showing a status of unconfirmed. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "June 30, 2024", "method": "cryptocurrency transfer", "status": "unconfirmed"}
+
+Context: On August 12, 2021, a Google Pay transaction was reversed by the merchant, changing the status to refunded. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "August 12, 2021", "method": "Google Pay", "status": "refunded"}
+
+Context: A money order purchased on May 5, 2023, has been cashed, and the record status is marked as closed. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "May 5, 2023", "method": "money order", "status": "closed"}
+
+Context: The Samsung Pay transaction from November 11, 2022, encountered an error, resulting in a status of failed. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "November 11, 2022", "method": "Samsung Pay", "status": "failed"}
+
+Context: On 02/14/2024, a direct deposit was received, and the banking system updated the status to posted. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "02/14/2024", "method": "direct deposit", "status": "posted"}
+
+Context: A Square POS transaction dated July 22, 2023, using a contactless card shows a status of authorized. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "July 22, 2023", "method": "Square POS", "status": "authorized"}

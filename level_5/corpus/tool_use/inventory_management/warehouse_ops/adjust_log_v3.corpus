@@ -1,0 +1,51 @@
+Available Tools: transfer_stock | receive_shipment | adjust_inventory | get_receiving_log
+Call Schema: { "func_call": "string", "sku": "string", "from_location": "string", "to_location": "string", "quantity": number, "reason": "string" }
+Response Schema: { "transaction_id": "string", "sku": "string", "quantity": number, "from": "string", "to": "string", "status": "string" }
+---
+Question: During the morning sweep of aisle 7, we identified 5 units of SKU-2291 with torn labels; please move them to the rework station.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-2291", "from_location": "AISLE-07-SHELF-04", "to_location": "LABEL-REWORK-ZONE", "quantity": 5, "reason": "Label damage: requires re-printing" }
+Response: { "transaction_id": "TXN-10045", "sku": "SKU-2291", "quantity": 5, "from": "AISLE-07-SHELF-04", "to": "LABEL-REWORK-ZONE", "status": "completed" }
+
+Question: The monthly cycle count for SKU-8810 in the freezer section revealed 20 fewer units than recorded; adjust the system to reflect the actual physical inventory.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-8810", "from_location": "FREEZER-SECTION-B", "to_location": "FREEZER-SECTION-B", "quantity": 20, "reason": "Cycle count adjustment: physical shortage detected" }
+Response: { "transaction_id": "TXN-10046", "sku": "SKU-8810", "quantity": 20, "from": "FREEZER-SECTION-B", "to": "FREEZER-SECTION-B", "status": "completed" }
+
+Question: Shipment #SH-445 for SKU-6700 arrived with 12 units exceeding the purchase order; please move the excess to the overage hold area.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-6700", "from_location": "RECEIVING-DOCK-04", "to_location": "OVERAGE-HOLD-AREA", "quantity": 12, "reason": "Receiving discrepancy: quantity exceeds PO" }
+Response: { "transaction_id": "TXN-10047", "sku": "SKU-6700", "quantity": 12, "from": "RECEIVING-DOCK-04", "to": "OVERAGE-HOLD-AREA", "status": "completed" }
+
+Question: A routine audit of the mezzanine level found 3 units of SKU-9921 missing from their designated slot; please record this shrinkage.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-9921", "from_location": "MEZZANINE-SLOT-11", "to_location": "INVENTORY-SHRINKAGE", "quantity": 3, "reason": "Audit adjustment: unexplained loss" }
+Response: { "transaction_id": "TXN-10048", "sku": "SKU-9921", "quantity": 3, "from": "MEZZANINE-SLOT-11", "to": "INVENTORY-SHRINKAGE", "status": "completed" }
+
+Question: A stack of SKU-4150 collapsed in the staging area, resulting in 15 crushed boxes that must be quarantined for disposal.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-4150", "from_location": "STAGING-AREA-EAST", "to_location": "DAMAGED-QUARANTINE", "quantity": 15, "reason": "Damage writeoff: stack collapse" }
+Response: { "transaction_id": "TXN-10049", "sku": "SKU-4150", "quantity": 15, "from": "STAGING-AREA-EAST", "to": "DAMAGED-QUARANTINE", "status": "completed" }
+
+Question: The receiving team flagged shipment #SH-512 for SKU-7320 as containing 8 units of an obsolete revision; move these to the returns queue.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-7320", "from_location": "RECEIVING-HOLD-C", "to_location": "VENDOR-RETURN-HOLD", "quantity": 8, "reason": "Receiving discrepancy: obsolete revision received" }
+Response: { "transaction_id": "TXN-10050", "sku": "SKU-7320", "quantity": 8, "from": "RECEIVING-HOLD-C", "to": "VENDOR-RETURN-HOLD", "status": "completed" }
+
+Question: Cycle counting in the hazardous materials locker showed 2 extra containers of SKU-1188 due to a previous data entry error; correct the count.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-1188", "from_location": "HAZMAT-LOCKER-03", "to_location": "HAZMAT-LOCKER-03", "quantity": 2, "reason": "Cycle count adjustment: data entry correction" }
+Response: { "transaction_id": "TXN-10051", "sku": "SKU-1188", "quantity": 2, "from": "HAZMAT-LOCKER-03", "to": "HAZMAT-LOCKER-03", "status": "completed" }
+
+Question: A roof leak in warehouse sector 4 damaged 9 units of SKU-5544; please transfer these to the damage review bin immediately.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-5544", "from_location": "SECTOR-04-RACK-15", "to_location": "DAMAGED-QUARANTINE", "quantity": 9, "reason": "Damage writeoff: roof leak exposure" }
+Response: { "transaction_id": "TXN-10052", "sku": "SKU-5544", "quantity": 9, "from": "SECTOR-04-RACK-15", "to": "DAMAGED-QUARANTINE", "status": "completed" }
+
+Question: Reconciliation of shipment #SH-601 revealed 4 units of SKU-8080 were past their expiration date upon arrival; remove them from active stock.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-8080", "from_location": "RECEIVING-DOCK-01", "to_location": "EXPIRED-GOODS-BIN", "quantity": 4, "reason": "Receiving discrepancy: expired upon arrival" }
+Response: { "transaction_id": "TXN-10053", "sku": "SKU-8080", "quantity": 4, "from": "RECEIVING-DOCK-01", "to": "EXPIRED-GOODS-BIN", "status": "completed" }
+
+Question: The quarterly audit for SKU-3345 in the secure vault indicates a surplus of 2 units; adjust the ledger to match the physical count.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-3345", "from_location": "SECURE-VAULT-01", "to_location": "SECURE-VAULT-01", "quantity": 2, "reason": "Audit adjustment: quarterly surplus found" }
+Response: { "transaction_id": "TXN-10054", "sku": "SKU-3345", "quantity": 2, "from": "SECURE-VAULT-01", "to": "SECURE-VAULT-01", "status": "completed" }
+
+Question: Inspection of incoming pallets for SKU-6060 found 11 units with wet packaging due to rain during unloading; write these off.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-6060", "from_location": "RECEIVING-INSPECTION-03", "to_location": "DAMAGED-QUARANTINE", "quantity": 11, "reason": "Damage writeoff: weather exposure" }
+Response: { "transaction_id": "TXN-10055", "sku": "SKU-6060", "quantity": 11, "from": "RECEIVING-INSPECTION-03", "to": "DAMAGED-QUARANTINE", "status": "completed" }
+
+Question: A spot check revealed 6 units of SKU-7070 stored in the wrong temperature zone; adjust their location record to the proper cold chain area.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-7070", "from_location": "AMBIENT-ZONE-05", "to_location": "COLD-CHAIN-ZONE-02", "quantity": 6, "reason": "Location correction: temperature zone mismatch" }
+Response: { "transaction_id": "TXN-10056", "sku": "SKU-7070", "quantity": 6, "from": "AMBIENT-ZONE-05", "to": "COLD-CHAIN-ZONE-02", "status": "completed" }

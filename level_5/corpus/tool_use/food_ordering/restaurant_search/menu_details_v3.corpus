@@ -1,0 +1,51 @@
+Available Tools: search_restaurants | filter_by_cuisine | get_restaurant_menu | get_restaurant_details
+Call Schema: { "func_call": "string", "location": "string", "cuisine": "string", "max_delivery_time": number, "min_rating": number }
+Response Schema: { "restaurants": [{ "id": "string", "name": "string", "cuisine": "string", "rating": number, "delivery_time_min": number }], "total": number }
+---
+Question: Help me find Korean BBQ in Atlanta that arrives in under 35 minutes with a rating of 4.5 or higher, then fetch the menu.
+Call: { "func_call": "search_restaurants", "location": "Atlanta, GA", "cuisine": "Korean", "max_delivery_time": 35, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_021", "name": "Seoul Fire Grill", "cuisine": "Korean", "rating": 4.7, "delivery_time_min": 30 }, { "id": "rest_022", "name": "K-Town BBQ", "cuisine": "Korean", "rating": 4.6, "delivery_time_min": 33 }], "total": 2 }
+---
+Question: I'm craving Ethiopian food in Washington DC; find places with at least 4.4 stars and delivery within 45 minutes, then show details.
+Call: { "func_call": "search_restaurants", "location": "Washington, DC", "cuisine": "Ethiopian", "max_delivery_time": 45, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_023", "name": "Addis Red Sea", "cuisine": "Ethiopian", "rating": 4.8, "delivery_time_min": 40 }], "total": 1 }
+---
+Question: Locate seafood restaurants in San Diego with a minimum 4.6 rating and max 40 minute delivery, then get the menu for the best one.
+Call: { "func_call": "search_restaurants", "location": "San Diego, CA", "cuisine": "Seafood", "max_delivery_time": 40, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_024", "name": "Pacific Catch", "cuisine": "Seafood", "rating": 4.9, "delivery_time_min": 35 }, { "id": "rest_025", "name": "Ocean View Grill", "cuisine": "Seafood", "rating": 4.7, "delivery_time_min": 38 }], "total": 2 }
+---
+Question: Search for Greek eateries in Phoenix delivering in 30 minutes or less with a 4.3+ rating, and retrieve the full details.
+Call: { "func_call": "search_restaurants", "location": "Phoenix, AZ", "cuisine": "Greek", "max_delivery_time": 30, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_026", "name": "Olympus Kitchen", "cuisine": "Greek", "rating": 4.5, "delivery_time_min": 28 }], "total": 1 }
+---
+Question: Find Brazilian steakhouses in Houston that can deliver within 55 minutes and have a rating of 4.5 or better, then show the menu.
+Call: { "func_call": "search_restaurants", "location": "Houston, TX", "cuisine": "Brazilian", "max_delivery_time": 55, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_027", "name": "Churrasco Prime", "cuisine": "Brazilian", "rating": 4.8, "delivery_time_min": 50 }, { "id": "rest_028", "name": "Rio Grande Rodizio", "cuisine": "Brazilian", "rating": 4.6, "delivery_time_min": 52 }], "total": 2 }
+---
+Question: I need a ramen shop in Minneapolis with at least a 4.7 rating and delivery under 40 minutes, then get the restaurant info.
+Call: { "func_call": "search_restaurants", "location": "Minneapolis, MN", "cuisine": "Ramen", "max_delivery_time": 40, "min_rating": 4.7 }
+Response: { "restaurants": [{ "id": "rest_029", "name": "North Star Noodles", "cuisine": "Ramen", "rating": 4.9, "delivery_time_min": 35 }], "total": 1 }
+---
+Question: Look for Caribbean cuisine in Orlando with a minimum 4.4 rating and max 45 min delivery time, then pull up the menu.
+Call: { "func_call": "search_restaurants", "location": "Orlando, FL", "cuisine": "Caribbean", "max_delivery_time": 45, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_030", "name": "Island Spice Hut", "cuisine": "Caribbean", "rating": 4.6, "delivery_time_min": 40 }, { "id": "rest_031", "name": "Jerk Chicken Joint", "cuisine": "Caribbean", "rating": 4.5, "delivery_time_min": 43 }], "total": 2 }
+---
+Question: Find Lebanese restaurants in Detroit that deliver in under 35 minutes with a 4.5+ star rating, then show the details.
+Call: { "func_call": "search_restaurants", "location": "Detroit, MI", "cuisine": "Lebanese", "max_delivery_time": 35, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_032", "name": "Cedar House Cafe", "cuisine": "Lebanese", "rating": 4.8, "delivery_time_min": 30 }], "total": 1 }
+---
+Question: Search for Peruvian spots in Las Vegas with a 4.6 rating or higher and delivery within 50 minutes, then get the menu.
+Call: { "func_call": "search_restaurants", "location": "Las Vegas, NV", "cuisine": "Peruvian", "max_delivery_time": 50, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_033", "name": "Lima Limon", "cuisine": "Peruvian", "rating": 4.7, "delivery_time_min": 45 }, { "id": "rest_034", "name": "Andean Flavors", "cuisine": "Peruvian", "rating": 4.6, "delivery_time_min": 48 }], "total": 2 }
+---
+Question: Locate tapas bars in Charlotte delivering in 40 minutes or less with at least 4.3 stars, then retrieve the full details.
+Call: { "func_call": "search_restaurants", "location": "Charlotte, NC", "cuisine": "Spanish", "max_delivery_time": 40, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_035", "name": "Barcelona Bites", "cuisine": "Spanish", "rating": 4.5, "delivery_time_min": 38 }], "total": 1 }
+---
+Question: Find German pubs in Milwaukee with a minimum 4.4 rating and max 45 minute delivery, then show me the menu for the top result.
+Call: { "func_call": "search_restaurants", "location": "Milwaukee, WI", "cuisine": "German", "max_delivery_time": 45, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_036", "name": "Bavarian Bros", "cuisine": "German", "rating": 4.6, "delivery_time_min": 40 }, { "id": "rest_037", "name": "Pretzel & Pint", "cuisine": "German", "rating": 4.5, "delivery_time_min": 42 }], "total": 2 }
+---
+Question: I want Nepalese food in Salt Lake City delivered within 50 minutes; find places with 4.5+ stars and get the restaurant details.
+Call: { "func_call": "search_restaurants", "location": "Salt Lake City, UT", "cuisine": "Nepalese", "max_delivery_time": 50, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_038", "name": "Himalayan Haven", "cuisine": "Nepalese", "rating": 4.9, "delivery_time_min": 45 }], "total": 1 }

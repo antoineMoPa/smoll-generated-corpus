@@ -1,0 +1,95 @@
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Please adjust the brew time to 45 seconds.
+Call: { "func_call": "set_brew_time", "parameter": "brew_time", "value": "45" }
+Response: { "parameter": "brew_time", "previous_value": "30", "new_value": "45" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Set the water heat to 85 degrees for green tea.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "85" }
+Response: { "parameter": "temperature", "previous_value": "98", "new_value": "85" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Make the grounds coarser by switching to level 8.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "8" }
+Response: { "parameter": "grind_level", "previous_value": "3", "new_value": "8" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: I need a longer extraction, set time to 60 seconds.
+Call: { "func_call": "set_brew_time", "parameter": "brew_time", "value": "60" }
+Response: { "parameter": "brew_time", "previous_value": "25", "new_value": "60" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Drop the temperature down to 82 degrees.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "82" }
+Response: { "parameter": "temperature", "previous_value": "95", "new_value": "82" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Configure the grinder to level 1 for espresso.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "1" }
+Response: { "parameter": "grind_level", "previous_value": "6", "new_value": "1" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Reduce the brewing duration to 20 seconds.
+Call: { "func_call": "set_brew_time", "parameter": "brew_time", "value": "20" }
+Response: { "parameter": "brew_time", "previous_value": "40", "new_value": "20" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Heat the water to 99 degrees for black coffee.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "99" }
+Response: { "parameter": "temperature", "previous_value": "87", "new_value": "99" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Set the grind size to level 6 for drip coffee.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "6" }
+Response: { "parameter": "grind_level", "previous_value": "2", "new_value": "6" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Change the timer to 35 seconds please.
+Call: { "func_call": "set_brew_time", "parameter": "brew_time", "value": "35" }
+Response: { "parameter": "brew_time", "previous_value": "50", "new_value": "35" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Adjust the temperature to 91.5 degrees precisely.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "91.5" }
+Response: { "parameter": "temperature", "previous_value": "84", "new_value": "91.5" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Switch the grind setting to level 9 right away.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "9" }
+Response: { "parameter": "grind_level", "previous_value": "4", "new_value": "9" }

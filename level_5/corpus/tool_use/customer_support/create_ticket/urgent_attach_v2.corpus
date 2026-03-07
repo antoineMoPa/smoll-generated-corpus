@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: Complete network failure in the London office; no one can access internal tools. This requires immediate escalation.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-3341", "subject": "Critical Network Outage: London Office", "description": "All VLANs in the London headquarters are unreachable. Employees cannot access email or ERP systems.", "priority": "urgent", "category": "networking" }
+Response: { "ticket_id": "TKT-100101", "status": "open", "priority": "urgent", "assigned_to": "Network Operations Center", "created_at": "2023-11-05T09:12:05Z" }
+
+Question: Suspected DDoS attack targeting our checkout API. Creating urgent ticket and attaching traffic analysis screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-5529", "subject": "DDoS Attack Detected on Checkout Endpoint", "description": "Traffic spike of 50Gbps observed on /api/v2/checkout. Originating from multiple botnets in Asia.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-100102", "status": "open", "priority": "urgent", "assigned_to": "DDoS Mitigation Team", "created_at": "2023-11-05T09:15:22Z" }
+
+Question: Backup jobs for the financial database have failed for three consecutive nights. Uploading the backup agent error log now.
+Call: { "func_call": "attach_file", "customer_id": "CUST-8874", "subject": "Persistent Backup Failure: Financial DB", "description": "Backup agent returns 'Disk Full' error despite 2TB free space. Attached detailed agent logs for investigation.", "priority": "urgent", "category": "data-protection" }
+Response: { "ticket_id": "TKT-100103", "status": "open", "priority": "urgent", "assigned_to": "Storage Engineering", "created_at": "2023-11-05T09:18:47Z" }
+
+Question: Urgent: Credentials for the production admin panel found in a public GitHub gist. Creating ticket and attaching the exposure report.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-2210", "subject": "Credential Leak: Production Admin Keys on GitHub", "description": "Automated scanner found valid AWS access keys and admin passwords in a public repository created 1 hour ago.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-100104", "status": "open", "priority": "urgent", "assigned_to": "Incident Response", "created_at": "2023-11-05T09:21:33Z" }
+
+Question: Load balancer health checks are failing for all web servers in us-east-2. Attaching the ELB status dashboard screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-6655", "subject": "Load Balancer Health Check Failures in us-east-2", "description": "All target instances returning 503 Service Unavailable. Traffic is not being routed. Dashboard snapshot attached.", "priority": "urgent", "category": "infrastructure" }
+Response: { "ticket_id": "TKT-100105", "status": "open", "priority": "urgent", "assigned_to": "Cloud Infrastructure", "created_at": "2023-11-05T09:24:50Z" }
+
+Question: Critical failure in the message queue service; order processing has halted. Creating urgent ticket with attached consumer lag graph.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-9982", "subject": "Message Queue Service Halt: Order Processing Stopped", "description": "Kafka cluster is unresponsive. Consumer lag has exceeded 1 million messages. Orders are not being fulfilled.", "priority": "urgent", "category": "middleware" }
+Response: { "ticket_id": "TKT-100106", "status": "open", "priority": "urgent", "assigned_to": "Platform Engineering", "created_at": "2023-11-05T09:27:15Z" }
+
+Question: Ransomware encryption detected on the HR file share SRV-HR-01. Urgent ticket needed with attached file extension change log.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-4438", "subject": "Ransomware Encryption on HR File Share", "description": "Files on SRV-HR-01 are being renamed with .locked extension. Suspicious process 'cryptolocker.exe' identified.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-100107", "status": "open", "priority": "urgent", "assigned_to": "Malware Analysis Team", "created_at": "2023-11-05T09:30:42Z" }
+
+Question: SMS notification gateway is returning delivery failures for all two-factor authentication codes. Attaching the provider error log screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-7719", "subject": "SMS Gateway Failure: 2FA Codes Not Delivered", "description": "Twilio API returning 'Invalid Account SID' errors for all outbound messages. Users cannot log in. Log attached.", "priority": "urgent", "category": "communications" }
+Response: { "ticket_id": "TKT-100108", "status": "open", "priority": "urgent", "assigned_to": "Telecom Services", "created_at": "2023-11-05T09:33:58Z" }
+
+Question: Android app version 4.2.1 is freezing on the home screen for Samsung devices. Creating urgent ticket and attaching the ANR trace screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-1156", "subject": "Critical Freeze: Android App v4.2.1 on Samsung", "description": "Application Not Responding (ANR) errors reported by 80% of Samsung Galaxy S23 users. UI thread is blocked.", "priority": "urgent", "category": "mobile" }
+Response: { "ticket_id": "TKT-100109", "status": "open", "priority": "urgent", "assigned_to": "Android Development", "created_at": "2023-11-05T09:36:20Z" }
+
+Question: Memory leak in the recommendation engine causing container restarts every 10 minutes. Attaching the heap dump analysis screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-3397", "subject": "Memory Leak in Recommendation Engine Containers", "description": "Java heap space exhaustion triggers OOMKiller every 10 minutes. Service availability is at 60%. Heap dump attached.", "priority": "urgent", "category": "application" }
+Response: { "ticket_id": "TKT-100110", "status": "open", "priority": "urgent", "assigned_to": "Java Performance Team", "created_at": "2023-11-05T09:39:45Z" }
+
+Question: DNS records for the partner portal are pointing to the wrong IP address. Urgent ticket with attached DNS propagation check screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-5543", "subject": "Incorrect DNS Resolution for Partner Portal", "description": "partners.example.com resolves to 192.0.2.1 instead of the production VIP. Partners cannot access the site.", "priority": "urgent", "category": "dns" }
+Response: { "ticket_id": "TKT-100111", "status": "open", "priority": "urgent", "assigned_to": "DNS Administration", "created_at": "2023-11-05T09:42:10Z" }
+
+Question: Search indexer is stuck and not updating product catalog changes. Attaching the Elasticsearch cluster health screenshot showing yellow status.
+Call: { "func_call": "attach_file", "customer_id": "CUST-8821", "subject": "Search Indexer Stalled: Catalog Updates Missing", "description": "New products added 4 hours ago are not searchable. Elasticsearch cluster status is yellow due to unassigned shards.", "priority": "urgent", "category": "search" }
+Response: { "ticket_id": "TKT-100112", "status": "open", "priority": "urgent", "assigned_to": "Search Engineering", "created_at": "2023-11-05T09:45:33Z" }

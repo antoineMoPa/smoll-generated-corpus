@@ -1,0 +1,95 @@
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find all urgent emails from last week.
+Call: { "func_call": "filter_by_date", "query": "urgent items", "from": "", "after": "2023-10-01", "before": "2023-10-07", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_892", "from": "ceo@company.com", "subject": "Urgent: Board Meeting Change", "date": "2023-10-03" }, { "id": "msg_901", "from": "security@company.com", "subject": "Urgent: Password Reset Required", "date": "2023-10-05" }], "count": 2 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Show me personal emails received in September 2023.
+Call: { "func_call": "filter_by_date", "query": "family updates", "from": "", "after": "2023-09-01", "before": "2023-09-30", "label": "personal" }
+Response: { "messages": [{ "id": "msg_124", "from": "mom@gmail.com", "subject": "Sunday Dinner Plans", "date": "2023-09-04" }, { "id": "msg_156", "from": "brother@yahoo.com", "subject": "Photos from the trip", "date": "2023-09-12" }, { "id": "msg_189", "from": "sister@gmail.com", "subject": "Birthday invitation", "date": "2023-09-28" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Retrieve all newsletter subscriptions from October 1st to October 15th.
+Call: { "func_call": "filter_by_date", "query": "weekly digests", "from": "", "after": "2023-10-01", "before": "2023-10-15", "label": "newsletters" }
+Response: { "messages": [{ "id": "msg_332", "from": "tech@dailynews.com", "subject": "Tech Trends Weekly", "date": "2023-10-02" }, { "id": "msg_345", "from": "finance@marketwatch.com", "subject": "Market Update", "date": "2023-10-09" }, { "id": "msg_351", "from": "design@creative.com", "subject": "Design Inspiration #42", "date": "2023-10-14" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: List work-related emails between August 10 and August 20.
+Call: { "func_call": "filter_by_date", "query": "project alpha", "from": "", "after": "2023-08-10", "before": "2023-08-20", "label": "work" }
+Response: { "messages": [{ "id": "msg_550", "from": "manager@corp.com", "subject": "Q3 Goals Review", "date": "2023-08-11" }, { "id": "msg_562", "from": "hr@corp.com", "subject": "Benefits Enrollment", "date": "2023-08-15" }, { "id": "msg_578", "from": "team@corp.com", "subject": "Sprint Planning Notes", "date": "2023-08-18" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find urgent notifications sent in the last 24 hours (simulated as 2023-11-01).
+Call: { "func_call": "filter_by_date", "query": "system alert", "from": "", "after": "2023-10-31", "before": "2023-11-01", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_771", "from": "alerts@monitoring.com", "subject": "Server CPU Spike Detected", "date": "2023-10-31" }], "count": 1 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Get all personal emails from December 2023.
+Call: { "func_call": "filter_by_date", "query": "holiday plans", "from": "", "after": "2023-12-01", "before": "2023-12-31", "label": "personal" }
+Response: { "messages": [{ "id": "msg_882", "from": "friend@gmail.com", "subject": "New Year's Party", "date": "2023-12-05" }, { "id": "msg_895", "from": "dad@gmail.com", "subject": "Gift ideas", "date": "2023-12-10" }, { "id": "msg_910", "from": "aunt@hotmail.com", "subject": "Christmas card photo", "date": "2023-12-20" }, { "id": "msg_925", "from": "cousin@gmail.com", "subject": "Ski trip details", "date": "2023-12-28" }], "count": 4 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Show newsletters received between July 1st and July 31st.
+Call: { "func_call": "filter_by_date", "query": "summer reads", "from": "", "after": "2023-07-01", "before": "2023-07-31", "label": "newsletters" }
+Response: { "messages": [{ "id": "msg_210", "from": "books@literary.com", "subject": "July Book Club Picks", "date": "2023-07-03" }, { "id": "msg_225", "from": "news@global.com", "subject": "Weekly World Summary", "date": "2023-07-10" }, { "id": "msg_240", "from": "cooking@chef.com", "subject": "Summer Recipes", "date": "2023-07-17" }, { "id": "msg_255", "from": "travel@wanderlust.com", "subject": "Top Beach Destinations", "date": "2023-07-24" }], "count": 4 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Filter work emails from the first quarter of 2023 (Jan 1 - Mar 31).
+Call: { "func_call": "filter_by_date", "query": "q1 reports", "from": "", "after": "2023-01-01", "before": "2023-03-31", "label": "work" }
+Response: { "messages": [{ "id": "msg_101", "from": "cfo@corp.com", "subject": "Q1 Budget Approval", "date": "2023-01-15" }, { "id": "msg_115", "from": "sales@corp.com", "subject": "January Sales Figures", "date": "2023-02-02" }, { "id": "msg_130", "from": "ceo@corp.com", "subject": "Town Hall Agenda", "date": "2023-03-10" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find any urgent emails labeled for immediate action in May 2023.
+Call: { "func_call": "filter_by_date", "query": "critical fix", "from": "", "after": "2023-05-01", "before": "2023-05-31", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_405", "from": "support@vendor.com", "subject": "Critical Security Patch Available", "date": "2023-05-05" }, { "id": "msg_412", "from": "ops@corp.com", "subject": "Database Outage Alert", "date": "2023-05-12" }, { "id": "msg_428", "from": "legal@corp.com", "subject": "Urgent: Contract Signature Needed", "date": "2023-05-29" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Retrieve personal correspondence from June 15 to June 30.
+Call: { "func_call": "filter_by_date", "query": "vacation photos", "from": "", "after": "2023-06-15", "before": "2023-06-30", "label": "personal" }
+Response: { "messages": [{ "id": "msg_601", "from": "bestie@gmail.com", "subject": "Miss you!", "date": "2023-06-16" }, { "id": "msg_615", "from": "neighbor@gmail.com", "subject": "Package delivered", "date": "2023-06-22" }, { "id": "msg_629", "from": "gym@fitness.com", "subject": "Membership Renewal", "date": "2023-06-28" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: List all work emails received in the first week of November.
+Call: { "func_call": "filter_by_date", "query": "status update", "from": "", "after": "2023-11-01", "before": "2023-11-07", "label": "work" }
+Response: { "messages": [{ "id": "msg_702", "from": "dev@corp.com", "subject": "Build Failed Notification", "date": "2023-11-02" }, { "id": "msg_715", "from": "pm@corp.com", "subject": "Sprint Retrospective", "date": "2023-11-06" }], "count": 2 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find newsletters from the second half of August 2023.
+Call: { "func_call": "filter_by_date", "query": "industry insights", "from": "", "after": "2023-08-15", "before": "2023-08-31", "label": "newsletters" }
+Response: { "messages": [{ "id": "msg_580", "from": "ai@techdigest.com", "subject": "AI Breakthroughs This Week", "date": "2023-08-16" }, { "id": "msg_592", "from": "crypto@blockchain.com", "subject": "Market Analysis", "date": "2023-08-23" }, { "id": "msg_599", "from": "startups@venture.com", "subject": "Funding Roundup", "date": "2023-08-30" }], "count": 3 }

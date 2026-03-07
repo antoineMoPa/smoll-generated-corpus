@@ -1,0 +1,59 @@
+Context: The vintage mailbox on the corner is painted a glossy teal to match the house.
+Input: {"question": "What color is the vintage mailbox?"}
+Output: {"answer": "teal"}
+
+Context: He ordered a maroon sofa to add warmth to the living room.
+Input: {"question": "What color is the sofa he ordered?"}
+Output: {"answer": "maroon"}
+
+Context: The safety vests worn by the crew are a fluorescent lime green.
+Input: {"question": "What color are the safety vests?"}
+Output: {"answer": "lime green"}
+
+Context: Her new bicycle has a frame that shines in a metallic copper finish.
+Input: {"question": "What color is the bicycle frame?"}
+Output: {"answer": "copper"}
+
+Context: The berries on the bush ripened into a deep indigo shade.
+Input: {"question": "What color did the berries turn?"}
+Output: {"answer": "indigo"}
+
+Context: They chose a beige carpet to hide the dirt in the hallway.
+Input: {"question": "What color is the hallway carpet?"}
+Output: {"answer": "beige"}
+
+Context: The stoplight turned a bright crimson, halting all traffic.
+Input: {"question": "What color did the stoplight turn?"}
+Output: {"answer": "crimson"}
+
+Context: His running shoes feature accents of electric violet on the sides.
+Input: {"question": "What color are the accents on his running shoes?"}
+Output: {"answer": "violet"}
+
+Context: The old door was stripped down to its natural oak wood tone.
+Input: {"question": "What color is the old door now?"}
+Output: {"answer": "oak"}
+
+Context: She baked a cake with frosting dyed a pastel lavender hue.
+Input: {"question": "What color is the cake frosting?"}
+Output: {"answer": "lavender"}
+
+Context: The rust on the ancient gate has spread, turning it a rusty orange.
+Input: {"question": "What color is the rust on the gate?"}
+Output: {"answer": "orange"}
+
+Context: The pilot's uniform includes a cap that is dark charcoal gray.
+Input: {"question": "What color is the pilot's cap?"}
+Output: {"answer": "charcoal gray"}
+
+Context: Tropical fish in the tank display scales of iridescent gold.
+Input: {"question": "What color are the fish scales?"}
+Output: {"answer": "gold"}
+
+Context: The notebook cover is made of leather and colored a rich burgundy.
+Input: {"question": "What color is the notebook cover?"}
+Output: {"answer": "burgundy"}
+
+Context: Snow covered the peaks, making the mountains appear stark white.
+Input: {"question": "What color do the mountains appear?"}
+Output: {"answer": "white"}

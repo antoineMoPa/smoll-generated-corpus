@@ -1,0 +1,59 @@
+{"func_call": "get_resource", "id": "usr_9z8y7x6w", "data": {}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "The requested user profile has been deleted.", "field": "id", "details": {"requested_id": "usr_9z8y7x6w"}}}
+
+{"func_call": "update_resource", "id": "ord_55k44j3h", "data": {"status": "cancelled"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Session token is no longer valid.", "field": "authorization", "details": {"token_expiry": "2023-11-20T12:45:00Z"}}}
+
+{"func_call": "delete_resource", "id": "cfg_network_rules", "data": {}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Only network administrators can modify firewall rules.", "field": "role", "details": {"required_role": "net_admin", "current_role": "viewer"}}}
+
+{"func_call": "get_resource", "id": "inv_112233bb", "data": {"warehouse": "west"}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Item SKU does not exist in the western distribution center.", "field": "id", "details": {"warehouse": "west", "item_id": "inv_112233bb"}}}
+
+{"func_call": "create_resource", "id": "prod_new_sku_002", "data": {"name": "Gadget Plus", "price": 49.99}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Missing authentication header in request.", "field": "x-auth-token", "details": {}}}
+
+{"func_call": "update_resource", "id": "usr_99d8c7b6", "data": {"password": "new_secure_pass"}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Account owners must reset their own passwords.", "field": "password", "details": {"target_user": "usr_99d8c7b6", "actor_user": "usr_22b3c4d5"}}}
+
+{"func_call": "get_resource", "id": "log_20231101_warn", "data": {"level": "warning"}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Log entry purged due to retention policy.", "field": "id", "details": {"retention_date": "2023-10-31"}}}
+
+{"func_call": "delete_resource", "id": "sub_basic_annual", "data": {"reason": "fraud_detection"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "JWT signature verification failed.", "field": "authorization", "details": {"error_type": "invalid_signature"}}}
+
+{"func_call": "create_resource", "id": "doc_legal_contract_v2", "data": {"content": "Merger agreement draft"}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Write access denied to legal secure vault.", "field": "namespace", "details": {"namespace": "legal_vault", "allowed_groups": ["legal_counsel"]}}}
+
+{"func_call": "get_resource", "id": "txn_def456uvw", "data": {"include_metadata": false}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Payment record missing from primary database.", "field": "id", "details": {"ledger_shard": "shard_09"}}}
+
+{"func_call": "update_resource", "id": "role_guest_access", "data": {"permissions": ["read"]}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "System roles cannot be altered by standard users.", "field": "role_id", "details": {"restricted_role": "guest_access"}}}
+
+{"func_call": "create_resource", "id": "img_batch_upload", "data": {"bucket": "public-media"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Cloud storage credentials have expired.", "field": "service_account", "details": {"account_id": "sa_media_uploader"}}}
+
+{"func_call": "get_resource", "id": "evt_trigger_42", "data": {}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Event trigger configuration has been removed.", "field": "id", "details": {"removal_date": "2023-11-05"}}}
+
+{"func_call": "delete_resource", "id": "db_snapshot_dev_03", "data": {"force": false}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Database snapshots require supervisor approval for deletion.", "field": "approval_status", "details": {"environment": "development"}}}
+
+{"func_call": "update_resource", "id": "api_key_v3", "data": {"scope": "read_only"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "User session terminated by administrator.", "field": "session_id", "details": {"termination_time": "2023-11-06T09:15:00Z"}}}
+
+{"func_call": "get_resource", "id": "cmp_campaign_winter", "data": {"region": "us-east"}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Marketing campaign ID is invalid or dormant.", "field": "id", "details": {"last_active": "2023-08-15"}}}
+
+{"func_call": "create_resource", "id": "vm_instance_small", "data": {"specs": {"cpu": 2, "ram": 4}}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Project budget limit reached for compute resources.", "field": "resource_type", "details": {"budget_limit": 1000, "current_spend": 1000}}}
+
+{"func_call": "delete_resource", "id": "usr_sandbox_demo", "data": {}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "OAuth access token has been revoked.", "field": "access_token", "details": {}}}
+
+{"func_call": "update_resource", "id": "bill_receipt_505", "data": {"tax_rate": 0.05}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Paid receipts are immutable.", "field": "status", "details": {"current_status": "paid"}}}
+
+{"func_call": "get_resource", "id": "sec_cert_single", "data": {}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "No active certificate found for the specified subdomain.", "field": "domain", "details": {"domain": "api.test-site.org"}}}

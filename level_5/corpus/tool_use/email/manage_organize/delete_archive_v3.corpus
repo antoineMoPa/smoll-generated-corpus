@@ -1,0 +1,51 @@
+Available Tools: move_to_folder | create_label | delete_email | archive_email | unsubscribe
+Call Schema: { "func_call": "string", "message_id": "string", "folder": "string", "label": "string" }
+Response Schema: { "message_id": "string", "action": "string", "status": "string" }
+---
+Question: Remove the phishing attempt email with ID msg_7712 right now.
+Call: { "func_call": "delete_email", "message_id": "msg_7712", "folder": "", "label": "" }
+Response: { "message_id": "msg_7712", "action": "delete_email", "status": "success" }
+
+Question: File away the shipping confirmation msg_8834 for future reference.
+Call: { "func_call": "archive_email", "message_id": "msg_8834", "folder": "", "label": "" }
+Response: { "message_id": "msg_8834", "action": "archive_email", "status": "success" }
+
+Question: I need to opt out of the Fashion Weekly newsletter using message msg_9923.
+Call: { "func_call": "unsubscribe", "message_id": "msg_9923", "folder": "", "label": "" }
+Response: { "message_id": "msg_9923", "action": "unsubscribe", "status": "success" }
+
+Question: Please discard the expired coupon notification msg_1045.
+Call: { "func_call": "delete_email", "message_id": "msg_1045", "folder": "", "label": "" }
+Response: { "message_id": "msg_1045", "action": "delete_email", "status": "success" }
+
+Question: Archive the invoice document msg_6677 to keep my inbox clean.
+Call: { "func_call": "archive_email", "message_id": "msg_6677", "folder": "", "label": "" }
+Response: { "message_id": "msg_6677", "action": "archive_email", "status": "success" }
+
+Question: Stop receiving alerts from this source by unsubscribing via msg_2219.
+Call: { "func_call": "unsubscribe", "message_id": "msg_2219", "folder": "", "label": "" }
+Response: { "message_id": "msg_2219", "action": "unsubscribe", "status": "success" }
+
+Question: Delete the failed login warning email numbered msg_5509.
+Call: { "func_call": "delete_email", "message_id": "msg_5509", "folder": "", "label": "" }
+Response: { "message_id": "msg_5509", "action": "delete_email", "status": "success" }
+
+Question: Move the client proposal email msg_3388 to the archives.
+Call: { "func_call": "archive_email", "message_id": "msg_3388", "folder": "", "label": "" }
+Response: { "message_id": "msg_3388", "action": "archive_email", "status": "success" }
+
+Question: Unsubscribe me from the event reminders associated with msg_4490.
+Call: { "func_call": "unsubscribe", "message_id": "msg_4490", "folder": "", "label": "" }
+Response: { "message_id": "msg_4490", "action": "unsubscribe", "status": "success" }
+
+Question: Delete the system error report with ID msg_8123 immediately.
+Call: { "func_call": "delete_email", "message_id": "msg_8123", "folder": "", "label": "" }
+Response: { "message_id": "msg_8123", "action": "delete_email", "status": "success" }
+
+Question: Archive the webinar registration confirmation msg_7256.
+Call: { "func_call": "archive_email", "message_id": "msg_7256", "folder": "", "label": "" }
+Response: { "message_id": "msg_7256", "action": "archive_email", "status": "success" }
+
+Question: Opt out of the monthly survey requests linked to message msg_9182.
+Call: { "func_call": "unsubscribe", "message_id": "msg_9182", "folder": "", "label": "" }
+Response: { "message_id": "msg_9182", "action": "unsubscribe", "status": "success" }

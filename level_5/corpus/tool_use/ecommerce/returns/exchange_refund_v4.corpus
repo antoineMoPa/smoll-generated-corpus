@@ -1,0 +1,95 @@
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: I need to start a return for order ORD-4512, item SKU-8891, because the jacket has a torn seam.
+Call: { "func_call": "initiate_return", "order_id": "ORD-4512", "item_id": "SKU-8891", "reason": "torn_seam" }
+Response: { "return_id": "RET-11023", "status": "pending_approval", "refund_amount": 0, "label_url": "" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: Can you check the status of my return RET-6678 for order ORD-2299? I need to know if it shipped back.
+Call: { "func_call": "get_return_status", "order_id": "ORD-2299", "item_id": "RET-6678", "reason": "shipping_status_check" }
+Response: { "return_id": "RET-6678", "status": "in_transit", "refund_amount": 0, "label_url": "https://shipping.example.com/labels/RET-6678.pdf" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: I received a cracked monitor from order ORD-7745, item SKU-3321. Please initiate a return right away.
+Call: { "func_call": "initiate_return", "order_id": "ORD-7745", "item_id": "SKU-3321", "reason": "broken_on_arrival" }
+Response: { "return_id": "RET-55412", "status": "approved", "refund_amount": 0, "label_url": "https://shipping.example.com/labels/RET-55412.pdf" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: What is the current refund status for return ID RET-3344 associated with order ORD-9911?
+Call: { "func_call": "get_refund_status", "order_id": "ORD-9911", "item_id": "RET-3344", "reason": "payment_status_inquiry" }
+Response: { "return_id": "RET-3344", "status": "pending_bank_transfer", "refund_amount": 89.25, "label_url": "" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: I want to exchange the red sneakers (SKU-4455) from order ORD-1122 for a different color because I don't like red.
+Call: { "func_call": "exchange_item", "order_id": "ORD-1122", "item_id": "SKU-4455", "reason": "color_preference" }
+Response: { "return_id": "EXC-8899", "status": "exchange_initiated", "refund_amount": 0, "label_url": "https://shipping.example.com/labels/EXC-8899.pdf" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: Check the return status for item SKU-7788 in order ORD-5566. I mailed it three days ago.
+Call: { "func_call": "get_return_status", "order_id": "ORD-5566", "item_id": "SKU-7788", "reason": "mail_tracking_check" }
+Response: { "return_id": "RET-2233", "status": "received_at_warehouse", "refund_amount": 0, "label_url": "https://shipping.example.com/labels/RET-2233.pdf" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: Please initiate a return for order ORD-8899, item SKU-1100, because the fabric feels scratchy.
+Call: { "func_call": "initiate_return", "order_id": "ORD-8899", "item_id": "SKU-1100", "reason": "fabric_quality" }
+Response: { "return_id": "RET-6677", "status": "pending_approval", "refund_amount": 0, "label_url": "" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: Has the refund been issued for return RET-2211 on order ORD-6655? The item was missing parts.
+Call: { "func_call": "get_refund_status", "order_id": "ORD-6655", "item_id": "RET-2211", "reason": "missing_parts_refund" }
+Response: { "return_id": "RET-2211", "status": "completed", "refund_amount": 54.50, "label_url": "" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: I need to exchange the malfunctioning toaster (SKU-9900) from order ORD-3322 for a new unit.
+Call: { "func_call": "exchange_item", "order_id": "ORD-3322", "item_id": "SKU-9900", "reason": "malfunction" }
+Response: { "return_id": "EXC-5544", "status": "approved", "refund_amount": 0, "label_url": "https://shipping.example.com/labels/EXC-5544.pdf" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: What is the status of return RET-8811 for order ORD-7733? The tracking shows delivered but no refund yet.
+Call: { "func_call": "get_return_status", "order_id": "ORD-7733", "item_id": "RET-8811", "reason": "delivery_confirmation_issue" }
+Response: { "return_id": "RET-8811", "status": "processing_refund", "refund_amount": 112.00, "label_url": "https://shipping.example.com/labels/RET-8811.pdf" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: Start a return for order ORD-9876, item SKU-6543, because the box was crushed during shipping.
+Call: { "func_call": "initiate_return", "order_id": "ORD-9876", "item_id": "SKU-6543", "reason": "damaged_packaging" }
+Response: { "return_id": "RET-9988", "status": "pending_approval", "refund_amount": 0, "label_url": "" }
+
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: Verify the total refund amount for return RET-4455 on order ORD-2211.
+Call: { "func_call": "get_refund_status", "order_id": "ORD-2211", "item_id": "RET-4455", "reason": "total_amount_check" }
+Response: { "return_id": "RET-4455", "status": "completed", "refund_amount": 245.75, "label_url": "" }

@@ -1,0 +1,51 @@
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Set the brew time to 25 seconds for a stronger espresso shot.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "25s" }
+Response: { "parameter": "duration", "previous_value": "20s", "new_value": "25s" }
+
+Question: I need to check what the current machine settings are before starting the morning batch.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"93C\", \"grind_level\": \"fine\", \"brew_time\": \"25s\"}" }
+
+Question: Adjust the brewing duration to 18 seconds for a lighter roast.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "18s" }
+Response: { "parameter": "duration", "previous_value": "25s", "new_value": "18s" }
+
+Question: Can you retrieve the current configuration to ensure the grind level matches the new beans?
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"91C\", \"grind_level\": \"medium\", \"brew_time\": \"18s\"}" }
+
+Question: Change the brew time to 30 seconds for a cold brew concentrate cycle.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "30s" }
+Response: { "parameter": "duration", "previous_value": "18s", "new_value": "30s" }
+
+Question: Please show me the active settings so I can log them in the maintenance report.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"94C\", \"grind_level\": \"coarse\", \"brew_time\": "30s\"}" }
+
+Question: Reset the brew duration to the standard 22 seconds.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "22s" }
+Response: { "parameter": "duration", "previous_value": "30s", "new_value": "22s" }
+
+Question: What are the current parameters set on the machine right now?
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"92C\", \"grind_level\": \"fine\", \"brew_time\": \"22s\"}" }
+
+Question: Increase the brew time to 28 seconds for the double shot profile.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "28s" }
+Response: { "parameter": "duration", "previous_value": "22s", "new_value": "28s" }
+
+Question: Fetch the full settings object to verify the temperature and grind alongside the brew time.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"93.5C\", \"grind_level\": \"extra_fine\", \"brew_time\": \"28s\"}" }
+
+Question: Shorten the brew time to 15 seconds for a quick ristretto.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "15s" }
+Response: { "parameter": "duration", "previous_value": "28s", "new_value": "15s" }
+
+Question: Display the current system settings to confirm the ristretto profile is active.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"94C\", \"grind_level\": \"fine\", \"brew_time\": \"15s\"}" }

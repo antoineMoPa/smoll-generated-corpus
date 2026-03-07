@@ -1,0 +1,51 @@
+Available Tools: list_inventory | restock_item | get_low_stock | update_price
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number, "price": number }
+Response Schema: { "inventory": [{ "slot_id": "string", "name": "string", "quantity": number, "price": number }] }
+---
+Question: What items are currently available in the dispenser?
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Sun Chips Garden Salsa", "quantity": 9, "price": 1.65 }, { "slot_id": "X2", "name": "Fritos Corn Chips", "quantity": 14, "price": 1.50 }, { "slot_id": "X3", "name": "Ruffles Original", "quantity": 11, "price": 1.50 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 22, "price": 1.80 }, { "slot_id": "Y2", "name": "Milky Way", "quantity": 17, "price": 1.75 }, { "slot_id": "Y3", "name": "3 Musketeers", "quantity": 13, "price": 1.75 }, { "slot_id": "Z1", "name": "Diet Coke", "quantity": 28, "price": 2.00 }, { "slot_id": "Z2", "name": "Dr Pepper", "quantity": 21, "price": 2.00 }, { "slot_id": "Z3", "name": "7UP", "quantity": 19, "price": 2.00 }, { "slot_id": "W1", "name": "Evian Water", "quantity": 35, "price": 2.25 }, { "slot_id": "W2", "name": "Vitamin Water", "quantity": 15, "price": 2.50 }, { "slot_id": "W3", "name": "Monster Energy", "quantity": 7, "price": 3.75 }] }
+
+Question: Slot X1 is almost empty on Sun Chips. Please add 15 bags.
+Call: { "func_call": "restock_item", "slot_id": "X1", "quantity": 15, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Sun Chips Garden Salsa", "quantity": 24, "price": 1.65 }] }
+
+Question: Refill the Twix supply in slot Y1 with 30 units.
+Call: { "func_call": "restock_item", "slot_id": "Y1", "quantity": 30, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Y1", "name": "Twix Bar", "quantity": 52, "price": 1.80 }] }
+
+Question: We need to top off the Diet Coke in slot Z1. Add 25 cans.
+Call: { "func_call": "restock_item", "slot_id": "Z1", "quantity": 25, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Z1", "name": "Diet Coke", "quantity": 53, "price": 2.00 }] }
+
+Question: Display the current stock count for all products.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Sun Chips Garden Salsa", "quantity": 24, "price": 1.65 }, { "slot_id": "X2", "name": "Fritos Corn Chips", "quantity": 14, "price": 1.50 }, { "slot_id": "X3", "name": "Ruffles Original", "quantity": 11, "price": 1.50 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 52, "price": 1.80 }, { "slot_id": "Y2", "name": "Milky Way", "quantity": 17, "price": 1.75 }, { "slot_id": "Y3", "name": "3 Musketeers", "quantity": 13, "price": 1.75 }, { "slot_id": "Z1", "name": "Diet Coke", "quantity": 53, "price": 2.00 }, { "slot_id": "Z2", "name": "Dr Pepper", "quantity": 21, "price": 2.00 }, { "slot_id": "Z3", "name": "7UP", "quantity": 19, "price": 2.00 }, { "slot_id": "W1", "name": "Evian Water", "quantity": 35, "price": 2.25 }, { "slot_id": "W2", "name": "Vitamin Water", "quantity": 15, "price": 2.50 }, { "slot_id": "W3", "name": "Monster Energy", "quantity": 7, "price": 3.75 }] }
+
+Question: The Monster Energy stock in W3 is critically low. Restock with 12 cans.
+Call: { "func_call": "restock_item", "slot_id": "W3", "quantity": 12, "price": 0 }
+Response: { "inventory": [{ "slot_id": "W3", "name": "Monster Energy", "quantity": 19, "price": 3.75 }] }
+
+Question: Add 18 bags of Fritos to slot X2.
+Call: { "func_call": "restock_item", "slot_id": "X2", "quantity": 18, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X2", "name": "Fritos Corn Chips", "quantity": 32, "price": 1.50 }] }
+
+Question: Please show the full inventory list again to confirm updates.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Sun Chips Garden Salsa", "quantity": 24, "price": 1.65 }, { "slot_id": "X2", "name": "Fritos Corn Chips", "quantity": 32, "price": 1.50 }, { "slot_id": "X3", "name": "Ruffles Original", "quantity": 11, "price": 1.50 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 52, "price": 1.80 }, { "slot_id": "Y2", "name": "Milky Way", "quantity": 17, "price": 1.75 }, { "slot_id": "Y3", "name": "3 Musketeers", "quantity": 13, "price": 1.75 }, { "slot_id": "Z1", "name": "Diet Coke", "quantity": 53, "price": 2.00 }, { "slot_id": "Z2", "name": "Dr Pepper", "quantity": 21, "price": 2.00 }, { "slot_id": "Z3", "name": "7UP", "quantity": 19, "price": 2.00 }, { "slot_id": "W1", "name": "Evian Water", "quantity": 35, "price": 2.25 }, { "slot_id": "W2", "name": "Vitamin Water", "quantity": 15, "price": 2.50 }, { "slot_id": "W3", "name": "Monster Energy", "quantity": 19, "price": 3.75 }] }
+
+Question: Restock Milky Way bars in slot Y2 with 20 units.
+Call: { "func_call": "restock_item", "slot_id": "Y2", "quantity": 20, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Y2", "name": "Milky Way", "quantity": 37, "price": 1.75 }] }
+
+Question: We need more Vitamin Water in slot W2. Add 25 bottles.
+Call: { "func_call": "restock_item", "slot_id": "W2", "quantity": 25, "price": 0 }
+Response: { "inventory": [{ "slot_id": "W2", "name": "Vitamin Water", "quantity": 40, "price": 2.50 }] }
+
+Question: Show me the current status of every slot in the machine.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Sun Chips Garden Salsa", "quantity": 24, "price": 1.65 }, { "slot_id": "X2", "name": "Fritos Corn Chips", "quantity": 32, "price": 1.50 }, { "slot_id": "X3", "name": "Ruffles Original", "quantity": 11, "price": 1.50 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 52, "price": 1.80 }, { "slot_id": "Y2", "name": "Milky Way", "quantity": 37, "price": 1.75 }, { "slot_id": "Y3", "name": "3 Musketeers", "quantity": 13, "price": 1.75 }, { "slot_id": "Z1", "name": "Diet Coke", "quantity": 53, "price": 2.00 }, { "slot_id": "Z2", "name": "Dr Pepper", "quantity": 21, "price": 2.00 }, { "slot_id": "Z3", "name": "7UP", "quantity": 19, "price": 2.00 }, { "slot_id": "W1", "name": "Evian Water", "quantity": 35, "price": 2.25 }, { "slot_id": "W2", "name": "Vitamin Water", "quantity": 40, "price": 2.50 }, { "slot_id": "W3", "name": "Monster Energy", "quantity": 19, "price": 3.75 }] }
+
+Question: Restock 7UP in slot Z3 with 22 cans.
+Call: { "func_call": "restock_item", "slot_id": "Z3", "quantity": 22, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Z3", "name": "7UP", "quantity": 41, "price": 2.00 }] }

@@ -1,0 +1,51 @@
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: What are the current CPU and memory stats for instance i-0a1b2c3d4e5f in us-east-1?
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-0a1b2c3d4e5f", "region": "us-east-1", "filter": "cpu,memory" }
+Response: { "instances": [{ "id": "i-0a1b2c3d4e5f", "type": "m5.large", "state": "running", "ip": "172.31.45.12" }] }
+
+Question: Show me network throughput and CPU utilization for web-server-prod-01 in eu-west-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "web-server-prod-01", "region": "eu-west-2", "filter": "network,cpu" }
+Response: { "instances": [{ "id": "web-server-prod-01", "type": "c5.xlarge", "state": "running", "ip": "10.0.12.88" }] }
+
+Question: Retrieve memory usage and network I/O for database-primary in ap-southeast-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "database-primary", "region": "ap-southeast-1", "filter": "memory,network" }
+Response: { "instances": [{ "id": "database-primary", "type": "r5.2xlarge", "state": "running", "ip": "192.168.5.201" }] }
+
+Question: Get full metrics (CPU, memory, network) for instance i-9z8y7x6w5v in us-west-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-9z8y7x6w5v", "region": "us-west-2", "filter": "cpu,memory,network" }
+Response: { "instances": [{ "id": "i-9z8y7x6w5v", "type": "t3.medium", "state": "running", "ip": "54.201.33.19" }] }
+
+Question: Check CPU load and RAM consumption for analytics-worker-04 in ca-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "analytics-worker-04", "region": "ca-central-1", "filter": "cpu,memory" }
+Response: { "instances": [{ "id": "analytics-worker-04", "type": "m5.xlarge", "state": "running", "ip": "172.16.88.42" }] }
+
+Question: What is the network bandwidth and CPU percentage for batch-processor-node in eu-north-1?
+Call: { "func_call": "get_instance_metrics", "instance_id": "batch-processor-node", "region": "eu-north-1", "filter": "network,cpu" }
+Response: { "instances": [{ "id": "batch-processor-node", "type": "c5n.2xlarge", "state": "running", "ip": "10.255.12.5" }] }
+
+Question: Display memory stats and network packet counts for cache-redis-02 in sa-east-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "cache-redis-02", "region": "sa-east-1", "filter": "memory,network" }
+Response: { "instances": [{ "id": "cache-redis-02", "type": "r6g.large", "state": "running", "ip": "172.30.1.99" }] }
+
+Question: Fetch CPU, memory, and network metrics for ml-training-gpu-01 in us-gov-west-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "ml-training-gpu-01", "region": "us-gov-west-1", "filter": "cpu,memory,network" }
+Response: { "instances": [{ "id": "ml-training-gpu-01", "type": "p3.2xlarge", "state": "running", "ip": "10.40.55.120" }] }
+
+Question: Monitor CPU usage and outbound network traffic for api-gateway-main in ap-northeast-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "api-gateway-main", "region": "ap-northeast-1", "filter": "cpu,network" }
+Response: { "instances": [{ "id": "api-gateway-main", "type": "m6i.large", "state": "running", "ip": "172.20.14.7" }] }
+
+Question: Get detailed memory and CPU stats for backend-service-beta in eu-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "backend-service-beta", "region": "eu-central-1", "filter": "memory,cpu" }
+Response: { "instances": [{ "id": "backend-service-beta", "type": "t4g.small", "state": "running", "ip": "10.11.22.33" }] }
+
+Question: Report network throughput, CPU, and memory for logging-aggregator in us-east-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "logging-aggregator", "region": "us-east-2", "filter": "network,cpu,memory" }
+Response: { "instances": [{ "id": "logging-aggregator", "type": "m5.4xlarge", "state": "running", "ip": "172.31.90.200" }] }
+
+Question: Check current CPU percent and network latency for frontend-lb-03 in me-south-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "frontend-lb-03", "region": "me-south-1", "filter": "cpu,network" }
+Response: { "instances": [{ "id": "frontend-lb-03", "type": "c6i.xlarge", "state": "running", "ip": "192.168.100.55" }] }

@@ -1,0 +1,59 @@
+Context: Alex sprinted to the garage and retrieved his rusty bicycle to ride to school before the rain started. He checked the tires quickly.
+Input: {"question": "What did Alex retrieve?"}
+Output: {"answer": "rusty bicycle"}
+
+Context: While organizing the basement, Sophie discovered a broken wooden stool covered in dust. One leg was completely snapped off.
+Input: {"question": "What did Sophie discover?"}
+Output: {"answer": "broken wooden stool"}
+
+Context: The instructor told the class to pack a green sketchbook for the art workshop next week. Everyone wrote it down in their planners.
+Input: {"question": "What did the class need to pack?"}
+Output: {"answer": "green sketchbook"}
+
+Context: After the party, Mark realized his gold watch was missing from the entryway table. He wondered if a guest had borrowed it.
+Input: {"question": "What was missing from the entryway table?"}
+Output: {"answer": "gold watch"}
+
+Context: Jessica visited the electronics shop and purchased a wireless mouse to replace her broken one. She paid using her credit card.
+Input: {"question": "What did Jessica purchase?"}
+Output: {"answer": "wireless mouse"}
+
+Context: During the camping trip, Brian realized he had forgotten his orange flashlight back at the ranger station. He had to borrow one from a neighbor.
+Input: {"question": "What did Brian forget at the ranger station?"}
+Output: {"answer": "orange flashlight"}
+
+Context: The baker gently folded his silicone spatula before mixing the batter for the chocolate cake. The handle felt warm in his hand.
+Input: {"question": "What did the baker fold?"}
+Output: {"answer": "silicone spatula"}
+
+Context: Nina searched her whole office but could not find her purple stapler on her desk. She started worrying about finishing her reports.
+Input: {"question": "What could Nina not find?"}
+Output: {"answer": "purple stapler"}
+
+Context: For the biology experiment, Ryan utilized a digital thermometer to check the water temperature. The reading flashed on the display.
+Input: {"question": "What did Ryan utilize for the biology experiment?"}
+Output: {"answer": "digital thermometer"}
+
+Context: My uncle lent me his metal ladder so I could clean the gutters on the roof. It was slightly dented on the side.
+Input: {"question": "What did my uncle lend me?"}
+Output: {"answer": "metal ladder"}
+
+Context: The carpenter grabbed the sharp chisel to carve the design into the oak beam. Wood shavings fell to the floor.
+Input: {"question": "What did the carpenter grab?"}
+Output: {"answer": "sharp chisel"}
+
+Context: Laura accidentally left her canvas tote bag on the bus and didn't realize until she got home. She called the depot immediately.
+Input: {"question": "What did Laura leave on the bus?"}
+Output: {"answer": "canvas tote bag"}
+
+Context: To cut the paper precisely, the designer reached for a pink pair of scissors from the supply drawer. The blades were very sharp.
+Input: {"question": "What did the designer reach for?"}
+Output: {"answer": "pink pair of scissors"}
+
+Context: During the blackout, Daniel ignited a scent-free candle to navigate the hallway safely. The wax melted slowly.
+Input: {"question": "What did Daniel ignite?"}
+Output: {"answer": "scent-free candle"}
+
+Context: The florist arranged the roses using a glass vase that she received as a gift last month. It reflected the sunlight beautifully.
+Input: {"question": "What did the florist use to arrange the roses?"}
+Output: {"answer": "glass vase"}

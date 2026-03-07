@@ -1,0 +1,51 @@
+Available Tools: run_container | stop_container | start_container | remove_container | list_containers
+Call Schema: { "func_call": "string", "container_id": "string", "image": "string", "name": "string", "ports": "string", "env": ["string"] }
+Response Schema: { "container_id": "string", "name": "string", "image": "string", "state": "running|stopped|exited", "ports": "string" }
+---
+Question: Display all active containers currently serving traffic.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "x1y2z3a4", "name": "frontend-proxy", "image": "traefik:v2.9", "state": "running", "ports": "443:443" }
+
+Question: Identify any containers that halted due to resource limits.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "b5c6d7e8", "name": "data-ingestor", "image": "python:3.9-slim", "state": "stopped", "ports": "" }
+
+Question: Retrieve a full inventory of containers including those that finished execution.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "f9g0h1i2", "name": "report-generator", "image": "pandas:latest", "state": "exited", "ports": "" }
+
+Question: Permanently delete the container identified as 'old-monitoring-agent'.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "old-monitoring-agent", "ports": "", "env": [] }
+Response: { "container_id": "j3k4l5m6", "name": "old-monitoring-agent", "image": "prometheus:v2.30", "state": "exited", "ports": "9090:9090" }
+
+Question: Forcefully purge the container with identifier 'a9b8c7d6' immediately.
+Call: { "func_call": "remove_container", "container_id": "a9b8c7d6", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "a9b8c7d6", "name": " ephemeral-task", "image": "alpine:3.15", "state": "exited", "ports": "" }
+
+Question: Enumerate all non-running containers to prepare for archival.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "n7o8p9q0", "name": "etl-pipeline-v1", "image": "airflow:2.4", "state": "stopped", "ports": "" }
+
+Question: Erase the terminated container 'unit-test-suite-04' from the registry.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "unit-test-suite-04", "ports": "", "env": [] }
+Response: { "container_id": "r1s2t3u4", "name": "unit-test-suite-04", "image": "go:1.19", "state": "exited", "ports": "" }
+
+Question: Completely wipe the container instance named 'dev-sandbox-alpha'.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "dev-sandbox-alpha", "ports": "", "env": [] }
+Response: { "container_id": "v5w6x7y8", "name": "dev-sandbox-alpha", "image": "debian:bullseye", "state": "exited", "ports": "" }
+
+Question: Filter the container list to show only those that have completed their task.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "z9a0b1c2", "name": "image-resizer", "image": "imagemagick:latest", "state": "exited", "ports": "" }
+
+Question: Execute a forced removal on container 'd4e5f6g7' ignoring any lock files.
+Call: { "func_call": "remove_container", "container_id": "d4e5f6g7", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "d4e5f6g7", "name": "log-shipper", "image": "fluentd:v1.14", "state": "exited", "ports": "" }
+
+Question: Survey all operational containers to verify health before system maintenance.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "h3i4j5k6", "name": "auth-service", "image": "keycloak:19.0", "state": "running", "ports": "8080:8080" }
+
+Question: Aggressively remove the 'qa-database' container which is refusing to terminate.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "qa-database", "ports": "", "env": [] }
+Response: { "container_id": "l7m8n9o0", "name": "qa-database", "image": "mariadb:10.8", "state": "exited", "ports": "3307:3306" }

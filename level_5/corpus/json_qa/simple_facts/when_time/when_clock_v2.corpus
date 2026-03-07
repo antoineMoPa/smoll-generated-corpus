@@ -1,0 +1,59 @@
+Context: The webinar is set to begin at 1:30 PM in the virtual lobby. Please log in five minutes early to test your audio.
+Input: {"question": "When does the webinar begin?"}
+Output: {"answer": "1:30 PM"}
+
+Context: We managed to catch the last bus back to the hotel around 11:45 PM. It was a relief to finally get off our feet.
+Input: {"question": "What time did you catch the last bus?"}
+Output: {"answer": "around 11:45 PM"}
+
+Context: The ferry to the island leaves exactly at 8:15 AM from dock 9. Tickets must be purchased prior to boarding.
+Input: {"question": "When does the ferry to the island leave?"}
+Output: {"answer": "8:15 AM"}
+
+Context: He typically heads to the gym late at night after his evening shift ends. The facility is much quieter during those hours.
+Input: {"question": "When does he go to the gym?"}
+Output: {"answer": "late at night"}
+
+Context: The library closes at 9:00 PM on Tuesdays and 6:00 PM on Fridays. Return your books before the doors lock.
+Input: {"question": "What time does the library close on Tuesdays?"}
+Output: {"answer": "9:00 PM"}
+
+Context: They reached the summit shortly after dawn to watch the sunrise. The view from the top was breathtaking.
+Input: {"question": "When did they reach the summit?"}
+Output: {"answer": "shortly after dawn"}
+
+Context: The internet connection failed at 3:20 PM during the important video call. The team had to switch to phone audio immediately.
+Input: {"question": "At what time did the internet connection fail?"}
+Output: {"answer": "3:20 PM"}
+
+Context: Her class at the university starts at 12:00 noon every Monday. She always grabs a quick lunch before walking to the lecture hall.
+Input: {"question": "When does her class start?"}
+Output: {"answer": "12:00 noon"}
+
+Context: We intend to launch the rocket at twilight when the atmospheric conditions are most stable. Spectators should arrive by then.
+Input: {"question": "When will you launch the rocket?"}
+Output: {"answer": "at twilight"}
+
+Context: The courier is scheduled to drop off the envelope between 9:00 AM and 11:00 AM on Friday. Please ensure the front desk is staffed.
+Input: {"question": "When is the courier scheduled to drop off the envelope?"}
+Output: {"answer": "between 9:00 AM and 11:00 AM"}
+
+Context: The moon rose at 8:45 PM, illuminating the snowy path through the forest. It made the hike much safer than expected.
+Input: {"question": "What time did the moon rise?"}
+Output: {"answer": "8:45 PM"}
+
+Context: You need to water the plants three times a week, specifically on Mondays, Wednesdays, and Fridays. Morning is the best time for this.
+Input: {"question": "When should you water the plants?"}
+Output: {"answer": "on Mondays, Wednesdays, and Fridays"}
+
+Context: The concert doors open at 6:30 PM Central Time and the show begins an hour later. Arrive early to get good seats.
+Input: {"question": "What time do the concert doors open?"}
+Output: {"answer": "6:30 PM"}
+
+Context: They planned to have lunch at quarter to one in the afternoon. The diner downtown serves the best burgers in the city.
+Input: {"question": "When did they plan to have lunch?"}
+Output: {"answer": "at quarter to one"}
+
+Context: The museum opens at 11:00 AM on holidays, which is later than its standard schedule. Visitors often gather at the entrance before opening.
+Input: {"question": "When does the museum open on holidays?"}
+Output: {"answer": "11:00 AM"}

@@ -1,0 +1,51 @@
+Available Tools: run_container | stop_container | start_container | remove_container | list_containers
+Call Schema: { "func_call": "string", "container_id": "string", "image": "string", "name": "string", "ports": "string", "env": ["string"] }
+Response Schema: { "container_id": "string", "name": "string", "image": "string", "state": "running|stopped|exited", "ports": "string" }
+---
+Question: Start a new nginx web server named web-frontend on port 8080 mapped to 80.
+Call: { "func_call": "run_container", "container_id": "", "image": "nginx:latest", "name": "web-frontend", "ports": "8080:80", "env": [] }
+Response: { "container_id": "a1b2c3d4e5f6", "name": "web-frontend", "image": "nginx:latest", "state": "running", "ports": "8080:80" }
+
+Question: Launch a postgres database called db-primary with port 5432 exposed and set the POSTGRES_PASSWORD environment variable.
+Call: { "func_call": "run_container", "container_id": "", "image": "postgres:15", "name": "db-primary", "ports": "5432:5432", "env": ["POSTGRES_PASSWORD=secret123", "POSTGRES_USER=admin"] }
+Response: { "container_id": "f6e5d4c3b2a1", "name": "db-primary", "image": "postgres:15", "state": "running", "ports": "5432:5432" }
+
+Question: Stop the running container named web-frontend.
+Call: { "func_call": "stop_container", "container_id": "a1b2c3d4e5f6", "image": "", "name": "web-frontend", "ports": "", "env": [] }
+Response: { "container_id": "a1b2c3d4e5f6", "name": "web-frontend", "image": "nginx:latest", "state": "stopped", "ports": "8080:80" }
+
+Question: Run a redis cache instance named cache-layer mapping host port 6379 to container port 6379.
+Call: { "func_call": "run_container", "container_id": "", "image": "redis:7-alpine", "name": "cache-layer", "ports": "6379:6379", "env": [] }
+Response: { "container_id": "9z8y7x6w5v4u", "name": "cache-layer", "image": "redis:7-alpine", "state": "running", "ports": "6379:6379" }
+
+Question: Start a node application named api-gateway on port 3000 with NODE_ENV set to production.
+Call: { "func_call": "run_container", "container_id": "", "image": "node:18-slim", "name": "api-gateway", "ports": "3000:3000", "env": ["NODE_ENV=production"] }
+Response: { "container_id": "3t4u5v6w7x8y", "name": "api-gateway", "image": "node:18-slim", "state": "running", "ports": "3000:3000" }
+
+Question: Stop the postgres database container db-primary gracefully.
+Call: { "func_call": "stop_container", "container_id": "f6e5d4c3b2a1", "image": "", "name": "db-primary", "ports": "", "env": [] }
+Response: { "container_id": "f6e5d4c3b2a1", "name": "db-primary", "image": "postgres:15", "state": "stopped", "ports": "5432:5432" }
+
+Question: Launch a python worker service named data-processor exposing port 8000.
+Call: { "func_call": "run_container", "container_id": "", "image": "python:3.11", "name": "data-processor", "ports": "8000:8000", "env": ["PYTHONUNBUFFERED=1"] }
+Response: { "container_id": "2s3r4q5p6o7n", "name": "data-processor", "image": "python:3.11", "state": "running", "ports": "8000:8000" }
+
+Question: Stop the redis cache container cache-layer immediately.
+Call: { "func_call": "stop_container", "container_id": "9z8y7x6w5v4u", "image": "", "name": "cache-layer", "ports": "", "env": [] }
+Response: { "container_id": "9z8y7x6w5v4u", "name": "cache-layer", "image": "redis:7-alpine", "state": "stopped", "ports": "6379:6379" }
+
+Question: Run a secondary nginx instance named backup-web on port 8081 mapped to internal port 80.
+Call: { "func_call": "run_container", "container_id": "", "image": "nginx:stable", "name": "backup-web", "ports": "8081:80", "env": [] }
+Response: { "container_id": "1m2n3o4p5q6r", "name": "backup-web", "image": "nginx:stable", "state": "running", "ports": "8081:80" }
+
+Question: Stop the node api-gateway service.
+Call: { "func_call": "stop_container", "container_id": "3t4u5v6w7x8y", "image": "", "name": "api-gateway", "ports": "", "env": [] }
+Response: { "container_id": "3t4u5v6w7x8y", "name": "api-gateway", "image": "node:18-slim", "state": "stopped", "ports": "3000:3000" }
+
+Question: Start a mongo database named doc-store with port 27017 exposed and admin credentials.
+Call: { "func_call": "run_container", "container_id": "", "image": "mongo:6", "name": "doc-store", "ports": "27017:27017", "env": ["MONGO_INITDB_ROOT_USERNAME=root", "MONGO_INITDB_ROOT_PASSWORD=pass456"] }
+Response: { "container_id": "7k8l9m0n1o2p", "name": "doc-store", "image": "mongo:6", "state": "running", "ports": "27017:27017" }
+
+Question: Stop the python data-processor container.
+Call: { "func_call": "stop_container", "container_id": "2s3r4q5p6o7n", "image": "", "name": "data-processor", "ports": "", "env": [] }
+Response: { "container_id": "2s3r4q5p6o7n", "name": "data-processor", "image": "python:3.11", "state": "stopped", "ports": "8000:8000" }

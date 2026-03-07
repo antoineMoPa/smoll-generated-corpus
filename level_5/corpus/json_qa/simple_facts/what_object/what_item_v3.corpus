@@ -1,0 +1,59 @@
+Context: Alex sprinted to the garage and seized his rusty bicycle to ride to school before the rain started. He checked the tires quickly.
+Input: {"question": "What did Alex seize?"}
+Output: {"answer": "rusty bicycle"}
+
+Context: While organizing the basement, Sophie discovered a vintage porcelain doll hidden behind some boxes. Its dress was slightly faded.
+Input: {"question": "What did Sophie discover?"}
+Output: {"answer": "vintage porcelain doll"}
+
+Context: The instructor told the class to purchase a graphing calculator for the physics test next week. Everyone wrote it down in their notebooks.
+Input: {"question": "What did the class need to purchase?"}
+Output: {"answer": "graphing calculator"}
+
+Context: After the party, Mark noticed his striped scarf was gone from the coat rack near the door. He wondered if a guest took it by mistake.
+Input: {"question": "What was missing from the coat rack?"}
+Output: {"answer": "striped scarf"}
+
+Context: Jennifer visited the garden center and purchased a sharp trowel to dig holes for the new rose bushes. She paid with a credit card.
+Input: {"question": "What did Jennifer purchase?"}
+Output: {"answer": "sharp trowel"}
+
+Context: During the camping trip, Brian realized he had forgotten his orange flashlight inside the truck. He had to walk back in the dark to retrieve it.
+Input: {"question": "What did Brian forget inside the truck?"}
+Output: {"answer": "orange flashlight"}
+
+Context: The baker carefully cleaned his copper mixing bowl before whipping the egg whites for the meringue. The metal shone brightly.
+Input: {"question": "What did the baker clean?"}
+Output: {"answer": "copper mixing bowl"}
+
+Context: Amy searched her whole office but could not find her purple stapler on her usual desk. She started worrying about the pending reports.
+Input: {"question": "What could Amy not find?"}
+Output: {"answer": "purple stapler"}
+
+Context: For the art assignment, Noah utilized a charcoal pencil to sketch the landscape. The lines appeared dark and bold on the paper.
+Input: {"question": "What did Noah utilize for the art assignment?"}
+Output: {"answer": "charcoal pencil"}
+
+Context: My uncle passed me his wooden cutting board so I could chop the vegetables for the stew. It had deep knife marks on the surface.
+Input: {"question": "What did my uncle pass me?"}
+Output: {"answer": "wooden cutting board"}
+
+Context: The plumber lifted the adjustable pipe wrench to fix the leaking sink fixture. Water dripped onto his boots.
+Input: {"question": "What did the plumber lift?"}
+Output: {"answer": "adjustable pipe wrench"}
+
+Context: Laura accidentally left her silk purse on the bus seat and didn't realize until she arrived at the museum. She hurried back to the depot.
+Input: {"question": "What did Laura leave on the bus seat?"}
+Output: {"answer": "silk purse"}
+
+Context: To cut the paper precisely, the designer grabbed a retractable utility knife from the craft table. The blade was extremely sharp.
+Input: {"question": "What did the designer grab?"}
+Output: {"answer": "retractable utility knife"}
+
+Context: During the blackout, Daniel lit a scented lantern to illuminate the dining area. The glow was warm and steady.
+Input: {"question": "What did Daniel light?"}
+Output: {"answer": "scented lantern"}
+
+Context: The florist arranged the roses using a glass vase that she received as a gift last winter. It had intricate etched patterns.
+Input: {"question": "What did the florist use to arrange the roses?"}
+Output: {"answer": "glass vase"}

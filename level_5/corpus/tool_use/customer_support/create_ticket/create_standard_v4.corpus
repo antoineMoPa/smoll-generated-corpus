@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: The smart thermostat keeps disconnecting from Wi-Fi every few hours.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-5521", "subject": "Smart thermostat Wi-Fi instability", "description": "Device model TH-900 loses connection repeatedly despite strong signal. Requires firmware check or replacement.", "priority": "medium", "category": "connectivity_issue" }
+Response: { "ticket_id": "TKT-550112", "status": "open", "priority": "medium", "assigned_to": "iot_support_09", "created_at": "2023-11-02T14:10:22Z" }
+
+Question: Urgent: The warehouse fire suppression system is showing a false alarm.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-WH-404", "subject": "False fire alarm at warehouse sector B", "description": "Sensors in sector B triggering alarms without smoke or heat. Needs immediate inspection to prevent shutdown.", "priority": "urgent", "category": "facility_safety" }
+Response: { "ticket_id": "TKT-550113", "status": "open", "priority": "urgent", "assigned_to": "facility_manager_01", "created_at": "2023-11-02T14:12:55Z" }
+
+Question: I was overcharged $150 on my monthly utility bill.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-8834", "subject": "Incorrect utility billing amount", "description": "Bill for November shows $320 instead of usual $170. Meter reading seems accurate, suspect rate error.", "priority": "high", "category": "billing_dispute" }
+Response: { "ticket_id": "TKT-550114", "status": "open", "priority": "high", "assigned_to": "billing_audit_05", "created_at": "2023-11-02T14:18:30Z" }
+
+Question: The mobile app fails to sync data when switching from WiFi to cellular.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-2290", "subject": "Data sync failure on network switch", "description": "Android app v3.1.0 loses unsaved changes when connection type changes. Data loss reported by three users.", "priority": "high", "category": "mobile_bug" }
+Response: { "ticket_id": "TKT-550115", "status": "open", "priority": "high", "assigned_to": "mobile_dev_team_02", "created_at": "2023-11-02T14:25:11Z" }
+
+Question: My refund request submitted two weeks ago has not been processed.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-6677", "subject": "Refund pending beyond SLA", "description": "Refund ID REF-9921 approved on Oct 15th but funds not received. Customer requests status update.", "priority": "medium", "category": "refund_status" }
+Response: { "ticket_id": "TKT-550116", "status": "open", "priority": "medium", "assigned_to": "finance_ops_03", "created_at": "2023-11-02T14:30:45Z" }
+
+Question: The printer jammed and now displays a critical hardware error code E-44.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-OFF-112", "subject": "Printer hardware error E-44", "description": "Office printer model LX-500 stuck on error E-44 after paper jam clearance. Requires technician visit.", "priority": "medium", "category": "hardware_maintenance" }
+Response: { "ticket_id": "TKT-550117", "status": "open", "priority": "medium", "assigned_to": "field_tech_07", "created_at": "2023-11-02T14:35:19Z" }
+
+Question: I cannot reset my two-factor authentication because I lost my phone.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-9912", "subject": "2FA reset request due to lost device", "description": "User lost primary authenticator device. Needs backup code generation or manual 2FA disable.", "priority": "high", "category": "account_recovery" }
+Response: { "ticket_id": "TKT-550118", "status": "open", "priority": "high", "assigned_to": "security_ops_04", "created_at": "2023-11-02T14:40:02Z" }
+
+Question: Critical: Database replication lag is causing data inconsistencies in the live environment.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-SYS-ADMIN", "subject": "Database replication lag critical", "description": "Replication delay exceeded 300 seconds. Read replicas showing stale data. Immediate DBA intervention required.", "priority": "urgent", "category": "database_infrastructure" }
+Response: { "ticket_id": "TKT-550119", "status": "open", "priority": "urgent", "assigned_to": "dba_oncall_01", "created_at": "2023-11-02T14:42:38Z" }
+
+Question: The discount applied at checkout was removed before payment confirmation.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-3345", "subject": "Discount removed during checkout", "description": "Cart showed 20% off, but final summary reverted to full price before credit card charge.", "priority": "low", "category": "checkout_error" }
+Response: { "ticket_id": "TKT-550120", "status": "open", "priority": "low", "assigned_to": "ecommerce_support_06", "created_at": "2023-11-02T14:48:15Z" }
+
+Question: I received two identical packages for order #5543 instead of one.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-7723", "subject": "Duplicate shipment received", "description": "Carrier delivered two boxes for single order #5543. Customer needs return label for extra unit.", "priority": "low", "category": "shipping_error" }
+Response: { "ticket_id": "TKT-550121", "status": "open", "priority": "low", "assigned_to": "logistics_coord_08", "created_at": "2023-11-02T14:52:40Z" }
+
+Question: The API rate limit is too low for our integration batch jobs.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-DEV-889", "subject": "Request to increase API rate limit", "description": "Current limit of 100 req/min causes timeouts during nightly sync. Requesting increase to 500 req/min.", "priority": "medium", "category": "api_management" }
+Response: { "ticket_id": "TKT-550122", "status": "open", "priority": "medium", "assigned_to": "api_team_lead", "created_at": "2023-11-02T14:55:29Z" }
+
+Question: The email notification settings are not saving after I click update.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-4456", "subject": "Email preferences not saving", "description": "User toggles notifications off, saves, but they revert to 'On' upon page refresh. Browser cache cleared.", "priority": "low", "category": "user_settings" }
+Response: { "ticket_id": "TKT-550123", "status": "open", "priority": "low", "assigned_to": "frontend_support_02", "created_at": "2023-11-02T15:01:10Z" }

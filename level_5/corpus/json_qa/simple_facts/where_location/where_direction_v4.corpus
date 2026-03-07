@@ -1,0 +1,59 @@
+Context: The blue pen slipped behind the couch cushions while we were watching TV. It wasn't discovered until Sunday morning.
+Input: {"question": "Where is the blue pen?"}
+Output: {"answer": "behind the couch cushions"}
+
+Context: Marcus set his sunglasses on the dashboard of the truck before going into the store. He forgotten them there overnight.
+Input: {"question": "Where did Marcus leave his sunglasses?"}
+Output: {"answer": "on the dashboard"}
+
+Context: The antique mirror leans against the wall in the bedroom, covered by a sheet. It belonged to his great aunt.
+Input: {"question": "Where is the antique mirror?"}
+Output: {"answer": "against the wall in the bedroom"}
+
+Context: During the dinner party, the host stood near the fireplace to greet guests. The drinks were served from that spot.
+Input: {"question": "Where did the host stand?"}
+Output: {"answer": "near the fireplace"}
+
+Context: You can locate the fire extinguisher mounted on the wall beside the emergency staircase. Ensure the pin is intact.
+Input: {"question": "Where is the fire extinguisher?"}
+Output: {"answer": "on the wall beside the emergency staircase"}
+
+Context: The dog slept under the porch swing during the afternoon thunderstorm. He stayed dry and calm.
+Input: {"question": "Where is the dog?"}
+Output: {"answer": "under the porch swing"}
+
+Context: Please deposit the recycling bin next to the garage door before tomorrow morning. The truck arrives early.
+Input: {"question": "Where should I put the recycling bin?"}
+Output: {"answer": "next to the garage door"}
+
+Context: The lost earring was discovered inside the sink drain, caught in the mesh filter. It had been missing for days.
+Input: {"question": "Where was the lost earring?"}
+Output: {"answer": "inside the sink drain"}
+
+Context: The fountain flows in the middle of the botanical garden, surrounded by rose bushes. Visitors often sit nearby.
+Input: {"question": "Where does the fountain flow?"}
+Output: {"answer": "in the middle of the botanical garden"}
+
+Context: She stored the holiday decorations atop the highest cabinet in the pantry so the children couldn't reach them. Only she knew the spot.
+Input: {"question": "Where did she store the holiday decorations?"}
+Output: {"answer": "atop the highest cabinet in the pantry"}
+
+Context: The scooter is leaning against the fence near the playground entrance. Remember to wear a helmet.
+Input: {"question": "Where is the scooter?"}
+Output: {"answer": "against the fence"}
+
+Context: Your ticket for the play is in section B, row 12, directly across from the stage. Have a wonderful evening.
+Input: {"question": "Where is my ticket seat?"}
+Output: {"answer": "in section B, row 12"}
+
+Context: The bird built its nest among the branches of the oak tree in the backyard. It was hidden well.
+Input: {"question": "Where did the bird build its nest?"}
+Output: {"answer": "among the branches of the oak tree"}
+
+Context: We stored the camping gear in the shed behind the house, organized on shelves. It was ready for the summer trip.
+Input: {"question": "Where were the camping gear?"}
+Output: {"answer": "in the shed behind the house"}
+
+Context: The receipt was slipped between the pages of your notebook sitting on the desk. Look for it before you file taxes.
+Input: {"question": "Where was the receipt?"}
+Output: {"answer": "between the pages of your notebook"}

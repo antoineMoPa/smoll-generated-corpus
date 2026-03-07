@@ -1,0 +1,51 @@
+Available Tools: process_cash | process_card | process_mobile_pay | get_change | refund_transaction
+Call Schema: { "func_call": "string", "amount": number, "currency": "string", "transaction_id": "string" }
+Response Schema: { "transaction_id": "string", "status": "string", "change": number, "receipt": "string" }
+---
+Question: Purchase a hot coffee for $4.50 using Samsung Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 4.50, "currency": "USD", "transaction_id": "SP-2210-AA3" }
+Response: { "transaction_id": "SP-2210-AA3", "status": "success", "change": 0, "receipt": "Hot coffee purchased via Samsung Pay. Enjoy!" }
+---
+Question: Buy a pack of mints for $1.25 with Apple Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 1.25, "currency": "USD", "transaction_id": "AP-6654-BB7" }
+Response: { "transaction_id": "AP-6654-BB7", "status": "success", "change": 0, "receipt": "Mints purchased via Apple Pay." }
+---
+Question: Attempt to buy a sandwich for $6.75 using Google Pay, but the terminal timed out.
+Call: { "func_call": "process_mobile_pay", "amount": 6.75, "currency": "USD", "transaction_id": "GP-3321-CC9" }
+Response: { "transaction_id": "GP-3321-CC9", "status": "failed", "change": 0, "receipt": "Transaction failed: Terminal timeout. Please retry." }
+---
+Question: I would like to purchase a bottle of juice for $2.80 via Samsung Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 2.80, "currency": "USD", "transaction_id": "SP-8876-DD2" }
+Response: { "transaction_id": "SP-8876-DD2", "status": "success", "change": 0, "receipt": "Juice purchased via Samsung Pay. Thank you!" }
+---
+Question: Try buying a cookie for $1.10 with Apple Pay, but the funds were insufficient.
+Call: { "func_call": "process_mobile_pay", "amount": 1.10, "currency": "USD", "transaction_id": "AP-9943-EE5" }
+Response: { "transaction_id": "AP-9943-EE5", "status": "failed", "change": 0, "receipt": "Payment declined: Insufficient funds." }
+---
+Question: Purchase a bag of pretzels for $1.95 using Google Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 1.95, "currency": "USD", "transaction_id": "GP-1122-FF8" }
+Response: { "transaction_id": "GP-1122-FF8", "status": "success", "change": 0, "receipt": "Pretzels purchased via Google Pay." }
+---
+Question: Process a refund for the failed sandwich transaction GP-3321-CC9 amounting to $6.75.
+Call: { "func_call": "refund_transaction", "amount": 6.75, "currency": "USD", "transaction_id": "GP-3321-CC9" }
+Response: { "transaction_id": "GP-3321-CC9", "status": "refunded", "change": 0, "receipt": "Refund initiated for timed out transaction." }
+---
+Question: Issue a refund for the declined cookie purchase AP-9943-EE5 of $1.10.
+Call: { "func_call": "refund_transaction", "amount": 1.10, "currency": "USD", "transaction_id": "AP-9943-EE5" }
+Response: { "transaction_id": "AP-9943-EE5", "status": "refunded", "change": 0, "receipt": "Refund processed for insufficient funds error." }
+---
+Question: Customer wants a refund for the coffee purchase SP-2210-AA3 totaling $4.50 due to wrong temperature.
+Call: { "func_call": "refund_transaction", "amount": 4.50, "currency": "USD", "transaction_id": "SP-2210-AA3" }
+Response: { "transaction_id": "SP-2210-AA3", "status": "refunded", "change": 0, "receipt": "Refund successful. Amount credited back to Samsung Pay." }
+---
+Question: Refund the pretzel transaction GP-1122-FF8 for $1.95 because the package was damaged.
+Call: { "func_call": "refund_transaction", "amount": 1.95, "currency": "USD", "transaction_id": "GP-1122-FF8" }
+Response: { "transaction_id": "GP-1122-FF8", "status": "refunded", "change": 0, "receipt": "Refund completed for damaged item. Funds returned." }
+---
+Question: Retry the sandwich purchase for $6.75 with Google Pay after resetting the terminal.
+Call: { "func_call": "process_mobile_pay", "amount": 6.75, "currency": "USD", "transaction_id": "GP-3321-CC9-R" }
+Response: { "transaction_id": "GP-3321-CC9-R", "status": "success", "change": 0, "receipt": "Sandwich purchased via Google Pay. Enjoy your meal!" }
+---
+Question: Process a refund for the juice purchase SP-8876-DD2 amounting to $2.80 due to machine malfunction.
+Call: { "func_call": "refund_transaction", "amount": 2.80, "currency": "USD", "transaction_id": "SP-8876-DD2" }
+Response: { "transaction_id": "SP-8876-DD2", "status": "refunded", "change": 0, "receipt": "Refund processed for machine error. Funds returned to source." }

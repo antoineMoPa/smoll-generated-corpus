@@ -1,0 +1,51 @@
+Available Tools: play | pause | stop | skip_next | skip_previous | seek
+Call Schema: { "func_call": "string", "track_id": "string", "position_seconds": number }
+Response Schema: { "track_id": "string", "title": "string", "artist": "string", "state": "playing|paused|stopped", "position_seconds": number }
+---
+Question: Stop the current song immediately.
+Call: { "func_call": "stop", "track_id": "trk_89210", "position_seconds": 0 }
+Response: { "track_id": "trk_89210", "title": "Midnight Rain", "artist": "Taylor Swift", "state": "stopped", "position_seconds": 0 }
+
+Question: Seek to 45 seconds into the track.
+Call: { "func_call": "seek", "track_id": "trk_89210", "position_seconds": 45 }
+Response: { "track_id": "trk_89210", "title": "Midnight Rain", "artist": "Taylor Swift", "state": "playing", "position_seconds": 45 }
+
+Question: Stop playback of the current audio.
+Call: { "func_call": "stop", "track_id": "trk_55432", "position_seconds": 0 }
+Response: { "track_id": "trk_55432", "title": "Bohemian Rhapsody", "artist": "Queen", "state": "stopped", "position_seconds": 0 }
+
+Question: Jump to 2 minutes and 10 seconds in the song.
+Call: { "func_call": "seek", "track_id": "trk_55432", "position_seconds": 130 }
+Response: { "track_id": "trk_55432", "title": "Bohemian Rhapsody", "artist": "Queen", "state": "playing", "position_seconds": 130 }
+
+Question: Halt the music player.
+Call: { "func_call": "stop", "track_id": "trk_11098", "position_seconds": 0 }
+Response: { "track_id": "trk_11098", "title": "Blinding Lights", "artist": "The Weeknd", "state": "stopped", "position_seconds": 0 }
+
+Question: Move the playback head to 3 minutes and 5 seconds.
+Call: { "func_call": "seek", "track_id": "trk_11098", "position_seconds": 185 }
+Response: { "track_id": "trk_11098", "title": "Blinding Lights", "artist": "The Weeknd", "state": "playing", "position_seconds": 185 }
+
+Question: Stop the track from playing.
+Call: { "func_call": "stop", "track_id": "trk_77665", "position_seconds": 0 }
+Response: { "track_id": "trk_77665", "title": "Hotel California", "artist": "Eagles", "state": "stopped", "position_seconds": 0 }
+
+Question: Seek forward to exactly 1 minute and 15 seconds.
+Call: { "func_call": "seek", "track_id": "trk_77665", "position_seconds": 75 }
+Response: { "track_id": "trk_77665", "title": "Hotel California", "artist": "Eagles", "state": "playing", "position_seconds": 75 }
+
+Question: End the current playback session.
+Call: { "func_call": "stop", "track_id": "trk_33221", "position_seconds": 0 }
+Response: { "track_id": "trk_33221", "title": "Levitating", "artist": "Dua Lipa", "state": "stopped", "position_seconds": 0 }
+
+Question: Skip to the 45-second mark of the song.
+Call: { "func_call": "seek", "track_id": "trk_33221", "position_seconds": 45 }
+Response: { "track_id": "trk_33221", "title": "Levitating", "artist": "Dua Lipa", "state": "playing", "position_seconds": 45 }
+
+Question: Stop the audio output now.
+Call: { "func_call": "stop", "track_id": "trk_99887", "position_seconds": 0 }
+Response: { "track_id": "trk_99887", "title": "Shape of You", "artist": "Ed Sheeran", "state": "stopped", "position_seconds": 0 }
+
+Question: Reposition playback to 2 minutes and 50 seconds.
+Call: { "func_call": "seek", "track_id": "trk_99887", "position_seconds": 170 }
+Response: { "track_id": "trk_99887", "title": "Shape of You", "artist": "Ed Sheeran", "state": "playing", "position_seconds": 170 }

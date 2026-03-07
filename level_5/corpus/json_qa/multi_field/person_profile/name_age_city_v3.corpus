@@ -1,0 +1,29 @@
+Context: Nina Rossi is a 38-year-old florist living in San Diego. She owns a small shop near the beach that opened last spring. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Nina Rossi", "age": "38", "city": "San Diego"}
+
+Context: Living in Atlanta, Marcus Johnson celebrated his 44th birthday yesterday. He works as a logistics manager for a shipping company. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Marcus Johnson", "age": "44", "city": "Atlanta"}
+
+Context: At 59 years old, Fatima Al-Fayed resides in Houston and enjoys gardening. She is a retired civil engineer. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Fatima Al-Fayed", "age": "59", "city": "Houston"}
+
+Context: Leo Chen, a 31-year-old bartender, has called Las Vegas home for five years. His mixology skills are famous on the strip. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Leo Chen", "age": "31", "city": "Las Vegas"}
+
+Context: Grace O'Connor is 26 and currently attends medical school in Baltimore. She specializes in pediatrics and lives off-campus. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Grace O'Connor", "age": "26", "city": "Baltimore"}
+
+Context: In Raleigh, 63-year-old William Davis runs a successful woodworking shop. He moved there from Vermont thirty years ago. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "William Davis", "age": "63", "city": "Raleigh"}
+
+Context: Yuki Tanaka is a 29-year-old animator based in Los Angeles. She works on feature films for a major studio. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Yuki Tanaka", "age": "29", "city": "Los Angeles"}
+
+Context: Originally from Salt Lake City, 52-year-old Brenda Miller now works as a park ranger. She patrols the nearby national forests. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Brenda Miller", "age": "52", "city": "Salt Lake City"}
+
+Context: Elijah Scott, aged 40, is a paramedic stationed in Cleveland. He has served the community for over fifteen years. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Elijah Scott", "age": "40", "city": "Cleveland"}
+
+Context: Amara Diallo is 23 years old and works as a graphic designer in Austin. She creates branding for local tech startups. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Amara Diallo", "age": "23", "city": "Austin"}
+
+Context: Henry Foster, a 68-year-old retired teacher, spends his summers in Orlando. He volunteers at the local science museum. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Henry Foster", "age": "68", "city": "Orlando"}
+
+Context: Lucia Ramirez is 35 and teaches high school chemistry in Pittsburgh. She has published two papers on education reform. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Lucia Ramirez", "age": "35", "city": "Pittsburgh"}
+
+Context: At the age of 47, Omar Hassan manages a coffee roastery in Seattle. He is known for sourcing beans directly from farmers. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Omar Hassan", "age": "47", "city": "Seattle"}
+
+Context: Chloe Martin, 21, is an apprentice electrician in Denver. She plans to start her own contracting business soon. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Chloe Martin", "age": "21", "city": "Denver"}
+
+Context: Julian Brooks is a 54-year-old sculptor living in Santa Fe. He specializes in large-scale metal installations for public parks. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Julian Brooks", "age": "54", "city": "Santa Fe"}

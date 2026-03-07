@@ -1,0 +1,95 @@
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set a high temperature alert for the data center rack if it exceeds 32 degrees.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "dc-rack-15", "metric": "temperature", "threshold": 32, "condition": "above" }
+Response: { "alert_id": "alt-8801", "sensor_id": "dc-rack-15", "status": "active", "threshold": 32 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Configure the wine cellar humidity sensor to trigger if levels drop below 55 percent.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "wc-hum-22", "metric": "humidity", "threshold": 55, "condition": "below" }
+Response: { "alert_id": "alt-8802", "sensor_id": "wc-hum-22", "status": "active", "threshold": 55 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: I need a CO2 danger alert for the auditorium if concentration exceeds 1100 ppm.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "aud-co2-18", "metric": "co2", "threshold": 1100, "condition": "above" }
+Response: { "alert_id": "alt-8803", "sensor_id": "aud-co2-18", "status": "active", "threshold": 1100 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set the incubator temperature alert to fire when it gets hotter than 38 degrees Celsius.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "inc-temp-33", "metric": "temperature", "threshold": 38, "condition": "above" }
+Response: { "alert_id": "alt-8804", "sensor_id": "inc-temp-33", "status": "active", "threshold": 38 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Alert me if the library humidity rises above 60 percent to protect books.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "lib-hum-19", "metric": "humidity", "threshold": 60, "condition": "above" }
+Response: { "alert_id": "alt-8805", "sensor_id": "lib-hum-19", "status": "active", "threshold": 60 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Configure a critical CO2 alert for the brewery if levels go above 1800 ppm.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "brw-co2-27", "metric": "co2", "threshold": 1800, "condition": "above" }
+Response: { "alert_id": "alt-8806", "sensor_id": "brw-co2-27", "status": "active", "threshold": 1800 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set a low temperature warning for the ice cream vault if it goes above -20 degrees.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "icv-temp-41", "metric": "temperature", "threshold": -20, "condition": "above" }
+Response: { "alert_id": "alt-8807", "sensor_id": "icv-temp-41", "status": "active", "threshold": -20 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Trigger an alert if the lobby humidity drops below 35 percent.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "lob-hum-14", "metric": "humidity", "threshold": 35, "condition": "below" }
+Response: { "alert_id": "alt-8808", "sensor_id": "lob-hum-14", "status": "active", "threshold": 35 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set a safety alert for the tunnel CO2 sensor if it exceeds 900 ppm.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "tun-co2-55", "metric": "co2", "threshold": 900, "condition": "above" }
+Response: { "alert_id": "alt-8809", "sensor_id": "tun-co2-55", "status": "active", "threshold": 900 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Configure the reptile house temperature sensor to alert if it goes above 29 degrees.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "rep-temp-23", "metric": "temperature", "threshold": 29, "condition": "above" }
+Response: { "alert_id": "alt-8810", "sensor_id": "rep-temp-23", "status": "active", "threshold": 29 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set an alert for the museum vault if humidity falls below 30 percent.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "mus-hum-36", "metric": "humidity", "threshold": 30, "condition": "below" }
+Response: { "alert_id": "alt-8811", "sensor_id": "mus-hum-36", "status": "active", "threshold": 30 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Create a CO2 warning for the cafeteria if levels rise above 1300 ppm.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "caf-co2-29", "metric": "co2", "threshold": 1300, "condition": "above" }
+Response: { "alert_id": "alt-8812", "sensor_id": "caf-co2-29", "status": "active", "threshold": 1300 }

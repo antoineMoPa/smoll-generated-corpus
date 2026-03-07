@@ -1,0 +1,66 @@
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Show me the current trending songs globally.
+Call: { "func_call": "get_trending", "query": "global top hits", "limit": 10, "genre": "" }
+Response: { "results": [{ "id": "tr_001", "title": "Midnight Rain", "artist": "Taylor Swift", "duration_seconds": 174 }, { "id": "tr_002", "title": "As It Was", "artist": "Harry Styles", "duration_seconds": 167 }, { "id": "tr_003", "title": "Anti-Hero", "artist": "Taylor Swift", "duration_seconds": 200 }, { "id": "tr_004", "title": "Flowers", "artist": "Miley Cyrus", "duration_seconds": 200 }, { "id": "tr_005", "title": "Unholy", "artist": "Sam Smith", "duration_seconds": 156 }, { "id": "tr_006", "title": "Creepin'", "artist": "Metro Boomin", "duration_seconds": 221 }, { "id": "tr_007", "title": "Kill Bill", "artist": "SZA", "duration_seconds": 153 }, { "id": "tr_008", "title": "Calm Down", "artist": "Rema", "duration_seconds": 239 }, { "id": "tr_009", "title": "Lavender Haze", "artist": "Taylor Swift", "duration_seconds": 202 }, { "id": "tr_010", "title": "Die For You", "artist": "The Weeknd", "duration_seconds": 260 }], "total": 50 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Find me a playlist of popular pop songs.
+Call: { "func_call": "get_genre_playlist", "query": "top pop hits", "limit": 15, "genre": "pop" }
+Response: { "results": [{ "id": "pl_pop_01", "title": "Blinding Lights", "artist": "The Weeknd", "duration_seconds": 200 }, { "id": "pl_pop_02", "title": "Levitating", "artist": "Dua Lipa", "duration_seconds": 203 }, { "id": "pl_pop_03", "title": "Watermelon Sugar", "artist": "Harry Styles", "duration_seconds": 174 }, { "id": "pl_pop_04", "title": "Good 4 U", "artist": "Olivia Rodrigo", "duration_seconds": 178 }, { "id": "pl_pop_05", "title": "Peaches", "artist": "Justin Bieber", "duration_seconds": 198 }, { "id": "pl_pop_06", "title": "Stay", "artist": "The Kid LAROI", "duration_seconds": 141 }, { "id": "pl_pop_07", "title": "Bad Habit", "artist": "Steve Lacy", "duration_seconds": 232 }, { "id": "pl_pop_08", "title": "Shivers", "artist": "Ed Sheeran", "duration_seconds": 207 }, { "id": "pl_pop_09", "title": "Heat Waves", "artist": "Glass Animals", "duration_seconds": 238 }, { "id": "pl_pop_10", "title": "Easy On Me", "artist": "Adele", "duration_seconds": 224 }, { "id": "pl_pop_11", "title": "Montero", "artist": "Lil Nas X", "duration_seconds": 137 }, { "id": "pl_pop_12", "title": "Kiss Me More", "artist": "Doja Cat", "duration_seconds": 208 }, { "id": "pl_pop_13", "title": "Butter", "artist": "BTS", "duration_seconds": 164 }, { "id": "pl_pop_14", "title": "Save Your Tears", "artist": "The Weeknd", "duration_seconds": 215 }, { "id": "pl_pop_15", "title": "Positions", "artist": "Ariana Grande", "duration_seconds": 172 }], "total": 150 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: List the top hip-hop tracks right now.
+Call: { "func_call": "get_genre_playlist", "query": "best hip hop", "limit": 12, "genre": "hip-hop" }
+Response: { "results": [{ "id": "hh_001", "title": "God's Plan", "artist": "Drake", "duration_seconds": 198 }, { "id": "hh_002", "title": "Sicko Mode", "artist": "Travis Scott", "duration_seconds": 312 }, { "id": "hh_003", "title": "HUMBLE.", "artist": "Kendrick Lamar", "duration_seconds": 177 }, { "id": "hh_004", "title": "Rockstar", "artist": "Post Malone", "duration_seconds": 218 }, { "id": "hh_005", "title": "Money Trees", "artist": "Kendrick Lamar", "duration_seconds": 386 }, { "id": "hh_006", "title": "First Person Shooter", "artist": "Drake", "duration_seconds": 243 }, { "id": "hh_007", "title": "Rich Flex", "artist": "Drake", "duration_seconds": 234 }, { "id": "hh_008", "title": "Wait For U", "artist": "Future", "duration_seconds": 189 }, { "id": "hh_009", "title": "Jimmy Cooks", "artist": "Drake", "duration_seconds": 215 }, { "id": "hh_010", "title": "Super Gremlin", "artist": "Kodak Black", "duration_seconds": 142 }, { "id": "hh_011", "title": "Big Energy", "artist": "Latto", "duration_seconds": 187 }, { "id": "hh_012", "title": "Family Ties", "artist": "Baby Keem", "duration_seconds": 251 }], "total": 200 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: I need some classical music for studying.
+Call: { "func_call": "get_genre_playlist", "query": "classical focus", "limit": 8, "genre": "classical" }
+Response: { "results": [{ "id": "cl_001", "title": "Nocturne in E-flat major", "artist": "Frédéric Chopin", "duration_seconds": 275 }, { "id": "cl_002", "title": "Clair de Lune", "artist": "Claude Debussy", "duration_seconds": 305 }, { "id": "cl_003", "title": "Symphony No. 9", "artist": "Ludwig van Beethoven", "duration_seconds": 420 }, { "id": "cl_004", "title": "The Four Seasons: Spring", "artist": "Antonio Vivaldi", "duration_seconds": 195 }, { "id": "cl_005", "title": "Canon in D", "artist": "Johann Pachelbel", "duration_seconds": 340 }, { "id": "cl_006", "title": "Moonlight Sonata", "artist": "Ludwig van Beethoven", "duration_seconds": 360 }, { "id": "cl_007", "title": "Gymnopédie No.1", "artist": "Erik Satie", "duration_seconds": 210 }, { "id": "cl_008", "title": "Ave Maria", "artist": "Franz Schubert", "duration_seconds": 285 }], "total": 85 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: What are the hottest electronic dance tracks?
+Call: { "func_call": "get_genre_playlist", "query": "edm bangers", "limit": 10, "genre": "electronic" }
+Response: { "results": [{ "id": "ed_001", "title": "Titanium", "artist": "David Guetta", "duration_seconds": 245 }, { "id": "ed_002", "title": "Levels", "artist": "Avicii", "duration_seconds": 203 }, { "id": "ed_003", "title": "Strobe", "artist": "Deadmau5", "duration_seconds": 634 }, { "id": "ed_004", "title": "Animals", "artist": "Martin Garrix", "duration_seconds": 302 }, { "id": "ed_005", "title": "Scary Monsters and Nice Sprites", "artist": "Skrillex", "duration_seconds": 244 }, { "id": "ed_006", "title": "One More Time", "artist": "Daft Punk", "duration_seconds": 320 }, { "id": "ed_007", "title": "Don't You Worry Child", "artist": "Swedish House Mafia", "duration_seconds": 213 }, { "id": "ed_008", "title": "Clarity", "artist": "Zedd", "duration_seconds": 271 }, { "id": "ed_009", "title": "Faded", "artist": "Alan Walker", "duration_seconds": 212 }, { "id": "ed_010", "title": "Bangarang", "artist": "Skrillex", "duration_seconds": 215 }], "total": 120 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Play a smooth jazz playlist for dinner.
+Call: { "func_call": "get_genre_playlist", "query": "smooth jazz evening", "limit": 10, "genre": "jazz" }
+Response: { "results": [{ "id": "jz_001", "title": "Take Five", "artist": "Dave Brubeck", "duration_seconds": 324 }, { "id": "jz_002", "title": "So What", "artist": "Miles Davis", "duration_seconds": 562 }, { "id": "jz_003", "title": "Fly Me to the Moon", "artist": "Frank Sinatra", "duration_seconds": 148 }, { "id": "jz_004", "title": "What a Wonderful World", "artist": "Louis Armstrong", "duration_seconds": 139 }, { "id": "jz_005", "title": "Feeling Good", "artist": "Nina Simone", "duration_seconds": 176 }, { "id": "jz_006", "title": "Blue in Green", "artist": "Miles Davis", "duration_seconds": 327 }, { "id": "jz_007", "title": "Autumn Leaves", "artist": "Cannonball Adderley", "duration_seconds": 295 }, { "id": "jz_008", "title": "My Favorite Things", "artist": "John Coltrane", "duration_seconds": 823 }, { "id": "jz_009", "title": "Summertime", "artist": "Billie Holiday", "duration_seconds": 198 }, { "id": "jz_010", "title": "Round Midnight", "artist": "Thelonious Monk", "duration_seconds": 355 }], "total": 95 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Show me trending pop songs in the US.
+Call: { "func_call": "get_trending", "query": "US pop charts", "limit": 5, "genre": "pop" }
+Response: { "results": [{ "id": "us_pop_01", "title": "Cruel Summer", "artist": "Taylor Swift", "duration_seconds": 178 }, { "id": "us_pop_02", "title": "Vampire", "artist": "Olivia Rodrigo", "duration_seconds": 219 }, { "id": "us_pop_03", "title": "Paint The Town Red", "artist": "Doja Cat", "duration_seconds": 230 }, { "id": "us_pop_04", "title": "Greedy", "artist": "Tate McRae", "duration_seconds": 132 }, { "id": "us_pop_05", "title": "Snooze", "artist": "SZA", "duration_seconds": 201 }], "total": 25 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Get me a list of trending hip-hop tracks.
+Call: { "func_call": "get_trending", "query": "rap charts", "limit": 8, "genre": "hip-hop" }
+Response: { "results": [{ "id": "trend_hh_01", "title": "IDGAF", "artist": "Drake", "duration_seconds": 260 }, { "id": "trend_hh_02", "title": "Thinkin' Bout Me", "artist": "Morgan Wallen", "duration_seconds": 175 }, { "id": "trend_hh_03", "title": "Slime You Out", "artist": "Drake", "duration_seconds": 189 }, { "id": "trend_hh_04", "title": "Lovin On Me", "artist": "Jack Harlow", "duration_seconds": 138 }, { "id": "trend_hh_05", "title": "Water", "artist": "Tyla", "duration_seconds": 200 }, { "id": "trend_hh_06", "title": "Agora Hills", "artist": "Doja Cat", "duration_seconds": 264 }, { "id": "trend_hh_07", "title": "All My Life", "artist": "Lil Durk", "duration_seconds": 215 }, { "id": "trend_hh_08", "title": "Surround Sound", "artist": "JID", "duration_seconds": 192 }], "total": 40 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "

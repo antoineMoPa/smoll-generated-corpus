@@ -1,0 +1,51 @@
+Available Tools: run_container | stop_container | start_container | remove_container | list_containers
+Call Schema: { "func_call": "string", "container_id": "string", "image": "string", "name": "string", "ports": "string", "env": ["string"] }
+Response Schema: { "container_id": "string", "name": "string", "image": "string", "state": "running|stopped|exited", "ports": "string" }
+---
+Question: Display all active containers currently serving traffic on port 443.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "x9y8z7w6", "name": "secure-proxy", "image": "caddy:latest", "state": "running", "ports": "443:443" }
+
+Question: Identify any containers that have crashed or stopped in the last hour.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "p1q2r3s4", "name": "log-aggregator", "image": "fluentd:v1.14", "state": "stopped", "ports": "" }
+
+Question: Retrieve a full inventory of containers including those that have finished execution.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "t5u6v7w8", "name": "data-exporter", "image": "python:3.9-slim", "state": "exited", "ports": "" }
+
+Question: Permanently delete the container labeled 'old-frontend' regardless of its current status.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "old-frontend", "ports": "", "env": [] }
+Response: { "container_id": "b2c3d4e5", "name": "old-frontend", "image": "react-app:v2", "state": "exited", "ports": "3000:3000" }
+
+Question: Forcefully eliminate the container with identifier 'a7b8c9d0' without waiting for a graceful shutdown.
+Call: { "func_call": "remove_container", "container_id": "a7b8c9d0", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "a7b8c9d0", "name": "ephemeral-task", "image": "alpine:3.15", "state": "exited", "ports": "" }
+
+Question: Enumerate all halted containers to prepare for disk space reclamation.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "f6g7h8i9", "name": "backup-archive", "image": "restic:latest", "state": "stopped", "ports": "" }
+
+Question: Purge the terminated container instance named 'unit-test-suite' from the system.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "unit-test-suite", "ports": "", "env": [] }
+Response: { "container_id": "j0k1l2m3", "name": "unit-test-suite", "image": "go:1.19", "state": "exited", "ports": "" }
+
+Question: Aggressively remove all artifacts associated with the container 'dev-sandbox'.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "dev-sandbox", "ports": "", "env": [] }
+Response: { "container_id": "n4o5p6q7", "name": "dev-sandbox", "image": "debian:bullseye", "state": "exited", "ports": "" }
+
+Question: Filter the container list to show only those that have completed their lifecycle.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "r8s9t0u1", "name": "cron-job-daily", "image": "curl:latest", "state": "exited", "ports": "" }
+
+Question: Delete container 'v2w3x4y5' using the force option to ignore any running processes.
+Call: { "func_call": "remove_container", "container_id": "v2w3x4y5", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "v2w3x4y5", "name": "zombie-process", "image": "centos:7", "state": "exited", "ports": "" }
+
+Question: List currently running instances to verify stability before initiating a bulk removal.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "z6a7b8c9", "name": "load-balancer", "image": "haproxy:2.4", "state": "running", "ports": "8080:80" }
+
+Question: Forcefully terminate and remove the 'analytics-engine' container which is unresponsive.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "analytics-engine", "ports": "", "env": [] }
+Response: { "container_id": "d0e1f2g3", "name": "analytics-engine", "image": "spark:3.2", "state": "exited", "ports": "9090:9090" }

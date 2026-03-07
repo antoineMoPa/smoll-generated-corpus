@@ -1,0 +1,51 @@
+Available Tools: list_commits | get_commit | create_branch | delete_branch | list_branches | compare_branches
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "branch": "string", "sha": "string" }
+Response Schema: { "commits": [{ "sha": "string", "message": "string", "author": "string", "date": "string" }], "branch": "string" }
+---
+Question: List all branches in the acme-corp/web-portal repository.
+Call: { "func_call": "list_branches", "owner": "acme-corp", "repo": "web-portal", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "main" }
+
+Question: Create a new feature branch called feature/user-authentication in the acme-corp/web-portal repo based on the latest main commit.
+Call: { "func_call": "create_branch", "owner": "acme-corp", "repo": "web-portal", "branch": "feature/user-authentication", "sha": "a1b2c3d4e5f6" }
+Response: { "commits": [], "branch": "feature/user-authentication" }
+
+Question: Delete the old bugfix branch named bugfix/login-timeout from the acme-corp/web-portal repository.
+Call: { "func_call": "delete_branch", "owner": "acme-corp", "repo": "web-portal", "branch": "bugfix/login-timeout", "sha": "" }
+Response: { "commits": [], "branch": "bugfix/login-timeout" }
+
+Question: Show me all branches available in the globex-infra/kubernetes-configs project.
+Call: { "func_call": "list_branches", "owner": "globex-infra", "repo": "kubernetes-configs", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "develop" }
+
+Question: Create a release branch named release/v2.4.0 for the globex-infra/kubernetes-configs repo starting from commit 9f8e7d6c.
+Call: { "func_call": "create_branch", "owner": "globex-infra", "repo": "kubernetes-configs", "branch": "release/v2.4.0", "sha": "9f8e7d6c" }
+Response: { "commits": [], "branch": "release/v2.4.0" }
+
+Question: Remove the stale feature branch feature/old-dashboard from the globex-infra/kubernetes-configs repository.
+Call: { "func_call": "delete_branch", "owner": "globex-infra", "repo": "kubernetes-configs", "branch": "feature/old-dashboard", "sha": "" }
+Response: { "commits": [], "branch": "feature/old-dashboard" }
+
+Question: List every branch in the soylent-corp/mobile-app repository to see what's being worked on.
+Call: { "func_call": "list_branches", "owner": "soylent-corp", "repo": "mobile-app", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "main" }
+
+Question: Start a new bugfix branch called bugfix/crash-on-startup for the soylent-corp/mobile-app repo based on commit 1a2b3c4d.
+Call: { "func_call": "create_branch", "owner": "soylent-corp", "repo": "mobile-app", "branch": "bugfix/crash-on-startup", "sha": "1a2b3c4d" }
+Response: { "commits": [], "branch": "bugfix/crash-on-startup" }
+
+Question: Delete the merged release branch release/v1.9.5 from the soylent-corp/mobile-app project.
+Call: { "func_call": "delete_branch", "owner": "soylent-corp", "repo": "mobile-app", "branch": "release/v1.9.5", "sha": "" }
+Response: { "commits": [], "branch": "release/v1.9.5" }
+
+Question: Check the branches in the umbrella-corp/bio-hazard-db repository.
+Call: { "func_call": "list_branches", "owner": "umbrella-corp", "repo": "bio-hazard-db", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "master" }
+
+Question: Create a feature branch named feature/gene-sequencer in the umbrella-corp/bio-hazard-db repo using the head of master.
+Call: { "func_call": "create_branch", "owner": "umbrella-corp", "repo": "bio-hazard-db", "branch": "feature/gene-sequencer", "sha": "deadbeef1234" }
+Response: { "commits": [], "branch": "feature/gene-sequencer" }
+
+Question: Clean up the temporary branch bugfix/temp-fix-123 from the umbrella-corp/bio-hazard-db repository.
+Call: { "func_call": "delete_branch", "owner": "umbrella-corp", "repo": "bio-hazard-db", "branch": "bugfix/temp-fix-123", "sha": "" }
+Response: { "commits": [], "branch": "bugfix/temp-fix-123" }

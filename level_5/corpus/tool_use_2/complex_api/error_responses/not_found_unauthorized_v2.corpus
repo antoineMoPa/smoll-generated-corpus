@@ -1,0 +1,59 @@
+{"func_call": "get_resource", "id": "usr_9z8y7x6w", "data": {}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "The requested user profile cannot be located.", "field": "id", "details": {"requested_id": "usr_9z8y7x6w"}}}
+
+{"func_call": "update_resource", "id": "ord_55k44j3h", "data": {"status": "cancelled"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Session credential has become invalid.", "field": "authorization", "details": {"token_expiry": "2023-11-20T12:45:00Z"}}}
+
+{"func_call": "delete_resource", "id": "cfg_network_rules", "data": {}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "User lacks privileges to remove network configurations.", "field": "role", "details": {"required_role": "net_admin", "current_role": "viewer"}}}
+
+{"func_call": "get_resource", "id": "inv_112233bb", "data": {"warehouse": "west"}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Stock item missing from the designated warehouse.", "field": "id", "details": {"warehouse": "west", "item_id": "inv_112233bb"}}}
+
+{"func_call": "create_resource", "id": "prod_new_sku_099", "data": {"name": "Gadget Plus", "price": 49.95}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Required API key header was not provided.", "field": "x-api-key", "details": {}}}
+
+{"func_call": "update_resource", "id": "usr_99d8c7b6", "data": {"email": "intruder@test.org"}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Account owners cannot change emails for other users.", "field": "email", "details": {"target_user": "usr_99d8c7b6", "actor_user": "usr_22b3c4d5"}}}
+
+{"func_call": "get_resource", "id": "log_20231101_warn", "data": {"level": "warning"}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Requested log entry has been purged.", "field": "id", "details": {"rotation_date": "2023-10-31"}}}
+
+{"func_call": "delete_resource", "id": "sub_basic_yearly", "data": {"reason": "billing_error"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Authentication bearer token failed validation.", "field": "authorization", "details": {"error_type": "expired_signature"}}}
+
+{"func_call": "create_resource", "id": "doc_sensitive_finance", "data": {"content": "Budget forecast 2024"}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Permission denied for finance restricted area.", "field": "namespace", "details": {"namespace": "fin_restricted", "allowed_groups": ["cfo_office"]}}}
+
+{"func_call": "get_resource", "id": "txn_def456uvw", "data": {"include_metadata": false}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Payment record missing from database shard.", "field": "id", "details": {"ledger_shard": "shard_09"}}}
+
+{"func_call": "update_resource", "id": "role_admin_full", "data": {"permissions": ["read", "write"]}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Changes to administrator roles are prohibited.", "field": "role_id", "details": {"restricted_role": "admin_full"}}}
+
+{"func_call": "create_resource", "id": "img_upload_error", "data": {"bucket": "secure-backups"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Cloud service identity credentials expired.", "field": "service_account", "details": {"account_id": "sa_backup_agent"}}}
+
+{"func_call": "get_resource", "id": "evt_webhook_42", "data": {}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Event log retention period exceeded.", "field": "id", "details": {"retention_days": 14}}}
+
+{"func_call": "delete_resource", "id": "db_backup_dev_05", "data": {"force": false}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Removing development backups needs supervisor approval.", "field": "mfa_verified", "details": {"environment": "development"}}}
+
+{"func_call": "update_resource", "id": "api_key_current", "data": {"scope": "read_only"}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "User session ended automatically.", "field": "session_id", "details": {"last_activity": "2023-11-01T09:15:00Z"}}}
+
+{"func_call": "get_resource", "id": "cmp_campaign_winter", "data": {"region": "us-east"}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "Marketing campaign moved to cold storage.", "field": "id", "details": {"archive_date": "2023-10-15"}}}
+
+{"func_call": "create_resource", "id": "vm_instance_small", "data": {"specs": {"cpu": 2, "ram": 8}}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Resource limit reached for small compute instances.", "field": "resource_type", "details": {"quota_limit": 10, "current_usage": 10}}}
+
+{"func_call": "delete_resource", "id": "usr_temp_guest", "data": {}}
+{"success": false, "error": {"code": "UNAUTHORIZED", "message": "Authentication refresh token corrupted.", "field": "refresh_token", "details": {}}}
+
+{"func_call": "update_resource", "id": "bill_invoice_2048", "data": {"amount": 150.00}}
+{"success": false, "error": {"code": "FORBIDDEN", "message": "Edited invoices must be in draft state.", "field": "status", "details": {"current_status": "paid"}}}
+
+{"func_call": "get_resource", "id": "sec_cert_single", "data": {}}
+{"success": false, "error": {"code": "NOT_FOUND", "message": "No security certificate found for target host.", "field": "domain", "details": {"domain": "api.internal-test.com"}}}

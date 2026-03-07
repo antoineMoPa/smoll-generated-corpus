@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Purge the stale authentication token file from the security module.
+Call: { "func_call": "delete_file", "source": "/var/sec/auth_token_expired_772.key", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /var/sec/auth_token_expired_772.key" }
+
+Question: Establish a new folder for archiving completed user survey responses.
+Call: { "func_call": "create_dir", "source": "/data/surveys/archived_2024", "destination": "" }
+Response: { "success": true, "message": "Directory /data/surveys/archived_2024 created successfully" }
+
+Question: Eliminate the corrupted video render file from the media queue.
+Call: { "func_call": "delete_file", "source": "/media/renders/video_draft_broken.mp4", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /media/renders/video_draft_broken.mp4" }
+
+Question: Provision a directory for the mobile app's localized resource files.
+Call: { "func_call": "create_dir", "source": "/apps/mobile/resources/locales", "destination": "" }
+Response: { "success": true, "message": "Directory /apps/mobile/resources/locales created successfully" }
+
+Question: Delete the temporary lock file preventing the scheduler from running.
+Call: { "func_call": "delete_file", "source": "/run/scheduler/job_lock_559.pid", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /run/scheduler/job_lock_559.pid" }
+
+Question: Create a storage path for incoming email attachments processed by the filter.
+Call: { "func_call": "create_dir", "source": "/var/mail/attachments/incoming", "destination": "" }
+Response: { "success": true, "message": "Directory /var/mail/attachments/incoming created successfully" }
+
+Question: Remove the outdated SSL certificate bundle that expired last month.
+Call: { "func_call": "delete_file", "source": "/etc/ssl/certs/bundle_old_2023.pem", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /etc/ssl/certs/bundle_old_2023.pem" }
+
+Question: Initialize a workspace for the frontend team's React component library.
+Call: { "func_call": "create_dir", "source": "/dev/frontend/components/react_lib", "destination": "" }
+Response: { "success": true, "message": "Directory /dev/frontend/components/react_lib created successfully" }
+
+Question: Clean up the debug trace file generated during the network timeout event.
+Call: { "func_call": "delete_file", "source": "/tmp/net_trace_timeout_338.log", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/net_trace_timeout_338.log" }
+
+Question: Set up a directory to hold pending invoice PDFs before processing.
+Call: { "func_call": "create_dir", "source": "/finance/invoices/pending_queue", "destination": "" }
+Response: { "success": true, "message": "Directory /finance/invoices/pending_queue created successfully" }
+
+Question: Delete the temporary compression archive left after the backup verification.
+Call: { "func_call": "delete_file", "source": "/tmp/backup_verify_temp_991.tar.gz", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/backup_verify_temp_991.tar.gz" }
+
+Question: Create a new directory for storing container orchestration logs.
+Call: { "func_call": "create_dir", "source": "/var/log/k8s/orchestrator", "destination": "" }
+Response: { "success": true, "message": "Directory /var/log/k8s/orchestrator created successfully" }

@@ -1,0 +1,51 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Locate mechanical keyboards for gaming under $150.
+Call: { "func_call": "search_products", "query": "mechanical gaming keyboard", "category": "electronics", "min_price": 40, "max_price": 150, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_110", "name": "KeyStrike RGB", "price": 89.99, "rating": 4.6, "in_stock": true }, { "id": "elec_111", "name": "TyperPro Mechanical", "price": 120.00, "rating": 4.8, "in_stock": true }, { "id": "elec_112", "name": "BlueSwitch Elite", "price": 145.50, "rating": 4.9, "in_stock": false } ], "total": 3 }
+
+Question: Show me organic green tea bags in the grocery section.
+Call: { "func_call": "search_products", "query": "organic green tea", "category": "grocery", "min_price": 5, "max_price": 25, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "groc_501", "name": "PureLeaf Green Tea", "price": 8.99, "rating": 4.4, "in_stock": true }, { "id": "groc_502", "name": "Zen Garden Blend", "price": 12.50, "rating": 4.7, "in_stock": true }, { "id": "groc_503", "name": "Mountain Mist Tea", "price": 19.99, "rating": 4.5, "in_stock": true } ], "total": 3 }
+
+Question: I need a waterproof hiking backpack under $80.
+Call: { "func_call": "search_products", "query": "waterproof hiking backpack", "category": "outdoor", "min_price": 30, "max_price": 80, "sort_by": "relevance" }
+Response: { "products": [ { "id": "out_601", "name": "TrailBlazer Pack", "price": 55.00, "rating": 4.3, "in_stock": true }, { "id": "out_602", "name": "Summit Dry Bag", "price": 68.99, "rating": 4.6, "in_stock": true }, { "id": "out_603", "name": "WildPath Rucksack", "price": 79.50, "rating": 4.8, "in_stock": false } ], "total": 3 }
+
+Question: Search for stainless steel cookware sets.
+Call: { "func_call": "search_products", "query": "stainless steel cookware set", "category": "home_goods", "min_price": 100, "max_price": 300, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "home_501", "name": "ChefMaster Steel Set", "price": 199.00, "rating": 4.9, "in_stock": true }, { "id": "home_502", "name": "DuraCook Collection", "price": 150.50, "rating": 4.7, "in_stock": true }, { "id": "home_503", "name": "PrimeKitchen Pots", "price": 245.00, "rating": 4.5, "in_stock": true } ], "total": 3 }
+
+Question: Find wireless earbuds with noise cancellation over $100.
+Call: { "func_call": "search_products", "query": "noise cancelling earbuds", "category": "electronics", "min_price": 100, "max_price": 250, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "elec_120", "name": "SilenceBuds Pro", "price": 129.99, "rating": 4.5, "in_stock": true }, { "id": "elec_121", "name": "QuietZone Earphones", "price": 159.00, "rating": 4.7, "in_stock": false }, { "id": "elec_122", "name": "AudioShield ANC", "price": 199.50, "rating": 4.8, "in_stock": true } ], "total": 3 }
+
+Question: Look for vintage style leather boots for women.
+Call: { "func_call": "search_products", "query": "women vintage leather boots", "category": "clothing", "min_price": 60, "max_price": 150, "sort_by": "relevance" }
+Response: { "products": [ { "id": "cloth_401", "name": "RetroStep Boots", "price": 85.00, "rating": 4.4, "in_stock": true }, { "id": "cloth_402", "name": "ClassicHide Ankle Boots", "price": 110.99, "rating": 4.6, "in_stock": true }, { "id": "cloth_403", "name": "Heritage Leather Walkers", "price": 135.00, "rating": 4.9, "in_stock": true } ], "total": 3 }
+
+Question: Search for fantasy novels with high ratings.
+Call: { "func_call": "search_products", "query": "fantasy novel", "category": "books", "min_price": 12, "max_price": 35, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "book_501", "name": "Dragon's Legacy", "price": 24.99, "rating": 4.9, "in_stock": true }, { "id": "book_502", "name": "The Wizard's Path", "price": 18.50, "rating": 4.7, "in_stock": true }, { "id": "book_503", "name": "Realm of Shadows", "price": 29.95, "rating": 4.6, "in_stock": false } ], "total": 3 }
+
+Question: Find organic cotton bath towels in blue.
+Call: { "func_call": "search_products", "query": "organic cotton bath towel blue", "category": "home_goods", "min_price": 20, "max_price": 60, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "home_601", "name": "SoftCloud Blue Towel", "price": 25.00, "rating": 4.5, "in_stock": true }, { "id": "home_602", "name": "EcoWrap Bath Sheet", "price": 38.50, "rating": 4.8, "in_stock": true }, { "id": "home_603", "name": "PureFiber Large Towel", "price": 52.00, "rating": 4.6, "in_stock": true } ], "total": 3 }
+
+Question: Show me tablet stands adjustable for desks.
+Call: { "func_call": "search_products", "query": "adjustable tablet stand", "category": "electronics", "min_price": 15, "max_price": 50, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_130", "name": "FlexiHold Stand", "price": 29.99, "rating": 4.7, "in_stock": true }, { "id": "elec_131", "name": "DeskMate Pro", "price": 35.00, "rating": 4.9, "in_stock": true }, { "id": "elec_132", "name": "AngleView Support", "price": 45.50, "rating": 4.4, "in_stock": false } ], "total": 3 }
+
+Question: Find wool sweaters for men in winter colors.
+Call: { "func_call": "search_products", "query": "men wool sweater winter", "category": "clothing", "min_price": 40, "max_price": 100, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "cloth_501", "name": "Nordic Knit Sweater", "price": 55.00, "rating": 4.5, "in_stock": true }, { "id": "cloth_502", "name": "WarmWool Pullover", "price": 72.99, "rating": 4.6, "in_stock": true }, { "id": "cloth_503", "name": "Alpine Crew Neck", "price": 95.00, "rating": 4.8, "in_stock": true } ], "total": 3 }
+
+Question: Search for biographies of historical figures.
+Call: { "func_call": "search_products", "query": "historical biography", "category": "books", "min_price": 10, "max_price": 30, "sort_by": "relevance" }
+Response: { "products": [ { "id": "book_601", "name": "Life of Lincoln", "price": 19.99, "rating": 4.7, "in_stock": true }, { "id": "book_602", "name": "Churchill's War", "price": 22.50, "rating": 4.5, "in_stock": true }, { "id": "book_603", "name": "The Queen's Journey", "price": 27.95, "rating": 4.8, "in_stock": false } ], "total": 3 }
+
+Question: Find smart light bulbs compatible with Google Home.
+Call: { "func_call": "search_products", "query": "smart light bulb google", "category": "electronics", "min_price": 10, "max_price": 40, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "elec_140", "name": "GlowSmart Bulb", "price": 14.99, "rating": 4.3, "in_stock": true }, { "id": "elec_141", "name": "HomeLink LED", "price": 24.00, "rating": 4.6, "in_stock": true }, { "id": "elec_142", "name": "VoiceBright Color", "price": 32.50, "rating": 4.8, "in_stock": true } ], "total": 3 }

@@ -1,0 +1,298 @@
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_9a8b7c6d5e4f",
+  "operations": [
+    { "type": "insert", "table": "customers", "data": { "customer_id": 1042, "name": "Elena Rodriguez", "email": "elena.r@example.com" } },
+    { "type": "insert", "table": "orders", "data": { "order_id": 5001, "customer_id": 1042, "total": 129.99 } }
+  ]
+}
+{
+  "transaction_id": "txn_9a8b7c6d5e4f",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 45,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_1f2e3d4c5b6a",
+  "operations": [
+    { "type": "update", "table": "inventory", "data": { "product_id": 77, "quantity": -5 } },
+    { "type": "insert", "table": "shipments", "data": { "shipment_id": 882, "product_id": 77, "status": "pending" } }
+  ]
+}
+{
+  "transaction_id": "txn_1f2e3d4c5b6a",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 12,
+  "error": { "code": "CHECK_CONSTRAINT_VIOLATION", "message": "inventory.quantity cannot be negative" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_aabbccdd1122",
+  "operations": [
+    { "type": "insert", "table": "employees", "data": { "emp_id": 305, "name": "Marcus Chen", "department": "Engineering" } },
+    { "type": "update", "table": "departments", "data": { "dept_name": "Engineering", "headcount": 15 } },
+    { "type": "insert", "table": "payroll", "data": { "emp_id": 305, "salary": 85000 } }
+  ]
+}
+{
+  "transaction_id": "txn_aabbccdd1122",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 67,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_ffee99887766",
+  "operations": [
+    { "type": "delete", "table": "sessions", "data": { "session_id": "sess_abc123" } },
+    { "type": "update", "table": "users", "data": { "user_id": 44, "last_logout": "2023-10-27T10:00:00Z" } }
+  ]
+}
+{
+  "transaction_id": "txn_ffee99887766",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 23,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_554433221100",
+  "operations": [
+    { "type": "insert", "table": "invoices", "data": { "invoice_id": 9001, "amount": 500.00, "status": "unpaid" } },
+    { "type": "insert", "table": "line_items", "data": { "invoice_id": 9001, "item": "Consulting", "cost": 500.00 } },
+    { "type": "update", "table": "clients", "data": { "client_id": 22, "balance_due": 1500.00 } }
+  ]
+}
+{
+  "transaction_id": "txn_554433221100",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 18,
+  "error": { "code": "FOREIGN_KEY_VIOLATION", "message": "client_id 22 does not exist in clients table" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_deadbeefcafe",
+  "operations": [
+    { "type": "update", "table": "accounts", "data": { "account_id": 101, "balance": 950.00 } },
+    { "type": "update", "table": "accounts", "data": { "account_id": 102, "balance": 1050.00 } }
+  ]
+}
+{
+  "transaction_id": "txn_deadbeefcafe",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 31,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_cafebabe1234",
+  "operations": [
+    { "type": "insert", "table": "blog_posts", "data": { "post_id": 45, "title": "New Features", "author_id": 7 } },
+    { "type": "insert", "table": "tags", "data": { "post_id": 45, "tag": "release" } },
+    { "type": "insert", "table": "tags", "data": { "post_id": 45, "tag": "v2.0" } },
+    { "type": "update", "table": "authors", "data": { "author_id": 7, "post_count": 12 } }
+  ]
+}
+{
+  "transaction_id": "txn_cafebabe1234",
+  "status": "committed",
+  "operations_applied": 4,
+  "duration_ms": 89,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_998877665544",
+  "operations": [
+    { "type": "insert", "table": "reservations", "data": { "res_id": 777, "guest_name": "Sarah Johnson", "table_id": 5 } },
+    { "type": "update", "table": "tables", "data": { "table_id": 5, "status": "reserved" } }
+  ]
+}
+{
+  "transaction_id": "txn_998877665544",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 14,
+  "error": { "code": "UNIQUE_CONSTRAINT_VIOLATION", "message": "table_id 5 is already reserved for this time slot" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_112233445566",
+  "operations": [
+    { "type": "delete", "table": "cart_items", "data": { "cart_id": 99, "product_id": 12 } },
+    { "type": "insert", "table": "orders", "data": { "order_id": 5002, "cart_id": 99, "total": 45.50 } },
+    { "type": "update", "table": "products", "data": { "product_id": 12, "stock": 48 } }
+  ]
+}
+{
+  "transaction_id": "txn_112233445566",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 52,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_aabbccddee00",
+  "operations": [
+    { "type": "insert", "table": "logs", "data": { "log_id": 888, "event": "login_fail", "user": "admin" } },
+    { "type": "update", "table": "users", "data": { "username": "admin", "failed_attempts": 6 } }
+  ]
+}
+{
+  "transaction_id": "txn_aabbccddee00",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 19,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_f0f0f0f0f0f0",
+  "operations": [
+    { "type": "update", "table": "subscriptions", "data": { "sub_id": 33, "status": "cancelled" } },
+    { "type": "insert", "table": "refund_requests", "data": { "sub_id": 33, "amount": 9.99, "reason": "user_request" } },
+    { "type": "delete", "table": "access_tokens", "data": { "sub_id": 33 } }
+  ]
+}
+{
+  "transaction_id": "txn_f0f0f0f0f0f0",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 25,
+  "error": { "code": "NOT_NULL_VIOLATION", "message": "refund_requests.reason cannot be null" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_1234567890ab",
+  "operations": [
+    { "type": "insert", "table": "projects", "data": { "proj_id": 10, "name": "Alpha", "lead": "John Doe" } },
+    { "type": "insert", "table": "tasks", "data": { "task_id": 101, "proj_id": 10, "desc": "Setup DB" } },
+    { "type": "insert", "table": "tasks", "data": { "task_id": 102, "proj_id": 10, "desc": "API Design" } }
+  ]
+}
+{
+  "transaction_id": "txn_1234567890ab",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 61,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_abcdef123456",
+  "operations": [
+    { "type": "update", "table": "warehouse_stock", "data": { "sku": "W-99", "qty": 100 } },
+    { "type": "update", "table": "warehouse_stock", "data": { "sku": "W-99", "qty": 95 } }
+  ]
+}
+{
+  "transaction_id": "txn_abcdef123456",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 15,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_zyxwvu987654",
+  "operations": [
+    { "type": "insert", "table": "comments", "data": { "comment_id": 55, "post_id": 20, "text": "Great post!" } },
+    { "type": "update", "table": "posts", "data": { "post_id": 20, "comment_count": 6 } },
+    { "type": "insert", "table": "notifications", "data": { "user_id": 20, "msg": "New comment" } }
+  ]
+}
+{
+  "transaction_id": "txn_zyxwvu987654",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 22,
+  "error": { "code": "DATA_EXCEPTION", "message": "string length exceeds maximum limit for column 'text'" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_qwertyuiop12",
+  "operations": [
+    { "type": "delete", "table": "temp_data", "data": { "batch_id": "batch_001" } },
+    { "type": "insert", "table": "archive_data", "data": { "batch_id": "batch_001", "archived_at": "2023-10-27" } }
+  ]
+}
+{
+  "transaction_id": "txn_qwertyuiop12",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 110,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_asdfghjkl345",
+  "operations": [
+    { "type": "insert", "table": "tickets", "data": { "ticket_id": 900, "subject": "Login Issue", "priority": "high" } },
+    { "type": "insert", "table": "ticket_history", "data": { "ticket_id": 900, "action": "created", "by": "system" } },
+    { "type": "update", "table": "users", "data": { "user_id": 55, "open_tickets": 3 } }
+  ]
+}
+{
+  "transaction_id": "txn_asdfghjkl345",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 48,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_zxcvbnm67890",
+  "operations": [
+    { "type": "update", "table": "balances", "data": { "account": "ACC-123", "amount": 5000 } },
+    { "type": "update", "table": "balances", "data": { "account": "ACC-456", "amount": -5000 } }
+  ]
+}
+{
+  "transaction_id": "txn_zxcvbnm67890",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 9,
+  "error": { "code": "CHECK_CONSTRAINT_VIOLATION", "message": "balance cannot be negative" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_poiuytrewq09",
+  "operations": [
+    { "type": "insert", "table": "events", "data": { "event_id": 202, "name": "Conference 2024", "date": "2024-05-01" } },
+    { "type": "insert", "table": "registrations", "data": { "event_id": 202, "attendee": "Alice Smith" } },
+    { "type": "insert", "table": "registrations", "data": { "event_id": 202, "attendee": "Bob Jones" } },
+    { "type": "update", "table": "events", "data": { "event_id": 202, "registered_count": 2 } }
+  ]
+}
+{
+  "transaction_id": "txn_poiuytrewq09",
+  "status": "committed",
+  "operations_applied": 4,
+  "duration_ms": 75,
+  "error": {}
+}

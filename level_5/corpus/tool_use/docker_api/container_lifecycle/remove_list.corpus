@@ -1,0 +1,51 @@
+Available Tools: run_container | stop_container | start_container | remove_container | list_containers
+Call Schema: { "func_call": "string", "container_id": "string", "image": "string", "name": "string", "ports": "string", "env": ["string"] }
+Response Schema: { "container_id": "string", "name": "string", "image": "string", "state": "running|stopped|exited", "ports": "string" }
+---
+Question: List all containers currently running on the system.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "c8f9a2b1", "name": "web-server-prod", "image": "nginx:latest", "state": "running", "ports": "80:80" }
+
+Question: Show me only the containers that have stopped unexpectedly.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "d4e5f6g7", "name": "db-backup-job", "image": "postgres:13", "state": "stopped", "ports": "" }
+
+Question: I need to see every container regardless of its state, including exited ones.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "h1i2j3k4", "name": "cache-redis", "image": "redis:alpine", "state": "exited", "ports": "6379:6379" }
+
+Question: Remove the container named 'legacy-app' forcefully even if it is running.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "legacy-app", "ports": "", "env": [] }
+Response: { "container_id": "a1b2c3d4", "name": "legacy-app", "image": "python:3.8", "state": "exited", "ports": "" }
+
+Question: Force remove the container with ID '9f8e7d6c' without stopping it first.
+Call: { "func_call": "remove_container", "container_id": "9f8e7d6c", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "9f8e7d6c", "name": "temp-worker", "image": "node:14", "state": "exited", "ports": "" }
+
+Question: List all stopped containers to identify candidates for cleanup.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "m5n6o7p8", "name": "migration-script", "image": "flyway:latest", "state": "stopped", "ports": "" }
+
+Question: Delete the exited container 'test-runner-01' permanently.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "test-runner-01", "ports": "", "env": [] }
+Response: { "container_id": "q9r0s1t2", "name": "test-runner-01", "image": "jest:latest", "state": "exited", "ports": "" }
+
+Question: Forcefully remove all traces of the container named 'debug-session'.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "debug-session", "ports": "", "env": [] }
+Response: { "container_id": "u3v4w5x6", "name": "debug-session", "image": "ubuntu:20.04", "state": "exited", "ports": "" }
+
+Question: List containers filtering specifically for those in the exited state.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "y7z8a9b0", "name": "batch-processor", "image": "java:11", "state": "exited", "ports": "" }
+
+Question: Remove container ID 'c1d2e3f4' using force flag to bypass stop errors.
+Call: { "func_call": "remove_container", "container_id": "c1d2e3f4", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "c1d2e3f4", "name": "orphaned-volume", "image": "busybox", "state": "exited", "ports": "" }
+
+Question: Show me the list of running containers to ensure none are stuck before a force remove operation.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "g5h6i7j8", "name": "api-gateway", "image": "kong:latest", "state": "running", "ports": "8000:8000" }
+
+Question: Force remove the container 'staging-db' which failed to stop gracefully.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "staging-db", "ports": "", "env": [] }
+Response: { "container_id": "k9l0m1n2", "name": "staging-db", "image": "mysql:8.0", "state": "exited", "ports": "3306:3306" }

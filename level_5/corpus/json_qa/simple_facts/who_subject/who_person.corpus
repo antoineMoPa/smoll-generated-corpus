@@ -1,0 +1,59 @@
+Context: During the morning meeting, Sarah presented the quarterly sales figures to the entire marketing team. Everyone applauded her detailed analysis of the recent campaign.
+Input: {"question": "Who presented the quarterly sales figures?"}
+Output: {"answer": "Sarah"}
+
+Context: The referee blew the whistle to signal the end of the match after a tough game. Both teams shook hands with the official before leaving the field.
+Input: {"question": "Who blew the whistle to signal the end of the match?"}
+Output: {"answer": "The referee"}
+
+Context: At the airport check-in counter, the agent scanned my passport and printed the boarding pass. She reminded me that the gate would close in twenty minutes.
+Input: {"question": "Who scanned the passport and printed the boarding pass?"}
+Output: {"answer": "the agent"}
+
+Context: Mr. Henderson assigned the history essay to the class just before the bell rang. The students groaned because the topic was quite difficult.
+Input: {"question": "Who assigned the history essay?"}
+Output: {"answer": "Mr. Henderson"}
+
+Context: While fixing the leaking pipe, the plumber noticed that the water heater was also malfunctioning. He recommended replacing the old unit immediately.
+Input: {"question": "Who noticed that the water heater was malfunctioning?"}
+Output: {"answer": "the plumber"}
+
+Context: Elena organized the surprise birthday party for her brother in the backyard. All the neighbors came to celebrate with cake and music.
+Input: {"question": "Who organized the surprise birthday party?"}
+Output: {"answer": "Elena"}
+
+Context: The coach substituted the injured player with a rookie from the bench during the second half. The crowd cheered loudly for the new entry.
+Input: {"question": "Who substituted the injured player?"}
+Output: {"answer": "The coach"}
+
+Context: During the power outage, the building manager activated the emergency generators within seconds. The lights flickered back on almost immediately.
+Input: {"question": "Who activated the emergency generators?"}
+Output: {"answer": "the building manager"}
+
+Context: My neighbor, David, watered my plants while I was away on vacation last week. The flowers bloomed beautifully thanks to his care.
+Input: {"question": "Who watered the plants while the owner was on vacation?"}
+Output: {"answer": "David"}
+
+Context: The librarian whispered a reminder about the due date as I checked out three novels. She stamped the return slip with today's date.
+Input: {"question": "Who whispered a reminder about the due date?"}
+Output: {"answer": "The librarian"}
+
+Context: Captain Reynolds steered the ship through the heavy storm with great skill. The crew remained calm under his steady leadership.
+Input: {"question": "Who steered the ship through the heavy storm?"}
+Output: {"answer": "Captain Reynolds"}
+
+Context: At the reception desk, the secretary took a message for the director who was in a conference. She promised to deliver it as soon as the meeting ended.
+Input: {"question": "Who took a message for the director?"}
+Output: {"answer": "the secretary"}
+
+Context: The chef tasted the sauce and decided it needed more salt before serving. He called the sous-chef over to adjust the seasoning.
+Input: {"question": "Who decided the sauce needed more salt?"}
+Output: {"answer": "The chef"}
+
+Context: When the fire alarm went off, the safety officer directed everyone to the nearest exit. No one panicked because her instructions were clear.
+Input: {"question": "Who directed everyone to the nearest exit?"}
+Output: {"answer": "the safety officer"}
+
+Context: James volunteered to drive the group to the hiking trail since he owned a large van. We all piled into his vehicle early Saturday morning.
+Input: {"question": "Who volunteered to drive the group to the hiking trail?"}
+Output: {"answer": "James"}

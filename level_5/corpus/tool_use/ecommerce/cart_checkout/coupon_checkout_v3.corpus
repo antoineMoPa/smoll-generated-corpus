@@ -1,0 +1,51 @@
+Available Tools: add_to_cart | remove_from_cart | update_quantity | get_cart | apply_coupon | checkout
+Call Schema: { "func_call": "string", "product_id": "string", "quantity": "number", "coupon_code": "string" }
+Response Schema: { "cart_id": "string", "items": [{ "product_id": "string", "name": "string", "quantity": "number", "price": "number" }], "total": "number" }
+---
+Question: Apply the holiday promo code HOLIDAY25 to my bookstore cart.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "HOLIDAY25" }
+Response: { "cart_id": "CART-4421", "items": [{ "product_id": "PROD-302", "name": "Mystery Novel Collection", "quantity": 2, "price": 24.99 }], "total": 37.48 }
+
+Question: Try using the outdated coupon code WINTER2022 on my furniture order.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "WINTER2022" }
+Response: { "cart_id": "CART-4421", "items": [{ "product_id": "PROD-302", "name": "Mystery Novel Collection", "quantity": 2, "price": 24.99 }], "total": 49.98 }
+
+Question: Finalize the purchase for the current book selection.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-4421", "items": [{ "product_id": "PROD-302", "name": "Mystery Novel Collection", "quantity": 2, "price": 24.99 }], "total": 49.98 }
+
+Question: Use the clearance sale code CLEAR70 to reduce my total significantly.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "CLEAR70" }
+Response: { "cart_id": "CART-5583", "items": [{ "product_id": "PROD-610", "name": "Running Shoes", "quantity": 1, "price": 89.00 }], "total": 26.70 }
+
+Question: Attempt to apply a malformed coupon code BAD-CODE-123.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "BAD-CODE-123" }
+Response: { "cart_id": "CART-5583", "items": [{ "product_id": "PROD-610", "name": "Running Shoes", "quantity": 1, "price": 89.00 }], "total": 89.00 }
+
+Question: Complete the checkout process for the athletic footwear order.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-5583", "items": [{ "product_id": "PROD-610", "name": "Running Shoes", "quantity": 1, "price": 89.00 }], "total": 89.00 }
+
+Question: Apply the student discount code STUDENT10 to my software bundle.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "STUDENT10" }
+Response: { "cart_id": "CART-2299", "items": [{ "product_id": "PROD-774", "name": "Photo Editing Suite", "quantity": 1, "price": 199.00 }], "total": 179.10 }
+
+Question: Try applying the restricted code PREMIUMONLY which requires a higher tier.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "PREMIUMONLY" }
+Response: { "cart_id": "CART-2299", "items": [{ "product_id": "PROD-774", "name": "Photo Editing Suite", "quantity": 1, "price": 199.00 }], "total": 199.00 }
+
+Question: Proceed to checkout with the student discount applied.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-2299", "items": [{ "product_id": "PROD-774", "name": "Photo Editing Suite", "quantity": 1, "price": 199.00 }], "total": 179.10 }
+
+Question: Use the loyalty reward code LOYAL50 on my pet supplies cart.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "LOYAL50" }
+Response: { "cart_id": "CART-6634", "items": [{ "product_id": "PROD-921", "name": "Automatic Pet Feeder", "quantity": 1, "price": 120.00 }], "total": 60.00 }
+
+Question: Attempt to reuse an expired loyalty code LOYAL50 from last year.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "LOYAL50" }
+Response: { "cart_id": "CART-6634", "items": [{ "product_id": "PROD-921", "name": "Automatic Pet Feeder", "quantity": 1, "price": 120.00 }], "total": 120.00 }
+
+Question: Finalize the transaction for the pet feeder order.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-6634", "items": [{ "product_id": "PROD-921", "name": "Automatic Pet Feeder", "quantity": 1, "price": 120.00 }], "total": 120.00 }

@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Display all staff members employed by CyberDyne Systems.
+Call: { "func_call": "find_contacts_by_company", "query": "CyberDyne Systems", "field": "company", "limit": 60 }
+Response: { "contacts": [{ "id": "c_1301", "name": "John Connor", "email": "jconnor@cyberdyne.net", "company": "CyberDyne Systems", "phone": "+1-555-1301" }, { "id": "c_1302", "name": "Sarah Miller", "email": "smiller@cyberdyne.net", "company": "CyberDyne Systems", "phone": "+1-555-1302" }], "total": 2 }
+
+Question: Retrieve every contact labeled as a beta tester.
+Call: { "func_call": "find_contacts_by_tag", "query": "beta_tester", "field": "tag", "limit": 80 }
+Response: { "contacts": [{ "id": "c_1401", "name": "Alex Rivera", "email": "arivera@testlab.io", "company": "Test Lab", "phone": "+1-555-1401" }, { "id": "c_1402", "name": "Jamie Fox", "email": "jfox@debuggers.com", "company": "Debuggers Inc", "phone": "+1-555-1402" }, { "id": "c_1403", "name": "Pat Smith", "email": "psmith@alpha.org", "company": "Alpha Org", "phone": "+1-555-1403" }], "total": 3 }
+
+Question: Who is on the payroll at GreenLeaf Energy?
+Call: { "func_call": "find_contacts_by_company", "query": "GreenLeaf Energy", "field": "company", "limit": 25 }
+Response: { "contacts": [{ "id": "c_1501", "name": "Emily Woods", "email": "ewoods@greenleaf.energy", "company": "GreenLeaf Energy", "phone": "+1-555-1501" }], "total": 1 }
+
+Question: List everyone marked with the inactive status tag.
+Call: { "func_call": "find_contacts_by_tag", "query": "inactive", "field": "tag", "limit": 45 }
+Response: { "contacts": [{ "id": "c_1601", "name": "George Hall", "email": "ghall@sleepyco.com", "company": "Sleepy Co", "phone": "+1-555-1601" }, { "id": "c_1602", "name": "Nancy Drew", "email": "ndrew@quietcorp.net", "company": "Quiet Corp", "phone": "+1-555-1602" }], "total": 2 }
+
+Question: I need the list of platinum tier partners for the conference.
+Call: { "func_call": "find_contacts_by_tag", "query": "platinum", "field": "tag", "limit": 30 }
+Response: { "contacts": [{ "id": "c_1701", "name": "Richard Gold", "email": "rgold@wealthygroup.com", "company": "Wealthy Group", "phone": "+1-555-1701" }, { "id": "c_1702", "name": "Barbara Silver", "email": "bsilver@luxholdings.co", "company": "Lux Holdings", "phone": "+1-555-1702" }, { "id": "c_1703", "name": "Steven Bronze", "email": "sbronze@metalworks.com", "company": "Metal Works", "phone": "+1-555-1703" }], "total": 3 }
+
+Question: Find the team members at Oceanic Airlines.
+Call: { "func_call": "find_contacts_by_company", "query": "Oceanic Airlines", "field": "company", "limit": 35 }
+Response: { "contacts": [{ "id": "c_1801", "name": "Jack Shephard", "email": "jshephard@oceanic.air", "company": "Oceanic Airlines", "phone": "+1-555-1801" }, { "id": "c_1802", "name": "Kate Austen", "email": "kausten@oceanic.air", "company": "Oceanic Airlines", "phone": "+1-555-1802" }], "total": 2 }
+
+Question: Show me all leads currently in the pipeline.
+Call: { "func_call": "find_contacts_by_tag", "query": "lead", "field": "tag", "limit": 90 }
+Response: { "contacts": [{ "id": "c_1901", "name": "Tony Stark", "email": "tstark@starkind.io", "company": "Stark Ind", "phone": "+1-555-1901" }, { "id": "c_1902", "name": "Pepper Potts", "email": "ppotts@starkind.io", "company": "Stark Ind", "phone": "+1-555-1902" }], "total": 2 }
+
+Question: Get the directory for Wayne Enterprises.
+Call: { "func_call": "find_contacts_by_company", "query": "Wayne Enterprises", "field": "company", "limit": 55 }
+Response: { "contacts": [{ "id": "c_2001", "name": "Bruce Wayne", "email": "bwayne@wayne.ent", "company": "Wayne Enterprises", "phone": "+1-555-2001" }, { "id": "c_2002", "name": "Lucius Fox", "email": "lfox@wayne.ent", "company": "Wayne Enterprises", "phone": "+1-555-2002" }, { "id": "c_2003", "name": "Alfred Pennyworth", "email": "apennyworth@wayne.ent", "company": "Wayne Enterprises", "phone": "+1-555-2003" }], "total": 3 }
+
+Question: Show me gold members in the retail sector.
+Call: { "func_call": "find_contacts_by_tag", "query": "gold", "field": "tag", "limit": 15 }
+Response: { "contacts": [{ "id": "c_2101", "name": "Gordon Ramsey", "email": "gramsey@chefstar.com", "company": "Chef Star", "phone": "+1-555-2101" }], "total": 1 }
+
+Question: Identify any inactive users from Globex Corporation.
+Call: { "func_call": "find_contacts_by_company", "query": "Globex Corporation", "field": "company", "limit": 20 }
+Response: { "contacts": [{ "id": "c_2201", "name": "Hank Scorpio", "email": "hscorpio@globex.corp", "company": "Globex Corporation", "phone": "+1-555-2201" }], "total": 1 }
+
+Question: Retrieve all platinum partners linked to Umbrella Corp.
+Call: { "func_call": "find_contacts_by_company", "query": "Umbrella Corp", "field": "company", "limit": 12 }
+Response: { "contacts": [{ "id": "c_2301", "name": "Albert Wesker", "email": "awesker@umbrella.corp", "company": "Umbrella Corp", "phone": "+1-555-2301" }, { "id": "c_2302", "name": "Ada Wong", "email": "awong@umbrella.corp", "company": "Umbrella Corp", "phone": "+1-555-2302" }], "total": 2 }
+
+Question: Find all contacts tagged as lead or beta_tester.
+Call: { "func_call": "find_contacts_by_tag", "query": "lead", "field": "tag", "limit": 65 }
+Response: { "contacts": [{ "id": "c_2401", "name": "Ellen Ripley", "email": "eripley@weyland.biz", "company": "Weyland Biz", "phone": "+1-555-2401" }, { "id": "c_2402", "name": "Rick Deckard", "email": "rdeckard@tyrell.net", "company": "Tyrell Net", "phone": "+1-555-2402" }], "total": 2 }

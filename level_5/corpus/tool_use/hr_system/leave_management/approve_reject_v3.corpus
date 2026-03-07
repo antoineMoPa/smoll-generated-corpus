@@ -1,0 +1,51 @@
+Available Tools: request_leave | get_leave_balance | approve_leave | reject_leave | get_leave_history
+Call Schema: { "func_call": "string", "employee_id": "string", "leave_type": "vacation|sick|personal|parental", "from_date": "string", "to_date": "string" }
+Response Schema: { "request_id": "string", "status": "pending|approved|rejected", "days_requested": number, "balance_remaining": number }
+---
+Question: Approve the sick leave request for employee EMP-4102 from 2024-04-12 to 2024-04-14.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-4102", "leave_type": "sick", "from_date": "2024-04-12", "to_date": "2024-04-14" }
+Response: { "request_id": "REQ-2001", "status": "approved", "days_requested": 3, "balance_remaining": 9 }
+
+Question: Reject the vacation request for employee EMP-7834 from 2024-06-01 to 2024-06-10 due to peak season staffing requirements.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-7834", "leave_type": "vacation", "from_date": "2024-06-01", "to_date": "2024-06-10" }
+Response: { "request_id": "REQ-2002", "status": "rejected", "days_requested": 10, "balance_remaining": 18 }
+
+Question: Manager needs to approve the personal leave for EMP-3390 starting 2024-07-22 ending 2024-07-23.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-3390", "leave_type": "personal", "from_date": "2024-07-22", "to_date": "2024-07-23" }
+Response: { "request_id": "REQ-2003", "status": "approved", "days_requested": 2, "balance_remaining": 3 }
+
+Question: Deny the parental leave request for EMP-9012 from 2024-09-01 to 2024-11-30 because of incomplete documentation.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-9012", "leave_type": "parental", "from_date": "2024-09-01", "to_date": "2024-11-30" }
+Response: { "request_id": "REQ-2004", "status": "rejected", "days_requested": 91, "balance_remaining": 91 }
+
+Question: Process approval for EMP-5567's sick leave from 2024-03-15 to 2024-03-17.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-5567", "leave_type": "sick", "from_date": "2024-03-15", "to_date": "2024-03-17" }
+Response: { "request_id": "REQ-2005", "status": "approved", "days_requested": 3, "balance_remaining": 11 }
+
+Question: Reject the personal leave request for EMP-2288 from 2024-05-05 to 2024-05-06 as the department is undergoing an audit.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-2288", "leave_type": "personal", "from_date": "2024-05-05", "to_date": "2024-05-06" }
+Response: { "request_id": "REQ-2006", "status": "rejected", "days_requested": 2, "balance_remaining": 6 }
+
+Question: Approve the vacation leave for EMP-6645 covering 2024-08-10 to 2024-08-24.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-6645", "leave_type": "vacation", "from_date": "2024-08-10", "to_date": "2024-08-24" }
+Response: { "request_id": "REQ-2007", "status": "approved", "days_requested": 15, "balance_remaining": 5 }
+
+Question: Deny the sick leave for EMP-1199 from 2024-02-28 to 2024-03-01 due to lack of physician verification.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-1199", "leave_type": "sick", "from_date": "2024-02-28", "to_date": "2024-03-01" }
+Response: { "request_id": "REQ-2008", "status": "rejected", "days_requested": 2, "balance_remaining": 14 }
+
+Question: Finalize approval for EMP-8821's parental leave from 2024-10-01 to 2024-12-31.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-8821", "leave_type": "parental", "from_date": "2024-10-01", "to_date": "2024-12-31" }
+Response: { "request_id": "REQ-2009", "status": "approved", "days_requested": 92, "balance_remaining": 0 }
+
+Question: Reject the vacation request for EMP-3344 from 2024-12-24 to 2024-12-31 because the office is closed for holidays.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-3344", "leave_type": "vacation", "from_date": "2024-12-24", "to_date": "2024-12-31" }
+Response: { "request_id": "REQ-2010", "status": "rejected", "days_requested": 8, "balance_remaining": 22 }
+
+Question: Approve the personal leave for EMP-7756 from 2024-11-11 to 2024-11-11.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-7756", "leave_type": "personal", "from_date": "2024-11-11", "to_date": "2024-11-11" }
+Response: { "request_id": "REQ-2011", "status": "approved", "days_requested": 1, "balance_remaining": 2 }
+
+Question: Deny the sick leave request for EMP-4455 from 2024-01-15 to 2024-01-19 due to exceeding the maximum consecutive days allowed.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-4455", "leave_type": "sick", "from_date": "2024-01-15", "to_date": "2024-01-19" }
+Response: { "request_id": "REQ-2012", "status": "rejected", "days_requested": 5, "balance_remaining": 8 }

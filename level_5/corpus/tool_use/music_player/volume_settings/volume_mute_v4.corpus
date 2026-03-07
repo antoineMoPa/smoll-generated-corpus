@@ -1,0 +1,62 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: Lower the sound to 20 for the bedtime story session.
+Call: { "func_call": "set_volume", "level": 20, "preset": "lullaby" }
+Response: { "volume": 20, "muted": false, "equalizer_preset": "lullaby" }
+
+---
+Question: Crank the volume to 95, we are watching the big game now.
+Call: { "func_call": "set_volume", "level": 95, "preset": "sports" }
+Response: { "volume": 95, "muted": false, "equalizer_preset": "sports" }
+
+---
+Question: Silence the output right away, I am entering a meeting.
+Call: { "func_call": "mute", "level": 55, "preset": "conference" }
+Response: { "volume": 55, "muted": true, "equalizer_preset": "conference" }
+
+---
+Question: Restore audio and maintain the previous level of 55.
+Call: { "func_call": "unmute", "level": 55, "preset": "conference" }
+Response: { "volume": 55, "muted": false, "equalizer_preset": "conference" }
+
+---
+Question: Adjust volume to 40 and enable the electronic music profile.
+Call: { "func_call": "set_volume", "level": 40, "preset": "electronic" }
+Response: { "volume": 40, "muted": false, "equalizer_preset": "electronic" }
+
+---
+Question: Mute the speakers while I answer the doorbell.
+Call: { "func_call": "mute", "level": 70, "preset": "ambient" }
+Response: { "volume": 70, "muted": true, "equalizer_preset": "ambient" }
+
+---
+Question: Drop the volume to 25 for quiet reading and select the piano preset.
+Call: { "func_call": "set_volume", "level": 25, "preset": "piano" }
+Response: { "volume": 25, "muted": false, "equalizer_preset": "piano" }
+
+---
+Question: Unmute the system and increase volume to 80 for the workout routine.
+Call: { "func_call": "unmute", "level": 80, "preset": "high_energy" }
+Response: { "volume": 80, "muted": false, "equalizer_preset": "high_energy" }
+
+---
+Question: Set volume to 5 to barely hear it, but do not toggle the mute flag.
+Call: { "func_call": "set_volume", "level": 5, "preset": "minimal" }
+Response: { "volume": 5, "muted": false, "equalizer_preset": "minimal" }
+
+---
+Question: Engage mute mode while keeping the volume at 82.
+Call: { "func_call": "mute", "level": 82, "preset": "orchestra" }
+Response: { "volume": 82, "muted": true, "equalizer_preset": "orchestra" }
+
+---
+Question: Boost volume to 72 and activate the live concert setting.
+Call: { "func_call": "set_volume", "level": 72, "preset": "live" }
+Response: { "volume": 72, "muted": false, "equalizer_preset": "live" }
+
+---
+Question: Unmute the device and set volume to 35 for the podcast episode.
+Call: { "func_call": "unmute", "level": 35, "preset": "podcast" }
+Response: { "volume": 35, "muted": false, "equalizer_preset": "podcast" }

@@ -1,0 +1,51 @@
+Available Tools: move_to_folder | create_label | delete_email | archive_email | unsubscribe
+Call Schema: { "func_call": "string", "message_id": "string", "folder": "string", "label": "string" }
+Response Schema: { "message_id": "string", "action": "string", "status": "string" }
+---
+Question: Move the invoice from TechSolutions to the Finance folder and tag it as 'Q4-Expenses'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_8821xk", "folder": "Finance", "label": "Q4-Expenses" }
+Response: { "message_id": "msg_8821xk", "action": "move_and_label", "status": "success" }
+
+Question: Organize the meeting notes from the product team by moving them to 'Project-Alpha' and labeling them 'Meeting-Notes'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_9932pl", "folder": "Project-Alpha", "label": "Meeting-Notes" }
+Response: { "message_id": "msg_9932pl", "action": "move_and_label", "status": "success" }
+
+Question: Take the newsletter from DesignWeekly, put it in the 'Reading-List' folder, and apply the 'Design-Inspiration' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_1102zz", "folder": "Reading-List", "label": "Design-Inspiration" }
+Response: { "message_id": "msg_1102zz", "action": "move_and_label", "status": "success" }
+
+Question: Move the shipping confirmation from GlobalLogistics to the 'Orders' folder and label it 'Pending-Delivery'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_7743ab", "folder": "Orders", "label": "Pending-Delivery" }
+Response: { "message_id": "msg_7743ab", "action": "move_and_label", "status": "success" }
+
+Question: File the HR policy update into the 'HR-Docs' folder and mark it with the 'Policy-Update' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_5521cd", "folder": "HR-Docs", "label": "Policy-Update" }
+Response: { "message_id": "msg_5521cd", "action": "move_and_label", "status": "success" }
+
+Question: Move the client contract draft to the 'Legal' folder and add the 'Contract-Draft' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_3398ef", "folder": "Legal", "label": "Contract-Draft" }
+Response: { "message_id": "msg_3398ef", "action": "move_and_label", "status": "success" }
+
+Question: Organize the travel itinerary from Expedia by moving it to 'Travel-2024' and labeling it 'Itinerary'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_2210gh", "folder": "Travel-2024", "label": "Itinerary" }
+Response: { "message_id": "msg_2210gh", "action": "move_and_label", "status": "success" }
+
+Question: Move the security alert from IT-Security to the 'Urgent' folder and tag it as 'Security-Alert'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_6654ij", "folder": "Urgent", "label": "Security-Alert" }
+Response: { "message_id": "msg_6654ij", "action": "move_and_label", "status": "success" }
+
+Question: File the webinar invitation from MarketPro into the 'Events' folder and apply the 'Webinar' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_4432kl", "folder": "Events", "label": "Webinar" }
+Response: { "message_id": "msg_4432kl", "action": "move_and_label", "status": "success" }
+
+Question: Move the bug report from the QA team to the 'Engineering' folder and label it 'Bug-Report'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_9987mn", "folder": "Engineering", "label": "Bug-Report" }
+Response: { "message_id": "msg_9987mn", "action": "move_and_label", "status": "success" }
+
+Question: Organize the tax document from AccountantsLLP by moving it to 'Taxes' and labeling it 'Tax-2023'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_1234op", "folder": "Taxes", "label": "Tax-2023" }
+Response: { "message_id": "msg_1234op", "action": "move_and_label", "status": "success" }
+
+Question: Move the survey results from SurveyMonkey to the 'Research' folder and add the 'Data-Set' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_5678qr", "folder": "Research", "label": "Data-Set" }
+Response: { "message_id": "msg_5678qr", "action": "move_and_label", "status": "success" }

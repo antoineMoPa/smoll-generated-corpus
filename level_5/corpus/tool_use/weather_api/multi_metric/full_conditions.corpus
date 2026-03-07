@@ -1,0 +1,51 @@
+Available Tools: get_current_weather | get_feels_like | get_pressure | get_visibility
+Call Schema: { "func_call": "string", "location": "string", "metrics": ["string"] }
+Response Schema: { "location": "string", "metrics": { "temperature": number, "humidity": number, "pressure": number } }
+---
+Question: What are the current temperature, humidity, and pressure in Tokyo, Japan?
+Call: { "func_call": "get_current_weather", "location": "Tokyo, Japan", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Tokyo, Japan", "metrics": { "temperature": 22.5, "humidity": 68, "pressure": 1013.2 } }
+
+Question: I need the weather stats for London, UK including temp, moisture, and air pressure.
+Call: { "func_call": "get_current_weather", "location": "London, UK", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "London, UK", "metrics": { "temperature": 14.8, "humidity": 82, "pressure": 1009.5 } }
+
+Question: Fetch the temperature, humidity, and pressure readings for New York, USA.
+Call: { "func_call": "get_current_weather", "location": "New York, USA", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "New York, USA", "metrics": { "temperature": 19.2, "humidity": 55, "pressure": 1015.0 } }
+
+Question: Can you get the current weather metrics for Sydney, Australia? Specifically temp, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Sydney, Australia", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Sydney, Australia", "metrics": { "temperature": 26.1, "humidity": 60, "pressure": 1011.8 } }
+
+Question: What is the temperature, humidity level, and barometric pressure in Paris, France right now?
+Call: { "func_call": "get_current_weather", "location": "Paris, France", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Paris, France", "metrics": { "temperature": 17.3, "humidity": 71, "pressure": 1012.4 } }
+
+Question: Please retrieve temperature, humidity, and pressure data for Mumbai, India.
+Call: { "func_call": "get_current_weather", "location": "Mumbai, India", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Mumbai, India", "metrics": { "temperature": 31.5, "humidity": 78, "pressure": 1008.9 } }
+
+Question: Get me the full weather breakdown for Cairo, Egypt: temperature, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Cairo, Egypt", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Cairo, Egypt", "metrics": { "temperature": 34.2, "humidity": 35, "pressure": 1010.1 } }
+
+Question: I need to know the temperature, relative humidity, and atmospheric pressure in Berlin, Germany.
+Call: { "func_call": "get_current_weather", "location": "Berlin, Germany", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Berlin, Germany", "metrics": { "temperature": 12.6, "humidity": 64, "pressure": 1014.7 } }
+
+Question: What are the current conditions in Toronto, Canada? Looking for temp, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Toronto, Canada", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Toronto, Canada", "metrics": { "temperature": 8.4, "humidity": 59, "pressure": 1016.3 } }
+
+Question: Fetch temperature, humidity, and pressure for Singapore, Singapore.
+Call: { "func_call": "get_current_weather", "location": "Singapore, Singapore", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Singapore, Singapore", "metrics": { "temperature": 29.8, "humidity": 85, "pressure": 1009.2 } }
+
+Question: Give me the weather metrics for Rio de Janeiro, Brazil: temperature, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Rio de Janeiro, Brazil", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Rio de Janeiro, Brazil", "metrics": { "temperature": 27.9, "humidity": 73, "pressure": 1011.5 } }
+
+Question: Check the temperature, humidity, and pressure in Moscow, Russia.
+Call: { "func_call": "get_current_weather", "location": "Moscow, Russia", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Moscow, Russia", "metrics": { "temperature": -2.1, "humidity": 88, "pressure": 1018.6 } }

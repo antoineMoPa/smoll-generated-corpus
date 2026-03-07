@@ -1,0 +1,29 @@
+Context: Liam Thompson operates as a Cloud Architect at SkyNet Services in Denver. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Liam Thompson", "job": "Cloud Architect", "company": "SkyNet Services"}
+
+Context: During the annual summit, Zoe Williams, the Chief Technology Officer of DataSphere Inc, unveiled the new AI platform. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Zoe Williams", "job": "Chief Technology Officer", "company": "DataSphere Inc"}
+
+Context: Noah Brown functions as the Senior Product Manager for Innovate Labs, where he directs the hardware division. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Noah Brown", "job": "Senior Product Manager", "company": "Innovate Labs"}
+
+Context: As the recently hired Logistics Director at FastTrack Shipping, Ava Davis coordinates all international freight. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Ava Davis", "job": "Logistics Director", "company": "FastTrack Shipping"}
+
+Context: Ethan Miller, a Brand Strategist at Visionary Ads, developed the concept for the summer campaign. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Ethan Miller", "job": "Brand Strategist", "company": "Visionary Ads"}
+
+Context: Isabella Clark is the Director of Compliance at SecureVault Bank, maintaining regulatory standards for local branches. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Isabella Clark", "job": "Director of Compliance", "company": "SecureVault Bank"}
+
+Context: Operating from Chicago, Mason Lewis serves as a Technical Account Manager for ServerUp Hosting. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Mason Lewis", "job": "Technical Account Manager", "company": "ServerUp Hosting"}
+
+Context: The initiative was assigned to Harper White, the Lead Environmental Scientist at EcoGreen Consultants. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Harper White", "job": "Lead Environmental Scientist", "company": "EcoGreen Consultants"}
+
+Context: Lucas Hall joined Quantum Dynamics as a Systems Integration Engineer last week. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Lucas Hall", "job": "Systems Integration Engineer", "company": "Quantum Dynamics"}
+
+Context: As the VP of Engineering at RoboTech Industries, Amelia Young finalized the prototype specifications. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Amelia Young", "job": "VP of Engineering", "company": "RoboTech Industries"}
+
+Context: Dr. Benjamin King, the Clinical Research Lead at MedCore Health, announced breakthrough results this morning. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Benjamin King", "job": "Clinical Research Lead", "company": "MedCore Health"}
+
+Context: Charlotte Scott works diligently as a Procurement Specialist for MegaBuild Supplies. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Charlotte Scott", "job": "Procurement Specialist", "company": "MegaBuild Supplies"}
+
+Context: Henry Adams, the Editorial Director at PageTurner Books, approved the upcoming bestseller list. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Henry Adams", "job": "Editorial Director", "company": "PageTurner Books"}
+
+Context: Evelyn Turner acts as the Network Administrator at LearnSmart Academy, assisting faculty with digital tools. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Evelyn Turner", "job": "Network Administrator", "company": "LearnSmart Academy"}
+
+Context: Alexander Moore, a Talent Acquisition Manager at Peak Performance Ltd, organized the recruitment fair. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Alexander Moore", "job": "Talent Acquisition Manager", "company": "Peak Performance Ltd"}

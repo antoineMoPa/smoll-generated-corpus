@@ -1,0 +1,62 @@
+Available Tools: create_deal | update_deal_stage | get_deal | list_deals_by_stage | close_deal
+Call Schema: { "func_call": "string", "deal_id": "string", "contact_id": "string", "stage": "string", "value": number }
+Response Schema: { "deal_id": "string", "name": "string", "stage": "string", "value": number, "probability": number }
+---
+Question: Retrieve all opportunities currently stuck in the needs analysis phase.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Needs Analysis", "value": 0 }
+Response: { "deal_id": "DL-4021", "name": "BioMed Research Platform", "stage": "Needs Analysis", "value": 95000, "probability": 35 }
+
+---
+Question: What is the status of the deal with ID DL-7733?
+Call: { "func_call": "get_deal", "deal_id": "DL-7733", "contact_id": "", "stage": "", "value": 0 }
+Response: { "deal_id": "DL-7733", "name": "Urban Develop CRM Migration", "stage": "Proposal Sent", "value": 156000, "probability": 65 }
+
+---
+Question: Move deal DL-3398 to the contract review stage immediately.
+Call: { "func_call": "update_deal_stage", "deal_id": "DL-3398", "contact_id": "CT-501", "stage": "Contract Review", "value": 220000 }
+Response: { "deal_id": "DL-3398", "name": "SilverLine Insurance Core", "stage": "Contract Review", "value": 220000, "probability": 90 }
+
+---
+Question: Finalize deal DL-1102 as won; the executive sponsor signed off.
+Call: { "func_call": "close_deal", "deal_id": "DL-1102", "contact_id": "CT-662", "stage": "Closed Won", "value": 540000 }
+Response: { "deal_id": "DL-1102", "name": "Apex Robotics Assembly Line", "stage": "Closed Won", "value": 540000, "probability": 100 }
+
+---
+Question: List every deal we are currently pitching to in the demonstration phase.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Demonstration", "value": 0 }
+Response: { "deal_id": "DL-8845", "name": "GreenEnergy Grid Optimization", "stage": "Demonstration", "value": 310000, "probability": 50 }
+
+---
+Question: Mark deal DL-5529 as lost because the client froze hiring.
+Call: { "func_call": "close_deal", "deal_id": "DL-5529", "contact_id": "CT-224", "stage": "Closed Lost", "value": 45000 }
+Response: { "deal_id": "DL-5529", "name": "StartUp HR Onboarding Suite", "stage": "Closed Lost", "value": 45000, "probability": 0 }
+
+---
+Question: Show me the pipeline for all deals in the verbal commitment stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Verbal Commitment", "value": 0 }
+Response: { "deal_id": "DL-6671", "name": "MetroTrans Ticketing System", "stage": "Verbal Commitment", "value": 185000, "probability": 80 }
+
+---
+Question: Update the status of deal DL-9912 to closed lost due to scope creep concerns.
+Call: { "func_call": "close_deal", "deal_id": "DL-9912", "contact_id": "CT-338", "stage": "Closed Lost", "value": 72000 }
+Response: { "deal_id": "DL-9912", "name": "FoodChain Inventory Tracker", "stage": "Closed Lost", "value": 72000, "probability": 0 }
+
+---
+Question: Pull up details for the opportunity identified as DL-2256.
+Call: { "func_call": "get_deal", "deal_id": "DL-2256", "contact_id": "", "stage": "", "value": 0 }
+Response: { "deal_id": "DL-2256", "name": "Oceanic Shipping Route Planner", "stage": "Discovery", "value": 280000, "probability": 25 }
+
+---
+Question: Close deal DL-4409 as won following the successful pilot program.
+Call: { "func_call": "close_deal", "deal_id": "DL-4409", "contact_id": "CT-995", "stage": "Closed Won", "value": 395000 }
+Response: { "deal_id": "DL-4409", "name": "NovaTech AI Analytics Engine", "stage": "Closed Won", "value": 395000, "probability": 100 }
+
+---
+Question: List all opportunities currently undergoing security validation.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Security Validation", "value": 0 }
+Response: { "deal_id": "DL-7788", "name": "GovSecure Identity Management", "stage": "Security Validation", "value": 620000, "probability": 70 }
+
+---
+Question: Terminate deal DL-3310 as lost; the decision maker left the company.
+Call: { "func_call": "close_deal", "deal_id": "DL-3310", "contact_id": "CT-117", "stage": "Closed Lost", "value": 115000 }
+Response: { "deal_id": "DL-3310", "name": "PrintMaster Workflow Automation", "stage": "Closed Lost", "value": 115000, "probability": 0 }

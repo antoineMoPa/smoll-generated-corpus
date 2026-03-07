@@ -1,0 +1,51 @@
+Available Tools: like_post | comment_on_post | share_post | follow_user | unfollow_user | send_dm
+Call Schema: { "func_call": "string", "post_id": "string", "user_id": "string", "content": "string" }
+Response Schema: { "action": "string", "status": "string", "timestamp": "string" }
+---
+Question: Please start following the ceramicist 'ClayMasterLeo' to see their new vase collections.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "clay_master_leo", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T15:12:05Z" }
+
+Question: Send a message to Omar Hassan asking if he can review the quarterly budget draft by tomorrow.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "omar_h_finance", "content": "Hi Omar, could you take a look at the Q3 budget draft before our meeting tomorrow? Thanks!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:15:30Z" }
+
+Question: I need to follow the astronomy page 'StarGazerDaily' to get tonight's meteor shower updates.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "stargazer_daily", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T15:18:45Z" }
+
+Question: Message Sophia Lee to confirm if she received the shipping tracking number for her order.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "sophia_logistics", "content": "Hey Sophia, did you get the tracking info for the latest shipment? Let me know!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:22:10Z" }
+
+Question: Follow the vegan chef 'GreenPlateEats' so I can try their new recipe videos.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "green_plate_eats", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T15:25:33Z" }
+
+Question: Send a DM to James Wilson inviting him to speak at our coding workshop next month.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "james_w_code", "content": "Hi James, we'd love to have you as a guest speaker at our Python workshop in November. Are you interested?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:29:01Z" }
+
+Question: Start following the street photographer 'UrbanLensNY' to see more cityscape shots.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "urban_lens_ny", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T15:32:18Z" }
+
+Question: Message the event coordinator 'PartyProLisa' to ask about the venue capacity for the gala.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "party_pro_lisa", "content": "Hello Lisa, could you confirm the maximum capacity for the Grand Hall during the gala event?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:35:44Z" }
+
+Question: I want to follow the history channel 'PastUncovered' to learn more about ancient civilizations.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "past_uncovered_doc", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T15:39:02Z" }
+
+Question: Send a direct message to Noah Brown to check if the server migration is complete.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "noah_b_sysadmin", "content": "Hey Noah, just checking in—has the server migration finished successfully?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:42:27Z" }
+
+Question: Follow the indie musician 'AcousticVibes' to hear their latest single release.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "acoustic_vibes_music", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T15:45:50Z" }
+
+Question: Message Ava Martinez to ask if she can share the slides from yesterday's presentation.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "ava_m_marketing", "content": "Hi Ava, would you mind sharing the deck from yesterday's marketing sync? I missed a few points." }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:49:15Z" }

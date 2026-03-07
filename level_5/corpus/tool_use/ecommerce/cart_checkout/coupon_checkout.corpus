@@ -1,0 +1,51 @@
+Available Tools: add_to_cart | remove_from_cart | update_quantity | get_cart | apply_coupon | checkout
+Call Schema: { "func_call": "string", "product_id": "string", "quantity": "number", "coupon_code": "string" }
+Response Schema: { "cart_id": "string", "items": [{ "product_id": "string", "name": "string", "quantity": "number", "price": "number" }], "total": "number" }
+---
+Question: Apply the welcome discount code WELCOME20 to my current cart.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "WELCOME20" }
+Response: { "cart_id": "CART-8821", "items": [{ "product_id": "PROD-101", "name": "Wireless Headphones", "quantity": 1, "price": 79.99 }], "total": 63.99 }
+
+Question: Try using the expired coupon code SUMMER2023 on my order.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "SUMMER2023" }
+Response: { "cart_id": "CART-8821", "items": [{ "product_id": "PROD-101", "name": "Wireless Headphones", "quantity": 1, "price": 79.99 }], "total": 79.99 }
+
+Question: Complete the checkout process for my current items.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-8821", "items": [{ "product_id": "PROD-101", "name": "Wireless Headphones", "quantity": 1, "price": 79.99 }], "total": 79.99 }
+
+Question: Use the flash sale code FLASH50 to get half off my total.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "FLASH50" }
+Response: { "cart_id": "CART-9942", "items": [{ "product_id": "PROD-205", "name": "Smart Watch", "quantity": 2, "price": 150.00 }], "total": 150.00 }
+
+Question: Attempt to apply an invalid coupon code INVALIDXYZ.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "INVALIDXYZ" }
+Response: { "cart_id": "CART-9942", "items": [{ "product_id": "PROD-205", "name": "Smart Watch", "quantity": 2, "price": 150.00 }], "total": 300.00 }
+
+Question: Finalize the purchase for the cart containing the smart watches.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-9942", "items": [{ "product_id": "PROD-205", "name": "Smart Watch", "quantity": 2, "price": 150.00 }], "total": 300.00 }
+
+Question: Apply the free shipping coupon FREESHIP to my grocery order.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "FREESHIP" }
+Response: { "cart_id": "CART-3310", "items": [{ "product_id": "PROD-550", "name": "Organic Coffee Beans", "quantity": 3, "price": 18.50 }], "total": 55.50 }
+
+Question: Try applying the non-existent code TRYME99.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "TRYME99" }
+Response: { "cart_id": "CART-3310", "items": [{ "product_id": "PROD-550", "name": "Organic Coffee Beans", "quantity": 3, "price": 18.50 }], "total": 55.50 }
+
+Question: Proceed to checkout with the applied free shipping discount.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-3310", "items": [{ "product_id": "PROD-550", "name": "Organic Coffee Beans", "quantity": 3, "price": 18.50 }], "total": 55.50 }
+
+Question: Use the VIP member discount code VIP15 on my electronics cart.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "VIP15" }
+Response: { "cart_id": "CART-7765", "items": [{ "product_id": "PROD-888", "name": "4K Monitor", "quantity": 1, "price": 299.99 }], "total": 254.99 }
+
+Question: Attempt to reuse a single-use coupon code ONETIME used previously.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "ONETIME" }
+Response: { "cart_id": "CART-7765", "items": [{ "product_id": "PROD-888", "name": "4K Monitor", "quantity": 1, "price": 299.99 }], "total": 299.99 }
+
+Question: Complete the transaction for the 4K monitor order.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-7765", "items": [{ "product_id": "PROD-888", "name": "4K Monitor", "quantity": 1, "price": 299.99 }], "total": 299.99 }

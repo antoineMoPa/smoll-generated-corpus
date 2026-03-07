@@ -1,0 +1,51 @@
+Available Tools: get_ticket_status | list_open_tickets | add_reply | close_ticket | reopen_ticket
+Call Schema: { "func_call": "string", "ticket_id": "string", "customer_id": "string", "reply": "string" }
+Response Schema: { "ticket_id": "string", "status": "open|in_progress|resolved|closed", "replies": [{ "author": "string", "message": "string", "timestamp": "string" }] }
+---
+Question: Please close ticket T-3091 for customer C-882 after verifying the database connection is stable.
+Call: { "func_call": "close_ticket", "ticket_id": "T-3091", "customer_id": "C-882", "reply": "Database connection stability confirmed. Closing ticket." }
+Response: { "ticket_id": "T-3091", "status": "closed", "replies": [ { "author": "SupportAgent_06", "message": "Database connection stability confirmed. Closing ticket.", "timestamp": "2023-11-02T09:15:40Z" } ] }
+
+Question: Customer C-449 reported that the theme customization for ticket T-7123 reverted; please reopen it.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-7123", "customer_id": "C-449", "reply": "Theme settings reverted unexpectedly. Reopening for frontend review." }
+Response: { "ticket_id": "T-7123", "status": "open", "replies": [ { "author": "SupportAgent_07", "message": "Theme settings reverted unexpectedly. Reopening for frontend review.", "timestamp": "2023-11-02T10:22:18Z" } ] }
+
+Question: Go ahead and close ticket T-6540 for user C-331 since the email notification delay is fixed.
+Call: { "func_call": "close_ticket", "ticket_id": "T-6540", "customer_id": "C-331", "reply": "Email notification latency resolved. Marking as closed." }
+Response: { "ticket_id": "T-6540", "status": "closed", "replies": [ { "author": "SupportAgent_08", "message": "Email notification latency resolved. Marking as closed.", "timestamp": "2023-11-03T08:45:55Z" } ] }
+
+Question: We need to reopen ticket T-9988 for customer C-515 because the search index is outdated again.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-9988", "customer_id": "C-515", "reply": "Search index stale data detected. Reopening ticket." }
+Response: { "ticket_id": "T-9988", "status": "open", "replies": [ { "author": "SupportAgent_06", "message": "Search index stale data detected. Reopening ticket.", "timestamp": "2023-11-03T12:10:33Z" } ] }
+
+Question: Close ticket T-2211 for customer C-677 now that the SSL certificate has been renewed.
+Call: { "func_call": "close_ticket", "ticket_id": "T-2211", "customer_id": "C-677", "reply": "SSL certificate renewal complete. Closing ticket." }
+Response: { "ticket_id": "T-2211", "status": "closed", "replies": [ { "author": "SupportAgent_09", "message": "SSL certificate renewal complete. Closing ticket.", "timestamp": "2023-11-04T07:30:12Z" } ] }
+
+Question: Please reopen T-5566 for C-902; the user says the two-factor authentication code is not arriving.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-5566", "customer_id": "C-902", "reply": "2FA code delivery failure reported. Reopening for SMS gateway check." }
+Response: { "ticket_id": "T-5566", "status": "open", "replies": [ { "author": "SupportAgent_07", "message": "2FA code delivery failure reported. Reopening for SMS gateway check.", "timestamp": "2023-11-04T14:55:29Z" } ] }
+
+Question: Execute a close action on ticket T-8833 for customer C-128 after successful backup restoration.
+Call: { "func_call": "close_ticket", "ticket_id": "T-8833", "customer_id": "C-128", "reply": "Backup restoration verified successful. Closing ticket." }
+Response: { "ticket_id": "T-8833", "status": "closed", "replies": [ { "author": "SupportAgent_10", "message": "Backup restoration verified successful. Closing ticket.", "timestamp": "2023-11-05T09:20:45Z" } ] }
+
+Question: Reopen ticket T-4477 for C-256 because the generated PDF report has formatting errors.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-4477", "customer_id": "C-256", "reply": "PDF report formatting broken. Reopening ticket." }
+Response: { "ticket_id": "T-4477", "status": "open", "replies": [ { "author": "SupportAgent_08", "message": "PDF report formatting broken. Reopening ticket.", "timestamp": "2023-11-05T16:40:10Z" } ] }
+
+Question: Close ticket T-1199 for customer C-843 as the CDN cache purge has been completed.
+Call: { "func_call": "close_ticket", "ticket_id": "T-1199", "customer_id": "C-843", "reply": "CDN cache purge executed successfully. Closing ticket." }
+Response: { "ticket_id": "T-1199", "status": "closed", "replies": [ { "author": "SupportAgent_06", "message": "CDN cache purge executed successfully. Closing ticket.", "timestamp": "2023-11-06T10:05:22Z" } ] }
+
+Question: Customer C-591 needs ticket T-3322 reopened; the video upload fails specifically for files over 2GB.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-3322", "customer_id": "C-591", "reply": "Upload failure for files >2GB confirmed. Reopening for storage limit analysis." }
+Response: { "ticket_id": "T-3322", "status": "open", "replies": [ { "author": "SupportAgent_09", "message": "Upload failure for files >2GB confirmed. Reopening for storage limit analysis.", "timestamp": "2023-11-06T13:50:18Z" } ] }
+
+Question: Finalize and close ticket T-7744 for customer C-419 following the domain DNS propagation success.
+Call: { "func_call": "close_ticket", "ticket_id": "T-7744", "customer_id": "C-419", "reply": "DNS propagation complete and verified. Closing ticket." }
+Response: { "ticket_id": "T-7744", "status": "closed", "replies": [ { "author": "SupportAgent_07", "message": "DNS propagation complete and verified. Closing ticket.", "timestamp": "2023-11-07T11:15:30Z" } ] }
+
+Question: Reopen T-6655 for C-704 because the webhook payloads are being duplicated after the patch.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-6655", "customer_id": "C-704", "reply": "Webhook payload duplication observed post-patch. Reopening ticket." }
+Response: { "ticket_id": "T-6655", "status": "open", "replies": [ { "author": "SupportAgent_10", "message": "Webhook payload duplication observed post-patch. Reopening ticket.", "timestamp": "2023-11-07T15:25:44Z" } ] }

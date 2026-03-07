@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Distribute a bulk alert to all Android users about the upcoming winter holiday schedule.
+Call: { "func_call": "send_bulk_push", "user_id": "hr_notify_bot", "title": "Holiday Office Hours", "body": "Our offices will be closed from Dec 24 to Jan 2. Emergency support remains available.", "data": { "holiday_id": "WIN-2024", "region": "global", "platform": "android" }, "device_token": "*" }
+Response: { "notification_id": "blk_hol_88776655", "status": "sent", "timestamp": "2024-12-20T08:15:00Z" }
+
+Question: Verify the delivery of the password reset request sent to the finance team lead.
+Call: { "func_call": "get_push_status", "user_id": "auth_service_v2", "title": "Password Reset Requested", "body": "A request to reset your password was received. Click here if this was you.", "data": { "request_id": "PWD-REQ-9988", "team": "finance" }, "device_token": "tok_fin_lead_01" }
+Response: { "notification_id": "msg_pwd_44332211", "status": "delivered", "timestamp": "2024-12-20T10:42:18Z" }
+
+Question: Send a bulk promotion to premium members announcing early access to the Black Friday sale.
+Call: { "func_call": "send_bulk_push", "user_id": "sales_automation", "title": "Early Access: Black Friday", "body": "Premium members can shop the sale 24 hours before everyone else. Start now!", "data": { "sale_event": "BF-2024", "access_level": "early", "tier": "premium" }, "device_token": "*" }
+Response: { "notification_id": "blk_bf_11229988", "status": "sent", "timestamp": "2024-11-28T06:00:00Z" }
+
+Question: Check if the subscription renewal reminder reached the user with token tok_sub_user_99.
+Call: { "func_call": "get_push_status", "user_id": "billing_alerts", "title": "Subscription Renewing Tomorrow", "body": "Your annual plan will renew tomorrow. Ensure your payment method is up to date.", "data": { "sub_id": "SUB-ANNUAL-77", "renewal_date": "2024-12-21" }, "device_token": "tok_sub_user_99" }
+Response: { "notification_id": "msg_sub_55667788", "status": "failed", "timestamp": "2024-12-20T09:30:45Z" }
+
+Question: Broadcast an urgent weather warning to all users located in the Pacific Northwest region.
+Call: { "func_call": "send_bulk_push", "user_id": "weather_monitor_bot", "title": "Severe Storm Warning", "body": "Heavy snow and ice expected in your area. Travel conditions may be hazardous.", "data": { "alert_type": "severe_weather", "region_code": "PNW", "severity": "high" }, "device_token": "*" }
+Response: { "notification_id": "blk_wx_33445566", "status": "sent", "timestamp": "2024-12-20T07:10:22Z" }
+
+Question: Retrieve the status of the delivery confirmation sent for order #ORD-2024-5512.
+Call: { "func_call": "get_push_status", "user_id": "logistics_tracker", "title": "Your Order Has Arrived", "body": "Package #ORD-2024-5512 was delivered to your front porch at 2:15 PM.", "data": { "order_number": "ORD-2024-5512", "delivery_time": "14:15" }, "device_token": "tok_customer_4421" }
+Response: { "notification_id": "msg_log_99881122", "status": "delivered", "timestamp": "2024-12-20T14:16:05Z" }
+
+Question: Launch a bulk campaign inviting beta testers to try the new video calling feature.
+Call: { "func_call": "send_bulk_push", "user_id": "product_beta_bot", "title": "Try Video Calls Today!", "body": "You've been selected to test our new HD video calling feature. Open the app to start.", "data": { "feature_name": "video_call_v1", "group": "beta_testers", "build_version": "5.0.1" }, "device_token": "*" }
+Response: { "notification_id": "blk_beta_77665544", "status": "sent", "timestamp": "2024-12-20T11:00:00Z" }
+
+Question: Investigate why the two-factor authentication code notification failed for user tok_sec_fail_02.
+Call: { "func_call": "get_push_status", "user_id": "security_gateway", "title": "Your 2FA Code", "body": "Your login verification code is 849201. Do not share this with anyone.", "data": { "auth_request_id": "2FA-REQ-3321", "code_expiry": "300s" }, "device_token": "tok_sec_fail_02" }
+Response: { "notification_id": "msg_2fa_22110099", "status": "failed", "timestamp": "2024-12-20T13:55:30Z" }
+
+Question: Send a bulk notification to all drivers about the new surge pricing zones in downtown Chicago.
+Call: { "func_call": "send_bulk_push", "user_id": "driver_ops_chicago", "title": "Surge Pricing Active Downtown", "body": "High demand detected in the Loop area. Expect increased fares until 8 PM.", "data": { "zone_id": "CHI-DOWN-01", "multiplier": "2.5x", "city": "Chicago" }, "device_token": "*" }
+Response: { "notification_id": "blk_drv_66554433", "status": "sent", "timestamp": "2024-12-20T17:30:10Z" }
+
+Question: Confirm the delivery of the app update mandatory notice sent to iOS version 12 users.
+Call: { "func_call": "get_push_status", "user_id": "update_coordinator", "title": "Mandatory App Update", "body": "This app version is no longer supported. Please update to iOS 15 or higher to continue.", "data": { "min_os_version": "15.0", "current_os": "12.4", "action_required": true }, "device_token": "tok_legacy_ios_05" }
+Response: { "notification_id": "msg_upd_88990011", "status": "delivered", "timestamp": "2024-12-20T09:05:40Z" }
+
+Question: Distribute a bulk message to fitness club members about the extended pool hours for the summer.
+Call: { "func_call": "send_bulk_push", "user_id": "gym_admin_bot", "title": "Pool Hours Extended", "body": "Enjoy the pool until 10 PM every weekday starting next Monday.", "data": { "facility": "main_pool", "new_closing_time": "22:00", "effective_date": "2024-07-01" }, "device_token": "*" }
+Response: { "notification_id": "blk_gym_44332211", "status": "sent", "timestamp": "2024-06-25T16:45:00Z" }
+
+Question: Check the status of the flight delay alert sent to passengers on flight UA492.
+Call: { "func_call": "get_push_status", "user_id": "airline_notify_sys", "title": "Flight UA492 Delayed", "body": "Your flight is delayed by 45 minutes due to weather. New departure time: 3:45 PM.", "data": { "flight_number": "UA492", "delay_minutes": 45, "gate": "B12" }, "device_token": "tok_passenger_grp_UA492" }
+Response: { "notification_id": "msgflt_11002233", "status": "delivered", "timestamp": "2024-12-20T14:05:15Z" }

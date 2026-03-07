@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: What is the current inventory count for the mechanical keypad model MK-900 in the Las Vegas storage unit?
+Call: { "func_call": "get_stock_level", "sku": "MK-900-RGB", "location_id": "LAS-ST-13", "threshold": 30 }
+Response: { "sku": "MK-900-RGB", "product_name": "Compact Mechanical Keypad RGB", "quantity": 112, "location": "LAS-ST-13", "status": "in_stock" }
+
+Question: Can you verify if the ergonomic office chair is available in the Houston distribution hub and check against a limit of 10?
+Call: { "func_call": "check_availability", "sku": "CHR-ERG-05", "location_id": "HOU-DIST-14", "threshold": 10 }
+Response: { "sku": "CHR-ERG-05", "product_name": "Ergonomic Mesh Office Chair", "quantity": 8, "location": "HOU-DIST-14", "status": "low_stock" }
+
+Question: How many units of the 4K webcam are currently held in the Philadelphia fulfillment center?
+Call: { "func_call": "get_stock_level", "sku": "WC-4K-ULTRA", "location_id": "PHL-FC-15", "threshold": 25 }
+Response: { "sku": "WC-4K-ULTRA", "product_name": "Ultra HD 4K Webcam", "quantity": 0, "location": "PHL-FC-15", "status": "out_of_stock" }
+
+Question: I need the stock details for the Thunderbolt 4 dock located in the Detroit warehouse.
+Call: { "func_call": "get_stock_by_location", "sku": "DK-TB4-09", "location_id": "DET-WH-16", "threshold": 15 }
+Response: { "sku": "DK-TB4-09", "product_name": "Thunderbolt 4 Universal Dock", "quantity": 42, "location": "DET-WH-16", "status": "in_stock" }
+
+Question: Is the smart LED desk lamp running low in the Minneapolis logistics center if the alert threshold is set to 20?
+Call: { "func_call": "check_availability", "sku": "LMP-LED-SM", "location_id": "MSP-LOG-17", "threshold": 20 }
+Response: { "sku": "LMP-LED-SM", "product_name": "Smart LED Desk Lamp with USB", "quantity": 14, "location": "MSP-LOG-17", "status": "low_stock" }
+
+Question: Retrieve the inventory level for the gaming headset at the Nashville regional depot.
+Call: { "func_call": "get_stock_level", "sku": "HS-GM-7.1", "location_id": "BNA-REG-18", "threshold": 50 }
+Response: { "sku": "HS-GM-7.1", "product_name": "Surround Sound Gaming Headset 7.1", "quantity": 205, "location": "BNA-REG-18", "status": "in_stock" }
+
+Question: Check the availability of the USB-A to USB-C adapter in the Charlotte facility with a minimum requirement of 100.
+Call: { "func_call": "check_availability", "sku": "ADP-AC-USBC", "location_id": "CLT-FAC-19", "threshold": 100 }
+Response: { "sku": "ADP-AC-USBC", "product_name": "USB-A to USB-C Adapter Pack", "quantity": 0, "location": "CLT-FAC-19", "status": "out_of_stock" }
+
+Question: What is the stock quantity for the vertical mouse in the Columbus storage area?
+Call: { "func_call": "get_stock_level", "sku": "MS-VRT-2024", "location_id": "CMH-ST-20", "threshold": 35 }
+Response: { "sku": "MS-VRT-2024", "product_name": "Vertical Ergonomic Mouse", "quantity": 78, "location": "CMH-ST-20", "status": "in_stock" }
+
+Question: Verify the stock status of the matte screen protector for the 13-inch laptop in the Indianapolis warehouse against a threshold of 40.
+Call: { "func_call": "check_availability", "sku": "SCR-MAT-13", "location_id": "IND-WH-21", "threshold": 40 }
+Response: { "sku": "SCR-MAT-13", "product_name": "Matte Screen Protector 13-inch", "quantity": 22, "location": "IND-WH-21", "status": "low_stock" }
+
+Question: How many external hard drives are currently stored in the Salt Lake City distribution point?
+Call: { "func_call": "get_stock_level", "sku": "HDD-EXT-4TB", "location_id": "SLC-DIST-22", "threshold": 60 }
+Response: { "sku": "HDD-EXT-4TB", "product_name": "4TB External Hard Drive", "quantity": 156, "location": "SLC-DIST-22", "status": "in_stock" }
+
+Question: Check if the fiber optic patch cable is available in the Raleigh facility and if it's below 200 units.
+Call: { "func_call": "check_availability", "sku": "CBL-FO-5M", "location_id": "RDU-FAC-23", "threshold": 200 }
+Response: { "sku": "CBL-FO-5M", "product_name": "Fiber Optic Patch Cable 5M", "quantity": 185, "location": "RDU-FAC-23", "status": "low_stock" }
+
+Question: Get the current stock count for the wireless presentation remote in the Milwaukee warehouse.
+Call: { "func_call": "get_stock_by_location", "sku": "RMT-PRES-WL", "location_id": "MKE-WH-24", "threshold": 25 }
+Response: { "sku": "RMT-PRES-WL", "product_name": "Wireless Presentation Remote with Laser", "quantity": 93, "location": "MKE-WH-24", "status": "in_stock" }

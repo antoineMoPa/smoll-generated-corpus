@@ -1,0 +1,51 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Join employees and departments to list employee names and department titles for the first 8 staff members.
+Call: { "func_call": "select_with_join", "table": "employees", "columns": ["employees.full_name", "departments.title"], "where": "employees.dept_id = departments.id", "limit": 8 }
+Response: { "rows": [{"full_name": "Jordan Lee", "title": "Engineering"}, {"full_name": "Taylor Swift", "title": "Marketing"}, {"full_name": "Casey Neistat", "title": "Sales"}, {"full_name": "Morgan Freeman", "title": "HR"}, {"full_name": "Alex Mercer", "title": "Finance"}, {"full_name": "Jamie Oliver", "title": "Operations"}, {"full_name": "Riley Reid", "title": "Legal"}, {"full_name": "Quinn Fabray", "title": "Support"}], "count": 8, "query_ms": 14 }
+---
+Question: Count the total number of entries in the transactions table.
+Call: { "func_call": "count_records", "table": "transactions", "columns": ["*"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 2890, "query_ms": 5 }
+---
+Question: Join invoices and clients to retrieve client names and invoice amounts for invoice ID 5099.
+Call: { "func_call": "select_with_join", "table": "invoices", "columns": ["clients.company_name", "invoices.amount"], "where": "invoices.client_id = clients.id AND invoices.id = 5099", "limit": 10 }
+Response: { "rows": [{"company_name": "Apex Solutions", "amount": 4500.00}, {"company_name": "Global Tech", "amount": 1200.50}], "count": 2, "query_ms": 21 }
+---
+Question: How many active sessions are currently recorded in the logs table?
+Call: { "func_call": "count_records", "table": "logs", "columns": ["*"], "where": "status = 'active'", "limit": 0 }
+Response: { "rows": [], "count": 156, "query_ms": 7 }
+---
+Question: Select customer emails and their total purchase amount by joining customers, purchases, and items, limited to the top 5 buyers.
+Call: { "func_call": "select_with_join", "table": "customers", "columns": ["customers.email", "SUM(items.price * items.qty) as total_purchase"], "where": "customers.id = purchases.cust_id AND purchases.id = items.purchase_id", "limit": 5 }
+Response: { "rows": [{"email": "james@webdev.com", "total_purchase": 22100.75}, {"email": "linda@artistry.org", "total_purchase": 18900.00}, {"email": "robert@cloudsys.net", "total_purchase": 14200.50}], "count": 3, "query_ms": 38 }
+---
+Question: Count the number of vehicles that have a mileage less than 50000.
+Call: { "func_call": "count_records", "table": "vehicles", "columns": ["*"], "where": "mileage < 50000", "limit": 0 }
+Response: { "rows": [], "count": 89, "query_ms": 9 }
+---
+Question: Retrieve book titles and library sections by joining books and shelves for items marked as 'fiction'.
+Call: { "func_call": "select_with_join", "table": "books", "columns": ["books.title", "shelves.section_name"], "where": "books.shelf_id = shelves.id AND books.genre = 'fiction'", "limit": 30 }
+Response: { "rows": [{"title": "The Silent Ocean", "section_name": "Row A"}, {"title": "Midnight Train", "section_name": "Row B"}, {"title": "Echoes of Time", "section_name": "Row A"}], "count": 3, "query_ms": 19 }
+---
+Question: What is the total count of appointments scheduled for the month of March 2024?
+Call: { "func_call": "count_records", "table": "appointments", "columns": ["*"], "where": "appoint_date >= '2024-03-01' AND appoint_date <= '2024-03-31'", "limit": 0 }
+Response: { "rows": [], "count": 312, "query_ms": 6 }
+---
+Question: Join patients and doctors to find the diagnosis of the latest visit for patient ID 202.
+Call: { "func_call": "select_with_join", "table": "patients", "columns": ["visits.diagnosis", "visits.visit_date"], "where": "patients.id = visits.patient_id AND patients.id = 202", "limit": 1 }
+Response: { "rows": [{"diagnosis": "Migraine", "visit_date": "2024-02-10"}], "count": 1, "query_ms": 11 }
+---
+Question: Count how many unique brands are listed in the electronics table.
+Call: { "func_call": "count_records", "table": "electronics", "columns": ["DISTINCT brand"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 18, "query_ms": 4 }
+---
+Question: List artist names and album titles by joining artists and albums where the artist is from 'USA'.
+Call: { "func_call": "select_with_join", "table": "artists", "columns": ["artists.name", "albums.title"], "where": "artists.id = albums.artist_id AND artists.country = 'USA'", "limit": 20 }
+Response: { "rows": [{"name": "The Rockers", "title": "Night Drive"}, {"name": "Jazz Quartet", "title": "Blue Notes"}, {"name": "Pop Stars", "title": "Summer Hits"}], "count": 3, "query_ms": 16 }
+---
+Question: Determine the number of shipment records associated with carrier 'FastLine'.
+Call: { "func_call": "count_records", "table": "shipments", "columns": ["*"], "where": "carrier_name = 'FastLine'", "limit": 0 }
+Response: { "rows": [], "count": 412, "query_ms": 5 }

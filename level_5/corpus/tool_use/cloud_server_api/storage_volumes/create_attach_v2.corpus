@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: Provision a 750GB volume for the machine learning training datasets.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 750 }
+Response: { "volume_id": "vol-ml-train-44", "size_gb": 750, "state": "available", "attached_to": null }
+
+Question: Connect the ML dataset volume vol-ml-train-44 to the GPU worker i-gpu-cluster-09.
+Call: { "func_call": "attach_volume", "volume_id": "vol-ml-train-44", "instance_id": "i-gpu-cluster-09", "size_gb": 0 }
+Response: { "volume_id": "vol-ml-train-44", "size_gb": 750, "state": "in-use", "attached_to": "i-gpu-cluster-09" }
+
+Question: Create a 100GB scratch disk for the compile server.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 100 }
+Response: { "volume_id": "vol-compile-scratch-11", "size_gb": 100, "state": "available", "attached_to": null }
+
+Question: Attach the compile scratch volume vol-compile-scratch-11 to instance i-build-agent-03.
+Call: { "func_call": "attach_volume", "volume_id": "vol-compile-scratch-11", "instance_id": "i-build-agent-03", "size_gb": 0 }
+Response: { "volume_id": "vol-compile-scratch-11", "size_gb": 100, "state": "in-use", "attached_to": "i-build-agent-03" }
+
+Question: I need a 5TB cold storage volume for compliance archives.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 5120 }
+Response: { "volume_id": "vol-compliance-archive-77", "size_gb": 5120, "state": "available", "attached_to": null }
+
+Question: Link the compliance archive volume vol-compliance-archive-77 to the audit server i-audit-secure-02.
+Call: { "func_call": "attach_volume", "volume_id": "vol-compliance-archive-77", "instance_id": "i-audit-secure-02", "size_gb": 0 }
+Response: { "volume_id": "vol-compliance-archive-77", "size_gb": 5120, "state": "in-use", "attached_to": "i-audit-secure-02" }
+
+Question: Spin up a 300GB volume for the message queue persistence layer.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 300 }
+Response: { "volume_id": "vol-mq-persist-22", "size_gb": 300, "state": "available", "attached_to": null }
+
+Question: Mount the message queue volume vol-mq-persist-22 onto the broker node i-mq-broker-05.
+Call: { "func_call": "attach_volume", "volume_id": "vol-mq-persist-22", "instance_id": "i-mq-broker-05", "size_gb": 0 }
+Response: { "volume_id": "vol-mq-persist-22", "size_gb": 300, "state": "in-use", "attached_to": "i-mq-broker-05" }
+
+Question: Generate a 1.5TB volume for the video transcoding service.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 1536 }
+Response: { "volume_id": "vol-transcode-video-33", "size_gb": 1536, "state": "available", "attached_to": null }
+
+Question: Attach the transcoding volume vol-transcode-video-33 to the encoder instance i-encoder-node-08.
+Call: { "func_call": "attach_volume", "volume_id": "vol-transcode-video-33", "instance_id": "i-encoder-node-08", "size_gb": 0 }
+Response: { "volume_id": "vol-transcode-video-33", "size_gb": 1536, "state": "in-use", "attached_to": "i-encoder-node-08" }
+
+Question: Create a 250GB high-IOPS volume for the trading engine ledger.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 250 }
+Response: { "volume_id": "vol-trade-ledger-66", "size_gb": 250, "state": "available", "attached_to": null }
+
+Question: Connect the trading ledger volume vol-trade-ledger-66 to theexchange server i-exchange-core-01.
+Call: { "func_call": "attach_volume", "volume_id": "vol-trade-ledger-66", "instance_id": "i-exchange-core-01", "size_gb": 0 }
+Response: { "volume_id": "vol-trade-ledger-66", "size_gb": 250, "state": "in-use", "attached_to": "i-exchange-core-01" }

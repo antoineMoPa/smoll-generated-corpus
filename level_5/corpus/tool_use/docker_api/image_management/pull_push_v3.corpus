@@ -1,0 +1,51 @@
+Available Tools: pull_image | push_image | build_image | list_images | remove_image | tag_image
+Call Schema: { "func_call": "string", "image": "string", "tag": "string", "registry": "string", "dockerfile": "string" }
+Response Schema: { "image_id": "string", "repository": "string", "tag": "string", "size_mb": number, "created": "string" }
+---
+Question: Download the alpine 3.18 minimal image from the official Docker Hub library.
+Call: { "func_call": "pull_image", "image": "alpine", "tag": "3.18", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2", "repository": "docker.io/library/alpine", "tag": "3.18", "size_mb": 7.4, "created": "2023-06-15T10:12:30Z" }
+
+Question: Push the payment-gateway service tagged release-4.0 to the private Quay registry.
+Call: { "func_call": "push_image", "image": "payment-gateway", "tag": "release-4.0", "registry": "quay.io/acme-corp", "dockerfile": "" }
+Response: { "image_id": "sha256:2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3", "repository": "quay.io/acme-corp/payment-gateway", "tag": "release-4.0", "size_mb": 289.3, "created": "2023-11-02T14:55:18Z" }
+
+Question: Retrieve the golang 1.21 builder image for compiling microservices.
+Call: { "func_call": "pull_image", "image": "golang", "tag": "1.21", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4", "repository": "docker.io/library/golang", "tag": "1.21", "size_mb": 890.5, "created": "2023-09-05T08:20:45Z" }
+
+Question: Upload the notification-worker image with tag v0.9.1 to the DigitalOcean container registry.
+Call: { "func_call": "push_image", "image": "notification-worker", "tag": "v0.9.1", "registry": "registry.digitalocean.com", "dockerfile": "" }
+Response: { "image_id": "sha256:4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5", "repository": "registry.digitalocean.com/project/notification-worker", "tag": "v0.9.1", "size_mb": 156.2, "created": "2023-11-05T16:40:22Z" }
+
+Question: Fetch the debian bullseye-slim base image from the default public registry.
+Call: { "func_call": "pull_image", "image": "debian", "tag": "bullseye-slim", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6", "repository": "docker.io/library/debian", "tag": "bullseye-slim", "size_mb": 80.1, "created": "2023-05-12T12:30:00Z" }
+
+Question: Push the analytics-engine image tagged beta-2 to the Oracle Cloud Infrastructure registry.
+Call: { "func_call": "push_image", "image": "analytics-engine", "tag": "beta-2", "registry": "iad.ocir.io/tenancy", "dockerfile": "" }
+Response: { "image_id": "sha256:6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7", "repository": "iad.ocir.io/tenancy/analytics-engine", "tag": "beta-2", "size_mb": 645.8, "created": "2023-11-08T09:15:33Z" }
+
+Question: Pull the redis 7.2 cluster-ready image for high-availability setup.
+Call: { "func_call": "pull_image", "image": "redis", "tag": "7.2", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8", "repository": "docker.io/library/redis", "tag": "7.2", "size_mb": 45.6, "created": "2023-10-25T11:05:10Z" }
+
+Question: Upload the user-profile-api image with the canary tag to the Netflix Spinnaker registry.
+Call: { "func_call": "push_image", "image": "user-profile-api", "tag": "canary", "registry": "spinnaker.internal.net", "dockerfile": "" }
+Response: { "image_id": "sha256:8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9", "repository": "spinnaker.internal.net/services/user-profile-api", "tag": "canary", "size_mb": 210.4, "created": "2023-11-10T13:50:27Z" }
+
+Question: Download the httpd 2.4 web server image from the official Apache library.
+Call: { "func_call": "pull_image", "image": "httpd", "tag": "2.4", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0", "repository": "docker.io/library/httpd", "tag": "2.4", "size_mb": 148.9, "created": "2023-08-18T07:25:55Z" }
+
+Question: Push the inventory-sync tool tagged hotfix-1.0.3 to the Jenkins Artifactory.
+Call: { "func_call": "push_image", "image": "inventory-sync", "tag": "hotfix-1.0.3", "registry": "artifactory.jenkins.local", "dockerfile": "" }
+Response: { "image_id": "sha256:0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1", "repository": "artifactory.jenkins.local/tools/inventory-sync", "tag": "hotfix-1.0.3", "size_mb": 98.7, "created": "2023-11-12T15:33:42Z" }
+
+Question: Retrieve the rust 1.74 slim image for building native binaries.
+Call: { "func_call": "pull_image", "image": "rust", "tag": "1.74-slim", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2", "repository": "docker.io/library/rust", "tag": "1.74-slim", "size_mb": 720.3, "created": "2023-10-30T09:45:12Z" }
+
+Question: Upload the search-indexer image with tag prod-v5.2 to the IBM Cloud Container Registry.
+Call: { "func_call": "push_image", "image": "search-indexer", "tag": "prod-v5.2", "registry": "us.icr.io", "dockerfile": "" }
+Response: { "image_id": "sha256:2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3", "repository": "us.icr.io/namespace/search-indexer", "tag": "prod-v5.2", "size_mb": 334.1, "created": "2023-11-14T10:20:05Z" }

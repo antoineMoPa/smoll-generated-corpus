@@ -1,0 +1,51 @@
+Available Tools: purchase_item | get_item_info | check_availability
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number }
+Response Schema: { "slot_id": "string", "item_name": "string", "price": number, "status": "string" }
+---
+Question: Do you have a Sprite in slot A2?
+Call: { "func_call": "check_availability", "slot_id": "A2", "quantity": 1 }
+Response: { "slot_id": "A2", "item_name": "Sprite Lemon-Lime", "price": 1.5, "status": "in_stock" }
+
+Question: Check if the doritos in slot B4 are available.
+Call: { "func_call": "check_availability", "slot_id": "B4", "quantity": 1 }
+Response: { "slot_id": "B4", "item_name": "Doritos Nacho Cheese", "price": 1.75, "status": "low_stock" }
+
+Question: Can I purchase a KitKat from slot C3 right now?
+Call: { "func_call": "check_availability", "slot_id": "C3", "quantity": 1 }
+Response: { "slot_id": "C3", "item_name": "KitKat Wafer", "price": 1.25, "status": "out_of_stock" }
+
+Question: I need a can of Pepsi from slot A5, is it there?
+Call: { "func_call": "check_availability", "slot_id": "A5", "quantity": 1 }
+Response: { "slot_id": "A5", "item_name": "Pepsi Cola", "price": 1.5, "status": "in_stock" }
+
+Question: Check availability for the crackers in slot B2.
+Call: { "func_call": "check_availability", "slot_id": "B2", "quantity": 1 }
+Response: { "slot_id": "B2", "item_name": "Cheez-It Crackers", "price": 1.0, "status": "low_stock" }
+
+Question: Is the monster energy in slot D2 sold out?
+Call: { "func_call": "check_availability", "slot_id": "D2", "quantity": 1 }
+Response: { "slot_id": "D2", "item_name": "Monster Energy", "price": 2.75, "status": "out_of_stock" }
+
+Question: Do you have any mints in slot E4?
+Call: { "func_call": "check_availability", "slot_id": "E4", "quantity": 1 }
+Response: { "slot_id": "E4", "item_name": "Altoids Peppermint", "price": 1.25, "status": "in_stock" }
+
+Question: Check if the brownies in slot C5 are available for purchase.
+Call: { "func_call": "check_availability", "slot_id": "C5", "quantity": 1 }
+Response: { "slot_id": "C5", "item_name": "Little Debbie Brownies", "price": 1.0, "status": "low_stock" }
+
+Question: Is the lemonade in slot A6 out of stock?
+Call: { "func_call": "check_availability", "slot_id": "A6", "quantity": 1 }
+Response: { "slot_id": "A6", "item_name": "Simply Lemonade", "price": 2.0, "status": "out_of_stock" }
+
+Question: Can I get a pack of almonds from slot B6?
+Call: { "func_call": "check_availability", "slot_id": "B6", "quantity": 1 }
+Response: { "slot_id": "B6", "item_name": "Blue Diamond Almonds", "price": 1.75, "status": "in_stock" }
+
+Question: Check the status of the twix bar in slot C6.
+Call: { "func_call": "check_availability", "slot_id": "C6", "quantity": 1 }
+Response: { "slot_id": "C6", "item_name": "Twix Caramel", "price": 1.0, "status": "low_stock" }
+
+Question: Is the orange juice in slot D4 available?
+Call: { "func_call": "check_availability", "slot_id": "D4", "quantity": 1 }
+Response: { "slot_id": "D4", "item_name": "Tropicana Orange Juice", "price": 1.5, "status": "out_of_stock" }

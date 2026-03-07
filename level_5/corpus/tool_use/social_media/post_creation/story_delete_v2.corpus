@@ -1,0 +1,51 @@
+Available Tools: create_post | create_story | schedule_post | delete_post
+Call Schema: { "func_call": "string", "content": "string", "media_url": "string", "hashtags": ["string"], "scheduled_at": "string" }
+Response Schema: { "post_id": "string", "status": "published|scheduled|draft", "url": "string", "timestamp": "string" }
+---
+Question: Publish a story about our winter collection launch with the runway video.
+Call: { "func_call": "create_story", "content": "Winter Wonderland is here! Check out our new coats and boots. ❄️🧥", "media_url": "https://cdn.fashion.com/videos/winter_runway_2024.mp4", "hashtags": ["#WinterFashion", "#NewCollection", "#Style"], "scheduled_at": "" }
+Response: { "post_id": "st_10452", "status": "published", "url": "https://social.app/stories/u/chic_boutique/10452", "timestamp": "2024-01-15T10:15:00Z" }
+
+Question: Delete the draft post post_6633 that has the wrong discount code.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_6633", "status": "published", "url": "", "timestamp": "2024-01-15T10:20:45Z" }
+
+Question: Share a quick story showing the setup for tonight's live concert in Austin.
+Call: { "func_call": "create_story", "content": "Sound check complete! See you all at the Moody Center tonight. 🎸🎤", "media_url": "https://cdn.music.com/photos/austin_stage_setup.jpg", "hashtags": ["#LiveMusic", "#Austin", "#ConcertNight"], "scheduled_at": "" }
+Response: { "post_id": "st_10458", "status": "published", "url": "https://social.app/stories/u/rock_band_x/10458", "timestamp": "2024-01-15T17:30:22Z" }
+
+Question: Remove the expired giveaway post post_9921 immediately to avoid confusion.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_9921", "status": "published", "url": "", "timestamp": "2024-01-15T18:05:10Z" }
+
+Question: Create a story announcing our pop-up shop opening in Tokyo next week.
+Call: { "func_call": "create_story", "content": "Tokyo, we are coming! Pop-up store opens in Shibuya on Jan 25th. 🇯🇵🛍️", "media_url": "https://cdn.global.com/images/tokyo_popup_teaser.png", "hashtags": ["#Tokyo", "#PopUpShop", "#ComingSoon"], "scheduled_at": "" }
+Response: { "post_id": "st_10465", "status": "published", "url": "https://social.app/stories/u/global_brand/10465", "timestamp": "2024-01-15T09:00:00Z" }
+
+Question: Take down the accidental double-post post_2244 from this morning.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_2244", "status": "published", "url": "", "timestamp": "2024-01-15T09:12:33Z" }
+
+Question: Post a personal story about trying the new vegan burger place in Portland.
+Call: { "func_call": "create_story", "content": "Best vegan burger I've ever had! Highly recommend the spicy mayo. 🍔🌱", "media_url": "https://cdn.foodie.com/uploads/portland_burger_pic.jpg", "hashtags": ["#VeganFood", "#Portland", "#Foodie"], "scheduled_at": "" }
+Response: { "post_id": "st_10470", "status": "published", "url": "https://social.app/stories/u/eats_with_alex/10470", "timestamp": "2024-01-15T12:45:18Z" }
+
+Question: Delete the test account post post_0055 used for API integration checks.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_0055", "status": "published", "url": "", "timestamp": "2024-01-15T13:00:05Z" }
+
+Question: Share a video story of the snowfall in the Alps this weekend.
+Call: { "func_call": "create_story", "content": "Powder day in the Alps! Perfect conditions for skiing. ⛷️❄️", "media_url": "https://cdn.ski.com/videos/alps_snowfall_hd.mp4", "hashtags": ["#Skiing", "#Alps", "#WinterSports"], "scheduled_at": "" }
+Response: { "post_id": "st_10478", "status": "published", "url": "https://social.app/stories/u/ski_pro_jen/10478", "timestamp": "2024-01-15T07:20:40Z" }
+
+Question: Remove the outdated menu post post_7788 since we changed our prices yesterday.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_7788", "status": "published", "url": "", "timestamp": "2024-01-15T14:10:25Z" }
+
+Question: Create a story featuring our employee of the month, David, from the logistics team.
+Call: { "func_call": "create_story", "content": "Shoutout to David for zero errors this month! You're the best, David! 🏆🚚", "media_url": "https://cdn.corp.com/photos/david_employee_month.jpg", "hashtags": ["#EmployeeOfTheMonth", "#TeamAppreciation", "#Logistics"], "scheduled_at": "" }
+Response: { "post_id": "st_10485", "status": "published", "url": "https://social.app/stories/u/tech_logistics/10485", "timestamp": "2024-01-15T15:30:50Z" }
+
+Question: Purge the broken image post post_3399 that failed to load for users.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_3399", "status": "published", "url": "", "timestamp": "2024-01-15T16:00:12Z" }

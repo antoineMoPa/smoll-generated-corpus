@@ -1,0 +1,51 @@
+Available Tools: get_historical_readings | get_average_reading | get_min_max | export_sensor_data
+Call Schema: { "func_call": "string", "sensor_id": "string", "from": "string", "to": "string", "interval": "string" }
+Response Schema: { "sensor_id": "string", "readings": [{ "timestamp": "string", "value": number }], "avg": number, "min": number, "max": number }
+---
+Question: Retrieve the minimum and maximum temperature readings for sensor TEMP-001 in the warehouse between yesterday morning and tonight, using an hourly interval.
+Call: { "func_call": "get_min_max", "sensor_id": "TEMP-001", "from": "2023-10-25T08:00:00Z", "to": "2023-10-26T20:00:00Z", "interval": "1h" }
+Response: { "sensor_id": "TEMP-001", "readings": [], "avg": 22.4, "min": 18.2, "max": 26.7 }
+
+Question: Export all humidity data from sensor HUM-404 located in the greenhouse for the last week as a CSV file for the agricultural team.
+Call: { "func_call": "export_sensor_data", "sensor_id": "HUM-404", "from": "2023-10-19T00:00:00Z", "to": "2023-10-26T23:59:59Z", "interval": "15m" }
+Response: { "sensor_id": "HUM-404", "readings": [{ "timestamp": "2023-10-26T12:00:00Z", "value": 65.2 }, { "timestamp": "2023-10-26T12:15:00Z", "value": 66.1 }], "avg": 64.8, "min": 45.0, "max": 82.3 }
+
+Question: Check sensor PRESS-99 in the boiler room for any pressure anomalies by getting the min and max values over the last 24 hours with 10-minute intervals.
+Call: { "func_call": "get_min_max", "sensor_id": "PRESS-99", "from": "2023-10-25T14:30:00Z", "to": "2023-10-26T14:30:00Z", "interval": "10m" }
+Response: { "sensor_id": "PRESS-99", "readings": [], "avg": 101.3, "min": 98.5, "max": 105.8 }
+
+Question: Generate a CSV export of vibration data for motor sensor VIB-202 from the start of the shift until now to analyze potential equipment failure.
+Call: { "func_call": "export_sensor_data", "sensor_id": "VIB-202", "from": "2023-10-26T06:00:00Z", "to": "2023-10-26T14:00:00Z", "interval": "1m" }
+Response: { "sensor_id": "VIB-202", "readings": [{ "timestamp": "2023-10-26T13:58:00Z", "value": 4.2 }, { "timestamp": "2023-10-26T13:59:00Z", "value": 4.5 }], "avg": 3.8, "min": 2.1, "max": 6.9 }
+
+Question: What were the lowest and highest CO2 levels recorded by sensor AIR-101 in the conference room during the all-hands meeting yesterday?
+Call: { "func_call": "get_min_max", "sensor_id": "AIR-101", "from": "2023-10-25T10:00:00Z", "to": "2023-10-25T12:00:00Z", "interval": "5m" }
+Response: { "sensor_id": "AIR-101", "readings": [], "avg": 850.0, "min": 420.0, "max": 1200.0 }
+
+Question: Export the full light intensity log from sensor LUX-303 on the factory floor for the entire month of October to check for lighting consistency.
+Call: { "func_call": "export_sensor_data", "sensor_id": "LUX-303", "from": "2023-10-01T00:00:00Z", "to": "2023-10-31T23:59:59Z", "interval": "30m" }
+Response: { "sensor_id": "LUX-303", "readings": [{ "timestamp": "2023-10-31T09:00:00Z", "value": 520.0 }, { "timestamp": "2023-10-31T09:30:00Z", "value": 515.0 }], "avg": 480.5, "min": 10.0, "max": 850.0 }
+
+Question: Identify potential freezing events by retrieving the min and max temperatures from sensor FREEZE-05 in the cold storage unit over the last 48 hours.
+Call: { "func_call": "get_min_max", "sensor_id": "FREEZE-05", "from": "2023-10-24T14:00:00Z", "to": "2023-10-26T14:00:00Z", "interval": "1h" }
+Response: { "sensor_id": "FREEZE-05", "readings": [], "avg": -18.5, "min": -22.1, "max": -15.3 }
+
+Question: Create a downloadable CSV report of water flow rates from sensor FLOW-77 at the treatment plant for the weekend to detect any leaks.
+Call: { "func_call": "export_sensor_data", "sensor_id": "FLOW-77", "from": "2023-10-21T00:00:00Z", "to": "2023-10-22T23:59:59Z", "interval": "10m" }
+Response: { "sensor_id": "FLOW-77", "readings": [{ "timestamp": "2023-10-21T12:00:00Z", "value": 120.5 }, { "timestamp": "2023-10-21T12:10:00Z", "value": 122.1 }], "avg": 115.2, "min": 90.0, "max": 145.8 }
+
+Question: Get the minimum and maximum voltage readings for battery sensor BAT-12 in the backup server room during the power outage simulation last Tuesday.
+Call: { "func_call": "get_min_max", "sensor_id": "BAT-12", "from": "2023-10-24T02:00:00Z", "to": "2023-10-24T04:00:00Z", "interval": "1m" }
+Response: { "sensor_id": "BAT-12", "readings": [], "avg": 47.2, "min": 42.1, "max": 53.8 }
+
+Question: Export soil moisture data from sensor SOIL-88 in the vertical farm for the past 3 days to optimize irrigation schedules.
+Call: { "func_call": "export_sensor_data", "sensor_id": "SOIL-88", "from": "2023-10-23T00:00:00Z", "to": "2023-10-26T00:00:00Z", "interval": "20m" }
+Response: { "sensor_id": "SOIL-88", "readings": [{ "timestamp": "2023-10-25T08:00:00Z", "value": 35.0 }, { "timestamp": "2023-10-25T08:20:00Z", "value": 34.2 }], "avg": 32.5, "min": 28.0, "max": 41.0 }
+
+Question: Analyze noise levels in the open office by finding the min and max decibel readings from sensor DB-50 during work hours yesterday.
+Call: { "func_call": "get_min_max", "sensor_id": "DB-50", "from": "2023-10-25T09:00:00Z", "to": "2023-10-25T17:00:00Z", "interval": "15m" }
+Response: { "sensor_id": "DB-50", "readings": [], "avg": 55.4, "min": 40.2, "max": 78.9 }
+
+Question: Export the complete gas concentration history from sensor GAS-09 in the parking garage for the last 12 hours to verify ventilation efficiency.
+Call: { "func_call": "export_sensor_data", "sensor_id": "GAS-09", "from": "2023-10-26T02:00:00Z", "to": "2023-10-26T14:00:00Z", "interval": "5m" }
+Response: { "sensor_id": "GAS-09", "readings": [{ "timestamp": "2023-10-26T08:30:00Z", "value": 12.5 }, { "timestamp": "2023-10-26T08:35:00Z", "value": 14.0 }], "avg": 15.2, "min": 5.0, "max": 35.5 }

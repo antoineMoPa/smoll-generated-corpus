@@ -1,0 +1,51 @@
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Show me some blues tracks by B.B. King.
+Call: { "func_call": "search_tracks", "query": "B.B. King", "limit": 4, "genre": "blues" }
+Response: { "results": [ { "id": "trk_1101", "title": "The Thrill Is Gone", "artist": "B.B. King", "duration_seconds": 312 }, { "id": "trk_1102", "title": "Every Day I Have the Blues", "artist": "B.B. King", "duration_seconds": 189 }, { "id": "trk_1103", "title": "Lucille", "artist": "B.B. King", "duration_seconds": 265 }, { "id": "trk_1104", "title": "Sweet Little Angel", "artist": "B.B. King", "duration_seconds": 203 } ], "total": 29 }
+
+Question: Search for pop artists like Dua Lipa.
+Call: { "func_call": "search_artist", "query": "Dua Lipa", "limit": 3, "genre": "pop" }
+Response: { "results": [ { "id": "art_901", "title": "Dua Lipa", "artist": "Dua Lipa", "duration_seconds": 0 }, { "id": "art_902", "title": "Lipa Sisters", "artist": "The Lipas", "duration_seconds": 0 }, { "id": "art_903", "title": "Dua Lipa Tribute", "artist": "Pop Stars United", "duration_seconds": 0 } ], "total": 7 }
+
+Question: Find techno tracks by Carl Cox.
+Call: { "func_call": "search_tracks", "query": "Carl Cox", "limit": 5, "genre": "techno" }
+Response: { "results": [ { "id": "trk_2501", "title": "I Feel the Speed", "artist": "Carl Cox", "duration_seconds": 420 }, { "id": "trk_2502", "title": "Space Calling", "artist": "Carl Cox", "duration_seconds": 385 }, { "id": "trk_2503", "title": "Global", "artist": "Carl Cox", "duration_seconds": 398 }, { "id": "trk_2504", "title": "Pure", "artist": "Carl Cox", "duration_seconds": 410 }, { "id": "trk_2505", "title": "Sunrise", "artist": "Carl Cox", "duration_seconds": 375 } ], "total": 56 }
+
+Question: Look for folk songs by Joni Mitchell.
+Call: { "func_call": "search_tracks", "query": "Joni Mitchell", "limit": 3, "genre": "folk" }
+Response: { "results": [ { "id": "trk_3101", "title": "Big Yellow Taxi", "artist": "Joni Mitchell", "duration_seconds": 152 }, { "id": "trk_3102", "title": "Both Sides Now", "artist": "Joni Mitchell", "duration_seconds": 228 }, { "id": "trk_3103", "title": "A Case of You", "artist": "Joni Mitchell", "duration_seconds": 256 } ], "total": 41 }
+
+Question: Search for funk artists like Parliament.
+Call: { "func_call": "search_artist", "query": "Parliament", "limit": 2, "genre": "funk" }
+Response: { "results": [ { "id": "art_404", "title": "Parliament", "artist": "Parliament", "duration_seconds": 0 }, { "id": "art_405", "title": "Parliament-Funkadelic", "artist": "P-Funk All Stars", "duration_seconds": 0 } ], "total": 4 }
+
+Question: Get punk tracks by The Ramones.
+Call: { "func_call": "search_tracks", "query": "The Ramones", "limit": 4, "genre": "punk" }
+Response: { "results": [ { "id": "trk_5001", "title": "Blitzkrieg Bop", "artist": "The Ramones", "duration_seconds": 132 }, { "id": "trk_5002", "title": "I Wanna Be Sedated", "artist": "The Ramones", "duration_seconds": 148 }, { "id": "trk_5003", "title": "Sheena Is a Punk Rocker", "artist": "The Ramones", "duration_seconds": 165 }, { "id": "trk_5004", "title": "Rockaway Beach", "artist": "The Ramones", "duration_seconds": 128 } ], "total": 68 }
+
+Question: Find disco tracks by Donna Summer.
+Call: { "func_call": "search_tracks", "query": "Donna Summer", "limit": 3, "genre": "disco" }
+Response: { "results": [ { "id": "trk_6001", "title": "I Feel Love", "artist": "Donna Summer", "duration_seconds": 345 }, { "id": "trk_6002", "title": "Hot Stuff", "artist": "Donna Summer", "duration_seconds": 219 }, { "id": "trk_6003", "title": "Last Dance", "artist": "Donna Summer", "duration_seconds": 480 } ], "total": 33 }
+
+Question: Search for latin artists like Shakira.
+Call: { "func_call": "search_artist", "query": "Shakira", "limit": 2, "genre": "latin" }
+Response: { "results": [ { "id": "art_801", "title": "Shakira", "artist": "Shakira", "duration_seconds": 0 }, { "id": "art_802", "title": "Shakira Covers", "artist": "Latin Hits Band", "duration_seconds": 0 } ], "total": 6 }
+
+Question: Look for grunge tracks by Nirvana.
+Call: { "func_call": "search_tracks", "query": "Nirvana", "limit": 4, "genre": "grunge" }
+Response: { "results": [ { "id": "trk_7001", "title": "Smells Like Teen Spirit", "artist": "Nirvana", "duration_seconds": 301 }, { "id": "trk_7002", "title": "Come As You Are", "artist": "Nirvana", "duration_seconds": 219 }, { "id": "trk_7003", "title": "Lithium", "artist": "Nirvana", "duration_seconds": 257 }, { "id": "trk_7004", "title": "Heart-Shaped Box", "artist": "Nirvana", "duration_seconds": 281 } ], "total": 52 }
+
+Question: Find gospel tracks by Kirk Franklin.
+Call: { "func_call": "search_tracks", "query": "Kirk Franklin", "limit": 3, "genre": "gospel" }
+Response: { "results": [ { "id": "trk_8001", "title": "Stomp", "artist": "Kirk Franklin", "duration_seconds": 245 }, { "id": "trk_8002", "title": "Lean on Me", "artist": "Kirk Franklin", "duration_seconds": 298 }, { "id": "trk_8003", "title": "Imagine Me", "artist": "Kirk Franklin", "duration_seconds": 267 } ], "total": 24 }
+
+Question: Search for ambient artists like Brian Eno.
+Call: { "func_call": "search_artist", "query": "Brian Eno", "limit": 2, "genre": "ambient" }
+Response: { "results": [ { "id": "art_601", "title": "Brian Eno", "artist": "Brian Eno", "duration_seconds": 0 }, { "id": "art_602", "title": "Eno Collective", "artist": "Ambient Project", "duration_seconds": 0 } ], "total": 3 }
+
+Question: Get ska tracks by The Specials.
+Call: { "func_call": "search_tracks", "query": "The Specials", "limit": 4, "genre": "ska" }
+Response: { "results": [ { "id": "trk_9001", "title": "Ghost Town", "artist": "The Specials", "duration_seconds": 215 }, { "id": "trk_9002", "title": "A Message to You Rudy", "artist": "The Specials", "duration_seconds": 162 }, { "id": "trk_9003", "title": "Too Much Too Young", "artist": "The Specials", "duration_seconds": 145 }, { "id": "trk_9004", "title": "Rat Race", "artist": "The Specials", "duration_seconds": 198 } ], "total": 19 }

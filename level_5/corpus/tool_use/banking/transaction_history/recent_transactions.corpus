@@ -1,0 +1,63 @@
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Show me the last 5 transactions for my checking account ending in 4421.
+Call: { "func_call": "get_transactions", "account_id": "ACC-88294421", "from_date": "2023-10-01", "to_date": "2023-10-31", "limit": 5 }
+Response: { "transactions": [{ "id": "TXN-99281", "date": "2023-10-28", "description": "Amazon.com", "amount": 45.99, "type": "debit" }, { "id": "TXN-99280", "date": "2023-10-27", "description": "Starbucks Coffee", "amount": 6.50, "type": "debit" }, { "id": "TXN-99279", "date": "2023-10-25", "description": "Direct Deposit - Employer", "amount": 2450.00, "type": "credit" }, { "id": "TXN-99278", "date": "2023-10-24", "description": "Shell Gas Station", "amount": 52.30, "type": "debit" }, { "id": "TXN-99277", "date": "2023-10-22", "description": "Netflix Subscription", "amount": 15.99, "type": "debit" }], "total": 5 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: I need to see the 10 most recent transactions for my savings account SAV-112233.
+Call: { "func_call": "get_transactions", "account_id": "SAV-112233", "from_date": "2023-09-15", "to_date": "2023-10-15", "limit": 10 }
+Response: { "transactions": [{ "id": "TXN-77123", "date": "2023-10-14", "description": "Transfer from Checking", "amount": 500.00, "type": "credit" }, { "id": "TXN-77122", "date": "2023-10-10", "description": "Interest Payment", "amount": 12.45, "type": "credit" }, { "id": "TXN-77121", "date": "2023-10-05", "description": "ATM Withdrawal", "amount": 200.00, "type": "debit" }, { "id": "TXN-77120", "date": "2023-10-01", "description": "Monthly Fee", "amount": 5.00, "type": "debit" }, { "id": "TXN-77119", "date": "2023-09-28", "description": "Whole Foods Market", "amount": 89.32, "type": "debit" }, { "id": "TXN-77118", "date": "2023-09-25", "description": "Uber Ride", "amount": 24.15, "type": "debit" }, { "id": "TXN-77117", "date": "2023-09-22", "description": "Target Store", "amount": 134.50, "type": "debit" }, { "id": "TXN-77116", "date": "2023-09-20", "description": "Electric Bill AutoPay", "amount": 112.00, "type": "debit" }, { "id": "TXN-77115", "date": "2023-09-18", "description": "Venmo Transfer", "amount": 50.00, "type": "debit" }, { "id": "TXN-77114", "date": "2023-09-16", "description": "Refund - Best Buy", "amount": 29.99, "type": "credit" }], "total": 10 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Pull the last 3 transactions for business account BUS-556677.
+Call: { "func_call": "get_transactions", "account_id": "BUS-556677", "from_date": "2023-10-20", "to_date": "2023-10-30", "limit": 3 }
+Response: { "transactions": [{ "id": "TXN-44551", "date": "2023-10-29", "description": "Office Depot", "amount": 215.40, "type": "debit" }, { "id": "TXN-44550", "date": "2023-10-28", "description": "Client Payment - Invoice 102", "amount": 1500.00, "type": "credit" }, { "id": "TXN-44549", "date": "2023-10-26", "description": "WeWork Membership", "amount": 350.00, "type": "debit" }], "total": 3 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: List the 7 latest movements on account CC-99887766.
+Call: { "func_call": "get_transactions", "account_id": "CC-99887766", "from_date": "2023-10-01", "to_date": "2023-10-31", "limit": 7 }
+Response: { "transactions": [{ "id": "TXN-33221", "date": "2023-10-30", "description": "Delta Airlines", "amount": 450.00, "type": "debit" }, { "id": "TXN-33220", "date": "2023-10-29", "description": "Hilton Hotels", "amount": 320.50, "type": "debit" }, { "id": "TXN-33219", "date": "2023-10-28", "description": "Payment Received - Thank You", "amount": 1200.00, "type": "credit" }, { "id": "TXN-33218", "date": "2023-10-25", "description": "Apple Store", "amount": 999.00, "type": "debit" }, { "id": "TXN-33217", "date": "2023-10-23", "description": "Chipotle Mexican Grill", "amount": 18.75, "type": "debit" }, { "id": "TXN-33216", "date": "2023-10-22", "description": "Spotify Premium", "amount": 10.99, "type": "debit" }, { "id": "TXN-33215", "date": "2023-10-20", "description": "Costco Wholesale", "amount": 145.20, "type": "debit" }], "total": 7 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: What are the 4 most recent entries for my joint account JNT-445566?
+Call: { "func_call": "get_transactions", "account_id": "JNT-445566", "from_date": "2023-10-15", "to_date": "2023-10-31", "limit": 4 }
+Response: { "transactions": [{ "id": "TXN-66778", "date": "2023-10-30", "description": "Mortgage Payment", "amount": 1850.00, "type": "debit" }, { "id": "TXN-66777", "date": "2023-10-28", "description": "Grocery Outlet", "amount": 167.89, "type": "debit" }, { "id": "TXN-66776", "date": "2023-10-25", "description": "Payroll Deposit", "amount": 3200.00, "type": "credit" }, { "id": "TXN-66775", "date": "2023-10-20", "description": "Water Utility", "amount": 45.60, "type": "debit" }], "total": 4 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Fetch the last 8 transactions for student account STU-123456.
+Call: { "func_call": "get_transactions", "account_id": "STU-123456", "from_date": "2023-09-01", "to_date": "2023-10-31", "limit": 8 }
+Response: { "transactions": [{ "id": "TXN-11223", "date": "2023-10-29", "description": "Textbook Store", "amount": 120.00, "type": "debit" }, { "id": "TXN-11222", "date": "2023-10-25", "description": "Campus Dining Hall", "amount": 15.50, "type": "debit" }, { "id": "TXN-11221", "date": "2023-10-20", "description": "Student Loan Disbursement", "amount": 2500.00, "type": "credit" }, { "id": "TXN-11220", "date": "2023-10-15", "description": "McDonald's", "amount": 9.25, "type": "debit" }, { "id": "TXN-11219", "date": "2023-10-10", "description": "Uber Eats", "amount": 22.40, "type": "debit" }, { "id": "TXN-11218", "date": "2023-10-05", "description": "Movie Theater", "amount": 16.00, "type": "debit" }, { "id": "TXN-11217", "date": "2023-09-30", "description": "Part-time Job Pay", "amount": 450.00, "type": "credit" }, { "id": "TXN-11216", "date": "2023-09-25", "description": "Amazon Prime Student", "amount": 7.99, "type": "debit" }], "total": 8 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Give me the 6 latest transactions for investment account INV-778899.
+Call: { "func_call": "get_transactions", "account_id": "INV-778899", "from_date": "2023-10-01", "to_date": "2023-10-31", "limit": 6 }
+Response: { "transactions": [{ "id": "TXN-55443", "date": "2023-10-30", "description": "Dividend - AAPL", "amount": 45.20, "type": "credit" }, { "id": "TXN-55442", "date": "2023-10-28", "description": "Stock Purchase - TSLA", "amount": 1200.00, "type": "debit" }, { "id": "TXN-55441", "date": "2023-10-25", "description": "Management Fee", "amount": 25.00, "type": "debit" }, { "id": "TXN-55440", "date": "2023-10-20", "description": "Dividend - MSFT", "amount": 32.15, "type": "credit" }, { "id": "TXN-55439", "date": "2023-10-15", "description": "Stock Sale - GOOGL", "amount": 3450.00, "type": "credit" }, { "id": "TXN-55438", "date": "2023-10-10", "description": "Transfer In", "amount": 5000.00, "type": "credit" }], "total": 6 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Show the last 5 activities on retirement account IRA-334455.
+Call: { "func_call": "get_transactions", "account_id": "IRA-334455", "from_date": "2023-07-01", "to_date": "2023-10-31", "limit": 5 }
+Response: { "transactions": [{ "id": "TXN-88990", "date": "2023-10-15", "description": "Quarterly Contribution", "amount": 1500.00, "type": "credit" }, { "id": "TXN-88989", "date": "2023-09-30", "

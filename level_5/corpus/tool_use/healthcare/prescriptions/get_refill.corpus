@@ -1,0 +1,51 @@
+Available Tools: get_prescriptions | request_refill | check_drug_interaction | get_medication_info
+Call Schema: { "func_call": "string", "patient_id": "string", "medication": "string", "dosage": "string" }
+Response Schema: { "prescription_id": "string", "medication": "string", "dosage": "string", "refills_remaining": number, "status": "string" }
+---
+Question: Can you pull up the current prescription details for patient P89201 regarding their metformin 500mg?
+Call: { "func_call": "get_prescriptions", "patient_id": "P89201", "medication": "metformin", "dosage": "500mg" }
+Response: { "prescription_id": "RX-2023-8891", "medication": "metformin", "dosage": "500mg", "refills_remaining": 2, "status": "active" }
+
+Question: I need to request a refill for patient P10492's lisinopril 10mg prescription.
+Call: { "func_call": "request_refill", "patient_id": "P10492", "medication": "lisinopril", "dosage": "10mg" }
+Response: { "prescription_id": "RX-2023-9902", "medication": "lisinopril", "dosage": "10mg", "refills_remaining": 0, "status": "refill_requested" }
+
+Question: What is the status of the atorvastatin 20mg prescription for patient P33219?
+Call: { "func_call": "get_prescriptions", "patient_id": "P33219", "medication": "atorvastatin", "dosage": "20mg" }
+Response: { "prescription_id": "RX-2023-7743", "medication": "atorvastatin", "dosage": "20mg", "refills_remaining": 5, "status": "active" }
+
+Question: Please check the prescription record for patient P55102 taking metformin 850mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P55102", "medication": "metformin", "dosage": "850mg" }
+Response: { "prescription_id": "RX-2023-6621", "medication": "metformin", "dosage": "850mg", "refills_remaining": 1, "status": "active" }
+
+Question: Submit a refill request for patient P77384 who is on lisinopril 20mg.
+Call: { "func_call": "request_refill", "patient_id": "P77384", "medication": "lisinopril", "dosage": "20mg" }
+Response: { "prescription_id": "RX-2023-5519", "medication": "lisinopril", "dosage": "20mg", "refills_remaining": 3, "status": "refill_requested" }
+
+Question: Retrieve the prescription information for patient P99283 and their atorvastatin 40mg dosage.
+Call: { "func_call": "get_prescriptions", "patient_id": "P99283", "medication": "atorvastatin", "dosage": "40mg" }
+Response: { "prescription_id": "RX-2023-4408", "medication": "atorvastatin", "dosage": "40mg", "refills_remaining": 0, "status": "expired" }
+
+Question: Patient P22190 needs a refill on their metformin 1000mg immediately.
+Call: { "func_call": "request_refill", "patient_id": "P22190", "medication": "metformin", "dosage": "1000mg" }
+Response: { "prescription_id": "RX-2023-3397", "medication": "metformin", "dosage": "1000mg", "refills_remaining": 4, "status": "refill_requested" }
+
+Question: Look up the current prescription status for patient P44561 taking lisinopril 5mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P44561", "medication": "lisinopril", "dosage": "5mg" }
+Response: { "prescription_id": "RX-2023-2286", "medication": "lisinopril", "dosage": "5mg", "refills_remaining": 6, "status": "active" }
+
+Question: Can you get the details for patient P66732's atorvastatin 80mg prescription?
+Call: { "func_call": "get_prescriptions", "patient_id": "P66732", "medication": "atorvastatin", "dosage": "80mg" }
+Response: { "prescription_id": "RX-2023-1175", "medication": "atorvastatin", "dosage": "80mg", "refills_remaining": 2, "status": "active" }
+
+Question: Initiate a refill for patient P88901 on their lisinopril 40mg regimen.
+Call: { "func_call": "request_refill", "patient_id": "P88901", "medication": "lisinopril", "dosage": "40mg" }
+Response: { "prescription_id": "RX-2023-0064", "medication": "lisinopril", "dosage": "40mg", "refills_remaining": 1, "status": "refill_requested" }
+
+Question: I need to verify the prescription details for patient P11223 taking metformin 500mg.
+Call: { "func_call": "get_prescriptions", "patient_id": "P11223", "medication": "metformin", "dosage": "500mg" }
+Response: { "prescription_id": "RX-2024-1234", "medication": "metformin", "dosage": "500mg", "refills_remaining": 3, "status": "active" }
+
+Question: Please process a refill request for patient P33445 who is prescribed atorvastatin 10mg.
+Call: { "func_call": "request_refill", "patient_id": "P33445", "medication": "atorvastatin", "dosage": "10mg" }
+Response: { "prescription_id": "RX-2024-5678", "medication": "atorvastatin", "dosage": "10mg", "refills_remaining": 0, "status": "refill_requested" }

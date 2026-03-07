@@ -1,0 +1,51 @@
+Available Tools: get_weather_alerts | get_storm_warnings | get_air_quality_index
+Call Schema: { "func_call": "string", "location": "string", "severity": "string" }
+Response Schema: { "alerts": [{ "type": "string", "severity": "string", "message": "string", "expires": "string" }] }
+---
+Question: Are there any heat advisories currently active for Phoenix?
+Call: { "func_call": "get_weather_alerts", "location": "Phoenix, AZ", "severity": "high" }
+Response: { "alerts": [{ "type": "Excessive Heat Warning", "severity": "high", "message": "Dangerously hot conditions with temperatures up to 115F expected. Drink plenty of fluids and stay in an air-conditioned room.", "expires": "2024-06-15T20:00:00Z" }] }
+
+Question: Check for hurricane warnings along the coast of Charleston.
+Call: { "func_call": "get_storm_warnings", "location": "Charleston, SC", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Hurricane Warning", "severity": "extreme", "message": "Sustained winds of 120 mph expected. Storm surge could raise water levels 10 feet above ground.", "expires": "2024-06-16T06:00:00Z" }] }
+
+Question: I need to know the air quality status for Los Angeles due to wildfires.
+Call: { "func_call": "get_air_quality_index", "location": "Los Angeles, CA", "severity": "severe" }
+Response: { "alerts": [{ "type": "Air Quality Alert", "severity": "severe", "message": "PM2.5 levels are hazardous due to nearby wildfire smoke. Avoid all outdoor exertion.", "expires": "2024-06-15T23:59:00Z" }] }
+
+Question: Is there a winter storm warning issued for Boise?
+Call: { "func_call": "get_weather_alerts", "location": "Boise, ID", "severity": "high" }
+Response: { "alerts": [{ "type": "Winter Storm Warning", "severity": "high", "message": "Heavy snow expected with accumulations of 12 to 18 inches. Roads will become impassable.", "expires": "2024-06-17T12:00:00Z" }] }
+
+Question: Get storm warnings for Tampa regarding tropical depression conditions.
+Call: { "func_call": "get_storm_warnings", "location": "Tampa, FL", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Tropical Storm Watch", "severity": "moderate", "message": "Tropical storm conditions are possible within 48 hours. Prepare for gusty winds and heavy rain.", "expires": "2024-06-16T18:00:00Z" }] }
+
+Question: Are there any severe thunderstorm warnings for Nashville?
+Call: { "func_call": "get_weather_alerts", "location": "Nashville, TN", "severity": "severe" }
+Response: { "alerts": [{ "type": "Severe Thunderstorm Warning", "severity": "severe", "message": "Golf ball size hail and 70 mph wind gusts are imminent. Move to an interior room on the lowest floor.", "expires": "2024-06-15T19:30:00Z" }] }
+
+Question: Check for dust storm alerts in Albuquerque due to high winds.
+Call: { "func_call": "get_weather_alerts", "location": "Albuquerque, NM", "severity": "high" }
+Response: { "alerts": [{ "type": "Dust Storm Warning", "severity": "high", "message": "Visibility will drop to near zero suddenly. Pull over and turn off lights if driving.", "expires": "2024-06-15T22:00:00Z" }] }
+
+Question: What ice storm alerts are currently active for Atlanta?
+Call: { "func_call": "get_storm_warnings", "location": "Atlanta, GA", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Ice Storm Warning", "severity": "extreme", "message": "Significant ice accumulation expected. Power outages and tree damage are likely.", "expires": "2024-06-16T10:00:00Z" }] }
+
+Question: Retrieve any fog advisories for San Francisco bay area.
+Call: { "func_call": "get_weather_alerts", "location": "San Francisco, CA", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Dense Fog Advisory", "severity": "moderate", "message": "Visibility reduced to less than one quarter mile. Use low beam headlights and allow extra travel time.", "expires": "2024-06-16T09:00:00Z" }] }
+
+Question: Is there a typhoon warning in effect for Honolulu?
+Call: { "func_call": "get_storm_warnings", "location": "Honolulu, HI", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Typhoon Warning", "severity": "extreme", "message": "Catastrophic wind damage and life-threatening storm surge expected. Evacuate immediately if ordered.", "expires": "2024-06-17T00:00:00Z" }] }
+
+Question: Check for smoke alerts regarding air quality in Seattle.
+Call: { "func_call": "get_air_quality_index", "location": "Seattle, WA", "severity": "high" }
+Response: { "alerts": [{ "type": "Smoke Advisory", "severity": "high", "message": "Unhealthy air quality due to drifting smoke. Sensitive groups should remain indoors.", "expires": "2024-06-15T21:00:00Z" }] }
+
+Question: Get details on any nor'easter warnings for Boston.
+Call: { "func_call": "get_storm_warnings", "location": "Boston, MA", "severity": "high" }
+Response: { "alerts": [{ "type": "Nor'easter Warning", "severity": "high", "message": "Heavy snow and strong northeasterly winds will create blizzard conditions along the coast.", "expires": "2024-06-16T14:00:00Z" }] }

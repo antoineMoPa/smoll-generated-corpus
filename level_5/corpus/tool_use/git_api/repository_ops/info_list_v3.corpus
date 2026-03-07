@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+---
+Question: What are the current statistics for the django repository owned by the django organization?
+Call: { "func_call": "get_repo_info", "owner": "django", "repo": "django", "description": "", "private": false }
+Response: { "repo": "django", "owner": "django", "url": "https://github.com/django/django", "stars": 72300, "forks": 31500, "default_branch": "main" }
+
+Question: Could you retrieve the fork count and URL for the kubernetes project under google?
+Call: { "func_call": "get_repo_info", "owner": "google", "repo": "kubernetes", "description": "", "private": false }
+Response: { "repo": "kubernetes", "owner": "google", "url": "https://github.com/google/kubernetes", "stars": 98400, "forks": 35200, "default_branch": "master" }
+
+Question: Show me all public repositories associated with the user 'alice-coder'.
+Call: { "func_call": "list_repos", "owner": "alice-coder", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "alice-coder", "url": "https://github.com/alice-coder", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: I need to see the private repositories listed under the 'fintech-solutions' organization.
+Call: { "func_call": "list_repos", "owner": "fintech-solutions", "repo": "", "description": "", "private": true }
+Response: { "repo": "*", "owner": "fintech-solutions", "url": "https://github.com/fintech-solutions", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: How many stars does the redis repository have under the redis owner?
+Call: { "func_call": "get_repo_info", "owner": "redis", "repo": "redis", "description": "", "private": false }
+Response: { "repo": "redis", "owner": "redis", "url": "https://github.com/redis/redis", "stars": 65800, "forks": 24100, "default_branch": "unstable" }
+
+Question: Please provide details on the angular project maintained by google.
+Call: { "func_call": "get_repo_info", "owner": "google", "repo": "angular", "description": "", "private": false }
+Response: { "repo": "angular", "owner": "google", "url": "https://github.com/google/angular", "stars": 89200, "forks": 23400, "default_branch": "main" }
+
+Question: List every repository available for the 'open-source-foundation' account.
+Call: { "func_call": "list_repos", "owner": "open-source-foundation", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "open-source-foundation", "url": "https://github.com/open-source-foundation", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Get the default branch and star count for the rust-lang/rust repository.
+Call: { "func_call": "get_repo_info", "owner": "rust-lang", "repo": "rust", "description": "", "private": false }
+Response: { "repo": "rust", "owner": "rust-lang", "url": "https://github.com/rust-lang/rust", "stars": 81500, "forks": 11200, "default_branch": "master" }
+
+Question: Can you show me the stats for the private 'legacy-migration' repo owned by 'corp-it-dept'?
+Call: { "func_call": "get_repo_info", "owner": "corp-it-dept", "repo": "legacy-migration", "description": "", "private": true }
+Response: { "repo": "legacy-migration", "owner": "corp-it-dept", "url": "https://github.com/corp-it-dept/legacy-migration", "stars": 3, "forks": 1, "default_branch": "develop" }
+
+Question: Retrieve information about the expressjs project under the expressjs organization.
+Call: { "func_call": "get_repo_info", "owner": "expressjs", "repo": "express", "description": "", "private": false }
+Response: { "repo": "express", "owner": "expressjs", "url": "https://github.com/expressjs/express", "stars": 61200, "forks": 19800, "default_branch": "master" }
+
+Question: Display all repositories for the developer 'bob-smith-ops', including private ones.
+Call: { "func_call": "list_repos", "owner": "bob-smith-ops", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "bob-smith-ops", "url": "https://github.com/bob-smith-ops", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: What is the URL and fork count for the numpy library under the numpy owner?
+Call: { "func_call": "get_repo_info", "owner": "numpy", "repo": "numpy", "description": "", "private": false }
+Response: { "repo": "numpy", "owner": "numpy", "url": "https://github.com/numpy/numpy", "stars": 24500, "forks": 9300, "default_branch": "main" }

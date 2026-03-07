@@ -1,0 +1,51 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Find me some wireless headphones under $100 sorted by price.
+Call: { "func_call": "search_products", "query": "wireless headphones", "category": "electronics", "min_price": 0, "max_price": 100, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "elec_001", "name": "SoundBlaze Wireless Buds", "price": 29.99, "rating": 4.2, "in_stock": true }, { "id": "elec_002", "name": "AudioPro Headset", "price": 45.50, "rating": 4.5, "in_stock": true }, { "id": "elec_003", "name": "BassKing Over-Ear", "price": 89.99, "rating": 4.7, "in_stock": false } ], "total": 3 }
+
+Question: Show me men's cotton t-shirts in the clothing category.
+Call: { "func_call": "search_products", "query": "cotton t-shirt", "category": "clothing", "min_price": 10, "max_price": 50, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "cloth_101", "name": "Classic White Tee", "price": 15.00, "rating": 4.8, "in_stock": true }, { "id": "cloth_102", "name": "Navy Blue Crew Neck", "price": 18.50, "rating": 4.6, "in_stock": true }, { "id": "cloth_103", "name": "Graphic Print Tee", "price": 22.00, "rating": 4.3, "in_stock": true } ], "total": 3 }
+
+Question: I need a hardcover mystery novel under $20.
+Call: { "func_call": "search_products", "query": "mystery novel hardcover", "category": "books", "min_price": 5, "max_price": 20, "sort_by": "relevance" }
+Response: { "products": [ { "id": "book_205", "name": "The Silent Witness", "price": 14.99, "rating": 4.4, "in_stock": true }, { "id": "book_206", "name": "Midnight at the Library", "price": 12.50, "rating": 4.1, "in_stock": true }, { "id": "book_207", "name": "Shadows of London", "price": 19.95, "rating": 4.9, "in_stock": false } ], "total": 3 }
+
+Question: Search for ceramic coffee mugs in home goods.
+Call: { "func_call": "search_products", "query": "ceramic coffee mug", "category": "home_goods", "min_price": 8, "max_price": 25, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "home_301", "name": "Minimalist White Mug", "price": 9.99, "rating": 4.5, "in_stock": true }, { "id": "home_302", "name": "Handpainted Floral Cup", "price": 14.50, "rating": 4.7, "in_stock": true }, { "id": "home_303", "name": "Travel Ceramic Tumbler", "price": 22.00, "rating": 4.3, "in_stock": true } ], "total": 3 }
+
+Question: Find gaming laptops between $800 and $1500 sorted by rating.
+Call: { "func_call": "search_products", "query": "gaming laptop", "category": "electronics", "min_price": 800, "max_price": 1500, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_050", "name": "NitroBlade Gaming Rig", "price": 1299.00, "rating": 4.8, "in_stock": true }, { "id": "elec_051", "name": "PixelForce Laptop", "price": 999.00, "rating": 4.6, "in_stock": true }, { "id": "elec_052", "name": "QuantumBook Pro", "price": 1450.00, "rating": 4.5, "in_stock": false } ], "total": 3 }
+
+Question: Look for women's running shoes under $120.
+Call: { "func_call": "search_products", "query": "women running shoes", "category": "clothing", "min_price": 50, "max_price": 120, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "cloth_201", "name": "SwiftRun Trainers", "price": 65.00, "rating": 4.4, "in_stock": true }, { "id": "cloth_202", "name": "CloudStep Sneakers", "price": 89.99, "rating": 4.7, "in_stock": true }, { "id": "cloth_203", "name": "Marathon Pro Feet", "price": 115.00, "rating": 4.9, "in_stock": true } ], "total": 3 }
+
+Question: Search for science fiction books published recently.
+Call: { "func_call": "search_products", "query": "science fiction", "category": "books", "min_price": 10, "max_price": 30, "sort_by": "relevance" }
+Response: { "products": [ { "id": "book_301", "name": "Stars Beyond Horizon", "price": 16.99, "rating": 4.6, "in_stock": true }, { "id": "book_302", "name": "The Android Dream", "price": 18.50, "rating": 4.2, "in_stock": true }, { "id": "book_303", "name": "Galactic Empires", "price": 24.99, "rating": 4.8, "in_stock": false } ], "total": 3 }
+
+Question: Find bamboo bed sheets for a queen size bed.
+Call: { "func_call": "search_products", "query": "bamboo bed sheets queen", "category": "home_goods", "min_price": 40, "max_price": 100, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "home_401", "name": "EcoSoft Bamboo Set", "price": 79.99, "rating": 4.9, "in_stock": true }, { "id": "home_402", "name": "PureRest Linens", "price": 65.00, "rating": 4.7, "in_stock": true }, { "id": "home_403", "name": "GreenDream Sheets", "price": 55.50, "rating": 4.5, "in_stock": true } ], "total": 3 }
+
+Question: Show me 4K monitors under $300.
+Call: { "func_call": "search_products", "query": "4K monitor", "category": "electronics", "min_price": 150, "max_price": 300, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "elec_080", "name": "ViewClear 27-inch", "price": 199.00, "rating": 4.3, "in_stock": true }, { "id": "elec_081", "name": "UltraDisplay Pro", "price": 249.99, "rating": 4.6, "in_stock": true }, { "id": "elec_082", "name": "PixelPerfect Screen", "price": 289.00, "rating": 4.4, "in_stock": false } ], "total": 3 }
+
+Question: Find denim jackets for men in the clothing section.
+Call: { "func_call": "search_products", "query": "men denim jacket", "category": "clothing", "min_price": 30, "max_price": 90, "sort_by": "relevance" }
+Response: { "products": [ { "id": "cloth_301", "name": "Vintage Wash Jacket", "price": 49.99, "rating": 4.5, "in_stock": true }, { "id": "cloth_302", "name": "Classic Blue Denim", "price": 59.00, "rating": 4.7, "in_stock": true }, { "id": "cloth_303", "name": "Distressed Worker Jacket", "price": 75.50, "rating": 4.2, "in_stock": true } ], "total": 3 }
+
+Question: Search for cookbooks focused on Italian cuisine.
+Call: { "func_call": "search_products", "query": "Italian cookbook", "category": "books", "min_price": 15, "max_price": 40, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "book_401", "name": "Taste of Tuscany", "price": 29.99, "rating": 4.9, "in_stock": true }, { "id": "book_402", "name": "Pasta Mastery", "price": 22.50, "rating": 4.6, "in_stock": true }, { "id": "book_403", "name": "Roman Kitchens", "price": 18.95, "rating": 4.4, "in_stock": false } ], "total": 3 }
+
+Question: Find smart thermostats compatible with Alexa.
+Call: { "func_call": "search_products", "query": "smart thermostat alexa", "category": "electronics", "min_price": 80, "max_price": 250, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_090", "name": "EcoTemp Smart Hub", "price": 129.99, "rating": 4.8, "in_stock": true }, { "id": "elec_091", "name": "ClimateControl Plus", "price": 149.00, "rating": 4.7, "in_stock": true }, { "id": "elec_092", "name": "HomeSense Thermostat", "price": 99.50, "rating": 4.5, "in_stock": true } ], "total": 3 }

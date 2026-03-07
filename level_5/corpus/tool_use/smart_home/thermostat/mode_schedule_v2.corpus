@@ -1,0 +1,51 @@
+Available Tools: set_temperature | get_temperature | set_mode | get_schedule
+Call Schema: { "func_call": "string", "device_id": "string", "temperature": "number|null", "mode": "string|null" }
+Response Schema: { "device_id": "string", "current_temp": "number", "target_temp": "number", "mode": "string" }
+---
+Question: Adjust the kitchen thermostat to 23 degrees for cooking dinner.
+Call: { "func_call": "set_temperature", "device_id": "therm_kit_09", "temperature": 23.0, "mode": null }
+Response: { "device_id": "therm_kit_09", "current_temp": 20.1, "target_temp": 23.0, "mode": "heat" }
+
+Question: Lower the attic temperature setting to 18 degrees before bed.
+Call: { "func_call": "set_temperature", "device_id": "therm_att_10", "temperature": 18.0, "mode": null }
+Response: { "device_id": "therm_att_10", "current_temp": 22.4, "target_temp": 18.0, "mode": "cool" }
+
+Question: Raise the sunroom heater target to 25 degrees for the morning sun.
+Call: { "func_call": "set_temperature", "device_id": "therm_sun_11", "temperature": 25.0, "mode": null }
+Response: { "device_id": "therm_sun_11", "current_temp": 19.5, "target_temp": 25.0, "mode": "heat" }
+
+Question: Decrease the library cooling setpoint to 20 degrees during study time.
+Call: { "func_call": "set_temperature", "device_id": "therm_lib_12", "temperature": 20.0, "mode": null }
+Response: { "device_id": "therm_lib_12", "current_temp": 23.8, "target_temp": 20.0, "mode": "cool" }
+
+Question: What is the current temperature reading in the playroom?
+Call: { "func_call": "get_temperature", "device_id": "therm_play_13", "temperature": null, "mode": null }
+Response: { "device_id": "therm_play_13", "current_temp": 21.3, "target_temp": 22.0, "mode": "auto" }
+
+Question: Check the real-time temperature status of the wine cellar unit.
+Call: { "func_call": "get_temperature", "device_id": "therm_wine_14", "temperature": null, "mode": null }
+Response: { "device_id": "therm_wine_14", "current_temp": 14.5, "target_temp": 14.0, "mode": "cool" }
+
+Question: Report the immediate temperature value for the laundry room sensor.
+Call: { "func_call": "get_temperature", "device_id": "therm_laun_15", "temperature": null, "mode": null }
+Response: { "device_id": "therm_laun_15", "current_temp": 24.2, "target_temp": 24.0, "mode": "fan" }
+
+Question: Fetch the current temperature data from the porch outdoor unit.
+Call: { "func_call": "get_temperature", "device_id": "therm_porch_16", "temperature": null, "mode": null }
+Response: { "device_id": "therm_porch_16", "current_temp": 12.7, "target_temp": 15.0, "mode": "heat" }
+
+Question: Retrieve the weekly programming schedule for the kitchen device.
+Call: { "func_call": "get_schedule", "device_id": "therm_kit_09", "temperature": null, "mode": null }
+Response: { "device_id": "therm_kit_09", "current_temp": 21.0, "target_temp": 23.0, "mode": "heat" }
+
+Question: Inspect the active timetable configured on the attic controller.
+Call: { "func_call": "get_schedule", "device_id": "therm_att_10", "temperature": null, "mode": null }
+Response: { "device_id": "therm_att_10", "current_temp": 20.5, "target_temp": 18.0, "mode": "cool" }
+
+Question: Show me the programmed routine for the sunroom heating system.
+Call: { "func_call": "get_schedule", "device_id": "therm_sun_11", "temperature": null, "mode": null }
+Response: { "device_id": "therm_sun_11", "current_temp": 22.1, "target_temp": 25.0, "mode": "heat" }
+
+Question: Verify the existing schedule settings on the library climate control.
+Call: { "func_call": "get_schedule", "device_id": "therm_lib_12", "temperature": null, "mode": null }
+Response: { "device_id": "therm_lib_12", "current_temp": 21.5, "target_temp": 20.0, "mode": "cool" }

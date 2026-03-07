@@ -1,0 +1,51 @@
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: I need to start a return for order ORD-9921, item SKU-445, because the headphones are defective.
+Call: { "func_call": "initiate_return", "order_id": "ORD-9921", "item_id": "SKU-445", "reason": "defective" }
+Response: { "return_id": "RET-883291", "status": "approved", "refund_amount": 89.99, "label_url": "https://shipping.example.com/labels/RET-883291.pdf" }
+
+Question: Please initiate a return for item SKU-102 in order ORD-5543; the shirt is the wrong size.
+Call: { "func_call": "initiate_return", "order_id": "ORD-5543", "item_id": "SKU-102", "reason": "wrong size" }
+Response: { "return_id": "RET-112045", "status": "approved", "refund_amount": 24.50, "label_url": "https://shipping.example.com/labels/RET-112045.pdf" }
+
+Question: The coffee maker I received (SKU-778, order ORD-3321) is not as described on the website. Start a return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-3321", "item_id": "SKU-778", "reason": "not as described" }
+Response: { "return_id": "RET-559023", "status": "pending_review", "refund_amount": 120.00, "label_url": "https://shipping.example.com/labels/RET-559023.pdf" }
+
+Question: I want to return the blue sweater (SKU-229) from order ORD-7712 because it is the wrong size.
+Call: { "func_call": "initiate_return", "order_id": "ORD-7712", "item_id": "SKU-229", "reason": "wrong size" }
+Response: { "return_id": "RET-664102", "status": "approved", "refund_amount": 45.00, "label_url": "https://shipping.example.com/labels/RET-664102.pdf" }
+
+Question: Start a return process for order ORD-1109, item SKU-998, due to a defective battery.
+Call: { "func_call": "initiate_return", "order_id": "ORD-1109", "item_id": "SKU-998", "reason": "defective" }
+Response: { "return_id": "RET-337812", "status": "approved", "refund_amount": 199.99, "label_url": "https://shipping.example.com/labels/RET-337812.pdf" }
+
+Question: The book cover for SKU-551 in order ORD-4490 is torn and not as described. Please initiate a return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-4490", "item_id": "SKU-551", "reason": "not as described" }
+Response: { "return_id": "RET-992144", "status": "approved", "refund_amount": 15.99, "label_url": "https://shipping.example.com/labels/RET-992144.pdf" }
+
+Question: I received the wrong color for item SKU-334 in order ORD-8823. It's the wrong size effectively since I can't wear it. Initiate return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-8823", "item_id": "SKU-334", "reason": "wrong size" }
+Response: { "return_id": "RET-445129", "status": "approved", "refund_amount": 32.00, "label_url": "https://shipping.example.com/labels/RET-445129.pdf" }
+
+Question: The blender motor stopped working immediately (defective). Order is ORD-2234, item is SKU-667. Start the return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-2234", "item_id": "SKU-667", "reason": "defective" }
+Response: { "return_id": "RET-778234", "status": "approved", "refund_amount": 75.50, "label_url": "https://shipping.example.com/labels/RET-778234.pdf" }
+
+Question: Please generate a return label for item SKU-889 in order ORD-6655. The product specifications were not as described.
+Call: { "func_call": "initiate_return", "order_id": "ORD-6655", "item_id": "SKU-889", "reason": "not as described" }
+Response: { "return_id": "RET-221908", "status": "approved", "refund_amount": 210.00, "label_url": "https://shipping.example.com/labels/RET-221908.pdf" }
+
+Question: Initiate a return for order ORD-9988, item SKU-123, because the shoes are the wrong size.
+Call: { "func_call": "initiate_return", "order_id": "ORD-9988", "item_id": "SKU-123", "reason": "wrong size" }
+Response: { "return_id": "RET-556677", "status": "approved", "refund_amount": 110.00, "label_url": "https://shipping.example.com/labels/RET-556677.pdf" }
+
+Question: The lamp arrived with a cracked base (defective). Order ID is ORD-3344, item ID is SKU-456.
+Call: { "func_call": "initiate_return", "order_id": "ORD-3344", "item_id": "SKU-456", "reason": "defective" }
+Response: { "return_id": "RET-998877", "status": "approved", "refund_amount": 55.25, "label_url": "https://shipping.example.com/labels/RET-998877.pdf" }
+
+Question: Start a return for the jacket (SKU-789) in order ORD-1122. The material feels completely different than advertised, so it is not as described.
+Call: { "func_call": "initiate_return", "order_id": "ORD-1122", "item_id": "SKU-789", "reason": "not as described" }
+Response: { "return_id": "RET-334455", "status": "pending_review", "refund_amount": 150.00, "label_url": "https://shipping.example.com/labels/RET-334455.pdf" }

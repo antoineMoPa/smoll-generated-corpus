@@ -1,0 +1,51 @@
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Acknowledge the light intensity spike on sensor LUX-501 in the greenhouse; it was triggered by a camera flash during inspection.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "LUX-501", "metric": "illuminance", "threshold": 5000, "condition": "above" }
+Response: { "alert_id": "ALT-1029", "sensor_id": "LUX-501", "status": "acknowledged", "threshold": 5000 }
+
+Question: Disable the fuel level alert for tank sensor FUL-33 while we conduct a routine refueling operation during the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "FUL-33", "metric": "fuel_level", "threshold": 10, "condition": "below" }
+Response: { "alert_id": "ALT-2048", "sensor_id": "FUL-33", "status": "disabled", "threshold": 10 }
+
+Question: Please acknowledge the rotational speed anomaly on turbine sensor RPM-77; the reading was a false positive caused by a sensor glitch.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "RPM-77", "metric": "rotational_speed", "threshold": 3500, "condition": "above" }
+Response: { "alert_id": "ALT-3067", "sensor_id": "RPM-77", "status": "acknowledged", "threshold": 3500 }
+
+Question: Turn off the soil moisture alert for garden sensor SOL-12 while the automated irrigation system undergoes scheduled testing.
+Call: { "func_call": "disable_alert", "sensor_id": "SOL-12", "metric": "soil_moisture", "threshold": 20, "condition": "below" }
+Response: { "alert_id": "ALT-4086", "sensor_id": "SOL-12", "status": "disabled", "threshold": 20 }
+
+Question: Acknowledge the radiation level spike on sensor RAD-09 in the lab; it was a false alarm triggered by a medical isotope delivery.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "RAD-09", "metric": "radiation", "threshold": 0.5, "condition": "above" }
+Response: { "alert_id": "ALT-5005", "sensor_id": "RAD-09", "status": "acknowledged", "threshold": 0.5 }
+
+Question: Disable the gas concentration alert for sensor GAS-44 in the parking garage during the ventilation duct cleaning maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "GAS-44", "metric": "co_level", "threshold": 35, "condition": "above" }
+Response: { "alert_id": "ALT-6024", "sensor_id": "GAS-44", "status": "disabled", "threshold": 35 }
+
+Question: Please acknowledge the pH imbalance alert on pool sensor PH-88; the reading was inaccurate due to a recent chemical shock treatment.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "PH-88", "metric": "ph_level", "threshold": 6.8, "condition": "below" }
+Response: { "alert_id": "ALT-7043", "sensor_id": "PH-88", "status": "acknowledged", "threshold": 6.8 }
+
+Question: Disable the wind speed alert for meteorological mast sensor WND-22 while we perform blade lubrication during the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "WND-22", "metric": "wind_speed", "threshold": 25, "condition": "above" }
+Response: { "alert_id": "ALT-8062", "sensor_id": "WND-22", "status": "disabled", "threshold": 25 }
+
+Question: Acknowledge the seismic vibration alert on building sensor SES-05; it was a false alarm caused by heavy traffic on the nearby bridge.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "SES-05", "metric": "seismic_activity", "threshold": 2.1, "condition": "above" }
+Response: { "alert_id": "ALT-9081", "sensor_id": "SES-05", "status": "acknowledged", "threshold": 2.1 }
+
+Question: Turn off the battery voltage alert for backup unit BAT-15 while we replace the cells in the scheduled maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "BAT-15", "metric": "battery_voltage", "threshold": 11.5, "condition": "below" }
+Response: { "alert_id": "ALT-0100", "sensor_id": "BAT-15", "status": "disabled", "threshold": 11.5 }
+
+Question: Acknowledge the oxygen depletion alert on submarine sensor OXY-30; the reading was a false positive due to a calibration error.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "OXY-30", "metric": "oxygen_level", "threshold": 19, "condition": "below" }
+Response: { "alert_id": "ALT-1119", "sensor_id": "OXY-30", "status": "acknowledged", "threshold": 19 }
+
+Question: Disable the torque limit alert for robotic arm sensor TRQ-66 while we recalibrate the joint motors during the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "TRQ-66", "metric": "torque", "threshold": 50, "condition": "above" }
+Response: { "alert_id": "ALT-2138", "sensor_id": "TRQ-66", "status": "disabled", "threshold": 50 }

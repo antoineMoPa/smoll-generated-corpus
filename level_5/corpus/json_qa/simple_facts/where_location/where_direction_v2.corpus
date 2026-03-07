@@ -1,0 +1,59 @@
+Context: The blue mug was left on the windowsill beside the potted plant. It has been there since breakfast.
+Input: {"question": "Where is the blue mug?"}
+Output: {"answer": "on the windowsill"}
+
+Context: Marcus stored his winter boots in the bottom drawer of the wardrobe. He only takes them out when it snows.
+Input: {"question": "Where did Marcus put his winter boots?"}
+Output: {"answer": "in the bottom drawer of the wardrobe"}
+
+Context: The antique clock ticks loudly on the mantelpiece above the fireplace. It has belonged to the family for generations.
+Input: {"question": "Where is the antique clock?"}
+Output: {"answer": "on the mantelpiece"}
+
+Context: During the interview, the candidate sat in the blue armchair opposite the recruiter. The room was quiet and calm.
+Input: {"question": "Where did the candidate sit?"}
+Output: {"answer": "in the blue armchair"}
+
+Context: You can locate the fire extinguisher mounted on the wall near the stairwell exit. Please keep the path clear.
+Input: {"question": "Where is the fire extinguisher?"}
+Output: {"answer": "on the wall near the stairwell exit"}
+
+Context: The dog slept soundly under the dining table while the family ate dinner. No one disturbed him.
+Input: {"question": "Where is the dog?"}
+Output: {"answer": "under the dining table"}
+
+Context: Please place the recycling bin next to the garage door before tonight. The truck arrives early tomorrow.
+Input: {"question": "Where should I place the recycling bin?"}
+Output: {"answer": "next to the garage door"}
+
+Context: The lost earring was discovered behind the dresser, tangled in some lint. It had been missing for months.
+Input: {"question": "Where was the lost earring?"}
+Output: {"answer": "behind the dresser"}
+
+Context: The fountain flows in the middle of the botanical garden, surrounded by lily pads. Visitors often sit nearby.
+Input: {"question": "Where does the fountain flow?"}
+Output: {"answer": "in the middle of the botanical garden"}
+
+Context: She concealed the diary beneath the loose floorboard in her bedroom. No one else knew about that spot.
+Input: {"question": "Where did she conceal the diary?"}
+Output: {"answer": "beneath the loose floorboard"}
+
+Context: The scooter is leaning against the fence near the park entrance. Remember to wear a helmet.
+Input: {"question": "Where is the scooter?"}
+Output: {"answer": "against the fence"}
+
+Context: Your table for the banquet is in the back corner, adjacent to the stage. The view will be excellent.
+Input: {"question": "Where is my table?"}
+Output: {"answer": "in the back corner"}
+
+Context: The bird constructed its nest among the branches of the old oak tree in the backyard. It was hidden well.
+Input: {"question": "Where did the bird construct its nest?"}
+Output: {"answer": "among the branches of the old oak tree"}
+
+Context: We stored the camping gear in the attic above the garage, wrapped in plastic. It was ready for the summer trip.
+Input: {"question": "Where were the camping gear?"}
+Output: {"answer": "in the attic above the garage"}
+
+Context: The invitation was slipped inside the envelope on the hallway console. You should open it soon.
+Input: {"question": "Where was the invitation?"}
+Output: {"answer": "inside the envelope on the hallway console"}

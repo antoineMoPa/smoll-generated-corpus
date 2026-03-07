@@ -1,0 +1,51 @@
+Available Tools: sum_column | avg_column | group_by_query | min_max_query
+Call Schema: { "func_call": "string", "table": "string", "column": "string", "group_by": "string", "where": "string" }
+Response Schema: { "result": number, "groups": [{ "key": "string", "value": number }] }
+---
+Question: What is the maximum rainfall recorded per state during the monsoon season?
+Call: { "func_call": "min_max_query", "table": "climate_records", "column": "rainfall_mm", "group_by": "state_name", "where": "season = 'Monsoon'" }
+Response: { "result": 340.5, "groups": [{ "key": "Kerala", "value": 340.5 }, { "key": "Goa", "value": 280.0 }, { "key": "Maharashtra", "value": 310.2 }] }
+
+Question: Find the minimum battery level percentage per device model after 10 hours of usage.
+Call: { "func_call": "min_max_query", "table": "device_tests", "column": "battery_percent", "group_by": "model_name", "where": "test_duration = 10" }
+Response: { "result": 15.0, "groups": [{ "key": "Phone-X", "value": 22.0 }, { "key": "Phone-Y", "value": 15.0 }, { "key": "Tablet-Z", "value": 35.0 }] }
+
+Question: Show the highest page load time grouped by browser type for the mobile site.
+Call: { "func_call": "min_max_query", "table": "performance_logs", "column": "load_time_ms", "group_by": "browser_type", "where": "platform = 'Mobile'" }
+Response: { "result": 4500, "groups": [{ "key": "Chrome", "value": 3200 }, { "key": "Safari", "value": 4500 }, { "key": "Firefox", "value": 3800 }] }
+
+Question: What is the lowest interest rate offered per loan type this quarter?
+Call: { "func_call": "min_max_query", "table": "bank_offers", "column": "interest_rate", "group_by": "loan_type", "where": "quarter = 'Q2'" }
+Response: { "result": 3.25, "groups": [{ "key": "Mortgage", "value": 4.50 }, { "key": "Auto", "value": 5.10 }, { "key": "Personal", "value": 3.25 }] }
+
+Question: Identify the maximum wait time in minutes per clinic branch on Mondays.
+Call: { "func_call": "min_max_query", "table": "patient_wait_times", "column": "wait_minutes", "group_by": "branch_id", "where": "day_of_week = 'Monday'" }
+Response: { "result": 45, "groups": [{ "key": "Branch-A", "value": 30 }, { "key": "Branch-B", "value": 45 }, { "key": "Branch-C", "value": 25 }] }
+
+Question: Retrieve the minimum protein content per food item in the vegan menu.
+Call: { "func_call": "min_max_query", "table": "nutrition_data", "column": "protein_g", "group_by": "item_name", "where": "diet_type = 'Vegan'" }
+Response: { "result": 2.5, "groups": [{ "key": "Salad", "value": 4.0 }, { "key": "Soup", "value": 2.5 }, { "key": "Wrap", "value": 8.0 }] }
+
+Question: What was the peak wind speed per city during the storm alert?
+Call: { "func_call": "min_max_query", "table": "storm_monitoring", "column": "wind_speed_kph", "group_by": "city", "where": "alert_level = 'High'" }
+Response: { "result": 120, "groups": [{ "key": "Miami", "value": 110 }, { "key": "Tampa", "value": 120 }, { "key": "Orlando", "value": 95 }] }
+
+Question: Find the highest conversion rate per marketing channel for the summer campaign.
+Call: { "func_call": "min_max_query", "table": "campaign_metrics", "column": "conversion_rate", "group_by": "channel", "where": "campaign = 'Summer2024'" }
+Response: { "result": 5.8, "groups": [{ "key": "Email", "value": 4.2 }, { "key": "Social", "value": 5.8 }, { "key": "Search", "value": 3.9 }] }
+
+Question: Determine the minimum latency per region for the gaming server network.
+Call: { "func_call": "min_max_query", "table": "server_ping", "column": "latency_ms", "group_by": "region_code", "where": "service = 'Gaming'" }
+Response: { "result": 12, "groups": [{ "key": "US-East", "value": 15 }, { "key": "EU-West", "value": 12 }, { "key": "AP-South", "value": 45 }] }
+
+Question: What is the maximum number of attendees per workshop session in March?
+Call: { "func_call": "min_max_query", "table": "event_registrations", "column": "attendee_count", "group_by": "session_id", "where": "month = 'March'" }
+Response: { "result": 150, "groups": [{ "key": "WS-01", "value": 120 }, { "key": "WS-02", "value": 150 }, { "key": "WS-03", "value": 85 }] }
+
+Question: Show the lowest defect rate per production line for the automotive plant.
+Call: { "func_call": "min_max_query", "table": "quality_control", "column": "defect_rate", "group_by": "line_number", "where": "facility = 'AutoPlant1'" }
+Response: { "result": 0.5, "groups": [{ "key": "Line-1", "value": 1.2 }, { "key": "Line-2", "value": 0.5 }, { "key": "Line-3", "value": 0.9 }] }
+
+Question: Identify the highest average rating per app category in the tech store.
+Call: { "func_call": "min_max_query", "table": "app_reviews", "column": "avg_rating", "group_by": "category", "where": "store = 'TechStore'" }
+Response: { "result": 4.9, "groups": [{ "key": "Productivity", "value": 4.5 }, { "key": "Games", "value": 4.9 }, { "key": "Education", "value": 4.2 }] }

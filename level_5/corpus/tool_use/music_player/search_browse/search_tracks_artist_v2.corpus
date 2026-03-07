@@ -1,0 +1,51 @@
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Show me some blues songs by B.B. King.
+Call: { "func_call": "search_tracks", "query": "B.B. King", "limit": 4, "genre": "blues" }
+Response: { "results": [ { "id": "trk_1101", "title": "The Thrill Is Gone", "artist": "B.B. King", "duration_seconds": 312 }, { "id": "trk_1102", "title": "Sweet Little Angel", "artist": "B.B. King", "duration_seconds": 198 }, { "id": "trk_1103", "title": "Every Day I Have the Blues", "artist": "B.B. King", "duration_seconds": 185 }, { "id": "trk_1104", "title": "Lucille", "artist": "B.B. King", "duration_seconds": 264 } ], "total": 56 }
+
+Question: Find pop artists similar to Dua Lipa.
+Call: { "func_call": "search_artist", "query": "Dua Lipa", "limit": 3, "genre": "pop" }
+Response: { "results": [ { "id": "art_801", "title": "Dua Lipa", "artist": "Dua Lipa", "duration_seconds": 0 }, { "id": "art_802", "title": "Lipa Sisters", "artist": "The Lipas", "duration_seconds": 0 }, { "id": "art_803", "title": "Dua Lipa Tribute", "artist": "Pop Stars United", "duration_seconds": 0 } ], "total": 12 }
+
+Question: Search for techno tracks by Daft Punk.
+Call: { "func_call": "search_tracks", "query": "Daft Punk", "limit": 5, "genre": "techno" }
+Response: { "results": [ { "id": "trk_2201", "title": "One More Time", "artist": "Daft Punk", "duration_seconds": 320 }, { "id": "trk_2202", "title": "Harder Better Faster Stronger", "artist": "Daft Punk", "duration_seconds": 244 }, { "id": "trk_2203", "title": "Around the World", "artist": "Daft Punk", "duration_seconds": 429 }, { "id": "trk_2204", "title": "Digital Love", "artist": "Daft Punk", "duration_seconds": 301 }, { "id": "trk_2205", "title": "Instant Crush", "artist": "Daft Punk", "duration_seconds": 337 } ], "total": 48 }
+
+Question: Look up folk songs by Bob Dylan.
+Call: { "func_call": "search_tracks", "query": "Bob Dylan", "limit": 4, "genre": "folk" }
+Response: { "results": [ { "id": "trk_3301", "title": "Blowin' in the Wind", "artist": "Bob Dylan", "duration_seconds": 165 }, { "id": "trk_3302", "title": "The Times They Are a-Changin'", "artist": "Bob Dylan", "duration_seconds": 194 }, { "id": "trk_3303", "title": "Like a Rolling Stone", "artist": "Bob Dylan", "duration_seconds": 369 }, { "id": "trk_3304", "title": "Knockin' on Heaven's Door", "artist": "Bob Dylan", "duration_seconds": 152 } ], "total": 72 }
+
+Question: Find Latin artists like Shakira.
+Call: { "func_call": "search_artist", "query": "Shakira", "limit": 2, "genre": "latin" }
+Response: { "results": [ { "id": "art_901", "title": "Shakira", "artist": "Shakira", "duration_seconds": 0 }, { "id": "art_902", "title": "Shakira Covers", "artist": "Latin Voices", "duration_seconds": 0 } ], "total": 9 }
+
+Question: Get disco tracks by ABBA.
+Call: { "func_call": "search_tracks", "query": "ABBA", "limit": 3, "genre": "disco" }
+Response: { "results": [ { "id": "trk_4401", "title": "Dancing Queen", "artist": "ABBA", "duration_seconds": 231 }, { "id": "trk_4402", "title": "Mamma Mia", "artist": "ABBA", "duration_seconds": 213 }, { "id": "trk_4403", "title": "Take a Chance on Me", "artist": "ABBA", "duration_seconds": 245 } ], "total": 34 }
+
+Question: Search for punk artists like Green Day.
+Call: { "func_call": "search_artist", "query": "Green Day", "limit": 3, "genre": "punk" }
+Response: { "results": [ { "id": "art_1001", "title": "Green Day", "artist": "Green Day", "duration_seconds": 0 }, { "id": "art_1002", "title": "Green Day Revival", "artist": "Punk Rockers", "duration_seconds": 0 }, { "id": "art_1003", "title": "Day Green", "artist": "Day Green", "duration_seconds": 0 } ], "total": 14 }
+
+Question: Find ambient tracks by Brian Eno.
+Call: { "func_call": "search_tracks", "query": "Brian Eno", "limit": 4, "genre": "ambient" }
+Response: { "results": [ { "id": "trk_5501", "title": "An Ending (Ascent)", "artist": "Brian Eno", "duration_seconds": 243 }, { "id": "trk_5502", "title": "Music for Airports", "artist": "Brian Eno", "duration_seconds": 1020 }, { "id": "trk_5503", "title": "Reflection", "artist": "Brian Eno", "duration_seconds": 330 }, { "id": "trk_5504", "title": "Deep Blue Day", "artist": "Brian Eno", "duration_seconds": 238 } ], "total": 29 }
+
+Question: Look for grunge songs by Nirvana.
+Call: { "func_call": "search_tracks", "query": "Nirvana", "limit": 5, "genre": "grunge" }
+Response: { "results": [ { "id": "trk_6601", "title": "Smells Like Teen Spirit", "artist": "Nirvana", "duration_seconds": 301 }, { "id": "trk_6602", "title": "Come as You Are", "artist": "Nirvana", "duration_seconds": 219 }, { "id": "trk_6603", "title": "Lithium", "artist": "Nirvana", "duration_seconds": 257 }, { "id": "trk_6604", "title": "Heart-Shaped Box", "artist": "Nirvana", "duration_seconds": 281 }, { "id": "trk_6605", "title": "All Apologies", "artist": "Nirvana", "duration_seconds": 230 } ], "total": 41 }
+
+Question: Search for gospel artists like Kirk Franklin.
+Call: { "func_call": "search_artist", "query": "Kirk Franklin", "limit": 2, "genre": "gospel" }
+Response: { "results": [ { "id": "art_1101", "title": "Kirk Franklin", "artist": "Kirk Franklin", "duration_seconds": 0 }, { "id": "art_1102", "title": "Franklin Choir", "artist": "The Franklin Choir", "duration_seconds": 0 } ], "total": 7 }
+
+Question: Find synthwave tracks by The Midnight.
+Call: { "func_call": "search_tracks", "query": "The Midnight", "limit": 3, "genre": "synthwave" }
+Response: { "results": [ { "id": "trk_7701", "title": "Sunset", "artist": "The Midnight", "duration_seconds": 254 }, { "id": "trk_7702", "title": "Los Angeles", "artist": "The Midnight", "duration_seconds": 289 }, { "id": "trk_7703", "title": "Vampires", "artist": "The Midnight", "duration_seconds": 312 } ], "total": 22 }
+
+Question: Get ska songs by The Specials.
+Call: { "func_call": "search_tracks", "query": "The Specials", "limit": 4, "genre": "ska" }
+Response: { "results": [ { "id": "trk_8801", "title": "Ghost Town", "artist": "The Specials", "duration_seconds": 215 }, { "id": "trk_8802", "title": "A Message to You Rudy", "artist": "The Specials", "duration_seconds": 168 }, { "id": "trk_8803", "title": "Too Much Too Young", "artist": "The Specials", "duration_seconds": 132 }, { "id": "trk_8804", "title": "Friday Night Saturday Morning", "artist": "The Specials", "duration_seconds": 204 } ], "total": 18 }

@@ -1,0 +1,39 @@
+| Context: The warehouse received a shipment containing 150kg of steel, 75kg of aluminum, and 200kg of copper. The invoice listed the weights separately for customs purposes. Each crate was labeled with its specific metal type and mass. | Input: {"question": "What quantities were ordered?"} | Output: {"answer": ["150kg", "75kg", "200kg"]}
+
+| Context: During the sale, the laptop was priced at $899.99, the monitor cost $245.50, and the keyboard was marked down to $45.00. The total bill included these three items plus tax. Customers could buy them individually or as a bundle. | Input: {"question": "List all prices mentioned."} | Output: {"answer": ["$899.99", "$245.50", "$45.00"]}
+
+| Context: The marathon runner completed the first leg in 2 hours, the second leg in 1.5 hours, and the final sprint in 45 minutes. Her coach recorded each split time carefully. The total duration was just under four hours. | Input: {"question": "What were the durations for each leg?"} | Output: {"answer": ["2 hours", "1.5 hours", "45 minutes"]}
+
+| Context: We need to order 500 units of screws, 300 units of bolts, and 1200 units of washers for the assembly line. The supplier confirmed availability for all counts immediately. Delivery is expected within three business days. | Input: {"question": "What quantities were ordered?"} | Output: {"answer": ["500 units", "300 units", "1200 units"]}
+
+| Context: The recipe calls for 250ml of milk, 100g of sugar, and 50ml of vanilla extract. Mix these ingredients gently before adding the flour. The batter should be smooth before baking. | Input: {"question": "List all measurements mentioned in the recipe."} | Output: {"answer": ["250ml", "100g", "50ml"]}
+
+| Context: The construction project required 40 tons of gravel, 15 tons of sand, and 8 tons of cement. The delivery trucks arrived sequentially throughout the morning. Site managers verified each weight upon arrival. | Input: {"question": "What quantities of materials were delivered?"} | Output: {"answer": ["40 tons", "15 tons", "8 tons"]}
+
+| Context: Ticket prices for the concert were $55.00 for general admission, $85.00 for VIP, and $120.00 for the front row package. Sales opened at noon and sold out within an hour. Fans were eager to secure their spots. | Input: {"question": "List all prices mentioned for the tickets."} | Output: {"answer": ["$55.00", "$85.00", "$120.00"]}
+
+| Context: The infant grew 2.5cm in the first month, 3cm in the second month, and 2.8cm in the third month. The pediatrician noted the steady growth pattern. Parents were relieved to see healthy development. | Input: {"question": "What growth measurements were recorded?"} | Output: {"answer": ["2.5cm", "3cm", "2.8cm"]}
+
+| Context: The server room maintains a temperature of 18°C, while the humidity is kept at 45% and the air pressure at 1013 hPa. Sensors monitor these values every minute. Any deviation triggers an automatic alert. | Input: {"question": "List all environmental readings mentioned."} | Output: {"answer": ["18°C", "45%", "1013 hPa"]}
+
+| Context: She bought 3 dozen eggs, 5 pounds of flour, and 2 liters of oil for the bakery. The ingredients were loaded into the van before sunrise. Production starts as soon as she arrives. | Input: {"question": "What quantities were purchased?"} | Output: {"answer": ["3 dozen", "5 pounds", "2 liters"]}
+
+| Context: The electric bill showed charges of $120.45 for January, $98.20 for February, and $135.60 for March. Usage peaked during the winter months due to heating. The average monthly cost was calculated accordingly. | Input: {"question": "List all prices mentioned on the bill."} | Output: {"answer": ["$120.45", "$98.20", "$135.60"]}
+
+| Context: The hiking trail spans 12 miles in total, with the first section being 4 miles, the second 5 miles, and the last 3 miles. Hikers usually take a break at the midpoint. The terrain varies from flat to steep. | Input: {"question": "What distances are mentioned for the trail sections?"} | Output: {"answer": ["12 miles", "4 miles", "5 miles", "3 miles"]}
+
+| Context: The factory produced 1500 widgets on Monday, 1650 on Tuesday, and 1420 on Wednesday. Production slowed slightly mid-week due to maintenance. Targets were still met for the quarter. | Input: {"question": "What production counts were achieved?"} | Output: {"answer": ["1500 widgets", "1650 widgets", "1420 widgets"]}
+
+| Context: Please add 10mg of compound A, 25mg of compound B, and 5mg of catalyst C to the solution. Stir continuously until the mixture turns blue. The reaction should complete within ten minutes. | Input: {"question": "What quantities of chemicals are needed?"} | Output: {"answer": ["10mg", "25mg", "5mg"]}
+
+| Context: The real estate listing featured a house for $450,000, a condo for $275,000, and a townhouse for $380,000. Buyers scheduled viewings for all three properties this weekend. Market interest remains high in the area. | Input: {"question": "List all prices mentioned in the listing."} | Output: {"answer": ["$450,000", "$275,000", "$380,000"]}
+
+| Context: The flight lasted 6 hours to London, followed by a 2-hour layover, and then another 4 hours to Tokyo. Passengers were tired but excited to reach their final destination. The airline provided meals during both legs. | Input: {"question": "What durations are mentioned for the trip?"} | Output: {"answer": ["6 hours", "2 hours", "4 hours"]}
+
+| Context: The gym membership costs $30.00 per month, the personal training session is $60.00 per hour, and the annual pass is $300.00. New members receive a discount on the first month. Facilities are open 24 hours a day. | Input: {"question": "List all prices mentioned for services."} | Output: {"answer": ["$30.00", "$60.00", "$300.00"]}
+
+| Context: The aquarium holds 500 gallons of water, requires 20 pounds of salt, and needs 5 pounds of gravel for the bottom. Setup takes approximately four hours to complete properly. Fish can be added after the cycle stabilizes. | Input: {"question": "What quantities are required for setup?"} | Output: {"answer": ["500 gallons", "20 pounds", "5 pounds"]}
+
+| Context: The inventory count revealed 85 laptops, 42 monitors, and 130 keyboards in the storage room. Several items were awaiting repair before resale. The manager updated the database immediately. | Input: {"question": "What counts were found in the inventory?"} | Output: {"answer": ["85 laptops", "42 monitors", "130 keyboards"]}
+
+| Context: The paint mixture requires 3 liters of base, 0.5 liters of tint, and 0.2 liters of hardener. Apply two coats for the best finish. Drying time is approximately 4 hours between coats. | Input: {"question": "List all measurements mentioned for the paint."} | Output: {"answer": ["3 liters", "0.5 liters", "0.2 liters"]}

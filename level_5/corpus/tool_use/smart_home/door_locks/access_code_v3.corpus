@@ -1,0 +1,87 @@
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Program a new entry code 4219 for the contractor working on the rear gate RG-10.
+Call: { "func_call": "set_access_code", "lock_id": "RG-10", "user_id": "contractor_bob", "code": "4219" }
+Response: { "lock_id": "RG-10", "state": "locked", "last_action_by": "contractor_bob", "timestamp": "2023-11-01T07:45:12Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Confirm whether the studio door ST-11 is currently locked or open.
+Call: { "func_call": "get_lock_status", "lock_id": "ST-11", "user_id": "artist_main", "code": "" }
+Response: { "lock_id": "ST-11", "state": "unlocked", "last_action_by": "artist_main", "timestamp": "2023-11-01T09:22:30Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Create a short-term pass 6780 for the babysitter at the side door SD-12.
+Call: { "func_call": "set_access_code", "lock_id": "SD-12", "user_id": "sitter_lisa", "code": "6780" }
+Response: { "lock_id": "SD-12", "state": "locked", "last_action_by": "sitter_lisa", "timestamp": "2023-11-01T17:30:45Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Inspect the lock state of the pool house PH-13 to ensure safety.
+Call: { "func_call": "get_lock_status", "lock_id": "PH-13", "user_id": "pool_monitor", "code": "" }
+Response: { "lock_id": "PH-13", "state": "locked", "last_action_by": "pool_monitor", "timestamp": "2023-11-01T20:15:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Assign access code 2048 to the cleaner for the office entrance OE-14.
+Call: { "func_call": "set_access_code", "lock_id": "OE-14", "user_id": "cleaner_team", "code": "2048" }
+Response: { "lock_id": "OE-14", "state": "locked", "last_action_by": "cleaner_team", "timestamp": "2023-11-02T06:00:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Check if the warehouse door WH-15 was secured after the shift ended.
+Call: { "func_call": "get_lock_status", "lock_id": "WH-15", "user_id": "shift_lead", "code": "" }
+Response: { "lock_id": "WH-15", "state": "locked", "last_action_by": "shift_lead", "timestamp": "2023-11-01T23:55:10Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Generate a visitor code 9102 for the real estate agent at the front gate FG-16.
+Call: { "func_call": "set_access_code", "lock_id": "FG-16", "user_id": "agent_smith", "code": "9102" }
+Response: { "lock_id": "FG-16", "state": "locked", "last_action_by": "agent_smith", "timestamp": "2023-11-02T10:30:25Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Verify the current status of the cellar door CL-17 before storing wine.
+Call: { "func_call": "get_lock_status", "lock_id": "CL-17", "user_id": "wine_keeper", "code": "" }
+Response: { "lock_id": "CL-17", "state": "unlocked", "last_action_by": "wine_keeper", "timestamp": "2023-11-02T14:12:40Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Set up a temporary PIN 3345 for the electrician at the service entrance SV-18.
+Call: { "func_call": "set_access_code", "lock_id": "SV-18", "user_id": "electrician_pro", "code": "3345" }
+Response: { "lock_id": "SV-18", "state": "locked", "last_action_by": "electrician_pro", "timestamp": "2023-11-02T08:45:55Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Retrieve the lock condition of the attic access AT-19 to prevent unauthorized entry.
+Call: { "func_call": "get_lock_status", "lock_id": "AT-19", "user_id": "home_admin", "code": "" }
+Response: { "lock_id": "AT-19", "state": "locked", "last_action_by": "home_admin", "timestamp": "2023-11-02T16:20:05Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Issue a one-time code 7890 for the caterer entering through the kitchen door KD-20.
+Call: { "func_call": "set_access_code", "lock_id": "KD-20", "user_id": "caterer_chef", "code": "7890" }
+Response: { "lock_id": "KD-20", "state": "locked", "last_action_by": "caterer_chef", "timestamp": "2023-11-02T11:50:30Z" }

@@ -1,0 +1,74 @@
+"_transactions", "account_id": "CHK-1122-3344", "from_date": "2023-07-01", "to_date": "2023-07-07", "limit": 25 }
+Response: { "transactions": [{ "id": "txn_5501", "date": "2023-07-06", "description": "Uber Ride to Airport", "amount": 45.20, "type": "debit" }, { "id": "txn_5490", "date": "2023-07-04", "description": "Lyft Concert Trip", "amount": 22.50, "type": "debit" }, { "id": "txn_5485", "date": "2023-07-02", "description": "Uber Eats Order", "amount": 31.15, "type": "debit" }], "total": 3 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Show me the last 20 transactions for my investment account ending in 7788.
+Call: { "func_call": "get_transactions", "account_id": "INV-5566-7788", "from_date": "", "to_date": "", "limit": 20 }
+Response: { "transactions": [{ "id": "txn_9921", "date": "2023-11-05", "description": "Dividend Payout - Tech Corp", "amount": 150.00, "type": "credit" }, { "id": "txn_9920", "date": "2023-11-03", "description": "Stock Purchase - Auto Inc", "amount": 2500.00, "type": "debit" }, { "id": "txn_9919", "date": "2023-10-28", "description": "Management Fee", "amount": 25.00, "type": "debit" }, { "id": "txn_9918", "date": "2023-10-25", "description": "Dividend Payout - Energy Ltd", "amount": 85.50, "type": "credit" }, { "id": "txn_9917", "date": "2023-10-20", "description": "Stock Sale - Retail Co", "amount": 1200.00, "type": "credit" }], "total": 5 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Search for all 'Netflix' charges in my primary checking account for the year 2023.
+Call: { "func_call": "search_transactions", "account_id": "CHK-2233-4455", "from_date": "2023-01-01", "to_date": "2023-12-31", "limit": 15 }
+Response: { "transactions": [{ "id": "txn_3341", "date": "2023-12-15", "description": "Netflix Monthly Subscription", "amount": 15.99, "type": "debit" }, { "id": "txn_3241", "date": "2023-11-15", "description": "Netflix Monthly Subscription", "amount": 15.99, "type": "debit" }, { "id": "txn_3141", "date": "2023-10-15", "description": "Netflix Monthly Subscription", "amount": 15.99, "type": "debit" }, { "id": "txn_3041", "date": "2023-09-15", "description": "Netflix Monthly Subscription", "amount": 15.99, "type": "debit" }], "total": 4 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Retrieve my full transaction history for May 2023 for account BUS-9988, limited to the first 10 entries.
+Call: { "func_call": "get_transactions", "account_id": "BUS-9988-1122", "from_date": "2023-05-01", "to_date": "2023-05-31", "limit": 10 }
+Response: { "transactions": [{ "id": "txn_7701", "date": "2023-05-30", "description": "Office Supplies Purchase", "amount": 340.20, "type": "debit" }, { "id": "txn_7690", "date": "2023-05-28", "description": "Client Consultation Fee", "amount": 500.00, "type": "credit" }, { "id": "txn_7680", "date": "2023-05-25", "description": "Software License Renewal", "amount": 120.00, "type": "debit" }, { "id": "txn_7670", "date": "2023-05-20", "description": "Business Lunch", "amount": 85.40, "type": "debit" }], "total": 4 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Find any transactions related to 'Shell' or 'Exxon' in the last month for my fuel card.
+Call: { "func_call": "search_transactions", "account_id": "FUEL-4433-2211", "from_date": "2023-10-01", "to_date": "2023-10-31", "limit": 30 }
+Response: { "transactions": [{ "id": "txn_8801", "date": "2023-10-29", "description": "Shell Gas Station", "amount": 55.00, "type": "debit" }, { "id": "txn_8750", "date": "2023-10-15", "description": "Exxon Mobil Fuel", "amount": 48.75, "type": "debit" }, { "id": "txn_8700", "date": "2023-10-05", "description": "Shell Car Wash", "amount": 12.00, "type": "debit" }], "total": 3 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: List all debits made from my hobby account between June 1st and June 30th, 2023.
+Call: { "func_call": "get_transactions", "account_id": "HOBBY-6677-8899", "from_date": "2023-06-01", "to_date": "2023-06-30", "limit": 50 }
+Response: { "transactions": [{ "id": "txn_4401", "date": "2023-06-28", "description": "Art Supplies Store", "amount": 125.50, "type": "debit" }, { "id": "txn_4350", "date": "2023-06-20", "description": "Online Gaming Subscription", "amount": 14.99, "type": "debit" }, { "id": "txn_4300", "date": "2023-06-15", "description": "Garden Center Purchase", "amount": 89.00, "type": "debit" }, { "id": "txn_4250", "date": "2023-06-05", "description": "Bookstore", "amount": 45.20, "type": "debit" }], "total": 4 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Search for 'Spotify' transactions in my student account for the semester starting September 2023.
+Call: { "func_call": "search_transactions", "account_id": "STU-9900-1122", "from_date": "2023-09-01", "to_date": "2023-12-31", "limit": 20 }
+Response: { "transactions": [{ "id": "txn_5501", "date": "2023-12-01", "description": "Spotify Premium Student", "amount": 5.99, "type": "debit" }, { "id": "txn_5401", "date": "2023-11-01", "description": "Spotify Premium Student", "amount": 5.99, "type": "debit" }, { "id": "txn_5301", "date": "2023-10-01", "description": "Spotify Premium Student", "amount": 5.99, "type": "debit" }, { "id": "txn_5201", "date": "2023-09-01", "description": "Spotify Premium Student", "amount": 5.99, "type": "debit" }], "total": 4 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Get the most recent 8 transactions for my retirement account regardless of date.
+Call: { "func_call": "get_transactions", "account_id": "RET-3344-5566", "from_date": "", "to_date": "", "limit": 8 }
+Response: { "transactions": [{ "id": "txn_6601", "date": "2023-11-10", "description": "Quarterly Contribution", "amount": 1500.00, "type": "credit" }, { "id": "txn_6590", "date": "2023-11-05", "description": "Fund Rebalancing Fee", "amount": 10.00, "type": "debit" }, { "id": "txn_6580", "date": "2023-10-10", "description": "Quarterly Contribution", "amount": 1500.00, "type": "credit" }, { "id": "txn_6570", "date": "2023-10-05", "description": "Administrative Fee", "amount": 10.00, "type": "debit" }, { "id": "txn_6560", "date": "2023-09-10", "description": "Quarterly Contribution", "amount": 1500.00, "type": "credit" }], "total": 5 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Find all hotel-related transactions for my corporate card from April 1, 2023 to April 30, 2023.
+Call: { "func_call": "search_transactions", "account_id": "CORP-7788-9900", "from_date": "2023-04-01", "to_date": "2023-04-30", "limit": 25 }
+Response: { "transactions": [{ "id": "txn_2201", "date": "2023-04-25", "description": "Hilton Hotel Stay", "amount": 320.00, "type": "debit" }, { "id": "txn_2150", "date": "2023-04-15", "description": "Marriott Conference Room", "amount": 150.00, "type": "debit" }, { "id": "txn_2100", "date": "2023-04-05", "description": "Holiday Inn Express", "amount": 185.50, "type": "debit" }], "total": 3 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Retrieve transactions for account CHK-8899 between February 14th and February 28th, limited to 12 records.
+Call: { "func_call": "get_transactions", "account_id": "CHK-8899-0011", "from_date": "2023-02-14", "to_date": "2023-02-28", "limit": 12 }
+Response: { "transactions": [{ "id": "txn_1101", "date": "2023-02-28", "description": "Valentine's Dinner", "amount": 120.00, "type": "debit" }, { "id": "txn_1090", "date": "2023-02-20", "description": "Florist Purchase", "amount": 65.00, "type": "debit" }, { "id": "txn_1080", "date": "2023-02-15", "description": "Chocolate Shop", "amount": 25.50, "type": "debit" }, { "id": "txn_1070", "date": "2023-02-14", "description": "Jewelry Store", "amount": 250.00, "type": "debit" }], "total": 4 }

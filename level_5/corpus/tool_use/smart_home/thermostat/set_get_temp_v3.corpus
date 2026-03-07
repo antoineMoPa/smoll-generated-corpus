@@ -1,0 +1,51 @@
+Available Tools: set_temperature | get_temperature | set_mode | get_schedule
+Call Schema: { "func_call": "string", "device_id": "string", "temperature": number, "mode": "heat|cool|auto|off" }
+Response Schema: { "device_id": "string", "current_temp": number, "target_temp": number, "mode": "string" }
+---
+Question: Warm up the den to 23 degrees before guests arrive.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_den_11", "temperature": 23, "mode": "heat" }
+Response: { "device_id": "thermostat_den_11", "current_temp": 19.4, "target_temp": 23, "mode": "heat" }
+
+Question: What is the temperature currently reading in the library?
+Call: { "func_call": "get_temperature", "device_id": "thermostat_library_12", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_library_12", "current_temp": 20.8, "target_temp": 22, "mode": "auto" }
+
+Question: Cool down the attic space to 21 degrees immediately.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_attic_13", "temperature": 21, "mode": "cool" }
+Response: { "device_id": "thermostat_attic_13", "current_temp": 27.5, "target_temp": 21, "mode": "cool" }
+
+Question: Please switch the laundry room thermostat to 18 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_laundry_14", "temperature": 18, "mode": "off" }
+Response: { "device_id": "thermostat_laundry_14", "current_temp": 22.1, "target_temp": 18, "mode": "off" }
+
+Question: Check the settings on the porch thermostat unit.
+Call: { "func_call": "get_temperature", "device_id": "thermostat_porch_15", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_porch_15", "current_temp": 14.3, "target_temp": 15, "mode": "heat" }
+
+Question: Set the playroom temperature to 24 degrees for the kids.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_playroom_16", "temperature": 24, "mode": "auto" }
+Response: { "device_id": "thermostat_playroom_16", "current_temp": 21.9, "target_temp": 24, "mode": "auto" }
+
+Question: The studio is too warm; lower it to 20 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_studio_17", "temperature": 20, "mode": "cool" }
+Response: { "device_id": "thermostat_studio_17", "current_temp": 23.6, "target_temp": 20, "mode": "cool" }
+
+Question: Can you report the current temperature in the dining room?
+Call: { "func_call": "get_temperature", "device_id": "thermostat_dining_18", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_dining_18", "current_temp": 20.5, "target_temp": 21, "mode": "auto" }
+
+Question: Turn off the heating in the storage closet by setting it to 16 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_storage_19", "temperature": 16, "mode": "off" }
+Response: { "device_id": "thermostat_storage_19", "current_temp": 18.2, "target_temp": 16, "mode": "off" }
+
+Question: Adjust the conservatory to 26 degrees as it's getting chilly.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_conservatory_20", "temperature": 26, "mode": "heat" }
+Response: { "device_id": "thermostat_conservatory_20", "current_temp": 22.7, "target_temp": 26, "mode": "heat" }
+
+Question: Retrieve the temperature data for the workshop thermostat.
+Call: { "func_call": "get_temperature", "device_id": "thermostat_workshop_21", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_workshop_21", "current_temp": 16.9, "target_temp": 17, "mode": "heat" }
+
+Question: Prepare the lounge for evening by setting it to 22 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_lounge_22", "temperature": 22, "mode": "auto" }
+Response: { "device_id": "thermostat_lounge_22", "current_temp": 20.3, "target_temp": 22, "mode": "auto" }

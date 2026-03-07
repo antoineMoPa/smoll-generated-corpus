@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "", "head": "", "base": "" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Add an approving review to pull request 56 in the global-retail/pos-system repository owned by ksmith.
+Call: { "func_call": "add_pr_review", "owner": "ksmith", "repo": "global-retail/pos-system", "pr_number": 56, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 56, "title": "Fix receipt printer timeout issue", "state": "open", "author": "jenna_pos", "changed_files": 4, "mergeable": true }
+
+Question: Merge pull request 212 for the cloud-storage project under the org neo-cloud.
+Call: { "func_call": "merge_pr", "owner": "neo-cloud", "repo": "cloud-storage", "pr_number": 212, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 212, "title": "Enable multi-region bucket replication", "state": "merged", "author": "raj_cloud", "changed_files": 18, "mergeable": true }
+
+Question: Request changes on PR 94 in the ml-models repo owned by ai-research because the training data is biased.
+Call: { "func_call": "add_pr_review", "owner": "ai-research", "repo": "ml-models", "pr_number": 94, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 94, "title": "Update image classification dataset", "state": "open", "author": "dr_wu", "changed_files": 22, "mergeable": true }
+
+Question: Attempt to merge PR 305 in the game-engine repository owned by pixel-studios, but it has conflicts.
+Call: { "func_call": "merge_pr", "owner": "pixel-studios", "repo": "game-engine", "pr_number": 305, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 305, "title": "Optimize physics collision detection", "state": "open", "author": "leo_game", "changed_files": 11, "mergeable": false }
+
+Question: Submit an approval review for PR 29 in the k8s-configs repo maintained by dev-ops-pro.
+Call: { "func_call": "add_pr_review", "owner": "dev-ops-pro", "repo": "k8s-configs", "pr_number": 29, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 29, "title": "Scale worker nodes for high traffic", "state": "open", "author": "sam_k8s", "changed_files": 3, "mergeable": true }
+
+Question: Merge the hotfix PR 444 in the billing-engine repo owned by fintech-solutions.
+Call: { "func_call": "merge_pr", "owner": "fintech-solutions", "repo": "billing-engine", "pr_number": 444, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 444, "title": "Correct tax calculation for EU regions", "state": "merged", "author": "ana_billing", "changed_files": 2, "mergeable": true }
+
+Question: Leave a review requesting changes on PR 81 in the react-components repo under the owner web-wizards due to memory leaks.
+Call: { "func_call": "add_pr_review", "owner": "web-wizards", "repo": "react-components", "pr_number": 81, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 81, "title": "Implement virtualized list component", "state": "open", "author": "ben_react", "changed_files": 9, "mergeable": true }
+
+Question: Try to merge PR 118 in the message-queue repo owned by stream-line, but the branch is behind.
+Call: { "func_call": "merge_pr", "owner": "stream-line", "repo": "message-queue", "pr_number": 118, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 118, "title": "Upgrade RabbitMQ to version 3.12", "state": "open", "author": "carla_stream", "changed_files": 6, "mergeable": false }
+
+Question: Add a positive review to PR 207 in the identity-mgmt repository owned by secure-net.
+Call: { "func_call": "add_pr_review", "owner": "secure-net", "repo": "identity-mgmt", "pr_number": 207, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 207, "title": "Implement OAuth2 OIDC provider", "state": "open", "author": "ivan_sec", "changed_files": 14, "mergeable": true }
+
+Question: Merge pull request 750 for the help-center project under the owner support-hub.
+Call: { "func_call": "merge_pr", "owner": "support-hub", "repo": "help-center", "pr_number": 750, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 750, "title": "Add dark mode toggle to FAQ page", "state": "merged", "author": "mia_support", "changed_files": 5, "mergeable": true }
+
+Question: Request changes on PR 62 in the order-processing repo owned by e-com-giants because the concurrency lock is missing.
+Call: { "func_call": "add_pr_review", "owner": "e-com-giants", "repo": "order-processing", "pr_number": 62, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 62, "title": "Refactor checkout pipeline logic", "state": "open", "author": "noah_order", "changed_files": 10, "mergeable": true }
+
+Question: Attempt to merge PR 509 in the email-service repo owned by marketing-tech, but there are unresolved conflicts.
+Call: { "func_call": "merge_pr", "owner": "marketing-tech", "repo": "email-service", "pr_number": 509, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 509, "title": "Integrate SendGrid template engine", "state": "open", "author": "olivia_email", "changed_files": 7, "mergeable": false }

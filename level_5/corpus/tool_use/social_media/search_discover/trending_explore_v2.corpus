@@ -1,0 +1,62 @@
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: What hashtags are trending in Berlin right now?
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "", "location": "Berlin", "limit": 10 }
+Response: { "results": [{ "id": "tag_004", "type": "post", "content": "#BerlinTechno", "likes": 52100 }, { "id": "tag_005", "type": "post", "content": "#WallArtBerlin", "likes": 41200 }, { "id": "tag_006", "type": "post", "content": "#SpreeRiverViews", "likes": 33400 }], "total": 3 }
+
+---
+Question: Show me the top 3 global trending hashtags.
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "", "location": "", "limit": 3 }
+Response: { "results": [{ "id": "tag_104", "type": "post", "content": "#SpaceExploration", "likes": 1450000 }, { "id": "tag_105", "type": "post", "content": "#DigitalArt", "likes": 1120000 }, { "id": "tag_106", "type": "post", "content": "#GlobalHealth", "likes": 950000 }], "total": 3 }
+
+---
+Question: Get the explore feed for culinary arts.
+Call: { "func_call": "get_explore_feed", "query": "culinary arts", "hashtag": "", "location": "", "limit": 20 }
+Response: { "results": [{ "id": "post_504", "type": "post", "content": "Mastering the perfect soufflé", "likes": 18900 }, { "id": "post_505", "type": "post", "content": "Street food tours in Bangkok", "likes": 16700 }, { "id": "post_506", "type": "post", "content": "Vegan dessert recipes", "likes": 14200 }], "total": 3 }
+
+---
+Question: Show trending sports hashtags in London.
+Call: { "func_call": "get_trending_hashtags", "query": "sports", "hashtag": "", "location": "London", "limit": 8 }
+Response: { "results": [{ "id": "tag_204", "type": "post", "content": "#PremierLeague", "likes": 89000 }, { "id": "tag_205", "type": "post", "content": "#WimbledonTennis", "likes": 76500 }, { "id": "tag_206", "type": "post", "content": "#LondonMarathon", "likes": 62000 }], "total": 3 }
+
+---
+Question: Fetch the explore feed for architectural designs in Dubai.
+Call: { "func_call": "get_explore_feed", "query": "architectural designs", "hashtag": "", "location": "Dubai", "limit": 15 }
+Response: { "results": [{ "id": "post_604", "type": "post", "content": "Inside the Burj Khalifa", "likes": 28400 }, { "id": "post_605", "type": "post", "content": "Future city concepts", "likes": 24100 }, { "id": "post_606", "type": "post", "content": "Luxury villa tours", "likes": 21300 }], "total": 3 }
+
+---
+Question: What is trending under the hashtag #Coding in San Francisco?
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "#Coding", "location": "San Francisco", "limit": 12 }
+Response: { "results": [{ "id": "tag_304", "type": "post", "content": "#SiliconValleyTech", "likes": 95000 }, { "id": "tag_305", "type": "post", "content": "#DevLifeSF", "likes": 81000 }, { "id": "tag_306", "type": "post", "content": "#StartupGrind", "likes": 74000 }], "total": 3 }
+
+---
+Question: Get the general explore feed for pet care advice.
+Call: { "func_call": "get_explore_feed", "query": "pet care advice", "hashtag": "", "location": "", "limit": 25 }
+Response: { "results": [{ "id": "post_704", "type": "post", "content": "Training your puppy in 7 days", "likes": 41000 }, { "id": "post_705", "type": "post", "content": "Best cat toys for indoor pets", "likes": 36500 }, { "id": "post_706", "type": "post", "content": "Healthy diet for senior dogs", "likes": 32200 }], "total": 3 }
+
+---
+Question: Show trending art hashtags in Florence during Renaissance week.
+Call: { "func_call": "get_trending_hashtags", "query": "art", "hashtag": "", "location": "Florence", "limit": 10 }
+Response: { "results": [{ "id": "tag_404", "type": "post", "content": "#FlorenceArt", "likes": 135000 }, { "id": "tag_405", "type": "post", "content": "#UffiziGallery", "likes": 108000 }, { "id": "tag_406", "type": "post", "content": "#ClassicSculpture", "likes": 92000 }], "total": 3 }
+
+---
+Question: Fetch explore feed results for urban gardening.
+Call: { "func_call": "get_explore_feed", "query": "urban gardening", "hashtag": "", "location": "", "limit": 18 }
+Response: { "results": [{ "id": "post_804", "type": "post", "content": "Growing vegetables on balconies", "likes": 22400 }, { "id": "post_805", "type": "post", "content": "Vertical garden setups", "likes": 19800 }, { "id": "post_806", "type": "post", "content": "Composting in small apartments", "likes": 17100 }], "total": 3 }
+
+---
+Question: What film hashtags are trending in Los Angeles?
+Call: { "func_call": "get_trending_hashtags", "query": "film", "hashtag": "", "location": "Los Angeles", "limit": 7 }
+Response: { "results": [{ "id": "tag_504", "type": "post", "content": "#HollywoodPremiere", "likes": 58000 }, { "id": "tag_505", "type": "post", "content": "#IndieFilmLA", "likes": 49500 }, { "id": "tag_506", "type": "post", "content": "#BehindTheScenes", "likes": 42000 }], "total": 3 }
+
+---
+Question: Get the explore feed for mindfulness meditation.
+Call: { "func_call": "get_explore_feed", "query": "mindfulness meditation", "hashtag": "", "location": "", "limit": 22 }
+Response: { "results": [{ "id": "post_904", "type": "post", "content": "Morning routine for clarity", "likes": 29800 }, { "id": "post_905", "type": "post", "content": "Guided breathing exercises", "likes": 26300 }, { "id": "post_906", "type": "post", "content": "Yoga for stress relief", "likes": 23500 }], "total": 3 }
+
+---
+Question: Show trending esports hashtags in Toronto.
+Call: { "func_call": "get_trending_hashtags", "query": "esports", "hashtag": "", "location": "Toronto", "limit": 9 }
+Response: { "results": [{ "id": "tag_604", "type": "post", "content": "#TorontoGaming", "likes": 64000 }, { "id": "tag_605", "type": "post", "content": "#MapleLeafsEsports", "likes": 57000 }, { "id": "tag_606", "type": "post", "content": "#CanadianGamers", "likes": 48000 }], "total": 3 }

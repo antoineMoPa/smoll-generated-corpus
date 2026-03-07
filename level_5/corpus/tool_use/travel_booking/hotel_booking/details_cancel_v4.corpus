@@ -1,0 +1,79 @@
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Look up the Royal Oak Estate in Austin to see if they have a conference room and flexible cancellation policies.
+Call: { "func_call": "get_hotel_details", "location": "Austin", "check_in": "2025-02-14", "check_out": "2025-02-16", "guests": 2, "min_rating": 4.2 }
+Response: { "hotels": [{ "id": "AUS-771", "name": "Royal Oak Estate", "rating": 4.6, "price_per_night": 280, "amenities": ["Conference Room", "Garden", "Free Cancellation", "Valet Parking"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: I need to cancel my stay at the Blue Wave Inn in Honolulu because my flight was delayed indefinitely.
+Call: { "func_call": "cancel_hotel", "location": "Honolulu", "check_in": "2025-03-10", "check_out": "2025-03-17", "guests": 2, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "HNL-303", "name": "Blue Wave Inn", "rating": 4.7, "price_per_night": 395, "amenities": ["Beachfront", "Surf Lessons", "Free Cancellation", "Luau Nights"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Can you get the details for the Golden Gate Plaza in San Francisco? I need to know if parking is included and if I can cancel last minute.
+Call: { "func_call": "get_hotel_details", "location": "San Francisco", "check_in": "2025-04-01", "check_out": "2025-04-05", "guests": 3, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "SFO-556", "name": "Golden Gate Plaza", "rating": 4.3, "price_per_night": 310, "amenities": ["Garage Parking", "City View", "Free Cancellation", "Rooftop Bar"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Please process a cancellation for the Cedar Creek Cabin in Nashville scheduled for next week.
+Call: { "func_call": "cancel_hotel", "location": "Nashville", "check_in": "2025-06-12", "check_out": "2025-06-15", "guests": 4, "min_rating": 3.8 }
+Response: { "hotels": [{ "id": "BNA-229", "name": "Cedar Creek Cabin", "rating": 4.1, "price_per_night": 175, "amenities": ["Fire Pit", "Music Room", "Free Cancellation", "Pet Friendly"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Show me the full info for the Skyline Tower in Las Vegas, specifically checking for a casino and no-penalty cancellation.
+Call: { "func_call": "get_hotel_details", "location": "Las Vegas", "check_in": "2025-07-20", "check_out": "2025-07-24", "guests": 2, "min_rating": 4.6 }
+Response: { "hotels": [{ "id": "LAS-998", "name": "Skyline Tower", "rating": 4.8, "price_per_night": 420, "amenities": ["Casino", "Pool Complex", "Free Cancellation", "Show Tickets"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: I need to cancel the reservation at the Maple Leaf Lodge in Toronto due to a family emergency.
+Call: { "func_call": "cancel_hotel", "location": "Toronto", "check_in": "2025-08-05", "check_out": "2025-08-10", "guests": 5, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "YYZ-114", "name": "Maple Leaf Lodge", "rating": 4.4, "price_per_night": 260, "amenities": ["Ice Skating", "Restaurant", "Free Cancellation", "Family Suites"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Retrieve the details for the Coral Bay Resort in Key West to confirm they have water sports and free cancellation.
+Call: { "func_call": "get_hotel_details", "location": "Key West", "check_in": "2025-09-15", "check_out": "2025-09-20", "guests": 2, "min_rating": 4.3 }
+Response: { "hotels": [{ "id": "EYW-667", "name": "Coral Bay Resort", "rating": 4.5, "price_per_night": 330, "amenities": ["Water Sports", "Sunset Deck", "Free Cancellation", "Tiki Bar"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Please cancel my booking at the Iron Bridge Hotel in Pittsburgh for the upcoming holiday weekend.
+Call: { "func_call": "cancel_hotel", "location": "Pittsburgh", "check_in": "2025-10-10", "check_out": "2025-10-13", "guests": 2, "min_rating": 3.9 }
+Response: { "hotels": [{ "id": "PIT-882", "name": "Iron Bridge Hotel", "rating": 4.0, "price_per_night": 195, "amenities": ["River View", "Gym", "Free Cancellation", "Coffee Shop"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Get the hotel specifics for the Pioneer Peak Inn in Anchorage, focusing on heating options and cancellation flexibility.
+Call: { "func_call": "get_hotel_details", "location": "Anchorage", "check_in": "2025-11-25", "check_out": "2025-11-30", "guests": 3, "min_rating": 4.1 }
+Response: { "hotels": [{ "id": "ANC-440", "name": "Pioneer Peak Inn", "rating": 4.2, "price_per_night": 245, "amenities": ["Heated Floors", "Mountain View", "Free Cancellation", "Hot Tub"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: I need to cancel the reservation for the Sand Dune Motel in Albuquerque scheduled for early December.
+Call: { "func_call": "cancel_hotel", "location": "Albuquerque", "check_in": "2025-12-05", "check_out": "2025-12-08", "guests": 2, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "ABQ-335", "name": "Sand Dune Motel", "rating": 3.7, "price_per_night": 120, "amenities": ["Desert View", "Pool", "Free Cancellation", "BBQ Area"] }], "total": 1 }

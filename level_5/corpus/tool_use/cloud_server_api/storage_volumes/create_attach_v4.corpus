@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: Provision a 75GB storage drive for the authentication service.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 75 }
+Response: { "volume_id": "vol-auth-svc-44", "size_gb": 75, "state": "available", "attached_to": null }
+
+Question: Bind the auth service volume vol-auth-svc-44 to instance i-auth-primary-03.
+Call: { "func_call": "attach_volume", "volume_id": "vol-auth-svc-44", "instance_id": "i-auth-primary-03", "size_gb": 0 }
+Response: { "volume_id": "vol-auth-svc-44", "size_gb": 75, "state": "in-use", "attached_to": "i-auth-primary-03" }
+
+Question: Initialize a 500GB volume for the machine learning dataset.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 500 }
+Response: { "volume_id": "vol-ml-data-77", "size_gb": 500, "state": "available", "attached_to": null }
+
+Question: Connect the ML dataset volume vol-ml-data-77 to the training node i-ml-trainer-09.
+Call: { "func_call": "attach_volume", "volume_id": "vol-ml-data-77", "instance_id": "i-ml-trainer-09", "size_gb": 0 }
+Response: { "volume_id": "vol-ml-data-77", "size_gb": 500, "state": "in-use", "attached_to": "i-ml-trainer-09" }
+
+Question: Create a 30GB temporary swap volume for the build server.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 30 }
+Response: { "volume_id": "vol-build-swap-11", "size_gb": 30, "state": "available", "attached_to": null }
+
+Question: Attach the swap volume vol-build-swap-11 to instance i-ci-runner-05.
+Call: { "func_call": "attach_volume", "volume_id": "vol-build-swap-11", "instance_id": "i-ci-runner-05", "size_gb": 0 }
+Response: { "volume_id": "vol-build-swap-11", "size_gb": 30, "state": "in-use", "attached_to": "i-ci-runner-05" }
+
+Question: Generate a 2TB cold storage volume for compliance archives.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 2048 }
+Response: { "volume_id": "vol-comply-arch-22", "size_gb": 2048, "state": "available", "attached_to": null }
+
+Question: Map the compliance archive volume vol-comply-arch-22 to the vault server i-vault-secure-01.
+Call: { "func_call": "attach_volume", "volume_id": "vol-comply-arch-22", "instance_id": "i-vault-secure-01", "size_gb": 0 }
+Response: { "volume_id": "vol-comply-arch-22", "size_gb": 2048, "state": "in-use", "attached_to": "i-vault-secure-01" }
+
+Question: Spin up a 150GB volume for the email queue processing.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 150 }
+Response: { "volume_id": "vol-mail-queue-33", "size_gb": 150, "state": "available", "attached_to": null }
+
+Question: Link the email queue volume vol-mail-queue-33 to the mailer instance i-mail-worker-08.
+Call: { "func_call": "attach_volume", "volume_id": "vol-mail-queue-33", "instance_id": "i-mail-worker-08", "size_gb": 0 }
+Response: { "volume_id": "vol-mail-queue-33", "size_gb": 150, "state": "in-use", "attached_to": "i-mail-worker-08" }
+
+Question: Allocate a 400GB volume for the video transcoding buffer.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 400 }
+Response: { "volume_id": "vol-video-buf-66", "size_gb": 400, "state": "available", "attached_to": null }
+
+Question: Mount the video buffer volume vol-video-buf-66 onto the encoder node i-enc-node-14.
+Call: { "func_call": "attach_volume", "volume_id": "vol-video-buf-66", "instance_id": "i-enc-node-14", "size_gb": 0 }
+Response: { "volume_id": "vol-video-buf-66", "size_gb": 400, "state": "in-use", "attached_to": "i-enc-node-14" }

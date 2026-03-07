@@ -1,0 +1,87 @@
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Create a 10-minute push notification for the quarterly review event-3021 for manager@corp.biz.
+Call: { "func_call": "set_reminder", "event_id": "event-3021", "attendee_email": "manager@corp.biz", "reminder_minutes": 10 }
+Response: { "event_id": "event-3021", "status": "reminder_set", "attendees": [{ "email": "manager@corp.biz", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: I need a 30-minute SMS alert before the yoga class event-7755 for member@fitness.club.
+Call: { "func_call": "set_reminder", "event_id": "event-7755", "attendee_email": "member@fitness.club", "reminder_minutes": 30 }
+Response: { "event_id": "event-7755", "status": "reminder_set", "attendees": [{ "email": "member@fitness.club", "rsvp": "tentative" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Set a 2-hour email reminder for the piano lesson event-4499 for student@music.school.
+Call: { "func_call": "set_reminder", "event_id": "event-4499", "attendee_email": "student@music.school", "reminder_minutes": 120 }
+Response: { "event_id": "event-4499", "status": "reminder_set", "attendees": [{ "email": "student@music.school", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Please configure a 5-minute SMS notification for the server maintenance window event-8800 for admin@cloud.sys.
+Call: { "func_call": "set_reminder", "event_id": "event-8800", "attendee_email": "admin@cloud.sys", "reminder_minutes": 5 }
+Response: { "event_id": "event-8800", "status": "reminder_set", "attendees": [{ "email": "admin@cloud.sys", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Add a 45-minute push alert for the team lunch event-2211 for hr@company.io.
+Call: { "func_call": "set_reminder", "event_id": "event-2211", "attendee_email": "hr@company.io", "reminder_minutes": 45 }
+Response: { "event_id": "event-2211", "status": "reminder_set", "attendees": [{ "email": "hr@company.io", "rsvp": "tentative" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Can you schedule a 1-day email reminder for the wedding rehearsal event-6543 for bride@groom.net?
+Call: { "func_call": "set_reminder", "event_id": "event-6543", "attendee_email": "bride@groom.net", "reminder_minutes": 1440 }
+Response: { "event_id": "event-6543", "status": "reminder_set", "attendees": [{ "email": "bride@groom.net", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Set a 20-minute SMS reminder for the car service appointment event-9876 for owner@auto.shop.
+Call: { "func_call": "set_reminder", "event_id": "event-9876", "attendee_email": "owner@auto.shop", "reminder_minutes": 20 }
+Response: { "event_id": "event-9876", "status": "reminder_set", "attendees": [{ "email": "owner@auto.shop", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: I need a 3-hour push notification for the online workshop event-1357 for attendee@learn.edu.
+Call: { "func_call": "set_reminder", "event_id": "event-1357", "attendee_email": "attendee@learn.edu", "reminder_minutes": 180 }
+Response: { "event_id": "event-1357", "status": "reminder_set", "attendees": [{ "email": "attendee@learn.edu", "rsvp": "tentative" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Configure a 10-minute email alert for the dental checkup event-2468 for patient@dental.care.
+Call: { "func_call": "set_reminder", "event_id": "event-2468", "attendee_email": "patient@dental.care", "reminder_minutes": 10 }
+Response: { "event_id": "event-2468", "status": "reminder_set", "attendees": [{ "email": "patient@dental.care", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Set a 6-hour SMS reminder for the concert tickets pickup event-3579 for fan@music.venue.
+Call: { "func_call": "set_reminder", "event_id": "event-3579", "attendee_email": "fan@music.venue", "reminder_minutes": 360 }
+Response: { "event_id": "event-3579", "status": "reminder_set", "attendees": [{ "email": "fan@music.venue", "rsvp": "accepted" }] }
+
+Available Tools: send_invite | accept_invite | decline_invite | set_reminder | get_rsvp_status
+Call Schema: { "func_call": "string", "event_id": "string", "attendee_email": "string", "reminder_minutes": number }
+Response Schema: { "event_id": "string", "status": "string", "attendees": [{ "email": "string", "rsvp": "string" }] }
+---
+Question: Please add a 25-minute push notification for the parent-teacher conference event-4680 for parent@school.district.
+Call: { "func_call": "set_reminder", "event_id": "event-4680", "attendee_email": "parent@school.district", "reminder_minutes": 25 }
+Response: { "event_id": "event-4680", "status": "reminder_set", "attendees": [{ "email": "parent@school.district", "rsvp": "tentative" }] }

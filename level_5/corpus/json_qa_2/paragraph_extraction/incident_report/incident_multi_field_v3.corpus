@@ -1,0 +1,20 @@
+{"incident_type": "Server Outage", "date": "2025-01-10", "location": "Data Center 7, Frankfurt", "cause": "HVAC compressor malfunction", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Data Breach", "date": "2025-03-15", "location": "Branch Office, Tokyo", "cause": "SQL injection on legacy portal", "severity": "High", "resolved": "No"}
+{"incident_type": "Network Latency", "date": "2024-11-05", "location": "Cloud Region EU-West-2", "cause": "BGP misconfiguration", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Hardware Failure", "date": "2025-02-20", "location": "Distribution Hub, Miami", "cause": "Overheating GPU array", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Software Bug", "date": "2025-04-02", "location": "Staging Environment", "cause": "Null pointer exception in auth service", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Physical Security", "date": "2024-12-18", "location": "Reception Desk, Sydney", "cause": "Tailgating incident", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "DDoS Attack", "date": "2025-05-08", "location": "Edge Node Cluster", "cause": "Amplification attack via NTP", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Database Corruption", "date": "2024-10-22", "location": "Disaster Recovery Site, Phoenix", "cause": "Filesystem journal overflow", "severity": "High", "resolved": "Yes"}
+{"incident_type": "API Timeout", "date": "2025-06-14", "location": "Container Orchestrator B", "cause": "Upstream service throttling", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "Insider Threat", "date": "2024-09-30", "location": "QA Team, Austin", "cause": "Unauthorized data exfiltration", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Fire Suppression Alert", "date": "2024-11-25", "location": "Server Room 5, Paris", "cause": "Dust accumulation triggering sensor", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "Credential Leak", "date": "2025-07-01", "location": "Internal Wiki Page", "cause": "Shared password in plain text", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Storage Full", "date": "2024-08-19", "location": "Archive Node", "cause": "Failed cleanup cron job", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Ransomware", "date": "2025-03-05", "location": "Legal Department, London", "cause": "Malicious email attachment", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Configuration Error", "date": "2025-01-28", "location": "Gateway Router", "cause": "Wrong firewall rule order", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Power Failure", "date": "2025-02-14", "location": "Colocation Center, Mumbai", "cause": "Transformer explosion nearby", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Service Degradation", "date": "2024-10-10", "location": "Web API Frontend", "cause": "Cache stampede event", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "DNS Hijacking", "date": "2025-04-20", "location": "Nameserver Cluster", "cause": "Zone file tampering", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Backup Failure", "date": "2024-11-08", "location": "Tape Library Vault", "cause": "Drive head alignment error", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Compliance Violation", "date": "2025-05-25", "location": "Customer Support CRM", "cause": "Excessive data retention period", "severity": "Medium", "resolved": "No"}

@@ -1,0 +1,51 @@
+Available Tools: search_flights | get_flight_details | filter_flights | get_seat_map
+Call Schema: { "func_call": "string", "origin": "string", "destination": "string", "departure_date": "string", "return_date": "string", "passengers": number, "cabin": "economy|business|first" }
+Response Schema: { "flights": [{ "flight_number": "string", "airline": "string", "departure": "string", "arrival": "string", "price": number, "duration_minutes": number }], "total": number }
+
+Question: Find direct business class flights from London to New York for two people leaving next Tuesday.
+Call: { "func_call": "filter_flights", "origin": "LHR", "destination": "JFK", "departure_date": "2023-11-14", "return_date": null, "passengers": 2, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "BA112", "airline": "British Airways", "departure": "2023-11-14T08:30:00Z", "arrival": "2023-11-14T11:45:00Z", "price": 4500, "duration_minutes": 435 }, { "flight_number": "VS003", "airline": "Virgin Atlantic", "departure": "2023-11-14T10:15:00Z", "arrival": "2023-11-14T13:30:00Z", "price": 4350, "duration_minutes": 435 }], "total": 2 }
+
+Question: Show me economy options from Tokyo to Seoul with a stopover for three passengers on December 5th.
+Call: { "func_call": "filter_flights", "origin": "NRT", "destination": "ICN", "departure_date": "2023-12-05", "return_date": null, "passengers": 3, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "JL901", "airline": "Japan Airlines", "departure": "2023-12-05T06:00:00Z", "arrival": "2023-12-05T14:20:00Z", "price": 890, "duration_minutes": 500 }, { "flight_number": "NH224", "airline": "All Nippon Airways", "departure": "2023-12-05T09:45:00Z", "arrival": "2023-12-05T18:10:00Z", "price": 920, "duration_minutes": 505 }], "total": 2 }
+
+Question: I need first class direct flights from Dubai to Paris for one person departing January 10th.
+Call: { "func_call": "filter_flights", "origin": "DXB", "destination": "CDG", "departure_date": "2024-01-10", "return_date": null, "passengers": 1, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "EK031", "airline": "Emirates", "departure": "2024-01-10T02:50:00Z", "arrival": "2024-01-10T07:15:00Z", "price": 12500, "duration_minutes": 445 }, { "flight_number": "AF652", "airline": "Air France", "departure": "2024-01-10T14:20:00Z", "arrival": "2024-01-10T18:40:00Z", "price": 11800, "duration_minutes": 440 }], "total": 2 }
+
+Question: List all economy flights from Chicago to Miami with a layover for four travelers on March 22nd.
+Call: { "func_call": "filter_flights", "origin": "ORD", "destination": "MIA", "departure_date": "2024-03-22", "return_date": null, "passengers": 4, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AA1405", "airline": "American Airlines", "departure": "2024-03-22T07:15:00Z", "arrival": "2024-03-22T13:45:00Z", "price": 1240, "duration_minutes": 390 }, { "flight_number": "UA2290", "airline": "United Airlines", "departure": "2024-03-22T11:30:00Z", "arrival": "2024-03-22T17:55:00Z", "price": 1180, "duration_minutes": 385 }, { "flight_number": "DL3312", "airline": "Delta", "departure": "2024-03-22T15:00:00Z", "arrival": "2024-03-22T21:30:00Z", "price": 1310, "duration_minutes": 390 }], "total": 3 }
+
+Question: Find business class direct routes from Singapore to Sydney for two passengers on February 14th.
+Call: { "func_call": "filter_flights", "origin": "SIN", "destination": "SYD", "departure_date": "2024-02-14", "return_date": null, "passengers": 2, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "QF008", "airline": "Qantas", "departure": "2024-02-14T01:25:00Z", "arrival": "2024-02-14T11:40:00Z", "price": 6200, "duration_minutes": 495 }, { "flight_number": "SQ231", "airline": "Singapore Airlines", "departure": "2024-02-14T08:50:00Z", "arrival": "2024-02-14T19:10:00Z", "price": 6450, "duration_minutes": 500 }], "total": 2 }
+
+Question: Search for economy flights from Berlin to Rome with a stopover for one person on April 5th.
+Call: { "func_call": "filter_flights", "origin": "BER", "destination": "FCO", "departure_date": "2024-04-05", "return_date": null, "passengers": 1, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "LH1844", "airline": "Lufthansa", "departure": "2024-04-05T06:30:00Z", "arrival": "2024-04-05T12:15:00Z", "price": 320, "duration_minutes": 345 }, { "flight_number": "AZ412", "airline": "ITA Airways", "departure": "2024-04-05T13:45:00Z", "arrival": "2024-04-05T19:20:00Z", "price": 295, "duration_minutes": 335 }], "total": 2 }
+
+Question: Get direct first class flights from Los Angeles to Tokyo for two people departing May 20th.
+Call: { "func_call": "filter_flights", "origin": "LAX", "destination": "HND", "departure_date": "2024-05-20", "return_date": null, "passengers": 2, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "JL061", "airline": "Japan Airlines", "departure": "2024-05-20T11:50:00Z", "arrival": "2024-05-21T15:25:00Z", "price": 18500, "duration_minutes": 695 }, { "flight_number": "NH105", "airline": "All Nippon Airways", "departure": "2024-05-20T13:15:00Z", "arrival": "2024-05-21T16:50:00Z", "price": 17900, "duration_minutes": 695 }], "total": 2 }
+
+Question: Show economy options with a layover from Boston to Atlanta for five passengers on June 12th.
+Call: { "func_call": "filter_flights", "origin": "BOS", "destination": "ATL", "departure_date": "2024-06-12", "return_date": null, "passengers": 5, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "DL5521", "airline": "Delta", "departure": "2024-06-12T08:00:00Z", "arrival": "2024-06-12T13:30:00Z", "price": 1850, "duration_minutes": 330 }, { "flight_number": "AA4402", "airline": "American Airlines", "departure": "2024-06-12T14:20:00Z", "arrival": "2024-06-12T19:45:00Z", "price": 1720, "duration_minutes": 325 }], "total": 2 }
+
+Question: Find business class direct flights from Frankfurt to Toronto for three travelers on July 8th.
+Call: { "func_call": "filter_flights", "origin": "FRA", "destination": "YYZ", "departure_date": "2024-07-08", "return_date": null, "passengers": 3, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "LH470", "airline": "Lufthansa", "departure": "2024-07-08T10:15:00Z", "arrival": "2024-07-08T12:45:00Z", "price": 9200, "duration_minutes": 510 }, { "flight_number": "AC872", "airline": "Air Canada", "departure": "2024-07-08T17:30:00Z", "arrival": "2024-07-08T20:00:00Z", "price": 8950, "duration_minutes": 510 }], "total": 2 }
+
+Question: List economy flights from Seattle to Denver with a stopover for two people on August 15th.
+Call: { "func_call": "filter_flights", "origin": "SEA", "destination": "DEN", "departure_date": "2024-08-15", "return_date": null, "passengers": 2, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "UA1122", "airline": "United Airlines", "departure": "2024-08-15T06:45:00Z", "arrival": "2024-08-15T11:20:00Z", "price": 640, "duration_minutes": 275 }, { "flight_number": "AS3340", "airline": "Alaska Airlines", "departure": "2024-08-15T12:10:00Z", "arrival": "2024-08-15T16:50:00Z", "price": 590, "duration_minutes": 280 }], "total": 2 }
+
+Question: Search for direct first class tickets from London to Dubai for one passenger on September 3rd.
+Call: { "func_call": "filter_flights", "origin": "LHR", "destination": "DXB", "departure_date": "2024-09-03", "return_date": null, "passengers": 1, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "EK002", "airline": "Emirates", "departure": "2024-09-03T14:45:00Z", "arrival": "2024-09-04T00:35:00Z", "price": 9800, "duration_minutes": 410 }, { "flight_number": "BA107", "airline": "British Airways", "departure": "2024-09-03T20:15:00Z", "arrival": "2024-09-04T06:05:00Z", "price": 9500, "duration_minutes": 410 }], "total": 2 }
+
+Question: Find economy flights with a layover from Amsterdam to Barcelona for four people on October 19th.
+Call: { "func_call": "filter_flights", "origin": "AMS", "destination": "BCN", "departure_date": "2024-10-19", "return_date": null, "passengers": 4, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "KL1673", "airline": "KLM", "departure": "2024-10-19T07:20:00Z", "arrival": "2024-10-19T12:45:00Z", "price": 980, "duration_minutes": 325 }, { "flight_number": "VY8201", "airline": "Vueling", "departure": "2024-10-19T15:30:00Z", "arrival": "2024-10-19T20:50:00Z", "price": 850, "duration_minutes": 320 }], "total": 2 }

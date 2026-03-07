@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Display all staff members employed by Nexus Innovations.
+Call: { "func_call": "find_contacts_by_company", "query": "Nexus Innovations", "field": "company", "limit": 60 }
+Response: { "contacts": [{ "id": "c_2001", "name": "Rachel Kim", "email": "rkim@nexusinno.com", "company": "Nexus Innovations", "phone": "+1-555-2001" }, { "id": "c_2002", "name": "Jordan Blake", "email": "jblake@nexusinno.com", "company": "Nexus Innovations", "phone": "+1-555-2002" }], "total": 2 }
+
+Question: Retrieve the list of contacts labeled as beta testers.
+Call: { "func_call": "find_contacts_by_tag", "query": "beta_tester", "field": "tag", "limit": 80 }
+Response: { "contacts": [{ "id": "c_2101", "name": "Alex Morgan", "email": "amorgan@testlab.io", "company": "Test Lab", "phone": "+1-555-2101" }, { "id": "c_2102", "name": "Casey Rivers", "email": "crivers@devstream.net", "company": "Dev Stream", "phone": "+1-555-2102" }, { "id": "c_2103", "name": "Taylor Swift", "email": "tswift@musiccorp.com", "company": "Music Corp", "phone": "+1-555-2103" }], "total": 3 }
+
+Question: Who is currently working at Oceanic Airways?
+Call: { "func_call": "find_contacts_by_company", "query": "Oceanic Airways", "field": "company", "limit": 25 }
+Response: { "contacts": [{ "id": "c_2201", "name": "Jack Shephard", "email": "jshephard@oceanic.com", "company": "Oceanic Airways", "phone": "+1-555-2201" }], "total": 1 }
+
+Question: List every contact marked with the inactive status.
+Call: { "func_call": "find_contacts_by_tag", "query": "inactive", "field": "tag", "limit": 45 }
+Response: { "contacts": [{ "id": "c_2301", "name": "Nancy Drew", "email": "ndrew@mysterysolved.com", "company": "Mystery Solved", "phone": "+1-555-2301" }, { "id": "c_2302", "name": "Hardy Boys", "email": "hboys@detective.org", "company": "Detective Org", "phone": "+1-555-2302" }], "total": 2 }
+
+Question: I need the board of directors list for the annual meeting.
+Call: { "func_call": "find_contacts_by_tag", "query": "board_member", "field": "tag", "limit": 15 }
+Response: { "contacts": [{ "id": "c_2401", "name": "Charles Montgomery", "email": "cmontgomery@waynent.com", "company": "Wayne Ent", "phone": "+1-555-2401" }, { "id": "c_2402", "name": "Diana Prince", "email": "dprince@themyscira.gov", "company": "Themyscira Gov", "phone": "+1-555-2402" }], "total": 2 }
+
+Question: Find all representatives at CyberDyne Systems.
+Call: { "func_call": "find_contacts_by_company", "query": "CyberDyne Systems", "field": "company", "limit": 35 }
+Response: { "contacts": [{ "id": "c_2501", "name": "Sarah Connor", "email": "sconnor@resistance.net", "company": "CyberDyne Systems", "phone": "+1-555-2501" }, { "id": "c_2502", "name": "Kyle Reese", "email": "kreese@resistance.net", "company": "CyberDyne Systems", "phone": "+1-555-2502" }], "total": 2 }
+
+Question: Pull up all leads we are nurturing this quarter.
+Call: { "func_call": "find_contacts_by_tag", "query": "nurturing", "field": "tag", "limit": 90 }
+Response: { "contacts": [{ "id": "c_2601", "name": "Ellen Ripley", "email": "eripley@weyland.com", "company": "Weyland Corp", "phone": "+1-555-2601" }, { "id": "c_2602", "name": "Rick Deckard", "email": "rdeckard@lapd.gov", "company": "LAPD", "phone": "+1-555-2602" }], "total": 2 }
+
+Question: Get me the directory for Stark Industries.
+Call: { "func_call": "find_contacts_by_company", "query": "Stark Industries", "field": "company", "limit": 55 }
+Response: { "contacts": [{ "id": "c_2701", "name": "Tony Stark", "email": "tstark@stark.com", "company": "Stark Industries", "phone": "+1-555-2701" }, { "id": "c_2702", "name": "Pepper Potts", "email": "ppotts@stark.com", "company": "Stark Industries", "phone": "+1-555-2702" }, { "id": "c_2703", "name": "Happy Hogan", "email": "hhogan@stark.com", "company": "Stark Industries", "phone": "+1-555-2703" }], "total": 3 }
+
+Question: Show me premium subscribers in the gaming sector.
+Call: { "func_call": "find_contacts_by_tag", "query": "premium_sub", "field": "tag", "limit": 20 }
+Response: { "contacts": [{ "id": "c_2801", "name": "Mario Bros", "email": "mario@nintendo.jp", "company": "Nintendo", "phone": "+1-555-2801" }], "total": 1 }
+
+Question: Identify any former employees from LexCorp.
+Call: { "func_call": "find_contacts_by_company", "query": "LexCorp", "field": "company", "limit": 12 }
+Response: { "contacts": [{ "id": "c_2901", "name": "Lex Luthor", "email": "lluthor@lexcorp.com", "company": "LexCorp", "phone": "+1-555-2901" }], "total": 1 }
+
+Question: Retrieve all partners associated with Wayne Enterprises.
+Call: { "func_call": "find_contacts_by_company", "query": "Wayne Enterprises", "field": "company", "limit": 8 }
+Response: { "contacts": [{ "id": "c_3001", "name": "Bruce Wayne", "email": "bwayne@wayne.com", "company": "Wayne Enterprises", "phone": "+1-555-3001" }, { "id": "c_3002", "name": "Lucius Fox", "email": "lfox@wayne.com", "company": "Wayne Enterprises", "phone": "+1-555-3002" }], "total": 2 }
+
+Question: Find all contacts tagged as urgent_priority.
+Call: { "func_call": "find_contacts_by_tag", "query": "urgent_priority", "field": "tag", "limit": 30 }
+Response: { "contacts": [{ "id": "c_3101", "name": "Clark Kent", "email": "ckent@dailyplanet.com", "company": "Daily Planet", "phone": "+1-555-3101" }, { "id": "c_3102", "name": "Lois Lane", "email": "llane@dailyplanet.com", "company": "Daily Planet", "phone": "+1-555-3102" }], "total": 2 }

@@ -1,0 +1,59 @@
+Context: The international film festival is set to open on September 12, 2024, in Toronto. Tickets go on sale starting July 1st.
+Input: {"question": "When does the international film festival open?"}
+Output: {"answer": "September 12, 2024"}
+
+Context: The Great Fire of London began on September 2, 1666, and lasted for four days. It destroyed a large portion of the city center.
+Input: {"question": "What date did the Great Fire of London begin?"}
+Output: {"answer": "September 2, 1666"}
+
+Context: Your veterinary check-up for Bella is scheduled for next Thursday at 10:30 AM. Please bring her vaccination records with you.
+Input: {"question": "What day is the veterinary check-up for Bella?"}
+Output: {"answer": "next Thursday"}
+
+Context: The construction of the Panama Canal was completed in 1914, connecting the Atlantic and Pacific Oceans. It officially opened to traffic in August of that year.
+Input: {"question": "In what year was the Panama Canal completed?"}
+Output: {"answer": "1914"}
+
+Context: The product launch event has been rescheduled to Monday, December 4, 2023, due to logistical issues. Invitations will be updated shortly.
+Input: {"question": "What is the new date for the product launch event?"}
+Output: {"answer": "Monday, December 4, 2023"}
+
+Context: Marie Curie was born in Warsaw in November 1867. She became the first person to win Nobel Prizes in two different scientific fields.
+Input: {"question": "What year was Marie Curie born?"}
+Output: {"answer": "1867"}
+
+Context: The database backup procedure is scheduled for this Saturday between 3:00 AM and 5:00 AM PST. Users may experience slight latency.
+Input: {"question": "When is the database backup procedure scheduled?"}
+Output: {"answer": "this Saturday"}
+
+Context: The first successful powered flight by the Wright brothers took place on December 17, 1903, in Kitty Hawk, North Carolina. The flight lasted only 12 seconds.
+Input: {"question": "What date did the first successful powered flight occur?"}
+Output: {"answer": "December 17, 1903"}
+
+Context: Please be advised that the library will be closed on Friday, July 4, 2024, for the Independence Day holiday. Regular hours resume on Monday.
+Input: {"question": "When will the library be closed for Independence Day?"}
+Output: {"answer": "Friday, July 4, 2024"}
+
+Context: The Declaration of Independence was adopted by the Continental Congress in 1776, announcing the separation of the thirteen colonies from Britain.
+Input: {"question": "In what year was the Declaration of Independence adopted?"}
+Output: {"answer": "1776"}
+
+Context: The train to Paris departs on Tuesday, February 14, 2023, from Platform 9. Travelers must have valid passports ready for inspection.
+Input: {"question": "What date does the train to Paris depart?"}
+Output: {"answer": "Tuesday, February 14, 2023"}
+
+Context: The startup was established on October 10, 2015, in a co-working space in Berlin. It now operates in over twenty countries.
+Input: {"question": "When was the startup established?"}
+Output: {"answer": "October 10, 2015"}
+
+Context: The total lunar eclipse will be visible in Europe on March 14, 2025. The best viewing time is just after midnight.
+Input: {"question": "When will the total lunar eclipse be visible?"}
+Output: {"answer": "March 14, 2025"}
+
+Context: His graduation ceremony is planned for next Sunday at the university auditorium. Families are invited to attend the afternoon session.
+Input: {"question": "What day is his graduation ceremony?"}
+Output: {"answer": "next Sunday"}
+
+Context: The Armistice of Compiègne was signed on November 11, 1918, effectively ending hostilities on the Western Front. It is commemorated annually as Remembrance Day.
+Input: {"question": "What date was the Armistice of Compiègne signed?"}
+Output: {"answer": "November 11, 1918"}

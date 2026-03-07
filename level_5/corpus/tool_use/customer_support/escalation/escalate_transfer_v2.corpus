@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: The client reports unauthorized transactions on their account; escalate this urgently to the fraud prevention team.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7734", "reason": "Unauthorized transactions detected on user account", "target_team": "fraud_prevention" }
+Response: { "ticket_id": "TKT-7734", "escalated_to": "fraud_prevention", "reason": "Unauthorized transactions detected on user account", "sla_hours": 2, "status": "escalated" }
+
+Question: Redirect ticket 3391 to a specialist because the user is unable to sync contacts with the mobile application.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-3391", "reason": "Contact synchronization failure on mobile app", "target_team": "mobile_support" }
+Response: { "ticket_id": "TKT-3391", "escalated_to": "mobile_support", "reason": "Contact synchronization failure on mobile app", "sla_hours": 12, "status": "transferred" }
+
+Question: We have a severe latency issue affecting payment gateways in the APAC region; escalate to network operations immediately.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-5567", "reason": "High latency on APAC payment gateways", "target_team": "network_ops" }
+Response: { "ticket_id": "TKT-5567", "escalated_to": "network_ops", "reason": "High latency on APAC payment gateways", "sla_hours": 1, "status": "escalated" }
+
+Question: Move ticket 9982 to tier 3 engineering as the customer needs custom API rate limit adjustments not available in standard plans.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-9982", "reason": "Request for custom API rate limit configuration", "target_team": "tier_3_engineering" }
+Response: { "ticket_id": "TKT-9982", "escalated_to": "tier_3_engineering", "reason": "Request for custom API rate limit configuration", "sla_hours": 24, "status": "transferred" }
+
+Question: Escalate ticket 1245 because the compliance team has not reviewed the data deletion request within the regulatory timeframe.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-1245", "reason": "Delayed review of GDPR data deletion request", "target_team": "compliance_team" }
+Response: { "ticket_id": "TKT-1245", "escalated_to": "compliance_team", "reason": "Delayed review of GDPR data deletion request", "sla_hours": 4, "status": "escalated" }
+
+Question: Transfer this case to security operations since multiple failed login attempts suggest a brute force attack.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-6621", "reason": "Suspected brute force attack due to repeated login failures", "target_team": "security_ops" }
+Response: { "ticket_id": "TKT-6621", "escalated_to": "security_ops", "reason": "Suspected brute force attack due to repeated login failures", "sla_hours": 1, "status": "transferred" }
+
+Question: The customer is disputing a renewal charge they claim was cancelled; escalate to the subscriptions team for audit.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-8843", "reason": "Disputed renewal charge after claimed cancellation", "target_team": "subscriptions_team" }
+Response: { "ticket_id": "TKT-8843", "escalated_to": "subscriptions_team", "reason": "Disputed renewal charge after claimed cancellation", "sla_hours": 6, "status": "escalated" }
+
+Question: Send ticket 2219 to platform engineering because the Kubernetes cluster is experiencing persistent pod evictions.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-2219", "reason": "Persistent pod evictions in Kubernetes cluster", "target_team": "platform_engineering" }
+Response: { "ticket_id": "TKT-2219", "escalated_to": "platform_engineering", "reason": "Persistent pod evictions in Kubernetes cluster", "sla_hours": 4, "status": "transferred" }
+
+Question: Escalate ticket 7705 to legal review due to a cease and desist order received regarding content hosting.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7705", "reason": "Cease and desist order received for hosted content", "target_team": "legal_review" }
+Response: { "ticket_id": "TKT-7705", "escalated_to": "legal_review", "reason": "Cease and desist order received for hosted content", "sla_hours": 2, "status": "escalated" }
+
+Question: Transfer ticket 4456 to the billing team as the tax exemption certificate was applied incorrectly to the latest invoice.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-4456", "reason": "Incorrect application of tax exemption certificate", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-4456", "escalated_to": "billing_team", "reason": "Incorrect application of tax exemption certificate", "sla_hours": 12, "status": "transferred" }
+
+Question: Escalate ticket 9033 to infrastructure support because the backup storage system is reporting corruption errors.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-9033", "reason": "Backup storage system reporting data corruption", "target_team": "infrastructure_support" }
+Response: { "ticket_id": "TKT-9033", "escalated_to": "infrastructure_support", "reason": "Backup storage system reporting data corruption", "sla_hours": 2, "status": "escalated" }
+
+Question: Move ticket 1188 to tier 2 support as the webhook delivery mechanism is failing silently for third-party integrations.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-1188", "reason": "Silent failure of webhook deliveries to third parties", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-1188", "escalated_to": "tier_2_support", "reason": "Silent failure of webhook deliveries to third parties", "sla_hours": 8, "status": "transferred" }

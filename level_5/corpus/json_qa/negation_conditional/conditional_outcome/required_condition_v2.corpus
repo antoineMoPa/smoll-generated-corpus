@@ -1,0 +1,59 @@
+Context: Users cannot reset their password unless they confirm their identity via a one-time code sent to their registered mobile number. The code expires after five minutes.
+Input: {"question": "What is required to reset the password?"}
+Output: {"answer": "confirming identity via a one-time code sent to the registered mobile number"}
+
+Context: The insurance claim will be denied if the policyholder fails to submit photos of the damage within 48 hours of the incident. Extensions are rarely granted.
+Input: {"question": "What is required to avoid denial of the insurance claim?"}
+Output: {"answer": "submitting photos of the damage within 48 hours of the incident"}
+
+Context: Deployment of the cloud instance fails without a valid API key configured in the environment variables. Engineers must rotate keys every 90 days.
+Input: {"question": "What is required to successfully deploy the cloud instance?"}
+Output: {"answer": "a valid API key configured in the environment variables"}
+
+Context: Entry to the executive suite is denied unless the guest presents a golden invitation card and is escorted by a board member. Security checks the guest list hourly.
+Input: {"question": "What is required to gain entry to the executive suite?"}
+Output: {"answer": "presents a golden invitation card and is escorted by a board member"}
+
+Context: The service agreement becomes null if the client modifies the hardware firmware without written permission from the vendor. Unauthorized modifications void all support clauses.
+Input: {"question": "What is required to keep the service agreement valid?"}
+Output: {"answer": "obtaining written permission from the vendor before modifying the hardware firmware"}
+
+Context: Enrollment in the advanced robotics course closes immediately unless the student provides proof of completing the introductory physics module. Prerequisites are strictly enforced.
+Input: {"question": "What is required to complete enrollment in the advanced robotics course?"}
+Output: {"answer": "providing proof of completing the introductory physics module"}
+
+Context: The data synchronization job will not start if the network latency exceeds 200 milliseconds. IT staff must optimize the connection before scheduling the task.
+Input: {"question": "What is required for the data synchronization job to start?"}
+Output: {"answer": "the network latency does not exceed 200 milliseconds"}
+
+Context: Travelers cannot enter the restricted zone without a biometric clearance badge issued within the last thirty days. Guards scan badges at every checkpoint.
+Input: {"question": "What is required to enter the restricted zone?"}
+Output: {"answer": "a biometric clearance badge issued within the last thirty days"}
+
+Context: The irrigation system will not activate the sprinklers unless the soil moisture sensor reads below 15 percent. Gardeners can force a cycle using the manual override.
+Input: {"question": "What is required for the irrigation system to activate the sprinklers?"}
+Output: {"answer": "the soil moisture sensor reads below 15 percent"}
+
+Context: Access to the financial ledgers is prohibited unless the auditor shows a court order signed by a federal judge. All access attempts are logged permanently.
+Input: {"question": "What is required to access the financial ledgers?"}
+Output: {"answer": "showing a court order signed by a federal judge"}
+
+Context: The enzymatic process does not begin if the ambient temperature is below 20 degrees Celsius. Lab assistants must预热 the chamber before adding substrates.
+Input: {"question": "What is required for the enzymatic process to begin?"}
+Output: {"answer": "the ambient temperature is at least 20 degrees Celsius"}
+
+Context: Staff are ineligible for the bonus program unless they have achieved a customer satisfaction score of 4.5 or higher in the last quarter. Metrics are reviewed monthly.
+Input: {"question": "What is required to be eligible for the bonus program?"}
+Output: {"answer": "achieving a customer satisfaction score of 4.5 or higher in the last quarter"}
+
+Context: The online reservation system rejects bookings if the selected date falls within a blacked-out holiday period. Members should check the calendar before selecting dates.
+Input: {"question": "What is required to successfully make an online reservation?"}
+Output: {"answer": "the selected date does not fall within a blacked-out holiday period"}
+
+Context: Award ceremonies exclude nominees who have not submitted their acceptance speech draft by the Friday prior to the event. Scripts are reviewed for timing.
+Input: {"question": "What is required to participate in the award ceremonies?"}
+Output: {"answer": "submitting the acceptance speech draft by the Friday prior to the event"}
+
+Context: The vault door remains sealed unless the dual-key mechanism is turned by two different managers simultaneously. No single individual can open the vault alone.
+Input: {"question": "What is required for the vault door to open?"}
+Output: {"answer": "the dual-key mechanism is turned by two different managers simultaneously"}

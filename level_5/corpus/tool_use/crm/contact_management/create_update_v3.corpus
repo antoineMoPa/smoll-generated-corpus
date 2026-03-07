@@ -1,0 +1,51 @@
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Create a new contact for Marcus Thorne who works as a Chief Architect at Nexus Dynamics. His email is m.thorne@nexusdyn.com.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Marcus Thorne", "email": "m.thorne@nexusdyn.com", "company": "Nexus Dynamics", "note": "Chief Architect" }
+Response: { "contact_id": "cnt_45019", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the company for contact cnt_78234 to "Polaris Ventures" and change their name to "Angela Davis".
+Call: { "func_call": "update_contact", "contact_id": "cnt_78234", "name": "Angela Davis", "email": "", "company": "Polaris Ventures", "note": "" }
+Response: { "contact_id": "cnt_78234", "status": "updated", "updated_fields": ["name", "company"] }
+
+Question: Add a note to contact cnt_91205 indicating they requested a demo of the AI analytics module.
+Call: { "func_call": "add_note", "contact_id": "cnt_91205", "name": "", "email": "", "company": "", "note": "Requested demo of AI analytics module" }
+Response: { "contact_id": "cnt_91205", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Julian Cross, a Lead Designer at Prism Studio, with email julian.c@prismstudio.art.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Julian Cross", "email": "julian.c@prismstudio.art", "company": "Prism Studio", "note": "Lead Designer" }
+Response: { "contact_id": "cnt_33892", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the email address for contact cnt_56102 to s.miller@quantumleap.org and add a note about the budget approval.
+Call: { "func_call": "update_contact", "contact_id": "cnt_56102", "name": "", "email": "s.miller@quantumleap.org", "company": "", "note": "Budget approval received on Dec 5" }
+Response: { "contact_id": "cnt_56102", "status": "updated", "updated_fields": ["email", "note"] }
+
+Question: Create a new entry for Fatima Al-Fayed, VP of Sales at Horizon Global, email f.alfayed@horizongl.net.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Fatima Al-Fayed", "email": "f.alfayed@horizongl.net", "company": "Horizon Global", "note": "VP of Sales" }
+Response: { "contact_id": "cnt_67445", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Change the company name for contact cnt_12988 to "Redwood Supply Chain" and update the note to mention their integration needs.
+Call: { "func_call": "update_contact", "contact_id": "cnt_12988", "name": "", "email": "", "company": "Redwood Supply Chain", "note": "Needs API integration for inventory" }
+Response: { "contact_id": "cnt_12988", "status": "updated", "updated_fields": ["company", "note"] }
+
+Question: Add a note to contact cnt_39471 stating that the renewal agreement was finalized last week.
+Call: { "func_call": "add_note", "contact_id": "cnt_39471", "name": "", "email": "", "company": "", "note": "Renewal agreement finalized last week" }
+Response: { "contact_id": "cnt_39471", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Kenji Sato, Director of Operations at Zenith Robotics, email k.sato@zenithrob.io.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Kenji Sato", "email": "k.sato@zenithrob.io", "company": "Zenith Robotics", "note": "Director of Operations" }
+Response: { "contact_id": "cnt_82156", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the name and email for contact cnt_49023 to "Olivia Bennett" and "o.bennett@stratosfera.com" respectively.
+Call: { "func_call": "update_contact", "contact_id": "cnt_49023", "name": "Olivia Bennett", "email": "o.bennett@stratosfera.com", "company": "", "note": "" }
+Response: { "contact_id": "cnt_49023", "status": "updated", "updated_fields": ["name", "email"] }
+
+Question: Create a new contact for Noah Williams, Data Scientist at Echo Analytics, with email noah.w@echoanalytics.data.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Noah Williams", "email": "noah.w@echoanalytics.data", "company": "Echo Analytics", "note": "Data Scientist" }
+Response: { "contact_id": "cnt_20598", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the note for contact cnt_71334 to mention the workshop attendance confirmed for January 15th.
+Call: { "func_call": "update_contact", "contact_id": "cnt_71334", "name": "", "email": "", "company": "", "note": "Workshop attendance confirmed for Jan 15" }
+Response: { "contact_id": "cnt_71334", "status": "updated", "updated_fields": ["note"] }

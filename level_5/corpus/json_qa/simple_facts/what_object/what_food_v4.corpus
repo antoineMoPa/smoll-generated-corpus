@@ -1,0 +1,59 @@
+Context: At the cozy cafe, Liam ordered a medium cappuccino and a slice of banana bread. He sat by the window to watch the people pass by.
+Input: {"question": "What did Liam order?"}
+Output: {"answer": "a medium cappuccino and a slice of banana bread"}
+
+Context: For brunch, Elena prepared four fluffy waffles and sliced two ripe mangoes. She arranged them on a white plate with a drizzle of honey.
+Input: {"question": "What did Elena prepare?"}
+Output: {"answer": "four fluffy waffles and sliced two ripe mangoes"}
+
+Context: The server presented the check, mentioning that booth seven had enjoyed three pitchers of iced tea and a tiramisu. The group laughed as they shared the dessert.
+Input: {"question": "What did booth seven enjoy?"}
+Output: {"answer": "three pitchers of iced tea and a tiramisu"}
+
+Context: Carlos decided to whip up a hearty beef stew using carrots, potatoes, and chunks of sirloin from the market. He let it simmer for hours before serving.
+Input: {"question": "What did Carlos whip up?"}
+Output: {"answer": "a hearty beef stew"}
+
+Context: During the dinner rush, the staff assembled dozens of Caesar salads and minestrone soups for the hungry patrons. The clatter of dishes echoed through the dining room.
+Input: {"question": "What did the staff assemble?"}
+Output: {"answer": "dozens of Caesar salads and minestrone soups"}
+
+Context: After swimming all afternoon, Mia stopped at a kiosk to purchase an ice cream cone and a bottle of water. She rested under a palm tree to cool down.
+Input: {"question": "What did Mia purchase?"}
+Output: {"answer": "an ice cream cone and a bottle of water"}
+
+Context: My uncle roasted a whole turkey with herb stuffing and served it alongside cranberry sauce and mashed potatoes. It was the centerpiece of the holiday feast.
+Input: {"question": "What did my uncle roast?"}
+Output: {"answer": "a whole turkey"}
+
+Context: At the taco stand, Sofia requested a trio of fish tacos and a side of elote. She added extra salsa before taking her first bite.
+Input: {"question": "What did Sofia request?"}
+Output: {"answer": "a trio of fish tacos and a side of elote"}
+
+Context: The barista passed me an iced matcha latte with almond milk and a cinnamon roll wrapped in foil. I nodded gratefully and stepped outside.
+Input: {"question": "What did the barista pass me?"}
+Output: {"answer": "an iced matcha latte with almond milk and a cinnamon roll"}
+
+Context: For the picnic, Rachel baked twelve chocolate chip cookies and packed a container of fruit salad for the family. They spread a blanket on the grass to eat.
+Input: {"question": "What did Rachel bake?"}
+Output: {"answer": "twelve chocolate chip cookies"}
+
+Context: While working overnight, Marcus munched on a handful of trail mix and sipped a can of energy drink to keep focused. The empty office was silent around him.
+Input: {"question": "What did Marcus munch on?"}
+Output: {"answer": "a handful of trail mix"}
+
+Context: The daily special today is a braised short rib served over creamy polenta with sautéed spinach. Regulars often request this meal when it appears on the menu.
+Input: {"question": "What is the daily special?"}
+Output: {"answer": "a braised short rib served over creamy polenta with sautéed spinach"}
+
+Context: On Friday evenings, they typically cook spicy shrimp pasta topped with parmesan cheese and fresh parsley. It is a favorite among the neighbors.
+Input: {"question": "What do they cook on Friday evenings?"}
+Output: {"answer": "spicy shrimp pasta topped with parmesan cheese and fresh parsley"}
+
+Context: The courier delivered a bag containing a vegetarian burrito and a guacamole cup. I tore it open to see the steaming food inside.
+Input: {"question": "What did the courier deliver?"}
+Output: {"answer": "a bag containing a vegetarian burrito and a guacamole cup"}
+
+Context: To mark her promotion, Lisa devoured a piece of lemon tart and sipped a cup of herbal tea. Her colleagues cheered as she cut the cake.
+Input: {"question": "What did Lisa devour?"}
+Output: {"answer": "a piece of lemon tart"}

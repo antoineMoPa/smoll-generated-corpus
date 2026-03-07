@@ -1,0 +1,51 @@
+Available Tools: search_employee | get_employee_by_id | get_org_chart | list_employees_by_department
+Call Schema: { "func_call": "string", "query": "string", "department": "string", "employee_id": "string" }
+Response Schema: { "employees": [{ "id": "string", "name": "string", "title": "string", "department": "string", "email": "string", "manager": "string" }] }
+---
+Question: Find the employee record for Sarah Jenkins.
+Call: { "func_call": "search_employee", "query": "Sarah Jenkins", "department": "", "employee_id": "" }
+Response: { "employees": [{ "id": "EMP-4921", "name": "Sarah Jenkins", "title": "Senior Marketing Manager", "department": "Marketing", "email": "s.jenkins@company.com", "manager": "EMP-1005" }] }
+
+Question: Look up the details for employee ID EMP-8832.
+Call: { "func_call": "get_employee_by_id", "query": "", "department": "", "employee_id": "EMP-8832" }
+Response: { "employees": [{ "id": "EMP-8832", "name": "Marcus Thorne", "title": "Lead Software Engineer", "department": "Engineering", "email": "m.thorne@company.com", "manager": "EMP-2201" }] }
+
+Question: Who is the director of the Finance department named Robert Chen?
+Call: { "func_call": "search_employee", "query": "Robert Chen", "department": "Finance", "employee_id": "" }
+Response: { "employees": [{ "id": "EMP-3309", "name": "Robert Chen", "title": "Finance Director", "department": "Finance", "email": "r.chen@company.com", "manager": "EMP-0012" }] }
+
+Question: Retrieve the profile for employee ID EMP-1154.
+Call: { "func_call": "get_employee_by_id", "query": "", "department": "", "employee_id": "EMP-1154" }
+Response: { "employees": [{ "id": "EMP-1154", "name": "Elena Rodriguez", "title": "HR Business Partner", "department": "Human Resources", "email": "e.rodriguez@company.com", "manager": "EMP-0998" }] }
+
+Question: Search for any employees named David Miller in the Sales department.
+Call: { "func_call": "search_employee", "query": "David Miller", "department": "Sales", "employee_id": "" }
+Response: { "employees": [{ "id": "EMP-7743", "name": "David Miller", "title": "Regional Sales Director", "department": "Sales", "email": "d.miller@company.com", "manager": "EMP-0055" }] }
+
+Question: Get the record for employee ID EMP-5520.
+Call: { "func_call": "get_employee_by_id", "query": "", "department": "", "employee_id": "EMP-5520" }
+Response: { "employees": [{ "id": "EMP-5520", "name": "Priya Patel", "title": "Product Designer", "department": "Product", "email": "p.patel@company.com", "manager": "EMP-3341" }] }
+
+Question: Find the contact info for James Wilson in the Operations team.
+Call: { "func_call": "search_employee", "query": "James Wilson", "department": "Operations", "employee_id": "" }
+Response: { "employees": [{ "id": "EMP-6612", "name": "James Wilson", "title": "Operations Coordinator", "department": "Operations", "email": "j.wilson@company.com", "manager": "EMP-4409" }] }
+
+Question: Look up employee ID EMP-9901 to see their current title.
+Call: { "func_call": "get_employee_by_id", "query": "", "department": "", "employee_id": "EMP-9901" }
+Response: { "employees": [{ "id": "EMP-9901", "name": "Aisha Mohammed", "title": "Chief Technology Officer", "department": "Engineering", "email": "a.mohammed@company.com", "manager": "EMP-0001" }] }
+
+Question: Search for Linda Garcia in the Customer Support department.
+Call: { "func_call": "search_employee", "query": "Linda Garcia", "department": "Customer Support", "employee_id": "" }
+Response: { "employees": [{ "id": "EMP-2287", "name": "Linda Garcia", "title": "Support Team Lead", "department": "Customer Support", "email": "l.garcia@company.com", "manager": "EMP-1190" }] }
+
+Question: Retrieve details for employee ID EMP-3045.
+Call: { "func_call": "get_employee_by_id", "query": "", "department": "", "employee_id": "EMP-3045" }
+Response: { "employees": [{ "id": "EMP-3045", "name": "Thomas Anderson", "title": "Data Analyst", "department": "Analytics", "email": "t.anderson@company.com", "manager": "EMP-2299" }] }
+
+Question: Find the record for Emily White who works in Legal.
+Call: { "func_call": "search_employee", "query": "Emily White", "department": "Legal", "employee_id": "" }
+Response: { "employees": [{ "id": "EMP-8123", "name": "Emily White", "title": "Legal Counsel", "department": "Legal", "email": "e.white@company.com", "manager": "EMP-0077" }] }
+
+Question: Get the full profile for employee ID EMP-4456.
+Call: { "func_call": "get_employee_by_id", "query": "", "department": "", "employee_id": "EMP-4456" }
+Response: { "employees": [{ "id": "EMP-4456", "name": "Kevin O'Connor", "title": "Supply Chain Manager", "department": "Logistics", "email": "k.oconnor@company.com", "manager": "EMP-5501" }] }

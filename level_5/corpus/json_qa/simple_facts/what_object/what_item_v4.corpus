@@ -1,0 +1,59 @@
+Context: Alex hurried to the garage and picked up his rusty wrench to repair the leaking pipe. He turned the valve quickly.
+Input: {"question": "What did Alex pick up?"}
+Output: {"answer": "rusty wrench"}
+
+Context: While exploring the basement, Chloe discovered a dusty vinyl record collection hidden behind some boxes. The covers were faded.
+Input: {"question": "What did Chloe discover?"}
+Output: {"answer": "dusty vinyl record collection"}
+
+Context: The coach instructed the team to wear their navy blue jerseys for the championship game on Saturday. Everyone cheered loudly.
+Input: {"question": "What did the team need to wear?"}
+Output: {"answer": "navy blue jerseys"}
+
+Context: After the picnic, Mark realized his striped blanket was gone from the grassy hill. He hoped someone had just moved it.
+Input: {"question": "What was gone from the grassy hill?"}
+Output: {"answer": "striped blanket"}
+
+Context: Nina visited the art supply store and purchased a set of charcoal pencils for her sketching class. She paid with a card.
+Input: {"question": "What did Nina purchase?"}
+Output: {"answer": "set of charcoal pencils"}
+
+Context: During the camping trip, Ben realized he had forgotten his portable lantern inside the truck. He had to walk back in the dark.
+Input: {"question": "What did Ben forget inside the truck?"}
+Output: {"answer": "portable lantern"}
+
+Context: The baker carefully greased his non-stick muffin pan before pouring in the batter. The kitchen smelled sweet.
+Input: {"question": "What did the baker grease?"}
+Output: {"answer": "non-stick muffin pan"}
+
+Context: Zoe searched her whole office but could not find her wireless mouse on her desk. She started worrying about the presentation.
+Input: {"question": "What could Zoe not find?"}
+Output: {"answer": "wireless mouse"}
+
+Context: For the astronomy club meeting, Sam brought a large telescope to observe the moon craters. The view was breathtaking.
+Input: {"question": "What did Sam bring for the meeting?"}
+Output: {"answer": "large telescope"}
+
+Context: My uncle lent me his electric drill so I could assemble the new bookshelf in the study. It hummed quietly.
+Input: {"question": "What did my uncle lend me?"}
+Output: {"answer": "electric drill"}
+
+Context: The plumber tightened the copper pipe fitting with a giant pair of pliers. Water dripped onto the floor.
+Input: {"question": "What did the plumber use to tighten the fitting?"}
+Output: {"answer": "giant pair of pliers"}
+
+Context: Jason accidentally left his silk scarf on the train seat and didn't realize until he reached his stop. He ran back to the station.
+Input: {"question": "What did Jason leave on the train seat?"}
+Output: {"answer": "silk scarf"}
+
+Context: To cut the ribbon precisely, the mayor grabbed a pair of gold scissors from the podium. The crowd applauded.
+Input: {"question": "What did the mayor grab?"}
+Output: {"answer": "pair of gold scissors"}
+
+Context: During the thunderstorm, Peter lit a kerosene lamp to illuminate the hallway. The shadow danced on the walls.
+Input: {"question": "What did Peter light?"}
+Output: {"answer": "kerosene lamp"}
+
+Context: The painter cleaned the brushes using a metal paint thinner can that he kept in the shed. The fumes were strong.
+Input: {"question": "What did the painter use to clean the brushes?"}
+Output: {"answer": "metal paint thinner can"}

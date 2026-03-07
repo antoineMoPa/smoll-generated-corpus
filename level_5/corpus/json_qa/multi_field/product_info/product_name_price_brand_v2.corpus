@@ -1,0 +1,59 @@
+Context: I just purchased the AeroPress Coffee Maker for $39.95 from a kitchen supply store, and it is produced by AeroPress Inc.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Coffee Maker", "price": "$39.95", "brand": "AeroPress Inc"}
+
+Context: The new Apple MacBook Air M2 is listed at $1,199.00 and features a brilliant Retina display.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "MacBook Air M2", "price": "$1,199.00", "brand": "Apple"}
+
+Context: My friend suggested the Vitamix E310 blender, which retails for $349.95 and is made by Vitamix.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "E310", "price": "$349.95", "brand": "Vitamix"}
+
+Context: We bought a box of Purina Pro Plan Focus dog food for $62.48 during our grocery run yesterday.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Pro Plan Focus", "price": "$62.48", "brand": "Purina"}
+
+Context: The Shark Navigator Lift-Away vacuum is currently available for $179.99 at most department stores.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Navigator Lift-Away", "price": "$179.99", "brand": "Shark"}
+
+Context: I found an amazing discount on the Adidas Ultraboost 22 running shoes, paying just $190.00 for them.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Ultraboost 22", "price": "$190.00", "brand": "Adidas"}
+
+Context: This tube of CeraVe Hydrating Facial Cleanser sells for $14.97 and is ideal for dry skin types.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Hydrating Facial Cleanser", "price": "$14.97", "brand": "CeraVe"}
+
+Context: The Ninja Foodi Personal Blender in silver is priced at $79.99 on the manufacturer's site.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Foodi Personal Blender", "price": "$79.99", "brand": "Ninja"}
+
+Context: After comparing options, I chose the Razer DeathAdder V3 gaming mouse for $69.99.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "DeathAdder V3", "price": "$69.99", "brand": "Razer"}
+
+Context: The Google Pixel 8 Pro phone has a base price of $999.00 and includes advanced AI features.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Pixel 8 Pro", "price": "$999.00", "brand": "Google"}
+
+Context: I grabbed a jar of Skippy Creamy Peanut Butter for $3.49 to stock up the pantry.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Creamy Peanut Butter", "price": "$3.49", "brand": "Skippy"}
+
+Context: The JBL Flip 6 portable speakers are on sale for $129.95 and deliver powerful bass.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Flip 6", "price": "$129.95", "brand": "JBL"}
+
+Context: You can purchase the Garmin Fenix 7 smartwatch for $699.99, a device by Garmin Ltd.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Fenix 7", "price": "$699.99", "brand": "Garmin"}
+
+Context: The Lego Harry Potter Hogwarts Castle set is priced at $469.99 and is popular among fans.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "Harry Potter Hogwarts Castle", "price": "$469.99", "brand": "Lego"}
+
+Context: I recently upgraded to the Philips Sonicare DiamondClean toothbrush, which costs $229.96.
+Input: {"extract": ["product", "price", "brand"]}
+Output: {"product": "DiamondClean", "price": "$229.96", "brand": "Philips"}

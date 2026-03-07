@@ -1,0 +1,62 @@
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: What are the top trending tags for art in Berlin?
+Call: { "func_call": "get_trending_hashtags", "query": "art", "hashtag": "", "location": "Berlin", "limit": 6 }
+Response: { "results": [{ "id": "tag_701", "type": "post", "content": "#BerlinArtScene", "likes": 52300 }, { "id": "tag_702", "type": "post", "content": "#StreetArtDE", "likes": 44100 }, { "id": "tag_703", "type": "post", "content": "#GalleryHopping", "likes": 36800 }], "total": 3 }
+
+---
+Question: Pull the explore feed for vegan recipes.
+Call: { "func_call": "get_explore_feed", "query": "vegan recipes", "hashtag": "", "location": "", "limit": 30 }
+Response: { "results": [{ "id": "post_1001", "type": "post", "content": "Creamy cashew pasta in 20 minutes", "likes": 41200 }, { "id": "post_1002", "type": "post", "content": "Best plant-based burger recipe", "likes": 38900 }, { "id": "post_1003", "type": "post", "content": "Easy tofu stir-fry guide", "likes": 35600 }], "total": 3 }
+
+---
+Question: Find trending hashtags related to #Photography in London.
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "#Photography", "location": "London", "limit": 14 }
+Response: { "results": [{ "id": "tag_801", "type": "post", "content": "#LondonLens", "likes": 93000 }, { "id": "tag_802", "type": "post", "content": "#ThamesViews", "likes": 81500 }, { "id": "tag_803", "type": "post", "content": "#UKPhotographers", "likes": 74200 }], "total": 3 }
+
+---
+Question: Get the explore feed for winter sports highlights.
+Call: { "func_call": "get_explore_feed", "query": "winter sports", "hashtag": "", "location": "", "limit": 12 }
+Response: { "results": [{ "id": "post_1101", "type": "post", "content": "Epic ski jump compilation", "likes": 28700 }, { "id": "post_1102", "type": "post", "content": "Snowboard tricks for beginners", "likes": 24500 }, { "id": "post_1103", "type": "post", "content": "Ice hockey best saves", "likes": 21300 }], "total": 3 }
+
+---
+Question: Show me trending pet hashtags in Los Angeles.
+Call: { "func_call": "get_trending_hashtags", "query": "pets", "hashtag": "", "location": "Los Angeles", "limit": 11 }
+Response: { "results": [{ "id": "tag_901", "type": "post", "content": "#LADogPark", "likes": 61000 }, { "id": "tag_902", "type": "post", "content": "#HollywoodPets", "likes": 55400 }, { "id": "tag_903", "type": "post", "content": "#CaliCats", "likes": 49800 }], "total": 3 }
+
+---
+Question: Fetch the explore feed for luxury car reviews.
+Call: { "func_call": "get_explore_feed", "query": "luxury car reviews", "hashtag": "", "location": "", "limit": 16 }
+Response: { "results": [{ "id": "post_1201", "type": "post", "content": "2024 Sedan flagship test drive", "likes": 33400 }, { "id": "post_1202", "type": "post", "content": "Interior tour of the new SUV", "likes": 29100 }, { "id": "post_1203", "type": "post", "content": "Electric supercar acceleration", "likes": 26500 }], "total": 3 }
+
+---
+Question: What is trending under #Beauty in Mumbai?
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "#Beauty", "location": "Mumbai", "limit": 13 }
+Response: { "results": [{ "id": "tag_1001", "type": "post", "content": "#MumbaiGlow", "likes": 78000 }, { "id": "tag_1002", "type": "post", "content": "#BollywoodMakeup", "likes": 69500 }, { "id": "tag_1003", "type": "post", "content": "#DesiSkincare", "likes": 62300 }], "total": 3 }
+
+---
+Question: Get the general explore feed for architecture design.
+Call: { "func_call": "get_explore_feed", "query": "architecture design", "hashtag": "", "location": "", "limit": 24 }
+Response: { "results": [{ "id": "post_1301", "type": "post", "content": "Modern skyscraper concepts", "likes": 37200 }, { "id": "post_1302", "type": "post", "content": "Restoring historic facades", "likes": 32800 }, { "id": "post_1303", "type": "post", "content": "Minimalist home interiors", "likes": 28900 }], "total": 3 }
+
+---
+Question: Show trending book hashtags in Toronto.
+Call: { "func_call": "get_trending_hashtags", "query": "books", "hashtag": "", "location": "Toronto", "limit": 8 }
+Response: { "results": [{ "id": "tag_1101", "type": "post", "content": "#TorontoReads", "likes": 47500 }, { "id": "tag_1102", "type": "post", "content": "#CanLit", "likes": 41200 }, { "id": "tag_1103", "type": "post", "content": "#BookClubTO", "likes": 35900 }], "total": 3 }
+
+---
+Question: Fetch explore feed results for street food tours.
+Call: { "func_call": "get_explore_feed", "query": "street food tours", "hashtag": "", "location": "", "limit": 19 }
+Response: { "results": [{ "id": "post_1401", "type": "post", "content": "Best tacos in Mexico City", "likes": 44300 }, { "id": "post_1402", "type": "post", "content": "Night market eats in Bangkok", "likes": 39700 }, { "id": "post_1403", "type": "post", "content": "Istanbul kebab guide", "likes": 36100 }], "total": 3 }
+
+---
+Question: What tech hashtags are trending in San Francisco?
+Call: { "func_call": "get_trending_hashtags", "query": "tech", "hashtag": "", "location": "San Francisco", "limit": 10 }
+Response: { "results": [{ "id": "tag_1201", "type": "post", "content": "#SFTechHub", "likes": 85000 }, { "id": "tag_1202", "type": "post", "content": "#BayAreaStartups", "likes": 77400 }, { "id": "tag_1203", "type": "post", "content": "#CodeLifeSF", "likes": 68900 }], "total": 3 }
+
+---
+Question: Get the explore feed for yoga and meditation.
+Call: { "func_call": "get_explore_feed", "query": "yoga and meditation", "hashtag": "", "location": "", "limit": 21 }
+Response: { "results": [{ "id": "post_1501", "type": "post", "content": "Morning sun salutation flow", "likes": 31500 }, { "id": "post_1502", "type": "post", "content": "Guided meditation for stress", "likes": 27800 }, { "id": "post_1503", "type": "post", "content": "Breathing exercises for focus", "likes": 24200 }], "total": 3 }

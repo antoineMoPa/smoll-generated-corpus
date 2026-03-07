@@ -1,0 +1,51 @@
+Available Tools: get_historical_readings | get_average_reading | get_min_max | export_sensor_data
+Call Schema: { "func_call": "string", "sensor_id": "string", "from": "string", "to": "string", "interval": "string" }
+Response Schema: { "sensor_id": "string", "readings": [{ "timestamp": "string", "value": number }], "avg": number, "min": number, "max": number }
+---
+Question: Retrieve the hourly pH levels for sensor CHEM-004 in the water treatment facility from 6 AM to 6 PM yesterday.
+Call: { "func_call": "get_historical_readings", "sensor_id": "CHEM-004", "from": "2023-11-02T06:00:00Z", "to": "2023-11-02T18:00:00Z", "interval": "hourly" }
+Response: { "sensor_id": "CHEM-004", "readings": [{ "timestamp": "2023-11-02T06:00:00Z", "value": 7.1 }, { "timestamp": "2023-11-02T07:00:00Z", "value": 7.2 }, { "timestamp": "2023-11-02T08:00:00Z", "value": 7.3 }, { "timestamp": "2023-11-02T09:00:00Z", "value": 7.4 }, { "timestamp": "2023-11-02T10:00:00Z", "value": 7.3 }, { "timestamp": "2023-11-02T11:00:00Z", "value": 7.2 }], "avg": 7.25, "min": 7.1, "max": 7.4 }
+
+Question: What were the minimum and maximum acceleration values for sensor ACC-55 on the elevator shaft last Tuesday?
+Call: { "func_call": "get_min_max", "sensor_id": "ACC-55", "from": "2023-11-07T00:00:00Z", "to": "2023-11-07T23:59:59Z", "interval": "daily" }
+Response: { "sensor_id": "ACC-55", "readings": [{ "timestamp": "2023-11-07T09:15:00Z", "value": 1.2 }, { "timestamp": "2023-11-07T12:30:00Z", "value": 1.8 }, { "timestamp": "2023-11-07T15:45:00Z", "value": 1.5 }], "avg": 1.5, "min": 1.2, "max": 1.8 }
+
+Question: Show me the daily average radiation counts for sensor RAD-909 in the lab basement for the first week of November.
+Call: { "func_call": "get_average_reading", "sensor_id": "RAD-909", "from": "2023-11-01T00:00:00Z", "to": "2023-11-07T23:59:59Z", "interval": "daily" }
+Response: { "sensor_id": "RAD-909", "readings": [{ "timestamp": "2023-11-01T00:00:00Z", "value": 0.12 }, { "timestamp": "2023-11-02T00:00:00Z", "value": 0.11 }, { "timestamp": "2023-11-03T00:00:00Z", "value": 0.13 }, { "timestamp": "2023-11-04T00:00:00Z", "value": 0.12 }], "avg": 0.12, "min": 0.11, "max": 0.13 }
+
+Question: Get the hourly methane concentration for sensor GAS-303 in the mine tunnel between midnight and 4 AM this morning.
+Call: { "func_call": "get_historical_readings", "sensor_id": "GAS-303", "from": "2023-11-03T00:00:00Z", "to": "2023-11-03T04:00:00Z", "interval": "hourly" }
+Response: { "sensor_id": "GAS-303", "readings": [{ "timestamp": "2023-11-03T00:00:00Z", "value": 1.5 }, { "timestamp": "2023-11-03T01:00:00Z", "value": 1.6 }, { "timestamp": "2023-11-03T02:00:00Z", "value": 1.4 }, { "timestamp": "2023-11-03T03:00:00Z", "value": 1.5 }], "avg": 1.5, "min": 1.4, "max": 1.6 }
+
+Question: Find the weekly average UV index for sensor UV-101 on the rooftop garden during the second week of October.
+Call: { "func_call": "get_average_reading", "sensor_id": "UV-101", "from": "2023-10-08T00:00:00Z", "to": "2023-10-14T23:59:59Z", "interval": "weekly" }
+Response: { "sensor_id": "UV-101", "readings": [{ "timestamp": "2023-10-09T00:00:00Z", "value": 4.5 }, { "timestamp": "2023-10-10T00:00:00Z", "value": 5.2 }, { "timestamp": "2023-10-11T00:00:00Z", "value": 3.8 }, { "timestamp": "2023-10-12T00:00:00Z", "value": 4.9 }], "avg": 4.6, "min": 3.8, "max": 5.2 }
+
+Question: Fetch daily oxygen saturation metrics for sensor O2-404 in the hospital ICU for the last three days.
+Call: { "func_call": "get_historical_readings", "sensor_id": "O2-404", "from": "2023-11-01T00:00:00Z", "to": "2023-11-03T23:59:59Z", "interval": "daily" }
+Response: { "sensor_id": "O2-404", "readings": [{ "timestamp": "2023-11-01T00:00:00Z", "value": 98.2 }, { "timestamp": "2023-11-02T00:00:00Z", "value": 97.9 }, { "timestamp": "2023-11-03T00:00:00Z", "value": 98.5 }], "avg": 98.2, "min": 97.9, "max": 98.5 }
+
+Question: What is the minimum and maximum voltage recorded by sensor VOL-606 in the battery bank last weekend?
+Call: { "func_call": "get_min_max", "sensor_id": "VOL-606", "from": "2023-10-28T00:00:00Z", "to": "2023-10-29T23:59:59Z", "interval": "weekend" }
+Response: { "sensor_id": "VOL-606", "readings": [{ "timestamp": "2023-10-28T10:00:00Z", "value": 12.1 }, { "timestamp": "2023-10-28T14:00:00Z", "value": 12.5 }, { "timestamp": "2023-10-29T11:00:00Z", "value": 12.3 }], "avg": 12.3, "min": 12.1, "max": 12.5 }
+
+Question: Retrieve the hourly particulate matter data for sensor PM-202 in the city center from 7 AM to 9 AM during rush hour.
+Call: { "func_call": "get_historical_readings", "sensor_id": "PM-202", "from": "2023-11-04T07:00:00Z", "to": "2023-11-04T09:00:00Z", "interval": "hourly" }
+Response: { "sensor_id": "PM-202", "readings": [{ "timestamp": "2023-11-04T07:00:00Z", "value": 45.2 }, { "timestamp": "2023-11-04T08:00:00Z", "value": 62.1 }, { "timestamp": "2023-11-04T09:00:00Z", "value": 58.4 }], "avg": 55.23, "min": 45.2, "max": 62.1 }
+
+Question: Calculate the daily average current draw for sensor AMP-707 in the electric vehicle charging station for yesterday.
+Call: { "func_call": "get_average_reading", "sensor_id": "AMP-707", "from": "2023-11-02T00:00:00Z", "to": "2023-11-02T23:59:59Z", "interval": "daily" }
+Response: { "sensor_id": "AMP-707", "readings": [{ "timestamp": "2023-11-02T08:00:00Z", "value": 32.5 }, { "timestamp": "2023-11-02T12:00:00Z", "value": 45.0 }, { "timestamp": "2023-11-02T18:00:00Z", "value": 38.2 }], "avg": 38.57, "min": 32.5, "max": 45.0 }
+
+Question: Get the weekly minimum and maximum heart rate for sensor HR-808 worn by athlete A12 during training week 42.
+Call: { "func_call": "get_min_max", "sensor_id": "HR-808", "from": "2023-10-16T00:00:00Z", "to": "2023-10-22T23:59:59Z", "interval": "weekly" }
+Response: { "sensor_id": "HR-808", "readings": [{ "timestamp": "2023-10-17T06:00:00Z", "value": 110 }, { "timestamp": "2023-10-19T17:00:00Z", "value": 165 }, { "timestamp": "2023-10-21T07:00:00Z", "value": 140 }], "avg": 138.33, "min": 110, "max": 165 }
+
+Question: Show me the hourly freezer temperature for sensor FREEZE-505 in the grocery store from 2 PM to 8 PM last Saturday.
+Call: { "func_call": "get_historical_readings", "sensor_id": "FREEZE-505", "from": "2023-10-28T14:00:00Z", "to": "2023-10-28T20:00:00Z", "interval": "hourly" }
+Response: { "sensor_id": "FREEZE-505", "readings": [{ "timestamp": "2023-10-28T14:00:00Z", "value": -18.2 }, { "timestamp": "2023-10-28T15:00:00Z", "value": -18.1 }, { "timestamp": "2023-10-28T16:00:00Z", "value": -18.3 }, { "timestamp": "2023-10-28T17:00:00Z", "value": -18.0 }, { "timestamp": "2023-10-28T18:00:00Z", "value": -18.2 }, { "timestamp": "2023-10-28T19:00:00Z", "value": -18.1 }], "avg": -18.15, "min": -18.3, "max": -18.0 }
+
+Question: Fetch the daily average barometric pressure for sensor BARO-303 at the mountain resort for the first three days of December.
+Call: { "func_call": "get_average_reading", "sensor_id": "BARO-303", "from": "2023-12-01T00:00:00Z", "to": "2023-12-03T23:59:59Z", "interval": "daily" }
+Response: { "sensor_id": "BARO-303", "readings": [{ "timestamp": "2023-12-01T00:00:00Z", "value": 890.5 }, { "timestamp": "2023-12-02T00:00:00Z", "value": 888.2 }, { "timestamp": "2023-12-03T00:00:00Z", "value": 892.1 }], "avg": 890.27, "min": 888.2, "max": 892.1 }

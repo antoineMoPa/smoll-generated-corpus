@@ -1,0 +1,59 @@
+Context: During the afternoon workshop, Marcus demonstrated the new software features to the development team. Everyone appreciated his clear explanation of the update.
+Input: {"question": "Who demonstrated the new software features?"}
+Output: {"answer": "Marcus"}
+
+Context: The umpire called a foul on the home team after a contentious play. Both captains argued with the official before resuming the game.
+Input: {"question": "Who called a foul on the home team?"}
+Output: {"answer": "The umpire"}
+
+Context: At the hotel front desk, the clerk verified my reservation and handed over the room key. He informed me that breakfast would be served until ten.
+Input: {"question": "Who verified the reservation and handed over the room key?"}
+Output: {"answer": "the clerk"}
+
+Context: Dr. Evans prescribed a new medication for the patient just before the clinic closed. The pharmacy staff noted that the dosage was quite high.
+Input: {"question": "Who prescribed the new medication?"}
+Output: {"answer": "Dr. Evans"}
+
+Context: While repairing the broken window, the carpenter realized that the frame was also rotted. He suggested replacing the entire structure soon.
+Input: {"question": "Who realized that the window frame was rotted?"}
+Output: {"answer": "the carpenter"}
+
+Context: Sofia planned the corporate retreat for her department at a mountain lodge. All the employees enjoyed the hiking and team-building exercises.
+Input: {"question": "Who planned the corporate retreat?"}
+Output: {"answer": "Sofia"}
+
+Context: The manager replaced the faulty equipment with a brand new model during the night shift. The operators were relieved to have working machinery.
+Input: {"question": "Who replaced the faulty equipment?"}
+Output: {"answer": "The manager"}
+
+Context: During the network failure, the IT specialist restored the backup servers within minutes. The data became accessible almost immediately.
+Input: {"question": "Who restored the backup servers?"}
+Output: {"answer": "the IT specialist"}
+
+Context: My cousin, Leo, fed my cat while I was traveling abroad last month. The animal remained healthy thanks to his attention.
+Input: {"question": "Who fed the cat while the owner was traveling?"}
+Output: {"answer": "Leo"}
+
+Context: The archivist noted a restriction on the ancient manuscripts as I requested access. She logged the inquiry with the current date.
+Input: {"question": "Who noted a restriction on the ancient manuscripts?"}
+Output: {"answer": "The archivist"}
+
+Context: Admiral Chen navigated the submarine through the narrow channel with precision. The crew trusted his expertise completely.
+Input: {"question": "Who navigated the submarine through the narrow channel?"}
+Output: {"answer": "Admiral Chen"}
+
+Context: At the concierge desk, the attendant booked a taxi for the guest who was in a hurry. He assured them the car would arrive shortly.
+Input: {"question": "Who booked a taxi for the guest?"}
+Output: {"answer": "the attendant"}
+
+Context: The baker sampled the dough and determined it required more sugar before baking. He asked the assistant to modify the recipe.
+Input: {"question": "Who determined the dough required more sugar?"}
+Output: {"answer": "The baker"}
+
+Context: When the tornado sirens sounded, the emergency coordinator guided residents to the shelter. Everyone stayed safe because her directions were prompt.
+Input: {"question": "Who guided residents to the shelter?"}
+Output: {"answer": "the emergency coordinator"}
+
+Context: Maria offered to walk the dogs for the elderly couple since she lived nearby. They met her on the porch every evening this week.
+Input: {"question": "Who offered to walk the dogs for the elderly couple?"}
+Output: {"answer": "Maria"}

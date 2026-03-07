@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "string", "head": "string", "base": "string" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Generate a pull request in the geo-mapping engine repo owned by map-masters to merge feature/3d-terrain into main with the title "Enable 3D Terrain Rendering".
+Call: { "func_call": "create_pr", "owner": "map-masters", "repo": "geo-mapping", "pr_number": 0, "title": "Enable 3D Terrain Rendering", "head": "feature/3d-terrain", "base": "main" }
+Response: { "pr_number": 412, "title": "Enable 3D Terrain Rendering", "state": "open", "author": "map-masters", "changed_files": 24, "mergeable": true }
+
+Question: Display all active pull requests for the chat-bot-core repository under the ai-assist organization.
+Call: { "func_call": "list_prs", "owner": "ai-assist", "repo": "chat-bot-core", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 76, "title": "Implement Context Awareness", "state": "open", "author": "nlp_expert", "changed_files": 14, "mergeable": true }
+
+Question: Open a PR in the retail-pos-system repo owned by shop-flow to merge hotfix/receipt-printer into develop titled "Fix Receipt Printer Connectivity".
+Call: { "func_call": "create_pr", "owner": "shop-flow", "repo": "retail-pos-system", "pr_number": 0, "title": "Fix Receipt Printer Connectivity", "head": "hotfix/receipt-printer", "base": "develop" }
+Response: { "pr_number": 309, "title": "Fix Receipt Printer Connectivity", "state": "open", "author": "shop-flow", "changed_files": 2, "mergeable": false }
+
+Question: Show me the current pull requests for the energy-grid-sim repository managed by green-power.
+Call: { "func_call": "list_prs", "owner": "green-power", "repo": "energy-grid-sim", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 55, "title": "Optimize Load Balancing Algorithm", "state": "open", "author": "eng_solar", "changed_files": 10, "mergeable": true }
+
+Question: Create a pull request for the video-streaming-backend repo owned by media-cloud merging feature/hls-encryption into main with the title "Add HLS Stream Encryption".
+Call: { "func_call": "create_pr", "owner": "media-cloud", "repo": "video-streaming-backend", "pr_number": 0, "title": "Add HLS Stream Encryption", "head": "feature/hls-encryption", "base": "main" }
+Response: { "pr_number": 128, "title": "Add HLS Stream Encryption", "state": "open", "author": "media-cloud", "changed_files": 19, "mergeable": true }
+
+Question: List pending pull requests for the logistics-tracker project under the transport-x organization.
+Call: { "func_call": "list_prs", "owner": "transport-x", "repo": "logistics-tracker", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 201, "title": "Integrate GPS Real-time Updates", "state": "open", "author": "fleet_mgr", "changed_files": 7, "mergeable": false }
+
+Question: Submit a new PR to the wiki-platform repo owned by knowledge-base to merge content/markdown-editor into main titled "Deploy New Markdown Editor".
+Call: { "func_call": "create_pr", "owner": "knowledge-base", "repo": "wiki-platform", "pr_number": 0, "title": "Deploy New Markdown Editor", "head": "content/markdown-editor", "base": "main" }
+Response: { "pr_number": 445, "title": "Deploy New Markdown Editor", "state": "open", "author": "knowledge-base", "changed_files": 31, "mergeable": true }
+
+Question: What pull requests are currently active in the weather-prediction repo belonging to climate-data?
+Call: { "func_call": "list_prs", "owner": "climate-data", "repo": "weather-prediction", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 93, "title": "Update Hurricane Tracking Model", "state": "open", "author": "meteo_jane", "changed_files": 16, "mergeable": true }
+
+Question: Create a pull request in the crypto-wallet repo owned by block-chain-inc to merge refactor/gas-estimation into master with the title "Refactor Gas Estimation Module".
+Call: { "func_call": "create_pr", "owner": "block-chain-inc", "repo": "crypto-wallet", "pr_number": 0, "title": "Refactor Gas Estimation Module", "head": "refactor/gas-estimation", "base": "master" }
+Response: { "pr_number": 62, "title": "Refactor Gas Estimation Module", "state": "open", "author": "block-chain-inc", "changed_files": 9, "mergeable": false }
+
+Question: Retrieve the list of open PRs for the image-recognition repository under the vision-labs organization.
+Call: { "func_call": "list_prs", "owner": "vision-labs", "repo": "image-recognition", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 177, "title": "Implement Object Detection V3", "state": "open", "author": "cv_researcher", "changed_files": 20, "mergeable": true }
+
+Question: Open a PR for the email-scheduler repo owned by comms-tool merging feature/timezone-support into main titled "Add Multi-Timezone Support".
+Call: { "func_call": "create_pr", "owner": "comms-tool", "repo": "email-scheduler", "pr_number": 0, "title": "Add Multi-Timezone Support", "head": "feature/timezone-support", "base": "main" }
+Response: { "pr_number": 154, "title": "Add Multi-Timezone Support", "state": "open", "author": "comms-tool", "changed_files": 13, "mergeable": true }
+
+Question: List all pull requests for the game-leaderboard repo managed by gaming-studio.
+Call: { "func_call": "list_prs", "owner": "gaming-studio", "repo": "game-leaderboard", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 81, "title": "Fix Score Sorting Bug", "state": "open", "author": "dev_player1", "changed_files": 5, "mergeable": true }

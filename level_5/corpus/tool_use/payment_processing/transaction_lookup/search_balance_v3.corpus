@@ -1,0 +1,51 @@
+Available Tools: get_transaction | list_transactions | search_transactions | get_balance
+Call Schema: { "func_call": "string", "transaction_id": "string", "customer_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "transactions": [{ "id": "string", "amount": number, "currency": "string", "status": "string", "created": "string" }], "total_count": number }
+---
+Question: Locate all payments for client CLT-4409 spanning April 5th to April 20th, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CLT-4409", "from_date": "2024-04-05", "to_date": "2024-04-20" }
+Response: { "transactions": [{ "id": "PAY-3321", "amount": 89.95, "currency": "USD", "status": "completed", "created": "2024-04-06T09:15:00Z" }, { "id": "PAY-3322", "amount": 210.00, "currency": "USD", "status": "completed", "created": "2024-04-18T16:40:00Z" }], "total_count": 2 }
+
+Question: Fetch the complete record for payment identifier PAY-778899.
+Call: { "func_call": "get_transaction", "transaction_id": "PAY-778899", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "PAY-778899", "amount": 54.25, "currency": "EUR", "status": "pending", "created": "2024-05-01T11:30:00Z" }], "total_count": 1 }
+
+Question: Display the most recent 100 entries for account ACC-9988 with no date restrictions.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "ACC-9988", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "ENT-5501", "amount": 15.50, "currency": "GBP", "status": "completed", "created": "2024-05-10T07:45:00Z" }, { "id": "ENT-5502", "amount": 88.00, "currency": "GBP", "status": "failed", "created": "2024-05-11T13:20:00Z" }], "total_count": 2 }
+
+Question: Identify reversed transactions for user USR-6677 during the period of May 1 to May 7, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "USR-6677", "from_date": "2024-05-01", "to_date": "2024-05-07" }
+Response: { "transactions": [{ "id": "REV-1123", "amount": 300.00, "currency": "USD", "status": "refunded", "created": "2024-05-03T14:10:00Z" }], "total_count": 1 }
+
+Question: Obtain specific data for transfer TRF-2003004 for audit compliance.
+Call: { "func_call": "get_transaction", "transaction_id": "TRF-2003004", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TRF-2003004", "amount": 1250.75, "currency": "CAD", "status": "completed", "created": "2024-04-22T10:05:00Z" }], "total_count": 1 }
+
+Question: Report all bill payments made by subscriber SUB-7722 in the second quarter, April 1 through June 30, 2023.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "SUB-7722", "from_date": "2023-04-01", "to_date": "2023-06-30" }
+Response: { "transactions": [{ "id": "BILL-4455", "amount": 95.00, "currency": "USD", "status": "completed", "created": "2023-04-15T08:30:00Z" }, { "id": "BILL-4456", "amount": 95.00, "currency": "USD", "status": "completed", "created": "2023-05-15T08:30:00Z" }, { "id": "BILL-4457", "amount": 95.00, "currency": "USD", "status": "completed", "created": "2023-06-15T08:30:00Z" }], "total_count": 3 }
+
+Question: Access the log entry for transaction LOG-990011 flagged for review.
+Call: { "func_call": "get_transaction", "transaction_id": "LOG-990011", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "LOG-990011", "amount": 12.99, "currency": "USD", "status": "completed", "created": "2024-05-20T15:55:00Z" }], "total_count": 1 }
+
+Question: Detect any financial movement for member MBM-5511 between June 10 and June 12, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "MBM-5511", "from_date": "2024-06-10", "to_date": "2024-06-12" }
+Response: { "transactions": [{ "id": "MOV-8833", "amount": 42.50, "currency": "EUR", "status": "completed", "created": "2024-06-11T19:25:00Z" }], "total_count": 1 }
+
+Question: Enumerate all latest operations for profile PRF-3322 to investigate potential fraud.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "PRF-3322", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "OP-7766", "amount": 5.00, "currency": "USD", "status": "completed", "created": "2024-06-15T06:10:00Z" }, { "id": "OP-7767", "amount": 850.00, "currency": "USD", "status": "pending", "created": "2024-06-15T06:45:00Z" }], "total_count": 2 }
+
+Question: Pull up specifications for charge CHG-112233 linked to a dispute case.
+Call: { "func_call": "get_transaction", "transaction_id": "CHG-112233", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "CHG-112233", "amount": 175.80, "currency": "GBP", "status": "disputed", "created": "2024-04-05T12:40:00Z" }], "total_count": 1 }
+
+Question: Query for premium transactions exceeding $2000 for entity ENT-8844 in June 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "ENT-8844", "from_date": "2024-06-01", "to_date": "2024-06-30" }
+Response: { "transactions": [{ "id": "PRM-9911", "amount": 2500.00, "currency": "USD", "status": "completed", "created": "2024-06-05T10:15:00Z" }, { "id": "PRM-9912", "amount": 3200.00, "currency": "USD", "status": "completed", "created": "2024-06-28T14:50:00Z" }], "total_count": 2 }
+
+Question: Retrieve the entire transaction ledger for vendor VND-2211 from January 1 to May 31, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "VND-2211", "from_date": "2024-01-01", "to_date": "2024-05-31" }
+Response: { "transactions": [{ "id": "LED-3344", "amount": 400.00, "currency": "USD", "status": "completed", "created": "2024-02-20T09:30:00Z" }, { "id": "LED-3345", "amount": 650.00, "currency": "USD", "status": "completed", "created": "2024-03-25T11:45:00Z" }, { "id": "LED-3346", "amount": 225.00, "currency": "USD", "status": "completed", "created": "2024-05-10T13:20:00Z" }], "total_count": 3 }

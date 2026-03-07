@@ -1,0 +1,51 @@
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: What was the conversion rate for the main checkout flow last week?
+Call: { "func_call": "get_conversion_rate", "event_name": "purchase_completed", "funnel_id": "funnel_checkout_v2", "from_date": "2023-10-01", "to_date": "2023-10-07" }
+Response: { "event": "purchase_completed", "total_events": 1450, "unique_users": 1200, "conversion_rate": 0.034, "funnel_steps": [{ "name": "cart_view", "completions": 42000 }, { "name": "shipping_info", "completions": 18500 }, { "name": "payment_entry", "completions": 4200 }, { "name": "purchase_completed", "completions": 1450 }] }
+
+Question: Show me the drop-off data for the new user signup process in September.
+Call: { "func_call": "get_funnel_data", "event_name": "account_created", "funnel_id": "funnel_signup_mobile", "from_date": "2023-09-01", "to_date": "2023-09-30" }
+Response: { "event": "account_created", "total_events": 8900, "unique_users": 8850, "conversion_rate": 0.18, "funnel_steps": [{ "name": "landing_page_visit", "completions": 49500 }, { "name": "email_entry", "completions": 22000 }, { "name": "password_set", "completions": 12500 }, { "name": "account_created", "completions": 8900 }] }
+
+Question: How did the onboarding tutorial completion look for enterprise users last month?
+Call: { "func_call": "get_funnel_data", "event_name": "onboarding_finished", "funnel_id": "funnel_onboard_ent", "from_date": "2023-08-01", "to_date": "2023-08-31" }
+Response: { "event": "onboarding_finished", "total_events": 320, "unique_users": 315, "conversion_rate": 0.64, "funnel_steps": [{ "name": "welcome_modal", "completions": 500 }, { "name": "profile_setup", "completions": 410 }, { "name": "first_project_create", "completions": 350 }, { "name": "onboarding_finished", "completions": 320 }] }
+
+Question: I need the conversion metrics for the holiday sale checkout funnel from Black Friday to Cyber Monday.
+Call: { "func_call": "get_conversion_rate", "event_name": "holiday_purchase", "funnel_id": "funnel_checkout_holiday", "from_date": "2023-11-24", "to_date": "2023-11-27" }
+Response: { "event": "holiday_purchase", "total_events": 15600, "unique_users": 14200, "conversion_rate": 0.052, "funnel_steps": [{ "name": "promo_landing", "completions": 300000 }, { "name": "product_detail", "completions": 85000 }, { "name": "add_to_cart", "completions": 32000 }, { "name": "holiday_purchase", "completions": 15600 }] }
+
+Question: Analyze the free trial signup funnel performance for the last 14 days.
+Call: { "func_call": "get_funnel_data", "event_name": "trial_started", "funnel_id": "funnel_signup_trial", "from_date": "2023-10-10", "to_date": "2023-10-24" }
+Response: { "event": "trial_started", "total_events": 2100, "unique_users": 2050, "conversion_rate": 0.21, "funnel_steps": [{ "name": "pricing_page_view", "completions": 10000 }, { "name": "plan_selection", "completions": 4500 }, { "name": "credit_card_entry", "completions": 2800 }, { "name": "trial_started", "completions": 2100 }] }
+
+Question: What are the completion numbers for the mobile app onboarding steps this week?
+Call: { "func_call": "get_goal_completions", "event_name": "app_tutorial_complete", "funnel_id": "funnel_onboard_mobile", "from_date": "2023-10-23", "to_date": "2023-10-29" }
+Response: { "event": "app_tutorial_complete", "total_events": 5400, "unique_users": 5300, "conversion_rate": 0.45, "funnel_steps": [{ "name": "app_install", "completions": 12000 }, { "name": "permission_grant", "completions": 8500 }, { "name": "tutorial_step_1", "completions": 6200 }, { "name": "app_tutorial_complete", "completions": 5400 }] }
+
+Question: Retrieve the conversion rate for the guest checkout option compared to registered users yesterday.
+Call: { "func_call": "get_conversion_rate", "event_name": "guest_checkout_success", "funnel_id": "funnel_checkout_guest", "from_date": "2023-10-28", "to_date": "2023-10-28" }
+Response: { "event": "guest_checkout_success", "total_events": 890, "unique_users": 890, "conversion_rate": 0.028, "funnel_steps": [{ "name": "cart_view", "completions": 31800 }, { "name": "guest_select", "completions": 12000 }, { "name": "shipping_guest", "completions": 4500 }, { "name": "guest_checkout_success", "completions": 890 }] }
+
+Question: Show the full funnel breakdown for the webinar registration event last quarter.
+Call: { "func_call": "get_funnel_data", "event_name": "webinar_registered", "funnel_id": "funnel_webinar_q3", "from_date": "2023-07-01", "to_date": "2023-09-30" }
+Response: { "event": "webinar_registered", "total_events": 4500, "unique_users": 4400, "conversion_rate": 0.15, "funnel_steps": [{ "name": "blog_post_view", "completions": 30000 }, { "name": "cta_click", "completions": 8000 }, { "name": "form_start", "completions": 5500 }, { "name": "webinar_registered", "completions": 4500 }] }
+
+Question: Get the conversion stats for the premium upgrade funnel during the product launch week.
+Call: { "func_call": "get_conversion_rate", "event_name": "plan_upgraded", "funnel_id": "funnel_upgrade_launch", "from_date": "2023-09-15", "to_date": "2023-09-22" }
+Response: { "event": "plan_upgraded", "total_events": 1250, "unique_users": 1200, "conversion_rate": 0.08, "funnel_steps": [{ "name": "feature_limit_hit", "completions": 15600 }, { "name": "upgrade_modal_view", "completions": 8200 }, { "name": "billing_info_entry", "completions": 2100 }, { "name": "plan_upgraded", "completions": 1250 }] }
+
+Question: How many users completed the identity verification step in the KYC funnel this month?
+Call: { "func_call": "get_goal_completions", "event_name": "kyc_verified", "funnel_id": "funnel_kyc_standard", "from_date": "2023-10-01", "to_date": "2023-10-31" }
+Response: { "event": "kyc_verified", "total_events": 3100, "unique_users": 3050, "conversion_rate": 0.52, "funnel_steps": [{ "name": "kyc_initiated", "completions": 5950 }, { "name": "id_upload", "completions": 4800 }, { "name": "selfie_capture", "completions": 3600 }, { "name": "kyc_verified", "completions": 3100 }] }
+
+Question: What is the drop-off rate between adding to cart and initiating checkout for the winter collection?
+Call: { "func_call": "get_funnel_data", "event_name": "checkout_initiated", "funnel_id": "funnel_winter_collection", "from_date": "2023-11-01", "to_date": "2023-11-15" }
+Response: { "event": "checkout_initiated", "total_events": 6700, "unique_users": 6500, "conversion_rate": 0.31, "funnel_steps": [{ "name": "collection_browse", "completions": 45000 }, { "name": "product_view", "completions": 21500 }, { "name": "add_to_cart", "completions": 21500 }, { "name": "checkout_initiated", "completions": 6700 }] }
+
+Question: Provide the conversion rate and step completions for the newsletter subscription funnel over the weekend.
+Call: { "func_call": "get_conversion_rate", "event_name": "newsletter_subscribed", "funnel_id": "funnel_newsletter_footer", "from_date": "2023-10-21", "to_date": "2023-10-22" }
+Response: { "event": "newsletter_subscribed", "total_events": 1800, "unique_users": 1750, "conversion_rate": 0.12, "funnel_steps": [{ "name": "homepage_visit", "completions": 50000 }, { "name": "scroll_to_footer", "completions": 15000 }, { "name": "email_input_focus", "completions": 2500 }, { "name": "newsletter_subscribed", "completions": 1800 }] }

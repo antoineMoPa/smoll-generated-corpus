@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Distribute a bulk alert to all Android users about the upcoming winter holiday schedule changes.
+Call: { "func_call": "send_bulk_push", "user_id": "hr_notifier_03", "title": "Holiday Office Hours Update", "body": "Our support team will be unavailable from Dec 24 to Dec 26. Emergency contacts listed in the app.", "data": { "season": "winter_2024", "region": "global", "type": "schedule_change" }, "device_token": "*" }
+Response: { "notification_id": "blk_hol_556677", "status": "sent", "timestamp": "2024-12-20T08:15:30Z" }
+
+Question: Verify if the password reset request reached the user on their registered tablet device.
+Call: { "func_call": "get_push_status", "user_id": "auth_service_v2", "title": "Password Reset Requested", "body": "If you did not request this change, please secure your account immediately.", "data": { "request_id": "REQ-889900", "device_type": "tablet" }, "device_token": "tok_tablet_user_01" }
+Response: { "notification_id": "msg_auth_332211", "status": "delivered", "timestamp": "2024-07-10T19:22:15Z" }
+
+Question: Send a mass notification to beta testers inviting them to try the new voice command feature.
+Call: { "func_call": "send_bulk_push", "user_id": "qa_lead_05", "title": "Beta Test: Voice Commands", "body": "Try saying 'Hey App' to navigate. Feedback form is now live.", "data": { "build_version": "5.0-beta", "feature": "voice_nav", "group": "beta_testers" }, "device_token": "*" }
+Response: { "notification_id": "blk_beta_443322", "status": "sent", "timestamp": "2024-07-11T10:00:00Z" }
+
+Question: Check the delivery success rate of the flight delay notification sent to travelers in London.
+Call: { "func_call": "get_push_status", "user_id": "travel_alerts_uk", "title": "Flight BA492 Delayed", "body": "Your flight has been delayed by 2 hours. New departure time: 14:30.", "data": { "flight_number": "BA492", "airport": "LHR", "delay_minutes": 120 }, "device_token": "tok_london_travelers" }
+Response: { "notification_id": "msg_flight_778899", "status": "delivered", "timestamp": "2024-07-11T11:45:00Z" }
+
+Question: Broadcast an emergency weather warning to all users located in the coastal region.
+Call: { "func_call": "send_bulk_push", "user_id": "weather_emergency_bot", "title": "Severe Storm Warning", "body": "Hurricane-force winds expected within 3 hours. Seek shelter immediately.", "data": { "alert_type": "hurricane", "severity": "extreme", "zone": "coastal_south" }, "device_token": "*" }
+Response: { "notification_id": "blk_storm_119988", "status": "sent", "timestamp": "2024-07-11T06:30:00Z" }
+
+Question: Retrieve the status of the subscription renewal reminder sent to monthly plan users.
+Call: { "func_call": "get_push_status", "user_id": "billing_auto_renew", "title": "Subscription Renewing Tomorrow", "body": "Your monthly plan will renew on July 13. Ensure your payment method is valid.", "data": { "plan_type": "monthly_basic", "renewal_date": "2024-07-13" }, "device_token": "tok_monthly_subs" }
+Response: { "notification_id": "msg_sub_665544", "status": "failed", "timestamp": "2024-07-12T09:00:00Z" }
+
+Question: Launch a bulk campaign to inform users about the new referral bonus program.
+Call: { "func_call": "send_bulk_push", "user_id": "growth_hacker_01", "title": "Earn $10 for Every Friend", "body": "Invite friends to join and get $10 credit when they make their first purchase.", "data": { "campaign_name": "referral_summer_24", "reward_amount": 10, "currency": "USD" }, "device_token": "*" }
+Response: { "notification_id": "blk_ref_223344", "status": "sent", "timestamp": "2024-07-12T12:00:00Z" }
+
+Question: Investigate the delivery status of the two-factor authentication code sent to a specific admin.
+Call: { "func_call": "get_push_status", "user_id": "security_gateway", "title": "Your 2FA Code", "body": "Your verification code is 849201. Valid for 5 minutes.", "data": { "code_type": "login_verify", "expiry_seconds": 300, "admin_level": "super" }, "device_token": "tok_admin_secure_09" }
+Response: { "notification_id": "msg_2fa_998811", "status": "delivered", "timestamp": "2024-07-12T14:10:05Z" }
+
+Question: Send a bulk update to all drivers regarding the new traffic regulation in the city center.
+Call: { "func_call": "send_bulk_push", "user_id": "logistics_dispatcher", "title": "New Traffic Rules: City Center", "body": "Delivery vehicles are now restricted from Zone A between 9 AM and 5 PM.", "data": { "zone": "center_a", "restriction_type": "vehicle_ban", "effective_date": "2024-07-15" }, "device_token": "*" }
+Response: { "notification_id": "blk_log_554433", "status": "sent", "timestamp": "2024-07-12T07:45:00Z" }
+
+Question: Confirm if the app maintenance scheduled for tonight was successfully communicated to EU users.
+Call: { "func_call": "get_push_status", "user_id": "ops_eu_region", "title": "Scheduled Maintenance Tonight", "body": "Services will be offline from 02:00 to 04:00 CET for upgrades.", "data": { "maintenance_window": "02:00-04:00", "timezone": "CET", "region": "EU" }, "device_token": "tok_eu_active" }
+Response: { "notification_id": "msg_maint_776655", "status": "delivered", "timestamp": "2024-07-12T16:30:00Z" }
+
+Question: Dispatch a bulk reminder to gym members about their expiring membership passes.
+Call: { "func_call": "send_bulk_push", "user_id": "fitness_app_bot", "title": "Membership Expiring Soon", "body": "Your annual pass expires in 7 days. Renew now to keep access to all classes.", "data": { "membership_type": "annual_pro", "days_remaining": 7, "gym_id": "GYM-NYC-05" }, "device_token": "*" }
+Response: { "notification_id": "blk_gym_887766", "status": "sent", "timestamp": "2024-07-12T18:00:00Z" }
+
+Question: Check the status of the fraud detection alert sent to users with suspicious login attempts.
+Call: { "func_call": "get_push_status", "user_id": "fraud_detection_ai", "title": "Suspicious Login Detected", "body": "A login attempt was made from a new device in Paris. Was this you?", "data": { "location": "Paris, FR", "device_model": "Unknown Android", "risk_score": 0.95 }, "device_token": "tok_flagged_users" }
+Response: { "notification_id": "msg_fraud_334455", "status": "delivered", "timestamp": "2024-07-12T20:15:45Z" }

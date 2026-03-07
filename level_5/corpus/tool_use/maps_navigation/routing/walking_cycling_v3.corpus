@@ -1,0 +1,47 @@
+Question: How do I walk from the Spanish Steps to the Trevi Fountain in Rome?
+Call: { "func_call": "get_directions", "origin": "Spanish Steps, Rome", "destination": "Trevi Fountain, Rome", "mode": "walking" }
+Response: { "distance_km": 0.5, "duration_minutes": 7, "steps": [ { "instruction": "Head southeast on Via dei Condotti.", "distance_km": 0.2 }, { "instruction": "Turn left onto Via delle Muratte.", "distance_km": 0.2 }, { "instruction": "Arrive at the fountain plaza.", "distance_km": 0.1 } ] }
+
+Question: What is the best cycling route from Alcatraz Ferry Terminal to Crissy Field?
+Call: { "func_call": "get_directions", "origin": "Alcatraz Ferry Terminal, San Francisco", "destination": "Crissy Field, San Francisco", "mode": "cycling" }
+Response: { "distance_km": 4.2, "duration_minutes": 18, "steps": [ { "instruction": "Head west on The Embarcadero.", "distance_km": 1.5 }, { "instruction": "Turn right onto Bay Street and continue to the Presidio.", "distance_km": 1.8 }, { "instruction": "Follow the path through Crissy Field to the beach.", "distance_km": 0.9 } ] }
+
+Question: I need walking directions from the Sydney Opera House to the Royal Botanic Garden entrance.
+Call: { "func_call": "get_directions", "origin": "Sydney Opera House, Sydney", "destination": "Royal Botanic Garden, Sydney", "mode": "walking" }
+Response: { "distance_km": 0.7, "duration_minutes": 9, "steps": [ { "instruction": "Walk along the eastern promenade of the opera house.", "distance_km": 0.3 }, { "instruction": "Enter the gardens via the Pioneer Memorial Gate.", "distance_km": 0.4 } ] }
+
+Question: Can you map a cycling path from the Brandenburger Tor to Museum Island?
+Call: { "func_call": "get_directions", "origin": "Brandenburger Tor, Berlin", "destination": "Museum Island, Berlin", "mode": "cycling" }
+Response: { "distance_km": 2.1, "duration_minutes": 11, "steps": [ { "instruction": "Cycle east on Unter den Linden.", "distance_km": 1.4 }, { "instruction": "Turn left onto Am Kupfergraben.", "distance_km": 0.5 }, { "instruction": "Cross the bridge to Museum Island.", "distance_km": 0.2 } ] }
+
+Question: How do I walk from Pike Place Market to the Space Needle?
+Call: { "func_call": "get_directions", "origin": "Pike Place Market, Seattle", "destination": "Space Needle, Seattle", "mode": "walking" }
+Response: { "distance_km": 1.8, "duration_minutes": 22, "steps": [ { "instruction": "Head north on 1st Avenue.", "distance_km": 0.9 }, { "instruction": "Turn right onto Broad Street.", "distance_km": 0.6 }, { "instruction": "Continue to the base of the Space Needle.", "distance_km": 0.3 } ] }
+
+Question: Find a cycling route from Copacabana Beach to Sugarloaf Mountain cable car station.
+Call: { "func_call": "get_directions", "origin": "Copacabana Beach, Rio de Janeiro", "destination": "Sugarloaf Cable Car, Rio de Janeiro", "mode": "cycling" }
+Response: { "distance_km": 3.5, "duration_minutes": 15, "steps": [ { "instruction": "Cycle south on Avenida Atlântica.", "distance_km": 1.2 }, { "instruction": "Turn left onto Rua São Clemente.", "distance_km": 1.8 }, { "instruction": "Arrive at the Urca district station.", "distance_km": 0.5 } ] }
+
+Question: Walking directions from the Great Wall Mutianyu entrance to the cable car lower station.
+Call: { "func_call": "get_directions", "origin": "Mutianyu Great Wall Entrance, Beijing", "destination": "Mutianyu Cable Car Station, Beijing", "mode": "walking" }
+Response: { "distance_km": 0.8, "duration_minutes": 10, "steps": [ { "instruction": "Walk through the ticket plaza towards the valley.", "distance_km": 0.5 }, { "instruction": "Follow signs to the cable car loading zone.", "distance_km": 0.3 } ] }
+
+Question: What is the cycling route from the Duomo to Piazzale Michelangelo in Florence?
+Call: { "func_call": "get_directions", "origin": "Duomo, Florence", "destination": "Piazzale Michelangelo, Florence", "mode": "cycling" }
+Response: { "distance_km": 2.8, "duration_minutes": 14, "steps": [ { "instruction": "Head south on Via de' Calzaiuoli.", "distance_km": 0.6 }, { "instruction": "Cross the Ponte alle Grazie.", "distance_km": 0.4 }, { "instruction": "Ascend Viale Galileo Galilei to the square.", "distance_km": 1.8 } ] }
+
+Question: How can I walk from the Red Square to St. Basil's Cathedral?
+Call: { "func_call": "get_directions", "origin": "Red Square, Moscow", "destination": "St. Basil's Cathedral, Moscow", "mode": "walking" }
+Response: { "distance_km": 0.2, "duration_minutes": 3, "steps": [ { "instruction": "Walk south across the cobblestones of Red Square.", "distance_km": 0.2 } ] }
+
+Question: Cycling directions from Bondi Beach to Coogee Beach along the coastal path.
+Call: { "func_call": "get_directions", "origin": "Bondi Beach, Sydney", "destination": "Coogee Beach, Sydney", "mode": "cycling" }
+Response: { "distance_km": 6.0, "duration_minutes": 28, "steps": [ { "instruction": "Follow the Bondi to Coogee Coastal Walk path.", "distance_km": 3.5 }, { "instruction": "Navigate around Tamarama Beach.", "distance_km": 1.2 }, { "instruction": "Continue past Bronte Beach to Coogee.", "distance_km": 1.3 } ] }
+
+Question: Walk from the Vatican Museums entrance to St. Peter's Square.
+Call: { "func_call": "get_directions", "origin": "Vatican Museums Entrance, Vatican City", "destination": "St. Peter's Square, Vatican City", "mode": "walking" }
+Response: { "distance_km": 0.9, "duration_minutes": 12, "steps": [ { "instruction": "Exit the museums and turn right on Via del Pellegrino.", "distance_km": 0.4 }, { "instruction": "Walk along Via della Conciliazione towards the basilica.", "distance_km": 0.5 } ] }
+
+Question: Cycling path from Niagara Falls State Park to the Observation Tower.
+Call: { "func_call": "get_directions", "origin": "Niagara Falls State Park, New York", "destination": "Observation Tower, Niagara Falls", "mode": "cycling" }
+Response: { "distance_km": 1.4, "duration_minutes": 8, "steps": [ { "instruction": "Cycle along the Niagara Scenic Parkway.", "distance_km": 0.8 }, { "instruction": "Turn into the park road leading to the tower.", "distance_km": 0.6 } ] }

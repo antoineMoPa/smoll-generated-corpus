@@ -1,0 +1,59 @@
+Context: Marcus put on his heavy winter coat and gloves before stepping outside into the snow.
+Input: {"question": "What gear did Marcus wear?"}
+Output: {"answer": "coat and gloves"}
+
+Context: The teacher collected the pencils and erased the whiteboard as the bell rang.
+Input: {"question": "What object did the teacher clean?"}
+Output: {"answer": "whiteboard"}
+
+Context: Sarah yawned loudly and rubbed her eyes while waiting for the coffee to brew.
+Input: {"question": "What beverage was Sarah waiting for?"}
+Output: {"answer": "coffee"}
+
+Context: The crowd cheered wildly when the home team scored the winning goal in the final second.
+Input: {"question": "When was the goal scored?"}
+Output: {"answer": "final second"}
+
+Context: James looked at his empty wallet and sighed before putting the candy bar back on the shelf.
+Input: {"question": "What item did James return to the shelf?"}
+Output: {"answer": "candy bar"}
+
+Context: The flowers in the garden wilted and turned brown after a week without rain.
+Input: {"question": "How long did the garden go without water?"}
+Output: {"answer": "a week"}
+
+Context: Elena packed her swimsuit and sunscreen into her bag for the trip to Florida.
+Input: {"question": "Where is Elena traveling?"}
+Output: {"answer": "Florida"}
+
+Context: The driver slammed on the brakes to avoid hitting the deer that jumped onto the road.
+Input: {"question": "What action did the driver take?"}
+Output: {"answer": "slammed on the brakes"}
+
+Context: The baby cried continuously until his mother picked him up and rocked him gently.
+Input: {"question": "How did the mother comfort the baby?"}
+Output: {"answer": "rocked him"}
+
+Context: Tom searched through the cupboard but could not find any plates, so he ordered pizza.
+Input: {"question": "What food did Tom order instead?"}
+Output: {"answer": "pizza"}
+
+Context: The sky turned dark gray and the wind began to howl just before the storm hit.
+Input: {"question": "What sound did the wind make?"}
+Output: {"answer": "howl"}
+
+Context: Lisa forgot her passport at home and was denied boarding at the airport gate.
+Input: {"question": "Where did Lisa leave her document?"}
+Output: {"answer": "home"}
+
+Context: The chef tasted the soup and added more salt to improve the flavor.
+Input: {"question": "What dish was the chef preparing?"}
+Output: {"answer": "soup"}
+
+Context: The dog wagged its tail and barked happily when its owner walked through the door.
+Input: {"question": "How did the dog show excitement?"}
+Output: {"answer": "wagged its tail"}
+
+Context: The student raised his hand to ask a question about the homework assignment.
+Input: {"question": "What topic was the question about?"}
+Output: {"answer": "homework assignment"}

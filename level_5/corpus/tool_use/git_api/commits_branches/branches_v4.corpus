@@ -1,0 +1,51 @@
+Available Tools: list_commits | get_commit | create_branch | delete_branch | list_branches | compare_branches
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "branch": "string", "sha": "string" }
+Response Schema: { "commits": [{ "sha": "string", "message": "string", "author": "string", "date": "string" }], "branch": "string" }
+---
+Question: Display all branches for the stellar-dynamics/nav-engine repository.
+Call: { "func_call": "list_branches", "owner": "stellar-dynamics", "repo": "nav-engine", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "main" }
+
+Question: Initialize a new hotfix branch named hotfix/trajectory-error in the stellar-dynamics/nav-engine repo based on commit 7x8y9z0a.
+Call: { "func_call": "create_branch", "owner": "stellar-dynamics", "repo": "nav-engine", "branch": "hotfix/trajectory-error", "sha": "7x8y9z0a" }
+Response: { "commits": [], "branch": "hotfix/trajectory-error" }
+
+Question: Remove the obsolete experimental branch experiment/warp-drive from the stellar-dynamics/nav-engine project.
+Call: { "func_call": "delete_branch", "owner": "stellar-dynamics", "repo": "nav-engine", "branch": "experiment/warp-drive", "sha": "" }
+Response: { "commits": [], "branch": "experiment/warp-drive" }
+
+Question: What branches exist in the cyberdyne/skynet-logic codebase?
+Call: { "func_call": "list_branches", "owner": "cyberdyne", "repo": "skynet-logic", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "develop" }
+
+Question: Spin up a release branch called release/v3.0.1 for the cyberdyne/skynet-logic repository starting from sha b2c3d4e5.
+Call: { "func_call": "create_branch", "owner": "cyberdyne", "repo": "skynet-logic", "branch": "release/v3.0.1", "sha": "b2c3d4e5" }
+Response: { "commits": [], "branch": "release/v3.0.1" }
+
+Question: Delete the completed feature branch feature/neural-net-v1 from the cyberdyne/skynet-logic repo.
+Call: { "func_call": "delete_branch", "owner": "cyberdyne", "repo": "skynet-logic", "branch": "feature/neural-net-v1", "sha": "" }
+Response: { "commits": [], "branch": "feature/neural-net-v1" }
+
+Question: List every available branch in the wayland-corp/replicant-id project.
+Call: { "func_call": "list_branches", "owner": "wayland-corp", "repo": "replicant-id", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "master" }
+
+Question: Create a bugfix branch named bugfix/voice-module-glitch for the wayland-corp/replicant-id repo using commit f6g7h8i9.
+Call: { "func_call": "create_branch", "owner": "wayland-corp", "repo": "replicant-id", "branch": "bugfix/voice-module-glitch", "sha": "f6g7h8i9" }
+Response: { "commits": [], "branch": "bugfix/voice-module-glitch" }
+
+Question: Clean up the merged branch release/v1.2.0 from the wayland-corp/replicant-id repository.
+Call: { "func_call": "delete_branch", "owner": "wayland-corp", "repo": "replicant-id", "branch": "release/v1.2.0", "sha": "" }
+Response: { "commits": [], "branch": "release/v1.2.0" }
+
+Question: Show me the branch list for the tyrell-corp/joystick-interface repository.
+Call: { "func_call": "list_branches", "owner": "tyrell-corp", "repo": "joystick-interface", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "main" }
+
+Question: Start a new feature branch called feature/hologram-render in the tyrell-corp/joystick-interface repo based on the latest main commit j0k1l2m3.
+Call: { "func_call": "create_branch", "owner": "tyrell-corp", "repo": "joystick-interface", "branch": "feature/hologram-render", "sha": "j0k1l2m3" }
+Response: { "commits": [], "branch": "feature/hologram-render" }
+
+Question: Remove the temporary debug branch debug/memory-leak-check from the tyrell-corp/joystick-interface project.
+Call: { "func_call": "delete_branch", "owner": "tyrell-corp", "repo": "joystick-interface", "branch": "debug/memory-leak-check", "sha": "" }
+Response: { "commits": [], "branch": "debug/memory-leak-check" }

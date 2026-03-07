@@ -1,0 +1,51 @@
+Available Tools: ls | ls_la | ls_lh | ls_R
+Call Schema: { "func_call": "string", "path": "string", "flags": "string" }
+Response Schema: { "entries": ["string"], "count": number }
+---
+Question: Display items in the backups directory.
+Call: { "func_call": "ls", "path": "/home/admin/backups", "flags": "" }
+Response: { "entries": ["db_dump.sql", "config_tar.gz", "img_archive", "logs_2023"], "count": 4 }
+
+Question: Provide a detailed view of /var/www including dotfiles.
+Call: { "func_call": "ls_la", "path": "/var/www", "flags": "-a" }
+Response: { "entries": [".", "..", ".htaccess", "index.html", "css", "js", "images"], "count": 7 }
+
+Question: What is in /dev with sizes formatted for humans?
+Call: { "func_call": "ls_lh", "path": "/dev", "flags": "-lh" }
+Response: { "entries": ["null", "zero", "random", "urandom", "tty", "sda"], "count": 6 }
+
+Question: Traverse the entire /src codebase recursively.
+Call: { "func_call": "ls_R", "path": "/src", "flags": "-R" }
+Response: { "entries": ["main.c", "utils/helper.c", "utils/helper.h", "build/output.o"], "count": 4 }
+
+Question: List what is inside my documents folder.
+Call: { "func_call": "ls", "path": "~/documents", "flags": "" }
+Response: { "entries": ["resume.pdf", "budget.xlsx", "notes.txt", "travel_plans"], "count": 4 }
+
+Question: Show me the scripts located in /usr/local/bin.
+Call: { "func_call": "ls", "path": "/usr/local/bin", "flags": "" }
+Response: { "entries": ["deploy.sh", "backup_job", "monitor_agent", "cleanup_logs"], "count": 4 }
+
+Question: List third-party applications installed in /opt.
+Call: { "func_call": "ls", "path": "/opt", "flags": "" }
+Response: { "entries": ["docker", "kubernetes", "prometheus", "grafana"], "count": 4 }
+
+Question: Give me a full listing of hidden config files in /root.
+Call: { "func_call": "ls_la", "path": "/root", "flags": "-la" }
+Response: { "entries": [".bash_history", ".viminfo", ".kube", ".docker", ".ssh"], "count": 5 }
+
+Question: Check /var/cache with human-readable byte counts.
+Call: { "func_call": "ls_lh", "path": "/var/cache", "flags": "-lh" }
+Response: { "entries": ["apt (120M)", "ldconfig (4K)", "fontconfig (2.5M)", "man (45M)"], "count": 4 }
+
+Question: Deep scan /home/shared for all subdirectories and files.
+Call: { "func_call": "ls_R", "path": "/home/shared", "flags": "-R" }
+Response: { "entries": ["team_a/report.docx", "team_b/data.csv", "public/readme.txt", "assets/logo.png"], "count": 4 }
+
+Question: List all nested resources in ~/downloads recursively.
+Call: { "func_call": "ls_R", "path": "~/downloads", "flags": "-R" }
+Response: { "entries": ["installer.exe", "drivers/video.sys", "drivers/audio.sys", "temp/unzip_me"], "count": 4 }
+
+Question: Show every file including system dots in /etc/init.d.
+Call: { "func_call": "ls_la", "path": "/etc/init.d", "flags": "-a" }
+Response: { "entries": [".", "..", "networking", "cron", "ssh", "apache2", "mysql"], "count": 7 }

@@ -1,0 +1,51 @@
+Available Tools: upload_file | download_file | get_upload_url | get_download_url
+Call Schema: { "func_call": "string", "path": "string", "file_name": "string", "size_bytes": number, "content_type": "string" }
+Response Schema: { "file_id": "string", "path": "string", "size_bytes": "number", "url": "string", "expires_at": "string" }
+---
+Question: Can you get me a temporary link to download the quarterly report PDF located in the finance folder?
+Call: { "func_call": "get_download_url", "path": "/finance/reports", "file_name": "Q3_2024_Report.pdf", "size_bytes": 2458900, "content_type": "application/pdf" }
+Response: { "file_id": "file_8a9b2c3d", "path": "/finance/reports/Q3_2024_Report.pdf", "size_bytes": 2458900, "url": "https://storage.example.com/dl/8a9b2c3d?sig=xYz123", "expires_at": "2024-10-25T15:30:00Z" }
+
+Question: I need to download the server log file from yesterday immediately.
+Call: { "func_call": "download_file", "path": "/logs/server", "file_name": "app_log_2024-10-24.txt", "size_bytes": 1540200, "content_type": "text/plain" }
+Response: { "file_id": "file_7f6e5d4c", "path": "/logs/server/app_log_2024-10-24.txt", "size_bytes": 1540200, "url": "direct://stream/7f6e5d4c", "expires_at": null }
+
+Question: Generate a presigned URL for the marketing video that expires in one hour.
+Call: { "func_call": "get_download_url", "path": "/marketing/assets/videos", "file_name": "product_launch_v2.mp4", "size_bytes": 145000000, "content_type": "video/mp4" }
+Response: { "file_id": "file_3b2a1c9d", "path": "/marketing/assets/videos/product_launch_v2.mp4", "size_bytes": 145000000, "url": "https://cdn.example.com/secure/3b2a1c9d?token=abc987", "expires_at": "2024-10-25T14:45:00Z" }
+
+Question: Please fetch the database backup archive from the secure vault.
+Call: { "func_call": "download_file", "path": "/backups/db", "file_name": "prod_db_backup_oct.sql.gz", "size_bytes": 890000000, "content_type": "application/gzip" }
+Response: { "file_id": "file_9c8d7e6f", "path": "/backups/db/prod_db_backup_oct.sql.gz", "size_bytes": 890000000, "url": "direct://stream/9c8d7e6f", "expires_at": null }
+
+Question: I need a download link for the employee handbook Word document.
+Call: { "func_call": "get_download_url", "path": "/hr/policies", "file_name": "Employee_Handbook_2024.docx", "size_bytes": 3200500, "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document" }
+Response: { "file_id": "file_4d5e6f7g", "path": "/hr/policies/Employee_Handbook_2024.docx", "size_bytes": 3200500, "url": "https://storage.example.com/dl/4d5e6f7g?sig=pQr456", "expires_at": "2024-10-26T09:00:00Z" }
+
+Question: Directly download the configuration JSON for the staging environment.
+Call: { "func_call": "download_file", "path": "/config/envs", "file_name": "staging_config.json", "size_bytes": 4500, "content_type": "application/json" }
+Response: { "file_id": "file_1a2b3c4d", "path": "/config/envs/staging_config.json", "size_bytes": 4500, "url": "direct://stream/1a2b3c4d", "expires_at": null }
+
+Question: Create a temporary URL for the high-resolution logo PNG.
+Call: { "func_call": "get_download_url", "path": "/branding/logos", "file_name": "company_logo_hi_res.png", "size_bytes": 850000, "content_type": "image/png" }
+Response: { "file_id": "file_5h6i7j8k", "path": "/branding/logos/company_logo_hi_res.png", "size_bytes": 850000, "url": "https://cdn.example.com/secure/5h6i7j8k?token=def789", "expires_at": "2024-10-25T18:20:00Z" }
+
+Question: Retrieve the raw CSV data export for the sales team.
+Call: { "func_call": "download_file", "path": "/sales/exports", "file_name": "sales_data_raw_oct.csv", "size_bytes": 12400000, "content_type": "text/csv" }
+Response: { "file_id": "file_2l3m4n5o", "path": "/sales/exports/sales_data_raw_oct.csv", "size_bytes": 12400000, "url": "direct://stream/2l3m4n5o", "expires_at": null }
+
+Question: Get me a short-lived link to the project presentation slides.
+Call: { "func_call": "get_download_url", "path": "/projects/alpha", "file_name": "kickoff_presentation.pptx", "size_bytes": 5600000, "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation" }
+Response: { "file_id": "file_6p7q8r9s", "path": "/projects/alpha/kickoff_presentation.pptx", "size_bytes": 5600000, "url": "https://storage.example.com/dl/6p7q8r9s?sig=mNo321", "expires_at": "2024-10-25T13:15:00Z" }
+
+Question: Download the installer package for the latest software release.
+Call: { "func_call": "download_file", "path": "/releases/v2.1", "file_name": "setup_installer_v2.1.exe", "size_bytes": 45000000, "content_type": "application/x-msdownload" }
+Response: { "file_id": "file_0t1u2v3w", "path": "/releases/v2.1/setup_installer_v2.1.exe", "size_bytes": 45000000, "url": "direct://stream/0t1u2v3w", "expires_at": null }
+
+Question: Generate a download URL for the architectural diagram SVG.
+Call: { "func_call": "get_download_url", "path": "/engineering/diagrams", "file_name": "system_arch_v3.svg", "size_bytes": 125000, "content_type": "image/svg+xml" }
+Response: { "file_id": "file_4x5y6z7a", "path": "/engineering/diagrams/system_arch_v3.svg", "size_bytes": 125000, "url": "https://cdn.example.com/secure/4x5y6z7a?token=ghi654", "expires_at": "2024-10-25T20:00:00Z" }
+
+Question: Immediately download the encrypted keys file from the secrets directory.
+Call: { "func_call": "download_file", "path": "/security/keys", "file_name": "master_keys.enc", "size_bytes": 2048, "content_type": "application/octet-stream" }
+Response: { "file_id": "file_8b9c0d1e", "path": "/security/keys/master_keys.enc", "size_bytes": 2048, "url": "direct://stream/8b9c0d1e", "expires_at": null }

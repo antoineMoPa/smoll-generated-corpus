@@ -1,0 +1,51 @@
+Available Tools: process_cash | process_card | process_mobile_pay | get_change | refund_transaction
+Call Schema: { "func_call": "string", "amount": number, "currency": "string", "transaction_id": "string" }
+Response Schema: { "transaction_id": "string", "status": "string", "change": number, "receipt": "string" }
+---
+Question: I want to buy a soda for $1.50 using Apple Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 1.50, "currency": "USD", "transaction_id": "AP-8821-XJ9" }
+Response: { "transaction_id": "AP-8821-XJ9", "status": "success", "change": 0, "receipt": "Soda purchased via Apple Pay. Thank you!" }
+---
+Question: Purchase a bag of chips for $2.25 with Google Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 2.25, "currency": "USD", "transaction_id": "GP-4492-MK2" }
+Response: { "transaction_id": "GP-4492-MK2", "status": "success", "change": 0, "receipt": "Chips purchased via Google Pay. Enjoy your snack!" }
+---
+Question: Try to buy water for $1.00 using Apple Pay but the connection failed.
+Call: { "func_call": "process_mobile_pay", "amount": 1.00, "currency": "USD", "transaction_id": "AP-1102-LL5" }
+Response: { "transaction_id": "AP-1102-LL5", "status": "failed", "change": 0, "receipt": "Transaction declined: Network error. Please try again." }
+---
+Question: I need to buy a chocolate bar for $1.75 using Google Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 1.75, "currency": "USD", "transaction_id": "GP-7731-PQ8" }
+Response: { "transaction_id": "GP-7731-PQ8", "status": "success", "change": 0, "receipt": "Chocolate bar purchased via Google Pay." }
+---
+Question: Attempt to purchase gum for $0.90 with Apple Pay, but the card was declined.
+Call: { "func_call": "process_mobile_pay", "amount": 0.90, "currency": "USD", "transaction_id": "AP-5543-RR1" }
+Response: { "transaction_id": "AP-5543-RR1", "status": "failed", "change": 0, "receipt": "Payment declined by issuer. Please use another method." }
+---
+Question: Buy an energy drink for $3.00 using Google Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 3.00, "currency": "USD", "transaction_id": "GP-9981-ZZ4" }
+Response: { "transaction_id": "GP-9981-ZZ4", "status": "success", "change": 0, "receipt": "Energy drink purchased via Google Pay." }
+---
+Question: Refund the failed Apple Pay transaction AP-1102-LL5 for $1.00.
+Call: { "func_call": "refund_transaction", "amount": 1.00, "currency": "USD", "transaction_id": "AP-1102-LL5" }
+Response: { "transaction_id": "AP-1102-LL5", "status": "refunded", "change": 0, "receipt": "Refund processed for failed transaction. Funds returned to source." }
+---
+Question: Process a refund for the declined gum purchase AP-5543-RR1 amounting to $0.90.
+Call: { "func_call": "refund_transaction", "amount": 0.90, "currency": "USD", "transaction_id": "AP-5543-RR1" }
+Response: { "transaction_id": "AP-5543-RR1", "status": "refunded", "change": 0, "receipt": "Refund initiated for declined transaction." }
+---
+Question: Customer requested a refund for a successful chips purchase GP-4492-MK2 of $2.25 due to machine error.
+Call: { "func_call": "refund_transaction", "amount": 2.25, "currency": "USD", "transaction_id": "GP-4492-MK2" }
+Response: { "transaction_id": "GP-4492-MK2", "status": "refunded", "change": 0, "receipt": "Refund successful. Amount credited back to Google Pay." }
+---
+Question: Issue a refund for the soda purchase AP-8821-XJ9 totaling $1.50.
+Call: { "func_call": "refund_transaction", "amount": 1.50, "currency": "USD", "transaction_id": "AP-8821-XJ9" }
+Response: { "transaction_id": "AP-8821-XJ9", "status": "refunded", "change": 0, "receipt": "Refund completed for Apple Pay transaction." }
+---
+Question: Retry the water purchase for $1.00 with Apple Pay after fixing the connection.
+Call: { "func_call": "process_mobile_pay", "amount": 1.00, "currency": "USD", "transaction_id": "AP-1102-LL5-R" }
+Response: { "transaction_id": "AP-1102-LL5-R", "status": "success", "change": 0, "receipt": "Water purchased via Apple Pay. Thank you!" }
+---
+Question: Refund the energy drink transaction GP-9981-ZZ4 for $3.00 because the item was stuck.
+Call: { "func_call": "refund_transaction", "amount": 3.00, "currency": "USD", "transaction_id": "GP-9981-ZZ4" }
+Response: { "transaction_id": "GP-9981-ZZ4", "status": "refunded", "change": 0, "receipt": "Refund processed for stuck item. Funds returned." }

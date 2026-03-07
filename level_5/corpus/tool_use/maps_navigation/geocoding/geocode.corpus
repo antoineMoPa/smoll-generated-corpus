@@ -1,0 +1,51 @@
+Available Tools: geocode_address | reverse_geocode | validate_address | get_timezone
+Call Schema: { "func_call": "string", "address": "string", "lat": number, "lng": number }
+Response Schema: { "lat": number, "lng": number, "formatted_address": "string", "country": "string", "timezone": "string" }
+
+Question: What are the coordinates for the Eiffel Tower in Paris?
+Call: { "func_call": "geocode_address", "address": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France", "lat": 0, "lng": 0 }
+Response: { "lat": 48.8584, "lng": 2.2945, "formatted_address": "Champ de Mars, 5 Av. Anatole France, 75007 Paris, France", "country": "France", "timezone": "Europe/Paris" }
+
+Question: Find the location of Times Square in New York City.
+Call: { "func_call": "geocode_address", "address": "Times Square, Manhattan, NY 10036, USA", "lat": 0, "lng": 0 }
+Response: { "lat": 40.758, "lng": -73.9855, "formatted_address": "Times Square, Manhattan, NY 10036, USA", "country": "United States", "timezone": "America/New_York" }
+
+Question: Where is the Sydney Opera House located?
+Call: { "func_call": "geocode_address", "address": "Bennelong Point, Sydney NSW 2000, Australia", "lat": 0, "lng": 0 }
+Response: { "lat": -33.8568, "lng": 151.2153, "formatted_address": "Bennelong Point, Sydney NSW 2000, Australia", "country": "Australia", "timezone": "Australia/Sydney" }
+
+Question: Get coordinates for the Tokyo Skytree.
+Call: { "func_call": "geocode_address", "address": "1 Chome-1-2 Oshiage, Sumida City, Tokyo 131-0045, Japan", "lat": 0, "lng": 0 }
+Response: { "lat": 35.7101, "lng": 139.8107, "formatted_address": "1 Chome-1-2 Oshiage, Sumida City, Tokyo 131-0045, Japan", "country": "Japan", "timezone": "Asia/Tokyo" }
+
+Question: Locate the Brandenburg Gate in Berlin.
+Call: { "func_call": "geocode_address", "address": "Pariser Platz, 10117 Berlin, Germany", "lat": 0, "lng": 0 }
+Response: { "lat": 52.5163, "lng": 13.3777, "formatted_address": "Pariser Platz, 10117 Berlin, Germany", "country": "Germany", "timezone": "Europe/Berlin" }
+
+Question: What are the GPS coordinates for Christ the Redeemer in Rio de Janeiro?
+Call: { "func_call": "geocode_address", "address": "Parco Nacional da Tijuca, Alto da Boa Vista, Rio de Janeiro - RJ, Brazil", "lat": 0, "lng": 0 }
+Response: { "lat": -22.9519, "lng": -43.2105, "formatted_address": "Alto da Boa Vista, Rio de Janeiro - RJ, Brazil", "country": "Brazil", "timezone": "America/Sao_Paulo" }
+
+Question: Find the address details for the Colosseum in Rome.
+Call: { "func_call": "geocode_address", "address": "Piazza del Colosseo, 1, 00184 Roma RM, Italy", "lat": 0, "lng": 0 }
+Response: { "lat": 41.8902, "lng": 12.4922, "formatted_address": "Piazza del Colosseo, 1, 00184 Roma RM, Italy", "country": "Italy", "timezone": "Europe/Rome" }
+
+Question: Geocode the Burj Khalifa in Dubai.
+Call: { "func_call": "geocode_address", "address": "1 Sheikh Mohammed bin Rashid Blvd, Dubai, United Arab Emirates", "lat": 0, "lng": 0 }
+Response: { "lat": 25.1972, "lng": 55.2744, "formatted_address": "1 Sheikh Mohammed bin Rashid Blvd, Dubai, United Arab Emirates", "country": "United Arab Emirates", "timezone": "Asia/Dubai" }
+
+Question: Where is the CN Tower in Toronto?
+Call: { "func_call": "geocode_address", "address": "301 Front St W, Toronto, ON M5V 2T6, Canada", "lat": 0, "lng": 0 }
+Response: { "lat": 43.6426, "lng": -79.3871, "formatted_address": "301 Front St W, Toronto, ON M5V 2T6, Canada", "country": "Canada", "timezone": "America/Toronto" }
+
+Question: Get the location of the Taj Mahal in Agra.
+Call: { "func_call": "geocode_address", "address": "Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001, India", "lat": 0, "lng": 0 }
+Response: { "lat": 27.1751, "lng": 78.0421, "formatted_address": "Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001, India", "country": "India", "timezone": "Asia/Kolkata" }
+
+Question: Locate the Red Square in Moscow.
+Call: { "func_call": "geocode_address", "address": "Red Square, Moscow, Russia, 109012", "lat": 0, "lng": 0 }
+Response: { "lat": 55.7539, "lng": 37.6208, "formatted_address": "Red Square, Moscow, Russia, 109012", "country": "Russia", "timezone": "Europe/Moscow" }
+
+Question: Find the coordinates for the Golden Gate Bridge Welcome Center.
+Call: { "func_call": "geocode_address", "address": "Golden Gate Bridge Welcome Center, San Francisco, CA 94129, USA", "lat": 0, "lng": 0 }
+Response: { "lat": 37.8077, "lng": -122.4746, "formatted_address": "Golden Gate Bridge Welcome Center, San Francisco, CA 94129, USA", "country": "United States", "timezone": "America/Los_Angeles" }

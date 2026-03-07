@@ -1,0 +1,51 @@
+Available Tools: create_event | create_recurring_event | create_all_day_event
+Call Schema: { "func_call": "string", "title": "string", "start": "string", "end": "string", "location": "string", "description": "string" }
+Response Schema: { "event_id": "string", "title": "string", "start": "string", "end": "string", "calendar": "string" }
+---
+Question: Arrange a sprint planning session for the design team next Monday at 10 AM in the Creative Studio.
+Call: { "func_call": "create_event", "title": "Design Sprint Planning", "start": "2023-11-06T10:00:00Z", "end": "2023-11-06T11:30:00Z", "location": "Creative Studio", "description": "Define goals and tasks for the upcoming two-week sprint." }
+Response: { "event_id": "evt_1234ab5", "title": "Design Sprint Planning", "start": "2023-11-06T10:00:00Z", "end": "2023-11-06T11:30:00Z", "calendar": "Design" }
+
+Question: Book a coffee chat with Alex to discuss the internship program at Bean & Brew on Thursday at 3 PM.
+Call: { "func_call": "create_event", "title": "Coffee with Alex - Internships", "start": "2023-11-09T15:00:00Z", "end": "2023-11-09T15:45:00Z", "location": "Bean & Brew, 12 Oak Ave", "description": "Review candidate shortlist for summer internships." }
+Response: { "event_id": "evt_5678cd6", "title": "Coffee with Alex - Internships", "start": "2023-11-09T15:00:00Z", "end": "2023-11-09T15:45:00Z", "calendar": "HR" }
+
+Question: Schedule a webinar preparation call with the content team for Tuesday at 2 PM via Google Meet.
+Call: { "func_call": "create_event", "title": "Webinar Prep Call", "start": "2023-11-07T14:00:00Z", "end": "2023-11-07T15:00:00Z", "location": "https://meet.google.com/abc-defg-hij", "description": "Finalize slides and rehearse presentation for the tech webinar." }
+Response: { "event_id": "evt_9012ef7", "title": "Webinar Prep Call", "start": "2023-11-07T14:00:00Z", "end": "2023-11-07T15:00:00Z", "calendar": "Marketing" }
+
+Question: Create an appointment for a car service on November 12th at 9 AM at AutoFix Garage.
+Call: { "func_call": "create_event", "title": "Car Service Appointment", "start": "2023-11-12T09:00:00Z", "end": "2023-11-12T11:00:00Z", "location": "AutoFix Garage, 88 Motor Way", "description": "Oil change and tire rotation." }
+Response: { "event_id": "evt_3456gh8", "title": "Car Service Appointment", "start": "2023-11-12T09:00:00Z", "end": "2023-11-12T11:00:00Z", "calendar": "Personal" }
+
+Question: Set up a bi-weekly sync with the sales team every other Wednesday at 11 AM starting November 8th.
+Call: { "func_call": "create_recurring_event", "title": "Bi-Weekly Sales Sync", "start": "2023-11-08T11:00:00Z", "end": "2023-11-08T11:45:00Z", "location": "Sales War Room", "description": "Review pipeline and discuss closing strategies." }
+Response: { "event_id": "evt_rec_7890ij9", "title": "Bi-Weekly Sales Sync", "start": "2023-11-08T11:00:00Z", "end": "2023-11-08T11:45:00Z", "calendar": "Sales" }
+
+Question: Book a user research interview with participant #402 on Friday at 1 PM in the Quiet Room.
+Call: { "func_call": "create_event", "title": "User Research: Participant 402", "start": "2023-11-10T13:00:00Z", "end": "2023-11-10T14:00:00Z", "location": "Quiet Room", "description": "Usability testing for the new checkout flow." }
+Response: { "event_id": "evt_2345kl0", "title": "User Research: Participant 402", "start": "2023-11-10T13:00:00Z", "end": "2023-11-10T14:00:00Z", "calendar": "Research" }
+
+Question: Schedule a board meeting review with the CFO for next Monday at 4:30 PM via Zoom.
+Call: { "func_call": "create_event", "title": "Board Meeting Prep with CFO", "start": "2023-11-13T16:30:00Z", "end": "2023-11-13T17:30:00Z", "location": "https://zoom.us/j/987654321", "description": "Finalize financial reports for the upcoming board meeting." }
+Response: { "event_id": "evt_6789mn1", "title": "Board Meeting Prep with CFO", "start": "2023-11-13T16:30:00Z", "end": "2023-11-13T17:30:00Z", "calendar": "Finance" }
+
+Question: Create a dentist follow-up appointment on November 15th at 10:30 AM.
+Call: { "func_call": "create_event", "title": "Dentist Follow-up", "start": "2023-11-15T10:30:00Z", "end": "2023-11-15T11:00:00Z", "location": "Bright Smiles Dental, 22 Elm St", "description": "Check healing progress after filling." }
+Response: { "event_id": "evt_0123op2", "title": "Dentist Follow-up", "start": "2023-11-15T10:30:00Z", "end": "2023-11-15T11:00:00Z", "calendar": "Personal" }
+
+Question: Book a vendor negotiation meeting with TechSupply Co. on Thursday at 9 AM in Conference Room C.
+Call: { "func_call": "create_event", "title": "Vendor Negotiation: TechSupply", "start": "2023-11-16T09:00:00Z", "end": "2023-11-16T10:30:00Z", "location": "Conference Room C", "description": "Discuss contract renewal terms and pricing." }
+Response: { "event_id": "evt_4567qr3", "title": "Vendor Negotiation: TechSupply", "start": "2023-11-16T09:00:00Z", "end": "2023-11-16T10:30:00Z", "calendar": "Procurement" }
+
+Question: Schedule a security audit kickoff with the IT team on November 20th at 1 PM in the Server Room.
+Call: { "func_call": "create_event", "title": "Security Audit Kickoff", "start": "2023-11-20T13:00:00Z", "end": "2023-11-20T14:00:00Z", "location": "Server Room", "description": "Initiate Q4 security compliance audit." }
+Response: { "event_id": "evt_8901st4", "title": "Security Audit Kickoff", "start": "2023-11-20T13:00:00Z", "end": "2023-11-20T14:00:00Z", "calendar": "IT" }
+
+Question: Set up a daily standup for the mobile dev team every weekday at 9:15 AM starting November 7th.
+Call: { "func_call": "create_recurring_event", "title": "Mobile Dev Daily Standup", "start": "2023-11-07T09:15:00Z", "end": "2023-11-07T09:30:00Z", "location": "Slack Huddle", "description": "Quick sync on iOS and Android build progress." }
+Response: { "event_id": "evt_rec_2345uv5", "title": "Mobile Dev Daily Standup", "start": "2023-11-07T09:15:00Z", "end": "2023-11-07T09:30:00Z", "calendar": "Engineering" }
+
+Question: Book a holiday party planning committee meeting for next Tuesday at 12 PM in the Break Room.
+Call: { "func_call": "create_event", "title": "Holiday Party Planning", "start": "2023-11-14T12:00:00Z", "end": "2023-11-14T13:00:00Z", "location": "Break Room", "description": "Select venue and finalize budget for annual holiday event." }
+Response: { "event_id": "evt_6789wx6", "title": "Holiday Party Planning", "start": "2023-11-14T12:00:00Z", "end": "2023-11-14T13:00:00Z", "calendar": "Culture" }

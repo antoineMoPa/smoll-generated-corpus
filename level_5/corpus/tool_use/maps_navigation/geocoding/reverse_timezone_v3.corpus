@@ -1,0 +1,51 @@
+Available Tools: geocode_address | reverse_geocode | validate_address | get_timezone
+Call Schema: { "func_call": "string", "address": "string", "lat": number, "lng": number }
+Response Schema: { "lat": number, "lng": number, "formatted_address": "string", "country": "string", "timezone": "string" }
+---
+Question: What place and time zone match the coordinates 34.0522, -118.2437?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 34.0522, "lng": -118.2437 }
+Response: { "lat": 34.0522, "lng": -118.2437, "formatted_address": "Los Angeles, CA 90012, USA", "country": "United States", "timezone": "America/Los_Angeles" }
+
+Question: Can you find the address and timezone for latitude 41.8781 and longitude -87.6298?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 41.8781, "lng": -87.6298 }
+Response: { "lat": 41.8781, "lng": -87.6298, "formatted_address": "Chicago, IL 60602, USA", "country": "United States", "timezone": "America/Chicago" }
+
+Question: I require the reverse geocoded location and timezone for 28.6139, 77.2090.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 28.6139, "lng": 77.2090 }
+Response: { "lat": 28.6139, "lng": 77.2090, "formatted_address": "New Delhi, Delhi 110001, India", "country": "India", "timezone": "Asia/Kolkata" }
+
+Question: Retrieve the location details and timezone for the coordinates -34.6037, -58.3816.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": -34.6037, "lng": -58.3816 }
+Response: { "lat": -34.6037, "lng": -58.3816, "formatted_address": "Buenos Aires, C1002, Argentina", "country": "Argentina", "timezone": "America/Argentina/Buenos_Aires" }
+
+Question: What is the formatted address and timezone at 59.3293, 18.0686?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 59.3293, "lng": 18.0686 }
+Response: { "lat": 59.3293, "lng": 18.0686, "formatted_address": "111 29 Stockholm, Sweden", "country": "Sweden", "timezone": "Europe/Stockholm" }
+
+Question: Please reverse geocode 39.9042, 116.4074 and provide the timezone.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 39.9042, "lng": 116.4074 }
+Response: { "lat": 39.9042, "lng": 116.4074, "formatted_address": "Beijing, 100000, China", "country": "China", "timezone": "Asia/Shanghai" }
+
+Question: Identify the city and timezone for coordinates 30.0444, 31.2357.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 30.0444, "lng": 31.2357 }
+Response: { "lat": 30.0444, "lng": 31.2357, "formatted_address": "Cairo, Cairo Governorate, Egypt", "country": "Egypt", "timezone": "Africa/Cairo" }
+
+Question: What address and timezone correspond to 50.1109, 8.6821?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 50.1109, "lng": 8.6821 }
+Response: { "lat": 50.1109, "lng": 8.6821, "formatted_address": "60311 Frankfurt am Main, Germany", "country": "Germany", "timezone": "Europe/Berlin" }
+
+Question: Get the location name and timezone for 35.6895, 51.3890.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 35.6895, "lng": 51.3890 }
+Response: { "lat": 35.6895, "lng": 51.3890, "formatted_address": "Tehran, Tehran Province, Iran", "country": "Iran", "timezone": "Asia/Tehran" }
+
+Question: Reverse geocode these coordinates: -1.2921, 36.8219. What is the timezone?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": -1.2921, "lng": 36.8219 }
+Response: { "lat": -1.2921, "lng": 36.8219, "formatted_address": "Nairobi, Kenya", "country": "Kenya", "timezone": "Africa/Nairobi" }
+
+Question: Where is 64.1466, -21.9426 located and what is its timezone?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 64.1466, "lng": -21.9426 }
+Response: { "lat": 64.1466, "lng": -21.9426, "formatted_address": "101 Reykjavík, Iceland", "country": "Iceland", "timezone": "Atlantic/Reykjavik" }
+
+Question: Determine the address and timezone for coordinates 37.9838, 23.7275.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 37.9838, "lng": 23.7275 }
+Response: { "lat": 37.9838, "lng": 23.7275, "formatted_address": "Athens 105 57, Greece", "country": "Greece", "timezone": "Europe/Athens" }

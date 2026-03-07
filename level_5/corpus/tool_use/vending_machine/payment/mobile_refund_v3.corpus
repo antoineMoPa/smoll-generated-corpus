@@ -1,0 +1,51 @@
+Available Tools: process_cash | process_card | process_mobile_pay | get_change | refund_transaction
+Call Schema: { "func_call": "string", "amount": number, "currency": "string", "transaction_id": "string" }
+Response Schema: { "transaction_id": "string", "status": "string", "change": number, "receipt": "string" }
+---
+Question: Purchase a hot coffee for $2.50 using Samsung Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 2.50, "currency": "USD", "transaction_id": "SP-3321-AA7" }
+Response: { "transaction_id": "SP-3321-AA7", "status": "success", "change": 0, "receipt": "Hot coffee purchased via Samsung Pay. Enjoy!" }
+---
+Question: Buy a pack of cookies for $1.80 with Apple Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 1.80, "currency": "USD", "transaction_id": "AP-6654-BB2" }
+Response: { "transaction_id": "AP-6654-BB2", "status": "success", "change": 0, "receipt": "Cookies purchased via Apple Pay. Thank you!" }
+---
+Question: Attempt to buy iced tea for $2.00 using Google Pay, but the server timed out.
+Call: { "func_call": "process_mobile_pay", "amount": 2.00, "currency": "USD", "transaction_id": "GP-8876-CC9" }
+Response: { "transaction_id": "GP-8876-CC9", "status": "failed", "change": 0, "receipt": "Transaction failed: Server timeout. Please retry." }
+---
+Question: I would like to purchase a sandwich for $4.50 using Samsung Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 4.50, "currency": "USD", "transaction_id": "SP-1123-DD4" }
+Response: { "transaction_id": "SP-1123-DD4", "status": "success", "change": 0, "receipt": "Sandwich purchased via Samsung Pay." }
+---
+Question: Try buying a candy bar for $1.25 with Google Pay, but the funds were insufficient.
+Call: { "func_call": "process_mobile_pay", "amount": 1.25, "currency": "USD", "transaction_id": "GP-5598-EE1" }
+Response: { "transaction_id": "GP-5598-EE1", "status": "failed", "change": 0, "receipt": "Payment declined: Insufficient funds." }
+---
+Question: Purchase a bottle of juice for $2.75 using Apple Pay.
+Call: { "func_call": "process_mobile_pay", "amount": 2.75, "currency": "USD", "transaction_id": "AP-9901-FF6" }
+Response: { "transaction_id": "AP-9901-FF6", "status": "success", "change": 0, "receipt": "Juice purchased via Apple Pay. Cheers!" }
+---
+Question: Refund the failed iced tea transaction GP-8876-CC9 for $2.00.
+Call: { "func_call": "refund_transaction", "amount": 2.00, "currency": "USD", "transaction_id": "GP-8876-CC9" }
+Response: { "transaction_id": "GP-8876-CC9", "status": "refunded", "change": 0, "receipt": "Refund processed for timed out transaction. Funds returned." }
+---
+Question: Process a refund for the declined candy bar purchase GP-5598-EE1 amounting to $1.25.
+Call: { "func_call": "refund_transaction", "amount": 1.25, "currency": "USD", "transaction_id": "GP-5598-EE1" }
+Response: { "transaction_id": "GP-5598-EE1", "status": "refunded", "change": 0, "receipt": "Refund initiated for insufficient funds error." }
+---
+Question: Customer requested a refund for a successful cookie purchase AP-6654-BB2 of $1.80 due to expired product.
+Call: { "func_call": "refund_transaction", "amount": 1.80, "currency": "USD", "transaction_id": "AP-6654-BB2" }
+Response: { "transaction_id": "AP-6654-BB2", "status": "refunded", "change": 0, "receipt": "Refund successful. Amount credited back to Apple Pay." }
+---
+Question: Issue a refund for the coffee purchase SP-3321-AA7 totaling $2.50.
+Call: { "func_call": "refund_transaction", "amount": 2.50, "currency": "USD", "transaction_id": "SP-3321-AA7" }
+Response: { "transaction_id": "SP-3321-AA7", "status": "refunded", "change": 0, "receipt": "Refund completed for Samsung Pay transaction." }
+---
+Question: Retry the iced tea purchase for $2.00 with Google Pay after resolving the server issue.
+Call: { "func_call": "process_mobile_pay", "amount": 2.00, "currency": "USD", "transaction_id": "GP-8876-CC9-R" }
+Response: { "transaction_id": "GP-8876-CC9-R", "status": "success", "change": 0, "receipt": "Iced tea purchased via Google Pay. Enjoy!" }
+---
+Question: Refund the juice transaction AP-9901-FF6 for $2.75 because the bottle was leaking.
+Call: { "func_call": "refund_transaction", "amount": 2.75, "currency": "USD", "transaction_id": "AP-9901-FF6" }
+Response: { "transaction_id": "AP-9901-FF6", "status": "refunded", "change": 0, "receipt": "Refund processed for damaged item. Funds returned." }

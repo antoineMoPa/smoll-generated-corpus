@@ -1,0 +1,51 @@
+Available Tools: get_order_status | track_shipment | get_order_history | cancel_order
+Call Schema: { "func_call": "string", "order_id": "string", "tracking_number": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_delivery": "string", "tracking_events": [{ "date": "string", "location": "string", "status": "string" }] }
+---
+Question: Can you tell me the current status of order #ORD-99281?
+Call: { "func_call": "get_order_status", "order_id": "ORD-99281", "tracking_number": "" }
+Response: { "order_id": "ORD-99281", "status": "In Transit", "estimated_delivery": "2023-11-15", "tracking_events": [{ "date": "2023-11-10", "location": "Chicago, IL", "status": "Picked Up" }, { "date": "2023-11-12", "location": "Indianapolis, IN", "status": "In Transit" }] }
+
+Question: I need to track my package with tracking number TRK-554321.
+Call: { "func_call": "track_shipment", "order_id": "", "tracking_number": "TRK-554321" }
+Response: { "order_id": "ORD-77123", "status": "Out for Delivery", "estimated_delivery": "2023-11-14", "tracking_events": [{ "date": "2023-11-09", "location": "Seattle, WA", "status": "Picked Up" }, { "date": "2023-11-11", "location": "Portland, OR", "status": "In Transit" }, { "date": "2023-11-14", "location": "Portland, OR", "status": "Out for Delivery" }] }
+
+Question: Has order #ORD-33490 been delivered yet?
+Call: { "func_call": "get_order_status", "order_id": "ORD-33490", "tracking_number": "" }
+Response: { "order_id": "ORD-33490", "status": "Delivered", "estimated_delivery": "2023-11-10", "tracking_events": [{ "date": "2023-11-08", "location": "Austin, TX", "status": "Picked Up" }, { "date": "2023-11-09", "location": "Houston, TX", "status": "In Transit" }, { "date": "2023-11-10", "location": "Houston, TX", "status": "Delivered" }] }
+
+Question: Where is my shipment for order #ORD-88210 right now?
+Call: { "func_call": "track_shipment", "order_id": "ORD-88210", "tracking_number": "TRK-998877" }
+Response: { "order_id": "ORD-88210", "status": "In Transit", "estimated_delivery": "2023-11-18", "tracking_events": [{ "date": "2023-11-13", "location": "Miami, FL", "status": "Picked Up" }, { "date": "2023-11-14", "location": "Jacksonville, FL", "status": "In Transit" }] }
+
+Question: Check the history and status for order number ORD-11223.
+Call: { "func_call": "get_order_status", "order_id": "ORD-11223", "tracking_number": "" }
+Response: { "order_id": "ORD-11223", "status": "Processing", "estimated_delivery": "2023-11-20", "tracking_events": [{ "date": "2023-11-14", "location": "Denver, CO", "status": "Order Received" }] }
+
+Question: Please track tracking number TRK-445566 and let me know when it arrives.
+Call: { "func_call": "track_shipment", "order_id": "", "tracking_number": "TRK-445566" }
+Response: { "order_id": "ORD-55667", "status": "In Transit", "estimated_delivery": "2023-11-16", "tracking_events": [{ "date": "2023-11-11", "location": "Boston, MA", "status": "Picked Up" }, { "date": "2023-11-13", "location": "New York, NY", "status": "In Transit" }] }
+
+Question: What is the latest update on order #ORD-77889?
+Call: { "func_call": "get_order_status", "order_id": "ORD-77889", "tracking_number": "" }
+Response: { "order_id": "ORD-77889", "status": "Delivered", "estimated_delivery": "2023-11-12", "tracking_events": [{ "date": "2023-11-07", "location": "Phoenix, AZ", "status": "Picked Up" }, { "date": "2023-11-09", "location": "Las Vegas, NV", "status": "In Transit" }, { "date": "2023-11-12", "location": "Las Vegas, NV", "status": "Delivered" }] }
+
+Question: Can you find the tracking details for order ORD-22334 using tracking ID TRK-112233?
+Call: { "func_call": "track_shipment", "order_id": "ORD-22334", "tracking_number": "TRK-112233" }
+Response: { "order_id": "ORD-22334", "status": "Out for Delivery", "estimated_delivery": "2023-11-15", "tracking_events": [{ "date": "2023-11-10", "location": "Atlanta, GA", "status": "Picked Up" }, { "date": "2023-11-13", "location": "Charlotte, NC", "status": "In Transit" }, { "date": "2023-11-15", "location": "Charlotte, NC", "status": "Out for Delivery" }] }
+
+Question: Is order #ORD-99001 still in transit?
+Call: { "func_call": "get_order_status", "order_id": "ORD-99001", "tracking_number": "" }
+Response: { "order_id": "ORD-99001", "status": "In Transit", "estimated_delivery": "2023-11-17", "tracking_events": [{ "date": "2023-11-12", "location": "San Francisco, CA", "status": "Picked Up" }, { "date": "2023-11-14", "location": "Sacramento, CA", "status": "In Transit" }] }
+
+Question: I want to know the delivery status for tracking number TRK-667788.
+Call: { "func_call": "track_shipment", "order_id": "", "tracking_number": "TRK-667788" }
+Response: { "order_id": "ORD-44556", "status": "Delivered", "estimated_delivery": "2023-11-11", "tracking_events": [{ "date": "2023-11-06", "location": "Detroit, MI", "status": "Picked Up" }, { "date": "2023-11-08", "location": "Cleveland, OH", "status": "In Transit" }, { "date": "2023-11-11", "location": "Cleveland, OH", "status": "Delivered" }] }
+
+Question: Check if order #ORD-55443 has shipped yet.
+Call: { "func_call": "get_order_status", "order_id": "ORD-55443", "tracking_number": "" }
+Response: { "order_id": "ORD-55443", "status": "Picked Up", "estimated_delivery": "2023-11-19", "tracking_events": [{ "date": "2023-11-14", "location": "Nashville, TN", "status": "Picked Up" }] }
+
+Question: Please provide the full tracking timeline for order #ORD-66778.
+Call: { "func_call": "track_shipment", "order_id": "ORD-66778", "tracking_number": "TRK-334455" }
+Response: { "order_id": "ORD-66778", "status": "In Transit", "estimated_delivery": "2023-11-16", "tracking_events": [{ "date": "2023-11-11", "location": "Philadelphia, PA", "status": "Picked Up" }, { "date": "2023-11-13", "location": "Baltimore, MD", "status": "In Transit" }, { "date": "2023-11-14", "location": "Washington, DC", "status": "In Transit" }] }

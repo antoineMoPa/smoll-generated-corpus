@@ -1,0 +1,51 @@
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Register a new user named Liam O'Connor with email liam.o@example.io and age 31 to the users table.
+Call: { "func_call": "insert_record", "table": "users", "data": { "name": "Liam O'Connor", "email": "liam.o@example.io", "age": 31 } }
+Response: { "id": 1048, "table": "users", "inserted": 1, "status": "success" }
+
+Question: Create a new order for customer ID 102 with a total of 55.25 and status pending.
+Call: { "func_call": "insert_record", "table": "orders", "data": { "customer_id": 102, "total_amount": 55.25, "status": "pending" } }
+Response: { "id": 8907, "table": "orders", "inserted": 1, "status": "success" }
+
+Question: Insert a user record for Sofia Martinez, age 26, email s.martinez@test.net.
+Call: { "func_call": "insert_record", "table": "users", "data": { "name": "Sofia Martinez", "email": "s.martinez@test.net", "age": 26 } }
+Response: { "id": 1049, "table": "users", "inserted": 1, "status": "success" }
+
+Question: Log a new order for customer 45 costing 312.80 with status shipped.
+Call: { "func_call": "insert_record", "table": "orders", "data": { "customer_id": 45, "total_amount": 312.80, "status": "shipped" } }
+Response: { "id": 8908, "table": "orders", "inserted": 1, "status": "success" }
+
+Question: Register Noah Thompson, 44 years old, with email noah.t@domain.org in the users table.
+Call: { "func_call": "insert_record", "table": "users", "data": { "name": "Noah Thompson", "email": "noah.t@domain.org", "age": 44 } }
+Response: { "id": 1050, "table": "users", "inserted": 1, "status": "success" }
+
+Question: Add an order for customer 67 with a total of 19.99 and status processing.
+Call: { "func_call": "insert_record", "table": "orders", "data": { "customer_id": 67, "total_amount": 19.99, "status": "processing" } }
+Response: { "id": 8909, "table": "orders", "inserted": 1, "status": "success" }
+
+Question: Create a user profile for Aisha Ali, age 29, email a.ali@service.com.
+Call: { "func_call": "insert_record", "table": "users", "data": { "name": "Aisha Ali", "email": "a.ali@service.com", "age": 29 } }
+Response: { "id": 1051, "table": "users", "inserted": 1, "status": "success" }
+
+Question: Place a new order for customer 21 totaling 450.00 with status delivered.
+Call: { "func_call": "insert_record", "table": "orders", "data": { "customer_id": 21, "total_amount": 450.00, "status": "delivered" } }
+Response: { "id": 8910, "table": "orders", "inserted": 1, "status": "success" }
+
+Question: Insert user Ben Carter, age 36, email ben.c@mail.io into the database.
+Call: { "func_call": "insert_record", "table": "users", "data": { "name": "Ben Carter", "email": "ben.c@mail.io", "age": 36 } }
+Response: { "id": 1052, "table": "users", "inserted": 1, "status": "success" }
+
+Question: Record an order for customer 93 with amount 78.40 and status cancelled.
+Call: { "func_call": "insert_record", "table": "orders", "data": { "customer_id": 93, "total_amount": 78.40, "status": "cancelled" } }
+Response: { "id": 8911, "table": "orders", "inserted": 1, "status": "success" }
+
+Question: Add Mia Zhang, 24, mia.zhang@corp.net to the users table.
+Call: { "func_call": "insert_record", "table": "users", "data": { "name": "Mia Zhang", "email": "mia.zhang@corp.net", "age": 24 } }
+Response: { "id": 1053, "table": "users", "inserted": 1, "status": "success" }
+
+Question: Generate a new order entry for customer 15 with total 92.15 and status pending.
+Call: { "func_call": "insert_record", "table": "orders", "data": { "customer_id": 15, "total_amount": 92.15, "status": "pending" } }
+Response: { "id": 8912, "table": "orders", "inserted": 1, "status": "success" }

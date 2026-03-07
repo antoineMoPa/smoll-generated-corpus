@@ -1,0 +1,51 @@
+Available Tools: set_temperature | get_temperature | set_mode | get_schedule
+Call Schema: { "func_call": "string", "device_id": "string", "temperature": number, "mode": "heat|cool|auto|off" }
+Response Schema: { "device_id": "string", "current_temp": number, "target_temp": number, "mode": "string" }
+---
+Question: Set the living room thermostat to 22 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_living_01", "temperature": 22, "mode": "auto" }
+Response: { "device_id": "thermostat_living_01", "current_temp": 20.5, "target_temp": 22, "mode": "auto" }
+
+Question: What is the current temperature in the master bedroom?
+Call: { "func_call": "get_temperature", "device_id": "thermostat_bedroom_main", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_bedroom_main", "current_temp": 19.2, "target_temp": 21, "mode": "heat" }
+
+Question: It's getting cold; change the hallway thermostat to 24 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_hall_02", "temperature": 24, "mode": "heat" }
+Response: { "device_id": "thermostat_hall_02", "current_temp": 18.8, "target_temp": 24, "mode": "heat" }
+
+Question: I'm leaving for work, please set the downstairs thermostat to 18 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_downstairs_01", "temperature": 18, "mode": "auto" }
+Response: { "device_id": "thermostat_downstairs_01", "current_temp": 21.5, "target_temp": 18, "mode": "auto" }
+
+Question: Check the temperature reading for the guest room unit.
+Call: { "func_call": "get_temperature", "device_id": "thermostat_guest_03", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_guest_03", "current_temp": 17.5, "target_temp": 18, "mode": "off" }
+
+Question: Turn up the heat in the nursery to 23 degrees before the baby wakes up.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_nursery_04", "temperature": 23, "mode": "heat" }
+Response: { "device_id": "thermostat_nursery_04", "current_temp": 20.1, "target_temp": 23, "mode": "heat" }
+
+Question: The office feels stuffy; lower the target temperature to 19 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_office_05", "temperature": 19, "mode": "cool" }
+Response: { "device_id": "thermostat_office_05", "current_temp": 22.3, "target_temp": 19, "mode": "cool" }
+
+Question: Can you tell me what the kitchen thermostat is currently set to?
+Call: { "func_call": "get_temperature", "device_id": "thermostat_kitchen_06", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_kitchen_06", "current_temp": 21.0, "target_temp": 21, "mode": "auto" }
+
+Question: Set the basement thermostat to 18 degrees since no one is down there.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_basement_07", "temperature": 18, "mode": "off" }
+Response: { "device_id": "thermostat_basement_07", "current_temp": 19.5, "target_temp": 18, "mode": "off" }
+
+Question: Adjust the sunroom temperature to 25 degrees; it's sunny today.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_sunroom_08", "temperature": 25, "mode": "cool" }
+Response: { "device_id": "thermostat_sunroom_08", "current_temp": 26.8, "target_temp": 25, "mode": "cool" }
+
+Question: Retrieve the current status of the garage thermostat.
+Call: { "func_call": "get_temperature", "device_id": "thermostat_garage_09", "temperature": 0, "mode": "auto" }
+Response: { "device_id": "thermostat_garage_09", "current_temp": 15.2, "target_temp": 16, "mode": "heat" }
+
+Question: Time for bed; set the upstairs hallway thermostat to 20 degrees.
+Call: { "func_call": "set_temperature", "device_id": "thermostat_uphall_10", "temperature": 20, "mode": "heat" }
+Response: { "device_id": "thermostat_uphall_10", "current_temp": 21.2, "target_temp": 20, "mode": "heat" }

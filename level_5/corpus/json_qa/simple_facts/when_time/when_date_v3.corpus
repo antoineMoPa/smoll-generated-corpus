@@ -1,0 +1,59 @@
+Context: The international robotics expo is set to open on June 10, 2025, in Berlin. Early bird registration ends on May 1.
+Input: {"question": "When does the international robotics expo open?"}
+Output: {"answer": "June 10, 2025"}
+
+Context: The Great Fire of London began on September 2, 1666, and raged for four days. It destroyed a large portion of the city inside the Roman walls.
+Input: {"question": "What date did the Great Fire of London begin?"}
+Output: {"answer": "September 2, 1666"}
+
+Context: Your consultation with Dr. Chen is scheduled for next Thursday at 10:30 AM. Please bring your insurance card and a list of current medications.
+Input: {"question": "What day is the consultation with Dr. Chen?"}
+Output: {"answer": "next Thursday"}
+
+Context: Construction on the Eiffel Tower commenced on January 28, 1887, and was completed two years later. It served as the entrance arch for the 1889 World's Fair.
+Input: {"question": "When did construction on the Eiffel Tower commence?"}
+Output: {"answer": "January 28, 1887"}
+
+Context: The software update rollout has been rescheduled to Monday, December 4, 2023, to address critical security patches. Users should save their work before logging off.
+Input: {"question": "What is the new date for the software update rollout?"}
+Output: {"answer": "Monday, December 4, 2023"}
+
+Context: Vincent van Gogh was born in Zundert, Netherlands, in March 1853. He created most of his famous works in the last two years of his life.
+Input: {"question": "What year was Vincent van Gogh born?"}
+Output: {"answer": "1853"}
+
+Context: The database backup procedure is scheduled for this Saturday between 1:00 AM and 4:00 AM PST. Access to the admin panel will be restricted during this period.
+Input: {"question": "When is the database backup procedure scheduled?"}
+Output: {"answer": "this Saturday"}
+
+Context: The Berlin Wall fell on November 9, 1989, leading to the reunification of Germany. Crowds gathered at the border checkpoints to celebrate the occasion.
+Input: {"question": "What date did the Berlin Wall fall?"}
+Output: {"answer": "November 9, 1989"}
+
+Context: Please be advised that the library will be closed on Friday, July 4, 2024, for Independence Day. Regular hours will resume on the following Monday.
+Input: {"question": "When will the library be closed for Independence Day?"}
+Output: {"answer": "Friday, July 4, 2024"}
+
+Context: The Declaration of Independence was adopted by the Continental Congress on July 4, 1776, announcing the separation of the thirteen colonies from Great Britain.
+Input: {"question": "In what year was the Declaration of Independence adopted?"}
+Output: {"answer": "1776"}
+
+Context: The train to Paris leaves on Tuesday, February 14, 2024, from Platform 9. Travelers are advised to validate their tickets before boarding.
+Input: {"question": "What date does the train to Paris leave?"}
+Output: {"answer": "Tuesday, February 14, 2024"}
+
+Context: The startup was established on September 12, 2015, in a co-working space in Austin. It quickly gained traction in the fintech sector.
+Input: {"question": "When was the startup established?"}
+Output: {"answer": "September 12, 2015"}
+
+Context: A total lunar eclipse will occur on March 14, 2025, visible across the Americas. The moon will turn a reddish hue during the peak of the event.
+Input: {"question": "When will the total lunar eclipse occur?"}
+Output: {"answer": "March 14, 2025"}
+
+Context: His graduation ceremony is planned for next Sunday at the main auditorium. Families are invited to arrive by 9:00 AM for seating.
+Input: {"question": "What day is his graduation ceremony?"}
+Output: {"answer": "next Sunday"}
+
+Context: The Emancipation Proclamation was issued on January 1, 1863, declaring freedom for enslaved people in Confederate states. It changed the legal status of millions of individuals.
+Input: {"question": "What date was the Emancipation Proclamation issued?"}
+Output: {"answer": "January 1, 1863"}

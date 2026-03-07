@@ -1,0 +1,59 @@
+Context: The redwood forest contains towering giants that stretch hundreds of feet into the sky.
+Input: {"question": "How big are the trees in the redwood forest?"}
+Output: {"answer": "towering"}
+
+Context: A petite ruby ring sat inside the velvet box, barely covering the tip of her finger.
+Input: {"question": "What size is the ruby ring?"}
+Output: {"answer": "petite"}
+
+Context: The engineer drafted a triangular support beam to reinforce the bridge structure.
+Input: {"question": "What shape is the support beam?"}
+Output: {"answer": "triangular"}
+
+Context: The soup left on the stove overnight was lukewarm and unappetizing for breakfast.
+Input: {"question": "How hot is the soup?"}
+Output: {"answer": "lukewarm"}
+
+Context: They installed a spherical light fixture in the center of the lobby ceiling.
+Input: {"question": "What shape is the light fixture?"}
+Output: {"answer": "spherical"}
+
+Context: Even in midwinter, the air inside the cave stayed damp and frigid.
+Input: {"question": "How cold is the air inside the cave?"}
+Output: {"answer": "frigid"}
+
+Context: Archaeologists uncovered a mammoth skeleton buried beneath the desert sands.
+Input: {"question": "How big is the skeleton found in the desert?"}
+Output: {"answer": "mammoth"}
+
+Context: The potter shaped the clay into a perfect cylinder before firing it in the kiln.
+Input: {"question": "What shape did the potter make the clay?"}
+Output: {"answer": "cylinder"}
+
+Context: The tea poured from the kettle was piping hot, steam rising immediately from the cup.
+Input: {"question": "How hot was the tea?"}
+Output: {"answer": "piping"}
+
+Context: On the shelf sat a microscopic gear intended for the watch mechanism.
+Input: {"question": "What size is the gear on the shelf?"}
+Output: {"answer": "microscopic"}
+
+Context: The traffic sign warning of road work was diamond-shaped and bright orange.
+Input: {"question": "What shape is the road work sign?"}
+Output: {"answer": "diamond"}
+
+Context: The sand dunes in the afternoon sun became searing, making it impossible to walk barefoot.
+Input: {"question": "How hot did the sand dunes become?"}
+Output: {"answer": "searing"}
+
+Context: She selected a lanky sapling from the nursery to plant in the front yard.
+Input: {"question": "What shape is the sapling she selected?"}
+Output: {"answer": "lanky"}
+
+Context: The shipping container held enormous pipes that spanned the entire length of the truck bed.
+Input: {"question": "How big are the pipes in the container?"}
+Output: {"answer": "enormous"}
+
+Context: As night fell, the air in the valley grew nippy, signaling the arrival of frost.
+Input: {"question": "How cold was the air in the valley?"}
+Output: {"answer": "nippy"}

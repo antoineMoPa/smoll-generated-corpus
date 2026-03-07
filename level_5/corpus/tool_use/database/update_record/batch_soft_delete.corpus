@@ -1,0 +1,51 @@
+Available Tools: update_record | update_batch | soft_delete | restore_record
+Call Schema: { "func_call": "string", "table": "string", "id": number, "data": {}, "where": "string" }
+Response Schema: { "affected_rows": number, "status": "string", "updated_at": "string" }
+---
+Question: Deactivate the user account with ID 1042 due to terms of service violation.
+Call: { "func_call": "soft_delete", "table": "users", "id": 1042, "data": { "deactivation_reason": "tos_violation" }, "where": "id = 1042" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-14T09:23:45Z" }
+
+Question: Archive all orders from the 'Q3_Promo' campaign that were placed before October 1st.
+Call: { "func_call": "update_batch", "table": "orders", "id": 0, "data": { "status": "archived", "archive_date": "2023-11-14" }, "where": "campaign_id = 'Q3_Promo' AND order_date < '2023-10-01'" }
+Response: { "affected_rows": 145, "status": "success", "updated_at": "2023-11-14T10:05:12Z" }
+
+Question: Restore the accidentally deleted product record with ID 8892.
+Call: { "func_call": "restore_record", "table": "products", "id": 8892, "data": {}, "where": "id = 8892" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2023-11-14T11:15:30Z" }
+
+Question: Soft delete the customer feedback entry ID 5521 containing inappropriate language.
+Call: { "func_call": "soft_delete", "table": "feedback", "id": 5521, "data": { "flag_reason": "inappropriate_content" }, "where": "id = 5521" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-14T12:45:00Z" }
+
+Question: Update the inventory count for all items in the 'Electronics' category by reducing stock by 5 due to a system adjustment.
+Call: { "func_call": "update_batch", "table": "inventory", "id": 0, "data": { "quantity": "quantity - 5" }, "where": "category = 'Electronics'" }
+Response: { "affected_rows": 32, "status": "success", "updated_at": "2023-11-14T13:20:18Z" }
+
+Question: Reactivate the suspended vendor account with ID 204 after review completion.
+Call: { "func_call": "restore_record", "table": "vendors", "id": 204, "data": { "reviewed_by": "admin_jdoe" }, "where": "id = 204" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2023-11-14T14:10:55Z" }
+
+Question: Mark all blog posts tagged 'draft_2022' as archived to clean up the dashboard.
+Call: { "func_call": "update_batch", "table": "blog_posts", "id": 0, "data": { "is_archived": true, "archived_at": "2023-11-14T15:00:00Z" }, "where": "tags LIKE '%draft_2022%'" }
+Response: { "affected_rows": 18, "status": "success", "updated_at": "2023-11-14T15:00:05Z" }
+
+Question: Soft delete the session log with ID 99102 due to data privacy request.
+Call: { "func_call": "soft_delete", "table": "session_logs", "id": 99102, "data": { "privacy_request_id": "PR-2023-88" }, "where": "id = 99102" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-14T16:30:22Z" }
+
+Question: Restore the deleted comment thread ID 773 associated with article 402.
+Call: { "func_call": "restore_record", "table": "comments", "id": 773, "data": {}, "where": "id = 773" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2023-11-14T17:12:40Z" }
+
+Question: Batch update the shipping status to 'delayed' for all orders in region 'NE-04' affected by the storm.
+Call: { "func_call": "update_batch", "table": "orders", "id": 0, "data": { "status": "delayed", "delay_reason": "weather_storm" }, "where": "region_code = 'NE-04' AND status = 'in_transit'" }
+Response: { "affected_rows": 67, "status": "success", "updated_at": "2023-11-14T18:05:33Z" }
+
+Question: Permanently flag and soft delete the spam report entry ID 3321.
+Call: { "func_call": "soft_delete", "table": "reports", "id": 3321, "data": { "classification": "spam", "action_taken": "soft_delete" }, "where": "id = 3321" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-14T19:22:11Z" }
+
+Question: Restore the archived newsletter subscription for user ID 550 who opted back in.
+Call: { "func_call": "restore_record", "table": "subscriptions", "id": 550, "data": { "opt_in_date": "2023-11-14" }, "where": "user_id = 550" }
+Response: { "affected_rows": 1, "status": "restored", "updated_at": "2023-11-14T20:15:59Z" }

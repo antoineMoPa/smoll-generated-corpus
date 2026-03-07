@@ -1,0 +1,51 @@
+Available Tools: list_commits | get_commit | create_branch | delete_branch | list_branches | compare_branches
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "branch": "string", "sha": "string" }
+Response Schema: { "commits": [{ "sha": "string", "message": "string", "author": "string", "date": "string" }], "branch": "string" }
+---
+Question: Display the most recent commits on the production branch of the health-tech/patient-portal repository.
+Call: { "func_call": "list_commits", "owner": "health-tech", "repo": "patient-portal", "branch": "production", "sha": "" }
+Response: { "commits": [{ "sha": "aa11bb22cc33dd44ee55ff6677889900aabbccdd", "message": "fix: patch security vulnerability in auth module", "author": "Dr. Alan Grant", "date": "2023-11-05T09:00:00Z" }, { "sha": "bb22cc33dd44ee55ff6677889900aabbccddee11", "message": "feat: add appointment scheduling feature", "author": "Ellie Sattler", "date": "2023-11-04T14:20:00Z" }], "branch": "production" }
+
+Question: Retrieve details for commit ff00ee11dd22cc33bb44aa559988776655443322 located in the develop branch of auto-motive/vehicle-tracker.
+Call: { "func_call": "get_commit", "owner": "auto-motive", "repo": "vehicle-tracker", "branch": "develop", "sha": "ff00ee11dd22cc33bb44aa559988776655443322" }
+Response: { "commits": [{ "sha": "ff00ee11dd22cc33bb44aa559988776655443322", "message": "chore: update GPS library dependencies", "author": "Ian Malcolm", "date": "2023-11-06T11:30:00Z" }], "branch": "develop" }
+
+Question: What are the latest changes pushed to the beta branch of the food-delivery/order-system repo by quick-eats?
+Call: { "func_call": "list_commits", "owner": "quick-eats", "repo": "order-system", "branch": "beta", "sha": "" }
+Response: { "commits": [{ "sha": "112233445566778899aabbccddeeff0011223344", "message": "feat: implement real-time driver tracking", "author": "John Hammond", "date": "2023-11-07T08:45:00Z" }, { "sha": "2233445566778899aabbccddeeff001122334455", "message": "fix: correct tip calculation logic", "author": "Lex Murphy", "date": "2023-11-06T16:10:00Z" }, { "sha": "33445566778899aabbccddeeff00112233445566", "message": "chore: optimize database queries", "author": "Donald Gennaro", "date": "2023-11-05T13:00:00Z" }], "branch": "beta" }
+
+Question: I need the specific commit information for 445566778899aabbccddeeff0011223344556677 from the main branch of edu-tech/learning-platform.
+Call: { "func_call": "get_commit", "owner": "edu-tech", "repo": "learning-platform", "branch": "main", "sha": "445566778899aabbccddeeff0011223344556677" }
+Response: { "commits": [{ "sha": "445566778899aabbccddeeff0011223344556677", "message": "feat: add video conferencing integration", "author": "Robert Muldoon", "date": "2023-11-08T10:15:00Z" }], "branch": "main" }
+
+Question: List all recent commits for the smart-home repository owned by connect-labs on the release/v3.1 branch.
+Call: { "func_call": "list_commits", "owner": "connect-labs", "repo": "smart-home", "branch": "release/v3.1", "sha": "" }
+Response: { "commits": [{ "sha": "5566778899aabbccddeeff001122334455667788", "message": "fix: resolve thermostat syncing issue", "author": "Sarah Harding", "date": "2023-11-09T07:30:00Z" }, { "sha": "66778899aabbccddeeff00112233445566778899", "message": "feat: support new smart lock models", "author": "Tim Murphy", "date": "2023-11-08T15:45:00Z" }], "branch": "release/v3.1" }
+
+Question: Get the details for commit 778899aabbccddeeff0011223344556677889900 found in the feature/voice-control branch of audio-stream/music-player.
+Call: { "func_call": "get_commit", "owner": "audio-stream", "repo": "music-player", "branch": "feature/voice-control", "sha": "778899aabbccddeeff0011223344556677889900" }
+Response: { "commits": [{ "sha": "778899aabbccddeeff0011223344556677889900", "message": "feat: integrate voice assistant API", "author": "Ellie Arnold", "date": "2023-11-10T12:00:00Z" }], "branch": "feature/voice-control" }
+
+Question: Pull the commit history for the staging branch of the crypto-wallet repo owned by block-chain-inc.
+Call: { "func_call": "list_commits", "owner": "block-chain-inc", "repo": "crypto-wallet", "branch": "staging", "sha": "" }
+Response: { "commits": [{ "sha": "8899aabbccddeeff001122334455667788990011", "message": "fix: handle transaction fee overflow", "author": "Nick Van Owen", "date": "2023-11-11T09:20:00Z" }, { "sha": "99aabbccddeeff00112233445566778899001122", "message": "chore: update encryption standards", "author": "Kay Harding", "date": "2023-11-10T14:50:00Z" }], "branch": "staging" }
+
+Question: I need to see the content of commit aabbccddeeff0011223344556677889900112233 on the hotfix/crash-fix branch of game-dev/space-adventure.
+Call: { "func_call": "get_commit", "owner": "game-dev", "repo": "space-adventure", "branch": "hotfix/crash-fix", "sha": "aabbccddeeff0011223344556677889900112233" }
+Response: { "commits": [{ "sha": "aabbccddeeff0011223344556677889900112233", "message": "fix: prevent memory crash on level load", "author": "Roland Tembo", "date": "2023-11-12T08:00:00Z" }], "branch": "hotfix/crash-fix" }
+
+Question: List the commits for the master branch of the cloud-storage repo under data-safe-corp.
+Call: { "func_call": "list_commits", "owner": "data-safe-corp", "repo": "cloud-storage", "branch": "master", "sha": "" }
+Response: { "commits": [{ "sha": "bbccddeeff001122334455667788990011223344", "message": "feat: add multi-factor authentication", "author": "Ajay Sidhu", "date": "2023-11-13T10:30:00Z" }, { "sha": "ccddeeff00112233445566778899001122334455", "message": "fix: correct file permission errors", "author": "Nima Cruz", "date": "2023-11-12T16:15:00Z" }, { "sha": "ddeeff0011223344556677889900112233445566", "message": "chore: refactor upload service", "author": "Kelly Curtis", "date": "2023-11-11T11:45:00Z" }], "branch": "master" }
+
+Question: Fetch details for commit ee00112233445566778899001122334455667788 in the main branch of travel-booking/flight-search.
+Call: { "func_call": "get_commit", "owner": "travel-booking", "repo": "flight-search", "branch": "main", "sha": "ee00112233445566778899001122334455667788" }
+Response: { "commits": [{ "sha": "ee00112233445566778899001122334455667788", "message": "feat: add flexible date search option", "author": "Paul Kirby", "date": "2023-11-14T09:00:00Z" }], "branch": "main" }
+
+Question: Show me the recent commit activity on the develop branch for the ai-models repo by neural-net-labs.
+Call: { "func_call": "list_commits", "owner": "neural-net-labs", "repo": "ai-models", "branch": "develop", "sha": "" }
+Response: { "commits": [{ "sha": "ff11223344556677889900112233445566778899", "message": "feat: improve image recognition accuracy", "author": "Amanda Kirby", "date": "2023-11-15T13:20:00Z" }, { "sha": "001122334455667788990011223344556677889a", "message": "fix: resolve training data bias", "author": "Billy Brennan", "date": "2023-11-14T17:40:00Z" }], "branch": "develop" }
+
+Question: Get the specific commit data for 112233445566778899001122334455667788990b on the feature/mobile-app branch of bank-secure/mobile-banking.
+Call: { "func_call": "get_commit", "owner": "bank-secure", "repo": "mobile-banking", "branch": "feature/mobile-app", "sha": "112233445566778899001122334455667788990b" }
+Response: { "commits": [{ "sha": "112233445566778899001122334455667788990b", "message": "feat: add biometric login support", "author": "Eric Kirby", "date": "2023-11-16T10:10:00Z" }], "branch": "feature/mobile-app" }

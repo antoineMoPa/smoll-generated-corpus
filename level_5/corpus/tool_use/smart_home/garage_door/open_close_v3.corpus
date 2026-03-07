@@ -1,0 +1,51 @@
+Available Tools: open_garage | close_garage | get_garage_status | set_garage_timer
+Call Schema: { "func_call": "string", "door_id": "string", "delay_seconds": number }
+Response Schema: { "door_id": "string", "state": "open|closed|opening|closing", "timestamp": "string" }
+---
+Question: The moving van has arrived, please unlock and open the front garage entrance.
+Call: { "func_call": "open_garage", "door_id": "garage_front_alpha", "delay_seconds": 0 }
+Response: { "door_id": "garage_front_alpha", "state": "opening", "timestamp": "2023-11-01T10:22:18Z" }
+
+Question: I heard a noise outside, quickly seal the rear storage door.
+Call: { "func_call": "close_garage", "door_id": "storage_rear_02", "delay_seconds": 0 }
+Response: { "door_id": "storage_rear_02", "state": "closing", "timestamp": "2023-11-01T23:45:09Z" }
+
+Question: Letting fresh air in, please raise the left workshop shutter.
+Call: { "func_call": "open_garage", "door_id": "workshop_left_shutter", "delay_seconds": 0 }
+Response: { "door_id": "workshop_left_shutter", "state": "opening", "timestamp": "2023-11-02T07:30:44Z" }
+
+Question: Storm warning issued, lower the right workshop shutter immediately.
+Call: { "func_call": "close_garage", "door_id": "workshop_right_shutter", "delay_seconds": 0 }
+Response: { "door_id": "workshop_right_shutter", "state": "closing", "timestamp": "2023-11-02T14:15:22Z" }
+
+Question: Guests are arriving for dinner, open the courtyard garage gate.
+Call: { "func_call": "open_garage", "door_id": "courtyard_gate_05", "delay_seconds": 0 }
+Response: { "door_id": "courtyard_gate_05", "state": "opening", "timestamp": "2023-11-03T18:00:55Z" }
+
+Question: Everyone has left the party, secure the courtyard garage gate now.
+Call: { "func_call": "close_garage", "door_id": "courtyard_gate_05", "delay_seconds": 0 }
+Response: { "door_id": "courtyard_gate_05", "state": "closing", "timestamp": "2023-11-03T23:55:12Z" }
+
+Question: Time to wash the car, please lift the center bay door.
+Call: { "func_call": "open_garage", "door_id": "bay_center_wash", "delay_seconds": 0 }
+Response: { "door_id": "bay_center_wash", "state": "opening", "timestamp": "2023-11-04T09:10:33Z" }
+
+Question: Car wash is done, drop the center bay door to save heat.
+Call: { "func_call": "close_garage", "door_id": "bay_center_wash", "delay_seconds": 0 }
+Response: { "door_id": "bay_center_wash", "state": "closing", "timestamp": "2023-11-04T10:45:28Z" }
+
+Question: Bringing in the new furniture, open the oversized freight door.
+Call: { "func_call": "open_garage", "door_id": "freight_door_xl", "delay_seconds": 0 }
+Response: { "door_id": "freight_door_xl", "state": "opening", "timestamp": "2023-11-05T13:20:41Z" }
+
+Question: Freight unloaded, please lower the oversized freight door.
+Call: { "func_call": "close_garage", "door_id": "freight_door_xl", "delay_seconds": 0 }
+Response: { "door_id": "freight_door_xl", "state": "closing", "timestamp": "2023-11-05T15:35:19Z" }
+
+Question: Morning commute starting, raise the north exit garage door.
+Call: { "func_call": "open_garage", "door_id": "exit_north_04", "delay_seconds": 0 }
+Response: { "door_id": "exit_north_04", "state": "opening", "timestamp": "2023-11-06T06:45:02Z" }
+
+Question: Returning late at night, close the north exit garage door behind me.
+Call: { "func_call": "close_garage", "door_id": "exit_north_04", "delay_seconds": 0 }
+Response: { "door_id": "exit_north_04", "state": "closing", "timestamp": "2023-11-06T22:15:57Z" }

@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: The customer is threatening legal action over a duplicate charge; please escalate this immediately to the billing team.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-8921", "reason": "Customer threatening legal action regarding duplicate charge", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-8921", "escalated_to": "billing_team", "reason": "Customer threatening legal action regarding duplicate charge", "sla_hours": 4, "status": "escalated" }
+
+Question: Transfer ticket 4402 to a specialist because the user cannot access their dashboard despite multiple password resets.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-4402", "reason": "Dashboard access failure after multiple password resets", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-4402", "escalated_to": "tier_2_support", "reason": "Dashboard access failure after multiple password resets", "sla_hours": 8, "status": "transferred" }
+
+Question: We have a critical API outage affecting enterprise clients; escalate to technical escalation for immediate review.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-9931", "reason": "Critical API outage impacting enterprise clients", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-9931", "escalated_to": "technical_escalation", "reason": "Critical API outage impacting enterprise clients", "sla_hours": 1, "status": "escalated" }
+
+Question: Move ticket 1120 to tier 2 support as the customer requires advanced configuration help not available in level 1.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-1120", "reason": "Advanced configuration assistance required", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-1120", "escalated_to": "tier_2_support", "reason": "Advanced configuration assistance required", "sla_hours": 12, "status": "transferred" }
+
+Question: Escalate ticket 5543 because the billing department has not responded within the standard window and the account is suspended.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-5543", "reason": "No response from billing causing account suspension", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-5543", "escalated_to": "billing_team", "reason": "No response from billing causing account suspension", "sla_hours": 2, "status": "escalated" }
+
+Question: Transfer this case to technical escalation since the database migration failed and rolled back twice.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-7788", "reason": "Database migration failure with double rollback", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-7788", "escalated_to": "technical_escalation", "reason": "Database migration failure with double rollback", "sla_hours": 4, "status": "transferred" }
+
+Question: The customer is requesting a refund for services not rendered; escalate to the billing team for verification.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-3321", "reason": "Refund request for unrendered services", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-3321", "escalated_to": "billing_team", "reason": "Refund request for unrendered services", "sla_hours": 6, "status": "escalated" }
+
+Question: Send ticket 6654 to tier 2 support because the integration with Salesforce is returning 500 errors.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-6654", "reason": "Salesforce integration returning 500 errors", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-6654", "escalated_to": "tier_2_support", "reason": "Salesforce integration returning 500 errors", "sla_hours": 8, "status": "transferred" }
+
+Question: Escalate ticket 2290 to technical escalation due to suspected data breach indicators in the logs.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-2290", "reason": "Suspected data breach indicators in system logs", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-2290", "escalated_to": "technical_escalation", "reason": "Suspected data breach indicators in system logs", "sla_hours": 1, "status": "escalated" }
+
+Question: Transfer ticket 8812 to the billing team as the invoice currency conversion rates appear incorrect.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-8812", "reason": "Incorrect currency conversion rates on invoice", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-8812", "escalated_to": "billing_team", "reason": "Incorrect currency conversion rates on invoice", "sla_hours": 24, "status": "transferred" }
+
+Question: Escalate ticket 4049 to tier 2 support because the mobile app crashes on every login attempt for iOS users.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-4049", "reason": "Mobile app crash on login for iOS users", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-4049", "escalated_to": "tier_2_support", "reason": "Mobile app crash on login for iOS users", "sla_hours": 6, "status": "escalated" }
+
+Question: Move ticket 5102 to technical escalation as the server load balancer is failing health checks repeatedly.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-5102", "reason": "Load balancer failing repeated health checks", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-5102", "escalated_to": "technical_escalation", "reason": "Load balancer failing repeated health checks", "sla_hours": 2, "status": "transferred" }

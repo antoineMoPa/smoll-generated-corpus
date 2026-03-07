@@ -1,0 +1,59 @@
+Context: The new suspension bridge spans a total distance of 2,450 meters across the river valley. It took three years to complete the construction.
+Input: {"question": "How far does the bridge span?"}
+Output: {"answer": "2,450 meters"}
+
+Context: Sarah packed her suitcase for the trip, ensuring the total weight did not exceed 23 kilograms to avoid extra fees. She left some heavy boots behind to stay under the limit.
+Input: {"question": "How heavy was the suitcase?"}
+Output: {"answer": "23 kilograms"}
+
+Context: The recipe calls for exactly 500 milliliters of heavy cream to make the sauce thick and rich. Do not substitute with milk or the texture will be wrong.
+Input: {"question": "How much heavy cream is needed?"}
+Output: {"answer": "500 milliliters"}
+
+Context: During the flash sale, the limited edition sneakers were priced at $129.99 before selling out in ten minutes. Regular customers had to wait for the next restock.
+Input: {"question": "How much did the sneakers cost?"}
+Output: {"answer": "$129.99"}
+
+Context: The marathon runner completed the full course in 3 hours and 42 minutes, setting a new personal record. Her previous best time was over four hours.
+Input: {"question": "How long did it take the runner to finish?"}
+Output: {"answer": "3 hours and 42 minutes"}
+
+Context: The aquarium tank holds 150 gallons of saltwater to support the diverse coral reef ecosystem. Maintenance staff check the salinity levels every morning.
+Input: {"question": "How much water does the tank hold?"}
+Output: {"answer": "150 gallons"}
+
+Context: The hiking trail to the summit is 8.5 miles long and features steep rocky sections near the top. Hikers are advised to start early in the morning.
+Input: {"question": "How far is the hiking trail?"}
+Output: {"answer": "8.5 miles"}
+
+Context: The shipment of steel beams weighed 4.2 tons and required a specialized crane for unloading. The delivery arrived two days ahead of schedule.
+Input: {"question": "How heavy was the shipment?"}
+Output: {"answer": "4.2 tons"}
+
+Context: To fill the swimming pool, the gardener used 12,000 liters of water from the local reservoir. The process took nearly six hours to complete.
+Input: {"question": "How much water was used to fill the pool?"}
+Output: {"answer": "12,000 liters"}
+
+Context: The antique vase was sold at auction for £5,500, surpassing the estimated value by a significant margin. Bidders from three different countries participated in the sale.
+Input: {"question": "How much was the antique vase sold for?"}
+Output: {"answer": "£5,500"}
+
+Context: The documentary film has a runtime of 95 minutes and covers the history of space exploration. It includes interviews with former astronauts.
+Input: {"question": "How long is the documentary?"}
+Output: {"answer": "95 minutes"}
+
+Context: The package delivery covers a distance of 1,200 kilometers from the warehouse to the regional distribution center. Trucks usually make the journey overnight.
+Input: {"question": "How far does the delivery travel?"}
+Output: {"answer": "1,200 kilometers"}
+
+Context: Each bag of concrete mix weighs 80 pounds and must be kept dry before use. The construction team ordered fifty bags for the foundation.
+Input: {"question": "How heavy is each bag of concrete?"}
+Output: {"answer": "80 pounds"}
+
+Context: The chemical experiment requires 250 milligrams of the catalyst to initiate the reaction safely. Adding more could cause an overflow.
+Input: {"question": "How much catalyst is required?"}
+Output: {"answer": "250 milligrams"}
+
+Context: The monthly subscription fee for the premium service is $19.99 and includes unlimited cloud storage. Users can cancel at any time without penalty.
+Input: {"question": "How much is the monthly fee?"}
+Output: {"answer": "$19.99"}

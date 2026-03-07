@@ -1,0 +1,47 @@
+Question: What are the driving directions from JFK Airport to Times Square?
+Call: { "func_call": "get_directions", "origin": "JFK International Airport, Queens", "destination": "Times Square, Manhattan", "mode": "driving" }
+Response: { "distance_km": 26.4, "duration_minutes": 45, "steps": [ { "instruction": "Take the Van Wyck Expressway north.", "distance_km": 8.2 }, { "instruction": "Merge onto the Long Island Expressway west.", "distance_km": 12.5 }, { "instruction": "Take the Queens-Midtown Tunnel into Manhattan.", "distance_km": 2.8 }, { "instruction": "Continue on 34th Street to 7th Avenue and head north.", "distance_km": 2.9 } ] }
+
+Question: How do I cycle from Santa Monica Pier to Venice Beach Boardwalk?
+Call: { "func_call": "get_directions", "origin": "Santa Monica Pier, Santa Monica", "destination": "Venice Beach Boardwalk, Los Angeles", "mode": "cycling" }
+Response: { "distance_km": 4.2, "duration_minutes": 18, "steps": [ { "instruction": "Head south on the Marvin Braude Bike Path.", "distance_km": 3.8 }, { "instruction": "Continue straight as the path merges into the Venice Boardwalk.", "distance_km": 0.4 } ] }
+
+Question: I need walking directions from the Space Needle to Pike Place Market.
+Call: { "func_call": "get_directions", "origin": "Space Needle, Seattle", "destination": "Pike Place Market, Seattle", "mode": "walking" }
+Response: { "distance_km": 1.3, "duration_minutes": 16, "steps": [ { "instruction": "Walk south on 5th Avenue N.", "distance_km": 0.5 }, { "instruction": "Turn left onto Denny Way.", "distance_km": 0.4 }, { "instruction": "Turn right onto 1st Avenue and head uphill to the market.", "distance_km": 0.4 } ] }
+
+Question: Can you map a cycling route from Red Square to Gorky Park?
+Call: { "func_call": "get_directions", "origin": "Red Square, Moscow", "destination": "Gorky Park, Moscow", "mode": "cycling" }
+Response: { "distance_km": 3.5, "duration_minutes": 15, "steps": [ { "instruction": "Head southwest along Bolshaya Yakimanka Street.", "distance_km": 1.2 }, { "instruction": "Cross the Bolshoy Ustinsky Bridge.", "distance_km": 0.8 }, { "instruction": "Continue straight into the park entrance.", "distance_km": 1.5 } ] }
+
+Question: How do I walk from the Sydney Opera House to the Royal Botanic Garden?
+Call: { "func_call": "get_directions", "origin": "Sydney Opera House, Sydney", "destination": "Royal Botanic Garden, Sydney", "mode": "walking" }
+Response: { "distance_km": 0.7, "duration_minutes": 9, "steps": [ { "instruction": "Walk along the eastern promenade of the opera house.", "distance_km": 0.3 }, { "instruction": "Enter the gardens via the Pioneer Memorial Gate.", "distance_km": 0.4 } ] }
+
+Question: Find a cycling route from Alcatraz Ferry Terminal to Golden Gate Park Panhandle.
+Call: { "func_call": "get_directions", "origin": "Pier 33, San Francisco", "destination": "Panhandle, Golden Gate Park, San Francisco", "mode": "cycling" }
+Response: { "distance_km": 6.8, "duration_minutes": 28, "steps": [ { "instruction": "Head west on The Embarcadero.", "distance_km": 1.5 }, { "instruction": "Turn right onto Bay Street and continue to Franklin.", "distance_km": 1.2 }, { "instruction": "Take the bike lane on Fell Street westward.", "distance_km": 3.6 }, { "instruction": "Arrive at the Panhandle entrance.", "distance_km": 0.5 } ] }
+
+Question: Walking directions from the Brandenburg Gate to the Reichstag Building.
+Call: { "func_call": "get_directions", "origin": "Brandenburg Gate, Berlin", "destination": "Reichstag Building, Berlin", "mode": "walking" }
+Response: { "distance_km": 0.5, "duration_minutes": 7, "steps": [ { "instruction": "Walk north through Pariser Platz.", "distance_km": 0.1 }, { "instruction": "Turn right onto Ebertstraße.", "distance_km": 0.3 }, { "instruction": "Enter the Reichstag grounds.", "distance_km": 0.1 } ] }
+
+Question: What is the cycling route from Copacabana Beach to Sugarloaf Mountain cable car station?
+Call: { "func_call": "get_directions", "origin": "Copacabana Beach, Rio de Janeiro", "destination": "Sugarloaf Cable Car Station, Rio de Janeiro", "mode": "cycling" }
+Response: { "distance_km": 5.1, "duration_minutes": 22, "steps": [ { "instruction": "Head east on Avenida Atlântica.", "distance_km": 1.8 }, { "instruction": "Turn left onto Avenida Princesa Isabel.", "distance_km": 1.2 }, { "instruction": "Continue onto Rua São Clemente towards Urca.", "distance_km": 2.1 } ] }
+
+Question: How can I walk from the Great Wall at Mutianyu to the cable car upper station?
+Call: { "func_call": "get_directions", "origin": "Mutianyu Great Wall Base, Beijing", "destination": "Mutianyu Cable Car Upper Station, Beijing", "mode": "walking" }
+Response: { "distance_km": 1.8, "duration_minutes": 25, "steps": [ { "instruction": "Ascend the stone steps from the base plaza.", "distance_km": 1.2 }, { "instruction": "Follow the signs for Tower 14 near the cable car drop-off.", "distance_km": 0.6 } ] }
+
+Question: Cycling directions from Fisherman's Wharf to AT&T Park in San Francisco.
+Call: { "func_call": "get_directions", "origin": "Fisherman's Wharf, San Francisco", "destination": "Oracle Park, San Francisco", "mode": "cycling" }
+Response: { "distance_km": 4.5, "duration_minutes": 19, "steps": [ { "instruction": "Head south on The Embarcadero.", "distance_km": 4.2 }, { "instruction": "Turn right onto King Street.", "distance_km": 0.3 } ] }
+
+Question: Walk from the Taj Mahal main gate to the Yamuna River viewing point.
+Call: { "func_call": "get_directions", "origin": "Taj Mahal Main Gate, Agra", "destination": "Yamuna River Bank, Agra", "mode": "walking" }
+Response: { "distance_km": 0.8, "duration_minutes": 10, "steps": [ { "instruction": "Enter the complex and walk through the central garden.", "distance_km": 0.5 }, { "instruction": "Proceed to the rear platform overlooking the river.", "distance_km": 0.3 } ] }
+
+Question: Cycling path from Bondi Beach to Coogee Beach.
+Call: { "func_call": "get_directions", "origin": "Bondi Beach, Sydney", "destination": "Coogee Beach, Sydney", "mode": "cycling" }
+Response: { "distance_km": 6.2, "duration_minutes": 24, "steps": [ { "instruction": "Follow the Bondi to Coogee Coastal Walk path south.", "distance_km": 4.5 }, { "instruction": "Navigate the stairs and ramps near Clovelly Beach.", "distance_km": 1.2 }, { "instruction": "Continue along the cliffside to Coogee Bay.", "distance_km": 0.5 } ] }

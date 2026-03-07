@@ -1,0 +1,51 @@
+Available Tools: geocode_address | reverse_geocode | validate_address | get_timezone
+Call Schema: { "func_call": "string", "address": "string", "lat": number, "lng": number }
+Response Schema: { "lat": number, "lng": number, "formatted_address": "string", "country": "string", "timezone": "string" }
+
+Question: What are the coordinates for the Statue of Liberty in New York Harbor?
+Call: { "func_call": "geocode_address", "address": "Liberty Island, New York, NY 10004, USA", "lat": 0, "lng": 0 }
+Response: { "lat": 40.6892, "lng": -74.0445, "formatted_address": "Liberty Island, New York, NY 10004, USA", "country": "United States", "timezone": "America/New_York" }
+
+Question: Find the location of the Great Pyramid of Giza.
+Call: { "func_call": "geocode_address", "address": "Al Haram, Nazlet El-Semman, Al Giza Desert, Giza Governorate, Egypt", "lat": 0, "lng": 0 }
+Response: { "lat": 29.9792, "lng": 31.1342, "formatted_address": "Al Haram, Nazlet El-Semman, Giza Governorate, Egypt", "country": "Egypt", "timezone": "Africa/Cairo" }
+
+Question: Where is the Machu Picchu Historical Sanctuary located?
+Call: { "func_call": "geocode_address", "address": "Aguas Calientes, Cusco Region, Peru", "lat": 0, "lng": 0 }
+Response: { "lat": -13.1631, "lng": -72.5450, "formatted_address": "Machu Picchu, Cusco Region, Peru", "country": "Peru", "timezone": "America/Lima" }
+
+Question: Get coordinates for the Sagrada Familia in Barcelona.
+Call: { "func_call": "geocode_address", "address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain", "lat": 0, "lng": 0 }
+Response: { "lat": 41.4036, "lng": 2.1744, "formatted_address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain", "country": "Spain", "timezone": "Europe/Madrid" }
+
+Question: Locate the Acropolis of Athens in Greece.
+Call: { "func_call": "geocode_address", "address": "Dionysiou Areopagitou, Athina 105 58, Greece", "lat": 0, "lng": 0 }
+Response: { "lat": 37.9715, "lng": 23.7257, "formatted_address": "Acropolis, Athina 105 58, Greece", "country": "Greece", "timezone": "Europe/Athens" }
+
+Question: What are the GPS coordinates for Angkor Wat in Siem Reap?
+Call: { "func_call": "geocode_address", "address": "Angkor Archaeological Park, Krong Siem Reap, Cambodia", "lat": 0, "lng": 0 }
+Response: { "lat": 13.4125, "lng": 103.8670, "formatted_address": "Angkor Archaeological Park, Krong Siem Reap, Cambodia", "country": "Cambodia", "timezone": "Asia/Phnom_Penh" }
+
+Question: Find the address details for the Petronas Twin Towers in Kuala Lumpur.
+Call: { "func_call": "geocode_address", "address": "Jln Ampang, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Malaysia", "lat": 0, "lng": 0 }
+Response: { "lat": 3.1570, "lng": 101.7116, "formatted_address": "Petronas Twin Towers, Jln Ampang, 50088 Kuala Lumpur, Malaysia", "country": "Malaysia", "timezone": "Asia/Kuala_Lumpur" }
+
+Question: Geocode the Chichen Itza archaeological site.
+Call: { "func_call": "geocode_address", "address": "Chichen Itza, Yucatan, Mexico", "lat": 0, "lng": 0 }
+Response: { "lat": 20.6843, "lng": -88.5678, "formatted_address": "Chichen Itza, Tinúm, Yucatan, Mexico", "country": "Mexico", "timezone": "America/Merida" }
+
+Question: Where is the Neuschwanstein Castle in Bavaria?
+Call: { "func_call": "geocode_address", "address": "Neuschwansteinstraße 20, 87645 Schwangau, Germany", "lat": 0, "lng": 0 }
+Response: { "lat": 47.5576, "lng": 10.7498, "formatted_address": "Neuschwansteinstraße 20, 87645 Schwangau, Germany", "country": "Germany", "timezone": "Europe/Berlin" }
+
+Question: Get the location of the Tower of London.
+Call: { "func_call": "geocode_address", "address": "St Katharine's & Wapping, London EC3N 4AB, United Kingdom", "lat": 0, "lng": 0 }
+Response: { "lat": 51.5081, "lng": -0.0759, "formatted_address": "Tower of London, London EC3N 4AB, United Kingdom", "country": "United Kingdom", "timezone": "Europe/London" }
+
+Question: Locate the Forbidden City in Beijing.
+Call: { "func_call": "geocode_address", "address": "4 Jingshan Qianjie, Dongcheng District, Beijing, China", "lat": 0, "lng": 0 }
+Response: { "lat": 39.9163, "lng": 116.3972, "formatted_address": "4 Jingshan Qianjie, Dongcheng District, Beijing, China", "country": "China", "timezone": "Asia/Shanghai" }
+
+Question: Find the coordinates for the Empire State Building observation deck.
+Call: { "func_call": "geocode_address", "address": "350 5th Ave, New York, NY 10118, USA", "lat": 0, "lng": 0 }
+Response: { "lat": 40.7488, "lng": -73.9857, "formatted_address": "350 5th Ave, New York, NY 10118, USA", "country": "United States", "timezone": "America/New_York" }

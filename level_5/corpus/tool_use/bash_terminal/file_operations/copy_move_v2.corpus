@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Duplicate the environment variables file to the staging area.
+Call: { "func_call": "copy_file", "source": "/home/developer/.env", "destination": "/tmp/staging/.env_copy" }
+Response: { "success": true, "message": "Successfully copied /home/developer/.env to /tmp/staging/.env_copy" }
+
+Question: Transfer the outdated inventory csv to the archive folder.
+Call: { "func_call": "move_file", "source": "/data/reports/inventory_2022.csv", "destination": "/data/archives/2022/inventory_2022.csv" }
+Response: { "success": true, "message": "Successfully moved /data/reports/inventory_2022.csv to /data/archives/2022/inventory_2022.csv" }
+
+Question: Make a backup of the apache virtual host config.
+Call: { "func_call": "copy_file", "source": "/etc/apache2/sites-available/example.com.conf", "destination": "/etc/apache2/backup/example.com.conf.bak" }
+Response: { "success": true, "message": "Successfully copied /etc/apache2/sites-available/example.com.conf to /etc/apache2/backup/example.com.conf.bak" }
+
+Question: Relocate the compiled binary to the release directory.
+Call: { "func_call": "move_file", "source": "/build/output/app_v3.1", "destination": "/releases/linux/app_v3.1" }
+Response: { "success": true, "message": "Successfully moved /build/output/app_v3.1 to /releases/linux/app_v3.1" }
+
+Question: Copy the private certificate to the secure temp folder for validation.
+Call: { "func_call": "copy_file", "source": "/etc/ssl/private/server.key", "destination": "/tmp/secure_check/server.key" }
+Response: { "success": false, "message": "Permission denied: cannot read /etc/ssl/private/server.key" }
+
+Question: Move the session cache dump to cold storage.
+Call: { "func_call": "move_file", "source": "/var/run/app/session_cache.dat", "destination": "/mnt/cold_storage/sessions/session_cache_20231105.dat" }
+Response: { "success": true, "message": "Successfully moved /var/run/app/session_cache.dat to /mnt/cold_storage/sessions/session_cache_20231105.dat" }
+
+Question: Duplicate the cron tab configuration before modification.
+Call: { "func_call": "copy_file", "source": "/var/spool/cron/root", "destination": "/var/backup/cron/root.pre-change" }
+Response: { "success": true, "message": "Successfully copied /var/spool/cron/root to /var/backup/cron/root.pre-change" }
+
+Question: Move the draft presentation to the finalized projects folder.
+Call: { "func_call": "move_file", "source": "/home/sarah/docs/q4_review_draft.pptx", "destination": "/shared/projects/q4/final/q4_review.pptx" }
+Response: { "success": true, "message": "Successfully moved /home/sarah/docs/q4_review_draft.pptx to /shared/projects/q4/final/q4_review.pptx" }
+
+Question: Copy the initialization script to the boot execution path.
+Call: { "func_call": "copy_file", "source": "/opt/scripts/init_db.sh", "destination": "/usr/local/bin/init_db_startup.sh" }
+Response: { "success": true, "message": "Successfully copied /opt/scripts/init_db.sh to /usr/local/bin/init_db_startup.sh" }
+
+Question: Move the compressed audit logs to the compliance archive.
+Call: { "func_call": "move_file", "source": "/var/log/audit/audit.log.2.gz", "destination": "/mnt/compliance/logs/2023/audit.log.2.gz" }
+Response: { "success": true, "message": "Successfully moved /var/log/audit/audit.log.2.gz to /mnt/compliance/logs/2023/audit.log.2.gz" }
+
+Question: Copy the firewall ruleset to a safe backup location.
+Call: { "func_call": "copy_file", "source": "/etc/iptables/rules.v4", "destination": "/var/backup/network/rules.v4.saved" }
+Response: { "success": true, "message": "Successfully copied /etc/iptables/rules.v4 to /var/backup/network/rules.v4.saved" }
+
+Question: Move the high-resolution render from scratch to the delivery folder.
+Call: { "func_call": "move_file", "source": "/scratch/video/final_cut_4k.mov", "destination": "/delivery/client_alpha/final_cut_4k.mov" }
+Response: { "success": false, "message": "Target directory /delivery/client_alpha does not exist" }

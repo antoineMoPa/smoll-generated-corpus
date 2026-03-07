@@ -1,0 +1,51 @@
+Available Tools: create_network | list_networks | create_volume | list_volumes | mount_volume
+Call Schema: { "func_call": "string", "name": "string", "driver": "string", "container_id": "string", "mount_path": "string" }
+Response Schema: { "id": "string", "name": "string", "driver": "string", "scope": "string", "containers": ["string"] }
+---
+Question: Create a persistent volume for a PostgreSQL database and mount it to the running database container.
+Call: { "func_call": "mount_volume", "name": "pg_data_vol", "driver": "local", "container_id": "c8f9a2b1d3e4", "mount_path": "/var/lib/postgresql/data" }
+Response: { "id": "vol_9x8y7z6w5v", "name": "pg_data_vol", "driver": "local", "scope": "local", "containers": ["c8f9a2b1d3e4"] }
+
+Question: I need to store application logs for the user-service microservice; please mount a new volume to its log directory.
+Call: { "func_call": "mount_volume", "name": "user_svc_logs", "driver": "local", "container_id": "a1b2c3d4e5f6", "mount_path": "/app/logs" }
+Response: { "id": "vol_1a2b3c4d5e", "name": "user_svc_logs", "driver": "local", "scope": "local", "containers": ["a1b2c3d4e5f6"] }
+
+Question: Set up data persistence for a Redis cache instance by mounting a volume to the data directory.
+Call: { "func_call": "mount_volume", "name": "redis_cache_data", "driver": "local", "container_id": "f6e5d4c3b2a1", "mount_path": "/data" }
+Response: { "id": "vol_5f6g7h8i9j", "name": "redis_cache_data", "driver": "local", "scope": "local", "containers": ["f6e5d4c3b2a1"] }
+
+Question: Mount a dedicated volume for MongoDB backups to ensure data safety on the primary db container.
+Call: { "func_call": "mount_volume", "name": "mongo_backup_vol", "driver": "local", "container_id": "9z8y7x6w5v4u", "mount_path": "/backup/mongodb" }
+Response: { "id": "vol_k1l2m3n4o5", "name": "mongo_backup_vol", "driver": "local", "scope": "local", "containers": ["9z8y7x6w5v4u"] }
+
+Question: The payment-gateway service needs a persistent volume for transaction logs; attach it to the running container.
+Call: { "func_call": "mount_volume", "name": "payment_txn_logs", "driver": "local", "container_id": "3t4r5e6w7q8", "mount_path": "/var/log/payments" }
+Response: { "id": "vol_p6q7r8s9t0", "name": "payment_txn_logs", "driver": "local", "scope": "local", "containers": ["3t4r5e6w7q8"] }
+
+Question: Create and mount a volume for the Elasticsearch node to store its indices persistently.
+Call: { "func_call": "mount_volume", "name": "es_indices_vol", "driver": "local", "container_id": "h7j8k9l0m1n2", "mount_path": "/usr/share/elasticsearch/data" }
+Response: { "id": "vol_u1v2w3x4y5", "name": "es_indices_vol", "driver": "local", "scope": "local", "containers": ["h7j8k9l0m1n2"] }
+
+Question: Attach a shared volume to the nginx container to serve static assets and persist configuration changes.
+Call: { "func_call": "mount_volume", "name": "nginx_static_assets", "driver": "local", "container_id": "o3p4q5r6s7t8", "mount_path": "/usr/share/nginx/html" }
+Response: { "id": "vol_z6a7b8c9d0", "name": "nginx_static_assets", "driver": "local", "scope": "local", "containers": ["o3p4q5r6s7t8"] }
+
+Question: Ensure the MariaDB container has a mounted volume for its database files to prevent data loss on restart.
+Call: { "func_call": "mount_volume", "name": "mariadb_data_vol", "driver": "local", "container_id": "u9v0w1x2y3z4", "mount_path": "/var/lib/mysql" }
+Response: { "id": "vol_e1f2g3h4i5", "name": "mariadb_data_vol", "driver": "local", "scope": "local", "containers": ["u9v0w1x2y3z4"] }
+
+Question: Mount a volume to the analytics-worker container to store processed report files temporarily.
+Call: { "func_call": "mount_volume", "name": "analytics_reports", "driver": "local", "container_id": "a5b6c7d8e9f0", "mount_path": "/worker/output" }
+Response: { "id": "vol_j6k7l8m9n0", "name": "analytics_reports", "driver": "local", "scope": "local", "containers": ["a5b6c7d8e9f0"] }
+
+Question: The auth-service requires a persistent volume for storing session tokens and security logs.
+Call: { "func_call": "mount_volume", "name": "auth_session_store", "driver": "local", "container_id": "g1h2i3j4k5l6", "mount_path": "/app/data/sessions" }
+Response: { "id": "vol_o1p2q3r4s5", "name": "auth_session_store", "driver": "local", "scope": "local", "containers": ["g1h2i3j4k5l6"] }
+
+Question: Persist the configuration and data for the RabbitMQ message broker by mounting a volume.
+Call: { "func_call": "mount_volume", "name": "rabbitmq_persist", "driver": "local", "container_id": "m7n8o9p0q1r2", "mount_path": "/var/lib/rabbitmq" }
+Response: { "id": "vol_t6u7v8w9x0", "name": "rabbitmq_persist", "driver": "local", "scope": "local", "containers": ["m7n8o9p0q1r2"] }
+
+Question: Mount a volume to the backup-agent container to stage database dumps before uploading to cloud storage.
+Call: { "func_call": "mount_volume", "name": "backup_staging_area", "driver": "local", "container_id": "s3t4u5v6w7x8", "mount_path": "/tmp/staging" }
+Response: { "id": "vol_y1z2a3b4c5", "name": "backup_staging_area", "driver": "local", "scope": "local", "containers": ["s3t4u5v6w7x8"] }

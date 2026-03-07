@@ -1,0 +1,79 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Can you pull up the full specifications for the Dyson V15 Detect vacuum?
+Call: { "func_call": "get_product_details", "query": "Dyson V15 Detect", "category": "Home Appliances", "min_price": 0, "max_price": 800, "sort_by": "relevance" }
+Response: { "products": [{ "id": "DYS-V15-DET", "name": "Dyson V15 Detect Absolute Vacuum", "price": 749.99, "rating": 4.7, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: What are some good alternatives to the Canon EOS R6 camera?
+Call: { "func_call": "get_recommendations", "query": "Canon EOS R6", "category": "Photography", "min_price": 1500, "max_price": 3500, "sort_by": "rating" }
+Response: { "products": [{ "id": "NIK-Z6II", "name": "Nikon Z6 II Mirrorless Camera", "price": 1996.95, "rating": 4.8, "in_stock": true }, { "id": "SON-A7IV", "name": "Sony Alpha a7 IV", "price": 2498.00, "rating": 4.9, "in_stock": false }, { "id": "PAN-S5II", "name": "Panasonic Lumix S5 II", "price": 1697.99, "rating": 4.6, "in_stock": true }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: I need the price and availability for the Herman Miller Aeron Chair, Size B.
+Call: { "func_call": "get_product_details", "query": "Herman Miller Aeron B", "category": "Office Furniture", "min_price": 500, "max_price": 2000, "sort_by": "relevance" }
+Response: { "products": [{ "id": "HM-AER-B-GRP", "name": "Herman Miller Aeron Chair Size B Graphite", "price": 1445.00, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Suggest some skincare serums similar to The Ordinary Niacinamide.
+Call: { "func_call": "get_recommendations", "query": "The Ordinary Niacinamide", "category": "Beauty & Personal Care", "min_price": 5, "max_price": 50, "sort_by": "popularity" }
+Response: { "products": [{ "id": "CERA-PM-LOT", "name": "CeraVe PM Facial Moisturizing Lotion", "price": 16.98, "rating": 4.7, "in_stock": true }, { "id": "PAUL-10-NIA", "name": "Paula's Choice 10% Niacinamide Booster", "price": 49.00, "rating": 4.5, "in_stock": true }, { "id": "GLOW-PLUS", "name": "Glow Recipe Watermelon Glow Niacinamide", "price": 34.00, "rating": 4.6, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Retrieve the product details for the Kindle Paperwhite Signature Edition.
+Call: { "func_call": "get_product_details", "query": "Kindle Paperwhite Signature", "category": "Electronics", "min_price": 0, "max_price": 200, "sort_by": "relevance" }
+Response: { "products": [{ "id": "AMZ-KPW-SIG", "name": "Kindle Paperwhite Signature Edition 32GB", "price": 189.99, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Find me some yoga mats comparable to the Manduka PRO.
+Call: { "func_call": "get_recommendations", "query": "Manduka PRO Yoga Mat", "category": "Fitness Equipment", "min_price": 80, "max_price": 150, "sort_by": "rating" }
+Response: { "products": [{ "id": "LULU-REV-5MM", "name": "Lululemon The Reversible Mat 5mm", "price": 88.00, "rating": 4.6, "in_stock": true }, { "id": "JADE-HARM-68", "name": "Jade Harmony Professional 68\"", "price": 89.95, "rating": 4.7, "in_stock": true }, { "id": "BHE-ORIG-6MM", "name": "Bhagavad Gita Original 6mm", "price": 120.00, "rating": 4.5, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: What is the current stock status for the Nintendo Switch OLED Model?
+Call: { "func_call": "get_product_details", "query": "Nintendo Switch OLED", "category": "Gaming Consoles", "min_price": 0, "max_price": 400, "sort_by": "relevance" }
+Response: { "products": [{ "id": "NINT-SW-OLED", "name": "Nintendo Switch OLED Model White", "price": 349.99, "rating": 4.9, "in_stock": false }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Recommend some noise-canceling earbuds like the Bose QuietComfort Earbuds II.
+Call: { "func_call": "get_recommendations", "query": "Bose QuietComfort Earbuds II", "category": "Audio", "min_price": 150, "max_price": 300, "sort_by": "popularity" }
+Response: { "products": [{ "id": "SON-WF1000M5", "name": "Sony WF-1000XM5 Earbuds", "price": 299.99, "rating": 4.7, "in_stock": true }, { "id": "APP-PRO2-USB", "name": "Apple AirPods Pro (2nd Gen) USB-C", "price": 249.00, "rating": 4.8, "in_stock": true }, { "id": "JAB-ELIT-85T", "name": "Jabra Elite 85t", "price": 179.99, "rating": 4.4, "in_stock": true }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Get me the details for the Le Creuset Dutch Oven, 5.5 Quart, Cherry Red.
+Call: { "func_call": "get_product_details", "query": "Le Creuset 5.5qt Cherry", "category": "Cookware", "min_price": 200, "max_price": 500, "sort_by": "relevance" }
+Response: { "products": [{ "id": "LC-DO-55-CHR", "name": "Le Creuset Signature Round Dutch Oven 5.5qt", "price": 449.95, "rating": 4.9, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: I'm looking for standing desks similar to the Uplift V2.
+Call: { "func_call": "get_recommendations", "query": "Uplift V2 Standing Desk", "category": "Office Furniture", "min_price": 400, "max_price": 1200, "sort_by": "price_asc" }
+Response: { "products": [{ "id": "JARVIS-BAM", "name": "Fully Jarvis Bamboo Standing Desk", "price": 599.00, "rating": 4.6, "in_stock": true }, { "id": "APEX-ELITE", "name": "ApexDesk Elite Series 60\"", "price": 499.99, "rating": 4.4, "in_stock": false }, { "id": "VARIDESK-PRO", "name": "Varidesk ProPlus 36", "price": 895.00, "rating": 4.5, "in_stock": true }], "total": 3 }

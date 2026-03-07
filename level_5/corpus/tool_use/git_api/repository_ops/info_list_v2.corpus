@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+---
+Question: How many forks does the django repository have under the django organization?
+Call: { "func_call": "get_repo_info", "owner": "django", "repo": "django", "description": "", "private": false }
+Response: { "repo": "django", "owner": "django", "url": "https://github.com/django/django", "stars": 72100, "forks": 31500, "default_branch": "main" }
+
+Question: Please provide the URL for the kubernetes project owned by kubernetes.
+Call: { "func_call": "get_repo_info", "owner": "kubernetes", "repo": "kubernetes", "description": "", "private": false }
+Response: { "repo": "kubernetes", "owner": "kubernetes", "url": "https://github.com/kubernetes/kubernetes", "stars": 105300, "forks": 35800, "default_branch": "master" }
+
+Question: What is the default branch for the ruby repository maintained by ruby?
+Call: { "func_call": "get_repo_info", "owner": "ruby", "repo": "ruby", "description": "", "private": false }
+Response: { "repo": "ruby", "owner": "ruby", "url": "https://github.com/ruby/ruby", "stars": 21400, "forks": 5600, "default_branch": "master" }
+
+Question: Show me the statistics for the private 'finance-core' repo owned by 'bank-secure'.
+Call: { "func_call": "get_repo_info", "owner": "bank-secure", "repo": "finance-core", "description": "", "private": true }
+Response: { "repo": "finance-core", "owner": "bank-secure", "url": "https://github.com/bank-secure/finance-core", "stars": 5, "forks": 2, "default_branch": "develop" }
+
+Question: Get information about the typescript repository from microsoft.
+Call: { "func_call": "get_repo_info", "owner": "microsoft", "repo": "typescript", "description": "", "private": false }
+Response: { "repo": "typescript", "owner": "microsoft", "url": "https://github.com/microsoft/typescript", "stars": 98200, "forks": 12400, "default_branch": "main" }
+
+Question: List all repositories available for the user 'alice-codes'.
+Call: { "func_call": "list_repos", "owner": "alice-codes", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "alice-codes", "url": "https://github.com/alice-codes", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Please list every public repository under the organization 'mozilla'.
+Call: { "func_call": "list_repos", "owner": "mozilla", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "mozilla", "url": "https://github.com/mozilla", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Can you show me the private repos owned by ' stealth-dynamics '?
+Call: { "func_call": "list_repos", "owner": "stealth-dynamics", "repo": "", "description": "", "private": true }
+Response: { "repo": "*", "owner": "stealth-dynamics", "url": "https://github.com/stealth-dynamics", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: I want to see the star count for the numpy library under numpy.
+Call: { "func_call": "get_repo_info", "owner": "numpy", "repo": "numpy", "description": "", "private": false }
+Response: { "repo": "numpy", "owner": "numpy", "url": "https://github.com/numpy/numpy", "stars": 24800, "forks": 9100, "default_branch": "main" }
+
+Question: Retrieve the URL and fork count for the laravel repo owned by laravel.
+Call: { "func_call": "get_repo_info", "owner": "laravel", "repo": "laravel", "description": "", "private": false }
+Response: { "repo": "laravel", "owner": "laravel", "url": "https://github.com/laravel/laravel", "stars": 76500, "forks": 24300, "default_branch": "main" }
+
+Question: List all repositories for the owner 'tech-giants-2024' including private ones.
+Call: { "func_call": "list_repos", "owner": "tech-giants-2024", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "tech-giants-2024", "url": "https://github.com/tech-giants-2024", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Get the details for the terraform project under the hashicorp organization.
+Call: { "func_call": "get_repo_info", "owner": "hashicorp", "repo": "terraform", "description": "", "private": false }
+Response: { "repo": "terraform", "owner": "hashicorp", "url": "https://github.com/hashicorp/terraform", "stars": 41200, "forks": 10500, "default_branch": "main" }

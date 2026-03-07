@@ -1,0 +1,59 @@
+Context: The playful border collie named Luna herds sheep in the meadow every morning.
+Input: {"question": "What dog herds sheep in the meadow?"}
+Output: {"answer": "border collie"}
+
+Context: A bright orange clownfish swims among the sea anemones in the coral reef.
+Input: {"question": "What fish swims among the sea anemones?"}
+Output: {"answer": "clownfish"}
+
+Context: The zookeeper cleans the enclosures for the lions and tigers late at night.
+Input: {"question": "What animals does the zookeeper clean enclosures for?"}
+Output: {"answer": "lions and tigers"}
+
+Context: My neighbor rescued a stray greyhound from the highway yesterday evening.
+Input: {"question": "What dog did my neighbor rescue from the highway?"}
+Output: {"answer": "greyhound"}
+
+Context: A flock of geese flew south across the cloudy sky seeking warmer climates.
+Input: {"question": "What birds flew south across the cloudy sky?"}
+Output: {"answer": "geese"}
+
+Context: The purple dragonfly hovered gracefully above the shimmering surface of the lake.
+Input: {"question": "What insect hovered above the lake?"}
+Output: {"answer": "purple dragonfly"}
+
+Context: Throughout the summer, the gray wolf hunts in packs across the frozen tundra.
+Input: {"question": "What animal hunts in packs across the tundra?"}
+Output: {"answer": "gray wolf"}
+
+Context: A spotted deer leaped over the wooden fence while grazing on wild berries.
+Input: {"question": "What creature leaped over the wooden fence?"}
+Output: {"answer": "spotted deer"}
+
+Context: The sturdy mule carried supplies up the steep mountain trail.
+Input: {"question": "What animal carried supplies up the mountain trail?"}
+Output: {"answer": "mule"}
+
+Context: A cardinal perched on the feeder outside the kitchen window eating sunflower seeds.
+Input: {"question": "What bird perched on the feeder?"}
+Output: {"answer": "cardinal"}
+
+Context: The family cat, a siamese named Luna, meowed softly at the visiting guests.
+Input: {"question": "What cat meowed at the visiting guests?"}
+Output: {"answer": "siamese"}
+
+Context: A sperm whale dives deeper than any other mammal in the Atlantic Ocean.
+Input: {"question": "What mammal dives deepest in the Atlantic Ocean?"}
+Output: {"answer": "sperm whale"}
+
+Context: The goats climbed skillfully on the rocky cliffs near the ocean shore.
+Input: {"question": "What animals climbed on the rocky cliffs?"}
+Output: {"answer": "goats"}
+
+Context: A raccoon rummaged through the trash cans behind the restaurant looking for food.
+Input: {"question": "What animal rummaged through the trash cans?"}
+Output: {"answer": "raccoon"}
+
+Context: The pet gerbil burrows into the wood shavings whenever the lights go out.
+Input: {"question": "What pet burrows into wood shavings?"}
+Output: {"answer": "gerbil"}

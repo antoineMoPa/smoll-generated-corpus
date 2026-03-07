@@ -1,0 +1,95 @@
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Track a user clicking the 'Subscribe Now' button on the homepage.
+Call: { "func_call": "track_event", "event_name": "btn_click_subscribe", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "btn_click_subscribe", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Record a successful submission of the contact form with ID 'contact_v2'.
+Call: { "func_call": "track_event", "event_name": "form_submit_contact_v2", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "form_submit_contact_v2", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Log a completed purchase transaction for order #99281.
+Call: { "func_call": "track_event", "event_name": "purchase_complete", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "purchase_complete", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Get the conversion rate for the 'Newsletter Signup' event between 2023-10-01 and 2023-10-31.
+Call: { "func_call": "get_conversion_rate", "event_name": "newsletter_signup", "funnel_id": "", "from_date": "2023-10-01", "to_date": "2023-10-31" }
+Response: { "event": "newsletter_signup", "total_events": 450, "unique_users": 412, "conversion_rate": 0.082, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Retrieve full funnel data for the 'Checkout Flow' (ID: fun_882) from last week.
+Call: { "func_call": "get_funnel_data", "event_name": "", "funnel_id": "fun_882", "from_date": "2023-11-01", "to_date": "2023-11-07" }
+Response: { "event": "", "total_events": 1205, "unique_users": 980, "conversion_rate": 0.145, "funnel_steps": [{ "name": "View Cart", "completions": 1205 }, { "name": "Enter Shipping", "completions": 850 }, { "name": "Enter Payment", "completions": 620 }, { "name": "Purchase Complete", "completions": 175 }] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: How many users completed the 'Free Trial Request' goal in September?
+Call: { "func_call": "get_goal_completions", "event_name": "free_trial_request", "funnel_id": "", "from_date": "2023-09-01", "to_date": "2023-09-30" }
+Response: { "event": "free_trial_request", "total_events": 320, "unique_users": 298, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Track a click on the 'Add to Cart' button for product SKU-7742.
+Call: { "func_call": "track_event", "event_name": "btn_click_add_cart", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "btn_click_add_cart", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Analyze the 'Webinar Registration' funnel (ID: fun_web_01) for Q3 2023.
+Call: { "func_call": "get_funnel_data", "event_name": "", "funnel_id": "fun_web_01", "from_date": "2023-07-01", "to_date": "2023-09-30" }
+Response: { "event": "", "total_events": 5400, "unique_users": 4100, "conversion_rate": 0.22, "funnel_steps": [{ "name": "Landing Page View", "completions": 5400 }, { "name": "Form Start", "completions": 2100 }, { "name": "Form Submit", "completions": 1188 }] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: What was the conversion rate for 'Demo Booking' submissions in the last 48 hours?
+Call: { "func_call": "get_conversion_rate", "event_name": "form_submit_demo", "funnel_id": "", "from_date": "2023-11-10", "to_date": "2023-11-12" }
+Response: { "event": "form_submit_demo", "total_events": 85, "unique_users": 82, "conversion_rate": 0.041, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Record a user clicking the 'Download Whitepaper' CTA.
+Call: { "func_call": "track_event", "event_name": "btn_click_download_wp", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "btn_click_download_wp", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Get total completions for the 'Annual Plan Upgrade' goal in November so far.
+Call: { "func_call": "get_goal_completions", "event_name": "upgrade_annual_plan", "funnel_id": "", "from_date": "2023-11-01", "to_date": "2023-11-15" }
+Response: { "event": "upgrade_annual_plan", "total_events": 42, "unique_users": 42, "conversion_rate": 0, "funnel_steps": [] }
+
+Available Tools: get_conversion_rate | track_event | get_funnel_data | get_goal_completions
+Call Schema: { "func_call": "string", "event_name": "string", "funnel_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "event": "string", "total_events": number, "unique_users": number, "conversion_rate": number, "funnel_steps": [{ "name": "string", "completions": number }] }
+---
+Question: Track a successful payment event for a recurring subscription.
+Call: { "func_call": "track_event", "event_name": "payment_success_recurring", "funnel_id": "", "from_date": "", "to_date": "" }
+Response: { "event": "payment_success_recurring", "total_events": 1, "unique_users": 1, "conversion_rate": 0, "funnel_steps": [] }

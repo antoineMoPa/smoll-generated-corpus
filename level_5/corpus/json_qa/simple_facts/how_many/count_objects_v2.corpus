@@ -1,0 +1,59 @@
+Context: The florist arranged fifteen roses and ten lilies for the wedding.
+Input: {"question": "How many lilies did the florist arrange?"}
+Output: {"answer": "ten"}
+
+Context: There are eight planets orbiting the sun in our solar system.
+Input: {"question": "How many planets orbit the sun?"}
+Output: {"answer": "eight"}
+
+Context: James purchased four tires, one spare, and two wipers at the auto shop.
+Input: {"question": "How many tires did James buy?"}
+Output: {"answer": "four"}
+
+Context: The new museum displays three hundred ancient artifacts in the east wing.
+Input: {"question": "How many artifacts are in the east wing of the new museum?"}
+Output: {"answer": "three hundred"}
+
+Context: At the conference, twelve engineers from software and five from hardware presented.
+Input: {"question": "How many engineers from hardware presented at the conference?"}
+Output: {"answer": "five"}
+
+Context: A chessboard consists of sixty-four squares alternating in color.
+Input: {"question": "How many squares are on a chessboard?"}
+Output: {"answer": "sixty-four"}
+
+Context: The smoothie recipe requires three strawberries and half a cup of yogurt.
+Input: {"question": "How many strawberries does the smoothie recipe need?"}
+Output: {"answer": "three"}
+
+Context: Fifteen guests arrived early for the birthday party.
+Input: {"question": "How many guests arrived early?"}
+Output: {"answer": "Fifteen"}
+
+Context: The elevator can hold sixteen people but currently carries only four.
+Input: {"question": "How many people are currently in the elevator?"}
+Output: {"answer": "four"}
+
+Context: Her aunt worked at the bank for twenty-five years before retiring.
+Input: {"question": "How many years did her aunt work at the bank?"}
+Output: {"answer": "twenty-five"}
+
+Context: The crate holds thirty-six bottles organized in six layers.
+Input: {"question": "How many bottles are in the crate?"}
+Output: {"answer": "thirty-six"}
+
+Context: Nine cats were sleeping on the roof before the storm started.
+Input: {"question": "How many cats were sleeping on the roof?"}
+Output: {"answer": "Nine"}
+
+Context: The cyclist finished the tour in two hours and forty minutes.
+Input: {"question": "How many hours did it take the cyclist to finish?"}
+Output: {"answer": "two"}
+
+Context: They ordered fourteen sandwiches to share among the group.
+Input: {"question": "How many sandwiches did they order?"}
+Output: {"answer": "fourteen"}
+
+Context: The bag was packed with seventy-five coins from different countries.
+Input: {"question": "How many coins were in the bag?"}
+Output: {"answer": "seventy-five"}

@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: Provision a 750GB volume for the machine learning training dataset.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 750 }
+Response: { "volume_id": "vol-ml-train-44", "size_gb": 750, "state": "available", "attached_to": null }
+
+Question: Bind the ML training volume vol-ml-train-44 to the GPU instance i-gpu-cluster-03.
+Call: { "func_call": "attach_volume", "volume_id": "vol-ml-train-44", "instance_id": "i-gpu-cluster-03", "size_gb": 0 }
+Response: { "volume_id": "vol-ml-train-44", "size_gb": 750, "state": "in-use", "attached_to": "i-gpu-cluster-03" }
+
+Question: Initialize a 100GB scratch disk for compilation tasks.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 100 }
+Response: { "volume_id": "vol-scratch-build-11", "size_gb": 100, "state": "available", "attached_to": null }
+
+Question: Attach the build scratch volume vol-scratch-build-11 to the CI runner i-ci-runner-09.
+Call: { "func_call": "attach_volume", "volume_id": "vol-scratch-build-11", "instance_id": "i-ci-runner-09", "size_gb": 0 }
+Response: { "volume_id": "vol-scratch-build-11", "size_gb": 100, "state": "in-use", "attached_to": "i-ci-runner-09" }
+
+Question: Create a 2TB cold storage volume for historical records.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 2048 }
+Response: { "volume_id": "vol-cold-hist-77", "size_gb": 2048, "state": "available", "attached_to": null }
+
+Question: Map the historical records volume vol-cold-hist-77 to the archive server i-archive-vault-02.
+Call: { "func_call": "attach_volume", "volume_id": "vol-cold-hist-77", "instance_id": "i-archive-vault-02", "size_gb": 0 }
+Response: { "volume_id": "vol-cold-hist-77", "size_gb": 2048, "state": "in-use", "attached_to": "i-archive-vault-02" }
+
+Question: Generate a 300GB volume for the video transcoding queue.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 300 }
+Response: { "volume_id": "vol-transcode-q-22", "size_gb": 300, "state": "available", "attached_to": null }
+
+Question: Link the transcoding queue volume vol-transcode-q-22 to the media worker i-media-worker-05.
+Call: { "func_call": "attach_volume", "volume_id": "vol-transcode-q-22", "instance_id": "i-media-worker-05", "size_gb": 0 }
+Response: { "volume_id": "vol-transcode-q-22", "size_gb": 300, "state": "in-use", "attached_to": "i-media-worker-05" }
+
+Question: Spin up a 50GB volume for system metrics ingestion.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 50 }
+Response: { "volume_id": "vol-metrics-ing-33", "size_gb": 50, "state": "available", "attached_to": null }
+
+Question: Connect the metrics volume vol-metrics-ing-33 to the monitoring node i-mon-node-08.
+Call: { "func_call": "attach_volume", "volume_id": "vol-metrics-ing-33", "instance_id": "i-mon-node-08", "size_gb": 0 }
+Response: { "volume_id": "vol-metrics-ing-33", "size_gb": 50, "state": "in-use", "attached_to": "i-mon-node-08" }
+
+Question: Provision a 1.5TB volume for the data warehouse staging area.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 1536 }
+Response: { "volume_id": "vol-dw-stage-66", "size_gb": 1536, "state": "available", "attached_to": null }
+
+Question: Mount the staging volume vol-dw-stage-66 onto the ETL server i-etl-proc-14.
+Call: { "func_call": "attach_volume", "volume_id": "vol-dw-stage-66", "instance_id": "i-etl-proc-14", "size_gb": 0 }
+Response: { "volume_id": "vol-dw-stage-66", "size_gb": 1536, "state": "in-use", "attached_to": "i-etl-proc-14" }

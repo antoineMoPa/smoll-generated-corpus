@@ -1,0 +1,59 @@
+Context: At the busy café, Liam purchased a venti caramel macchiato and a buttery croissant. He found a seat by the window to enjoy his morning treat.
+Input: {"question": "What did Liam purchase?"}
+Output: {"answer": "a venti caramel macchiato and a buttery croissant"}
+
+Context: For dinner, Elena prepared a hearty beef stew with carrots, potatoes, and celery. She let it simmer on the stove for three hours.
+Input: {"question": "What did Elena prepare?"}
+Output: {"answer": "a hearty beef stew with carrots, potatoes, and celery"}
+
+Context: The hostess noted that the VIP section ordered four glasses of champagne and a tier of assorted macarons. The celebration lasted well into the night.
+Input: {"question": "What did the VIP section order?"}
+Output: {"answer": "four glasses of champagne and a tier of assorted macarons"}
+
+Context: Carlos decided to whip up some guacamole using ripe avocados, lime juice, and diced onions from the market. He served it with tortilla chips.
+Input: {"question": "What did Carlos whip up?"}
+Output: {"answer": "some guacamole"}
+
+Context: During the breakfast rush, the bakery sold hundreds of cinnamon rolls and blueberry scones to the early commuters. The line stretched out the door.
+Input: {"question": "What did the bakery sell?"}
+Output: {"answer": "hundreds of cinnamon rolls and blueberry scones"}
+
+Context: After swimming laps, Nina stopped at the kiosk to grab an iced tea and a protein bar. She sat on the grass to recover her energy.
+Input: {"question": "What did Nina grab?"}
+Output: {"answer": "an iced tea and a protein bar"}
+
+Context: My aunt fried a batch of crispy chicken wings with a spicy buffalo sauce and served them with celery sticks. They were the star of the game night.
+Input: {"question": "What did my aunt fry?"}
+Output: {"answer": "a batch of crispy chicken wings"}
+
+Context: At the taco truck, Mateo ordered three carnitas tacos and a side of elote. He added extra salsa before taking his first bite.
+Input: {"question": "What did Mateo order?"}
+Output: {"answer": "three carnitas tacos and a side of elote"}
+
+Context: The server brought us a pitcher of sangria and a plate of bruschetta topped with tomatoes and basil. We clinked our glasses in celebration.
+Input: {"question": "What did the server bring us?"}
+Output: {"answer": "a pitcher of sangria and a plate of bruschetta"}
+
+Context: For the barbecue, Jessica smoked two racks of ribs and a whole brisket for the neighborhood block party. The smell attracted everyone nearby.
+Input: {"question": "What did Jessica smoke?"}
+Output: {"answer": "two racks of ribs and a whole brisket"}
+
+Context: While working on the report, Marcus snacked on a handful of almonds and drank a bottle of sparkling water to stay focused. The office was unusually quiet.
+Input: {"question": "What did Marcus snack on?"}
+Output: {"answer": "a handful of almonds"}
+
+Context: The daily special today is a mushroom risotto garnished with parmesan cheese and fresh thyme. Several tables have requested this recipe.
+Input: {"question": "What is the daily special?"}
+Output: {"answer": "a mushroom risotto garnished with parmesan cheese and fresh thyme"}
+
+Context: On holiday evenings, we traditionally roast a turkey with stuffing and cranberry sauce. It is a meal the whole family anticipates.
+Input: {"question": "What do we roast on holiday evenings?"}
+Output: {"answer": "a turkey with stuffing and cranberry sauce"}
+
+Context: The courier delivered a container holding a vegetarian curry and a naan bread. I set it on the table ready to dive in.
+Input: {"question": "What did the courier deliver?"}
+Output: {"answer": "a container holding a vegetarian curry and a naan bread"}
+
+Context: To mark her promotion, Rachel enjoyed a piece of tiramisu and sipped an espresso. Her colleagues cheered loudly for her success.
+Input: {"question": "What did Rachel enjoy?"}
+Output: {"answer": "a piece of tiramisu"}

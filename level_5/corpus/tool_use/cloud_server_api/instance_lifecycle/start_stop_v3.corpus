@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Please reboot the load balancer instance i-bb22cc33 in the US West region.
+Call: { "func_call": "restart_instance", "instance_id": "i-bb22cc33", "region": "us-west-2" }
+Response: { "instance_id": "i-bb22cc33", "state": "running", "message": "Instance i-bb22cc33 successfully restarted in us-west-2." }
+
+Question: I need to permanently delete the old staging server i-aa11bb22 located in Canada Central.
+Call: { "func_call": "terminate_instance", "instance_id": "i-aa11bb22", "region": "ca-central-1" }
+Response: { "instance_id": "i-aa11bb22", "state": "terminated", "message": "Instance i-aa11bb22 successfully terminated in ca-central-1." }
+
+Question: Can you cycle the power on the logging node i-99887700 in the Asia Pacific Northeast zone?
+Call: { "func_call": "restart_instance", "instance_id": "i-99887700", "region": "ap-northeast-1" }
+Response: { "instance_id": "i-99887700", "state": "running", "message": "Instance i-99887700 successfully restarted in ap-northeast-1." }
+
+Question: Destroy the temporary build agent i-deadcafe in sa-east-1 immediately.
+Call: { "func_call": "terminate_instance", "instance_id": "i-deadcafe", "region": "sa-east-1" }
+Response: { "instance_id": "i-deadcafe", "state": "terminated", "message": "Instance i-deadcafe successfully terminated in sa-east-1." }
+
+Question: Restart the queue processor i-55667788 in the eu-central-1 region.
+Call: { "func_call": "restart_instance", "instance_id": "i-55667788", "region": "eu-central-1" }
+Response: { "instance_id": "i-55667788", "state": "running", "message": "Instance i-55667788 successfully restarted in eu-central-1." }
+
+Question: Please terminate the expired trial instance i-feed00d1 in ap-southeast-2.
+Call: { "func_call": "terminate_instance", "instance_id": "i-feed00d1", "region": "ap-southeast-2" }
+Response: { "instance_id": "i-feed00d1", "state": "terminated", "message": "Instance i-feed00d1 successfully terminated in ap-southeast-2." }
+
+Question: Bring the API gateway i-12345678 back online by restarting it in us-west-1.
+Call: { "func_call": "restart_instance", "instance_id": "i-12345678", "region": "us-west-1" }
+Response: { "instance_id": "i-12345678", "state": "running", "message": "Instance i-12345678 successfully restarted in us-west-1." }
+
+Question: Remove the decommissioned storage node i-87654321 running in eu-north-1.
+Call: { "func_call": "terminate_instance", "instance_id": "i-87654321", "region": "eu-north-1" }
+Response: { "instance_id": "i-87654321", "state": "terminated", "message": "Instance i-87654321 successfully terminated in eu-north-1." }
+
+Question: Reboot the authentication service i-aabbccdd in the af-south-1 datacenter.
+Call: { "func_call": "restart_instance", "instance_id": "i-aabbccdd", "region": "af-south-1" }
+Response: { "instance_id": "i-aabbccdd", "state": "running", "message": "Instance i-aabbccdd successfully restarted in af-south-1." }
+
+Question: Terminate the sandbox environment i-11112222 in us-east-2.
+Call: { "func_call": "terminate_instance", "instance_id": "i-11112222", "region": "us-east-2" }
+Response: { "instance_id": "i-11112222", "state": "terminated", "message": "Instance i-11112222 successfully terminated in us-east-2." }
+
+Question: Restart the rendering farm controller i-33445566 in eu-west-3.
+Call: { "func_call": "restart_instance", "instance_id": "i-33445566", "region": "eu-west-3" }
+Response: { "instance_id": "i-33445566", "state": "running", "message": "Instance i-33445566 successfully restarted in eu-west-3." }
+
+Question: Wipe the data by terminating instance i-77889900 in me-south-1.
+Call: { "func_call": "terminate_instance", "instance_id": "i-77889900", "region": "me-south-1" }
+Response: { "instance_id": "i-77889900", "state": "terminated", "message": "Instance i-77889900 successfully terminated in me-south-1." }

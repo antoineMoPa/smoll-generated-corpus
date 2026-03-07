@@ -1,0 +1,59 @@
+Context: A massive earthquake shifted the fault line, triggering a tsunami that hit the coastal town.
+Input: {"question": "What triggered the tsunami that hit the coastal town?"}
+Output: {"answer": "A massive earthquake shifting the fault line"}
+
+Context: Due to a corrupted database entry, the billing system issued duplicate charges to every customer.
+Input: {"question": "What caused the billing system to issue duplicate charges?"}
+Output: {"answer": "a corrupted database entry"}
+
+Context: The pilot's decision to ignore weather warnings led to a rough landing at the regional airport.
+Input: {"question": "What caused the rough landing at the regional airport?"}
+Output: {"answer": "The pilot's decision to ignore weather warnings"}
+
+Context: Because the printer ran out of cyan ink, the final report printed with incorrect colors.
+Input: {"question": "What caused the final report to print with incorrect colors?"}
+Output: {"answer": "the printer ran out of cyan ink"}
+
+Context: A short circuit in the basement fuse box ignited a blaze that consumed the storage room.
+Input: {"question": "What caused the blaze in the storage room?"}
+Output: {"answer": "A short circuit in the basement fuse box"}
+
+Context: The orchestra's failure to rehearse together resulted in a discordant performance at the gala.
+Input: {"question": "What caused the discordant performance at the gala?"}
+Output: {"answer": "The orchestra's failure to rehearse together"}
+
+Context: When the irrigation timer broke, the garden flowers wilted from lack of water.
+Input: {"question": "What caused the garden flowers to wilt?"}
+Output: {"answer": "the irrigation timer broke"}
+
+Context: Overwatering the succulent garden rotted the stems and destroyed the entire collection.
+Input: {"question": "What caused the succulent collection to be destroyed?"}
+Output: {"answer": "Overwatering the succulent garden"}
+
+Context: The derailment of the freight train delayed shipments across the entire northern region.
+Input: {"question": "What caused shipments to be delayed across the northern region?"}
+Output: {"answer": "The derailment of the freight train"}
+
+Context: Since the new patch introduced a memory leak, the game crashed after twenty minutes of play.
+Input: {"question": "What caused the game to crash after twenty minutes?"}
+Output: {"answer": "the new patch introduced a memory leak"}
+
+Context: A sudden drop in oil prices compelled the energy company to halt drilling operations.
+Input: {"question": "What caused the energy company to halt drilling operations?"}
+Output: {"answer": "A sudden drop in oil prices"}
+
+Context: The baker's omission of baking powder left the cake flat and dense.
+Input: {"question": "What caused the cake to be flat and dense?"}
+Output: {"answer": "The baker's omission of baking powder"}
+
+Context: Heavy snowfall collapsed the roof of the warehouse, blocking the loading dock.
+Input: {"question": "What caused the warehouse roof to collapse?"}
+Output: {"answer": "Heavy snowfall"}
+
+Context: Because the library failed to backup its digital archives, it lost decades of historical records.
+Input: {"question": "What caused the library to lose decades of historical records?"}
+Output: {"answer": "the library failed to backup its digital archives"}
+
+Context: The buildup of sediment in the filter stopped the aquarium pump from circulating water.
+Input: {"question": "What caused the aquarium pump to stop circulating water?"}
+Output: {"answer": "The buildup of sediment in the filter"}

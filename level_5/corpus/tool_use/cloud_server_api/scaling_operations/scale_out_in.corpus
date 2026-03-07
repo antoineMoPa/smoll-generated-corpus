@@ -1,0 +1,51 @@
+Available Tools: scale_out | scale_in | set_auto_scaling | get_scaling_policy
+Call Schema: { "func_call": "string", "group_id": "string", "min_size": number, "max_size": number, "desired": number }
+Response Schema: { "group_id": "string", "current_capacity": number, "status": "string" }
+---
+Question: We need to handle the upcoming flash sale by adding more instances to the web-frontend-pool immediately.
+Call: { "func_call": "scale_out", "group_id": "web-frontend-pool", "min_size": 10, "max_size": 50, "desired": 25 }
+Response: { "group_id": "web-frontend-pool", "current_capacity": 25, "status": "scaling_up_complete" }
+
+Question: The batch processing job has finished, so please reduce the compute-cluster-alpha group to save costs.
+Call: { "func_call": "scale_in", "group_id": "compute-cluster-alpha", "min_size": 2, "max_size": 20, "desired": 4 }
+Response: { "group_id": "compute-cluster-alpha", "current_capacity": 4, "status": "scaling_down_complete" }
+
+Question: Configure the api-gateway-prod group to automatically maintain between 5 and 30 instances with a target of 12.
+Call: { "func_call": "set_auto_scaling", "group_id": "api-gateway-prod", "min_size": 5, "max_size": 30, "desired": 12 }
+Response: { "group_id": "api-gateway-prod", "current_capacity": 12, "status": "policy_updated" }
+
+Question: Emergency traffic spike detected on the payment-service-cluster; scale it out to maximum capacity immediately.
+Call: { "func_call": "scale_out", "group_id": "payment-service-cluster", "min_size": 8, "max_size": 100, "desired": 100 }
+Response: { "group_id": "payment-service-cluster", "current_capacity": 100, "status": "scaling_up_complete" }
+
+Question: Overnight maintenance window started; scale down the data-ingestion-workers group to its minimum safe level.
+Call: { "func_call": "scale_in", "group_id": "data-ingestion-workers", "min_size": 3, "max_size": 40, "desired": 3 }
+Response: { "group_id": "data-ingestion-workers", "current_capacity": 3, "status": "scaling_down_complete" }
+
+Question: Adjust the ml-training-fleet parameters to allow scaling between 10 and 60 nodes, setting the current desired count to 15.
+Call: { "func_call": "set_auto_scaling", "group_id": "ml-training-fleet", "min_size": 10, "max_size": 60, "desired": 15 }
+Response: { "group_id": "ml-training-fleet", "current_capacity": 15, "status": "policy_updated" }
+
+Question: User activity is surging in the EU region; scale out the eu-west-session-handlers group to accommodate the load.
+Call: { "func_call": "scale_out", "group_id": "eu-west-session-handlers", "min_size": 15, "max_size": 80, "desired": 35 }
+Response: { "group_id": "eu-west-session-handlers", "current_capacity": 35, "status": "scaling_up_complete" }
+
+Question: The promotional campaign ended; please scale in the promo-landing-page-servers group to reduce unnecessary spend.
+Call: { "func_call": "scale_in", "group_id": "promo-landing-page-servers", "min_size": 4, "max_size": 25, "desired": 5 }
+Response: { "group_id": "promo-landing-page-servers", "current_capacity": 5, "status": "scaling_down_complete" }
+
+Question: Update the logging-aggregator-cluster to have a minimum of 6 instances and a maximum of 45, with a desired state of 20.
+Call: { "func_call": "set_auto_scaling", "group_id": "logging-aggregator-cluster", "min_size": 6, "max_size": 45, "desired": 20 }
+Response: { "group_id": "logging-aggregator-cluster", "current_capacity": 20, "status": "policy_updated" }
+
+Question: High CPU utilization reported on the image-processing-nodes; trigger a scale out event to add 10 more instances.
+Call: { "func_call": "scale_out", "group_id": "image-processing-nodes", "min_size": 12, "max_size": 60, "desired": 30 }
+Response: { "group_id": "image-processing-nodes", "current_capacity": 30, "status": "scaling_up_complete" }
+
+Question: Database read replicas are underutilized; scale in the db-read-replica-pool to the baseline minimum.
+Call: { "func_call": "scale_in", "group_id": "db-read-replica-pool", "min_size": 2, "max_size": 15, "desired": 2 }
+Response: { "group_id": "db-read-replica-pool", "current_capacity": 2, "status": "scaling_down_complete" }
+
+Question: Prepare the video-transcoding-farm for the evening upload rush by setting auto-scaling limits to 20-90 with a desired count of 45.
+Call: { "func_call": "set_auto_scaling", "group_id": "video-transcoding-farm", "min_size": 20, "max_size": 90, "desired": 45 }
+Response: { "group_id": "video-transcoding-farm", "current_capacity": 45, "status": "policy_updated" }

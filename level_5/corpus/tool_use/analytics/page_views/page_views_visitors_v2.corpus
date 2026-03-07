@@ -1,0 +1,51 @@
+Available Tools: get_page_views | get_unique_visitors | get_session_duration | get_bounce_rate
+Call Schema: { "func_call": "string", "url": "string", "from_date": "string", "to_date": "string", "granularity": "hourly|daily|weekly|monthly" }
+Response Schema: { "url": "string", "period": "string", "views": number, "unique_visitors": number, "avg_session_seconds": number, "bounce_rate": number }
+---
+Question: What was the total traffic on the newsletter signup page during the webinar?
+Call: { "func_call": "get_page_views", "url": "https://mailchimp.com/signup-webinar", "from_date": "2023-12-05", "to_date": "2023-12-05", "granularity": "hourly" }
+Response: { "url": "https://mailchimp.com/signup-webinar", "period": "2023-12-05 to 2023-12-05", "views": 15600, "unique_visitors": 12400, "avg_session_seconds": 340, "bounce_rate": 0.29 }
+
+Question: Can you show me the weekly visitor stats for the support center in November?
+Call: { "func_call": "get_unique_visitors", "url": "https://zoom.us/support", "from_date": "2023-11-01", "to_date": "2023-11-30", "granularity": "weekly" }
+Response: { "url": "https://zoom.us/support", "period": "2023-11-01 to 2023-11-30", "views": 420000, "unique_visitors": 210000, "avg_session_seconds": 450, "bounce_rate": 0.33 }
+
+Question: How did the new landing page perform over its first three days?
+Call: { "func_call": "get_page_views", "url": "https://spotify.com/new-release", "from_date": "2023-10-15", "to_date": "2023-10-17", "granularity": "daily" }
+Response: { "url": "https://spotify.com/new-release", "period": "2023-10-15 to 2023-10-17", "views": 890000, "unique_visitors": 650000, "avg_session_seconds": 280, "bounce_rate": 0.18 }
+
+Question: I need the hourly breakdown for the search results page during the peak hour yesterday.
+Call: { "func_call": "get_page_views", "url": "https://bing.com/search", "from_date": "2023-09-14", "to_date": "2023-09-14", "granularity": "hourly" }
+Response: { "url": "https://bing.com/search", "period": "2023-09-14 to 2023-09-14", "views": 3400000, "unique_visitors": 2100000, "avg_session_seconds": 110, "bounce_rate": 0.52 }
+
+Question: Pull the monthly report for the events calendar page for Q3.
+Call: { "func_call": "get_page_views", "url": "https://eventbrite.com/calendar", "from_date": "2023-07-01", "to_date": "2023-09-30", "granularity": "monthly" }
+Response: { "url": "https://eventbrite.com/calendar", "period": "2023-07-01 to 2023-09-30", "views": 156000, "unique_visitors": 98000, "avg_session_seconds": 395, "bounce_rate": 0.41 }
+
+Question: What were the bounce rates and views for the terms of service page last month?
+Call: { "func_call": "get_page_views", "url": "https://dropbox.com/terms", "from_date": "2023-08-01", "to_date": "2023-08-31", "granularity": "weekly" }
+Response: { "url": "https://dropbox.com/terms", "period": "2023-08-01 to 2023-08-31", "views": 23000, "unique_visitors": 19500, "avg_session_seconds": 85, "bounce_rate": 0.88 }
+
+Question: Get the daily unique visitors for the gallery section during the art exhibition.
+Call: { "func_call": "get_unique_visitors", "url": "https://moma.org/exhibition-gallery", "from_date": "2023-05-20", "to_date": "2023-05-25", "granularity": "daily" }
+Response: { "url": "https://moma.org/exhibition-gallery", "period": "2023-05-20 to 2023-05-25", "views": 67000, "unique_visitors": 45000, "avg_session_seconds": 520, "bounce_rate": 0.15 }
+
+Question: Analyze the traffic on the download page for the software update release day.
+Call: { "func_call": "get_page_views", "url": "https://mozilla.org/firefox/download", "from_date": "2023-11-14", "to_date": "2023-11-14", "granularity": "hourly" }
+Response: { "url": "https://mozilla.org/firefox/download", "period": "2023-11-14 to 2023-11-14", "views": 1200000, "unique_visitors": 980000, "avg_session_seconds": 200, "bounce_rate": 0.21 }
+
+Question: How many people accessed the student portal during the registration week?
+Call: { "func_call": "get_page_views", "url": "https://coursera.org/student-portal", "from_date": "2023-01-09", "to_date": "2023-01-15", "granularity": "daily" }
+Response: { "url": "https://coursera.org/student-portal", "period": "2023-01-09 to 2023-01-15", "views": 340000, "unique_visitors": 280000, "avg_session_seconds": 610, "bounce_rate": 0.12 }
+
+Question: Show me the weekly stats for the community blog in early December.
+Call: { "func_call": "get_page_views", "url": "https://wordpress.com/community", "from_date": "2023-12-01", "to_date": "2023-12-07", "granularity": "weekly" }
+Response: { "url": "https://wordpress.com/community", "period": "2023-12-01 to 2023-12-07", "views": 78000, "unique_visitors": 54000, "avg_session_seconds": 330, "bounce_rate": 0.36 }
+
+Question: Retrieve the hourly view count for the live stream page during the finals.
+Call: { "func_call": "get_page_views", "url": "https://twitch.tv/esports-finals", "from_date": "2023-06-18", "to_date": "2023-06-18", "granularity": "hourly" }
+Response: { "url": "https://twitch.tv/esports-finals", "period": "2023-06-18 to 2023-06-18", "views": 5600000, "unique_visitors": 3200000, "avg_session_seconds": 2400, "bounce_rate": 0.05 }
+
+Question: What is the monthly traffic trend for the recipe database over the summer?
+Call: { "func_call": "get_page_views", "url": "https://allrecipes.com/database", "from_date": "2023-06-01", "to_date": "2023-08-31", "granularity": "monthly" }
+Response: { "url": "https://allrecipes.com/database", "period": "2023-06-01 to 2023-08-31", "views": 2300000, "unique_visitors": 1450000, "avg_session_seconds": 480, "bounce_rate": 0.24 }

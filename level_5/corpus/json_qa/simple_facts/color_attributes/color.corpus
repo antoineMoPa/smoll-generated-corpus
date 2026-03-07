@@ -1,0 +1,59 @@
+Context: The old barn was painted a bright red to stand out against the green fields.
+Input: {"question": "What color was the old barn?"}
+Output: {"answer": "red"}
+
+Context: She wore a velvet dress that was a deep shade of purple for the evening gala.
+Input: {"question": "What color was her velvet dress?"}
+Output: {"answer": "purple"}
+
+Context: During autumn, the maple leaves turn a brilliant orange before falling to the ground.
+Input: {"question": "What color do the maple leaves turn in autumn?"}
+Output: {"answer": "orange"}
+
+Context: The new sedan parked in the driveway is a sleek silver with black rims.
+Input: {"question": "What color is the new sedan?"}
+Output: {"answer": "silver"}
+
+Context: He bought a yellow raincoat to ensure he was visible during the storm.
+Input: {"question": "What color is his raincoat?"}
+Output: {"answer": "yellow"}
+
+Context: The ceramic mug on the table holds hot coffee and is colored a soft blue.
+Input: {"question": "What color is the ceramic mug?"}
+Output: {"answer": "blue"}
+
+Context: Fresh grass in the park looks incredibly green after the morning rain.
+Input: {"question": "What color does the fresh grass look?"}
+Output: {"answer": "green"}
+
+Context: The artist used a tube of pink paint to highlight the cheeks of the portrait.
+Input: {"question": "What color paint did the artist use for the cheeks?"}
+Output: {"answer": "pink"}
+
+Context: Their kitchen cabinets were renovated last week and are now a crisp white.
+Input: {"question": "What color are the kitchen cabinets?"}
+Output: {"answer": "white"}
+
+Context: The cat slept on a blanket that was dyed a rich brown hue.
+Input: {"question": "What color was the blanket the cat slept on?"}
+Output: {"answer": "brown"}
+
+Context: Storm clouds gathered overhead, turning the sky a dark gray.
+Input: {"question": "What color did the sky turn?"}
+Output: {"answer": "gray"}
+
+Context: She picked a single black rose from the garden to place in the vase.
+Input: {"question": "What color was the rose she picked?"}
+Output: {"answer": "black"}
+
+Context: The warning sign on the construction site features bold yellow stripes.
+Input: {"question": "What color are the stripes on the warning sign?"}
+Output: {"answer": "yellow"}
+
+Context: His favorite tie for formal events is made of silk and is colored navy.
+Input: {"question": "What color is his favorite tie?"}
+Output: {"answer": "navy"}
+
+Context: The flamingo stood on one leg, displaying its vibrant pink feathers.
+Input: {"question": "What color are the flamingo's feathers?"}
+Output: {"answer": "pink"}

@@ -1,0 +1,51 @@
+Available Tools: search_flights | get_flight_details | filter_flights | get_seat_map
+Call Schema: { "func_call": "string", "origin": "string", "destination": "string", "departure_date": "string", "return_date": "string", "passengers": number, "cabin": "economy|business|first" }
+Response Schema: { "flights": [{ "flight_number": "string", "airline": "string", "departure": "string", "arrival": "string", "price": number, "duration_minutes": number }], "total": number }
+
+Question: Locate direct business class seats from Toronto to Vancouver for one traveler on November 3rd.
+Call: { "func_call": "filter_flights", "origin": "YYZ", "destination": "YVR", "departure_date": "2023-11-03", "return_date": null, "passengers": 1, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "AC105", "airline": "Air Canada", "departure": "2023-11-03T07:00:00Z", "arrival": "2023-11-03T09:15:00Z", "price": 850, "duration_minutes": 255 }, { "flight_number": "WS302", "airline": "WestJet", "departure": "2023-11-03T12:30:00Z", "arrival": "2023-11-03T14:50:00Z", "price": 790, "duration_minutes": 260 }], "total": 2 }
+
+Question: Display economy flights from Madrid to Lisbon with a connection for six passengers on December 12th.
+Call: { "func_call": "filter_flights", "origin": "MAD", "destination": "LIS", "departure_date": "2023-12-12", "return_date": null, "passengers": 6, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "IB3102", "airline": "Iberia", "departure": "2023-12-12T08:45:00Z", "arrival": "2023-12-12T14:20:00Z", "price": 1450, "duration_minutes": 335 }, { "flight_number": "TP1045", "airline": "TAP Air Portugal", "departure": "2023-12-12T16:10:00Z", "arrival": "2023-12-12T21:55:00Z", "price": 1380, "duration_minutes": 345 }], "total": 2 }
+
+Question: I require first class non-stop flights from San Francisco to London for two people leaving January 25th.
+Call: { "func_call": "filter_flights", "origin": "SFO", "destination": "LHR", "departure_date": "2024-01-25", "return_date": null, "passengers": 2, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "BA286", "airline": "British Airways", "departure": "2024-01-25T17:30:00Z", "arrival": "2024-01-26T11:45:00Z", "price": 15200, "duration_minutes": 615 }, { "flight_number": "UA901", "airline": "United Airlines", "departure": "2024-01-25T19:15:00Z", "arrival": "2024-01-26T13:30:00Z", "price": 14900, "duration_minutes": 615 }], "total": 2 }
+
+Question: List all economy routes from Phoenix to Dallas with a layover for three travelers on February 8th.
+Call: { "func_call": "filter_flights", "origin": "PHX", "destination": "DFW", "departure_date": "2024-02-08", "return_date": null, "passengers": 3, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AA2105", "airline": "American Airlines", "departure": "2024-02-08T06:20:00Z", "arrival": "2024-02-08T12:40:00Z", "price": 920, "duration_minutes": 380 }, { "flight_number": "WN1432", "airline": "Southwest", "departure": "2024-02-08T10:55:00Z", "arrival": "2024-02-08T17:10:00Z", "price": 850, "duration_minutes": 375 }], "total": 2 }
+
+Question: Find business class direct options from Mumbai to Bangkok for four passengers on March 15th.
+Call: { "func_call": "filter_flights", "origin": "BOM", "destination": "BKK", "departure_date": "2024-03-15", "return_date": null, "passengers": 4, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "AI332", "airline": "Air India", "departure": "2024-03-15T02:10:00Z", "arrival": "2024-03-15T08:25:00Z", "price": 5600, "duration_minutes": 375 }, { "flight_number": "TG325", "airline": "Thai Airways", "departure": "2024-03-15T09:40:00Z", "arrival": "2024-03-15T15:55:00Z", "price": 5850, "duration_minutes": 375 }], "total": 2 }
+
+Question: Search for economy flights from Oslo to Copenhagen with a stopover for one person on April 22nd.
+Call: { "func_call": "filter_flights", "origin": "OSL", "destination": "CPH", "departure_date": "2024-04-22", "return_date": null, "passengers": 1, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "SK1402", "airline": "SAS", "departure": "2024-04-22T06:15:00Z", "arrival": "2024-04-22T10:30:00Z", "price": 210, "duration_minutes": 255 }, { "flight_number": "DY621", "airline": "Norwegian", "departure": "2024-04-22T14:45:00Z", "arrival": "2024-04-22T19:00:00Z", "price": 195, "duration_minutes": 255 }], "total": 2 }
+
+Question: Get direct first class flights from New York to Paris for three people departing May 30th.
+Call: { "func_call": "filter_flights", "origin": "JFK", "destination": "CDG", "departure_date": "2024-05-30", "return_date": null, "passengers": 3, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "AF007", "airline": "Air France", "departure": "2024-05-30T18:30:00Z", "arrival": "2024-05-31T07:45:00Z", "price": 13400, "duration_minutes": 435 }, { "flight_number": "DL264", "airline": "Delta", "departure": "2024-05-30T20:10:00Z", "arrival": "2024-05-31T09:25:00Z", "price": 12900, "duration_minutes": 435 }], "total": 2 }
+
+Question: Show economy options with a layover from Houston to Orlando for two passengers on June 18th.
+Call: { "func_call": "filter_flights", "origin": "IAH", "destination": "MCO", "departure_date": "2024-06-18", "return_date": null, "passengers": 2, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "UA1890", "airline": "United Airlines", "departure": "2024-06-18T07:30:00Z", "arrival": "2024-06-18T13:15:00Z", "price": 540, "duration_minutes": 345 }, { "flight_number": "AA3211", "airline": "American Airlines", "departure": "2024-06-18T15:20:00Z", "arrival": "2024-06-18T21:00:00Z", "price": 495, "duration_minutes": 340 }], "total": 2 }
+
+Question: Find business class direct flights from Zurich to Istanbul for five travelers on July 25th.
+Call: { "func_call": "filter_flights", "origin": "ZRH", "destination": "IST", "departure_date": "2024-07-25", "return_date": null, "passengers": 5, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "TK1912", "airline": "Turkish Airlines", "departure": "2024-07-25T11:05:00Z", "arrival": "2024-07-25T15:20:00Z", "price": 3200, "duration_minutes": 255 }, { "flight_number": "LX1940", "airline": "Swiss", "departure": "2024-07-25T16:45:00Z", "arrival": "2024-07-25T21:00:00Z", "price": 3450, "duration_minutes": 255 }], "total": 2 }
+
+Question: List economy flights from Portland to Las Vegas with a stopover for four people on August 9th.
+Call: { "func_call": "filter_flights", "origin": "PDX", "destination": "LAS", "departure_date": "2024-08-09", "return_date": null, "passengers": 4, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AS1205", "airline": "Alaska Airlines", "departure": "2024-08-09T05:50:00Z", "arrival": "2024-08-09T10:35:00Z", "price": 780, "duration_minutes": 285 }, { "flight_number": "WN2240", "airline": "Southwest", "departure": "2024-08-09T13:15:00Z", "arrival": "2024-08-09T18:00:00Z", "price": 720, "duration_minutes": 285 }], "total": 2 }
+
+Question: Search for direct first class tickets from Sydney to Los Angeles for two passengers on September 14th.
+Call: { "func_call": "filter_flights", "origin": "SYD", "destination": "LAX", "departure_date": "2024-09-14", "return_date": null, "passengers": 2, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "QF12", "airline": "Qantas", "departure": "2024-09-14T09:50:00Z", "arrival": "2024-09-14T06:30:00Z", "price": 16800, "duration_minutes": 760 }, { "flight_number": "UA863", "airline": "United Airlines", "departure": "2024-09-14T11:20:00Z", "arrival": "2024-09-14T08:00:00Z", "price": 16200, "duration_minutes": 760 }], "total": 2 }
+
+Question: Find economy flights with a layover from Stockholm to Helsinki for three people on October 28th.
+Call: { "func_call": "filter_flights", "origin": "ARN", "destination": "HEL", "departure_date": "2024-10-28", "return_date": null, "passengers": 3, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AY662", "airline": "Finnair", "departure": "2024-10-28T08:10:00Z", "arrival": "2024-10-28T13:45:00Z", "price": 620, "duration_minutes": 335 }, { "flight_number": "SK1704", "airline": "SAS", "departure": "2024-10-28T17:25:00Z", "arrival": "2024-10-28T23:00:00Z", "price": 580, "duration_minutes": 335 }], "total": 2 }

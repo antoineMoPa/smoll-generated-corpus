@@ -1,0 +1,59 @@
+Context: The new fiber optic cable stretches a total distance of 3,800 meters along the mountain ridge. Installation was completed in just four days.
+Input: {"question": "How long is the fiber optic cable?"}
+Output: {"answer": "3,800 meters"}
+
+Context: Mark loaded his backpack for the expedition, making sure the total load stayed under 18 kilograms to prevent back strain. He left his camping chair at home to save weight.
+Input: {"question": "What was the maximum weight of the backpack?"}
+Output: {"answer": "18 kilograms"}
+
+Context: The cocktail recipe demands precisely 60 milliliters of fresh lime juice to balance the sweetness. Using bottled juice will alter the flavor profile significantly.
+Input: {"question": "How much lime juice is required?"}
+Output: {"answer": "60 milliliters"}
+
+Context: During the holiday clearance, the designer handbag was marked down to $245.50 before being purchased within an hour. Online shoppers missed out due to high traffic.
+Input: {"question": "What was the price of the handbag?"}
+Output: {"answer": "$245.50"}
+
+Context: The triathlete finished the entire race in 5 hours and 15 minutes, beating her coach's expectation. Her split times were consistent throughout the event.
+Input: {"question": "What was the triathlete's total time?"}
+Output: {"answer": "5 hours and 15 minutes"}
+
+Context: The hydroponic system contains 85 gallons of nutrient-rich water to sustain the vertical garden. Sensors monitor the pH levels continuously.
+Input: {"question": "How much water is in the hydroponic system?"}
+Output: {"answer": "85 gallons"}
+
+Context: The cycling path around the lake measures 12.3 miles and includes several shaded rest areas. Cyclists often stop to enjoy the view midway.
+Input: {"question": "What is the length of the cycling path?"}
+Output: {"answer": "12.3 miles"}
+
+Context: The crate of electronic components weighed 1.8 tons and needed a forklift for movement. The inventory was logged immediately upon arrival.
+Input: {"question": "How much did the crate weigh?"}
+Output: {"answer": "1.8 tons"}
+
+Context: To irrigate the orchard, the farmer pumped 9,500 liters of water from the underground well. The operation ran smoothly for three hours.
+Input: {"question": "How much water was pumped for irrigation?"}
+Output: {"answer": "9,500 liters"}
+
+Context: The vintage painting fetched €8,200 at the gallery sale, exceeding the reserve price easily. Collectors from five cities bid on the piece.
+Input: {"question": "What was the sale price of the painting?"}
+Output: {"answer": "€8,200"}
+
+Context: The animated feature has a duration of 102 minutes and tells the story of a young inventor. It features a soundtrack by a famous composer.
+Input: {"question": "How long is the animated movie?"}
+Output: {"answer": "102 minutes"}
+
+Context: The freight train travels a distance of 2,100 kilometers from the port to the inland terminal. The journey typically takes two full days.
+Input: {"question": "How far does the freight train travel?"}
+Output: {"answer": "2,100 kilometers"}
+
+Context: Every sack of rice weighs 50 pounds and must be stored in a cool, dry place. The pantry currently holds thirty sacks for the winter.
+Input: {"question": "What is the weight of each rice sack?"}
+Output: {"answer": "50 pounds"}
+
+Context: The biology lab needs 150 milligrams of the enzyme to start the digestion process correctly. Exceeding this amount may ruin the sample.
+Input: {"question": "How much enzyme is needed?"}
+Output: {"answer": "150 milligrams"}
+
+Context: The annual membership cost for the fitness center is $299.00 and grants access to all classes. Members receive a free towel service included.
+Input: {"question": "What is the annual membership cost?"}
+Output: {"answer": "$299.00"}

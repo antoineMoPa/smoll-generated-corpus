@@ -1,0 +1,87 @@
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Check the water and bean levels for the espresso machine in the main lobby.
+Call: { "func_call": "check_water_level", "machine_id": "LOBBY-ESP-01" }
+Response: { "machine_id": "LOBBY-ESP-01", "status": "optimal", "water_level_pct": 82, "bean_level_pct": 45 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: The breakroom machine seems low on beans; can you verify the levels?
+Call: { "func_call": "check_bean_level", "machine_id": "BREAK-AUTO-04" }
+Response: { "machine_id": "BREAK-AUTO-04", "status": "low_beans", "water_level_pct": 90, "bean_level_pct": 12 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Please empty the grounds container for the machine in the executive suite.
+Call: { "func_call": "empty_grounds", "machine_id": "EXEC-Drip-02" }
+Response: { "machine_id": "EXEC-Drip-02", "status": "grounds_emptyied", "water_level_pct": 65, "bean_level_pct": 78 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Run a diagnostic on the water tank for the kitchen unit.
+Call: { "func_call": "check_water_level", "machine_id": "KITCHEN-PRO-09" }
+Response: { "machine_id": "KITCHEN-PRO-09", "status": "critical_low", "water_level_pct": 5, "bean_level_pct": 60 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: The barista station needs the waste bin cleared out immediately.
+Call: { "func_call": "empty_grounds", "machine_id": "BARISTA-STN-01" }
+Response: { "machine_id": "BARISTA-STN-01", "status": "maintenance_required", "water_level_pct": 40, "bean_level_pct": 22 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Verify if we need to refill beans for the machine in conference room B.
+Call: { "func_call": "check_bean_level", "machine_id": "CONF-B-MACH-03" }
+Response: { "machine_id": "CONF-B-MACH-03", "status": "optimal", "water_level_pct": 75, "bean_level_pct": 88 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Check both water and bean status for the rooftop cafe unit.
+Call: { "func_call": "check_water_level", "machine_id": "ROOF-CAFE-05" }
+Response: { "machine_id": "ROOF-CAFE-05", "status": "low_water", "water_level_pct": 18, "bean_level_pct": 55 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Clear the used coffee grounds from the machine in the library nook.
+Call: { "func_call": "empty_grounds", "machine_id": "LIB-NOOK-07" }
+Response: { "machine_id": "LIB-NOOK-07", "status": "ready", "water_level_pct": 95, "bean_level_pct": 30 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Is the water level sufficient for the machine in the reception area?
+Call: { "func_call": "check_water_level", "machine_id": "RECEPT-ESP-02" }
+Response: { "machine_id": "RECEPT-ESP-02", "status": "optimal", "water_level_pct": 62, "bean_level_pct": 15 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Check bean levels on the south wing vending coffee maker.
+Call: { "func_call": "check_bean_level", "machine_id": "SOUTH-WING-VM-01" }
+Response: { "machine_id": "SOUTH-WING-VM-01", "status": "empty", "water_level_pct": 50, "bean_level_pct": 0 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": number }
+---
+Question: Empty the grounds bin for the machine located in the IT server room.
+Call: { "func_call": "empty_grounds", "machine_id": "IT-SRV-ROOM-04" }
+Response: { "machine_id": "IT-SRV-ROOM-04", "status": "cleaned", "water_level_pct": 88, "bean_level_pct": 92 }

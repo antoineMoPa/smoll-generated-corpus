@@ -1,0 +1,59 @@
+Context: The garden floods every spring because the drainage pipes are clogged with leaves. Residents have to wait weeks for the water to recede naturally.
+Input: {"question": "Why did the garden flood?"}
+Output: {"answer": "the drainage pipes are clogged with leaves"}
+
+Context: Maria missed her flight since she woke up an hour late due to a power outage. She had to rebook for the following morning.
+Input: {"question": "Why did Maria miss her flight?"}
+Output: {"answer": "she woke up an hour late due to a power outage"}
+
+Context: The bakery ran out of sourdough bread early because the oven broke down at dawn. Customers were disappointed to find empty shelves.
+Input: {"question": "Why did the bakery run out of sourdough bread?"}
+Output: {"answer": "the oven broke down at dawn"}
+
+Context: James failed the chemistry test as he forgot to study the periodic table chapter. His teacher offered him a chance to retake it next week.
+Input: {"question": "Why did James fail the chemistry test?"}
+Output: {"answer": "he forgot to study the periodic table chapter"}
+
+Context: The bridge collapsed under the weight of the truck because the structural supports had rusted over decades. Emergency crews closed the road immediately.
+Input: {"question": "Why did the bridge collapse?"}
+Output: {"answer": "the structural supports had rusted over decades"}
+
+Context: The concert was canceled since the lead singer lost her voice to a severe cold. Ticket holders received full refunds via email.
+Input: {"question": "Why was the concert canceled?"}
+Output: {"answer": "the lead singer lost her voice to a severe cold"}
+
+Context: The server crashed during the update because the cooling fan stopped working. Engineers had to replace the hardware before restarting the system.
+Input: {"question": "Why did the server crash?"}
+Output: {"answer": "the cooling fan stopped working"}
+
+Context: The plant died quickly because nobody watered it while the family was on vacation. The leaves turned brown and crumbled to the touch.
+Input: {"question": "Why did the plant die?"}
+Output: {"answer": "nobody watered it while the family was on vacation"}
+
+Context: David got a speeding ticket as he was driving twenty miles over the limit on Main Street. He had to attend traffic school to avoid points on his license.
+Input: {"question": "Why did David get a speeding ticket?"}
+Output: {"answer": "he was driving twenty miles over the limit on Main Street"}
+
+Context: The museum exhibit closed early because the fire alarm triggered falsely due to burnt popcorn in the break room. Visitors were escorted out calmly by security.
+Input: {"question": "Why did the museum exhibit close early?"}
+Output: {"answer": "the fire alarm triggered falsely due to burnt popcorn in the break room"}
+
+Context: The software update failed since the internet connection dropped during the download process. Users were advised to retry once the network stabilized.
+Input: {"question": "Why did the software update fail?"}
+Output: {"answer": "the internet connection dropped during the download process"}
+
+Context: The team lost the championship game because their star player injured his ankle in the first quarter. The coach had to rely on inexperienced substitutes.
+Input: {"question": "Why did the team lose the championship game?"}
+Output: {"answer": "their star player injured his ankle in the first quarter"}
+
+Context: The paint peeled off the wall because the surface was not primed before application. The homeowners had to scrape and repaint the entire room.
+Input: {"question": "Why did the paint peel off the wall?"}
+Output: {"answer": "the surface was not primed before application"}
+
+Context: The meeting was postponed since the CEO's flight was delayed by a thunderstorm. Participants rescheduled for later that afternoon via video call.
+Input: {"question": "Why was the meeting postponed?"}
+Output: {"answer": "the CEO's flight was delayed by a thunderstorm"}
+
+Context: The car wouldn't start because the battery had drained completely overnight. The driver had to call a roadside assistance service for a jump start.
+Input: {"question": "Why wouldn't the car start?"}
+Output: {"answer": "the battery had drained completely overnight"}

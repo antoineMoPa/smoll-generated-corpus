@@ -1,0 +1,51 @@
+Available Tools: get_sensor_reading | get_all_sensors | get_sensor_by_location | get_sensor_battery
+Call Schema: { "func_call": "string", "sensor_id": "string", "location": "string", "type": "temperature|humidity|motion|co2|light" }
+Response Schema: { "sensor_id": "string", "type": "string", "value": number, "unit": "string", "timestamp": "string", "battery_pct": number }
+---
+Question: What is the temperature reading in the nursery?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "NURS-TEMP-01", "location": "Nursery", "type": "temperature" }
+Response: { "sensor_id": "NURS-TEMP-01", "type": "temperature", "value": 22.5, "unit": "celsius", "timestamp": "2023-10-27T15:10:05Z", "battery_pct": 84 }
+
+Question: Check the humidity levels in the greenhouse.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "GRN-HUM-02", "location": "Greenhouse", "type": "humidity" }
+Response: { "sensor_id": "GRN-HUM-02", "type": "humidity", "value": 68, "unit": "percent", "timestamp": "2023-10-27T15:10:08Z", "battery_pct": 91 }
+
+Question: Is there any movement in the warehouse aisle four?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "WH-MOT-04", "location": "Warehouse Aisle 4", "type": "motion" }
+Response: { "sensor_id": "WH-MOT-04", "type": "motion", "value": 1, "unit": "boolean", "timestamp": "2023-10-27T15:10:12Z", "battery_pct": 47 }
+
+Question: How bright is the sunroom at this moment?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "SUN-LGT-03", "location": "Sunroom", "type": "light" }
+Response: { "sensor_id": "SUN-LGT-03", "type": "light", "value": 890, "unit": "lux", "timestamp": "2023-10-27T15:10:15Z", "battery_pct": 62 }
+
+Question: Retrieve the carbon dioxide concentration for the chemistry lab.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "CHEM-CO2-01", "location": "Chemistry Lab", "type": "co2" }
+Response: { "sensor_id": "CHEM-CO2-01", "type": "co2", "value": 720, "unit": "ppm", "timestamp": "2023-10-27T15:10:19Z", "battery_pct": 78 }
+
+Question: What is the current temperature in the wine cellar?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "WINE-TEMP-02", "location": "Wine Cellar", "type": "temperature" }
+Response: { "sensor_id": "WINE-TEMP-02", "type": "temperature", "value": 14.2, "unit": "celsius", "timestamp": "2023-10-27T15:10:22Z", "battery_pct": 95 }
+
+Question: Detect if anyone is present in the lobby.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "LOBBY-MOT-01", "location": "Lobby", "type": "motion" }
+Response: { "sensor_id": "LOBBY-MOT-01", "type": "motion", "value": 0, "unit": "boolean", "timestamp": "2023-10-27T15:10:26Z", "battery_pct": 53 }
+
+Question: Measure the ambient light intensity in the library stacks.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "LIB-LGT-05", "location": "Library Stacks", "type": "light" }
+Response: { "sensor_id": "LIB-LGT-05", "type": "light", "value": 210, "unit": "lux", "timestamp": "2023-10-27T15:10:30Z", "battery_pct": 69 }
+
+Question: Get the humidity reading for the indoor pool area.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "POOL-HUM-01", "location": "Indoor Pool", "type": "humidity" }
+Response: { "sensor_id": "POOL-HUM-01", "type": "humidity", "value": 82, "unit": "percent", "timestamp": "2023-10-27T15:10:34Z", "battery_pct": 41 }
+
+Question: What are the CO2 levels in the executive boardroom?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "EXEC-CO2-03", "location": "Executive Boardroom", "type": "co2" }
+Response: { "sensor_id": "EXEC-CO2-03", "type": "co2", "value": 950, "unit": "ppm", "timestamp": "2023-10-27T15:10:38Z", "battery_pct": 86 }
+
+Question: Check the temperature in the server rack enclosure.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "RACK-TEMP-04", "location": "Server Rack Enclosure", "type": "temperature" }
+Response: { "sensor_id": "RACK-TEMP-04", "type": "temperature", "value": 28.7, "unit": "celsius", "timestamp": "2023-10-27T15:10:42Z", "battery_pct": 99 }
+
+Question: Is motion being detected in the stairwell?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "STAIR-MOT-02", "location": "Stairwell", "type": "motion" }
+Response: { "sensor_id": "STAIR-MOT-02", "type": "motion", "value": 1, "unit": "boolean", "timestamp": "2023-10-27T15:10:45Z", "battery_pct": 33 }

@@ -1,0 +1,59 @@
+Context: Users cannot reset their password unless they click the verification link sent to their registered mobile number. The link expires after fifteen minutes.
+Input: {"question": "What is required to reset the password?"}
+Output: {"answer": "click the verification link sent to their registered mobile number"}
+
+Context: The insurance claim will be denied if the policyholder fails to submit photos of the damage within forty-eight hours of the incident. Digital timestamps are mandatory.
+Input: {"question": "What is required to avoid denial of the insurance claim?"}
+Output: {"answer": "submit photos of the damage within forty-eight hours of the incident"}
+
+Context: Deployment of the cloud instance fails without an active API key with write permissions configured in the environment variables. DevOps teams must rotate keys quarterly.
+Input: {"question": "What is required to successfully deploy the cloud instance?"}
+Output: {"answer": "an active API key with write permissions configured in the environment variables"}
+
+Context: Entry to the executive suite is denied unless the guest presents a golden invitation card and undergoes a metal detector scan. Security personnel verify IDs at the elevator bank.
+Input: {"question": "What is required to gain entry to the executive suite?"}
+Output: {"answer": "presents a golden invitation card and undergoes a metal detector scan"}
+
+Context: The service agreement becomes null if the client modifies the server configuration without written approval from the engineering team. Unauthorized changes void all support clauses.
+Input: {"question": "What is required to keep the service agreement valid?"}
+Output: {"answer": "obtain written approval from the engineering team before modifying the server configuration"}
+
+Context: Enrollment in the advanced coding bootcamp closes immediately unless the applicant passes the logic assessment with a score of at least 85 percent. Retakes are permitted only once.
+Input: {"question": "What is required to complete enrollment in the advanced coding bootcamp?"}
+Output: {"answer": "passes the logic assessment with a score of at least 85 percent"}
+
+Context: The data synchronization job will not start if the network latency exceeds 200 milliseconds. Engineers must switch to the dedicated fiber line before initiating the transfer.
+Input: {"question": "What is required for the data synchronization job to start?"}
+Output: {"answer": "the network latency does not exceed 200 milliseconds"}
+
+Context: Travelers cannot enter the restricted zone without a biometric visa stamp issued within the last thirty days. Border officers scan fingerprints upon arrival.
+Input: {"question": "What is required to enter the restricted zone?"}
+Output: {"answer": "a biometric visa stamp issued within the last thirty days"}
+
+Context: The irrigation system will not activate the sprinklers unless the soil moisture sensor reads below 20 percent. Gardeners can force a cycle using the manual override switch.
+Input: {"question": "What is required for the irrigation system to activate the sprinklers?"}
+Output: {"answer": "the soil moisture sensor reads below 20 percent"}
+
+Context: Access to the financial ledgers is prohibited unless the auditor provides a court-ordered subpoena signed by a judge. All access logs are recorded permanently.
+Input: {"question": "What is required to access the financial ledgers?"}
+Output: {"answer": "provides a court-ordered subpoena signed by a judge"}
+
+Context: The fermentation process does not begin if the ambient temperature is below 15 degrees Celsius. Brewers must move the vats to the heated room before adding yeast.
+Input: {"question": "What is required for the fermentation process to begin?"}
+Output: {"answer": "the ambient temperature is at least 15 degrees Celsius"}
+
+Context: Staff are ineligible for the bonus pool unless they have achieved a customer satisfaction rating of 4.5 stars or higher during the fiscal year. Management reviews scores annually.
+Input: {"question": "What is required to be eligible for the bonus pool?"}
+Output: {"answer": "achieved a customer satisfaction rating of 4.5 stars or higher during the fiscal year"}
+
+Context: The online ticket purchase fails if the selected seating section is marked as sold out in the real-time database. Users should refresh the page to see updated availability.
+Input: {"question": "What is required to complete the online ticket purchase?"}
+Output: {"answer": "the selected seating section is not marked as sold out"}
+
+Context: Award ceremonies exclude nominees who have not submitted their acceptance speech draft by the Friday prior to the event. Scripts are reviewed by the production team.
+Input: {"question": "What is required to participate in the award ceremonies?"}
+Output: {"answer": "submitted their acceptance speech draft by the Friday prior to the event"}
+
+Context: The safety gate remains closed unless the pressure mat detects a weight of at least 50 kilograms. Facility managers should calibrate the sensors monthly.
+Input: {"question": "What is required for the safety gate to open?"}
+Output: {"answer": "the pressure mat detects a weight of at least 50 kilograms"}

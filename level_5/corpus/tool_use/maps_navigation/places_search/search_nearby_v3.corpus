@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Locate yoga studios within 2 kilometers of Venice Beach in Los Angeles.
+Call: { "func_call": "search_places", "query": "yoga studio", "location": "Venice Beach, Los Angeles, CA", "radius_km": 2, "type": "gym" }
+Response: { "places": [ { "id": "pl_la_1201", "name": "Ocean Yoga", "address": "1800 Ocean Front Walk, Los Angeles, CA 90291", "rating": 4.7, "open_now": true }, { "id": "pl_la_1202", "name": "Venice Yoga House", "address": "25 Windward Ave, Los Angeles, CA 90291", "rating": 4.5, "open_now": false }, { "id": "pl_la_1203", "name": "Breathe Studio", "address": "1416 Abbot Kinney Blvd, Los Angeles, CA 90291", "rating": 4.8, "open_now": true } ], "total": 3 }
+
+Question: I need to find a hardware store near the Space Needle in Seattle.
+Call: { "func_call": "find_nearby", "query": "hardware store", "location": "Space Needle, Seattle, WA", "radius_km": 3, "type": "hardware_store" }
+Response: { "places": [ { "id": "pl_sea_1301", "name": "Seattle Hardware Co", "address": "2200 1st Ave, Seattle, WA 98121", "rating": 4.2, "open_now": true }, { "id": "pl_sea_1302", "name": "Queen Anne Tools", "address": "1900 Queen Anne Ave N, Seattle, WA 98109", "rating": 4.4, "open_now": true } ], "total": 2 }
+
+Question: Are there any movie theaters playing IMAX near Downtown Atlanta?
+Call: { "func_call": "search_places", "query": "IMAX theater", "location": "Downtown Atlanta, GA", "radius_km": 2.5, "type": "movie_theater" }
+Response: { "places": [ { "id": "pl_atl_1401", "name": "AMC Phipps Plaza 14", "address": "3500 Peachtree Rd NE, Atlanta, GA 30326", "rating": 4.3, "open_now": true }, { "id": "pl_atl_1402", "name": "Regal Atlantic Station", "address": "261 19th St NW, Atlanta, GA 30363", "rating": 4.1, "open_now": false } ], "total": 2 }
+
+Question: Search for bicycle rental shops near Fisherman's Wharf in San Francisco.
+Call: { "func_call": "find_nearby", "query": "bike rental", "location": "Fisherman's Wharf, San Francisco, CA", "radius_km": 1, "type": "bike_shop" }
+Response: { "places": [ { "id": "pl_sf_1501", "name": "Blazing Saddles", "address": "2715 Hyde St, San Francisco, CA 94109", "rating": 4.6, "open_now": true }, { "id": "pl_sf_1502", "name": "Fisherman's Wharf Bike Rental", "address": "Pier 43, San Francisco, CA 94133", "rating": 4.4, "open_now": true }, { "id": "pl_sf_1503", "name": "Bay Area Bike Rent", "address": "Beach St & Hyde St, San Francisco, CA 94109", "rating": 4.2, "open_now": false } ], "total": 3 }
+
+Question: Find art galleries within walking distance of the Louvre Museum in Paris.
+Call: { "func_call": "search_places", "query": "art gallery", "location": "Louvre Museum, Paris, France", "radius_km": 0.5, "type": "art_gallery" }
+Response: { "places": [ { "id": "pl_par_1601", "name": "Galerie Carrousel du Louvre", "address": "99 Rue de Rivoli, 75001 Paris, France", "rating": 4.5, "open_now": true }, { "id": "pl_par_1602", "name": "L'Espace Carrousel", "address": "Rue de l'Amiral de Coligny, 75001 Paris, France", "rating": 4.3, "open_now": true } ], "total": 2 }
+
+Question: Locate dog parks near Central Park West in New York City.
+Call: { "func_call": "find_nearby", "query": "dog park", "location": "Central Park West, New York, NY", "radius_km": 1.5, "type": "park" }
+Response: { "places": [ { "id": "pl_nyc_1701", "name": "Central Park Dog Run", "address": "W 67th St & CPW, New York, NY 10023", "rating": 4.7, "open_now": true }, { "id": "pl_nyc_1702", "name": "Riverside Park Dog Run", "address": "Riverside Dr & W 72nd St, New York, NY 10023", "rating": 4.6, "open_now": true }, { "id": "pl_nyc_1703", "name": "Fort Washington Park Dog Run", "address": "Fort Washington Ave, New York, NY 10032", "rating": 4.4, "open_now": false } ], "total": 3 }
+
+Question: I need a 24-hour laundromat near the University of Michigan campus.
+Call: { "func_call": "search_places", "query": "24 hour laundromat", "location": "University of Michigan, Ann Arbor, MI", "radius_km": 2, "type": "laundry" }
+Response: { "places": [ { "id": "pl_aa_1801", "name": "South U Laundromat", "address": "1114 S University Ave, Ann Arbor, MI 48104", "rating": 3.9, "open_now": true }, { "id": "pl_aa_1802", "name": "Wash & Fold Express", "address": "512 E William St, Ann Arbor, MI 48104", "rating": 4.1, "open_now": true } ], "total": 2 }
+
+Question: Show me seafood restaurants near the waterfront in Portland, Maine.
+Call: { "func_call": "find_nearby", "query": "seafood restaurant", "location": "Portland Waterfront, Portland, ME", "radius_km": 1, "type": "restaurant" }
+Response: { "places": [ { "id": "pl_por_1901", "name": "Eventide Oyster Co", "address": "86 Middle St, Portland, ME 04101", "rating": 4.8, "open_now": true }, { "id": "pl_por_1902", "name": "Duckfat", "address": "43 Middle St, Portland, ME 04101", "rating": 4.6, "open_now": false }, { "id": "pl_por_1903", "name": "The Lobster Shack", "address": "225 Fore St, Portland, ME 04101", "rating": 4.5, "open_now": true } ], "total": 3 }
+
+Question: Find bowling alleys within 5 kilometers of the Las Vegas Strip.
+Call: { "func_call": "search_places", "query": "bowling alley", "location": "Las Vegas Strip, NV", "radius_km": 5, "type": "bowling_alley" }
+Response: { "places": [ { "id": "pl_lv_2001", "name": "Orleans Bowling Center", "address": "4500 W Tropicana Ave, Las Vegas, NV 89103", "rating": 4.3, "open_now": true }, { "id": "pl_lv_2002", "name": "Suncoast Bowling", "address": "9090 Alta Dr, Las Vegas, NV 89145", "rating": 4.4, "open_now": true } ], "total": 2 }
+
+Question: Are there any museums dedicated to science near the National Mall in Washington DC?
+Call: { "func_call": "find_nearby", "query": "science museum", "location": "National Mall, Washington, DC", "radius_km": 2, "type": "museum" }
+Response: { "places": [ { "id": "pl_dc_2101", "name": "National Air and Space Museum", "address": "600 Independence Ave SW, Washington, DC 20560", "rating": 4.8, "open_now": true }, { "id": "pl_dc_2102", "name": "National Museum of Natural History", "address": "10th St & Constitution Ave NW, Washington, DC 20560", "rating": 4.9, "open_now": true }, { "id": "pl_dc_2103", "name": "Smithsonian Castle", "address": "1000 Jefferson Dr SW, Washington, DC 20560", "rating": 4.7, "open_now": false } ], "total": 3 }
+
+Question: Search for tattoo parlors near South Beach in Miami.
+Call: { "func_call": "search_places", "query": "tattoo parlor", "location": "South Beach, Miami, FL", "radius_km": 1.5, "type": "tattoo_shop" }
+Response: { "places": [ { "id": "pl_mia_2201", "name": "Ink Miami", "address": "1659 West Ave, Miami Beach, FL 33139", "rating": 4.6, "open_now": true }, { "id": "pl_mia_2202", "name": "Ocean Drive Tattoos", "address": "1020 Ocean Dr, Miami Beach, FL 33139", "rating": 4.2, "open_now": false } ], "total": 2 }
+
+Question: Find jazz clubs in the Frenchmen Street area of New Orleans.
+Call: { "func_call": "find_nearby", "query": "jazz club", "location": "Frenchmen Street, New Orleans, LA", "radius_km": 0.5, "type": "night_club" }
+Response: { "places": [ { "id": "pl_no_2301", "name": "The Spotted Cat Music Club", "address": "623 Frenchmen St, New Orleans, LA 70116", "rating": 4.7, "open_now": true }, { "id": "pl_no_2302", "name": "Snug Harbor Jazz Bistro", "address": "626 Frenchmen St, New Orleans, LA 70116", "rating": 4.6, "open_now": true }, { "id": "pl_no_2303", "name": "d.b.a.", "address": "618 Frenchmen St, New Orleans, LA 70116", "rating": 4.5, "open_now": false } ], "total": 3 }

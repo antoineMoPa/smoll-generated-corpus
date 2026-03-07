@@ -1,0 +1,51 @@
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Create a new contact for Sarah Jenkins who works as a Marketing Director at Apex Solutions. Her email is sarah.j@apexsolutions.com.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Sarah Jenkins", "email": "sarah.j@apexsolutions.com", "company": "Apex Solutions", "note": "Marketing Director" }
+Response: { "contact_id": "cnt_89234", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the company for contact cnt_10293 to "Global Tech Industries" and change their name to "Robert Chen".
+Call: { "func_call": "update_contact", "contact_id": "cnt_10293", "name": "Robert Chen", "email": "", "company": "Global Tech Industries", "note": "" }
+Response: { "contact_id": "cnt_10293", "status": "updated", "updated_fields": ["name", "company"] }
+
+Question: Add a note to contact cnt_55412 indicating they are interested in the Q4 enterprise package.
+Call: { "func_call": "add_note", "contact_id": "cnt_55412", "name": "", "email": "", "company": "", "note": "Interested in Q4 enterprise package" }
+Response: { "contact_id": "cnt_55412", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Elena Rodriguez, a Senior Developer at CloudNine Systems, with email elena.r@cloudnine.io.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Elena Rodriguez", "email": "elena.r@cloudnine.io", "company": "CloudNine Systems", "note": "Senior Developer" }
+Response: { "contact_id": "cnt_77201", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the email address for contact cnt_33488 to michael.t@innovatech.net and add a note about the recent demo call.
+Call: { "func_call": "update_contact", "contact_id": "cnt_33488", "name": "", "email": "michael.t@innovatech.net", "company": "", "note": "Completed product demo on Oct 12" }
+Response: { "contact_id": "cnt_33488", "status": "updated", "updated_fields": ["email", "note"] }
+
+Question: Create a new entry for David Kim, CFO at Sterling Finance, email d.kim@sterlingfin.com.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "David Kim", "email": "d.kim@sterlingfin.com", "company": "Sterling Finance", "note": "CFO" }
+Response: { "contact_id": "cnt_99102", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Change the company name for contact cnt_44521 to "NextGen Logistics" and update the note to reflect their new shipping requirements.
+Call: { "func_call": "update_contact", "contact_id": "cnt_44521", "name": "", "email": "", "company": "NextGen Logistics", "note": "Requires expedited shipping options" }
+Response: { "contact_id": "cnt_44521", "status": "updated", "updated_fields": ["company", "note"] }
+
+Question: Add a note to contact cnt_66734 stating that the contract was signed yesterday.
+Call: { "func_call": "add_note", "contact_id": "cnt_66734", "name": "", "email": "", "company": "", "note": "Contract signed on Nov 1" }
+Response: { "contact_id": "cnt_66734", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Priya Patel, Head of HR at BlueSky Media, email priya.p@blueskymedia.co.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Priya Patel", "email": "priya.p@blueskymedia.co", "company": "BlueSky Media", "note": "Head of HR" }
+Response: { "contact_id": "cnt_11298", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the name and email for contact cnt_22345 to "James Wilson" and "j.wilson@vertexcorp.com" respectively.
+Call: { "func_call": "update_contact", "contact_id": "cnt_22345", "name": "James Wilson", "email": "j.wilson@vertexcorp.com", "company": "", "note": "" }
+Response: { "contact_id": "cnt_22345", "status": "updated", "updated_fields": ["name", "email"] }
+
+Question: Create a new contact for Lisa Chang, Product Manager at Orbit Software, with email lisa.c@orbitsoft.dev.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Lisa Chang", "email": "lisa.c@orbitsoft.dev", "company": "Orbit Software", "note": "Product Manager" }
+Response: { "contact_id": "cnt_55677", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the note for contact cnt_88901 to mention the follow-up meeting scheduled for next Tuesday.
+Call: { "func_call": "update_contact", "contact_id": "cnt_88901", "name": "", "email": "", "company": "", "note": "Follow-up meeting scheduled for next Tuesday" }
+Response: { "contact_id": "cnt_88901", "status": "updated", "updated_fields": ["note"] }

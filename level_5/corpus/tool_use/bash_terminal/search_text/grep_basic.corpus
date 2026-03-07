@@ -1,0 +1,51 @@
+Available Tools: grep_file | grep_recursive | grep_case_insensitive | grep_count
+Call Schema: { "func_call": "string", "pattern": "string", "path": "string", "flags": "string" }
+Response Schema: { "matches": [{ "file": "string", "line": number, "text": "string" }], "count": number }
+---
+Question: Find all lines containing 'ERROR' in the main application log.
+Call: { "func_call": "grep_file", "pattern": "ERROR", "path": "/var/log/app/main.log", "flags": "" }
+Response: { "matches": [{ "file": "/var/log/app/main.log", "line": 42, "text": "2023-10-27 10:15:32 ERROR Database connection failed" }, { "file": "/var/log/app/main.log", "line": 89, "text": "2023-10-27 10:16:01 ERROR Timeout waiting for response" }], "count": 2 }
+
+Question: Search recursively for TODO comments in the src directory.
+Call: { "func_call": "grep_recursive", "pattern": "TODO", "path": "./src", "flags": "" }
+Response: { "matches": [{ "file": "./src/utils/parser.py", "line": 15, "text": "# TODO: Handle edge case for empty input" }, { "file": "./src/core/engine.js", "line": 203, "text": "// TODO: Optimize sorting algorithm for large datasets" }], "count": 2 }
+
+Question: Count how many times 'password' appears in the configuration file, ignoring case.
+Call: { "func_call": "grep_count", "pattern": "password", "path": "/etc/myapp/config.ini", "flags": "-i" }
+Response: { "matches": [], "count": 4 }
+
+Question: Find all import statements for 'numpy' in the data science scripts.
+Call: { "func_call": "grep_recursive", "pattern": "import numpy", "path": "./scripts/data", "flags": "" }
+Response: { "matches": [{ "file": "./scripts/data/clean.py", "line": 3, "text": "import numpy as np" }, { "file": "./scripts/data/analyze.py", "line": 5, "text": "import numpy" }, { "file": "./scripts/data/plot.py", "line": 2, "text": "import numpy as np" }], "count": 3 }
+
+Question: Search for 'hostname' in the network configuration files case-insensitively.
+Call: { "func_call": "grep_case_insensitive", "pattern": "hostname", "path": "/etc/network/interfaces", "flags": "-i" }
+Response: { "matches": [{ "file": "/etc/network/interfaces", "line": 12, "text": "# Hostname configuration" }, { "file": "/etc/network/interfaces", "line": 14, "text": "hostname server-prod-01" }], "count": 2 }
+
+Question: Locate all occurrences of 'CRITICAL' in the system logs.
+Call: { "func_call": "grep_recursive", "pattern": "CRITICAL", "path": "/var/log/syslog", "flags": "" }
+Response: { "matches": [{ "file": "/var/log/syslog", "line": 1024, "text": "Oct 27 11:00:00 server CRITICAL: Disk space below 5%" }], "count": 1 }
+
+Question: Find lines with 'api_key' in the environment variables file.
+Call: { "func_call": "grep_file", "pattern": "api_key", "path": "./.env", "flags": "" }
+Response: { "matches": [{ "file": "./.env", "line": 8, "text": "API_KEY=sk_live_51Hx..." }, { "file": "./.env", "line": 12, "text": "# api_key for staging environment" }], "count": 2 }
+
+Question: Search recursively for 'console.log' in the frontend code to find debugging statements.
+Call: { "func_call": "grep_recursive", "pattern": "console.log", "path": "./frontend/src", "flags": "" }
+Response: { "matches": [{ "file": "./frontend/src/components/Header.jsx", "line": 45, "text": "console.log('Rendering header');" }, { "file": "./frontend/src/utils/auth.js", "line": 22, "text": "console.log(token);" }], "count": 2 }
+
+Question: Count occurrences of 'WARNING' in the deployment log.
+Call: { "func_call": "grep_count", "pattern": "WARNING", "path": "/var/log/deploy.log", "flags": "" }
+Response: { "matches": [], "count": 7 }
+
+Question: Find all SQL query strings containing 'SELECT *' in the backend code.
+Call: { "func_call": "grep_recursive", "pattern": "SELECT \\*", "path": "./backend/models", "flags": "" }
+Response: { "matches": [{ "file": "./backend/models/user.py", "line": 30, "text": "query = \"SELECT * FROM users WHERE id = ?\"" }, { "file": "./backend/models/product.sql", "line": 5, "text": "SELECT * FROM products;" }], "count": 2 }
+
+Question: Search for 'failed login' in the security audit log, ignoring case.
+Call: { "func_call": "grep_case_insensitive", "pattern": "failed login", "path": "/var/log/auth.log", "flags": "-i" }
+Response: { "matches": [{ "file": "/var/log/auth.log", "line": 501, "text": "Oct 27 09:22:11 sshd[1234]: Failed login for user admin from 192.168.1.5" }, { "file": "/var/log/auth.log", "line": 505, "text": "Oct 27 09:23:45 sshd[1234]: Failed login for user root from 10.0.0.2" }], "count": 2 }
+
+Question: Find all instances of 'version' in the package manifest files.
+Call: { "func_call": "grep_recursive", "pattern": "\"version\"", "path": "./packages", "flags": "" }
+Response: { "matches": [{ "file": "./packages/core/package.json", "line": 3, "text": "  \"version\": \"1.0.4\"," }, { "file": "./packages/ui/package.json", "line": 3, "text": "  \"version\": \"2.1.0\"," }], "count": 2 }

@@ -1,0 +1,51 @@
+Available Tools: create_network | list_networks | create_volume | list_volumes | mount_volume
+Call Schema: { "func_call": "string", "name": "string", "driver": "string", "container_id": "string", "mount_path": "string" }
+Response Schema: { "id": "string", "name": "string", "driver": "string", "scope": "string", "containers": ["string"] }
+---
+Question: Create a new bridge network named web-frontend-net for our static site containers.
+Call: { "func_call": "create_network", "name": "web-frontend-net", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_8f2a9b1c3d4e5f6g", "name": "web-frontend-net", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: List all existing networks to check if the database isolation network is already present.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_1a2b3c", "cnt_4d5e6f", "cnt_7g8h9i"] }
+
+Question: Set up an overlay network called swarm-service-mesh for our multi-host communication.
+Call: { "func_call": "create_network", "name": "swarm-service-mesh", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_9z8y7x6w5v4u", "name": "swarm-service-mesh", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Initialize a host network named perf-test-host for high-performance local benchmarking.
+Call: { "func_call": "create_network", "name": "perf-test-host", "driver": "host", "container_id": "", "mount_path": "" }
+Response: { "id": "net_host_3k2j1h0g9f8e", "name": "perf-test-host", "driver": "host", "scope": "local", "containers": [] }
+
+Question: Create a standard bridge network for the legacy-app-stack components.
+Call: { "func_call": "create_network", "name": "legacy-app-stack", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_brd_5t4r3e2w1q0p", "name": "legacy-app-stack", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: Retrieve the current list of networks to audit connectivity for the payment-gateway service.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_pay_001", "cnt_pay_002"] }
+
+Question: Provision an overlay network named global-cache-sync for distributed Redis instances.
+Call: { "func_call": "create_network", "name": "global-cache-sync", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_cache_7m6n5b4v", "name": "global-cache-sync", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Establish a bridge network called dev-sandbox-net for isolated developer testing environments.
+Call: { "func_call": "create_network", "name": "dev-sandbox-net", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_brd_dev_2x3c4v5b", "name": "dev-sandbox-net", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: List all networks currently active to verify the status of the monitoring-stack network.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_grafana", "cnt_prometheus", "cnt_alertmanager"] }
+
+Question: Create a host driver network named io-intensive-worker for direct hardware access tasks.
+Call: { "func_call": "create_network", "name": "io-intensive-worker", "driver": "host", "container_id": "", "mount_path": "" }
+Response: { "id": "net_host_io_9q8w7e6r", "name": "io-intensive-worker", "driver": "host", "scope": "local", "containers": [] }
+
+Question: Build an overlay network titled microservices-backbone to connect our API gateways.
+Call: { "func_call": "create_network", "name": "microservices-backbone", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_ms_1z2x3c4v", "name": "microservices-backbone", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Check the network inventory to ensure the ci-cd-pipeline-net is properly configured.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_jenkins", "cnt_runner_01", "cnt_runner_02"] }

@@ -1,0 +1,51 @@
+Available Tools: create_deal | update_deal_stage | get_deal | list_deals_by_stage | close_deal
+Call Schema: { "func_call": "string", "deal_id": "string", "contact_id": "string", "stage": "string", "value": number }
+Response Schema: { "deal_id": "string", "name": "string", "stage": "string", "value": number, "probability": number }
+---
+Question: Initiate a new prospect deal for Globex Corporation with contact ID C-7701 valued at 23000.
+Call: { "func_call": "create_deal", "deal_id": "D-5001", "contact_id": "C-7701", "stage": "prospect", "value": 23000 }
+Response: { "deal_id": "D-5001", "name": "Globex Logistics Setup", "stage": "prospect", "value": 23000, "probability": 10 }
+
+Question: Transition deal D-6002 to the qualified stage for contact C-8802, adjusting the value to 56000.
+Call: { "func_call": "update_deal_stage", "deal_id": "D-6002", "contact_id": "C-8802", "stage": "qualified", "value": 56000 }
+Response: { "deal_id": "D-6002", "name": "Initech Data Migration", "stage": "qualified", "value": 56000, "probability": 40 }
+
+Question: Push deal D-7003 forward to proposal for contact C-9903, maintaining the value of 135000.
+Call: { "func_call": "update_deal_stage", "deal_id": "D-7003", "contact_id": "C-9903", "stage": "proposal", "value": 135000 }
+Response: { "deal_id": "D-7003", "name": "Stark Energy Grid", "stage": "proposal", "value": 135000, "probability": 60 }
+
+Question: Register a new negotiation deal D-8004 for contact C-1004 worth 92000.
+Call: { "func_call": "create_deal", "deal_id": "D-8004", "contact_id": "C-1004", "stage": "negotiation", "value": 92000 }
+Response: { "deal_id": "D-8004", "name": "Wayne Security Protocol", "stage": "negotiation", "value": 92000, "probability": 80 }
+
+Question: Mark deal D-9005 as closed_won for contact C-2005 with a final amount of 31000.
+Call: { "func_call": "close_deal", "deal_id": "D-9005", "contact_id": "C-2005", "stage": "closed_won", "value": 31000 }
+Response: { "deal_id": "D-9005", "name": "Umbrella Bio Research", "stage": "closed_won", "value": 31000, "probability": 100 }
+
+Question: Change deal D-1006 status to closed_lost for contact C-3006, value unchanged at 48000.
+Call: { "func_call": "update_deal_stage", "deal_id": "D-1006", "contact_id": "C-3006", "stage": "closed_lost", "value": 48000 }
+Response: { "deal_id": "D-1006", "name": "Cyberdyne AI License", "stage": "closed_lost", "value": 48000, "probability": 0 }
+
+Question: Establish a fresh prospect deal D-2007 for contact C-4007 with a valuation of 19500.
+Call: { "func_call": "create_deal", "deal_id": "D-2007", "contact_id": "C-4007", "stage": "prospect", "value": 19500 }
+Response: { "deal_id": "D-2007", "name": "Massive Dynamic Analytics", "stage": "prospect", "value": 19500, "probability": 10 }
+
+Question: Elevate deal D-3008 to the proposal phase for contact C-5008, raising value to 74000.
+Call: { "func_call": "update_deal_stage", "deal_id": "D-3008", "contact_id": "C-5008", "stage": "proposal", "value": 74000 }
+Response: { "deal_id": "D-3008", "name": "Soylent Food Distribution", "stage": "proposal", "value": 74000, "probability": 60 }
+
+Question: Shift deal D-4009 into negotiation for contact C-6009 with an updated value of 105000.
+Call: { "func_call": "update_deal_stage", "deal_id": "D-4009", "contact_id": "C-6009", "stage": "negotiation", "value": 105000 }
+Response: { "deal_id": "D-4009", "name": "Acme Robotics Fleet", "stage": "negotiation", "value": 105000, "probability": 80 }
+
+Question: Create a qualified opportunity D-5010 for contact C-7010 valued at 41000.
+Call: { "func_call": "create_deal", "deal_id": "D-5010", "contact_id": "C-7010", "stage": "qualified", "value": 41000 }
+Response: { "deal_id": "D-5010", "name": "Northwind Shipping API", "stage": "qualified", "value": 41000, "probability": 40 }
+
+Question: Complete deal D-6011 as closed_won for contact C-8011 totaling 182000.
+Call: { "func_call": "close_deal", "deal_id": "D-6011", "contact_id": "C-8011", "stage": "closed_won", "value": 182000 }
+Response: { "deal_id": "D-6011", "name": "Global Tech Infrastructure", "stage": "closed_won", "value": 182000, "probability": 100 }
+
+Question: Set deal D-7012 to closed_lost for contact C-9012, keeping value at 33500.
+Call: { "func_call": "update_deal_stage", "deal_id": "D-7012", "contact_id": "C-9012", "stage": "closed_lost", "value": 33500 }
+Response: { "deal_id": "D-7012", "name": "Enterprise Suite Trial", "stage": "closed_lost", "value": 33500, "probability": 0 }

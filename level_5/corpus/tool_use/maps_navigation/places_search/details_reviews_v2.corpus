@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Can you find tapas bars near La Rambla in Barcelona within 1 kilometer?
+Call: { "func_call": "search_places", "query": "tapas bars", "location": "La Rambla, Barcelona, Spain", "radius_km": 1, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_bcn_037", "name": "El Quim de la Boqueria", "address": "Mercat de la Boqueria, Rambla, 91, 08001 Barcelona, Spain", "rating": 4.6, "open_now": true }, { "id": "pl_bcn_038", "name": "Bar del Pla", "address": "Carrer de Montcada, 2, 08003 Barcelona, Spain", "rating": 4.5, "open_now": true }, { "id": "pl_bcn_039", "name": "Taller de Tapas", "address": "Plaça de l'Àngel, 4, 08002 Barcelona, Spain", "rating": 4.3, "open_now": false }], "total": 3 }
+
+Question: I need a 24-hour convenience store near Shinjuku Station in Tokyo.
+Call: { "func_call": "search_places", "query": "convenience stores", "location": "Shinjuku Station, Tokyo, Japan", "radius_km": 0.5, "type": "convenience_store" }
+Response: { "places": [{ "id": "pl_tky_040", "name": "7-Eleven Shinjuku East", "address": "3-38-1 Shinjuku, Shinjuku City, Tokyo 160-0022, Japan", "rating": 4.1, "open_now": true }, { "id": "pl_tky_041", "name": "Lawson Shinjuku South", "address": "1-1-3 Yoyogi, Shibuya City, Tokyo 151-0053, Japan", "rating": 3.9, "open_now": true }, { "id": "pl_tky_042", "name": "FamilyMart Shinjuku West", "address": "1-15-8 Nishi-Shinjuku, Shinjuku City, Tokyo 160-0023, Japan", "rating": 4.0, "open_now": true }], "total": 3 }
+
+Question: Locate yoga studios within 2 kilometers of Venice Beach in Los Angeles.
+Call: { "func_call": "search_places", "query": "yoga studios", "location": "Venice Beach, Los Angeles, CA", "radius_km": 2, "type": "gym" }
+Response: { "places": [{ "id": "pl_la_043", "name": "YogaSoup", "address": "1423 Lincoln Blvd, Venice, CA 90291", "rating": 4.7, "open_now": true }, { "id": "pl_la_044", "name": "The Yoga Collective", "address": "201 Rose Ave, Venice, CA 90291", "rating": 4.8, "open_now": false }, { "id": "pl_la_045", "name": "Wanderlust Hollywood", "address": "1655 N Highland Ave, Los Angeles, CA 90028", "rating": 4.5, "open_now": true }], "total": 3 }
+
+Question: Search for seafood restaurants near the Fisherman's Wharf in San Francisco.
+Call: { "func_call": "search_places", "query": "seafood restaurants", "location": "Fisherman's Wharf, San Francisco, CA", "radius_km": 1.5, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_sf_046", "name": "Fog Harbor Fish House", "address": "Pier 39, San Francisco, CA 94133", "rating": 4.4, "open_now": true }, { "id": "pl_sf_047", "name": "Alioto's Restaurant", "address": "8 Fisherman's Wharf, San Francisco, CA 94133", "rating": 4.2, "open_now": true }, { "id": "pl_sf_048", "name": "Scoma's", "address": "Pier 47, San Francisco, CA 94133", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Find independent cinemas close to Kreuzberg in Berlin.
+Call: { "func_call": "search_places", "query": "independent cinemas", "location": "Kreuzberg, Berlin, Germany", "radius_km": 2, "type": "movie_theater" }
+Response: { "places": [{ "id": "pl_ber_049", "name": "Moviemento", "address": "Kottbusser Damm 1, 10967 Berlin, Germany", "rating": 4.6, "open_now": true }, { "id": "pl_ber_050", "name": "Babylon Berlin", "address": "Rosa-Luxemburg-Straße 30, 10178 Berlin, Germany", "rating": 4.7, "open_now": false }, { "id": "pl_ber_051", "name": "Kino International", "address": "Karl-Marx-Allee 33, 10178 Berlin, Germany", "rating": 4.5, "open_now": true }], "total": 3 }
+
+Question: Look for florists near the Royal Botanic Gardens in Melbourne.
+Call: { "func_call": "search_places", "query": "florists", "location": "Royal Botanic Gardens, Melbourne, VIC, Australia", "radius_km": 1, "type": "florist" }
+Response: { "places": [{ "id": "pl_mel_052", "name": "Flower Power South Yarra", "address": "245 Toorak Rd, South Yarra VIC 3141, Australia", "rating": 4.8, "open_now": true }, { "id": "pl_mel_053", "name": "Stems of South Yarra", "address": "187 Toorak Rd, South Yarra VIC 3141, Australia", "rating": 4.6, "open_now": true }, { "id": "pl_mel_054", "name": "The Flower Room", "address": "450 Punt Rd, South Yarra VIC 3141, Australia", "rating": 4.4, "open_now": false }], "total": 3 }
+
+Question: Identify craft beer bars within 3km of the Pearl District in Portland.
+Call: { "func_call": "search_places", "query": "craft beer bars", "location": "Pearl District, Portland, OR", "radius_km": 3, "type": "bar" }
+Response: { "places": [{ "id": "pl_por_055", "name": "Deschutes Brewery Portland Public House", "address": "210 NW 11th Ave, Portland, OR 97209", "rating": 4.5, "open_now": true }, { "id": "pl_por_056", "name": "Rogue Ales Public House", "address": "1339 NW Flanders St, Portland, OR 97209", "rating": 4.3, "open_now": true }, { "id": "pl_por_057", "name": "BridgePort Brew Pub", "address": "1313 NW Marshall St, Portland, OR 97209", "rating": 4.2, "open_now": false }], "total": 3 }
+
+Question: Search for antique shops near the Marais district in Paris.
+Call: { "func_call": "search_places", "query": "antique shops", "location": "Le Marais, Paris, France", "radius_km": 1.5, "type": "store" }
+Response: { "places": [{ "id": "pl_par_058", "name": "Village Saint-Paul", "address": "26 Rue Saint-Paul, 75004 Paris, France", "rating": 4.7, "open_now": true }, { "id": "pl_par_059", "name": "Marché aux Puces de Saint-Ouen", "address": "Rue des Rosiers, 93400 Saint-Ouen, France", "rating": 4.6, "open_now": false }, { "id": "pl_par_060", "name": "Antiquités de la Rue de Seine", "address": "52 Rue de Seine, 75006 Paris, France", "rating": 4.5, "open_now": true }], "total": 3 }
+
+Question: Find dog parks near Stanley Park in Vancouver.
+Call: { "func_call": "search_places", "query": "dog parks", "location": "Stanley Park, Vancouver, BC, Canada", "radius_km": 2, "type": "park" }
+Response: { "places": [{ "id": "pl_van_061", "name": "Nelson Park Dog Run", "address": "1100 Bute St, Vancouver, BC V6E 1K4, Canada", "rating": 4.6, "open_now": true }, { "id": "pl_van_062", "name": "Sunset Park Dog Off-Leash Area", "address": "4575 Victoria Dr, Vancouver, BC V5N 4M6, Canada", "rating": 4.4, "open_now": true }, { "id": "pl_van_063", "name": "Hinge Park Off-Leash Area", "address": "215 W 1st Ave, Vancouver, BC V5Y 0C5, Canada", "rating": 4.7, "open_now": false }], "total": 3 }
+
+Question: Locate ice cream parlors near the Santa Monica Pier in California.
+Call: { "func_call": "search_places", "query": "ice cream parlors", "location": "Santa Monica Pier, Santa Monica, CA", "radius_km": 1, "type": "cafe" }
+Response: { "places": [{ "id": "pl_sm_064", "name": "McConnell's Fine Ice Creams", "address": "1320 2nd St, Santa Monica, CA 90401", "rating": 4.7, "open_now": true }, { "id": "pl_sm_065", "name": "Fosselman's Ice Cream", "address": "1409 3rd Street Promenade, Santa Monica, CA 90401", "rating": 4.8, "open_now": true }, { "id": "pl_sm_066", "name": "Salt & Straw", "address": "1300 Abbot Kinney Blvd, Venice, CA 90291", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Search for co-working spaces near Silicon Valley in San Jose.
+Call: { "func_call": "search_places", "query": "co-working spaces", "location": "Downtown San Jose, CA", "radius_km": 3, "type": "office" }
+Response: { "places": [{ "id": "pl_sj_067", "name": "WeWork San Jose", "address": "150 Almaden Blvd, San Jose, CA 95113", "rating": 4.3, "open_now": true }, { "id": "pl_sj_068", "name": "Regus San Jose", "address": "2033 Gateway Pl, San Jose, CA 95110", "rating": 4.1, "open_now": true }, { "id": "pl_sj_069", "name": "Impact Hub Silicon Valley", "address": "555 S 10th St, San Jose, CA 95112", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Find hiking trails within 10 kilometers of Table Mountain in Cape Town.
+Call: { "func_call": "search_places", "query": "hiking trails", "location": "Table Mountain, Cape Town, South Africa", "radius_km": 10, "type": "park" }
+Response: { "places": [{ "id": "pl_ct_070", "name": "Platteklip Gorge Trail", "address": "Tafelberg Rd, Cape Town, 8001, South Africa", "rating": 4.9, "open_now": true }, { "id": "pl_ct_071", "name": "Lion's Head Hike", "address": "Signal Hill Rd, Cape Town, 8001, South Africa", "rating": 4.8, "open_now": true }, { "id": "pl_ct_072", "name": "Pipe Track Trail", "address": "Kloof Nek Rd, Cape Town, 8001, South Africa", "rating": 4.7, "open_now": false }], "total": 3 }

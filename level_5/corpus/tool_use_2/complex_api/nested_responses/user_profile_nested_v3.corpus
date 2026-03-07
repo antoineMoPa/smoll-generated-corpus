@@ -1,0 +1,29 @@
+{"func_call": "get_user_profile", "id": "usr_9k8j7h6g", "include": ["address", "preferences", "stats"]}
+{"id": "usr_9k8j7h6g", "data": {"profile": {"name": "Yuki Tanaka", "email": "y.tanaka@jpconnect.jp", "address": {"street": "3-1 Shibuya", "city": "Tokyo", "country": "Japan"}, "preferences": {"theme": "light", "language": "ja-JP"}}, "stats": {"logins": 67, "purchases": 14}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_5f4d3s2a", "include": ["address", "preferences", "stats"]}
+{"id": "usr_5f4d3s2a", "data": {"profile": {"name": "Nina Petrov", "email": "n.petrov@ruweb.ru", "address": {"street": "12 Nevsky Prospect", "city": "St. Petersburg", "country": "Russia"}, "preferences": {"theme": "dark", "language": "ru-RU"}}, "stats": {"logins": 230, "purchases": 55}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_1q2w3e4r", "include": ["address", "preferences", "stats"]}
+{"id": "usr_1q2w3e4r", "data": {"profile": {"name": "Omar Ali", "email": "o.ali@egynet.eg", "address": {"street": "88 Tahrir Square", "city": "Giza", "country": "Egypt"}, "preferences": {"theme": "system", "language": "ar-EG"}}, "stats": {"logins": 45, "purchases": 9}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_7y6t5r4e", "include": ["address", "preferences", "stats"]}
+{"id": "usr_7y6t5r4e", "data": {"profile": {"name": "Claire Fontaine", "email": "c.fontaine@frmail.fr", "address": {"street": "5 Avenue des Champs", "city": "Paris", "country": "France"}, "preferences": {"theme": "light", "language": "fr-FR"}}, "stats": {"logins": 188, "purchases": 42}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_3u8i9o0p", "include": ["address", "preferences", "stats"]}
+{"id": "usr_3u8i9o0p", "data": {"profile": {"name": "Raj Patel", "email": "r.patel@inmail.in", "address": {"street": "45 Marine Drive", "city": "Mumbai", "country": "India"}, "preferences": {"theme": "dark", "language": "en-IN"}}, "stats": {"logins": 112, "purchases": 27}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_6a7s8d9f", "include": ["address", "preferences", "stats"]}
+{"id": "usr_6a7s8d9f", "data": {"profile": {"name": "Sofia Berg", "email": "s.berg@senet.se", "address": {"street": "22 Drottninggatan", "city": "Stockholm", "country": "Sweden"}, "preferences": {"theme": "system", "language": "sv-SE"}}, "stats": {"logins": 290, "purchases": 61}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_2z3x4c5v", "include": ["address", "preferences", "stats"]}
+{"id": "usr_2z3x4c5v", "data": {"profile": {"name": "Diego Lopez", "email": "d.lopez@armail.ar", "address": {"street": "400 Florida Street", "city": "Buenos Aires", "country": "Argentina"}, "preferences": {"theme": "light", "language": "es-AR"}}, "stats": {"logins": 156, "purchases": 35}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_8b9n0m1l", "include": ["address", "preferences", "stats"]}
+{"id": "usr_8b9n0m1l", "data": {"profile": {"name": "Grace Kim", "email": "g.kim@krnet.kr", "address": {"street": "101 Teheran-ro", "city": "Seoul", "country": "South Korea"}, "preferences": {"theme": "dark", "language": "ko-KR"}}, "stats": {"logins": 201, "purchases": 48}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_4k5j6h7g", "include": ["address", "preferences", "stats"]}
+{"id": "usr_4k5j6h7g", "data": {"profile": {"name": "Tom Harris", "email": "t.harris@canpost.ca", "address": {"street": "77 Yonge Street", "city": "Toronto", "country": "Canada"}, "preferences": {"theme": "system", "language": "en-CA"}}, "stats": {"logins": 134, "purchases": 22}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_0l9k8j7h", "include": ["address", "preferences", "stats"]}
+{"id": "usr_0l9k8j7h", "data": {"profile": {"name": "Elif Yilmaz", "email": "e.yilmaz@trmail.tr", "address": {"street": "15 Istiklal Avenue", "city": "Istanbul", "country": "Turkey"}, "preferences": {"theme": "light", "language": "tr-TR"}}, "stats": {"logins": 89, "purchases": 18}, "recent": []}}

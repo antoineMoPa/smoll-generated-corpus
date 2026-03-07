@@ -1,0 +1,51 @@
+Available Tools: get_exchange_rate | convert_currency | buy_foreign_currency | get_supported_currencies
+Call Schema: { "func_call": "string", "from_currency": "string", "to_currency": "string", "amount": number }
+Response Schema: { "from": "string", "to": "string", "rate": number, "converted_amount": number, "fee": number }
+
+Question: I'm planning a trip to Tokyo and need to exchange 1,200 US Dollars for Japanese Yen.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "JPY", "amount": 1200 }
+Response: { "from": "USD", "to": "JPY", "rate": 149.50, "converted_amount": 179400.00, "fee": 5.00 }
+
+Question: Can you purchase 3,500 Euros for my study abroad program in Paris using my Canadian Dollars?
+Call: { "func_call": "buy_foreign_currency", "from_currency": "CAD", "to_currency": "EUR", "amount": 3500 }
+Response: { "from": "CAD", "to": "EUR", "rate": 0.68, "converted_amount": 2380.00, "fee": 12.50 }
+
+Question: What is the current rate if I convert 900 British Pounds to Australian Dollars for a rental car?
+Call: { "func_call": "get_exchange_rate", "from_currency": "GBP", "to_currency": "AUD", "amount": 900 }
+Response: { "from": "GBP", "to": "AUD", "rate": 1.92, "converted_amount": 1728.00, "fee": 0.00 }
+
+Question: I need to send 25,000 Mexican Pesos to a vendor in Mexico City from my US Dollar account.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "MXN", "amount": 25000 }
+Response: { "from": "USD", "to": "MXN", "rate": 17.20, "converted_amount": 430000.00, "fee": 10.00 }
+
+Question: Please buy 8,000 Swiss Francs for an investment opportunity using my Euro funds.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "EUR", "to_currency": "CHF", "amount": 8000 }
+Response: { "from": "EUR", "to": "CHF", "rate": 0.96, "converted_amount": 7680.00, "fee": 30.00 }
+
+Question: How many Indian Rupees will I get if I convert 600 US Dollars for a software subscription?
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "INR", "amount": 600 }
+Response: { "from": "USD", "to": "INR", "rate": 83.15, "converted_amount": 49890.00, "fee": 3.00 }
+
+Question: I am traveling to Seoul and need to exchange 2,000,000 South Korean Won from my US Dollars.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "USD", "to_currency": "KRW", "amount": 2000000 }
+Response: { "from": "USD", "to": "KRW", "rate": 1320.00, "converted_amount": 2640000000.00, "fee": 25.00 }
+
+Question: What is the conversion result for 1,500 Singapore Dollars to British Pounds for a flight ticket?
+Call: { "func_call": "get_exchange_rate", "from_currency": "SGD", "to_currency": "GBP", "amount": 1500 }
+Response: { "from": "SGD", "to": "GBP", "rate": 0.59, "converted_amount": 885.00, "fee": 0.00 }
+
+Question: Help me purchase 4,000 Brazilian Reals for a conference in Rio using my US Dollars.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "USD", "to_currency": "BRL", "amount": 4000 }
+Response: { "from": "USD", "to": "BRL", "rate": 5.05, "converted_amount": 20200.00, "fee": 16.00 }
+
+Question: I need to convert 750 New Zealand Dollars to US Dollars to pay an online invoice.
+Call: { "func_call": "convert_currency", "from_currency": "NZD", "to_currency": "USD", "amount": 750 }
+Response: { "from": "NZD", "to": "USD", "rate": 0.61, "converted_amount": 457.50, "fee": 2.25 }
+
+Question: Can you get me the rate for converting 3,000 Thai Baht to Euros for a hotel stay in Bangkok?
+Call: { "func_call": "get_exchange_rate", "from_currency": "THB", "to_currency": "EUR", "amount": 3000 }
+Response: { "from": "THB", "to": "EUR", "rate": 0.026, "converted_amount": 78.00, "fee": 0.00 }
+
+Question: Please execute a purchase of 10,000 Norwegian Krone using my British Pounds for a ski trip.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "GBP", "to_currency": "NOK", "amount": 10000 }
+Response: { "from": "GBP", "to": "NOK", "rate": 13.45, "converted_amount": 134500.00, "fee": 20.00 }

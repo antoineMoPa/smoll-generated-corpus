@@ -1,0 +1,51 @@
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Acknowledge the false positive on light sensor LUX-501 in the atrium; it was triggered by a camera flash during an event.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "LUX-501", "metric": "lumens", "threshold": 5000, "condition": "above" }
+Response: { "alert_id": "ALT-7741", "sensor_id": "LUX-501", "status": "acknowledged", "threshold": 5000 }
+
+Question: Disable the gas leak alert for sensor GAS-303 in the laboratory while we replace the filtration unit during the safety check.
+Call: { "func_call": "disable_alert", "sensor_id": "GAS-303", "metric": "ppm", "threshold": 50, "condition": "above" }
+Response: { "alert_id": "ALT-6629", "sensor_id": "GAS-303", "status": "disabled", "threshold": 50 }
+
+Question: Please acknowledge the motion detection alert on sensor MOT-88 in the hallway; it was a false alarm caused by a cleaning robot.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "MOT-88", "metric": "movement", "threshold": 1, "condition": "above" }
+Response: { "alert_id": "ALT-5517", "sensor_id": "MOT-88", "status": "acknowledged", "threshold": 1 }
+
+Question: Turn off the low battery voltage alert for beacon sensor BCN-12 while we swap out the power cells in the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "BCN-12", "metric": "voltage", "threshold": 3.2, "condition": "below" }
+Response: { "alert_id": "ALT-4405", "sensor_id": "BCN-12", "status": "disabled", "threshold": 3.2 }
+
+Question: Acknowledge the smoke density spike on sensor SMK-204 in the kitchen; it was a false alarm triggered by burnt toast.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "SMK-204", "metric": "particulate", "threshold": 0.8, "condition": "above" }
+Response: { "alert_id": "ALT-3393", "sensor_id": "SMK-204", "status": "acknowledged", "threshold": 0.8 }
+
+Question: Disable the rotational speed alert for turbine sensor TRB-99 during the blade inspection maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "TRB-99", "metric": "rpm", "threshold": 1500, "condition": "below" }
+Response: { "alert_id": "ALT-2281", "sensor_id": "TRB-99", "status": "disabled", "threshold": 1500 }
+
+Question: Please acknowledge the door open false alarm on sensor DR-45; the sensor was bumped during a delivery.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "DR-45", "metric": "contact", "threshold": 0, "condition": "above" }
+Response: { "alert_id": "ALT-1169", "sensor_id": "DR-45", "status": "acknowledged", "threshold": 0 }
+
+Question: Disable the flow rate alert for coolant pipe sensor CPL-77 while we flush the system in the scheduled maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "CPL-77", "metric": "flow_rate", "threshold": 25, "condition": "below" }
+Response: { "alert_id": "ALT-0057", "sensor_id": "CPL-77", "status": "disabled", "threshold": 25 }
+
+Question: Acknowledge the magnetic field anomaly on sensor MAG-33 near the MRI; it was a false alarm caused by a passing metal cart.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "MAG-33", "metric": "gauss", "threshold": 500, "condition": "above" }
+Response: { "alert_id": "ALT-9945", "sensor_id": "MAG-33", "status": "acknowledged", "threshold": 500 }
+
+Question: Turn off the ultraviolet exposure alert for sensor UV-60 in the sterilization room during the lamp replacement maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "UV-60", "metric": "uv_index", "threshold": 10, "condition": "above" }
+Response: { "alert_id": "ALT-8833", "sensor_id": "UV-60", "status": "disabled", "threshold": 10 }
+
+Question: Acknowledge the seismic vibration alert on foundation sensor FND-02; the reading was a false alarm due to nearby construction drilling.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "FND-02", "metric": "acceleration", "threshold": 0.5, "condition": "above" }
+Response: { "alert_id": "ALT-7721", "sensor_id": "FND-02", "status": "acknowledged", "threshold": 0.5 }
+
+Question: Disable the oxygen level alert for chamber sensor OX-15 while we purge the atmosphere during the calibration maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "OX-15", "metric": "oxygen_pct", "threshold": 19, "condition": "below" }
+Response: { "alert_id": "ALT-6609", "sensor_id": "OX-15", "status": "disabled", "threshold": 19 }

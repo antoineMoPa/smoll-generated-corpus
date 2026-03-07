@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+---
+Question: How many forks does the kubernetes repository have under the google owner?
+Call: { "func_call": "get_repo_info", "owner": "google", "repo": "kubernetes", "description": "", "private": false }
+Response: { "repo": "kubernetes", "owner": "google", "url": "https://github.com/google/kubernetes", "stars": 98200, "forks": 34500, "default_branch": "main" }
+
+Question: I need the default branch for the django project maintained by the django organization.
+Call: { "func_call": "get_repo_info", "owner": "django", "repo": "django", "description": "", "private": false }
+Response: { "repo": "django", "owner": "django", "url": "https://github.com/django/django", "stars": 72100, "forks": 29800, "default_branch": "main" }
+
+Question: What are the stats for the private payment-gateway repo owned by fintech-solutions?
+Call: { "func_call": "get_repo_info", "owner": "fintech-solutions", "repo": "payment-gateway", "description": "", "private": true }
+Response: { "repo": "payment-gateway", "owner": "fintech-solutions", "url": "https://github.com/fintech-solutions/payment-gateway", "stars": 5, "forks": 2, "default_branch": "develop" }
+
+Question: Show me the star count for the rust language repo owned by rust-lang.
+Call: { "func_call": "get_repo_info", "owner": "rust-lang", "repo": "rust", "description": "", "private": false }
+Response: { "repo": "rust", "owner": "rust-lang", "url": "https://github.com/rust-lang/rust", "stars": 89400, "forks": 11200, "default_branch": "master" }
+
+Question: List all repositories available for the user 'alice-codes'.
+Call: { "func_call": "list_repos", "owner": "alice-codes", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "alice-codes", "url": "https://github.com/alice-codes", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Please list every public repository under the organization 'mozilla'.
+Call: { "func_call": "list_repos", "owner": "mozilla", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "mozilla", "url": "https://github.com/mozilla", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Can you show me the private repos owned by ' stealth-research-lab'?
+Call: { "func_call": "list_repos", "owner": "stealth-research-lab", "repo": "", "description": "", "private": true }
+Response: { "repo": "*", "owner": "stealth-research-lab", "url": "https://github.com/stealth-research-lab", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: I want to see the fork count for the numpy library under numpy.
+Call: { "func_call": "get_repo_info", "owner": "numpy", "repo": "numpy", "description": "", "private": false }
+Response: { "repo": "numpy", "owner": "numpy", "url": "https://github.com/numpy/numpy", "stars": 24300, "forks": 9100, "default_branch": "main" }
+
+Question: Retrieve the URL and star count for the angular repo owned by angular.
+Call: { "func_call": "get_repo_info", "owner": "angular", "repo": "angular", "description": "", "private": false }
+Response: { "repo": "angular", "owner": "angular", "url": "https://github.com/angular/angular", "stars": 89700, "forks": 24500, "default_branch": "main" }
+
+Question: List all repositories for the owner 'cloud-native-init' including private ones.
+Call: { "func_call": "list_repos", "owner": "cloud-native-init", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "cloud-native-init", "url": "https://github.com/cloud-native-init", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Get the details for the terraform project under the hashicorp organization.
+Call: { "func_call": "get_repo_info", "owner": "hashicorp", "repo": "terraform", "description": "", "private": false }
+Response: { "repo": "terraform", "owner": "hashicorp", "url": "https://github.com/hashicorp/terraform", "stars": 41200, "forks": 7800, "default_branch": "main" }
+
+Question: What is the default branch for the vim runtime repo owned by vim?
+Call: { "func_call": "get_repo_info", "owner": "vim", "repo": "vim", "description": "", "private": false }
+Response: { "repo": "vim", "owner": "vim", "url": "https://github.com/vim/vim", "stars": 32100, "forks": 5400, "default_branch": "master" }

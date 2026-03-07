@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Locate bookstores within 2 kilometers of Union Station in Washington DC.
+Call: { "func_call": "find_nearby", "query": "bookstore", "location": "Union Station, Washington, DC", "radius_km": 2, "type": "book_store" }
+Response: { "places": [ { "id": "pl_dc_1201", "name": "Politics and Prose", "address": "5015 Connecticut Ave NW, Washington, DC 20008", "rating": 4.7, "open_now": true }, { "id": "pl_dc_1202", "name": "Second Story Books", "address": "2100 14th St NW, Washington, DC 20009", "rating": 4.4, "open_now": true } ], "total": 2 }
+
+Question: Find yoga studios near Venice Beach in Los Angeles.
+Call: { "func_call": "search_places", "query": "yoga studio", "location": "Venice Beach, CA", "radius_km": 1.5, "type": "gym" }
+Response: { "places": [ { "id": "pl_la_1301", "name": "Wanderlust Hollywood", "address": "1650 Ivar Ave, Los Angeles, CA 90028", "rating": 4.5, "open_now": true }, { "id": "pl_la_1302", "name": "Yoga Soup", "address": "1453 3rd Street Promenade, Santa Monica, CA 90401", "rating": 4.8, "open_now": false }, { "id": "pl_la_1303", "name": "The Yoga Collective", "address": "2900 Abbot Kinney Blvd, Venice, CA 90291", "rating": 4.6, "open_now": true } ], "total": 3 }
+
+Question: Are there any museums close to the National Mall in Washington DC?
+Call: { "func_call": "find_nearby", "query": "museum", "location": "National Mall, Washington, DC", "radius_km": 3, "type": "museum" }
+Response: { "places": [ { "id": "pl_dc_1401", "name": "Smithsonian National Air and Space Museum", "address": "600 Independence Ave SW, Washington, DC 20560", "rating": 4.8, "open_now": true }, { "id": "pl_dc_1402", "name": "National Gallery of Art", "address": "6th & Constitution Ave NW, Washington, DC 20565", "rating": 4.9, "open_now": true } ], "total": 2 }
+
+Question: Search for barbecue restaurants near the River Walk in San Antonio.
+Call: { "func_call": "search_places", "query": "barbecue", "location": "San Antonio River Walk, TX", "radius_km": 2, "type": "restaurant" }
+Response: { "places": [ { "id": "pl_sat_1501", "name": "Big H Cafe", "address": "502 Embassy Oaks, San Antonio, TX 78216", "rating": 4.6, "open_now": true }, { "id": "pl_sat_1502", "name": "Smoke Shack", "address": "218 E Houston St, San Antonio, TX 78205", "rating": 4.3, "open_now": true }, { "id": "pl_sat_1503", "name": "Cured at Pearl", "address": "306 Pearl Pkwy, San Antonio, TX 78215", "rating": 4.5, "open_now": false } ], "total": 3 }
+
+Question: I need a florist near the Space Needle in Seattle.
+Call: { "func_call": "search_places", "query": "florist", "location": "Space Needle, Seattle, WA", "radius_km": 1, "type": "florist" }
+Response: { "places": [ { "id": "pl_sea_1601", "name": "City Flowers", "address": "400 Broad St, Seattle, WA 98109", "rating": 4.2, "open_now": true }, { "id": "pl_sea_1602", "name": "Belltown Blooms", "address": "2200 1st Ave, Seattle, WA 98121", "rating": 4.7, "open_now": true } ], "total": 2 }
+
+Question: Find ice cream shops within 3 kilometers of South Beach in Miami.
+Call: { "func_call": "find_nearby", "query": "ice cream shop", "location": "South Beach, Miami, FL", "radius_km": 3, "type": "cafe" }
+Response: { "places": [ { "id": "pl_mia_1701", "name": "Azucar Ice Cream Company", "address": "1503 SW 8th St, Miami, FL 33135", "rating": 4.8, "open_now": true }, { "id": "pl_mia_1702", "name": "Frankie's Gelato", "address": "700 Washington Ave, Miami Beach, FL 33139", "rating": 4.5, "open_now": true }, { "id": "pl_mia_1703", "name": "La Spiga", "address": "1442 Washington Ave, Miami Beach, FL 33139", "rating": 4.4, "open_now": false } ], "total": 3 }
+
+Question: Locate hardware stores near the downtown district of Portland, Oregon.
+Call: { "func_call": "search_places", "query": "hardware store", "location": "Downtown Portland, OR", "radius_km": 4, "type": "hardware_store" }
+Response: { "places": [ { "id": "pl_por_1801", "name": "Ace Hardware", "address": "1234 SW Morrison St, Portland, OR 97205", "rating": 4.1, "open_now": true }, { "id": "pl_por_1802", "name": "Portland Hardware", "address": "2500 NE Sandy Blvd, Portland, OR 97232", "rating": 4.3, "open_now": true } ], "total": 2 }
+
+Question: Show me art galleries near the Museum District in Houston.
+Call: { "func_call": "find_nearby", "query": "art gallery", "location": "Museum District, Houston, TX", "radius_km": 2.5, "type": "art_gallery" }
+Response: { "places": [ { "id": "pl_hou_1901", "name": "Contemporary Arts Museum Houston", "address": "5216 Main St, Houston, TX 77002", "rating": 4.6, "open_now": true }, { "id": "pl_hou_1902", "name": "Lawndale Art Center", "address": "4912 Main St, Houston, TX 77002", "rating": 4.4, "open_now": false }, { "id": "pl_hou_1903", "name": "The Box House Gallery", "address": "1117 W 19th St, Houston, TX 77008", "rating": 4.7, "open_now": true } ], "total": 3 }
+
+Question: Are there any bowling alleys near the Strip in Las Vegas?
+Call: { "func_call": "search_places", "query": "bowling alley", "location": "Las Vegas Strip, NV", "radius_km": 5, "type": "bowling_alley" }
+Response: { "places": [ { "id": "pl_lv_2001", "name": "Orleans Bowling Center", "address": "4500 W Tropicana Ave, Las Vegas, NV 89103", "rating": 4.0, "open_now": true }, { "id": "pl_lv_2002", "name": "Gold Coast Bowling Center", "address": "4000 W Flamingo Rd, Las Vegas, NV 89103", "rating": 3.9, "open_now": true } ], "total": 2 }
+
+Question: Find seafood restaurants close to Fisherman's Wharf in San Francisco.
+Call: { "func_call": "search_places", "query": "seafood restaurant", "location": "Fisherman's Wharf, San Francisco, CA", "radius_km": 1, "type": "restaurant" }
+Response: { "places": [ { "id": "pl_sf_2101", "name": "Alioto's", "address": "8 Fishermans Wharf, San Francisco, CA 94133", "rating": 4.5, "open_now": true }, { "id": "pl_sf_2102", "name": "Fog Harbor Fish House", "address": "Pier 39, San Francisco, CA 94133", "rating": 4.3, "open_now": true }, { "id": "pl_sf_2103", "name": "The Codmother Fish & Chips", "address": "496 Beach St, San Francisco, CA 94133", "rating": 4.2, "open_now": false } ], "total": 3 }
+
+Question: Search for skate parks near Huntington Beach in California.
+Call: { "func_call": "find_nearby", "query": "skate park", "location": "Huntington Beach, CA", "radius_km": 3, "type": "park" }
+Response: { "places": [ { "id": "pl_hb_2201", "name": "Huntington Beach Skate Park", "address": "1800 Pacific Coast Hwy, Huntington Beach, CA 92648", "rating": 4.6, "open_now": true }, { "id": "pl_hb_2202", "name": "Bolza Park", "address": "600 14th St, Huntington Beach, CA 92648", "rating": 4.4, "open_now": true } ], "total": 2 }
+
+Question: I need a laundromat near the University of Michigan campus in Ann Arbor.
+Call: { "func_call": "search_places", "query": "laundromat", "location": "University of Michigan, Ann Arbor, MI", "radius_km": 2, "type": "laundry" }
+Response: { "places": [ { "id": "pl_aa_2301", "name": "Campus Laundry", "address": "512 E Washington St, Ann Arbor, MI 48104", "rating": 3.8, "open_now": true }, { "id": "pl_aa_2302", "name": "South University Laundromat", "address": "1000 S University Ave, Ann Arbor, MI 48104", "rating": 4.1, "open_now": true }, { "id": "pl_aa_2303", "name": "Quick Wash", "address": "320 Maynard St, Ann Arbor, MI 48104", "rating": 3.5, "open_now": false } ], "total": 3 }

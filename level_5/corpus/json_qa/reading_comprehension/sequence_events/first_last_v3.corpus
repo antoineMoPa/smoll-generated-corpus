@@ -1,0 +1,59 @@
+Context: First, David chopped the onions. Next, he sautéed them in olive oil. Finally, he added the tomatoes to the pan.
+Input: {"question": "What happened first?"}
+Output: {"answer": "David chopped the onions"}
+
+Context: The movie began with a dramatic explosion. The heroes escaped the building moments later. The film ended with a quiet sunset scene.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The film ended with a quiet sunset scene"}
+
+Context: To paint the wall, start by applying the primer. Then, roll on the first coat of blue paint. Finish by adding a second coat for even coverage.
+Input: {"question": "What happened first?"}
+Output: {"answer": "applying the primer"}
+
+Context: Sarah cleaned her room, organized her books, and then went to the library.
+Input: {"question": "What happened last?"}
+Output: {"answer": "went to the library"}
+
+Context: The experiment began when the heat source was turned on. The liquid started to boil within minutes. The temperature dropped once the heater was switched off.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the heat source was turned on"}
+
+Context: First, the baker mixed the dough. Second, he let it rise for an hour. Third, he shaped the loaves. Lastly, he baked them in the oven.
+Input: {"question": "What happened last?"}
+Output: {"answer": "he baked them in the oven"}
+
+Context: He unlocked the door, walked into the hallway, and turned on the lights.
+Input: {"question": "What happened first?"}
+Output: {"answer": "He unlocked the door"}
+
+Context: The festival opened with a ribbon-cutting ceremony. Food stalls opened their booths shortly after. The celebration closed with a live music performance.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The celebration closed with a live music performance"}
+
+Context: Before planting the tree, dig a hole two feet deep. Place the sapling inside carefully. Fill the hole with soil and water it thoroughly.
+Input: {"question": "What happened first?"}
+Output: {"answer": "dig a hole two feet deep"}
+
+Context: The mechanic inspected the engine, replaced the faulty spark plug, and then test-drove the car.
+Input: {"question": "What happened last?"}
+Output: {"answer": "test-drove the car"}
+
+Context: First, the ice cubes were placed in the tray. Hours later, the water froze solid. Eventually, the cubes were popped out for drinks.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the ice cubes were placed in the tray"}
+
+Context: The document was written on the computer, saved to the cloud, and then emailed to the manager.
+Input: {"question": "What happened last?"}
+Output: {"answer": "emailed to the manager"}
+
+Context: To wash the dishes, first scrape off the leftover food. Next, fill the sink with soapy water. Scrub the plates and rinse them clean.
+Input: {"question": "What happened first?"}
+Output: {"answer": "scrape off the leftover food"}
+
+Context: The play started with a monologue by the lead actor. The second act featured a lively dance number. The show concluded with the entire cast taking a bow.
+Input: {"question": "What happened last?"}
+Output: {"answer": "the show concluded with the entire cast taking a bow"}
+
+Context: First, the students registered for classes. Then, they bought their textbooks. After weeks of study, they took the final exam.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the students registered for classes"}

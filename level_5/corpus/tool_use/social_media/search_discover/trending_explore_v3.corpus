@@ -1,0 +1,62 @@
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: What hashtags are trending in Berlin right now?
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "", "location": "Berlin", "limit": 10 }
+Response: { "results": [{ "id": "tag_701", "type": "post", "content": "#BerlinWallArt", "likes": 52300 }, { "id": "tag_702", "type": "post", "content": "#TechnoNight", "likes": 48900 }, { "id": "tag_703", "type": "post", "content": "#SpreeRiverWalk", "likes": 31200 }], "total": 3 }
+
+---
+Question: Show me the top 8 global trending hashtags.
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "", "location": "", "limit": 8 }
+Response: { "results": [{ "id": "tag_801", "type": "post", "content": "#SpaceExploration", "likes": 1450000 }, { "id": "tag_802", "type": "post", "content": "#ElectricVehicles", "likes": 1120000 }, { "id": "tag_803", "type": "post", "content": "#GlobalPeace", "likes": 990000 }], "total": 3 }
+
+---
+Question: Get the explore feed for culinary arts.
+Call: { "func_call": "get_explore_feed", "query": "culinary arts", "hashtag": "", "location": "", "limit": 20 }
+Response: { "results": [{ "id": "post_101", "type": "post", "content": "Mastering the perfect soufflé", "likes": 18700 }, { "id": "post_102", "type": "post", "content": "Knife skills for beginners", "likes": 14500 }, { "id": "post_103", "type": "post", "content": "Fusion cuisine trends 2024", "likes": 11200 }], "total": 3 }
+
+---
+Question: Show trending sports hashtags in Rio de Janeiro.
+Call: { "func_call": "get_trending_hashtags", "query": "sports", "hashtag": "", "location": "Rio de Janeiro", "limit": 8 }
+Response: { "results": [{ "id": "tag_901", "type": "post", "content": "#RioMarathon", "likes": 73000 }, { "id": "tag_902", "type": "post", "content": "#BeachVolleyball", "likes": 61500 }, { "id": "tag_903", "type": "post", "content": "#SambaSoccer", "likes": 55000 }], "total": 3 }
+
+---
+Question: Fetch the explore feed for underwater photography in the Great Barrier Reef.
+Call: { "func_call": "get_explore_feed", "query": "underwater photography", "hashtag": "", "location": "Great Barrier Reef", "limit": 15 }
+Response: { "results": [{ "id": "post_201", "type": "post", "content": "Coral reef restoration project", "likes": 28400 }, { "id": "post_202", "type": "post", "content": "Swimming with sea turtles", "likes": 24100 }, { "id": "post_203", "type": "post", "content": "Deep blue shark encounter", "likes": 20900 }], "total": 3 }
+
+---
+Question: What is trending under the hashtag #TechStartups in San Francisco?
+Call: { "func_call": "get_trending_hashtags", "query": "", "hashtag": "#TechStartups", "location": "San Francisco", "limit": 12 }
+Response: { "results": [{ "id": "tag_111", "type": "post", "content": "#SFBayAreaJobs", "likes": 94000 }, { "id": "tag_112", "type": "post", "content": "#VentureCapital", "likes": 81000 }, { "id": "tag_113", "type": "post", "content": "#CodeLife", "likes": 72000 }], "total": 3 }
+
+---
+Question: Get the general explore feed for pet care advice.
+Call: { "func_call": "get_explore_feed", "query": "pet care advice", "hashtag": "", "location": "", "limit": 25 }
+Response: { "results": [{ "id": "post_301", "type": "post", "content": "Training your puppy in 7 days", "likes": 41000 }, { "id": "post_302", "type": "post", "content": "Best foods for senior cats", "likes": 36500 }, { "id": "post_303", "type": "post", "content": "DIY dog toy ideas", "likes": 32800 }], "total": 3 }
+
+---
+Question: Show trending art hashtags in Florence during the Renaissance festival.
+Call: { "func_call": "get_trending_hashtags", "query": "art", "hashtag": "", "location": "Florence", "limit": 10 }
+Response: { "results": [{ "id": "tag_221", "type": "post", "content": "#FlorenceArtFest", "likes": 165000 }, { "id": "tag_222", "type": "post", "content": "#ClassicSculpture", "likes": 128000 }, { "id": "tag_223", "type": "post", "content": "#UffiziGallery", "likes": 105000 }], "total": 3 }
+
+---
+Question: Fetch explore feed results for urban gardening.
+Call: { "func_call": "get_explore_feed", "query": "urban gardening", "hashtag": "", "location": "", "limit": 18 }
+Response: { "results": [{ "id": "post_401", "type": "post", "content": "Growing tomatoes on a balcony", "likes": 22300 }, { "id": "post_402", "type": "post", "content": "Vertical garden setups", "likes": 19800 }, { "id": "post_403", "type": "post", "content": "Herb pots for small kitchens", "likes": 16400 }], "total": 3 }
+
+---
+Question: What jazz hashtags are trending in New Orleans?
+Call: { "func_call": "get_trending_hashtags", "query": "jazz", "hashtag": "", "location": "New Orleans", "limit": 7 }
+Response: { "results": [{ "id": "tag_331", "type": "post", "content": "#NOLAJazzFest", "likes": 58000 }, { "id": "tag_332", "type": "post", "content": "#BourbonStreetBeats", "likes": 49500 }, { "id": "tag_333", "type": "post", "content": "#BrassBandParade", "likes": 42000 }], "total": 3 }
+
+---
+Question: Get the explore feed for minimalist interior design.
+Call: { "func_call": "get_explore_feed", "query": "minimalist interior design", "hashtag": "", "location": "", "limit": 22 }
+Response: { "results": [{ "id": "post_501", "type": "post", "content": "Decluttering your living room", "likes": 31200 }, { "id": "post_502", "type": "post", "content": "Neutral color palette ideas", "likes": 27600 }, { "id": "post_503", "type": "post", "content": "Functional furniture choices", "likes": 23900 }], "total": 3 }
+
+---
+Question: Show trending anime hashtags in Osaka.
+Call: { "func_call": "get_trending_hashtags", "query": "anime", "hashtag": "", "location": "Osaka", "limit": 9 }
+Response: { "results": [{ "id": "tag_441", "type": "post", "content": "#OsakaAnimeExpo", "likes": 89000 }, { "id": "tag_442", "type": "post", "content": "#CosplayJapan", "likes": 77000 }, { "id": "tag_443", "type": "post", "content": "#MangaCollection", "likes": 64000 }], "total": 3 }

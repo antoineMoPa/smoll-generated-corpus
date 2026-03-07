@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: What is the current quantity of the mechanical keyboard model MK-9000 in the Los Angeles distribution hub?
+Call: { "func_call": "get_stock_level", "sku": "MK-9000-RGB", "location_id": "LAX-DH-01", "threshold": 60 }
+Response: { "sku": "MK-9000-RGB", "product_name": "Mechanical Gaming Keyboard RGB", "quantity": 412, "location": "LAX-DH-01", "status": "in_stock" }
+
+Question: Determine if the ultrawide monitor stand is available in the Houston warehouse and check against a threshold of 25.
+Call: { "func_call": "check_availability", "sku": "MS-UW-34", "location_id": "HOU-WH-02", "threshold": 25 }
+Response: { "sku": "MS-UW-34", "product_name": "Ultrawide Monitor Stand 34-inch", "quantity": 14, "location": "HOU-WH-02", "status": "low_stock" }
+
+Question: How many units of the Thunderbolt 4 dock are stored in the Philadelphia fulfillment center?
+Call: { "func_call": "get_stock_level", "sku": "DK-TB4-12", "location_id": "PHL-FC-03", "threshold": 80 }
+Response: { "sku": "DK-TB4-12", "product_name": "Thunderbolt 4 Docking Station", "quantity": 0, "location": "PHL-FC-03", "status": "out_of_stock" }
+
+Question: Please retrieve the inventory count for the ergonomic office chair at the Detroit depot.
+Call: { "func_call": "get_stock_level", "sku": "CHR-ERG-PRO", "location_id": "DTW-DEP-04", "threshold": 30 }
+Response: { "sku": "CHR-ERG-PRO", "product_name": "Ergonomic Mesh Office Chair", "quantity": 95, "location": "DTW-DEP-04", "status": "in_stock" }
+
+Question: Is the curved gaming monitor running low in the Minneapolis warehouse if our alert limit is set to 10 units?
+Call: { "func_call": "check_availability", "sku": "MON-CRV-32", "location_id": "MSP-WH-05", "threshold": 10 }
+Response: { "sku": "MON-CRV-32", "product_name": "32-inch Curved Gaming Monitor", "quantity": 8, "location": "MSP-WH-05", "status": "low_stock" }
+
+Question: Fetch the stock details for the wireless presentation remote located in the Charlotte storage unit.
+Call: { "func_call": "get_stock_by_location", "sku": "RMT-PRES-WL", "location_id": "CLT-ST-06", "threshold": 20 }
+Response: { "sku": "RMT-PRES-WL", "product_name": "Wireless Presentation Remote", "quantity": 55, "location": "CLT-ST-06", "status": "in_stock" }
+
+Question: Check the availability of the external hard drive 2TB in the Las Vegas logistics center with a minimum threshold of 40.
+Call: { "func_call": "check_availability", "sku": "HDD-EXT-2TB", "location_id": "LAS-LOG-07", "threshold": 40 }
+Response: { "sku": "HDD-EXT-2TB", "product_name": "External Hard Drive 2TB", "quantity": 3, "location": "LAS-LOG-07", "status": "low_stock" }
+
+Question: How many smart doorbells are currently held in the Nashville regional facility?
+Call: { "func_call": "get_stock_level", "sku": "DB-SMART-HD", "location_id": "BNA-REG-08", "threshold": 50 }
+Response: { "sku": "DB-SMART-HD", "product_name": "HD Smart Video Doorbell", "quantity": 188, "location": "BNA-REG-08", "status": "in_stock" }
+
+Question: Verify the stock status of the USB-A to Lightning cable in the Salt Lake City warehouse against a threshold of 200.
+Call: { "func_call": "check_availability", "sku": "CBL-LIGHT-1M", "location_id": "SLC-WH-09", "threshold": 200 }
+Response: { "sku": "CBL-LIGHT-1M", "product_name": "USB-A to Lightning Cable 1M", "quantity": 0, "location": "SLC-WH-09", "status": "out_of_stock" }
+
+Question: What is the inventory level for the portable power bank in the Columbus distribution node?
+Call: { "func_call": "get_stock_level", "sku": "PWR-BNK-20K", "location_id": "CMH-DIST-10", "threshold": 35 }
+Response: { "sku": "PWR-BNK-20K", "product_name": "20000mAh Portable Power Bank", "quantity": 72, "location": "CMH-DIST-10", "status": "in_stock" }
+
+Question: Check if the HDMI 2.1 cable is available in the Raleigh facility and if it falls below 150 units.
+Call: { "func_call": "check_availability", "sku": "CBL-HDMI21-3M", "location_id": "RDU-FAC-11", "threshold": 150 }
+Response: { "sku": "CBL-HDMI21-3M", "product_name": "High Speed HDMI 2.1 Cable 3M", "quantity": 110, "location": "RDU-FAC-11", "status": "low_stock" }
+
+Question: Get the current stock count for the digital drawing tablet in the Sacramento warehouse.
+Call: { "func_call": "get_stock_by_location", "sku": "TAB-DRAW-13", "location_id": "SAC-WH-12", "threshold": 25 }
+Response: { "sku": "TAB-DRAW-13", "product_name": "13-inch Digital Drawing Tablet", "quantity": 130, "location": "SAC-WH-12", "status": "in_stock" }

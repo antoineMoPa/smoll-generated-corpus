@@ -1,0 +1,51 @@
+Available Tools: create_report | get_report | list_reports | schedule_report | export_report
+Call Schema: { "func_call": "string", "report_id": "string", "name": "string", "metrics": ["string"], "dimensions": ["string"], "from_date": "string", "to_date": "string" }
+Response Schema: { "report_id": "string", "name": "string", "rows": [{}], "total_rows": number, "generated_at": "string" }
+
+Question: Schedule a weekly newsletter summarizing blog post engagement for the content team.
+Call: { "func_call": "schedule_report", "report_id": "rpt_blog_weekly_eng", "name": "Weekly Blog Engagement", "metrics": ["page_views", "avg_time_on_page", "social_shares"], "dimensions": ["author", "category"], "from_date": "2023-11-06", "to_date": "2023-11-12" }
+Response: { "report_id": "rpt_blog_weekly_eng", "name": "Weekly Blog Engagement", "rows": [], "total_rows": 0, "generated_at": "2023-11-13T09:00:00Z" }
+
+Question: Export the mobile app crash logs for version 2.4 to CSV for the engineering lead.
+Call: { "func_call": "export_report", "report_id": "rpt_app_crashes_v24", "name": "App Crashes v2.4", "metrics": ["crash_count", "affected_users"], "dimensions": ["os_version", "device_model"], "from_date": "2023-11-01", "to_date": "2023-11-15" }
+Response: { "report_id": "rpt_app_crashes_v24", "name": "App Crashes v2.4", "rows": [{"os_version": "iOS 17", "device_model": "iPhone 14", "crash_count": 45, "affected_users": 38}, {"os_version": "Android 13", "device_model": "Pixel 7", "crash_count": 12, "affected_users": 10}], "total_rows": 2, "generated_at": "2023-11-16T10:20:00Z" }
+
+Question: Create a real-time view of current warehouse temperature readings.
+Call: { "func_call": "create_report", "report_id": "rpt_warehouse_temp_live", "name": "Live Warehouse Temperatures", "metrics": ["current_temp", "humidity_level"], "dimensions": ["zone_id", "sensor_id"], "from_date": "2023-11-16", "to_date": "2023-11-16" }
+Response: { "report_id": "rpt_warehouse_temp_live", "name": "Live Warehouse Temperatures", "rows": [{"zone_id": "Cold-Storage-A", "sensor_id": "SENS-001", "current_temp": -18.5, "humidity_level": 45}, {"zone_id": "Dry-Goods-B", "sensor_id": "SENS-002", "current_temp": 22.0, "humidity_level": 30}], "total_rows": 2, "generated_at": "2023-11-16T14:30:15Z" }
+
+Question: Schedule a daily email report monitoring API error rates by endpoint.
+Call: { "func_call": "schedule_report", "report_id": "rpt_api_errors_daily", "name": "Daily API Error Rates", "metrics": ["error_count", "error_rate_percent"], "dimensions": ["endpoint_path", "http_method"], "from_date": "2023-11-15", "to_date": "2023-11-15" }
+Response: { "report_id": "rpt_api_errors_daily", "name": "Daily API Error Rates", "rows": [], "total_rows": 0, "generated_at": "2023-11-16T08:15:00Z" }
+
+Question: Export the Q4 advertising spend breakdown by platform to a CSV file.
+Call: { "func_call": "export_report", "report_id": "rpt_ad_spend_q4", "name": "Q4 Ad Spend by Platform", "metrics": ["total_spend", "impressions", "cpm"], "dimensions": ["platform", "campaign_type"], "from_date": "2023-10-01", "to_date": "2023-12-31" }
+Response: { "report_id": "rpt_ad_spend_q4", "name": "Q4 Ad Spend by Platform", "rows": [{"platform": "Google Ads", "campaign_type": "Search", "total_spend": 5000.00, "impressions": 250000, "cpm": 20.00}, {"platform": "Facebook", "campaign_type": "Display", "total_spend": 3200.00, "impressions": 400000, "cpm": 8.00}], "total_rows": 2, "generated_at": "2023-12-01T11:45:30Z" }
+
+Question: Generate a monthly PDF summary of subscription churn reasons for the product manager.
+Call: { "func_call": "schedule_report", "report_id": "rpt_churn_reasonsMonthly", "name": "Monthly Churn Reasons", "metrics": ["churned_count", "churn_rate"], "dimensions": ["reason_category", "subscription_tier"], "from_date": "2023-11-01", "to_date": "2023-11-30" }
+Response: { "report_id": "rpt_churn_reasonsMonthly", "name": "Monthly Churn Reasons", "rows": [], "total_rows": 0, "generated_at": "2023-12-01T09:30:00Z" }
+
+Question: Export the customer satisfaction survey results for November to CSV.
+Call: { "func_call": "export_report", "report_id": "rpt_csat_nov", "name": "November CSAT Results", "metrics": ["average_score", "response_count"], "dimensions": ["survey_channel", "customer_segment"], "from_date": "2023-11-01", "to_date": "2023-11-30" }
+Response: { "report_id": "rpt_csat_nov", "name": "November CSAT Results", "rows": [{"survey_channel": "Email", "customer_segment": "Enterprise", "average_score": 4.7, "response_count": 150}, {"survey_channel": "In-App", "customer_segment": "SMB", "average_score": 4.2, "response_count": 890}], "total_rows": 2, "generated_at": "2023-12-02T13:10:45Z" }
+
+Question: Schedule a bi-weekly report on new user sign-ups by referral source.
+Call: { "func_call": "schedule_report", "report_id": "rpt_signups_biweekly", "name": "Bi-Weekly New Sign-ups", "metrics": ["new_users", "conversion_rate"], "dimensions": ["referral_source", "landing_page"], "from_date": "2023-11-01", "to_date": "2023-11-14" }
+Response: { "report_id": "rpt_signups_biweekly", "name": "Bi-Weekly New Sign-ups", "rows": [], "total_rows": 0, "generated_at": "2023-11-15T07:45:00Z" }
+
+Question: Create an immediate snapshot of cloud storage usage across all buckets.
+Call: { "func_call": "create_report", "report_id": "rpt_storage_snapshot_now", "name": "Cloud Storage Usage Snapshot", "metrics": ["used_gb", "cost_estimate"], "dimensions": ["bucket_name", "storage_class"], "from_date": "2023-11-16", "to_date": "2023-11-16" }
+Response: { "report_id": "rpt_storage_snapshot_now", "name": "Cloud Storage Usage Snapshot", "rows": [{"bucket_name": "logs-archive", "storage_class": "Glacier", "used_gb": 5000, "cost_estimate": 25.00}, {"bucket_name": "media-assets", "storage_class": "Standard", "used_gb": 1200, "cost_estimate": 28.80}], "total_rows": 2, "generated_at": "2023-11-16T15:22:10Z" }
+
+Question: Export the manufacturing defect rates for Product Line X in October to CSV.
+Call: { "func_call": "export_report", "report_id": "rpt_defects_plx_oct", "name": "Product Line X Defect Rates", "metrics": ["defect_count", "defect_rate_ppm"], "dimensions": ["production_line", "shift"], "from_date": "2023-10-01", "to_date": "2023-10-31" }
+Response: { "report_id": "rpt_defects_plx_oct", "name": "Product Line X Defect Rates", "rows": [{"production_line": "Line-A", "shift": "Morning", "defect_count": 12, "defect_rate_ppm": 150}, {"production_line": "Line-B", "shift": "Night", "defect_count": 8, "defect_rate_ppm": 95}], "total_rows": 2, "generated_at": "2023-11-02T09:55:20Z" }
+
+Question: Schedule a daily alert for database backup completion status.
+Call: { "func_call": "schedule_report", "report_id": "rpt_backup_status_daily", "name": "Daily Backup Status", "metrics": ["backup_size_gb", "duration_minutes"], "dimensions": ["database_name", "backup_type"], "from_date": "2023-11-15", "to_date": "2023-11-15" }
+Response: { "report_id": "rpt_backup_status_daily", "name": "Daily Backup Status", "rows": [], "total_rows": 0, "generated_at": "2023-11-16T06:00:00Z" }
+
+Question: Export the hotel occupancy rates and average daily rate for the holiday season to CSV.
+Call: { "func_call": "export_report", "report_id": "rpt_hotel_holiday_stats", "name": "Holiday Season Hotel Stats", "metrics": ["occupancy_rate", "adr"], "dimensions": ["property_id", "room_type"], "from_date": "2023-12-20", "to_date": "2023-12-26" }
+Response: { "report_id": "rpt_hotel_holiday_stats", "name": "Holiday Season Hotel Stats", "rows": [{"property_id": "HTL-NY-01", "room_type": "Suite", "occupancy_rate": 0.95, "adr": 450.00}, {"property_id": "HTL-NY-01", "room_type": "Standard", "occupancy_rate": 0.88, "adr": 220.00}], "total_rows": 2, "generated_at": "2023-12-27T10:15:30Z" }

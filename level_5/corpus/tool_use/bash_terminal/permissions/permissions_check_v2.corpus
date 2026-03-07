@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Inspect the access rights of the Apache virtual host config at /etc/apache2/sites-available/default.
+Call: { "func_call": "check_permissions", "path": "/etc/apache2/sites-available/default", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Permit the user 'jenkins' to join the 'kvm' group for managing virtual machines.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "jenkins:kvm" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Restrict access to the credentials file /etc/secrets/api_keys so only the root user can read it.
+Call: { "func_call": "chmod", "path": "/etc/secrets/api_keys", "mode": "400", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-r--------" }
+
+Question: Assign ownership of the application logs folder /var/log/myapp to the 'syslog' user and group.
+Call: { "func_call": "chown", "path": "/var/log/myapp", "mode": "", "owner": "syslog:syslog" }
+Response: { "success": true, "previous_mode": "drwxr-xr-x", "new_mode": "drwxr-xr-x" }
+
+Question: Validate the permission settings on the SSH daemon config /etc/ssh/sshd_config prior to restart.
+Call: { "func_call": "check_permissions", "path": "/etc/ssh/sshd_config", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Include the analyst 'mike' in the 'audit' group to enable log review capabilities.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "mike:audit" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Allow all users to execute the monitoring script located at /usr/local/bin/health_check.sh.
+Call: { "func_call": "chmod", "path": "/usr/local/bin/health_check.sh", "mode": "755", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rwxr-xr-x" }
+
+Question: Reassign the cache directory /var/cache/nginx to be owned by the 'nginx' user and group.
+Call: { "func_call": "chown", "path": "/var/cache/nginx", "mode": "", "owner": "nginx:nginx" }
+Response: { "success": true, "previous_mode": "drwxr-xr-x", "new_mode": "drwxr-xr-x" }
+
+Question: Ensure the kernel parameter file /etc/sysctl.d/99-custom.conf has secure read-only permissions.
+Call: { "func_call": "check_permissions", "path": "/etc/sysctl.d/99-custom.conf", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Grant the dba user 'oracle' membership in the 'dba' group for database administration tasks.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "oracle:dba" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Apply the setgid bit to the shared documents folder /srv/docs so new files inherit the group.
+Call: { "func_call": "chmod", "path": "/srv/docs", "mode": "2775", "owner": "" }
+Response: { "success": true, "previous_mode": "drwxrwxr-x", "new_mode": "drwxrwsr-x" }
+
+Question: Update the owner of the printer spool /var/spool/cups to the 'lp' user while retaining the 'lp' group.
+Call: { "func_call": "chown", "path": "/var/spool/cups", "mode": "", "owner": "lp:lp" }
+Response: { "success": true, "previous_mode": "drwxr-xr-x", "new_mode": "drwxr-xr-x" }

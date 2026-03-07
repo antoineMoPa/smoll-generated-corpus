@@ -1,0 +1,51 @@
+Available Tools: get_ticket_status | list_open_tickets | add_reply | close_ticket | reopen_ticket
+Call Schema: { "func_call": "string", "ticket_id": "string", "customer_id": "string", "reply": "string" }
+Response Schema: { "ticket_id": "string", "status": "open|in_progress|resolved|closed", "replies": [{ "author": "string", "message": "string", "timestamp": "string" }] }
+---
+Question: Could you verify the current status of ticket T-2055 for customer C-771 and check if the database team has replied?
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-2055", "customer_id": "C-771", "reply": "" }
+Response: { "ticket_id": "T-2055", "status": "in_progress", "replies": [{ "author": "Support Agent Beth", "message": "The database team is currently analyzing the query logs.", "timestamp": "2023-10-25T08:20:00Z" }] }
+
+Question: Please update ticket T-3398 for customer C-104 with a message stating that their subscription renewal failed due to an expired card.
+Call: { "func_call": "add_reply", "ticket_id": "T-3398", "customer_id": "C-104", "reply": "Your subscription renewal could not be processed because the credit card on file has expired. Please update your payment method." }
+Response: { "ticket_id": "T-3398", "status": "open", "replies": [{ "author": "Customer C-104", "message": "Why was my service suspended?", "timestamp": "2023-10-25T09:10:00Z" }, { "author": "Support Agent Derek", "message": "Your subscription renewal could not be processed because the credit card on file has expired. Please update your payment method.", "timestamp": "2023-10-25T09:15:00Z" }] }
+
+Question: What is the latest on ticket T-8821 for customer C-559 regarding the mobile app crash?
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-8821", "customer_id": "C-559", "reply": "" }
+Response: { "ticket_id": "T-8821", "status": "resolved", "replies": [{ "author": "Customer C-559", "message": "App crashes when uploading photos.", "timestamp": "2023-10-24T15:30:00Z" }, { "author": "Support Agent Elena", "message": "A patch has been deployed. Please update to version 2.4.1.", "timestamp": "2023-10-25T10:00:00Z" }, { "author": "Customer C-559", "message": "Confirmed fixed, thanks!", "timestamp": "2023-10-25T10:30:00Z" }] }
+
+Question: Add a response to ticket T-4476 for customer C-223 informing them that their data export request is now processing.
+Call: { "func_call": "add_reply", "ticket_id": "T-4476", "customer_id": "C-223", "reply": "Your data export request has been queued and is currently processing. You will receive an email with the download link shortly." }
+Response: { "ticket_id": "T-4476", "status": "in_progress", "replies": [{ "author": "Customer C-223", "message": "I need a full backup of my account data.", "timestamp": "2023-10-25T11:00:00Z" }, { "author": "Support Agent Felix", "message": "Your data export request has been queued and is currently processing. You will receive an email with the download link shortly.", "timestamp": "2023-10-25T11:20:00Z" }] }
+
+Question: Check the status of ticket T-6609 for customer C-887 to see if the security issue has been mitigated.
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-6609", "customer_id": "C-887", "reply": "" }
+Response: { "ticket_id": "T-6609", "status": "in_progress", "replies": [{ "author": "Support Agent Grace", "message": "We have isolated the affected accounts and are resetting credentials.", "timestamp": "2023-10-25T12:45:00Z" }] }
+
+Question: Send a note to customer C-334 on ticket T-1129 confirming that their two-factor authentication has been successfully enabled.
+Call: { "func_call": "add_reply", "ticket_id": "T-1129", "customer_id": "C-334", "reply": "Two-factor authentication is now active on your account. Please save your backup codes in a secure location." }
+Response: { "ticket_id": "T-1129", "status": "resolved", "replies": [{ "author": "Customer C-334", "message": "How do I turn on 2FA?", "timestamp": "2023-10-25T13:00:00Z" }, { "author": "Support Agent Hugo", "message": "Two-factor authentication is now active on your account. Please save your backup codes in a secure location.", "timestamp": "2023-10-25T13:05:00Z" }] }
+
+Question: I need to know the current state of ticket T-9943 for customer C-665 regarding their domain transfer.
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-9943", "customer_id": "C-665", "reply": "" }
+Response: { "ticket_id": "T-9943", "status": "open", "replies": [{ "author": "Customer C-665", "message": "Domain transfer is stuck at 'Pending Approval'.", "timestamp": "2023-10-25T14:15:00Z" }, { "author": "Support Agent Iris", "message": "We have contacted the registrar to expedite the approval process.", "timestamp": "2023-10-25T14:30:00Z" }] }
+
+Question: Reply to ticket T-5512 for customer C-992 letting them know that the feature request has been added to the product roadmap.
+Call: { "func_call": "add_reply", "ticket_id": "T-5512", "customer_id": "C-992", "reply": "Thank you for the suggestion. This feature request has been logged and added to our Q4 product roadmap." }
+Response: { "ticket_id": "T-5512", "status": "closed", "replies": [{ "author": "Customer C-992", "message": "Can you add dark mode to the dashboard?", "timestamp": "2023-10-24T16:00:00Z" }, { "author": "Support Agent Jack", "message": "Thank you for the suggestion. This feature request has been logged and added to our Q4 product roadmap.", "timestamp": "2023-10-25T09:00:00Z" }] }
+
+Question: Can you look up ticket T-7734 for customer C-441 and tell me if the billing error was corrected?
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-7734", "customer_id": "C-441", "reply": "" }
+Response: { "ticket_id": "T-7734", "status": "resolved", "replies": [{ "author": "Customer C-441", "message": "I was charged twice for the monthly plan.", "timestamp": "2023-10-25T10:10:00Z" }, { "author": "Support Agent Kara", "message": "The duplicate charge has been reversed and a credit applied to your account.", "timestamp": "2023-10-25T10:45:00Z" }] }
+
+Question: Please inform customer C-778 on ticket T-2267 that the server migration is complete and services are restored.
+Call: { "func_call": "add_reply", "ticket_id": "T-2267", "customer_id": "C-778", "reply": "The server migration has been successfully completed. All services are now fully operational." }
+Response: { "ticket_id": "T-2267", "status": "resolved", "replies": [{ "author": "Support Agent Liam", "message": "Migration started at 2 AM EST.", "timestamp": "2023-10-25T02:00:00Z" }, { "author": "Support Agent Liam", "message": "The server migration has been successfully completed. All services are now fully operational.", "timestamp": "2023-10-25T06:30:00Z" }] }
+
+Question: What is the status of ticket T-3355 for customer C-116? They reported an issue with email delivery.
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-3355", "customer_id": "C-116", "reply": "" }
+Response: { "ticket_id": "T-3355", "status": "in_progress", "replies": [{ "author": "Customer C-116", "message": "Outbound emails are bouncing with error 550.", "timestamp": "2023-10-25T15:20:00Z" }, { "author": "Support Agent Mia", "message": "We are reviewing the SMTP logs to identify the root cause.", "timestamp": "2023-10-25T15:35:00Z" }] }
+
+Question: Add a comment to ticket T-8844 for customer C-553 stating that we need admin access to troubleshoot the plugin conflict.
+Call: { "func_call": "add_reply", "ticket_id": "T-8844", "customer_id": "C-553", "reply": "To resolve the plugin conflict, we require temporary administrator access to your dashboard. Please let us know if this is acceptable." }
+Response: { "ticket_id": "T-8844", "status": "open", "replies": [{ "author": "Customer C-553", "message": "Site breaks whenever I activate the SEO plugin.", "timestamp": "2023-10-25T16:00:00Z" }, { "author": "Support Agent Noah", "message": "To resolve the plugin conflict, we require temporary administrator access to your dashboard. Please let us know if this is acceptable.", "timestamp": "2023-10-25T16:15:00Z" }] }

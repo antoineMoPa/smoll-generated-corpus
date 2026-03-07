@@ -1,0 +1,95 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Get the first 10 user IDs and emails from the users table.
+Call: { "func_call": "select_records", "table": "users", "columns": ["id", "email"], "where": "1=1", "limit": 10 }
+Response: { "rows": [{"id": 101, "email": "alice@example.com"}, {"id": 102, "email": "bob@example.com"}, {"id": 103, "email": "charlie@example.com"}], "count": 3, "query_ms": 12 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Find all active products with a price greater than 50.
+Call: { "func_call": "select_with_filter", "table": "products", "columns": ["product_id", "name", "price"], "where": "status = 'active' AND price > 50", "limit": 50 }
+Response: { "rows": [{"product_id": 5001, "name": "Wireless Mouse", "price": 59.99}, {"product_id": 5002, "name": "Mechanical Keyboard", "price": 120.00}], "count": 2, "query_ms": 8 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve order details joined with customer names for orders shipped to New York.
+Call: { "func_call": "select_with_join", "table": "orders", "columns": ["orders.id", "orders.total", "customers.name"], "where": "orders.shipping_city = 'New York'", "limit": 20 }
+Response: { "rows": [{"id": 9001, "total": 250.50, "name": "John Doe"}, {"id": 9002, "total": 45.00, "name": "Jane Smith"}], "count": 2, "query_ms": 24 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count how many users registered in the last 30 days.
+Call: { "func_call": "count_records", "table": "users", "columns": ["id"], "where": "registered_at > NOW() - INTERVAL '30 days'", "limit": 1 }
+Response: { "rows": [], "count": 145, "query_ms": 5 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List the top 5 most expensive products currently in stock.
+Call: { "func_call": "select_with_filter", "table": "products", "columns": ["name", "price", "stock_quantity"], "where": "stock_quantity > 0", "limit": 5 }
+Response: { "rows": [{"name": "Gaming Laptop", "price": 1999.99, "stock_quantity": 12}, {"name": "4K Monitor", "price": 899.00, "stock_quantity": 8}], "count": 2, "query_ms": 15 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Get all orders placed by user ID 405 in the last week.
+Call: { "func_call": "select_with_filter", "table": "orders", "columns": ["id", "order_date", "total_amount"], "where": "user_id = 405 AND order_date >= NOW() - INTERVAL '7 days'", "limit": 100 }
+Response: { "rows": [{"id": 7721, "order_date": "2023-10-25", "total_amount": 34.50}, {"id": 7725, "order_date": "2023-10-27", "total_amount": 12.99}], "count": 2, "query_ms": 9 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Fetch user profiles and their associated role names using a join.
+Call: { "func_call": "select_with_join", "table": "users", "columns": ["users.username", "roles.role_name"], "where": "users.active = true", "limit": 50 }
+Response: { "rows": [{"username": "admin_user", "role_name": "Administrator"}, {"username": "guest_01", "role_name": "Guest"}], "count": 2, "query_ms": 18 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Show me the first 20 product names and categories where the category is 'Electronics'.
+Call: { "func_call": "select_with_filter", "table": "products", "columns": ["name", "category"], "where": "category = 'Electronics'", "limit": 20 }
+Response: { "rows": [{"name": "Smartphone X", "category": "Electronics"}, {"name": "Tablet Pro", "category": "Electronics"}, {"name": "Headphones Z", "category": "Electronics"}], "count": 3, "query_ms": 7 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve all columns for the user with email 'test@domain.com'.
+Call: { "func_call": "select_records", "table": "users", "columns": ["*"], "where": "email = 'test@domain.com'", "limit": 1 }
+Response: { "rows": [{"id": 550, "email": "test@domain.com", "name": "Test User", "active": true}], "count": 1, "query_ms": 4 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List orders with status 'pending' joined with shipping addresses.
+Call: { "func_call": "select_with_join", "table": "orders", "columns": ["orders.id", "addresses.street", "addresses.city"], "where": "orders.status = 'pending'", "limit": 30 }
+Response: { "rows": [{"id": 8801, "street": "123 Maple Ave", "city": "Springfield"}, {"id": 8805, "street": "456 Oak Ln", "city": "Shelbyville"}], "count": 2, "query_ms": 22 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count the number of products priced below 10 dollars.
+Call: { "func_call": "count_records", "table": "products", "columns": ["product_id"], "where": "price < 10.00", "limit": 1 }
+Response: { "rows": [], "count": 42, "query_ms": 6 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Get the last 5 orders sorted by date for customer ID 202.
+Call: { "func_call": "select_with_filter", "table": "orders", "columns": ["id", "order_date", "total"], "where": "customer_id = 202", "limit": 5 }
+Response: { "rows": [{"id": 9910, "order_date": "2023-10-28", "total": 150.00}, {"id": 9805, "order_date": "2023-10-15", "total": 22.50}], "count": 2, "query_ms": 11 }

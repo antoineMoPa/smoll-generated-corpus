@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Send a push notification to user usr_89210 about their order shipping.
+Call: { "func_call": "send_push", "user_id": "usr_89210", "title": "Your Order Has Shipped", "body": "Great news! Your package #4492 is on its way and will arrive by Tuesday.", "data": { "order_id": "4492", "type": "shipping_update" }, "device_token": "fcm_tok_99a8b7c6d5e4f3g2h1" }
+Response: { "notification_id": "notif_x7y8z9w0", "status": "sent", "timestamp": "2023-10-27T14:32:15Z" }
+
+Question: Notify user usr_12345 that their payment was successful.
+Call: { "func_call": "send_push", "user_id": "usr_12345", "title": "Payment Received", "body": "We've successfully processed your payment of $49.99 for your monthly subscription.", "data": { "amount": "49.99", "currency": "USD", "transaction_id": "txn_556677" }, "device_token": "apns_tok_112233445566778899" }
+Response: { "notification_id": "notif_a1b2c3d4", "status": "delivered", "timestamp": "2023-10-27T15:05:42Z" }
+
+Question: Alert user usr_55678 about a security login from a new device.
+Call: { "func_call": "send_push", "user_id": "usr_55678", "title": "New Device Login Detected", "body": "Your account was accessed from a Chrome browser on Windows in Seattle, WA. Was this you?", "data": { "location": "Seattle, WA", "device_type": "Chrome/Windows", "action_required": true }, "device_token": "fcm_tok_zz99yy88xx77ww66vv" }
+Response: { "notification_id": "notif_e5f6g7h8", "status": "sent", "timestamp": "2023-10-27T16:12:03Z" }
+
+Question: Remind user usr_33421 about their upcoming appointment tomorrow.
+Call: { "func_call": "send_push", "user_id": "usr_33421", "title": "Appointment Reminder", "body": "Don't forget your dental check-up with Dr. Smith tomorrow at 10:00 AM.", "data": { "appointment_id": "apt_998877", "time": "10:00 AM", "provider": "Dr. Smith" }, "device_token": "apns_tok_aabbccddeeff001122" }
+Response: { "notification_id": "notif_i9j0k1l2", "status": "delivered", "timestamp": "2023-10-27T18:00:00Z" }
+
+Question: Inform user usr_77889 that their food delivery is arriving soon.
+Call: { "func_call": "send_push", "user_id": "usr_77889", "title": "Driver Approaching", "body": "Your pizza from Tony's Pizzeria is 5 minutes away. Please be ready at the door.", "data": { "restaurant": "Tony's Pizzeria", "eta_minutes": 5, "driver_name": "Mike" }, "device_token": "fcm_tok_qq11rr22ss33tt44uu" }
+Response: { "notification_id": "notif_m3n4o5p6", "status": "sent", "timestamp": "2023-10-27T19:45:30Z" }
+
+Question: Send a promotional offer to user usr_22110 for the weekend sale.
+Call: { "func_call": "send_push", "user_id": "usr_22110", "title": "Weekend Flash Sale!", "body": "Get 30% off all sneakers this weekend only. Use code WEEKEND30 at checkout.", "data": { "promo_code": "WEEKEND30", "discount_percent": 30, "category": "sneakers" }, "device_token": "apns_tok_3344556677889900aa" }
+Response: { "notification_id": "notif_q7r8s9t0", "status": "delivered", "timestamp": "2023-10-28T09:00:15Z" }
+
+Question: Notify user usr_99001 that their friend just joined the app.
+Call: { "func_call": "send_push", "user_id": "usr_99001", "title": "Sarah joined!", "body": "Your friend Sarah is now on FitTrack. Connect with her to start competing.", "data": { "friend_name": "Sarah", "friend_id": "usr_445566", "action": "connect" }, "device_token": "fcm_tok_vv55ww66xx77yy88zz" }
+Response: { "notification_id": "notif_u1v2w3x4", "status": "sent", "timestamp": "2023-10-28T11:20:45Z" }
+
+Question: Alert user usr_66554 about a low battery warning on their smart home device.
+Call: { "func_call": "send_push", "user_id": "usr_66554", "title": "Low Battery Warning", "body": "The battery in your Front Door Lock is critically low. Please replace it soon.", "data": { "device_name": "Front Door Lock", "battery_level": 5, "device_id": "lock_001" }, "device_token": "apns_tok_bbccddeeff00112233" }
+Response: { "notification_id": "notif_y5z6a7b8", "status": "delivered", "timestamp": "2023-10-28T13:10:22Z" }
+
+Question: Inform user usr_11223 that their flight check-in is now open.
+Call: { "func_call": "send_push", "user_id": "usr_11223", "title": "Check-in Open", "body": "Check-in for flight UA492 to Chicago is now available. Tap to get your boarding pass.", "data": { "flight_number": "UA492", "destination": "Chicago", "airline": "United" }, "device_token": "fcm_tok_998877665544332211" }
+Response: { "notification_id": "notif_c9d0e1f2", "status": "sent", "timestamp": "2023-10-28T14:00:00Z" }
+
+Question: Notify user usr_44332 about a comment on their recent post.
+Call: { "func_call": "send_push", "user_id": "usr_44332", "title": "New Comment", "body": "Alex commented on your photo: 'This looks amazing! Where was this taken?'", "data": { "post_id": "post_778899", "commenter": "Alex", "comment_preview": "This looks amazing..." }, "device_token": "apns_tok_445566778899001122" }
+Response: { "notification_id": "notif_g3h4i5j6", "status": "delivered", "timestamp": "2023-10-28T16:35:10Z" }
+
+Question: Send a weather alert to user usr_88776 regarding heavy rain.
+Call: { "func_call": "send_push", "user_id": "usr_88776", "title": "Weather Alert: Heavy Rain", "body": "Heavy rainfall expected in your area starting at 5 PM. Drive safely.", "data": { "alert_type": "rain", "severity": "moderate", "start_time": "17:00" }, "device_token": "fcm_tok_001122334455667788" }
+Response: { "notification_id": "notif_k7l8m9n0", "status": "sent", "timestamp": "2023-10-28T17:05:55Z" }
+
+Question: Confirm to user usr_55443 that their password was reset successfully.
+Call: { "func_call": "send_push", "user_id": "usr_55443", "title": "Password Reset Successful", "body": "Your password has been updated. If you didn't make this change, contact support immediately.", "data": { "event_type": "password_reset", "security_level": "high" }, "device_token": "apns_tok_556677889900112233" }
+Response: { "notification_id": "notif_o1p2q3r4", "status": "delivered", "timestamp": "2023-10-28T18:22:33Z" }

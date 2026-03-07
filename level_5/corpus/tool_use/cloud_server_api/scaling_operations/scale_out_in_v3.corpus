@@ -1,0 +1,51 @@
+Available Tools: scale_out | scale_in | set_auto_scaling | get_scaling_policy
+Call Schema: { "func_call": "string", "group_id": "string", "min_size": number, "max_size": number, "desired": number }
+Response Schema: { "group_id": "string", "current_capacity": number, "status": "string" }
+---
+Question: Anticipating a holiday shopping surge, expand the checkout-service-cluster to handle increased transaction volume.
+Call: { "func_call": "scale_out", "group_id": "checkout-service-cluster", "min_size": 12, "max_size": 75, "desired": 40 }
+Response: { "group_id": "checkout-service-cluster", "current_capacity": 40, "status": "scaling_up_complete" }
+
+Question: The nightly ETL pipeline has completed; reduce the etl-worker-pool to its lowest operational setting.
+Call: { "func_call": "scale_in", "group_id": "etl-worker-pool", "min_size": 1, "max_size": 50, "desired": 1 }
+Response: { "group_id": "etl-worker-pool", "current_capacity": 1, "status": "scaling_down_complete" }
+
+Question: Reconfigure the auth-token-validator group to scale between 8 and 40 instances, targeting 18 for normal operations.
+Call: { "func_call": "set_auto_scaling", "group_id": "auth-token-validator", "min_size": 8, "max_size": 40, "desired": 18 }
+Response: { "group_id": "auth-token-validator", "current_capacity": 18, "status": "policy_updated" }
+
+Question: Sudden spike in mobile app logins detected; immediately scale out the mobile-auth-gateway to prevent timeouts.
+Call: { "func_call": "scale_out", "group_id": "mobile-auth-gateway", "min_size": 5, "max_size": 90, "desired": 65 }
+Response: { "group_id": "mobile-auth-gateway", "current_capacity": 65, "status": "scaling_up_complete" }
+
+Question: Weekend traffic is low; scale in the social-media-feed-cache group to conserve cloud resources.
+Call: { "func_call": "scale_in", "group_id": "social-media-feed-cache", "min_size": 3, "max_size": 35, "desired": 3 }
+Response: { "group_id": "social-media-feed-cache", "current_capacity": 3, "status": "scaling_down_complete" }
+
+Question: Modify the search-index-builders parameters to allow a range of 15 to 70 nodes, setting the immediate target to 25.
+Call: { "func_call": "set_auto_scaling", "group_id": "search-index-builders", "min_size": 15, "max_size": 70, "desired": 25 }
+Response: { "group_id": "search-index-builders", "current_capacity": 25, "status": "policy_updated" }
+
+Question: Black Friday sales have begun in Asia; scale out the asia-pacific-inventory-service to meet demand.
+Call: { "func_call": "scale_out", "group_id": "asia-pacific-inventory-service", "min_size": 20, "max_size": 120, "desired": 85 }
+Response: { "group_id": "asia-pacific-inventory-service", "current_capacity": 85, "status": "scaling_up_complete" }
+
+Question: The marketing webinar is over; please scale in the webinar-streaming-nodes group to stop unnecessary billing.
+Call: { "func_call": "scale_in", "group_id": "webinar-streaming-nodes", "min_size": 2, "max_size": 30, "desired": 2 }
+Response: { "group_id": "webinar-streaming-nodes", "current_capacity": 2, "status": "scaling_down_complete" }
+
+Question: Update the notification-dispatcher-cluster to maintain a minimum of 4 instances and a maximum of 55, with a desired state of 12.
+Call: { "func_call": "set_auto_scaling", "group_id": "notification-dispatcher-cluster", "min_size": 4, "max_size": 55, "desired": 12 }
+Response: { "group_id": "notification-dispatcher-cluster", "current_capacity": 12, "status": "policy_updated" }
+
+Question: Memory usage critical on the analytics-query-engine; trigger a scale out to add sufficient capacity.
+Call: { "func_call": "scale_out", "group_id": "analytics-query-engine", "min_size": 10, "max_size": 80, "desired": 50 }
+Response: { "group_id": "analytics-query-engine", "current_capacity": 50, "status": "scaling_up_complete" }
+
+Question: Development environment databases are idle; scale in the dev-db-cluster to the baseline minimum.
+Call: { "func_call": "scale_in", "group_id": "dev-db-cluster", "min_size": 1, "max_size": 10, "desired": 1 }
+Response: { "group_id": "dev-db-cluster", "current_capacity": 1, "status": "scaling_down_complete" }
+
+Question: Prepare the rendering-farm-cluster for the morning animation batch by setting auto-scaling limits to 25-100 with a desired count of 60.
+Call: { "func_call": "set_auto_scaling", "group_id": "rendering-farm-cluster", "min_size": 25, "max_size": 100, "desired": 60 }
+Response: { "group_id": "rendering-farm-cluster", "current_capacity": 60, "status": "policy_updated" }

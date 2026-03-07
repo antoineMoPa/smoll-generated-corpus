@@ -1,0 +1,51 @@
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Locate pet-friendly lodgings in Austin for a long weekend. Two guests and one dog, arriving September 5th and departing September 8th. Minimum 3.5 stars required.
+Call: { "func_call": "search_hotels", "location": "Austin", "check_in": "2024-09-05", "check_out": "2024-09-08", "guests": 2, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "AUS-404", "name": "Hill Country Paws", "rating": 4.1, "price_per_night": 165, "amenities": ["Pet Friendly", "Pool", "WiFi"] }, { "id": "AUS-405", "name": "Downtown Dog Hotel", "rating": 3.8, "price_per_night": 145, "amenities": ["Pet Friendly", "Bar", "Parking"] }], "total": 2 }
+
+Question: Find ski-in ski-out hotels in Aspen for a winter getaway. Party of six, checking in January 20th and out January 27th. Must be 5 stars.
+Call: { "func_call": "search_hotels", "location": "Aspen", "check_in": "2024-01-20", "check_out": "2024-01-27", "guests": 6, "min_rating": 5.0 }
+Response: { "hotels": [{ "id": "ASP-900", "name": "Summit Luxury Chalets", "rating": 5.0, "price_per_night": 1500, "amenities": ["Ski Access", "Fireplace", "Chef"] }, { "id": "ASP-901", "name": "Alpine Peak Resort", "rating": 4.9, "price_per_night": 1350, "amenities": ["Ski Access", "Spa", "Valet"] }], "total": 2 }
+
+Question: I need a historic hotel in Charleston for a solo history tour. One guest, November 12th to November 15th. At least 4 stars preferred.
+Call: { "func_call": "search_hotels", "location": "Charleston", "check_in": "2023-11-12", "check_out": "2023-11-15", "guests": 1, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "CHS-202", "name": "Old City Manor", "rating": 4.6, "price_per_night": 275, "amenities": ["Historic Tour", "Breakfast", "WiFi"] }, { "id": "CHS-203", "name": "Harbor Heritage Inn", "rating": 4.4, "price_per_night": 250, "amenities": ["Library", "Garden", "Concierge"] }], "total": 2 }
+
+Question: Search for budget accommodations in Bangkok for backpackers. Two friends, staying from May 10th to May 20th. Minimum 2.5 stars is acceptable.
+Call: { "func_call": "search_hotels", "location": "Bangkok", "check_in": "2024-05-10", "check_out": "2024-05-20", "guests": 2, "min_rating": 2.5 }
+Response: { "hotels": [{ "id": "BKK-505", "name": "Khao San Road Hostel Plus", "rating": 3.2, "price_per_night": 45, "amenities": ["WiFi", "Lockers", "Tours"] }, { "id": "BKK-506", "name": "Chao Phraya Budget Stay", "rating": 2.9, "price_per_night": 35, "amenities": ["Fan", "Shared Kitchen"] }], "total": 2 }
+
+Question: Looking for eco-resorts in Costa Rica for an adventure trip. Four guests, checking in February 14th and leaving February 21st. Needs 4.5 stars or higher.
+Call: { "func_call": "search_hotels", "location": "Costa Rica", "check_in": "2024-02-14", "check_out": "2024-02-21", "guests": 4, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "CR-606", "name": "Rainforest Canopy Lodge", "rating": 4.8, "price_per_night": 390, "amenities": ["Zipline", "Organic Dining", "Hiking"] }, { "id": "CR-607", "name": "Volcano View Eco Hotel", "rating": 4.7, "price_per_night": 360, "amenities": ["Hot Springs", "Solar Power", "Guided Walks"] }], "total": 2 }
+
+Question: Find a conference hotel in Chicago for a corporate event. Ten guests, dates are October 5th to October 8th. Minimum 4 stars with meeting facilities.
+Call: { "func_call": "search_hotels", "location": "Chicago", "check_in": "2024-10-05", "check_out": "2024-10-08", "guests": 10, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "CHI-707", "name": "Loop Convention Center Hotel", "rating": 4.4, "price_per_night": 220, "amenities": ["Meeting Rooms", "WiFi", "Catering"] }, { "id": "CHI-708", "name": "Magnificent Mile Business Suites", "rating": 4.6, "price_per_night": 280, "amenities": ["Projectors", "Business Lounge", "Gym"] }], "total": 2 }
+
+Question: I need a seaside villa in Santorini for a romantic anniversary. Two adults, June 1st to June 8th. Must be 5 stars with a private pool.
+Call: { "func_call": "search_hotels", "location": "Santorini", "check_in": "2024-06-01", "check_out": "2024-06-08", "guests": 2, "min_rating": 5.0 }
+Response: { "hotels": [{ "id": "SAN-808", "name": "Caldera Cliff Suites", "rating": 5.0, "price_per_night": 980, "amenities": ["Private Pool", "Sunset View", "Butler"] }, { "id": "SAN-809", "name": "Oia Blue Dome Villas", "rating": 4.9, "price_per_night": 850, "amenities": ["Private Pool", "Jacuzzi", "Breakfast"] }], "total": 2 }
+
+Question: Search for hotels in Seattle near the space needle. One traveler, checking in August 22nd and out August 25th. At least 3.5 stars.
+Call: { "func_call": "search_hotels", "location": "Seattle", "check_in": "2024-08-22", "check_out": "2024-08-25", "guests": 1, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "SEA-303", "name": "Space Needle View Inn", "rating": 4.0, "price_per_night": 210, "amenities": ["Observation Deck Access", "WiFi", "Coffee Bar"] }, { "id": "SEA-304", "name": "Pike Place Market Hotel", "rating": 3.7, "price_per_night": 185, "amenities": ["Market Tours", "WiFi", "Bike Rental"] }], "total": 2 }
+
+Question: Find family suites in Las Vegas for a holiday trip. Five people, arriving December 20th and leaving December 27th. Minimum 4 stars.
+Call: { "func_call": "search_hotels", "location": "Las Vegas", "check_in": "2023-12-20", "check_out": "2023-12-27", "guests": 5, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "LAS-404", "name": "Strip Family Resort", "rating": 4.3, "price_per_night": 340, "amenities": ["Pool Complex", "Arcade", "Suite Kitchen"] }, { "id": "LAS-405", "name": "Vegas Grand Suites", "rating": 4.5, "price_per_night": 390, "amenities": ["Show Tickets", "Multiple Beds", "Spa"] }], "total": 2 }
+
+Question: Looking for boutique hotels in Lisbon for a culture trip. Two guests, March 15th to March 22nd. Prefer unique character, at least 4.5 stars.
+Call: { "func_call": "search_hotels", "location": "Lisbon", "check_in": "2024-03-15", "check_out": "2024-03-22", "guests": 2, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "LIS-505", "name": "Alfama Tile House", "rating": 4.8, "price_per_night": 230, "amenities": ["Rooftop Terrace", "Fado Night", "WiFi"] }, { "id": "LIS-506", "name": "Baixa Design Hotel", "rating": 4.6, "price_per_night": 210, "amenities": ["Art Gallery", "Wine Tasting", "Breakfast"] }], "total": 2 }
+
+Question: I need a cabin in the Rockies for a fishing trip. Three anglers, checking in July 10th and out July 17th. Minimum 3 stars.
+Call: { "func_call": "search_hotels", "location": "Rocky Mountains", "check_in": "2024-07-10", "check_out": "2024-07-17", "guests": 3, "min_rating": 3.0 }
+Response: { "hotels": [{ "id": "RM-606", "name": "River Bend Cabins", "rating": 3.9, "price_per_night": 175, "amenities": ["Fishing Gear", "Fire Pit", "Kitchen"] }, { "id": "RM-607", "name": "Pine Forest Lodge", "rating": 3.5, "price_per_night": 150, "amenities": ["Boat Rental", "WiFi", "Parking"] }], "total": 2 }
+
+Question: Search for airport hotels in Frankfurt for a layover. One guest, checking in November 30th and out December 1st. Needs 4 stars for comfort.
+Call: { "func_call": "search_hotels", "location": "Frankfurt", "check_in": "2023-11-30", "check_out": "2023-12-01", "guests": 1, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "FRA-707", "name": "Terminal Transit Hotel", "rating": 4.2, "price_per_night": 195, "amenities": ["Shuttle", "Soundproof Rooms", "Gym"] }, { "id": "FRA-708", "name": "Skyline Airport Inn", "rating": 4.4, "price_per_night": 220, "amenities": ["24h Check-in", "Breakfast", "WiFi"] }], "total": 2 }

@@ -1,0 +1,39 @@
+| Context: The project kickoff meeting is scheduled for 2024-01-15. Development phase one begins on 2024-02-01 and ends in March. The testing phase is set to start on 2024-04-10. Finally, the deployment window opens on 2024-05-20. | Input: {"question": "What dates are mentioned in the project timeline?"} | Output: {"answer": ["2024-01-15", "2024-02-01", "2024-04-10", "2024-05-20"]}
+
+| Context: Historical records show the treaty was signed on 1919-06-28. Construction of the monument started shortly after on 1920-03-12. The dedication ceremony took place on 1922-10-21. Restoration efforts began much later on 1995-07-04. | Input: {"question": "When did each significant event occur?"} | Output: {"answer": ["1919-06-28", "1920-03-12", "1922-10-21", "1995-07-04"]}
+
+| Context: The train departs Chicago at 08:30 AM. It arrives in Indianapolis at 10:45 AM. The layover lasts until 11:15 AM before the next leg begins. The final arrival in Cincinnati is expected at 01:30 PM. | Input: {"question": "What times are listed in the train schedule?"} | Output: {"answer": ["08:30 AM", "10:45 AM", "11:15 AM", "01:30 PM"]}
+
+| Context: Server maintenance window 1 is planned for 2023-11-05. Database migration will occur on 2023-11-06. Security patches are applied on 2023-11-07. The system goes live again on 2023-11-08. | Input: {"question": "List the dates for the maintenance schedule."} | Output: {"answer": ["2023-11-05", "2023-11-06", "2023-11-07", "2023-11-08"]}
+
+| Context: The conference starts on 2025-09-10 with registration. Keynote speeches begin on 2025-09-11. Workshop sessions run from 2025-09-12 to 2025-09-13. The closing gala is held on 2025-09-14. | Input: {"question": "What are the key dates for the conference?"} | Output: {"answer": ["2025-09-10", "2025-09-11", "2025-09-12", "2025-09-13", "2025-09-14"]}
+
+| Context: Morning shift starts at 06:00. The first break is at 08:30. Lunch is served at 12:00. The afternoon break occurs at 15:00. The shift ends at 18:00. | Input: {"question": "When do the shifts and breaks occur?"} | Output: {"answer": ["06:00", "08:30", "12:00", "15:00", "18:00"]}
+
+| Context: The eclipse was visible on 2024-04-08. The next lunar event is predicted for 2024-09-18. A solar flare warning was issued for 2024-10-02. Observatory maintenance is scheduled for 2024-11-11. | Input: {"question": "What astronomical dates are mentioned?"} | Output: {"answer": ["2024-04-08", "2024-09-18", "2024-10-02", "2024-11-11"]}
+
+| Context: Phase 1 of the construction started on 2022-05-01. Foundation pouring happened on 2022-06-15. Framing began on 2022-08-20. Roofing was completed on 2022-10-05. | Input: {"question": "When did each construction phase start or finish?"} | Output: {"answer": ["2022-05-01", "2022-06-15", "2022-08-20", "2022-10-05"]}
+
+| Context: The flight leaves New York at 14:20. It lands in London at 02:45 the next day. The connecting flight departs at 06:10. Arrival in Tokyo is scheduled for 23:55. | Input: {"question": "What are the departure and arrival times?"} | Output: {"answer": ["14:20", "02:45", "06:10", "23:55"]}
+
+| Context: The subscription renews on 2024-01-01. The first billing cycle ends on 2024-02-01. A price change takes effect on 2024-03-01. The annual review is set for 2024-12-31. | Input: {"question": "Which dates are associated with the subscription?"} | Output: {"answer": ["2024-01-01", "2024-02-01", "2024-03-01", "2024-12-31"]}
+
+| Context: The museum opens at 09:00 on weekdays. Special tours start at 11:00. The cafe closes at 15:00. The main exhibit hall closes at 17:00. | Input: {"question": "What times are listed for museum operations?"} | Output: {"answer": ["09:00", "11:00", "15:00", "17:00"]}
+
+| Context: The legal filing deadline is 2023-12-01. The preliminary hearing is set for 2024-01-15. Discovery ends on 2024-03-30. The trial begins on 2024-05-10. | Input: {"question": "List the important legal dates."} | Output: {"answer": ["2023-12-01", "2024-01-15", "2024-03-30", "2024-05-10"]}
+
+| Context: Breakfast is served from 07:00 to 09:30. Pool hours are 08:00 to 20:00. Gym access is available 24 hours, but classes start at 06:00. Dinner service begins at 18:00. | Input: {"question": "What times are mentioned for hotel amenities?"} | Output: {"answer": ["07:00", "09:30", "08:00", "20:00", "06:00", "18:00"]}
+
+| Context: The software version 1.0 launched on 2021-03-15. Version 1.1 followed on 2021-06-22. Version 2.0 was released on 2022-01-10. The latest patch 2.1 came out on 2022-04-05. | Input: {"question": "When were the software versions released?"} | Output: {"answer": ["2021-03-15", "2021-06-22", "2022-01-10", "2022-04-05"]}
+
+| Context: The marathon starts at 07:00. The first checkpoint is at 08:15. Runners reach the halfway point around 09:45. The finish line closes at 13:00. | Input: {"question": "What times define the marathon schedule?"} | Output: {"answer": ["07:00", "08:15", "09:45", "13:00"]}
+
+| Context: The archaeological dig began on 2019-07-01. Artifacts from Layer A were found on 2019-07-15. Layer B excavation started on 2019-08-10. The site was sealed on 2019-09-30. | Input: {"question": "What dates mark the excavation timeline?"} | Output: {"answer": ["2019-07-01", "2019-07-15", "2019-08-10", "2019-09-30"]}
+
+| Context: The webinar starts at 13:00 EST. Q&A session begins at 14:00 EST. The recording will be available at 16:00 EST. Follow-up emails go out at 09:00 EST the next day. | Input: {"question": "List the times for the webinar events."} | Output: {"answer": ["13:00", "14:00", "16:00", "09:00"]}
+
+| Context: Season 1 premiered on 2020-09-24. The mid-season finale aired on 2020-12-10. Season 2 started on 2021-09-23. The series finale is dated 2022-05-26. | Input: {"question": "When did the TV show episodes air?"} | Output: {"answer": ["2020-09-24", "2020-12-10", "2021-09-23", "2022-05-26"]}
+
+| Context: The auction opens at 10:00. Bidding for lot 1 starts at 10:15. Lunch break is at 12:30. Afternoon session resumes at 13:30. The auction concludes at 17:00. | Input: {"question": "What times are in the auction schedule?"} | Output: {"answer": ["10:00", "10:15", "12:30", "13:30", "17:00"]}
+
+| Context: The vaccine trial started on 2020-04-12. Phase 1 results were published on 2020-07-20. Phase 2 began on 2020-09-05. Regulatory approval was granted on 2021-02-14. | Input: {"question": "What are the key dates in the vaccine trial?"} | Output: {"answer": ["2020-04-12", "2020-07-20", "2020-09-05", "2021-02-14"]}

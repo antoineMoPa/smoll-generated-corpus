@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Please restart the application server i-b2c3d4e5 in the US West region.
+Call: { "func_call": "restart_instance", "instance_id": "i-b2c3d4e5", "region": "us-west-2" }
+Response: { "instance_id": "i-b2c3d4e5", "state": "running", "message": "Instance i-b2c3d4e5 successfully restarted in us-west-2." }
+
+Question: I need to terminate the old logging node i-8e7d6c5b located in Canada Central.
+Call: { "func_call": "terminate_instance", "instance_id": "i-8e7d6c5b", "region": "ca-central-1" }
+Response: { "instance_id": "i-8e7d6c5b", "state": "terminated", "message": "Instance i-8e7d6c5b successfully terminated in ca-central-1." }
+
+Question: Can you bring up the search indexer i-66554433 in the Europe North zone?
+Call: { "func_call": "start_instance", "instance_id": "i-66554433", "region": "eu-north-1" }
+Response: { "instance_id": "i-66554433", "state": "running", "message": "Instance i-66554433 successfully started in eu-north-1." }
+
+Question: Shut down the staging database i-cafebabe in sa-east-1 immediately.
+Call: { "func_call": "stop_instance", "instance_id": "i-cafebabe", "region": "sa-east-1" }
+Response: { "instance_id": "i-cafebabe", "state": "stopped", "message": "Instance i-cafebabe successfully stopped in sa-east-1." }
+
+Question: Restart the queue processor i-22334455 in the ap-northeast-1 region.
+Call: { "func_call": "restart_instance", "instance_id": "i-22334455", "region": "ap-northeast-1" }
+Response: { "instance_id": "i-22334455", "state": "running", "message": "Instance i-22334455 successfully restarted in ap-northeast-1." }
+
+Question: Please halt the CI/CD runner instance i-def98765 in us-west-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-def98765", "region": "us-west-1" }
+Response: { "instance_id": "i-def98765", "state": "stopped", "message": "Instance i-def98765 successfully stopped in us-west-1." }
+
+Question: Bring the load balancer i-aabbccdd online in eu-central-1.
+Call: { "func_call": "start_instance", "instance_id": "i-aabbccdd", "region": "eu-central-1" }
+Response: { "instance_id": "i-aabbccdd", "state": "running", "message": "Instance i-aabbccdd successfully started in eu-central-1." }
+
+Question: Stop the metric collector i-77665544 running in ap-south-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-77665544", "region": "ap-south-1" }
+Response: { "instance_id": "i-77665544", "state": "stopped", "message": "Instance i-77665544 successfully stopped in ap-south-1." }
+
+Question: Terminate the deprecated worker i-33445566 in the us-east-2 datacenter.
+Call: { "func_call": "terminate_instance", "instance_id": "i-33445566", "region": "us-east-2" }
+Response: { "instance_id": "i-33445566", "state": "terminated", "message": "Instance i-33445566 successfully terminated in us-east-2." }
+
+Question: Power off the sandbox instance i-11229988 in eu-west-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-11229988", "region": "eu-west-1" }
+Response: { "instance_id": "i-11229988", "state": "stopped", "message": "Instance i-11229988 successfully stopped in eu-west-1." }
+
+Question: Start the authentication service host i-9d8c7b6a in ca-west-1.
+Call: { "func_call": "start_instance", "instance_id": "i-9d8c7b6a", "region": "ca-west-1" }
+Response: { "instance_id": "i-9d8c7b6a", "state": "running", "message": "Instance i-9d8c7b6a successfully started in ca-west-1." }
+
+Question: Restart the payment gateway i-4e5f6a7b by rebooting it in ap-east-1.
+Call: { "func_call": "restart_instance", "instance_id": "i-4e5f6a7b", "region": "ap-east-1" }
+Response: { "instance_id": "i-4e5f6a7b", "state": "running", "message": "Instance i-4e5f6a7b successfully restarted in ap-east-1." }

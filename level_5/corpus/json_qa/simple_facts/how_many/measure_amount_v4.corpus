@@ -1,0 +1,59 @@
+Context: The newly installed solar panel array generates 12.5 kilowatts of power during peak sunlight hours. This capacity is sufficient to run the entire household.
+Input: {"question": "How much power does the solar array generate?"}
+Output: {"answer": "12.5 kilowatts"}
+
+Context: The historic library contains over 45,000 volumes dating back to the 18th century. Visitors must wear gloves to handle the rare manuscripts.
+Input: {"question": "How many volumes are in the library?"}
+Output: {"answer": "45,000 volumes"}
+
+Context: The deep-sea submarine descended to a depth of 3,200 meters to explore the ocean floor. The pressure at that level is immense.
+Input: {"question": "How deep did the submarine go?"}
+Output: {"answer": "3,200 meters"}
+
+Context: The artisan baked the sourdough loaf for 55 minutes at 450 degrees Fahrenheit to achieve a crispy crust. The kitchen smelled of yeast and wheat.
+Input: {"question": "How long was the bread baked?"}
+Output: {"answer": "55 minutes"}
+
+Context: The cargo ship can carry a maximum load of 18,000 twenty-foot equivalent units. It is currently docked at the port of Rotterdam.
+Input: {"question": "What is the maximum capacity of the ship?"}
+Output: {"answer": "18,000 twenty-foot equivalent units"}
+
+Context: The vintage car reached a top speed of 145 miles per hour during the test drive on the closed track. The engine roared loudly at full throttle.
+Input: {"question": "How fast did the car go?"}
+Output: {"answer": "145 miles per hour"}
+
+Context: The construction project budget was set at $4.7 million to cover materials and labor costs. Any excess spending requires board approval.
+Input: {"question": "What was the project budget?"}
+Output: {"answer": "$4.7 million"}
+
+Context: The glacier has retreated by 1.2 kilometers over the last decade due to rising global temperatures. Scientists monitor the ice loss annually.
+Input: {"question": "How far has the glacier retreated?"}
+Output: {"answer": "1.2 kilometers"}
+
+Context: The jewelry box holds 3.5 ounces of pure gold chains and pendants. The owner keeps it locked in a secure safe.
+Input: {"question": "How much gold is in the box?"}
+Output: {"answer": "3.5 ounces"}
+
+Context: The concert hall has a seating capacity of 2,100 people and features world-class acoustics. Tickets for the opening night sold out instantly.
+Input: {"question": "How many people can the hall seat?"}
+Output: {"answer": "2,100 people"}
+
+Context: The electric vehicle battery holds a charge of 85 kilowatt-hours, allowing for a range of 300 miles on a single charge. Charging takes about eight hours at home.
+Input: {"question": "What is the battery capacity?"}
+Output: {"answer": "85 kilowatt-hours"}
+
+Context: The ancient pyramid stands 146.5 meters tall and was built as a tomb for the pharaoh. It remained the tallest man-made structure for thousands of years.
+Input: {"question": "How tall is the pyramid?"}
+Output: {"answer": "146.5 meters"}
+
+Context: The laboratory sample must be heated to 78 degrees Celsius to evaporate the solvent completely. Safety goggles are required during the process.
+Input: {"question": "To what temperature must the sample be heated?"}
+Output: {"answer": "78 degrees Celsius"}
+
+Context: The annual rainfall in the region averages 1,800 millimeters, supporting lush tropical vegetation. The wettest month is usually September.
+Input: {"question": "What is the average annual rainfall?"}
+Output: {"answer": "1,800 millimeters"}
+
+Context: The limited edition watch was auctioned for €250,000, setting a new record for the brand. Collectors from around the world bid on the timepiece.
+Input: {"question": "How much did the watch sell for?"}
+Output: {"answer": "€250,000"}

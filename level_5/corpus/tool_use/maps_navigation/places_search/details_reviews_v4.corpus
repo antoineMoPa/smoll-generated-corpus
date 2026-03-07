@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Show me tapas bars near La Rambla in Barcelona within 1.5 kilometers.
+Call: { "func_call": "search_places", "query": "tapas bars", "location": "La Rambla, Barcelona, Spain", "radius_km": 1.5, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_bcn_037", "name": "El Quim de la Boqueria", "address": "Mercat de la Boqueria, La Rambla, 91, 08001 Barcelona, Spain", "rating": 4.6, "open_now": true }, { "id": "pl_bcn_038", "name": "Cervecería Catalana", "address": "Carrer de Mallorca, 236, 08008 Barcelona, Spain", "rating": 4.5, "open_now": true }, { "id": "pl_bcn_039", "name": "Tickets Bar", "address": "Avinguda del Paral·lel, 164, 08015 Barcelona, Spain", "rating": 4.8, "open_now": false }], "total": 3 }
+
+Question: Locate ski rental shops within 4km of Whistler Village in Canada.
+Call: { "func_call": "search_places", "query": "ski rental", "location": "Whistler Village, BC, Canada", "radius_km": 4, "type": "sporting_goods_store" }
+Response: { "places": [{ "id": "pl_whi_040", "name": "Rendezvous Ski Tours", "address": "4363 Main St, Whistler, BC V8E 1B5, Canada", "rating": 4.7, "open_now": true }, { "id": "pl_whi_041", "name": "Blackcomb Sports", "address": "4280 Mountain Square, Whistler, BC V8E 1B9, Canada", "rating": 4.4, "open_now": true }, { "id": "pl_whi_042", "name": "Garibaldi Lift Co.", "address": "4319 Main St, Whistler, BC V8E 1B1, Canada", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Find farmers markets near Ferry Building in San Francisco open on weekends.
+Call: { "func_call": "search_places", "query": "farmers markets", "location": "Ferry Building, San Francisco, CA", "radius_km": 0.5, "type": "market" }
+Response: { "places": [{ "id": "pl_sf_043", "name": "Ferry Plaza Farmers Market", "address": "1 Ferry Building, San Francisco, CA 94111", "rating": 4.8, "open_now": true }, { "id": "pl_sf_044", "name": "Heart of the City Farmers Market", "address": "UN Plaza, 50 UN Plaza, San Francisco, CA 94102", "rating": 4.5, "open_now": false }, { "id": "pl_sf_045", "name": "Alemany Farmers' Market", "address": "100 Alemany Blvd, San Francisco, CA 94110", "rating": 4.6, "open_now": true }], "total": 3 }
+
+Question: Search for jazz clubs within 2 kilometers of Bourbon Street in New Orleans.
+Call: { "func_call": "search_places", "query": "jazz clubs", "location": "Bourbon Street, New Orleans, LA", "radius_km": 2, "type": "night_club" }
+Response: { "places": [{ "id": "pl_no_046", "name": "Preservation Hall", "address": "726 St Peter St, New Orleans, LA 70116", "rating": 4.7, "open_now": true }, { "id": "pl_no_047", "name": "The Spotted Cat Music Club", "address": "623 Frenchmen St, New Orleans, LA 70116", "rating": 4.6, "open_now": true }, { "id": "pl_no_048", "name": "Snug Harbor Jazz Bistro", "address": "626 Frenchmen St, New Orleans, LA 70116", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Identify aquariums near Pier 39 in San Francisco suitable for families.
+Call: { "func_call": "search_places", "query": "aquariums", "location": "Pier 39, San Francisco, CA", "radius_km": 1, "type": "aquarium" }
+Response: { "places": [{ "id": "pl_sf_049", "name": "California Academy of Sciences", "address": "55 Music Concourse Dr, San Francisco, CA 94118", "rating": 4.7, "open_now": true }, { "id": "pl_sf_050", "name": "Aquarium of the Bay", "address": "Pier 39, The Embarcadero, San Francisco, CA 94133", "rating": 4.2, "open_now": true }, { "id": "pl_sf_051", "name": "Randall Museum", "address": "199 Museum Way, San Francisco, CA 94114", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Look for vintage clothing stores near Shoreditch High Street in London.
+Call: { "func_call": "search_places", "query": "vintage clothing", "location": "Shoreditch High Street, London, UK", "radius_km": 1.2, "type": "clothing_store" }
+Response: { "places": [{ "id": "pl_lon_052", "name": "Beyond Retro", "address": "110-112 Cheshire St, London E2 6EJ, UK", "rating": 4.4, "open_now": true }, { "id": "pl_lon_053", "name": "Rokit Vintage", "address": "87 Brick Ln, London E1 6QL, UK", "rating": 4.3, "open_now": true }, { "id": "pl_lon_054", "name": "Vintage Kilo Sale", "address": "Old Truman Brewery, 91 Brick Ln, London E1 6QL, UK", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Find ice skating rinks within 5km of Rockefeller Center in New York City.
+Call: { "func_call": "search_places", "query": "ice skating rinks", "location": "Rockefeller Center, New York, NY", "radius_km": 5, "type": "ice_skating_rink" }
+Response: { "places": [{ "id": "pl_nyc_055", "name": "The Rink at Rockefeller Center", "address": "45 Rockefeller Plaza, New York, NY 10111", "rating": 4.5, "open_now": true }, { "id": "pl_nyc_056", "name": "Wollman Rink", "address": "Central Park S, New York, NY 10019", "rating": 4.3, "open_now": true }, { "id": "pl_nyc_057", "name": "Bank of America Winter Village", "address": "42nd St & 6th Ave, New York, NY 10018", "rating": 4.4, "open_now": false }], "total": 3 }
+
+Question: Locate ramen shops near Dotonbori in Osaka with short wait times.
+Call: { "func_call": "search_places", "query": "ramen shops", "location": "Dotonbori, Osaka, Japan", "radius_km": 1, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_osa_058", "name": "Ichiran Dotonbori", "address": "1-4-16 Dotonbori, Chuo Ward, Osaka, 542-0071, Japan", "rating": 4.4, "open_now": true }, { "id": "pl_osa_059", "name": "Kinryu Ramen", "address": "1-6-4 Dotonbori, Chuo Ward, Osaka, 542-0071, Japan", "rating": 4.2, "open_now": true }, { "id": "pl_osa_060", "name": "Menya Saimi", "address": "1-7-21 Namba, Chuo Ward, Osaka, 542-0076, Japan", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Search for botanical gardens within 3 kilometers of Kirstenbosch in Cape Town.
+Call: { "func_call": "search_places", "query": "botanical gardens", "location": "Kirstenbosch National Botanical Garden, Cape Town, South Africa", "radius_km": 3, "type": "park" }
+Response: { "places": [{ "id": "pl_cpt_061", "name": "Company's Garden", "address": "Queen Victoria St, Gardens, Cape Town, 8001, South Africa", "rating": 4.6, "open_now": true }, { "id": "pl_cpt_062", "name": "Green Point Urban Park", "address": "Somerset Rd, Green Point, Cape Town, 8005, South Africa", "rating": 4.5, "open_now": true }, { "id": "pl_cpt_063", "name": "Arderne Gardens", "address": "74 Caverham Rd, Plumstead, Cape Town, 7800, South Africa", "rating": 4.7, "open_now": false }], "total": 3 }
+
+Question: Find co-working spaces near Silicon Valley in Palo Alto available for daily use.
+Call: { "func_call": "search_places", "query": "co-working spaces", "location": "University Ave, Palo Alto, CA", "radius_km": 2, "type": "office_space" }
+Response: { "places": [{ "id": "pl_pal_064", "name": "WeWork Palo Alto", "address": "530 Lytton Ave, Palo Alto, CA 94301", "rating": 4.3, "open_now": true }, { "id": "pl_pal_065", "name": "Regus Palo Alto", "address": "2882 Sand Hill Rd, Menlo Park, CA 94025", "rating": 4.1, "open_now": true }, { "id": "pl_pal_066", "name": "The Vault Coworking", "address": "594 Hamilton Ave, Palo Alto, CA 94301", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Locate fireworks stores near Disney World in Orlando before July 4th.
+Call: { "func_call": "search_places", "query": "fireworks stores", "location": "Walt Disney World Resort, Orlando, FL", "radius_km": 10, "type": "store" }
+Response: { "places": [{ "id": "pl_orl_067", "name": "Phantom Fireworks", "address": "5645 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746", "rating": 4.6, "open_now": true }, { "id": "pl_orl_068", "name": "Fireworks by Grucci Outlet", "address": "8001 S Orange Blossom Trl, Orlando, FL 32809", "rating": 4.4, "open_now": true }, { "id": "pl_orl_069", "name": "TNT Fireworks", "address": "6200 W Vine St, Kissimmee, FL 34741", "rating": 4.2, "open_now": false }], "total": 3 }
+
+Question: Search for escape rooms within 2km of the Sydney Opera House.
+Call: { "func_call": "search_places", "query": "escape rooms", "location": "Sydney Opera House, Sydney, NSW, Australia", "radius_km": 2, "type": "entertainment" }
+Response: { "places": [{ "id": "pl_syd_070", "name": "The Locks", "address": "Level 1, 377 Pitt St, Sydney NSW 2000, Australia", "rating": 4.8, "open_now": true }, { "id": "pl_syd_071", "name": "HintHunt Sydney", "address": "3/580 George St, Sydney NSW 2000, Australia", "rating": 4.7, "open_now": true }, { "id": "pl_syd_072", "name": "Big Escape Rooms", "address": "Level 2, 428 George St, Sydney NSW 2000, Australia", "rating": 4.5, "open_now": false }], "total": 3 }

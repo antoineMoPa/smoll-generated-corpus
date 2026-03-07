@@ -1,0 +1,59 @@
+Context: The heavy rainfall last night caused the river to overflow its banks, flooding the nearby village.
+Input: {"question": "What caused the river to overflow its banks?"}
+Output: {"answer": "The heavy rainfall last night"}
+
+Context: Due to a sudden power surge, the main server crashed and deleted all temporary files.
+Input: {"question": "What caused the main server to crash?"}
+Output: {"answer": "a sudden power surge"}
+
+Context: The driver's failure to check the blind spot resulted in a minor collision with a cyclist.
+Input: {"question": "What caused the minor collision with a cyclist?"}
+Output: {"answer": "The driver's failure to check the blind spot"}
+
+Context: Because the bakery ran out of yeast, the bread dough did not rise properly.
+Input: {"question": "What caused the bread dough not to rise properly?"}
+Output: {"answer": "the bakery ran out of yeast"}
+
+Context: A loose wire in the kitchen sparked a fire that quickly spread to the curtains.
+Input: {"question": "What caused the fire in the kitchen?"}
+Output: {"answer": "A loose wire in the kitchen"}
+
+Context: The team's lack of preparation led to their embarrassing defeat in the championship game.
+Input: {"question": "What caused the team's embarrassing defeat?"}
+Output: {"answer": "The team's lack of preparation"}
+
+Context: When the thermostat malfunctioned, the house temperature dropped significantly overnight.
+Input: {"question": "What caused the house temperature to drop significantly?"}
+Output: {"answer": "the thermostat malfunctioned"}
+
+Context: Excessive use of fertilizer burned the roots of the tomato plants and killed them.
+Input: {"question": "What caused the tomato plants to die?"}
+Output: {"answer": "Excessive use of fertilizer"}
+
+Context: The cancellation of the morning train stranded hundreds of commuters at the station.
+Input: {"question": "What caused hundreds of commuters to be stranded?"}
+Output: {"answer": "The cancellation of the morning train"}
+
+Context: Since the software update contained a critical bug, the application froze upon startup.
+Input: {"question": "What caused the application to freeze upon startup?"}
+Output: {"answer": "the software update contained a critical bug"}
+
+Context: A sharp decline in consumer spending forced the retail chain to close five stores.
+Input: {"question": "What caused the retail chain to close five stores?"}
+Output: {"answer": "A sharp decline in consumer spending"}
+
+Context: The chef's addition of too much salt ruined the flavor of the soup.
+Input: {"question": "What caused the flavor of the soup to be ruined?"}
+Output: {"answer": "The chef's addition of too much salt"}
+
+Context: Strong winds uprooted the old oak tree, blocking the entire driveway.
+Input: {"question": "What caused the old oak tree to be uprooted?"}
+Output: {"answer": "Strong winds"}
+
+Context: Because the museum forgot to renew its insurance policy, it had to pay for all repair costs out of pocket.
+Input: {"question": "What caused the museum to pay for all repair costs out of pocket?"}
+Output: {"answer": "the museum forgot to renew its insurance policy"}
+
+Context: The accumulation of ice on the wings prevented the plane from taking off on schedule.
+Input: {"question": "What caused the plane to fail to take off on schedule?"}
+Output: {"answer": "The accumulation of ice on the wings"}

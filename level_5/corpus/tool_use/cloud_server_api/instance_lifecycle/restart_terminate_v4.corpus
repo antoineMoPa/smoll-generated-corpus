@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Launch the backup storage node i-backup-sec-01 in ca-central-1 to begin nightly sync.
+Call: { "func_call": "start_instance", "instance_id": "i-backup-sec-01", "region": "ca-central-1" }
+Response: { "instance_id": "i-backup-sec-01", "state": "running", "message": "Backup storage node started successfully for nightly sync." }
+
+Question: Halt the staging API server i-stg-api-04 in eu-west-3 to prevent traffic during deployment.
+Call: { "func_call": "stop_instance", "instance_id": "i-stg-api-04", "region": "eu-west-3" }
+Response: { "instance_id": "i-stg-api-04", "state": "stopped", "message": "Staging API server halted to secure deployment window." }
+
+Question: Reboot the analytics worker i-anlyt-wrk-22 in us-gov-west-1 to install security patches.
+Call: { "func_call": "restart_instance", "instance_id": "i-anlyt-wrk-22", "region": "us-gov-west-1" }
+Response: { "instance_id": "i-anlyt-wrk-22", "state": "rebooting", "message": "Analytics worker rebooting to apply security patches." }
+
+Question: Destroy the obsolete load balancer instance i-lb-legacy-07 in me-south-1 as the new cluster is active.
+Call: { "func_call": "terminate_instance", "instance_id": "i-lb-legacy-07", "region": "me-south-1" }
+Response: { "instance_id": "i-lb-legacy-07", "state": "shutting-down", "message": "Obsolete load balancer terminated following cluster activation." }
+
+Question: Start the data ingestion pipeline instance i-ingest-pipe-05 in af-south-1 to process morning batches.
+Call: { "func_call": "start_instance", "instance_id": "i-ingest-pipe-05", "region": "af-south-1" }
+Response: { "instance_id": "i-ingest-pipe-05", "state": "running", "message": "Data ingestion pipeline started for morning batch processing." }
+
+Question: Stop the development database i-dev-db-11 in us-east-2 to reduce costs over the weekend.
+Call: { "func_call": "stop_instance", "instance_id": "i-dev-db-11", "region": "us-east-2" }
+Response: { "instance_id": "i-dev-db-11", "state": "stopped", "message": "Development database stopped for weekend cost savings." }
+
+Question: Restart the logging aggregator i-log-agg-09 in ap-east-1 to clear full disk buffers.
+Call: { "func_call": "restart_instance", "instance_id": "i-log-agg-09", "region": "ap-east-1" }
+Response: { "instance_id": "i-log-agg-09", "state": "rebooting", "message": "Logging aggregator restarting to clear disk buffers." }
+
+Question: Terminate the spot training instance i-train-spot-33 in eu-north-1 since the model convergence is reached.
+Call: { "func_call": "terminate_instance", "instance_id": "i-train-spot-33", "region": "eu-north-1" }
+Response: { "instance_id": "i-train-spot-33", "state": "shutting-down", "message": "Spot training instance terminated after model convergence." }
+
+Question: Power on the disaster recovery replica i-dr-rep-02 in us-west-1 for monthly failover testing.
+Call: { "func_call": "start_instance", "instance_id": "i-dr-rep-02", "region": "us-west-1" }
+Response: { "instance_id": "i-dr-rep-02", "state": "running", "message": "Disaster recovery replica powered on for failover testing." }
+
+Question: Shut down the temporary rendering farm node i-render-temp-18 in eu-central-1 as the project is delivered.
+Call: { "func_call": "stop_instance", "instance_id": "i-render-temp-18", "region": "eu-central-1" }
+Response: { "instance_id": "i-render-temp-18", "state": "stopped", "message": "Temporary rendering node shut down post-project delivery." }
+
+Question: Cycle the message queue broker i-mq-brkr-06 in sa-east-1 to resolve connection timeouts.
+Call: { "func_call": "restart_instance", "instance_id": "i-mq-brkr-06", "region": "sa-east-1" }
+Response: { "instance_id": "i-mq-brkr-06", "state": "rebooting", "message": "Message queue broker cycling to fix connection timeouts." }
+
+Question: Remove the deprecated authentication service instance i-auth-dep-14 in ap-southeast-2 following the migration to OAuth2.
+Call: { "func_call": "terminate_instance", "instance_id": "i-auth-dep-14", "region": "ap-southeast-2" }
+Response: { "instance_id": "i-auth-dep-14", "state": "shutting-down", "message": "Deprecated auth service terminated after OAuth2 migration." }

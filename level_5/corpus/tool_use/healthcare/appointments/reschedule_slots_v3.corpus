@@ -1,0 +1,62 @@
+Available Tools: book_appointment | cancel_appointment | reschedule_appointment | get_upcoming_appointments | get_available_slots
+Call Schema: { "func_call": "string", "patient_id": "string", "doctor_id": "string", "specialty": "string", "date": "string", "reason": "string" }
+Response Schema: { "appointment_id": "string", "doctor": "string", "date": "string", "time": "string", "location": "location", "status": "string" }
+---
+Question: I need to book a flu shot with Dr. Morgan for next Thursday morning.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-3091", "doctor_id": "DOC-104", "specialty": "General Practice", "date": "2023-11-23", "reason": "Flu vaccination" }
+Response: { "appointment_id": "APT-1029", "doctor": "Dr. Lisa Morgan", "date": "2023-11-23", "time": "09:15 AM", "location": "Clinic B, Room 1", "status": "available" }
+
+---
+Question: Can you find an opening with Dr. Hayes for a persistent cough? I prefer Friday afternoon.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-4522", "doctor_id": "DOC-678", "specialty": "Pulmonology", "date": "2023-11-10", "reason": "Persistent cough evaluation" }
+Response: { "appointment_id": "APT-5541", "doctor": "Dr. George Hayes", "date": "2023-11-10", "time": "04:00 PM", "location": "Lung Center, Suite 3", "status": "available" }
+
+---
+Question: Please move my orthopedic follow-up from Tuesday to the next available slot on Thursday.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-7812", "doctor_id": "DOC-345", "specialty": "Orthopedics", "date": "2023-11-16", "reason": "Reschedule ortho follow-up" }
+Response: { "appointment_id": "APT-8823", "doctor": "Dr. Rachel Green", "date": "2023-11-16", "time": "11:30 AM", "location": "Orthopedic Wing, Room 9", "status": "confirmed" }
+
+---
+Question: I need an urgent dermatology check for a suspicious mole; see if Dr. Fox is free today.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-9103", "doctor_id": "DOC-512", "specialty": "Dermatology", "date": "2023-11-08", "reason": "Urgent mole examination" }
+Response: { "appointment_id": "APT-3367", "doctor": "Dr. Daniel Fox", "date": "2023-11-08", "time": "03:45 PM", "location": "Skin Care Clinic, Room 2", "status": "available" }
+
+---
+Question: Reschedule my psychiatry session with Dr. Wells to next Wednesday evening.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-2256", "doctor_id": "DOC-890", "specialty": "Psychiatry", "date": "2023-11-22", "reason": "Reschedule therapy session" }
+Response: { "appointment_id": "APT-6691", "doctor": "Dr. Clara Wells", "date": "2023-11-22", "time": "06:00 PM", "location": "Mental Health Center, Office 4", "status": "confirmed" }
+
+---
+Question: Find the earliest slot with Dr. Singh for a child's ear infection check tomorrow.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-5589", "doctor_id": "DOC-234", "specialty": "Pediatrics", "date": "2023-11-09", "reason": "Pediatric ear infection" }
+Response: { "appointment_id": "APT-4412", "doctor": "Dr. Raj Singh", "date": "2023-11-09", "time": "08:30 AM", "location": "Children's Clinic, Room 5", "status": "available" }
+
+---
+Question: I can't make my root canal on Friday; please reschedule to the first available time next week.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-6734", "doctor_id": "DOC-456", "specialty": "Dentistry", "date": "2023-11-24", "reason": "Reschedule root canal" }
+Response: { "appointment_id": "APT-7756", "doctor": "Dr. Helen White", "date": "2023-11-24", "time": "10:45 AM", "location": "Dental Care, Chair 2", "status": "confirmed" }
+
+---
+Question: Check if Dr. Brown has any openings this morning for an urgent asthma attack.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-8845", "doctor_id": "DOC-789", "specialty": "Allergy & Immunology", "date": "2023-11-08", "reason": "Urgent asthma attack" }
+Response: { "appointment_id": "APT-9934", "doctor": "Dr. Thomas Brown", "date": "2023-11-08", "time": "11:15 AM", "location": "Allergy Dept, Room 3", "status": "available" }
+
+---
+Question: Reschedule my nephrology appointment with Dr. Davis to next Tuesday afternoon due to work.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-1167", "doctor_id": "DOC-321", "specialty": "Nephrology", "date": "2023-11-21", "reason": "Reschedule due to work conflict" }
+Response: { "appointment_id": "APT-2245", "doctor": "Dr. Nancy Davis", "date": "2023-11-21", "time": "02:30 PM", "location": "Kidney Center, Suite 6", "status": "confirmed" }
+
+---
+Question: I need a routine hearing test with Dr. Clark; what slots are open next Friday?
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-3378", "doctor_id": "DOC-654", "specialty": "Otolaryngology", "date": "2023-11-17", "reason": "Routine hearing test" }
+Response: { "appointment_id": "APT-5589", "doctor": "Dr. Paul Clark", "date": "2023-11-17", "time": "01:00 PM", "location": "ENT Clinic, Test Room 1", "status": "available" }
+
+---
+Question: Urgent need to see Dr. Adams for a sprained ankle; check availability for tomorrow morning.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-4490", "doctor_id": "DOC-987", "specialty": "Orthopedics", "date": "2023-11-09", "reason": "Urgent ankle injury" }
+Response: { "appointment_id": "APT-6601", "doctor": "Dr. John Adams", "date": "2023-11-09", "time": "09:45 AM", "location": "Sports Med, Room 4", "status": "available" }
+
+---
+Question: Please move my rheumatology consult with Dr. Hill from Monday to the first available slot on Wednesday.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-5501", "doctor_id": "DOC-135", "specialty": "Rheumatology", "date": "2023-11-15", "reason": "Reschedule rheum consult" }
+Response: { "appointment_id": "APT-7712", "doctor": "Dr. Mary Hill", "date": "2023-11-15", "time": "11:00 AM", "location": "Arthritis Center, Office 2", "status": "confirmed" }

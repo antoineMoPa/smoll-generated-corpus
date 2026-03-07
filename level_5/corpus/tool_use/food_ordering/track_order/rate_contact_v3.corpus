@@ -1,0 +1,95 @@
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Please put me through to the driver for order #ORD-1045; I need to update the gate code before they arrive.
+Call: { "func_call": "contact_driver", "order_id": "ORD-1045" }
+Response: { "order_id": "ORD-1045", "status": "en_route", "driver_name": "Kevin Nguyen", "eta_minutes": 4, "location": "Maple Drive" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: I want to submit a 5-star rating for order #ORD-6789 because the dessert was still frozen and perfectly packaged.
+Call: { "func_call": "rate_order", "order_id": "ORD-6789" }
+Response: { "order_id": "ORD-6789", "status": "completed", "driver_name": "Sophia Lee", "eta_minutes": 0, "location": "Delivered" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Can you connect me with the driver of order #ORD-2398? They seem to be circling the block and I want to guide them.
+Call: { "func_call": "contact_driver", "order_id": "ORD-2398" }
+Response: { "order_id": "ORD-2398", "status": "arriving", "driver_name": "Brian Foster", "eta_minutes": 1, "location": "Corner of 5th and Pine" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Rate order #ORD-8120 with 2 stars; the soup spilled inside the bag and ruined the breadsticks.
+Call: { "func_call": "rate_order", "order_id": "ORD-8120" }
+Response: { "order_id": "ORD-8120", "status": "completed", "driver_name": "Jessica Martinez", "eta_minutes": 0, "location": "Delivered" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: I need to speak to the driver for order #ORD-4567 immediately to tell them to use the service elevator.
+Call: { "func_call": "contact_driver", "order_id": "ORD-4567" }
+Response: { "order_id": "ORD-4567", "status": "preparing_handoff", "driver_name": "Daniel Clark", "eta_minutes": 2, "location": "Ground Floor Lobby" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Submit a 4-star review for order #ORD-9932; the meal was delicious but the driver forgot the utensils.
+Call: { "func_call": "rate_order", "order_id": "ORD-9932" }
+Response: { "order_id": "ORD-9932", "status": "completed", "driver_name": "Amanda Lewis", "eta_minutes": 0, "location": "Delivered" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Please initiate contact with the driver for order #ORD-3214 to confirm they found the correct house number.
+Call: { "func_call": "contact_driver", "order_id": "ORD-3214" }
+Response: { "order_id": "ORD-3214", "status": "en_route", "driver_name": "Christopher Hall", "eta_minutes": 6, "location": "Elm Street" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: I'd like to give 1 star to order #ORD-7750 because the order arrived an hour late and the food was cold.
+Call: { "func_call": "rate_order", "order_id": "ORD-7750" }
+Response: { "order_id": "ORD-7750", "status": "completed", "driver_name": "Michelle Young", "eta_minutes": 0, "location": "Delivered" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Connect me to the driver for order #ORD-5099; I need to inform them that the dog is in the front yard.
+Call: { "func_call": "contact_driver", "order_id": "ORD-5099" }
+Response: { "order_id": "ORD-5099", "status": "arriving", "driver_name": "Ryan King", "eta_minutes": 3, "location": "Driveway" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Rate order #ORD-1188 with 5 stars; the driver was very friendly and followed all delivery instructions perfectly.
+Call: { "func_call": "rate_order", "order_id": "ORD-1188" }
+Response: { "order_id": "ORD-1188", "status": "completed", "driver_name": "Laura Wright", "eta_minutes": 0, "location": "Delivered" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: I need to contact the driver for order #ORD-6633 to ask if they can wait five more minutes while I come downstairs.
+Call: { "func_call": "contact_driver", "order_id": "ORD-6633" }
+Response: { "order_id": "ORD-6633", "status": "arriving", "driver_name": "Steven Scott", "eta_minutes": 1, "location": "Building Entrance" }
+
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Give 3 stars to order #ORD-4421; the food quality was good but the delivery time was much longer than estimated.
+Call: { "func_call": "rate_order", "order_id": "ORD-4421" }
+Response: { "order_id": "ORD-4421", "status": "completed", "driver_name": "Nicole Adams", "eta_minutes": 0, "location": "Delivered" }

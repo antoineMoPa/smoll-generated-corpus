@@ -1,0 +1,51 @@
+Available Tools: create_post | create_story | schedule_post | delete_post
+Call Schema: { "func_call": "string", "content": "string", "media_url": "string", "hashtags": ["string"], "scheduled_at": "string" }
+Response Schema: { "post_id": "string", "status": "published|scheduled|draft", "url": "string", "timestamp": "string" }
+---
+Question: Post a quick story about our flash sale ending tonight with the banner image.
+Call: { "func_call": "create_story", "content": "Flash Sale ends at midnight! Grab 50% off all items now.", "media_url": "https://cdn.shop.com/banners/flash_sale_final.jpg", "hashtags": ["#FlashSale", "#LastChance", "#Shopping"], "scheduled_at": "" }
+Response: { "post_id": "st_99281", "status": "published", "url": "https://social.app/stories/u/shopofficial/99281", "timestamp": "2023-10-27T14:30:00Z" }
+
+Question: Remove the post with ID post_4421 because it contains incorrect pricing information.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_4421", "status": "published", "url": "", "timestamp": "2023-10-27T14:32:15Z" }
+
+Question: Share a behind-the-scenes story of the team packing orders today.
+Call: { "func_call": "create_story", "content": "Look at our amazing team getting your packages ready! 📦✨", "media_url": "https://cdn.brand.com/media/warehouse_team_vid.mp4", "hashtags": ["#BehindTheScenes", "#TeamWork", "#SmallBusiness"], "scheduled_at": "" }
+Response: { "post_id": "st_99285", "status": "published", "url": "https://social.app/stories/u/brandname/99285", "timestamp": "2023-10-27T15:05:22Z" }
+
+Question: Delete the spam comment thread associated with post ID post_8812 immediately.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_8812", "status": "published", "url": "", "timestamp": "2023-10-27T15:10:00Z" }
+
+Question: Create a story announcing our new store location in downtown Seattle.
+Call: { "func_call": "create_story", "content": "We are officially open in Downtown Seattle! Come visit us at Pike Place.", "media_url": "https://cdn.retail.com/photos/seattle_storefront.jpg", "hashtags": ["#GrandOpening", "#Seattle", "#NewLocation"], "scheduled_at": "" }
+Response: { "post_id": "st_99290", "status": "published", "url": "https://social.app/stories/u/retailco/99290", "timestamp": "2023-10-27T16:00:45Z" }
+
+Question: Please take down the outdated event announcement post_3301 since the event was cancelled.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_3301", "status": "published", "url": "", "timestamp": "2023-10-27T16:15:30Z" }
+
+Question: Post a personal story update about running my first 5k this morning.
+Call: { "func_call": "create_story", "content": "Did it! Finished my first 5k run this morning. Feeling exhausted but proud! 🏃‍♀️💨", "media_url": "https://cdn.user.com/uploads/5k_medal_selfie.jpg", "hashtags": ["#Running", "#5K", "#FitnessGoal", "#PersonalBest"], "scheduled_at": "" }
+Response: { "post_id": "st_99298", "status": "published", "url": "https://social.app/stories/u/jane_runner/99298", "timestamp": "2023-10-27T08:45:12Z" }
+
+Question: Remove the duplicate post post_7754 that was accidentally published twice.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_7754", "status": "published", "url": "", "timestamp": "2023-10-27T09:00:05Z" }
+
+Question: Share a quick video story of the sunset from my balcony in Miami.
+Call: { "func_call": "create_story", "content": "Golden hour in Miami never disappoints. 🌅🌴", "media_url": "https://cdn.personal.net/videos/miami_sunset_timelapse.mp4", "hashtags": ["#Miami", "#Sunset", "#GoldenHour", "#Travel"], "scheduled_at": "" }
+Response: { "post_id": "st_99305", "status": "published", "url": "https://social.app/stories/u/travel_mike/99305", "timestamp": "2023-10-27T19:20:33Z" }
+
+Question: Delete the controversial post post_5599 due to community guideline violations.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_5599", "status": "published", "url": "", "timestamp": "2023-10-27T11:45:50Z" }
+
+Question: Create a story highlighting our customer review of the month with their photo.
+Call: { "func_call": "create_story", "content": "Customer of the Month: Sarah says our coffee changed her mornings! ☕️❤️", "media_url": "https://cdn.cafe.com/reviews/sarah_testimonial.jpg", "hashtags": ["#CustomerLove", "#CoffeeShop", "#ReviewOfTheMonth"], "scheduled_at": "" }
+Response: { "post_id": "st_99312", "status": "published", "url": "https://social.app/stories/u/daily_brew/99312", "timestamp": "2023-10-27T12:30:18Z" }
+
+Question: Purge the test post post_1001 used for debugging the upload feature.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_1001", "status": "published", "url": "", "timestamp": "2023-10-27T13:00:00Z" }

@@ -1,0 +1,19 @@
+| Context: The annual tech summit featured speakers Dr. Alan Turing, Grace Hopper, and Tim Berners-Lee. They discussed the future of artificial intelligence and web technologies. Moderator Samantha Reed facilitated the Q&A session. | Input: {"question": "Who were the featured speakers at the tech summit?"} | Output: {"answer": ["Dr. Alan Turing", "Grace Hopper", "Tim Berners-Lee"]}
+
+| Context: During the neighborhood association meeting, residents Carl Sagan, Diane Fossey, and Eugene Cernan proposed a new park initiative. Board member Florence Nightingale recorded the minutes. The motion was passed unanimously. | Input: {"question": "Which residents proposed the new park initiative?"} | Output: {"answer": ["Carl Sagan", "Diane Fossey", "Eugene Cernan"]}
+
+| Context: The jazz ensemble performing tonight includes pianist Miles Davis, saxophonist John Coltrane, and drummer Max Roach. Bandleader Ella Fitzgerald introduced the set list. The venue was packed with enthusiastic fans. | Input: {"question": "Who is performing in the jazz ensemble?"} | Output: {"answer": ["Miles Davis", "John Coltrane", "Max Roach"]}
+
+| Context: At the international peace treaty signing, Ambassadors Kofi Annan, Ban Ki-moon, and António Guterres represented their respective nations. Secretary-General Trygve Lie oversaw the ceremony. Journalists from around the world captured the moment. | Input: {"question": "Which ambassadors signed the peace treaty?"} | Output: {"answer": ["Kofi Annan", "Ban Ki-moon", "António Guterres"]}
+
+| Context: The archaeological dig team consists of Dr. Indiana Jones, Dr. Lara Croft, and Dr. Nathan Drake. They uncovered several ancient artifacts in the Amazon basin. Sponsor Lord Richard Attenborough funded the expedition. | Input: {"question": "Who comprises the archaeological dig team?"} | Output: {"answer": ["Dr. Indiana Jones", "Dr. Lara Croft", "Dr. Nathan Drake"]}
+
+| Context: For the charity marathon, runners Usain Bolt, Eliud Kipchoge, and Florence Griffith-Joyner led the pack. Organizer Oprah Winfrey cheered from the finish line. Volunteers handed out water and energy bars. | Input: {"question": "Who led the charity marathon?"} | Output: {"answer": ["Usain Bolt", "Eliud Kipchoge", "Florence Griffith-Joyner"]}
+
+| Context: The space mission crew includes Commander Neil Armstrong, Pilot Buzz Aldrin, and Engineer Michael Collins. Flight Director Gene Kranz monitored operations from Houston. They successfully landed on the lunar surface. | Input: {"question": "Who are the members of the space mission crew?"} | Output: {"answer": ["Neil Armstrong", "Buzz Aldrin", "Michael Collins"]}
+
+| Context: In the courtroom, attorneys Atticus Finch, Perry Mason, and Ally McBeal presented their closing arguments. Judge Judy Sheindlin presided over the case. The jury deliberated for three hours. | Input: {"question": "Which attorneys presented closing arguments?"} | Output: {"answer": ["Atticus Finch", "Perry Mason", "Ally McBeal"]}
+
+| Context: The fashion show showcased designs by Coco Chanel, Giorgio Armani, and Vera Wang. Model Naomi Campbell walked the runway for the finale. Critic Anna Wintour noted the innovative use of fabrics. | Input: {"question": "Whose designs were showcased in the fashion show?"} | Output: {"answer": ["Coco Chanel", "Giorgio Armani", "Vera Wang"]}
+
+| Context: The emergency response unit deployed firefighters Red Adair, Leslie Jameson, and William Pittman to the oil rig fire. Chief Russell Sherman coordinated the aerial support. The blaze was extinguished within forty-eight hours. | Input: {"question": "Who was deployed to the oil rig fire?"} | Output: {"answer": ["Red Adair", "Leslie Jameson", "William Pittman"]}

@@ -1,0 +1,51 @@
+Available Tools: find_by_name | find_by_extension | find_by_size | find_by_date
+Call Schema: { "func_call": "string", "path": "string", "pattern": "string", "type": "string" }
+Response Schema: { "matches": ["string"], "count": number }
+---
+Question: Retrieve all PNG images stored in /usr/share/icons/theme-dark.
+Call: { "func_call": "find_by_extension", "path": "/usr/share/icons/theme-dark", "pattern": "*.png", "type": "file" }
+Response: { "matches": ["/usr/share/icons/theme-dark/logo.png", "/usr/share/icons/theme-dark/background.png", "/usr/share/icons/theme-dark/icon_set.png"], "count": 3 }
+
+Question: Identify the package.lock file within the /opt/services/payment-gateway directory.
+Call: { "func_call": "find_by_name", "path": "/opt/services/payment-gateway", "pattern": "package.lock", "type": "file" }
+Response: { "matches": ["/opt/services/payment-gateway/package.lock"], "count": 1 }
+
+Question: Scan for all Markdown documentation files in /docs/api-reference/v2.
+Call: { "func_call": "find_by_extension", "path": "/docs/api-reference/v2", "pattern": "*.md", "type": "file" }
+Response: { "matches": ["/docs/api-reference/v2/index.md", "/docs/api-reference/v2/endpoints.md", "/docs/api-reference/v2/errors.md", "/docs/api-reference/v2/examples.md"], "count": 4 }
+
+Question: Locate the hidden gitignore file in the root of /home/alice/repo-project.
+Call: { "func_call": "find_by_name", "path": "/home/alice/repo-project", "pattern": ".gitignore", "type": "file" }
+Response: { "matches": ["/home/alice/repo-project/.gitignore"], "count": 1 }
+
+Question: Find all SQL dump files located in /var/database/daily_backups.
+Call: { "func_call": "find_by_extension", "path": "/var/database/daily_backups", "pattern": "*.sql", "type": "file" }
+Response: { "matches": ["/var/database/daily_backups/users_2024.sql", "/var/database/daily_backups/orders_2024.sql"], "count": 2 }
+
+Question: Search for any file named credentials.json inside the /srv/app/secrets folder.
+Call: { "func_call": "find_by_name", "path": "/srv/app/secrets", "pattern": "credentials.json", "type": "file" }
+Response: { "matches": ["/srv/app/secrets/credentials.json", "/srv/app/secrets/backup/credentials.json"], "count": 2 }
+
+Question: List all Dockerfile definitions found in /home/engineer/microservices/auth-service.
+Call: { "func_call": "find_by_name", "path": "/home/engineer/microservices/auth-service", "pattern": "Dockerfile", "type": "file" }
+Response: { "matches": ["/home/engineer/microservices/auth-service/Dockerfile"], "count": 1 }
+
+Question: Detect all YAML configuration files in /etc/kubernetes/manifests.
+Call: { "func_call": "find_by_extension", "path": "/etc/kubernetes/manifests", "pattern": "*.yaml", "type": "file" }
+Response: { "matches": ["/etc/kubernetes/manifests/etcd.yaml", "/etc/kubernetes/manifests/kube-apiserver.yaml", "/etc/kubernetes/manifests/kube-controller-manager.yaml"], "count": 3 }
+
+Question: Find the specific bootstrap script named init.sh in /root/setup/scripts.
+Call: { "func_call": "find_by_name", "path": "/root/setup/scripts", "pattern": "init.sh", "type": "file" }
+Response: { "matches": ["/root/setup/scripts/init.sh"], "count": 1 }
+
+Question: Retrieve all PDF reports generated in /var/www/reports/quarterly.
+Call: { "func_call": "find_by_extension", "path": "/var/www/reports/quarterly", "pattern": "*.pdf", "type": "file" }
+Response: { "matches": ["/var/www/reports/quarterly/q1_summary.pdf", "/var/www/reports/quarterly/q2_summary.pdf", "/var/www/reports/quarterly/q3_summary.pdf", "/var/www/reports/quarterly/q4_summary.pdf"], "count": 4 }
+
+Question: Locate the .bashrc configuration file in the /home/guest account directory.
+Call: { "func_call": "find_by_name", "path": "/home/guest", "pattern": ".bashrc", "type": "file" }
+Response: { "matches": ["/home/guest/.bashrc"], "count": 1 }
+
+Question: Search for all binary executable files with the .bin extension in /usr/local/bin/custom.
+Call: { "func_call": "find_by_extension", "path": "/usr/local/bin/custom", "pattern": "*.bin", "type": "file" }
+Response: { "matches": ["/usr/local/bin/custom/tool_a.bin", "/usr/local/bin/custom/tool_b.bin"], "count": 2 }

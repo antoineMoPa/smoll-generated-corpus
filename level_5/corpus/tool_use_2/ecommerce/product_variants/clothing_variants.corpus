@@ -1,0 +1,397 @@
+{
+  "func_call": "get_product_with_variants",
+  "product_id": "PROD-8821",
+  "options": {
+    "color": "Navy",
+    "size": "M",
+    "material": "Cotton"
+  }
+}
+{
+  "product_id": "PROD-8821",
+  "name": "Classic Fit Chino Pants",
+  "variants": [
+    {
+      "sku": "CHINO-NAV-S",
+      "options": { "color": "Navy", "size": "S" },
+      "price": 49.99,
+      "stock": 12,
+      "images": ["https://cdn.shop.com/chino-navy-s-1.jpg", "https://cdn.shop.com/chino-navy-s-2.jpg"]
+    },
+    {
+      "sku": "CHINO-NAV-M",
+      "options": { "color": "Navy", "size": "M" },
+      "price": 49.99,
+      "stock": 45,
+      "images": ["https://cdn.shop.com/chino-navy-m-1.jpg", "https://cdn.shop.com/chino-navy-m-2.jpg"]
+    },
+    {
+      "sku": "CHINO-NAV-L",
+      "options": { "color": "Navy", "size": "L" },
+      "price": 49.99,
+      "stock": 33,
+      "images": ["https://cdn.shop.com/chino-navy-l-1.jpg", "https://cdn.shop.com/chino-navy-l-2.jpg"]
+    },
+    {
+      "sku": "CHINO-KHK-S",
+      "options": { "color": "Khaki", "size": "S" },
+      "price": 49.99,
+      "stock": 8,
+      "images": ["https://cdn.shop.com/chino-khk-s-1.jpg"]
+    },
+    {
+      "sku": "CHINO-KHK-M",
+      "options": { "color": "Khaki", "size": "M" },
+      "price": 49.99,
+      "stock": 22,
+      "images": ["https://cdn.shop.com/chino-khk-m-1.jpg"]
+    },
+    {
+      "sku": "CHINO-KHK-L",
+      "options": { "color": "Khaki", "size": "L" },
+      "price": 49.99,
+      "stock": 19,
+      "images": ["https://cdn.shop.com/chino-khk-l-1.jpg"]
+    },
+    {
+      "sku": "CHINO-BLK-M",
+      "options": { "color": "Black", "size": "M" },
+      "price": 49.99,
+      "stock": 50,
+      "images": ["https://cdn.shop.com/chino-blk-m-1.jpg"]
+    },
+    {
+      "sku": "CHINO-BLK-L",
+      "options": { "color": "Black", "size": "L" },
+      "price": 49.99,
+      "stock": 27,
+      "images": ["https://cdn.shop.com/chino-blk-l-1.jpg"]
+    }
+  ],
+  "selected_variant": {
+    "sku": "CHINO-NAV-M",
+    "options": { "color": "Navy", "size": "M" },
+    "price": 49.99,
+    "stock": 45
+  }
+}
+{
+  "func_call": "get_product_with_variants",
+  "product_id": "PROD-9902",
+  "options": {
+    "color": "Red",
+    "size": "L",
+    "material": "Polyester"
+  }
+}
+{
+  "product_id": "PROD-9902",
+  "name": "Performance Running Tee",
+  "variants": [
+    {
+      "sku": "RUN-RED-S",
+      "options": { "color": "Red", "size": "S" },
+      "price": 24.50,
+      "stock": 15,
+      "images": ["https://cdn.shop.com/run-red-s.jpg"]
+    },
+    {
+      "sku": "RUN-RED-M",
+      "options": { "color": "Red", "size": "M" },
+      "price": 24.50,
+      "stock": 30,
+      "images": ["https://cdn.shop.com/run-red-m.jpg"]
+    },
+    {
+      "sku": "RUN-RED-L",
+      "options": { "color": "Red", "size": "L" },
+      "price": 24.50,
+      "stock": 42,
+      "images": ["https://cdn.shop.com/run-red-l.jpg"]
+    },
+    {
+      "sku": "RUN-BLU-S",
+      "options": { "color": "Blue", "size": "S" },
+      "price": 24.50,
+      "stock": 10,
+      "images": ["https://cdn.shop.com/run-blu-s.jpg"]
+    },
+    {
+      "sku": "RUN-BLU-M",
+      "options": { "color": "Blue", "size": "M" },
+      "price": 24.50,
+      "stock": 25,
+      "images": ["https://cdn.shop.com/run-blu-m.jpg"]
+    },
+    {
+      "sku": "RUN-BLU-L",
+      "options": { "color": "Blue", "size": "L" },
+      "price": 24.50,
+      "stock": 38,
+      "images": ["https://cdn.shop.com/run-blu-l.jpg"]
+    },
+    {
+      "sku": "RUN-GRN-M",
+      "options": { "color": "Green", "size": "M" },
+      "price": 24.50,
+      "stock": 5,
+      "images": ["https://cdn.shop.com/run-grn-m.jpg"]
+    },
+    {
+      "sku": "RUN-GRN-L",
+      "options": { "color": "Green", "size": "L" },
+      "price": 24.50,
+      "stock": 12,
+      "images": ["https://cdn.shop.com/run-grn-l.jpg"]
+    }
+  ],
+  "selected_variant": {
+    "sku": "RUN-RED-L",
+    "options": { "color": "Red", "size": "L" },
+    "price": 24.50,
+    "stock": 42
+  }
+}
+{
+  "func_call": "get_product_with_variants",
+  "product_id": "PROD-1123",
+  "options": {
+    "color": "White",
+    "size": "XS",
+    "material": "Linen"
+  }
+}
+{
+  "product_id": "PROD-1123",
+  "name": "Summer Breeze Linen Shirt",
+  "variants": [
+    {
+      "sku": "LIN-WHT-XS",
+      "options": { "color": "White", "size": "XS" },
+      "price": 59.00,
+      "stock": 7,
+      "images": ["https://cdn.shop.com/lin-wht-xs-1.jpg", "https://cdn.shop.com/lin-wht-xs-2.jpg"]
+    },
+    {
+      "sku": "LIN-WHT-S",
+      "options": { "color": "White", "size": "S" },
+      "price": 59.00,
+      "stock": 14,
+      "images": ["https://cdn.shop.com/lin-wht-s-1.jpg", "https://cdn.shop.com/lin-wht-s-2.jpg"]
+    },
+    {
+      "sku": "LIN-WHT-M",
+      "options": { "color": "White", "size": "M" },
+      "price": 59.00,
+      "stock": 20,
+      "images": ["https://cdn.shop.com/lin-wht-m-1.jpg"]
+    },
+    {
+      "sku": "LIN-BGE-XS",
+      "options": { "color": "Beige", "size": "XS" },
+      "price": 59.00,
+      "stock": 3,
+      "images": ["https://cdn.shop.com/lin-bge-xs-1.jpg"]
+    },
+    {
+      "sku": "LIN-BGE-S",
+      "options": { "color": "Beige", "size": "S" },
+      "price": 59.00,
+      "stock": 9,
+      "images": ["https://cdn.shop.com/lin-bge-s-1.jpg"]
+    },
+    {
+      "sku": "LIN-BGE-M",
+      "options": { "color": "Beige", "size": "M" },
+      "price": 59.00,
+      "stock": 11,
+      "images": ["https://cdn.shop.com/lin-bge-m-1.jpg"]
+    },
+    {
+      "sku": "LIN-OLV-S",
+      "options": { "color": "Olive", "size": "S" },
+      "price": 59.00,
+      "stock": 6,
+      "images": ["https://cdn.shop.com/lin-olv-s-1.jpg"]
+    },
+    {
+      "sku": "LIN-OLV-M",
+      "options": { "color": "Olive", "size": "M" },
+      "price": 59.00,
+      "stock": 15,
+      "images": ["https://cdn.shop.com/lin-olv-m-1.jpg"]
+    }
+  ],
+  "selected_variant": {
+    "sku": "LIN-WHT-XS",
+    "options": { "color": "White", "size": "XS" },
+    "price": 59.00,
+    "stock": 7
+  }
+}
+{
+  "func_call": "get_product_with_variants",
+  "product_id": "PROD-4455",
+  "options": {
+    "color": "Black",
+    "size": "XL",
+    "material": "Denim"
+  }
+}
+{
+  "product_id": "PROD-4455",
+  "name": "Urban Slim Fit Jeans",
+  "variants": [
+    {
+      "sku": "JNS-BLK-30",
+      "options": { "color": "Black", "size": "30" },
+      "price": 79.95,
+      "stock": 18,
+      "images": ["https://cdn.shop.com/jns-blk-30.jpg"]
+    },
+    {
+      "sku": "JNS-BLK-32",
+      "options": { "color": "Black", "size": "32" },
+      "price": 79.95,
+      "stock": 24,
+      "images": ["https://cdn.shop.com/jns-blk-32.jpg"]
+    },
+    {
+      "sku": "JNS-BLK-34",
+      "options": { "color": "Black", "size": "34" },
+      "price": 79.95,
+      "stock": 31,
+      "images": ["https://cdn.shop.com/jns-blk-34.jpg"]
+    },
+    {
+      "sku": "JNS-BLK-36",
+      "options": { "color": "Black", "size": "36" },
+      "price": 79.95,
+      "stock": 12,
+      "images": ["https://cdn.shop.com/jns-blk-36.jpg"]
+    },
+    {
+      "sku": "JNS-IND-30",
+      "options": { "color": "Indigo", "size": "30" },
+      "price": 79.95,
+      "stock": 22,
+      "images": ["https://cdn.shop.com/jns-ind-30.jpg"]
+    },
+    {
+      "sku": "JNS-IND-32",
+      "options": { "color": "Indigo", "size": "32" },
+      "price": 79.95,
+      "stock": 29,
+      "images": ["https://cdn.shop.com/jns-ind-32.jpg"]
+    },
+    {
+      "sku": "JNS-IND-34",
+      "options": { "color": "Indigo", "size": "34" },
+      "price": 79.95,
+      "stock": 15,
+      "images": ["https://cdn.shop.com/jns-ind-34.jpg"]
+    },
+    {
+      "sku": "JNS-GRY-32",
+      "options": { "color": "Grey", "size": "32" },
+      "price": 79.95,
+      "stock": 8,
+      "images": ["https://cdn.shop.com/jns-gry-32.jpg"]
+    }
+  ],
+  "selected_variant": {
+    "sku": "JNS-BLK-36",
+    "options": { "color": "Black", "size": "36" },
+    "price": 79.95,
+    "stock": 12
+  }
+}
+{
+  "func_call": "get_product_with_variants",
+  "product_id": "PROD-7788",
+  "options": {
+    "color": "Grey",
+    "size": "M",
+    "material": "Wool"
+  }
+}
+{
+  "product_id": "PROD-7788",
+  "name": "Merino Wool Crewneck Sweater",
+  "variants": [
+    {
+      "sku": "SWT-GRY-S",
+      "options": { "color": "Grey", "size": "S" },
+      "price": 89.00,
+      "stock": 5,
+      "images": ["https://cdn.shop.com/swt-gry-s.jpg"]
+    },
+    {
+      "sku": "SWT-GRY-M",
+      "options": { "color": "Grey", "size": "M" },
+      "price": 89.00,
+      "stock": 19,
+      "images": ["https://cdn.shop.com/swt-gry-m.jpg"]
+    },
+    {
+      "sku": "SWT-GRY-L",
+      "options": { "color": "Grey", "size": "L" },
+      "price": 89.00,
+      "stock": 23,
+      "images": ["https://cdn.shop.com/swt-gry-l.jpg"]
+    },
+    {
+      "sku": "SWT-CHR-S",
+      "options": { "color": "Charcoal", "size": "S" },
+      "price": 89.00,
+      "stock": 4,
+      "images": ["https://cdn.shop.com/swt-chr-s.jpg"]
+    },
+    {
+      "sku": "SWT-CHR-M",
+      "options": { "color": "Charcoal", "size": "M" },
+      "price": 89.00,
+      "stock": 16,
+      "images": ["https://cdn.shop.com/swt-chr-m.jpg"]
+    },
+    {
+      "sku": "SWT-CHR-L",
+      "options": { "color": "Charcoal", "size": "L" },
+      "price": 89.00,
+      "stock": 20,
+      "images": ["https://cdn.shop.com/swt-chr-l.jpg"]
+    },
+    {
+      "sku": "SWT-NVY-M",
+      "options": { "color": "Navy", "size": "M" },
+      "price": 89.00,
+      "stock": 35,
+      "images": ["https://cdn.shop.com/swt-nvy-m.jpg"]
+    },
+    {
+      "sku": "SWT-NVY-L",
+      "options": { "color": "Navy", "size": "L" },
+      "price": 89.00,
+      "stock": 28,
+      "images": ["https://cdn.shop.com/swt-nvy-l.jpg"]
+    }
+  ],
+  "selected_variant": {
+    "sku": "SWT-GRY-M",
+    "options": { "color": "Grey", "size": "M" },
+    "price": 89.00,
+    "stock": 19
+  }
+}
+{
+  "func_call": "get_product_with_variants",
+  "product_id": "PROD-3321",
+  "options": {
+    "color": "Pink",
+    "size": "S",
+    "material": "Silk"
+  }
+}
+{
+  "product_id": "PROD-3321",
+  "name": "Luxury

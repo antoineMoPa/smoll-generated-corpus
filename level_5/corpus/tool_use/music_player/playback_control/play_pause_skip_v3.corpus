@@ -1,0 +1,51 @@
+Available Tools: play | pause | stop | skip_next | skip_previous | seek
+Call Schema: { "func_call": "string", "track_id": "string", "position_seconds": number }
+Response Schema: { "track_id": "string", "title": "string", "artist": "string", "state": "playing|paused|stopped", "position_seconds": number }
+---
+Question: Start playing Watermelon Sugar by Harry Styles.
+Call: { "func_call": "play", "track_id": "hs_watermelon_sugar_15", "position_seconds": 0 }
+Response: { "track_id": "hs_watermelon_sugar_15", "title": "Watermelon Sugar", "artist": "Harry Styles", "state": "playing", "position_seconds": 0 }
+
+Question: Pause the current song immediately.
+Call: { "func_call": "pause", "track_id": "ab_dancing_queen_22", "position_seconds": 94 }
+Response: { "track_id": "ab_dancing_queen_22", "title": "Dancing Queen", "artist": "ABBA", "state": "paused", "position_seconds": 94 }
+
+Question: Skip to the following track in the list.
+Call: { "func_call": "skip_next", "track_id": "br_just_the_way_you_are_08", "position_seconds": 0 }
+Response: { "track_id": "br_just_the_way_you_are_08", "title": "Just the Way You Are", "artist": "Bruno Mars", "state": "playing", "position_seconds": 0 }
+
+Question: Return to the previous song in the queue.
+Call: { "func_call": "skip_previous", "track_id": "qm_bohemian_rhapsody_01", "position_seconds": 0 }
+Response: { "track_id": "qm_bohemian_rhapsody_01", "title": "Bohemian Rhapsody", "artist": "Queen", "state": "playing", "position_seconds": 0 }
+
+Question: Play Rolling in the Deep by Adele from the start.
+Call: { "func_call": "play", "track_id": "ad_rolling_in_the_deep_19", "position_seconds": 0 }
+Response: { "track_id": "ad_rolling_in_the_deep_19", "title": "Rolling in the Deep", "artist": "Adele", "state": "playing", "position_seconds": 0 }
+
+Question: Stop playback on Blurred Lines right now.
+Call: { "func_call": "pause", "track_id": "rt_blurred_lines_33", "position_seconds": 178 }
+Response: { "track_id": "rt_blurred_lines_33", "title": "Blurred Lines", "artist": "Robin Thicke", "state": "paused", "position_seconds": 178 }
+
+Question: Advance to the next track please.
+Call: { "func_call": "skip_next", "track_id": "km_uptown_funk_14", "position_seconds": 0 }
+Response: { "track_id": "km_uptown_funk_14", "title": "Uptown Funk", "artist": "Mark Ronson", "state": "playing", "position_seconds": 0 }
+
+Question: Go back to the song before this one.
+Call: { "func_call": "skip_previous", "track_id": "mj_billie_jean_05", "position_seconds": 0 }
+Response: { "track_id": "mj_billie_jean_05", "title": "Billie Jean", "artist": "Michael Jackson", "state": "playing", "position_seconds": 0 }
+
+Question: Play Happy by Pharrell Williams.
+Call: { "func_call": "play", "track_id": "pw_happy_27", "position_seconds": 0 }
+Response: { "track_id": "pw_happy_27", "title": "Happy", "artist": "Pharrell Williams", "state": "playing", "position_seconds": 0 }
+
+Question: Pause the track Shake It Off.
+Call: { "func_call": "pause", "track_id": "ts_shake_it_off_11", "position_seconds": 62 }
+Response: { "track_id": "ts_shake_it_off_11", "title": "Shake It Off", "artist": "Taylor Swift", "state": "paused", "position_seconds": 62 }
+
+Question: Move forward to the next song in the album.
+Call: { "func_call": "skip_next", "track_id": "lc_viva_la_vida_09", "position_seconds": 0 }
+Response: { "track_id": "lc_viva_la_vida_09", "title": "Viva la Vida", "artist": "Coldplay", "state": "playing", "position_seconds": 0 }
+
+Question: Rewind to the previous track in the playlist.
+Call: { "func_call": "skip_previous", "track_id": "rb_umbrella_16", "position_seconds": 0 }
+Response: { "track_id": "rb_umbrella_16", "title": "Umbrella", "artist": "Rihanna", "state": "playing", "position_seconds": 0 }

@@ -1,0 +1,51 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Join employees and departments to list employee names and department titles for the first 8 staff members.
+Call: { "func_call": "select_with_join", "table": "employees", "columns": ["employees.full_name", "departments.title"], "where": "employees.dept_id = departments.id", "limit": 8 }
+Response: { "rows": [{"full_name": "John Doe", "title": "Engineering"}, {"full_name": "Jane Roe", "title": "Marketing"}, {"full_name": "Sam Wilson", "title": "Sales"}, {"full_name": "Lisa Ray", "title": "HR"}, {"full_name": "Tom Hardy", "title": "Finance"}, {"full_name": "Amy Pond", "title": "Legal"}, {"full_name": "Ben Stark", "title": "Operations"}, {"full_name": "Clara Oswald", "title": "Support"}], "count": 8, "query_ms": 14 }
+---
+Question: Count the total number of events logged in the system audit table.
+Call: { "func_call": "count_records", "table": "audit_logs", "columns": ["*"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 28450, "query_ms": 5 }
+---
+Question: Join bookings and rooms to retrieve room numbers and guest names for booking ID 5099.
+Call: { "func_call": "select_with_join", "table": "bookings", "columns": ["rooms.room_number", "guests.guest_name"], "where": "bookings.room_id = rooms.id AND bookings.guest_id = guests.id AND bookings.id = 5099", "limit": 10 }
+Response: { "rows": [{"room_number": "304", "guest_name": "Maria Garcia"}, {"room_number": "304", "guest_name": "Carlos Garcia"}], "count": 2, "query_ms": 21 }
+---
+Question: How many active sessions are currently tracked in the database?
+Call: { "func_call": "count_records", "table": "sessions", "columns": ["*"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 1205, "query_ms": 2 }
+---
+Question: Select customer names and their total reservation cost by joining customers, bookings, and payments, limited to the top 5 highest spenders.
+Call: { "func_call": "select_with_join", "table": "customers", "columns": ["customers.name", "SUM(payments.amount) as total_cost"], "where": "customers.id = bookings.customer_id AND bookings.id = payments.booking_id", "limit": 5 }
+Response: { "rows": [{"name": "Robert Chen", "total_cost": 4500.00}, {"name": "Emily Davis", "total_cost": 3200.50}, {"name": "David Kim", "total_cost": 2950.75}], "count": 3, "query_ms": 38 }
+---
+Question: Count the number of vehicles that have a mileage less than 50000.
+Call: { "func_call": "count_records", "table": "vehicles", "columns": ["*"], "where": "mileage < 50000", "limit": 0 }
+Response: { "rows": [], "count": 87, "query_ms": 7 }
+---
+Question: Retrieve article titles and author names by joining articles and authors for posts published in 2024.
+Call: { "func_call": "select_with_join", "table": "articles", "columns": ["articles.title", "authors.name"], "where": "articles.author_id = authors.id AND articles.publish_date >= '2024-01-01'", "limit": 15 }
+Response: { "rows": [{"title": "Future of AI", "name": "Dr. Alan Turing"}, {"title": "Quantum Computing", "name": "Marie Curie"}, {"title": "Green Energy", "name": "Elon Musk"}], "count": 3, "query_ms": 19 }
+---
+Question: What is the total count of transactions made in the month of March 2024?
+Call: { "func_call": "count_records", "table": "transactions", "columns": ["*"], "where": "transaction_date >= '2024-03-01' AND transaction_date <= '2024-03-31'", "limit": 0 }
+Response: { "rows": [], "count": 8932, "query_ms": 9 }
+---
+Question: Join students and courses to find the grade of the latest enrollment for student ID 101.
+Call: { "func_call": "select_with_join", "table": "students", "columns": ["enrollments.grade", "enrollments.date"], "where": "students.id = enrollments.student_id AND students.id = 101", "limit": 1 }
+Response: { "rows": [{"grade": "A", "date": "2024-05-20"}], "count": 1, "query_ms": 11 }
+---
+Question: Count how many distinct brands exist in the cars table.
+Call: { "func_call": "count_records", "table": "cars", "columns": ["DISTINCT brand"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 24, "query_ms": 6 }
+---
+Question: List clinic names and doctor specialties by joining clinics and doctors where the clinic is located in 'New York'.
+Call: { "func_call": "select_with_join", "table": "clinics", "columns": ["clinics.name", "doctors.specialty"], "where": "clinics.id = doctors.clinic_id AND clinics.city = 'New York'", "limit": 30 }
+Response: { "rows": [{"name": "Metro Health", "specialty": "Cardiology"}, {"name": "City Care", "specialty": "Pediatrics"}, {"name": "East Side Med", "specialty": "Neurology"}], "count": 3, "query_ms": 17 }
+---
+Question: Determine the number of ticket records associated with priority level 'High'.
+Call: { "func_call": "count_records", "table": "tickets", "columns": ["*"], "where": "priority = 'High'", "limit": 0 }
+Response: { "rows": [], "count": 156, "query_ms": 3 }

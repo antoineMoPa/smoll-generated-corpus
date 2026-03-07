@@ -1,0 +1,51 @@
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Where is my package #DL-4402 currently located?
+Call: { "func_call": "track_delivery", "order_id": "DL-4402" }
+Response: { "order_id": "DL-4402", "status": "preparing", "driver_name": null, "eta_minutes": 40, "location": "Central Warehouse Hub" }
+
+Question: Did driver Alex Johnson collect order #DL-7789?
+Call: { "func_call": "get_order_status", "order_id": "DL-7789" }
+Response: { "order_id": "DL-7789", "status": "picked up", "driver_name": "Alex Johnson", "eta_minutes": 28, "location": "Exiting Tech Depot" }
+
+Question: Can you verify the progress of my book order #DL-1156?
+Call: { "func_call": "track_delivery", "order_id": "DL-1156" }
+Response: { "order_id": "DL-1156", "status": "on the way", "driver_name": "Sofia Garcia", "eta_minutes": 11, "location": "Riverdale Bridge" }
+
+Question: Has order #DL-9932 been successfully dropped off?
+Call: { "func_call": "get_order_status", "order_id": "DL-9932" }
+Response: { "order_id": "DL-9932", "status": "delivered", "driver_name": "Robert Kim", "eta_minutes": 0, "location": "Mailroom Bin" }
+
+Question: I need a status check on order #DL-2245, is it still being packed?
+Call: { "func_call": "track_delivery", "order_id": "DL-2245" }
+Response: { "order_id": "DL-2245", "status": "preparing", "driver_name": null, "eta_minutes": 19, "location": "North Side Fulfillment" }
+
+Question: Who is handling delivery for order #DL-6618 and what is their ETA?
+Call: { "func_call": "get_order_status", "order_id": "DL-6618" }
+Response: { "order_id": "DL-6618", "status": "on the way", "driver_name": "Nina Patel", "eta_minutes": 5, "location": "Maple Avenue Corner" }
+
+Question: Check whether the driver has retrieved order #DL-3377.
+Call: { "func_call": "track_delivery", "order_id": "DL-3377" }
+Response: { "order_id": "DL-3377", "status": "picked up", "driver_name": "Carlos Mendez", "eta_minutes": 35, "location": "Interstate 95 South" }
+
+Question: What is the real-time position of order #DL-5509?
+Call: { "func_call": "get_order_status", "order_id": "DL-5509" }
+Response: { "order_id": "DL-5509", "status": "on the way", "driver_name": "Emily White", "eta_minutes": 8, "location": "City Center Square" }
+
+Question: Please confirm if order #DL-8841 reached its destination.
+Call: { "func_call": "track_delivery", "order_id": "DL-8841" }
+Response: { "order_id": "DL-8841", "status": "delivered", "driver_name": "Jordan Lee", "eta_minutes": 0, "location": "Reception Counter" }
+
+Question: Is my electronics order #DL-1029 ready to leave the store?
+Call: { "func_call": "get_order_status", "order_id": "DL-1029" }
+Response: { "order_id": "DL-1029", "status": "preparing", "driver_name": null, "eta_minutes": 22, "location": "ElectroMart Backroom" }
+
+Question: Track order #DL-4756 and provide the courier's name.
+Call: { "func_call": "track_delivery", "order_id": "DL-4756" }
+Response: { "order_id": "DL-4756", "status": "on the way", "driver_name": "Brian Foster", "eta_minutes": 14, "location": "Pine Street Tunnel" }
+
+Question: Has order #DL-9012 been placed at my doorstep?
+Call: { "func_call": "get_order_status", "order_id": "DL-9012" }
+Response: { "order_id": "DL-9012", "status": "delivered", "driver_name": "Amanda Cruz", "eta_minutes": 0, "location": "Garage Entrance" }

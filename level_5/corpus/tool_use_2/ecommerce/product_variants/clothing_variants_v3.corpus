@@ -1,0 +1,77 @@
+{
+  "func_call": "get_product_with_variants",
+  "product_id": "PROD-5509",
+  "options": {
+    "color": "Emerald",
+    "size": "L",
+    "material": "Silk"
+  }
+}
+{
+  "product_id": "PROD-5509",
+  "name": "Luxury Silk Evening Gown",
+  "variants": [
+    {
+      "sku": "GLW-EMR-S",
+      "options": { "color": "Emerald", "size": "S" },
+      "price": 129.99,
+      "stock": 4,
+      "images": ["https://cdn.shop.com/glw-emr-s-1.jpg"]
+    },
+    {
+      "sku": "GLW-EMR-M",
+      "options": { "color": "Emerald", "size": "M" },
+      "price": 129.99,
+      "stock": 9,
+      "images": ["https://cdn.shop.com/glw-emr-m-1.jpg"]
+    },
+    {
+      "sku": "GLW-EMR-L",
+      "options": { "color": "Emerald", "size": "L" },
+      "price": 129.99,
+      "stock": 11,
+      "images": ["https://cdn.shop.com/glw-emr-l-1.jpg"]
+    },
+    {
+      "sku": "GLW-RUB-S",
+      "options": { "color": "Ruby", "size": "S" },
+      "price": 129.99,
+      "stock": 6,
+      "images": ["https://cdn.shop.com/glw-rub-s-1.jpg"]
+    },
+    {
+      "sku": "GLW-RUB-M",
+      "options": { "color": "Ruby", "size": "M" },
+      "price": 129.99,
+      "stock": 14,
+      "images": ["https://cdn.shop.com/glw-rub-m-1.jpg"]
+    },
+    {
+      "sku": "GLW-RUB-L",
+      "options": { "color": "Ruby", "size": "L" },
+      "price": 129.99,
+      "stock": 8,
+      "images": ["https://cdn.shop.com/glw-rub-l-1.jpg"]
+    },
+    {
+      "sku": "GLW-BLK-M",
+      "options": { "color": "Black", "size": "M" },
+      "price": 129.99,
+      "stock": 20,
+      "images": ["https://cdn.shop.com/glw-blk-m-1.jpg"]
+    },
+    {
+      "sku": "GLW-BLK-L",
+      "options": { "color": "Black", "size": "L" },
+      "price": 129.99,
+      "stock": 15,
+      "images": ["https://cdn.shop.com/glw-blk-l-1.jpg"]
+    }
+  ],
+  "selected_variant": {
+    "sku": "GLW-EMR-L",
+    "options": { "color": "Emerald", "size": "L" },
+    "price": 129.99,
+    "stock": 11
+  }
+}

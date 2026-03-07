@@ -1,0 +1,51 @@
+Available Tools: open_garage | close_garage | get_garage_status | set_garage_timer
+Call Schema: { "func_call": "string", "door_id": "string", "delay_seconds": number }
+Response Schema: { "door_id": "string", "state": "open|closed|opening|closing", "timestamp": "string" }
+---
+Question: Is the main garage door currently open or closed?
+Call: { "func_call": "get_garage_status", "door_id": "garage_main_01", "delay_seconds": 0 }
+Response: { "door_id": "garage_main_01", "state": "closed", "timestamp": "2023-10-27T14:32:15Z" }
+
+Question: Set the side entrance garage door to automatically close in 10 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_side_02", "delay_seconds": 600 }
+Response: { "door_id": "garage_side_02", "state": "open", "timestamp": "2023-10-27T14:33:00Z" }
+
+Question: Check the status of the workshop garage door immediately.
+Call: { "func_call": "get_garage_status", "door_id": "garage_workshop_03", "delay_seconds": 0 }
+Response: { "door_id": "garage_workshop_03", "state": "opening", "timestamp": "2023-10-27T14:35:22Z" }
+
+Question: I'm leaving soon; make sure the main door closes in 5 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_main_01", "delay_seconds": 300 }
+Response: { "door_id": "garage_main_01", "state": "open", "timestamp": "2023-10-27T14:40:10Z" }
+
+Question: What is the current state of the detached garage door?
+Call: { "func_call": "get_garage_status", "door_id": "garage_detached_04", "delay_seconds": 0 }
+Response: { "door_id": "garage_detached_04", "state": "open", "timestamp": "2023-10-27T15:01:45Z" }
+
+Question: Schedule the main garage door to close automatically after 20 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_main_01", "delay_seconds": 1200 }
+Response: { "door_id": "garage_main_01", "state": "open", "timestamp": "2023-10-27T15:05:30Z" }
+
+Question: Verify if the side garage door has finished closing.
+Call: { "func_call": "get_garage_status", "door_id": "garage_side_02", "delay_seconds": 0 }
+Response: { "door_id": "garage_side_02", "state": "closing", "timestamp": "2023-10-27T15:12:05Z" }
+
+Question: Set a short timer for the workshop door to close in 2 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_workshop_03", "delay_seconds": 120 }
+Response: { "door_id": "garage_workshop_03", "state": "open", "timestamp": "2023-10-27T15:20:18Z" }
+
+Question: Check the status of all doors, starting with the main one.
+Call: { "func_call": "get_garage_status", "door_id": "garage_main_01", "delay_seconds": 0 }
+Response: { "door_id": "garage_main_01", "state": "closed", "timestamp": "2023-10-27T15:25:40Z" }
+
+Question: Enable auto-close for the detached garage in 15 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_detached_04", "delay_seconds": 900 }
+Response: { "door_id": "garage_detached_04", "state": "open", "timestamp": "2023-10-27T15:30:55Z" }
+
+Question: Is the side door still opening or is it fully open now?
+Call: { "func_call": "get_garage_status", "door_id": "garage_side_02", "delay_seconds": 0 }
+Response: { "door_id": "garage_side_02", "state": "open", "timestamp": "2023-10-27T15:45:12Z" }
+
+Question: Set the main garage door timer to 30 minutes before I forget.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_main_01", "delay_seconds": 1800 }
+Response: { "door_id": "garage_main_01", "state": "open", "timestamp": "2023-10-27T16:00:00Z" }

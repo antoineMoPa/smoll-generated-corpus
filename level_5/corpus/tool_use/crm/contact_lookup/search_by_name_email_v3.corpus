@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Locate any individual named Thomas Anderson in the records.
+Call: { "func_call": "search_contact", "query": "Thomas Anderson", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_2041", "name": "Thomas Anderson", "email": "t.anderson@matrix-sys.com", "company": "Matrix Systems", "phone": "+1-555-0771" }], "total": 1 }
+
+Question: Retrieve the profile for the email address brian.foster@omega-logistics.uk.
+Call: { "func_call": "search_contact", "query": "brian.foster@omega-logistics.uk", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_3192", "name": "Brian Foster", "email": "brian.foster@omega-logistics.uk", "company": "Omega Logistics", "phone": "+44-20-555-0882" }], "total": 1 }
+
+Question: Find all entries for the name Sofia Rossi.
+Call: { "func_call": "search_contact", "query": "Sofia Rossi", "field": "name", "limit": 20 }
+Response: { "contacts": [{ "id": "c_4503", "name": "Sofia Rossi", "email": "s.rossi@bella-moda.it", "company": "Bella Moda", "phone": "+39-02-555-0331" }, { "id": "c_4504", "name": "Sofia A. Rossi", "email": "sofia.rossi@venice-art.org", "company": "Venice Art Gallery", "phone": "+39-04-555-0992" }], "total": 2 }
+
+Question: Which contact corresponds to the email r.kim@daehan-tech.kr?
+Call: { "func_call": "search_contact", "query": "r.kim@daehan-tech.kr", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_5614", "name": "Min-jun Kim", "email": "r.kim@daehan-tech.kr", "company": "Daehan Tech", "phone": "+82-2-555-0441" }], "total": 1 }
+
+Question: Search for every contact named William Taylor.
+Call: { "func_call": "search_contact", "query": "William Taylor", "field": "name", "limit": 15 }
+Response: { "contacts": [{ "id": "c_6725", "name": "William Taylor", "email": "w.taylor@red-oak-build.com", "company": "Red Oak Builders", "phone": "+1-555-0552" }, { "id": "c_6726", "name": "Will Taylor", "email": "will.t@swift-courier.net", "company": "Swift Courier", "phone": "+1-555-0663" }], "total": 2 }
+
+Question: Identify the user associated with c.muller@berlin-auto.de.
+Call: { "func_call": "search_contact", "query": "c.muller@berlin-auto.de", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_7836", "name": "Claudia Muller", "email": "c.muller@berlin-auto.de", "company": "Berlin Auto Works", "phone": "+49-30-555-0774" }], "total": 1 }
+
+Question: Look up anyone named Alexander Petrov in the system.
+Call: { "func_call": "search_contact", "query": "Alexander Petrov", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_8947", "name": "Alexander Petrov", "email": "a.petrov@volga-energy.ru", "company": "Volga Energy", "phone": "+7-495-555-0885" }], "total": 1 }
+
+Question: Who owns the inbox j.silva@rio-turismo.br?
+Call: { "func_call": "search_contact", "query": "j.silva@rio-turismo.br", "field": "email", "limit": 3 }
+Response: { "contacts": [{ "id": "c_9058", "name": "Joao Silva", "email": "j.silva@rio-turismo.br", "company": "Rio Turismo", "phone": "+55-21-555-0996" }], "total": 1 }
+
+Question: Find contacts with the name Emily White.
+Call: { "func_call": "search_contact", "query": "Emily White", "field": "name", "limit": 25 }
+Response: { "contacts": [{ "id": "c_1169", "name": "Emily White", "email": "e.white@pure-water.org", "company": "Pure Water Initiative", "phone": "+1-555-0107" }, { "id": "c_1170", "name": "Emily R. White", "email": "emily.white@sky-high-aviation.com", "company": "Sky High Aviation", "phone": "+1-555-0218" }, { "id": "c_1171", "name": "Em White", "email": "em.w@local-news.tv", "company": "Local News Network", "phone": "+1-555-0329" }], "total": 3 }
+
+Question: Determine the owner of yamamoto.h@tokyo-financial.jp.
+Call: { "func_call": "search_contact", "query": "yamamoto.h@tokyo-financial.jp", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_2280", "name": "Haruto Yamamoto", "email": "yamamoto.h@tokyo-financial.jp", "company": "Tokyo Financial Group", "phone": "+81-3-555-0430" }], "total": 1 }
+
+Question: Search for a person named Daniel Brown.
+Call: { "func_call": "search_contact", "query": "Daniel Brown", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_3391", "name": "Daniel Brown", "email": "d.brown@urban-plan.ca", "company": "Urban Plan Canada", "phone": "+1-416-555-0541" }], "total": 1 }
+
+Question: Which contact uses the address l.dubois@paris-chic.fr?
+Call: { "func_call": "search_contact", "query": "l.dubois@paris-chic.fr", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_4402", "name": "Lucie Dubois", "email": "l.dubois@paris-chic.fr", "company": "Paris Chic Boutique", "phone": "+33-1-555-0652" }], "total": 1 }

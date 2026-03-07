@@ -1,0 +1,51 @@
+Available Tools: create_event | create_recurring_event | create_all_day_event
+Call Schema: { "func_call": "string", "title": "string", "start": "string", "end": "string", "location": "string", "description": "string" }
+Response Schema: { "event_id": "string", "title": "string", "start": "string", "end": "string", "calendar": "string" }
+---
+Question: Schedule a daily stand-up for the marketing team at 8:30 AM starting tomorrow.
+Call: { "func_call": "create_recurring_event", "title": "Marketing Daily Stand-up", "start": "2023-11-01T08:30:00", "end": "2023-11-01T09:00:00", "location": "Slack Huddle", "description": "Daily sync for marketing campaigns" }
+Response: { "event_id": "evt_rec_013", "title": "Marketing Daily Stand-up", "start": "2023-11-01T08:30:00", "end": "2023-11-01T09:00:00", "calendar": "Marketing" }
+
+Question: Add Labor Day as an all-day holiday event for this year.
+Call: { "func_call": "create_all_day_event", "title": "Labor Day", "start": "2023-09-04", "end": "2023-09-04", "location": "", "description": "Federal Holiday" }
+Response: { "event_id": "evt_all_014", "title": "Labor Day", "start": "2023-09-04", "end": "2023-09-04", "calendar": "Holidays" }
+
+Question: Set up a bi-weekly sprint planning session every other Monday at 10 AM starting next week.
+Call: { "func_call": "create_recurring_event", "title": "Sprint Planning", "start": "2023-11-06T10:00:00", "end": "2023-11-06T11:30:00", "location": "Room 305", "description": "Bi-weekly planning for development sprints" }
+Response: { "event_id": "evt_rec_015", "title": "Sprint Planning", "start": "2023-11-06T10:00:00", "end": "2023-11-06T11:30:00", "calendar": "Engineering" }
+
+Question: Create an all-day event for Memorial Day.
+Call: { "func_call": "create_all_day_event", "title": "Memorial Day", "start": "2024-05-27", "end": "2024-05-27", "location": "", "description": "US Federal Holiday" }
+Response: { "event_id": "evt_all_016", "title": "Memorial Day", "start": "2024-05-27", "end": "2024-05-27", "calendar": "Holidays" }
+
+Question: Schedule a monthly client review on the 15th of every month at 2 PM starting December 15th.
+Call: { "func_call": "create_recurring_event", "title": "Client Review", "start": "2023-12-15T14:00:00", "end": "2023-12-15T15:00:00", "location": "Google Meet", "description": "Monthly progress review with key clients" }
+Response: { "event_id": "evt_rec_017", "title": "Client Review", "start": "2023-12-15T14:00:00", "end": "2023-12-15T15:00:00", "calendar": "Sales" }
+
+Question: Add John Doe's anniversary as an annual all-day event.
+Call: { "func_call": "create_all_day_event", "title": "John Doe's Anniversary", "start": "2015-06-20", "end": "2015-06-20", "location": "", "description": "Annual anniversary reminder" }
+Response: { "event_id": "evt_all_018", "title": "John Doe's Anniversary", "start": "2015-06-20", "end": "2015-06-20", "calendar": "Personal" }
+
+Question: Set up a weekly yoga class every Tuesday at 6 PM starting this week.
+Call: { "func_call": "create_recurring_event", "title": "Yoga Class", "start": "2023-10-31T18:00:00", "end": "2023-10-31T19:00:00", "location": "Community Center", "description": "Weekly yoga session for staff" }
+Response: { "event_id": "evt_rec_019", "title": "Yoga Class", "start": "2023-10-31T18:00:00", "end": "2023-10-31T19:00:00", "calendar": "Wellness" }
+
+Question: Create an all-day event for Veterans Day.
+Call: { "func_call": "create_all_day_event", "title": "Veterans Day", "start": "2023-11-11", "end": "2023-11-11", "location": "", "description": "National Holiday" }
+Response: { "event_id": "evt_all_020", "title": "Veterans Day", "start": "2023-11-11", "end": "2023-11-11", "calendar": "Holidays" }
+
+Question: Schedule a quarterly board meeting on the first Thursday of each quarter at 9 AM starting January 4th.
+Call: { "func_call": "create_recurring_event", "title": "Board Meeting", "start": "2024-01-04T09:00:00", "end": "2024-01-04T12:00:00", "location": "Boardroom A", "description": "Quarterly strategic review" }
+Response: { "event_id": "evt_rec_021", "title": "Board Meeting", "start": "2024-01-04T09:00:00", "end": "2024-01-04T12:00:00", "calendar": "Executive" }
+
+Question: Set up an all-day event for Earth Day.
+Call: { "func_call": "create_all_day_event", "title": "Earth Day", "start": "2024-04-22", "end": "2024-04-22", "location": "", "description": "Environmental awareness day" }
+Response: { "event_id": "evt_all_022", "title": "Earth Day", "start": "2024-04-22", "end": "2024-04-22", "calendar": "Community" }
+
+Question: Create a weekly coding workshop every Saturday at 11 AM starting next weekend.
+Call: { "func_call": "create_recurring_event", "title": "Coding Workshop", "start": "2023-11-04T11:00:00", "end": "2023-11-04T13:00:00", "location": "Tech Hub", "description": "Weekly coding practice for beginners" }
+Response: { "event_id": "evt_rec_023", "title": "Coding Workshop", "start": "2023-11-04T11:00:00", "end": "2023-11-04T13:00:00", "calendar": "Education" }
+
+Question: Add Martin Luther King Jr. Day as an all-day event.
+Call: { "func_call": "create_all_day_event", "title": "Martin Luther King Jr. Day", "start": "2024-01-15", "end": "2024-01-15", "location": "", "description": "Federal Holiday" }
+Response: { "event_id": "evt_all_024", "title": "Martin Luther King Jr. Day", "start": "2024-01-15", "end": "2024-01-15", "calendar": "Holidays" }

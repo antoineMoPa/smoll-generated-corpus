@@ -1,0 +1,51 @@
+Available Tools: transfer_funds | schedule_transfer | cancel_transfer | get_transfer_status
+Call Schema: { "func_call": "string", "from_account": "string", "to_account": "string", "amount": number, "currency": "string", "scheduled_date": "string" }
+Response Schema: { "transfer_id": "string", "status": "string", "amount": number, "estimated_arrival": "string" }
+---
+Question: Wire $725.50 from checking account 3344556677 to mortgage account 8899001122 for monthly payment.
+Call: { "func_call": "transfer_funds", "from_account": "3344556677", "to_account": "8899001122", "amount": 725.50, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-1029384", "status": "completed", "amount": 725.50, "estimated_arrival": "2023-10-28T09:15:00Z" }
+
+Question: Send 850.00 EUR from IBAN NL91ABNA0417164300 to IBAN BE68539007547034 for utility bill.
+Call: { "func_call": "transfer_funds", "from_account": "NL91ABNA0417164300", "to_account": "BE68539007547034", "amount": 850.00, "currency": "EUR", "scheduled_date": null }
+Response: { "transfer_id": "TXN-2938475", "status": "completed", "amount": 850.00, "estimated_arrival": "2023-10-28T10:20:00Z" }
+
+Question: Move 120.75 GBP from savings GB55CLYD00000012345678 to current GB12MABO00000087654321 for holiday fund.
+Call: { "func_call": "transfer_funds", "from_account": "GB55CLYD00000012345678", "to_account": "GB12MABO00000087654321", "amount": 120.75, "currency": "GBP", "scheduled_date": null }
+Response: { "transfer_id": "TXN-3847561", "status": "completed", "amount": 120.75, "estimated_arrival": "2023-10-28T09:45:00Z" }
+
+Question: Please transfer $5,000.00 from business account 9988776655 to vendor account 4433221100 immediately for inventory restock.
+Call: { "func_call": "transfer_funds", "from_account": "9988776655", "to_account": "4433221100", "amount": 5000.00, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-4756123", "status": "completed", "amount": 5000.00, "estimated_arrival": "2023-10-28T09:30:00Z" }
+
+Question: Transfer 1,250.99 EUR from personal DE8937040044053209998877 to charity DE44500105175407321000.
+Call: { "func_call": "transfer_funds", "from_account": "DE8937040044053209998877", "to_account": "DE44500105175407321000", "amount": 1250.99, "currency": "EUR", "scheduled_date": null }
+Response: { "transfer_id": "TXN-5612398", "status": "completed", "amount": 1250.99, "estimated_arrival": "2023-10-28T11:05:00Z" }
+
+Question: Send $42.50 from my secondary account 5544332211 to roommate account 6677889900 for internet bill share.
+Call: { "func_call": "transfer_funds", "from_account": "5544332211", "to_account": "6677889900", "amount": 42.50, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-6123487", "status": "completed", "amount": 42.50, "estimated_arrival": "2023-10-28T09:22:00Z" }
+
+Question: Transfer 9,800 GBP from holding account GB82WEST12345611223344 to investment account GB29NWBK60161399887766 for portfolio rebalancing.
+Call: { "func_call": "transfer_funds", "from_account": "GB82WEST12345611223344", "to_account": "GB29NWBK60161399887766", "amount": 9800.00, "currency": "GBP", "scheduled_date": null }
+Response: { "transfer_id": "TXN-7234596", "status": "completed", "amount": 9800.00, "estimated_arrival": "2023-10-28T10:50:00Z" }
+
+Question: Move $1,575.25 from money market 2211443355 to checking 5566778899 to pay insurance premium.
+Call: { "func_call": "transfer_funds", "from_account": "2211443355", "to_account": "5566778899", "amount": 1575.25, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-8345601", "status": "completed", "amount": 1575.25, "estimated_arrival": "2023-10-28T09:38:00Z" }
+
+Question: Transfer 630.00 EUR from joint account FR7630006000019876543210 to sibling account FR1420041010050500013M02606.
+Call: { "func_call": "transfer_funds", "from_account": "FR7630006000019876543210", "to_account": "FR1420041010050500013M02606", "amount": 630.00, "currency": "EUR", "scheduled_date": null }
+Response: { "transfer_id": "TXN-9456712", "status": "completed", "amount": 630.00, "estimated_arrival": "2023-10-28T11:15:00Z" }
+
+Question: Send $25,000.00 from escrow account 1199887766 to developer account 5544332211 for construction milestone.
+Call: { "func_call": "transfer_funds", "from_account": "1199887766", "to_account": "5544332211", "amount": 25000.00, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-0567823", "status": "completed", "amount": 25000.00, "estimated_arrival": "2023-10-28T09:55:00Z" }
+
+Question: Transfer 88.20 GBP from account GB33BUKB20201511112222 to account GB15MIDL40051599998888 for gym membership renewal.
+Call: { "func_call": "transfer_funds", "from_account": "GB33BUKB20201511112222", "to_account": "GB15MIDL40051599998888", "amount": 88.20, "currency": "GBP", "scheduled_date": null }
+Response: { "transfer_id": "TXN-1678934", "status": "completed", "amount": 88.20, "estimated_arrival": "2023-10-28T09:42:00Z" }
+
+Question: Transfer $6,789.12 from payroll account 3322110099 to tax reserve account 8877665544 for quarterly withholding.
+Call: { "func_call": "transfer_funds", "from_account": "3322110099", "to_account": "8877665544", "amount": 6789.12, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-2789045", "status": "completed", "amount": 6789.12, "estimated_arrival": "2023-10-28T09:48:00Z" }

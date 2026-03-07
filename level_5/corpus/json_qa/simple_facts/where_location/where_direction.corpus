@@ -1,0 +1,59 @@
+Context: The red ball rolled under the table during the game. No one noticed it until cleanup time.
+Input: {"question": "Where is the red ball?"}
+Output: {"answer": "under the table"}
+
+Context: Sarah placed her keys on the kitchen counter next to the sink. She always leaves them there when she comes home.
+Input: {"question": "Where did Sarah put her keys?"}
+Output: {"answer": "on the kitchen counter"}
+
+Context: The old painting hangs behind the door in the hallway, hidden from view. It was a gift from her grandmother.
+Input: {"question": "Where is the old painting?"}
+Output: {"answer": "behind the door"}
+
+Context: During the meeting, the manager sat at the head of the long conference table. Everyone else took seats along the sides.
+Input: {"question": "Where did the manager sit?"}
+Output: {"answer": "at the head of the long conference table"}
+
+Context: You will find the emergency exit on the left side of the corridor, just past the water fountain. Do not block this area.
+Input: {"question": "Where is the emergency exit?"}
+Output: {"answer": "on the left side of the corridor"}
+
+Context: The cat curled up inside the cardboard box in the corner of the living room. It seemed very comfortable there.
+Input: {"question": "Where is the cat?"}
+Output: {"answer": "inside the cardboard box"}
+
+Context: Please leave the package by the front door before you leave for work. The delivery driver will pick it up later.
+Input: {"question": "Where should I leave the package?"}
+Output: {"answer": "by the front door"}
+
+Context: The missing sock was found beneath the bed, covered in dust bunnies. It had been there for weeks.
+Input: {"question": "Where was the missing sock?"}
+Output: {"answer": "beneath the bed"}
+
+Context: The statue stands in the center of the town square, surrounded by flowers. Tourists often take photos near it.
+Input: {"question": "Where does the statue stand?"}
+Output: {"answer": "in the center of the town square"}
+
+Context: He hid the surprise gift above the top shelf of the closet so no one would see it. Only he knew the location.
+Input: {"question": "Where did he hide the surprise gift?"}
+Output: {"answer": "above the top shelf of the closet"}
+
+Context: The bicycle is parked against the wall near the bike rack entrance. Make sure to lock it properly.
+Input: {"question": "Where is the bicycle?"}
+Output: {"answer": "against the wall"}
+
+Context: Your seat for the concert is in the third row, right next to the aisle. Enjoy the show from there.
+Input: {"question": "Where is my seat?"}
+Output: {"answer": "in the third row"}
+
+Context: The spider built its web between the two window frames in the attic. It was intricate and large.
+Input: {"question": "Where did the spider build its web?"}
+Output: {"answer": "between the two window frames"}
+
+Context: We kept the spare tires in the trunk of the car, secured with a strap. They came in handy during the flat tire incident.
+Input: {"question": "Where were the spare tires?"}
+Output: {"answer": "in the trunk of the car"}
+
+Context: The note was tucked into the pocket of your winter coat hanging in the hallway. Check it before you go out.
+Input: {"question": "Where was the note?"}
+Output: {"answer": "into the pocket of your winter coat"}

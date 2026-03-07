@@ -1,0 +1,40 @@
+{"func_call": "submit_order", "id": "req_m9n8o7", "data": {"product_id": "sku_123", "quantity": 0}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'quantity' must be greater than zero", "field": "quantity", "details": {"reason": "invalid_range", "min_value": 1}}}
+{"func_call": "cancel_subscription", "id": "req_p6q5r4", "data": {"reason": ""}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'reason' cannot be empty", "field": "reason", "details": {"reason": "empty_value"}}}
+{"func_call": "fetch_analytics", "id": "req_s3t2u1", "data": {}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "Analytics endpoint limit reached", "field": null, "details": {"retry_after": 90, "limit": 50, "window": "60s"}}}
+{"func_call": "remove_account", "id": "req_v0w9x8", "data": {"verify_code": "wrong"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'verify_code' is incorrect", "field": "verify_code", "details": {"reason": "mismatch"}}}
+{"func_call": "register_user", "id": "req_y7z6a5", "data": {"handle": "xy", "bio": "Hello"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'handle' is too short", "field": "handle", "details": {"reason": "too_short", "min_length": 4}}}
+{"func_call": "modify_profile", "id": "req_b4c3d2", "data": {"avatar_url": "ftp://image.net/pic.jpg"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'avatar_url' has invalid protocol", "field": "avatar_url", "details": {"reason": "invalid_format", "allowed_protocols": ["http", "https"]}}}
+{"func_call": "list_items", "id": "req_e1f0g9", "data": {"category": "electronics", "page_size": 200}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "Search volume limit exceeded", "field": null, "details": {"retry_after": 15, "scope": "search"}}}
+{"func_call": "create_ticket", "id": "req_h8i7j6", "data": {"priority": "critical", "subject": "Help"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'subject' is too short", "field": "subject", "details": {"reason": "too_short", "min_length": 5}}}
+{"func_call": "update_settings", "id": "req_k5l4m3", "data": {"timezone": "Mars/Phobos"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'timezone' is not recognized", "field": "timezone", "details": {"reason": "invalid_enum", "expected": "IANA timezone"}}}
+{"func_call": "delete_file", "id": "req_n2o1p0", "data": {}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "File deletion rate limit hit", "field": null, "details": {"retry_after": 45, "operation": "delete_file"}}}
+{"func_call": "upload_document", "id": "req_q9r8s7", "data": {"file_type": "exe", "size_mb": 150}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'file_type' is not allowed", "field": "file_type", "details": {"reason": "restricted_type", "allowed": ["pdf", "docx", "txt"]}}}
+{"func_call": "get_report", "id": "req_t6u5v4", "data": {"year": 2026}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'year' is in the future", "field": "year", "details": {"reason": "invalid_range", "max_value": 2024}}}
+{"func_call": "edit_comment", "id": "req_w3x2y1", "data": {"text": "OK"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'text' is too short", "field": "text", "details": {"reason": "too_short", "min_length": 3}}}
+{"func_call": "create_project", "id": "req_z0a9b8", "data": {}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'project_name' is required", "field": "project_name", "details": {"reason": "required"}}}
+{"func_call": "search_db", "id": "req_c7d6e5", "data": {"keyword": "test"}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "Database query limit exceeded", "field": null, "details": {"retry_after": 30, "user_id": "usr_998877"}}}
+{"func_call": "update_inventory", "id": "req_f4g3h2", "data": {"sku": "ITEM-001", "count": -10}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'count' cannot be negative", "field": "count", "details": {"reason": "invalid_format", "expected": "integer >= 0"}}}
+{"func_call": "delete_session", "id": "req_i1j0k9", "data": {"session_id": ""}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'session_id' is required", "field": "session_id", "details": {"reason": "required"}}}
+{"func_call": "create_invoice", "id": "req_l8m7n6", "data": {"total": "free"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'total' has invalid format", "field": "total", "details": {"reason": "invalid_format", "type": "decimal"}}}
+{"func_call": "get_logs", "id": "req_o5p4q3", "data": {"level": "debug"}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "Log retrieval quota exceeded", "field": null, "details": {"retry_after": 1800, "quota_reset": "2024-05-15T12:00:00Z"}}}
+{"func_call": "update_tags", "id": "req_r2s1t0", "data": {"labels": ["x", "y"]}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'labels' contains items that are too short", "field": "labels", "details": {"reason": "too_short", "min_item_length": 3}}}

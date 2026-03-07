@@ -1,0 +1,51 @@
+Available Tools: like_post | comment_on_post | share_post | follow_user | unfollow_user | send_dm
+Call Schema: { "func_call": "string", "post_id": "string", "user_id": "string", "content": "string" }
+Response Schema: { "action": "string", "status": "string", "timestamp": "string" }
+---
+Question: I want to start following the photographer Alex Rivera to see more of their landscape shots.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "alex_rivera_photos", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T14:32:11Z" }
+
+Question: Send a direct message to Sarah Jenkins asking if she's still interested in collaborating on the podcast project next week.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "sarah_j_podcast", "content": "Hey Sarah! Just checking in to see if you're still available for the podcast collab next Tuesday?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T14:35:42Z" }
+
+Question: Please follow the new tech reviewer channel 'GadgetGuru' so I don't miss their upcoming iPhone review.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "gadget_guru_official", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T14:40:05Z" }
+
+Question: Message Marcus Chen to thank him for the helpful advice he gave in the comments yesterday.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "marcus_chen_dev", "content": "Hi Marcus, thanks so much for the tip on the React hook issue yesterday. It totally fixed my bug!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T14:42:19Z" }
+
+Question: I need to follow the local bakery account 'SweetToothBakery' to get updates on their weekend specials.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "sweettooth_bakery_nyc", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T14:45:33Z" }
+
+Question: Send a DM to Elena Rodriguez confirming our meeting time for the design review at 3 PM.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "elena_designs", "content": "Hey Elena, just confirming we are still on for the design review at 3 PM today?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T14:48:50Z" }
+
+Question: Follow the travel blogger 'WanderlustJen' because her photos from Japan look amazing.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "wanderlust_jen", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T14:52:14Z" }
+
+Question: Message the support team user 'HelpDeskBot' to report a login issue with my account.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "helpdesk_bot_official", "content": "Hello, I'm experiencing trouble logging into my account. Can someone assist?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T14:55:28Z" }
+
+Question: Start following the fitness coach 'IronMikeFit' to get daily workout routines.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "iron_mike_fit", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T14:58:41Z" }
+
+Question: Send a direct message to David Kim inviting him to join our virtual game night this Friday.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "david_k_gamer", "content": "Hey David! We're hosting a virtual game night this Friday at 8. Would love for you to join!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:01:55Z" }
+
+Question: I want to follow the artist 'NeonDreams' to keep up with their new digital art drops.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "neon_dreams_art", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-27T15:05:10Z" }
+
+Question: Message Priya Patel to ask if she has the link to the shared drive document we discussed.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "priya_patel_pm", "content": "Hi Priya, could you send over that shared drive link we talked about earlier? Thanks!" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-27T15:08:22Z" }

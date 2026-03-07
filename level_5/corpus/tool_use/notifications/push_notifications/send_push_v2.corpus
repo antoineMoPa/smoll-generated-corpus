@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Send a push notification to user usr_10293 regarding their refund processing.
+Call: { "func_call": "send_push", "user_id": "usr_10293", "title": "Refund Initiated", "body": "Your refund of $125.50 for order #8821 has been processed and will appear in 3-5 days.", "data": { "order_id": "8821", "amount": "125.50", "type": "refund_update" }, "device_token": "fcm_tok_a1b2c3d4e5f6g7h8i9" }
+Response: { "notification_id": "notif_z9y8x7w6", "status": "sent", "timestamp": "2023-10-29T09:15:20Z" }
+
+Question: Notify user usr_56789 that their subscription is expiring soon.
+Call: { "func_call": "send_push", "user_id": "usr_56789", "title": "Subscription Expiring", "body": "Your Premium plan ends in 2 days. Renew now to avoid service interruption.", "data": { "plan_name": "Premium", "days_left": 2, "renewal_link": "bit.ly/renew_now" }, "device_token": "apns_tok_998877665544332211" }
+Response: { "notification_id": "notif_v5u4t3s2", "status": "delivered", "timestamp": "2023-10-29T10:30:45Z" }
+
+Question: Alert user usr_34521 about a suspicious transaction attempt.
+Call: { "func_call": "send_push", "user_id": "usr_34521", "title": "Suspicious Activity", "body": "We detected a login attempt from Madrid, Spain. If this wasn't you, secure your account.", "data": { "location": "Madrid, Spain", "ip_address": "192.168.1.45", "action_required": true }, "device_token": "fcm_tok_m9n8o7p6q5r4s3t2u1" }
+Response: { "notification_id": "notif_r1q2p3o4", "status": "sent", "timestamp": "2023-10-29T11:45:12Z" }
+
+Question: Remind user usr_67890 about their gym class starting in 30 minutes.
+Call: { "func_call": "send_push", "user_id": "usr_67890", "title": "Class Starting Soon", "body": "Your Yoga Flow session with Instructor Jane begins in 30 minutes at Studio B.", "data": { "class_id": "cls_445566", "time": "14:00", "instructor": "Jane" }, "device_token": "apns_tok_112233445566778899" }
+Response: { "notification_id": "notif_n5m6l7k8", "status": "delivered", "timestamp": "2023-10-29T13:30:00Z" }
+
+Question: Inform user usr_98765 that their grocery order is ready for pickup.
+Call: { "func_call": "send_push", "user_id": "usr_98765", "title": "Order Ready for Pickup", "body": "Your groceries from FreshMart are packed and waiting at Pickup Counter 3.", "data": { "store_name": "FreshMart", "counter": "3", "order_id": "ord_112233" }, "device_token": "fcm_tok_j9i8h7g6f5e4d3c2b1" }
+Response: { "notification_id": "notif_j9i8h7g6", "status": "sent", "timestamp": "2023-10-29T15:20:33Z" }
+
+Question: Send a holiday greeting to user usr_24680 for Thanksgiving.
+Call: { "func_call": "send_push", "user_id": "usr_24680", "title": "Happy Thanksgiving!", "body": "Wishing you a wonderful holiday filled with joy and delicious food from all of us at TechCorp.", "data": { "holiday": "Thanksgiving", "campaign_id": "hol_2023_thx" }, "device_token": "apns_tok_aabbccddeeff112233" }
+Response: { "notification_id": "notif_f5e4d3c2", "status": "delivered", "timestamp": "2023-10-29T08:00:00Z" }
+
+Question: Notify user usr_13579 that their ride share driver has arrived.
+Call: { "func_call": "send_push", "user_id": "usr_13579", "title": "Driver Arrived", "body": "Your Uber driver David is here in a blue Toyota Camry. License plate: XYZ-123.", "data": { "driver_name": "David", "car_model": "Toyota Camry", "plate": "XYZ-123" }, "device_token": "fcm_tok_z1y2x3w4v5u6t7s8r9" }
+Response: { "notification_id": "notif_b1a2z3y4", "status": "sent", "timestamp": "2023-10-29T17:10:55Z" }
+
+Question: Alert user usr_86420 about a firmware update for their thermostat.
+Call: { "func_call": "send_push", "user_id": "usr_86420", "title": "Firmware Update Available", "body": "A new software version is available for your Living Room Thermostat. Install now for better efficiency.", "data": { "device_name": "Living Room Thermostat", "version": "2.4.1", "device_id": "therm_005" }, "device_token": "apns_tok_qqrrssttuuvvwwxxyy" }
+Response: { "notification_id": "notif_x5w6v7u8", "status": "delivered", "timestamp": "2023-10-29T19:05:18Z" }
+
+Question: Inform user usr_75319 that their visa application status has changed.
+Call: { "func_call": "send_push", "user_id": "usr_75319", "title": "Visa Status Update", "body": "Your visa application for Germany has moved to the 'Under Review' stage. Check your portal for details.", "data": { "country": "Germany", "status": "Under Review", "app_id": "visa_998877" }, "device_token": "fcm_tok_p0o9i8u7y6t5r4e3w2" }
+Response: { "notification_id": "notif_t9s8r7q6", "status": "sent", "timestamp": "2023-10-29T12:45:30Z" }
+
+Question: Notify user usr_35791 about a like on their profile picture.
+Call: { "func_call": "send_push", "user_id": "usr_35791", "title": "New Profile Like", "body": "Jennifer liked your profile picture. Tap to see who else viewed your profile today.", "data": { "liker_name": "Jennifer", "liker_id": "usr_223344", "content_type": "profile_pic" }, "device_token": "apns_tok_llmmnnooppqqrrsstt" }
+Response: { "notification_id": "notif_p5o4n3m2", "status": "delivered", "timestamp": "2023-10-29T20:15:42Z" }
+
+Question: Send a traffic warning to user usr_46802 regarding an accident ahead.
+Call: { "func_call": "send_push", "user_id": "usr_46802", "title": "Traffic Alert: Accident Ahead", "body": "Major accident reported on I-95 North. Expect delays of up to 45 minutes. Consider alternate routes.", "data": { "road": "I-95 North", "delay_minutes": 45, "incident_type": "accident" }, "device_token": "fcm_tok_k1j2h3g4f5d6s7a8z9" }
+Response: { "notification_id": "notif_l1k2j3i4", "status": "sent", "timestamp": "2023-10-29T07:55:10Z" }
+
+Question: Confirm to user usr_57913 that their ticket booking is confirmed.
+Call: { "func_call": "send_push", "user_id": "usr_57913", "title": "Booking Confirmed", "body": "Your tickets for the Coldplay concert on Nov 15th are confirmed. E-tickets attached to your email.", "data": { "event": "Coldplay Concert", "date": "2023-11-15", "booking_ref": "bk_776655" }, "device_token": "apns_tok_uuvvwwxxyyzz001122" }
+Response: { "notification_id": "notif_h7g6f5e4", "status": "delivered", "timestamp": "2023-10-29T21:30:05Z" }

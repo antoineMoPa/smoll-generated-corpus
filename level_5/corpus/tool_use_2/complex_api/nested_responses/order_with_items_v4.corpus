@@ -1,0 +1,14 @@
+{"func_call": "get_order_with_items", "id": "ord_4421s", "include": ["line_items", "totals"]}
+{"id": "ord_4421s", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_4421s", "customer": "Sophia Martinez", "date": "2023-11-17", "status": "processing", "items": [{"product_id": "prod_201", "name": "Wireless Keyboard", "qty": 1, "unit_price": 79.99}, {"product_id": "prod_202", "name": "Wireless Mouse", "qty": 1, "unit_price": 49.99}], "totals": {"subtotal": 129.98, "tax": 10.40, "shipping": 5.99, "total": 146.37}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_8832t", "include": ["totals"]}
+{"id": "ord_8832t", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_8832t", "customer": "Oliver Thompson", "date": "2023-11-18", "status": "shipped", "items": [{"product_id": "prod_305", "name": "Portable Charger", "qty": 2, "unit_price": 35.00}, {"product_id": "prod_306", "name": "USB-C Cable 3pk", "qty": 1, "unit_price": 19.99}], "totals": {"subtotal": 89.99, "tax": 7.20, "shipping": 0.00, "total": 97.19}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_1154u", "include": ["line_items"]}
+{"id": "ord_1154u", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_1154u", "customer": "Emma Wilson", "date": "2023-11-19", "status": "delivered", "items": [{"product_id": "prod_410", "name": "Instant Pot", "qty": 1, "unit_price": 99.95}, {"product_id": "prod_411", "name": "Glass Lid", "qty": 1, "unit_price": 24.95}, {"product_id": "prod_412", "name": "Steamer Basket", "qty": 1, "unit_price": 12.99}], "totals": {"subtotal": 137.89, "tax": 11.03, "shipping": 8.99, "total": 157.91}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_5598v", "include": ["line_items", "totals"]}
+{"id": "ord_5598v", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_5598v", "customer": "Liam Anderson", "date": "2023-11-20", "status": "pending", "items": [{"product_id": "prod_520", "name": "Hiking Boots", "qty": 1, "unit_price": 145.00}, {"product_id": "prod_521", "name": "Wool Socks", "qty": 3, "unit_price": 16.00}], "totals": {"subtotal": 193.00, "tax": 15.44, "shipping": 12.50, "total": 220.94}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_9923w", "include": ["totals", "line_items"]}
+{"id": "ord_9923w", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_9923w", "customer": "Ava Thomas", "date": "2023-11-21", "status": "shipped", "items": [{"product_id": "prod_630", "name": "Desk Organizer", "qty": 2, "unit_price": 22.50}, {"product_id": "prod_631", "name": "LED Strip Lights", "qty": 1, "unit_price": 34.99}], "totals": {"subtotal": 79.99, "tax": 6.40, "shipping": 4.99, "total": 91.38}}]}}

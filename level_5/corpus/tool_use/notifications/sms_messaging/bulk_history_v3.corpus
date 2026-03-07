@@ -1,0 +1,51 @@
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Transmit a booking confirmation to a traveler in Rome.
+Call: { "func_call": "send_sms", "to": "+390612345678", "message": "Booking #RM8821 confirmed for Hotel Dante. Check-in after 3 PM.", "from": "TravelIT" }
+Response: { "message_id": "msg_it_7739201", "to": "+390612345678", "status": "sent", "cost": 0.055, "timestamp": "2023-10-27T15:01:12Z" }
+
+Question: Alert all members of a gym chain in Los Angeles about pool maintenance.
+Call: { "func_call": "send_bulk_sms", "to": "+13105550222,+13105550223,+13105550224", "message": "Notice: Main pool closed for cleaning until 6 AM tomorrow. Sorry for inconvenience.", "from": "FitLifeLA" }
+Response: { "message_id": "bulk_us_9921003", "to": "+13105550222,+13105550223,+13105550224", "status": "processing", "cost": 0.018, "timestamp": "2023-10-27T15:03:45Z" }
+
+Question: Verify if a payment receipt reached a client in Amsterdam.
+Call: { "func_call": "get_sms_status", "to": "+31612345678", "message": "STATUS_CHECK", "from": "PayNL" }
+Response: { "message_id": "msg_nl_4429102", "to": "+31612345678", "status": "delivered", "cost": 0.062, "timestamp": "2023-10-27T15:05:22Z" }
+
+Question: Pull the log of all survey invitations sent from our Madrid office last week.
+Call: { "func_call": "get_sms_history", "to": "campaign_madrid_survey", "message": "HISTORY_REQUEST", "from": "ResearchES" }
+Response: { "message_id": "hist_es_1102938", "to": "campaign_madrid_survey", "status": "retrieved", "cost": 0.00, "timestamp": "2023-10-27T15:07:10Z" }
+
+Question: Issue a weather warning to residents in Bangkok.
+Call: { "func_call": "send_bulk_sms", "to": "+66812345678,+66812345679,+66812345680", "message": "ALERT: Heavy rain expected until 8 PM. Avoid low-lying areas. Stay safe.", "from": "ThaiWeather" }
+Response: { "message_id": "bulk_th_6620193", "to": "+66812345678,+66812345679,+66812345680", "status": "sent", "cost": 0.009, "timestamp": "2023-10-27T15:09:33Z" }
+
+Question: Send a reservation reminder to a diner in Seattle.
+Call: { "func_call": "send_sms", "to": "+12065550177", "message": "Reminder: Table for 4 at Luigi's tonight at 7:30 PM. Reply Y to confirm.", "from": "LuigiSea" }
+Response: { "message_id": "msg_us_3391022", "to": "+12065550177", "status": "sent", "cost": 0.008, "timestamp": "2023-10-27T15:11:45Z" }
+
+Question: Check the read status of a policy update sent to employees in Stockholm.
+Call: { "func_call": "get_sms_status", "to": "+46701234567", "message": "STATUS_CHECK_BULK", "from": "CorpSE" }
+Response: { "message_id": "msg_se_8821004", "to": "+46701234567", "status": "read", "cost": 0.058, "timestamp": "2023-10-27T15:13:20Z" }
+
+Question: Deliver a login token to a subscriber in Cairo.
+Call: { "func_call": "send_sms", "to": "+201012345678", "message": "Your SecureApp code is 773921. Expires in 5 minutes.", "from": "SecureApp" }
+Response: { "message_id": "msg_eg_5510294", "to": "+201012345678", "status": "sent", "cost": 0.015, "timestamp": "2023-10-27T15:15:05Z" }
+
+Question: Notify a group of volunteers in Melbourne about a schedule change.
+Call: { "func_call": "send_bulk_sms", "to": "+61423456789,+61423456790,+61423456791", "message": "Update: Volunteer shift moved to Sunday 10 AM. Location unchanged.", "from": "VolunAU" }
+Response: { "message_id": "bulk_au_2210934", "to": "+61423456789,+61423456790,+61423456791", "status": "sent", "cost": 0.041, "timestamp": "2023-10-27T15:17:30Z" }
+
+Question: Fetch history of expired coupons sent to users in Vancouver.
+Call: { "func_call": "get_sms_history", "to": "filter:type=coupon,status=expired,loc=CA", "message": "HISTORY_REQUEST", "from": "DealsCA" }
+Response: { "message_id": "hist_ca_9928375", "to": "filter:type=coupon,status=expired,loc=CA", "status": "retrieved", "cost": 0.00, "timestamp": "2023-10-27T15:19:12Z" }
+
+Question: Broadcast a concert gate opening time to ticket holders in Istanbul.
+Call: { "func_call": "send_bulk_sms", "to": "+905321234567,+905321234568", "message": "Gates open at 6 PM for tonight's show. Bring ID. See you there!", "from": "EventTR" }
+Response: { "message_id": "bulk_tr_4420193", "to": "+905321234567,+905321234568", "status": "sent", "cost": 0.033, "timestamp": "2023-10-27T15:21:40Z" }
+
+Question: Confirm receipt of a shipping notification sent to a buyer in Mexico City.
+Call: { "func_call": "get_sms_status", "to": "+525512345678", "message": "STATUS_CHECK", "from": "ShopMX" }
+Response: { "message_id": "msg_mx_7729103", "to": "+525512345678", "status": "delivered", "cost": 0.025, "timestamp": "2023-10-27T15:23:55Z" }

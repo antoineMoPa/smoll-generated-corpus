@@ -1,0 +1,51 @@
+Available Tools: upload_file | download_file | get_upload_url | get_download_url
+Call Schema: { "func_call": "string", "path": "string", "file_name": "string", "size_bytes": number, "content_type": "string" }
+Response Schema: { "file_id": "string", "path": "string", "size_bytes": "number", "url": "string", "expires_at": "string" }
+---
+Question: Can you provide a temporary link to access the annual budget spreadsheet in the accounting folder?
+Call: { "func_call": "get_download_url", "path": "/accounting/budgets", "file_name": "Annual_Budget_2025.xlsx", "size_bytes": 3890100, "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }
+Response: { "file_id": "file_9z8y7x6w", "path": "/accounting/budgets/Annual_Budget_2025.xlsx", "size_bytes": 3890100, "url": "https://storage.example.com/dl/9z8y7x6w?sig=aBc123", "expires_at": "2024-11-01T10:00:00Z" }
+
+Question: I need to retrieve the error log file from last night right away.
+Call: { "func_call": "download_file", "path": "/logs/errors", "file_name": "error_log_2024-10-25.txt", "size_bytes": 2100500, "content_type": "text/plain" }
+Response: { "file_id": "file_5v4u3t2s", "path": "/logs/errors/error_log_2024-10-25.txt", "size_bytes": 2100500, "url": "direct://stream/5v4u3t2s", "expires_at": null }
+
+Question: Generate a presigned URL for the training webinar recording expiring in two hours.
+Call: { "func_call": "get_download_url", "path": "/training/webinars", "file_name": "onboarding_session_q4.mp4", "size_bytes": 230000000, "content_type": "video/mp4" }
+Response: { "file_id": "file_1r2q3p4o", "path": "/training/webinars/onboarding_session_q4.mp4", "size_bytes": 230000000, "url": "https://cdn.example.com/secure/1r2q3p4o?token=xyz789", "expires_at": "2024-10-26T16:30:00Z" }
+
+Question: Please fetch the user data backup archive from the cold storage.
+Call: { "func_call": "download_file", "path": "/backups/users", "file_name": "user_data_backup_nov.tar.gz", "size_bytes": 1200000000, "content_type": "application/gzip" }
+Response: { "file_id": "file_6n7m8l9k", "path": "/backups/users/user_data_backup_nov.tar.gz", "size_bytes": 1200000000, "url": "direct://stream/6n7m8l9k", "expires_at": null }
+
+Question: I need a download link for the new hire checklist PDF.
+Call: { "func_call": "get_download_url", "path": "/hr/checklists", "file_name": "New_Hire_Checklist_v3.pdf", "size_bytes": 450000, "content_type": "application/pdf" }
+Response: { "file_id": "file_0j1i2h3g", "path": "/hr/checklists/New_Hire_Checklist_v3.pdf", "size_bytes": 450000, "url": "https://storage.example.com/dl/0j1i2h3g?sig=dEf456", "expires_at": "2024-10-27T11:45:00Z" }
+
+Question: Directly download the environment variables YAML for production.
+Call: { "func_call": "download_file", "path": "/config/prod", "file_name": "prod_vars.yaml", "size_bytes": 8200, "content_type": "application/x-yaml" }
+Response: { "file_id": "file_4f5e6d7c", "path": "/config/prod/prod_vars.yaml", "size_bytes": 8200, "url": "direct://stream/4f5e6d7c", "expires_at": null }
+
+Question: Create a temporary URL for the product banner JPEG.
+Call: { "func_call": "get_download_url", "path": "/marketing/banners", "file_name": "holiday_sale_banner.jpg", "size_bytes": 1250000, "content_type": "image/jpeg" }
+Response: { "file_id": "file_8b9a0z1y", "path": "/marketing/banners/holiday_sale_banner.jpg", "size_bytes": 1250000, "url": "https://cdn.example.com/secure/8b9a0z1y?token=jkl012", "expires_at": "2024-10-26T22:00:00Z" }
+
+Question: Retrieve the inventory list CSV for the warehouse team.
+Call: { "func_call": "download_file", "path": "/warehouse/inventory", "file_name": "stock_list_nov_2024.csv", "size_bytes": 18900000, "content_type": "text/csv" }
+Response: { "file_id": "file_2x3w4v5u", "path": "/warehouse/inventory/stock_list_nov_2024.csv", "size_bytes": 18900000, "url": "direct://stream/2x3w4v5u", "expires_at": null }
+
+Question: Get me a short-lived link to the client proposal document.
+Call: { "func_call": "get_download_url", "path": "/sales/proposals", "file_name": "client_acme_proposal.docx", "size_bytes": 2800000, "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document" }
+Response: { "file_id": "file_6t7s8r9q", "path": "/sales/proposals/client_acme_proposal.docx", "size_bytes": 2800000, "url": "https://storage.example.com/dl/6t7s8r9q?sig=pQr987", "expires_at": "2024-10-26T14:20:00Z" }
+
+Question: Download the patch update package for the mobile application.
+Call: { "func_call": "download_file", "path": "/releases/mobile/v3.0", "file_name": "app_patch_v3.0.apk", "size_bytes": 62000000, "content_type": "application/vnd.android.package-archive" }
+Response: { "file_id": "file_0p1o2n3m", "path": "/releases/mobile/v3.0/app_patch_v3.0.apk", "size_bytes": 62000000, "url": "direct://stream/0p1o2n3m", "expires_at": null }
+
+Question: Generate a download URL for the network topology diagram PNG.
+Call: { "func_call": "get_download_url", "path": "/it/networks", "file_name": "global_network_map.png", "size_bytes": 3400000, "content_type": "image/png" }
+Response: { "file_id": "file_4l5k6j7i", "path": "/it/networks/global_network_map.png", "size_bytes": 3400000, "url": "https://cdn.example.com/secure/4l5k6j7i?token=mNo345", "expires_at": "2024-10-27T08:15:00Z" }
+
+Question: Immediately download the SSL certificate bundle from the certs folder.
+Call: { "func_call": "download_file", "path": "/security/certs", "file_name": "wildcard_cert_bundle.crt", "size_bytes": 4096, "content_type": "application/x-pem-file" }
+Response: { "file_id": "file_8h9g0f1e", "path": "/security/certs/wildcard_cert_bundle.crt", "size_bytes": 4096, "url": "direct://stream/8h9g0f1e", "expires_at": null }

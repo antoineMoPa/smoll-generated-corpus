@@ -1,0 +1,20 @@
+{"func_call": "estimate_delivery", "order_id": "ORD-4421", "discount_code": "", "destination": {"country": "MX", "state": "CMX", "postal": "06600"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-9932", "discount_code": "SPRING30", "destination": {"country": "US", "state": "OR", "postal": "97201"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-1156", "discount_code": "", "destination": {"country": "JP", "state": "TK", "postal": "100-0001"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-7789", "discount_code": "", "destination": {"country": "BR", "state": "SP", "postal": "01310-100"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-3365", "discount_code": "EXPRESS5", "destination": {"country": "US", "state": "AZ", "postal": "85001"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-5543", "discount_code": "", "destination": {"country": "IN", "state": "MH", "postal": "400001"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-2298", "discount_code": "", "destination": {"country": "US", "state": "OH", "postal": "43215"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-8812", "discount_code": "AUTO10", "destination": {"country": "DE", "state": "BE", "postal": "10115"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-6674", "discount_code": "", "destination": {"country": "CA", "state": "AB", "postal": "T2P 0A8"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-4439", "discount_code": "", "destination": {"country": "KR", "state": "SE", "postal": "04524"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-1187", "discount_code": "FLASH25", "destination": {"country": "US", "state": "CO", "postal": "80202"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-9954", "discount_code": "", "destination": {"country": "PT", "state": "LI", "postal": "1000-001"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-3321", "discount_code": "", "destination": {"country": "US", "state": "MI", "postal": "48201"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-7766", "discount_code": "GOLDSHIP", "destination": {"country": "CA", "state": "MB", "postal": "R3C 0V8"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-5519", "discount_code": "", "destination": {"country": "BE", "state": "BRU", "postal": "1000"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-2245", "discount_code": "", "destination": {"country": "US", "state": "NC", "postal": "27601"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-8891", "discount_code": "SAVE40", "destination": {"country": "NZ", "state": "AUK", "postal": "1010"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-6633", "discount_code": "", "destination": {"country": "NO", "state": "OS", "postal": "0150"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-4478", "discount_code": "", "destination": {"country": "US", "state": "MA", "postal": "02101"}}
+{"func_call": "estimate_delivery", "order_id": "ORD-1102", "discount_code": "SEASONAL", "destination": {"country": "AT", "state": "9", "postal": "1010"}}

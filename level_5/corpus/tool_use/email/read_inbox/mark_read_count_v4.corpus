@@ -1,0 +1,95 @@
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: How many unread notifications are currently in my alerts folder?
+Call: { "func_call": "get_unread_count", "folder": "alerts", "message_id": "", "limit": 0 }
+Response: { "messages": [], "total": 42 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Please mark the invoice email ID inv_338 as read in the finance folder.
+Call: { "func_call": "mark_as_read", "folder": "finance", "message_id": "inv_338", "limit": 0 }
+Response: { "messages": [], "total": 1 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: I need to review the support ticket ID supp_112 again; mark it as unread in the support folder.
+Call: { "func_call": "mark_as_unread", "folder": "support", "message_id": "supp_112", "limit": 0 }
+Response: { "messages": [], "total": 1 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: What is the total count of unread messages in my personal folder?
+Call: { "func_call": "get_unread_count", "folder": "personal", "message_id": "", "limit": 0 }
+Response: { "messages": [], "total": 3 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Mark the batch of project updates (IDs: proj_50, proj_51, proj_52) as read in the projects folder.
+Call: { "func_call": "mark_as_read", "folder": "projects", "message_id": "proj_50", "limit": 3 }
+Response: { "messages": [], "total": 3 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Change the status of message ID sale_779 to unread so I can follow up later.
+Call: { "func_call": "mark_as_unread", "folder": "sales", "message_id": "sale_779", "limit": 0 }
+Response: { "messages": [], "total": 1 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Check how many unread items are in the archive folder.
+Call: { "func_call": "get_unread_count", "folder": "archive", "message_id": "", "limit": 0 }
+Response: { "messages": [], "total": 0 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Mark the security alert ID sec_441 as read in the alerts directory.
+Call: { "func_call": "mark_as_read", "folder": "alerts", "message_id": "sec_441", "limit": 0 }
+Response: { "messages": [], "total": 1 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Set message ID hr_225 in the hr folder to unread for later review.
+Call: { "func_call": "mark_as_unread", "folder": "hr", "message_id": "hr_225", "limit": 0 }
+Response: { "messages": [], "total": 1 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Tell me the number of unread emails in the marketing folder.
+Call: { "func_call": "get_unread_count", "folder": "marketing", "message_id": "", "limit": 0 }
+Response: { "messages": [], "total": 18 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Please mark the contract renewal ID cont_998 as read in the legal folder.
+Call: { "func_call": "mark_as_read", "folder": "legal", "message_id": "cont_998", "limit": 0 }
+Response: { "messages": [], "total": 1 }
+
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Revert the read status of message ID blog_334 in the blog folder to unread.
+Call: { "func_call": "mark_as_unread", "folder": "blog", "message_id": "blog_334", "limit": 0 }
+Response: { "messages": [], "total": 1 }

@@ -1,0 +1,51 @@
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Email the quarterly budget forecast to the finance committee.
+Call: { "func_call": "send_email", "to": ["budget@financegroup.org", "cfo@financegroup.org"], "cc": ["auditor@financegroup.org"], "subject": "Q4 Budget Forecast - Final Draft", "body": "Committee,\n\nPlease review the attached Q4 budget forecast. We need approval by Thursday to proceed with allocations.\n\nRegards,\nSarah Jenkins", "attachments": ["q4_budget_forecast.xlsx"] }
+Response: { "message_id": "msg_10293x", "status": "sent", "timestamp": "2023-11-02T09:15:00Z" }
+
+Question: Create a draft asking the catering company about menu options for the retreat.
+Call: { "func_call": "compose_draft", "to": ["events@tastybites.com"], "cc": [], "subject": "Inquiry: Menu Options for Annual Retreat", "body": "Hello,\n\nWe are planning our annual retreat for 50 people in November. Could you send over your vegetarian and gluten-free menu options?\n\nThanks,\nEvent Coordinator", "attachments": [] }
+Response: { "message_id": "draft_20485y", "status": "draft", "timestamp": "2023-11-02T10:30:22Z" }
+
+Question: Reply to the recruiter confirming interest in the interview slot.
+Call: { "func_call": "send_reply", "to": ["hiring@techstart.io"], "cc": [], "subject": "Re: Interview Scheduling - Software Engineer Role", "body": "Hi,\n\nThank you for reaching out. Tuesday at 10 AM works perfectly for me. I look forward to speaking with the team.\n\nBest,\nJordan Lee", "attachments": [] }
+Response: { "message_id": "msg_30576z", "status": "sent", "timestamp": "2023-11-02T11:45:10Z" }
+
+Question: Forward the security audit results to the CISO.
+Call: { "func_call": "forward_email", "to": ["ciso@securenet.com"], "cc": ["it-director@securenet.com"], "subject": "Fwd: Security Audit Results - November", "body": "Team,\n\nForwarding the latest security audit results. Please note the critical findings on page 12 that require immediate attention.\n\nRegards,\nSecurity Analyst", "attachments": ["security_audit_nov.pdf"] }
+Response: { "message_id": "msg_40667a", "status": "sent", "timestamp": "2023-11-02T13:20:45Z" }
+
+Question: Send the project timeline update to the stakeholders.
+Call: { "func_call": "send_email", "to": ["stakeholders@buildit.com"], "cc": ["pm-lead@buildit.com"], "subject": "Project Timeline Update - Phase 2", "body": "Stakeholders,\n\nAttached is the updated timeline for Phase 2. We are currently two days ahead of schedule.\n\nBest,\nProject Manager", "attachments": ["phase2_timeline.mpp"] }
+Response: { "message_id": "msg_50758b", "status": "sent", "timestamp": "2023-11-02T14:05:33Z" }
+
+Question: Draft a notification email regarding the server maintenance window.
+Call: { "func_call": "compose_draft", "to": ["all-users@enterprise.net"], "cc": [], "subject": "Scheduled Maintenance: Server Downtime This Weekend", "body": "All Users,\n\nPlease be advised that servers will be offline for maintenance from Saturday 2 AM to 6 AM. Save your work before Friday evening.\n\nIT Operations", "attachments": [] }
+Response: { "message_id": "draft_60849c", "status": "draft", "timestamp": "2023-11-02T15:50:12Z" }
+
+Question: Reply to the vendor confirming receipt of the shipment.
+Call: { "func_call": "send_reply", "to": ["shipping@logisticspro.com"], "cc": ["warehouse@mycompany.com"], "subject": "Re: Shipment #7788 Received", "body": "Hello,\n\nWe have received shipment #7788 this morning. All items were accounted for and in good condition.\n\nThanks,\nWarehouse Manager", "attachments": [] }
+Response: { "message_id": "msg_70930d", "status": "sent", "timestamp": "2023-11-02T16:30:05Z" }
+
+Question: Send the signed NDA to the potential partner.
+Call: { "func_call": "send_email", "to": ["legal@partnercorp.com"], "cc": ["ceo@mycompany.com"], "subject": "Signed NDA - Collaboration Agreement", "body": "Hi Legal Team,\n\nAttached is the signed Non-Disclosure Agreement. We are excited to begin our collaboration.\n\nRegards,\nBusiness Development", "attachments": ["nda_signed_partner.pdf"] }
+Response: { "message_id": "msg_81021e", "status": "sent", "timestamp": "2023-11-02T08:45:50Z" }
+
+Question: Forward the customer satisfaction survey results to the product team.
+Call: { "func_call": "forward_email", "to": ["product@innovate.co"], "cc": ["vp-product@innovate.co"], "subject": "Fwd: Q3 Customer Satisfaction Survey", "body": "Team,\n\nThe Q3 survey results are in. Satisfaction scores have increased by 8% following the latest update.\n\nBest,\nCustomer Success Lead", "attachments": ["q3_survey_results.csv"] }
+Response: { "message_id": "msg_91112f", "status": "sent", "timestamp": "2023-11-02T09:10:20Z" }
+
+Question: Draft an email to the facilities manager about replacing broken chairs.
+Call: { "func_call": "compose_draft", "to": ["facilities@officehq.com"], "cc": [], "subject": "Request: Replacement of Broken Conference Room Chairs", "body": "Hi Facilities,\n\nThree chairs in Conference Room B are broken and unsafe to use. Please arrange for replacements as soon as possible.\n\nThanks,\nOffice Manager", "attachments": [] }
+Response: { "message_id": "draft_01203g", "status": "draft", "timestamp": "2023-11-02T11:25:40Z" }
+
+Question: Reply to the client declining the additional feature request.
+Call: { "func_call": "send_reply", "to": ["contact@clientxyz.com"], "cc": ["account-mgr@mycompany.com"], "subject": "Re: Feature Request for Dashboard", "body": "Hi,\n\nUnfortunately, we cannot accommodate the additional feature request within the current sprint timeline. We can discuss this for the next phase.\n\nBest,\nProduct Owner", "attachments": [] }
+Response: { "message_id": "msg_11394h", "status": "sent", "timestamp": "2023-11-02T17:55:15Z" }
+
+Question: Send the training schedule to the new hires.
+Call: { "func_call": "send_email", "to": ["new-hires-nov@mycompany.com"], "cc": ["training-lead@mycompany.com"], "subject": "Onboarding Training Schedule - November Cohort", "body": "Welcome Team,\n\nAttached is your training schedule for the first two weeks. Please arrive at 9 AM on Monday for the orientation session.\n\nRegards,\nHR Onboarding", "attachments": ["training_schedule_nov.pdf"] }
+Response: { "message_id": "msg_21485i", "status": "sent", "timestamp": "2023-11-02T08:00:00Z" }

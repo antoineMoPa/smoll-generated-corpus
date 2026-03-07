@@ -1,0 +1,51 @@
+Available Tools: curl_get | curl_post | wget_download | ssh_command | ping_host
+Call Schema: { "func_call": "string", "url": "string", "host": "string", "options": "string" }
+Response Schema: { "status_code": number, "output": "string", "elapsed_ms": number }
+---
+Question: Fetch the current weather data for London from the open weather API using a GET request with an API key header.
+Call: { "func_call": "curl_get", "url": "https://api.openweathermap.org/data/2.5/weather?q=London", "host": "api.openweathermap.org", "options": "-H \"Authorization: Bearer sk_test_12345\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"coord\":{\"lon\":-0.1257,\"lat\":51.5085},\"weather\":[{\"id\":800,\"main\":\"Clear\",\"description\":\"clear sky\",\"icon\":\"01d\"}],\"base\":\"stations\",\"main\":{\"temp\":289.15,\"feels_like\":288.42,\"temp_min\":287.04,\"temp_max\":290.37,\"pressure\":1015,\"humidity\":67},\"visibility\":10000,\"wind\":{\"speed\":4.12,\"deg\":250},\"clouds\":{\"all\":0},\"dt\":1678886400,\"sys\":{\"type\":2,\"id\":2019646,\"country\":\"GB\",\"sunrise\":1678866231,\"sunset\":1678907843},\"timezone\":0,\"id\":2643743,\"name\":\"London\",\"cod\":200}", "elapsed_ms": 142 }
+
+Question: Submit a new user registration to the internal auth service with a JSON payload containing username and email.
+Call: { "func_call": "curl_post", "url": "https://auth.internal.corp/v1/users/register", "host": "auth.internal.corp", "options": "-H \"Content-Type: application/json\" -d \"{\\\"username\\\": \\\"jdoe\\\", \\\"email\\\": \\\"john.doe@corp.com\\\", \\\"role\\\": \\\"engineer\\\"}\"" }
+Response: { "status_code": 201, "output": "{\"id\": \"usr_882910\", \"username\": \"jdoe\", \"email\": \"john.doe@corp.com\", \"created_at\": \"2023-10-27T14:32:11Z\", \"status\": \"pending_verification\"}", "elapsed_ms": 215 }
+
+Question: Download the latest Ubuntu LTS server ISO image from the official mirrors to the local disk.
+Call: { "func_call": "wget_download", "url": "https://releases.ubuntu.com/jammy/ubuntu-22.04.3-live-server-amd64.iso", "host": "releases.ubuntu.com", "options": "-O ./isos/ubuntu-22.04.3-live-server-amd64.iso --show-progress" }
+Response: { "status_code": 200, "output": "ubuntu-22.04.3-live-server-amd64.iso  100%[===================>]   1.45G  85.4MB/s    in 18s      \n2023-10-27 14:35:22 (85.4 MB/s) - './isos/ubuntu-22.04.3-live-server-amd64.iso' saved [1556971520/1556971520]", "elapsed_ms": 18430 }
+
+Question: Retrieve the list of active orders from the e-commerce microservice, filtering by status 'shipped'.
+Call: { "func_call": "curl_get", "url": "https://api.shopify-clone.com/orders?status=shipped&limit=50", "host": "api.shopify-clone.com", "options": "-H \"X-API-Key: prod_key_998877\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"orders\": [{\"id\": 1024, \"customer\": \"Alice Smith\", \"total\": 45.99}, {\"id\": 1025, \"customer\": \"Bob Jones\", \"total\": 120.50}], \"count\": 2, \"page\": 1}", "elapsed_ms": 89 }
+
+Question: Send a log event to the centralized logging endpoint indicating a critical database failure.
+Call: { "func_call": "curl_post", "url": "https://logs.datadog.internal/v1/input", "host": "logs.datadog.internal", "options": "-H \"Content-Type: application/json\" -H \"DD-API-KEY: dd_api_key_xyz\" -d \"{\\\"service\\\": \\\"db-primary\\\", \\\"level\\\": \\\"critical\\\", \\\"message\\\": \\\"Connection pool exhausted\\\"}\"" }
+Response: { "status_code": 202, "output": "{\"status\": \"ok\", \"event_id\": \"evt_772819203\"}", "elapsed_ms": 45 }
+
+Question: Download the comprehensive security patch notes PDF from the vendor's support portal.
+Call: { "func_call": "wget_download", "url": "https://support.vendor.com/security/patches/2023/Q4/security-bulletin-q4-2023.pdf", "host": "support.vendor.com", "options": "-P ./docs/security --user-agent=\"Mozilla/5.0\"" }
+Response: { "status_code": 200, "output": "security-bulletin-q4-2023.pdf  100%[===================>]  245.12K  --.-KB/s    in 0.4s     \n2023-10-27 14:40:05 (612 KB/s) - './docs/security/security-bulletin-q4-2023.pdf' saved [251002/251002]", "elapsed_ms": 412 }
+
+Question: Check the health status of the payment gateway service using a simple GET request to the heartbeat endpoint.
+Call: { "func_call": "curl_get", "url": "https://payments.stripe-mock.com/health", "host": "payments.stripe-mock.com", "options": "-v -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"status\": \"healthy\", \"version\": \"2.4.1\", \"uptime_seconds\": 892103, \"database_connected\": true}", "elapsed_ms": 32 }
+
+Question: Update the configuration for the load balancer by posting a new JSON rule set to the admin API.
+Call: { "func_call": "curl_post", "url": "https://lb-admin.cluster.local/api/v1/config/update", "host": "lb-admin.cluster.local", "options": "-H \"Content-Type: application/json\" -H \"Authorization: Bearer admin_token_abc\" -d \"{\\\"rules\\\": [{\\\"path\\\": \\\"/api/*\\\", \\\"backend\\\": \\\"svc-api-v2\\\"}], \\\"strategy\\\": \\\"round_robin\\\"}\"" }
+Response: { "status_code": 200, "output": "{\"config_id\": \"cfg_9912\", \"applied\": true, \"reload_required\": false, \"timestamp\": \"2023-10-27T14:45:12Z\"}", "elapsed_ms": 178 }
+
+Question: Fetch the raw CSV dataset of monthly sales figures from the analytics bucket.
+Call: { "func_call": "curl_get", "url": "https://analytics-bucket.s3.amazonaws.com/reports/sales_2023_oct.csv", "host": "analytics-bucket.s3.amazonaws.com", "options": "-H \"Authorization: AWS4-HMAC-SHA256 Credential=AKIAIOSFODNN7EXAMPLE\"" }
+Response: { "status_code": 200, "output": "date,region,product,amount\n2023-10-01,NA,Widget A,1200\n2023-10-01,EU,Widget B,850\n2023-10-02,NA,Widget A,1150", "elapsed_ms": 230 }
+
+Question: Download the pre-trained machine learning model weights file (large binary) from the model registry.
+Call: { "func_call": "wget_download", "url": "https://models.ml-registry.io/nlp/bert-base-uncased/pytorch_model.bin", "host": "models.ml-registry.io", "options": "-c -O ./models/bert/pytorch_model.bin --limit-rate=50m" }
+Response: { "status_code": 206, "output": "pytorch_model.bin  100%[===================>] 440.00M  48.2MB/s    in 9.1s     \n2023-10-27 14:50:33 (48.2 MB/s) - './models/bert/pytorch_model.bin' saved [461373440/461373440]", "elapsed_ms": 9120 }
+
+Question: Trigger a CI/CD pipeline rebuild for the frontend repository via a POST request to the Jenkins webhook.
+Call: { "func_call": "curl_post", "url": "https://jenkins.corp.net/job/frontend-build/build?token=build_secret_token", "host": "jenkins.corp.net", "options": "-X POST -H \"Content-Type: application/x-www-form-urlencoded\" -d \"cause=Manual+trigger+by+admin\"" }
+Response: { "status_code": 201, "output": "<html><head><title>201</title></head><body>201 Created</body></html>\nPipeline #4421 scheduled.", "elapsed_ms": 310 }
+
+Question: Retrieve the public SSH keys for the deployment user from the identity management service.
+Call: { "func_call": "curl_get", "url": "https://idm.internal.corp/api/v1/users/deployer/ssh-keys", "host": "idm.internal.corp", "options": "-H \"Accept: text/plain\" -H \"X-Service-Token: svc_tok_554433\"" }
+Response: { "status_code": 200, "output": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD... deployer@build-agent-01\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... deployer@backup-server", "elapsed_ms": 55 }

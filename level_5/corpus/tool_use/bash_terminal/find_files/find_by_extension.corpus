@@ -1,0 +1,51 @@
+Available Tools: find_by_name | find_by_extension | find_by_size | find_by_date
+Call Schema: { "func_call": "string", "path": "string", "pattern": "string", "type": "string" }
+Response Schema: { "matches": ["string"], "count": number }
+---
+Question: Find all text files in the home directory.
+Call: { "func_call": "find_by_extension", "path": "/home/user", "pattern": ".txt", "type": "file" }
+Response: { "matches": ["/home/user/notes.txt", "/home/user/todo.txt", "/home/user/logs/debug.txt"], "count": 3 }
+
+Question: Locate all configuration files under /etc.
+Call: { "func_call": "find_by_extension", "path": "/etc", "pattern": ".conf", "type": "file" }
+Response: { "matches": ["/etc/nginx/nginx.conf", "/etc/ssh/sshd_config.conf", "/etc/mysql/my.conf"], "count": 3 }
+
+Question: Search for shell scripts in the opt directory.
+Call: { "func_call": "find_by_extension", "path": "/opt/scripts", "pattern": ".sh", "type": "file" }
+Response: { "matches": ["/opt/scripts/deploy.sh", "/opt/scripts/backup.sh"], "count": 2 }
+
+Question: List all JSON data files in the var log folder.
+Call: { "func_call": "find_by_extension", "path": "/var/log/app", "pattern": ".json", "type": "file" }
+Response: { "matches": ["/var/log/app/events.json", "/var/log/app/errors.json", "/var/log/app/metrics.json"], "count": 3 }
+
+Question: Find XML configuration files in the usr share docs.
+Call: { "func_call": "find_by_extension", "path": "/usr/share/docs", "pattern": ".xml", "type": "file" }
+Response: { "matches": ["/usr/share/docs/manual.xml", "/usr/share/docs/api_spec.xml"], "count": 2 }
+
+Question: Identify any directories ending in .backup in /data.
+Call: { "func_call": "find_by_extension", "path": "/data", "pattern": ".backup", "type": "dir" }
+Response: { "matches": ["/data/old_projects.backup", "/data/archive_2023.backup"], "count": 2 }
+
+Question: Look for temporary text files in the tmp folder.
+Call: { "func_call": "find_by_extension", "path": "/tmp", "pattern": ".txt", "type": "file" }
+Response: { "matches": ["/tmp/session_123.txt", "/tmp/cache_dump.txt"], "count": 2 }
+
+Question: Recursively find all shell scripts in the root user's bin.
+Call: { "func_call": "find_by_extension", "path": "/root/bin", "pattern": ".sh", "type": "file" }
+Response: { "matches": ["/root/bin/cleanup.sh", "/root/bin/update_system.sh", "/root/bin/mount_drives.sh"], "count": 3 }
+
+Question: Search for JSON config files in the application source.
+Call: { "func_call": "find_by_extension", "path": "/srv/app/src/config", "pattern": ".json", "type": "file" }
+Response: { "matches": ["/srv/app/src/config/database.json", "/srv/app/src/config/auth.json"], "count": 2 }
+
+Question: Find all XML schema files in the lib directory.
+Call: { "func_call": "find_by_extension", "path": "/usr/lib/schemas", "pattern": ".xml", "type": "file" }
+Response: { "matches": ["/usr/lib/schemas/customer_v1.xml", "/usr/lib/schemas/order_v2.xml", "/usr/lib/schemas/product.xml"], "count": 3 }
+
+Question: Locate any directories with the .cache extension in /var.
+Call: { "func_call": "find_by_extension", "path": "/var/cache", "pattern": ".cache", "type": "dir" }
+Response: { "matches": ["/var/cache/apt/archives.cache", "/var/cache/fontconfig.cache"], "count": 2 }
+
+Question: Find all configuration files with .conf extension in the local etc path.
+Call: { "func_call": "find_by_extension", "path": "/usr/local/etc", "pattern": ".conf", "type": "file" }
+Response: { "matches": ["/usr/local/etc/httpd.conf", "/usr/local/etc/php.conf"], "count": 2 }

@@ -1,0 +1,39 @@
+| Context: The product launch event is set for 2025-03-10. Pre-orders open on 2025-03-15. Shipping begins on 2025-04-01. The warranty registration deadline is 2025-05-30. | Input: {"question": "What are the important dates for the product release?"} | Output: {"answer": ["2025-03-10", "2025-03-15", "2025-04-01", "2025-05-30"]}
+
+| Context: The ancient temple was founded in 0450-05-20. The first expansion occurred in 0455-08-12. A major fire damaged the structure in 0460-11-03. Restoration was completed in 0465-02-28. | Input: {"question": "When did the historical events at the temple take place?"} | Output: {"answer": ["0450-05-20", "0455-08-12", "0460-11-03", "0465-02-28"]}
+
+| Context: The bus leaves Boston at 07:15 AM. It reaches Providence at 08:30 AM. A stopover occurs until 09:00 AM. The final destination, Hartford, is reached at 10:45 AM. | Input: {"question": "What times appear on the bus itinerary?"} | Output: {"answer": ["07:15 AM", "08:30 AM", "09:00 AM", "10:45 AM"]}
+
+| Context: Network upgrade phase A is scheduled for 2024-06-10. Firewall updates happen on 2024-06-11. User account migration occurs on 2024-06-12. Full service restoration is expected on 2024-06-13. | Input: {"question": "Provide the dates for the network upgrade plan."} | Output: {"answer": ["2024-06-10", "2024-06-11", "2024-06-12", "2024-06-13"]}
+
+| Context: The music festival gates open on 2026-07-05. Headliner acts perform on 2026-07-06. VIP lounge access starts on 2026-07-07. The closing ceremony is on 2026-07-08. | Input: {"question": "What are the scheduled dates for the music festival?"} | Output: {"answer": ["2026-07-05", "2026-07-06", "2026-07-07", "2026-07-08"]}
+
+| Context: The night shift begins at 22:00. Safety checks are performed at 00:30. The meal break is at 02:00. A secondary check occurs at 04:30. The shift concludes at 06:00. | Input: {"question": "What are the times for the night shift activities?"} | Output: {"answer": ["22:00", "00:30", "02:00", "04:30", "06:00"]}
+
+| Context: The comet will be closest to Earth on 2025-02-14. A meteor shower peaks on 2025-08-22. A planetary alignment is expected on 2025-12-01. Telescope calibration is due on 2026-01-15. | Input: {"question": "Which dates relate to the celestial events?"} | Output: {"answer": ["2025-02-14", "2025-08-22", "2025-12-01", "2026-01-15"]}
+
+| Context: Demolition of the old bridge started on 2023-03-10. Pier construction began on 2023-05-25. Deck installation started on 2023-09-12. The bridge opened to traffic on 2023-12-20. | Input: {"question": "When did the bridge project milestones occur?"} | Output: {"answer": ["2023-03-10", "2023-05-25", "2023-09-12", "2023-12-20"]}
+
+| Context: The cargo ship departs Shanghai at 03:00. It arrives in Singapore at 18:45. Refueling takes place until 22:00. The final arrival in Rotterdam is at 14:30 three days later. | Input: {"question": "What are the key timestamps for the shipping route?"} | Output: {"answer": ["03:00", "18:45", "22:00", "14:30"]}
+
+| Context: The lease agreement starts on 2024-08-01. The first rent payment is due on 2024-09-01. The inspection is scheduled for 2024-10-15. The lease renewal option expires on 2025-07-31. | Input: {"question": "What dates are critical for the lease agreement?"} | Output: {"answer": ["2024-08-01", "2024-09-01", "2024-10-15", "2025-07-31"]}
+
+| Context: The library opens at 08:00 daily. Storytime for kids is at 10:30. The computer lab closes at 19:00. The main doors lock at 21:00. | Input: {"question": "What operating hours are listed for the library?"} | Output: {"answer": ["08:00", "10:30", "19:00", "21:00"]}
+
+| Context: The contract signing is due by 2024-02-28. The initial deposit is required on 2024-03-15. Construction permits are reviewed on 2024-04-20. Project completion is expected on 2024-11-30. | Input: {"question": "Identify the key dates in the contract timeline."} | Output: {"answer": ["2024-02-28", "2024-03-15", "2024-04-20", "2024-11-30"]}
+
+| Context: Checkout begins at 11:00. Housekeeping starts at 11:30. The pool heater turns on at 06:00. The bar opens at 16:00. Room service ends at 23:00. | Input: {"question": "What times are associated with hotel services?"} | Output: {"answer": ["11:00", "11:30", "06:00", "16:00", "23:00"]}
+
+| Context: App version 3.0 was released on 2023-01-20. Bug fix 3.0.1 arrived on 2023-02-14. Feature update 3.1 launched on 2023-05-05. Version 4.0 beta started on 2023-08-18. | Input: {"question": "When were the app updates released?"} | Output: {"answer": ["2023-01-20", "2023-02-14", "2023-05-05", "2023-08-18"]}
+
+| Context: The triathlon swim leg starts at 06:30. The transition to cycling begins at 07:45. The run portion starts at 10:15. The awards ceremony is at 12:30. | Input: {"question": "What times outline the triathlon event?"} | Output: {"answer": ["06:30", "07:45", "10:15", "12:30"]}
+
+| Context: The excavation permit was issued on 2021-04-05. Trench A was opened on 2021-04-20. Pottery fragments were found on 2021-05-10. The site report was filed on 2021-06-30. | Input: {"question": "What dates define the archaeological permit and findings?"} | Output: {"answer": ["2021-04-05", "2021-04-20", "2021-05-10", "2021-06-30"]}
+
+| Context: The live stream begins at 19:00 PST. Guest interviews start at 19:30 PST. The product reveal is at 20:15 PST. The stream ends at 21:00 PST. | Input: {"question": "What is the schedule for the live stream events?"} | Output: {"answer": ["19:00", "19:30", "20:15", "21:00"]}
+
+| Context: Episode 1 aired on 2022-01-07. The season premiere recap was on 2022-01-14. The mid-season break started on 2022-03-25. The season finale aired on 2022-05-20. | Input: {"question": "When were the key episodes broadcast?"} | Output: {"answer": ["2022-01-07", "2022-01-14", "2022-03-25", "2022-05-20"]}
+
+| Context: The art gallery opens at 11:00. Guided tours start at 12:00. The café serves lunch from 12:30 to 14:30. The gallery closes at 18:00. | Input: {"question": "What are the operating times for the art gallery?"} | Output: {"answer": ["11:00", "12:00", "12:30", "14:30", "18:00"]}
+
+| Context: Clinical trials for Drug X began on 2021-06-01. Interim data analysis occurred on 2021-09-15. Phase 3 recruitment started on 2022-01-10. FDA submission was made on 2022-06-30. | Input: {"question": "What are the milestone dates for the clinical trial?"} | Output: {"answer": ["2021-06-01", "2021-09-15", "2022-01-10", "2022-06-30"]}

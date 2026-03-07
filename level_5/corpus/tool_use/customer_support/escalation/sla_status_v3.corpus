@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: Set a 1-hour SLA for ticket TKT-2045 concerning the authentication service failure and route it to the Identity Management team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-2045", "reason": "Authentication service returning 500 errors for all login attempts", "target_team": "Identity Management" }
+Response: { "ticket_id": "TKT-2045", "escalated_to": "Identity Management", "reason": "Authentication service returning 500 errors for all login attempts", "sla_hours": 1, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Retrieve the current escalation state for ticket TKT-3156 which involves a slow checkout process assigned to the E-commerce Platform group.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-3156", "reason": "Monitoring checkout latency during peak traffic", "target_team": "E-commerce Platform" }
+Response: { "ticket_id": "TKT-3156", "escalated_to": "E-commerce Platform", "reason": "Monitoring checkout latency during peak traffic", "sla_hours": 4, "status": "ON_TRACK" }
+
+Question: Immediately escalate ticket TKT-4267 to the Cloud Infrastructure team due to unauthorized access attempts detected in the admin panel.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-4267", "reason": "Multiple unauthorized admin panel access attempts from unknown IPs", "target_team": "Cloud Infrastructure" }
+Response: { "ticket_id": "TKT-4267", "escalated_to": "Cloud Infrastructure", "reason": "Multiple unauthorized admin panel access attempts from unknown IPs", "sla_hours": 0.5, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Transfer ticket TKT-5378 to the Customer Success Managers to handle a refund request for a premium subscription and apply a 12-hour SLA.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-5378", "reason": "Premium subscription refund request due to service outage", "target_team": "Customer Success Managers" }
+Response: { "ticket_id": "TKT-5378", "escalated_to": "Customer Success Managers", "reason": "Premium subscription refund request due to service outage", "sla_hours": 12, "status": "SLA_ACTIVE" }
+
+Question: Check the status of ticket TKT-6489 to verify if the data synchronization error between warehouses was fixed within the 24-hour limit.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-6489", "reason": "Verification of warehouse data sync resolution", "target_team": "Data Operations" }
+Response: { "ticket_id": "TKT-6489", "escalated_to": "Data Operations", "reason": "Verification of warehouse data sync resolution", "sla_hours": 24, "status": "RESOLVED_WITHIN_SLA" }
+
+Question: Assign a 3-hour SLA to ticket TKT-7590 regarding the broken image rendering on the homepage and send it to the Frontend Development team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-7590", "reason": "Homepage images failing to load on Chrome browsers", "target_team": "Frontend Development" }
+Response: { "ticket_id": "TKT-7590", "escalated_to": "Frontend Development", "reason": "Homepage images failing to load on Chrome browsers", "sla_hours": 3, "status": "BREACH_WARNING_ISSUED" }
+
+Question: Escalate ticket TKT-8601 to the DevOps Team because the continuous integration pipeline is stuck and blocking deployments.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-8601", "reason": "CI pipeline stalled preventing production deployments", "target_team": "DevOps Team" }
+Response: { "ticket_id": "TKT-8601", "escalated_to": "DevOps Team", "reason": "CI pipeline stalled preventing production deployments", "sla_hours": 2, "status": "SLA_ACTIVE_BREACH_WARNING" }
+
+Question: Get the escalation details for TKT-9712 to see if the printer driver issue reported by the HR department is still within the 48-hour window.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-9712", "reason": "Status check on HR printer driver compatibility issue", "target_team": "IT Support" }
+Response: { "ticket_id": "TKT-9712", "escalated_to": "IT Support", "reason": "Status check on HR printer driver compatibility issue", "sla_hours": 48, "status": "SLA_ACTIVE" }
+
+Question: Transfer ticket TKT-1823 to the Legal Department for review of a terms of service violation and enforce a 72-hour SLA.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-1823", "reason": "Potential terms of service violation by user account", "target_team": "Legal Department" }
+Response: { "ticket_id": "TKT-1823", "escalated_to": "Legal Department", "reason": "Potential terms of service violation by user account", "sla_hours": 72, "status": "SLA_ACTIVE" }
+
+Question: Apply an urgent 15-minute SLA to ticket TKT-2934 for the database replication lag and assign it to the Backend Engineering team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-2934", "reason": "Database replication lag exceeding 30 seconds", "target_team": "Backend Engineering" }
+Response: { "ticket_id": "TKT-2934", "escalated_to": "Backend Engineering", "reason": "Database replication lag exceeding 30 seconds", "sla_hours": 0.25, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Verify the escalation status of TKT-3045 to confirm if the SMS gateway timeout was resolved before the 6-hour deadline.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-3045", "reason": "Confirmation of SMS gateway timeout resolution", "target_team": "Communications Infrastructure" }
+Response: { "ticket_id": "TKT-3045", "escalated_to": "Communications Infrastructure", "reason": "Confirmation of SMS gateway timeout resolution", "sla_hours": 6, "status": "RESOLVED_WITHIN_SLA" }
+
+Question: Escalate ticket TKT-4156 to the Vendor Management team due to a stalled hardware delivery and set a 10-hour resolution target.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-4156", "reason": "Hardware delivery stalled at customs for over 48 hours", "target_team": "Vendor Management" }
+Response: { "ticket_id": "TKT-4156", "escalated_to": "Vendor Management", "reason": "Hardware delivery stalled at customs for over 48 hours", "sla_hours": 10, "status": "BREACH_WARNING_ISSUED" }

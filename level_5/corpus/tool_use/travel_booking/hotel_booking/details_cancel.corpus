@@ -1,0 +1,87 @@
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: I need to see the full details for the Grand Plaza in Chicago to check if they have a gym before I book for next weekend.
+Call: { "func_call": "get_hotel_details", "location": "Chicago", "check_in": "2024-05-10", "check_out": "2024-05-12", "guests": 2, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "CHI-001", "name": "Grand Plaza Chicago", "rating": 4.5, "price_per_night": 210, "amenities": ["Gym", "Free WiFi", "Pool", "Business Center"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Please retrieve information for the Sunset Inn in Miami; I specifically need to know their cancellation policy and if breakfast is included.
+Call: { "func_call": "get_hotel_details", "location": "Miami", "check_in": "2024-06-15", "check_out": "2024-06-18", "guests": 3, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "MIA-042", "name": "Sunset Inn Miami", "rating": 4.0, "price_per_night": 185, "amenities": ["Free Breakfast", "Beach Access", "Free Cancellation", "Parking"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: I have a reservation at the Alpine Lodge in Denver that I need to cancel immediately due to a change of plans.
+Call: { "func_call": "cancel_hotel", "location": "Denver", "check_in": "2024-07-01", "check_out": "2024-07-05", "guests": 2, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "DEN-112", "name": "Alpine Lodge", "rating": 4.7, "price_per_night": 295, "amenities": ["Ski Storage", "Spa", "Free Cancellation", "Restaurant"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Can you pull up the details for the Oceanview Resort in San Diego? I want to confirm they offer free cancellation before I finalize my trip.
+Call: { "func_call": "get_hotel_details", "location": "San Diego", "check_in": "2024-08-20", "check_out": "2024-08-25", "guests": 4, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "SD-099", "name": "Oceanview Resort", "rating": 4.8, "price_per_night": 350, "amenities": ["Ocean View", "Pool", "Free Cancellation", "Kids Club"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: I need to cancel my booking at the City Center Hotel in New York for next month.
+Call: { "func_call": "cancel_hotel", "location": "New York", "check_in": "2024-09-10", "check_out": "2024-09-13", "guests": 1, "min_rating": 3.0 }
+Response: { "hotels": [{ "id": "NYC-205", "name": "City Center Hotel", "rating": 3.8, "price_per_night": 220, "amenities": ["Subway Access", "24h Front Desk", "Free Cancellation", "Luggage Storage"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Show me the specifics for the Lakeside Retreat in Seattle, particularly checking for a sauna and flexible cancellation terms.
+Call: { "func_call": "get_hotel_details", "location": "Seattle", "check_in": "2024-10-05", "check_out": "2024-10-08", "guests": 2, "min_rating": 4.2 }
+Response: { "hotels": [{ "id": "SEA-330", "name": "Lakeside Retreat", "rating": 4.6, "price_per_night": 275, "amenities": ["Sauna", "Lake View", "Free Cancellation", "Hiking Trails"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Please process a cancellation for the Desert Oasis hotel in Phoenix where I was scheduled to stay in July.
+Call: { "func_call": "cancel_hotel", "location": "Phoenix", "check_in": "2024-07-22", "check_out": "2024-07-26", "guests": 2, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "PHX-512", "name": "Desert Oasis", "rating": 4.3, "price_per_night": 190, "amenities": ["Pool", "Golf Course", "Free Cancellation", "Shuttle Service"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Get the hotel details for the Historic Inn in Boston to verify if they have pet-friendly rooms and free cancellation.
+Call: { "func_call": "get_hotel_details", "location": "Boston", "check_in": "2024-11-11", "check_out": "2024-11-14", "guests": 2, "min_rating": 3.8 }
+Response: { "hotels": [{ "id": "BOS-678", "name": "Historic Inn Boston", "rating": 4.1, "price_per_night": 240, "amenities": ["Pet Friendly", "Historic Tours", "Free Cancellation", "Bar"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: I need to cancel my reservation at the Mountain View Lodge in Aspen for the upcoming ski season.
+Call: { "func_call": "cancel_hotel", "location": "Aspen", "check_in": "2024-12-20", "check_out": "2024-12-27", "guests": 4, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "ASP-889", "name": "Mountain View Lodge", "rating": 4.9, "price_per_night": 450, "amenities": ["Ski-in/Ski-out", "Fireplace", "Free Cancellation", "Concierge"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Retrieve details for the Harbor Light Hotel in Baltimore, focusing on their airport shuttle availability and cancellation rules.
+Call: { "func_call": "get_hotel_details", "location": "Baltimore", "check_in": "2025-01-15", "check_out": "2025-01-17", "guests": 2, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "BAL-102", "name": "Harbor Light Hotel", "rating": 3.9, "price_per_night": 165, "amenities": ["Airport Shuttle", "Harbor View", "Free Cancellation", "Gym"] }], "total": 1 }
+
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Please cancel the booking for the Riverfront Suites in Portland scheduled for late spring.
+Call: { "func_call": "cancel_hotel", "location": "Portland", "check_in": "2025-05-05", "check_out": "2025-05-09", "guests": 3, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "PDX-445", "name": "Riverfront Suites", "rating": 4.4, "price_per_night": 215, "amenities": ["River View", "Kitchenette", "Free Cancellation", "Bike Rental"] }], "total": 1 }

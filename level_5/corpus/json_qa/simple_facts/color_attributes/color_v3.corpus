@@ -1,0 +1,59 @@
+Context: The lighthouse was repainted a stark white to guide ships through the fog.
+Input: {"question": "What color was the lighthouse painted?"}
+Output: {"answer": "white"}
+
+Context: He drove a vintage car that was a glossy emerald green down the highway.
+Input: {"question": "What color is the vintage car?"}
+Output: {"answer": "green"}
+
+Context: The sunset turned the horizon into a blazing shade of crimson last night.
+Input: {"question": "What color did the horizon turn at sunset?"}
+Output: {"answer": "crimson"}
+
+Context: Her new bicycle has a frame that is a bright metallic copper.
+Input: {"question": "What color is the bicycle frame?"}
+Output: {"answer": "copper"}
+
+Context: They installed turquoise tiles in the bathroom to mimic the ocean.
+Input: {"question": "What color are the bathroom tiles?"}
+Output: {"answer": "turquoise"}
+
+Context: The stopper on the wine bottle is made of a deep burgundy plastic.
+Input: {"question": "What color is the wine bottle stopper?"}
+Output: {"answer": "burgundy"}
+
+Context: Snow covered the mountains, making the peaks appear blindingly white.
+Input: {"question": "What color do the mountain peaks appear?"}
+Output: {"answer": "white"}
+
+Context: The chef added a dash of saffron which turned the rice a golden yellow.
+Input: {"question": "What color did the rice turn?"}
+Output: {"answer": "yellow"}
+
+Context: Her eyes were a striking hazel that seemed to change in the light.
+Input: {"question": "What color are her eyes?"}
+Output: {"answer": "hazel"}
+
+Context: The old door was varnished with a rich mahogany stain.
+Input: {"question": "What color is the varnish on the old door?"}
+Output: {"answer": "mahogany"}
+
+Context: Smoke from the fire rose up, coloring the air a hazy charcoal.
+Input: {"question": "What color did the smoke make the air?"}
+Output: {"answer": "charcoal"}
+
+Context: He wore a scarf knitted from wool that was a soft lavender shade.
+Input: {"question": "What color is his wool scarf?"}
+Output: {"answer": "lavender"}
+
+Context: The traffic light changed to a bright amber before turning red.
+Input: {"question": "What color did the traffic light change to?"}
+Output: {"answer": "amber"}
+
+Context: The ceramic bowl on the shelf is glazed in a speckled teal finish.
+Input: {"question": "What color is the glaze on the ceramic bowl?"}
+Output: {"answer": "teal"}
+
+Context: Autumn berries on the bush are a vivid scarlet against the snow.
+Input: {"question": "What color are the autumn berries?"}
+Output: {"answer": "scarlet"}

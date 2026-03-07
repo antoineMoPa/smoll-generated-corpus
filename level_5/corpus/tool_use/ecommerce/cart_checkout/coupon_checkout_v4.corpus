@@ -1,0 +1,51 @@
+Available Tools: add_to_cart | remove_from_cart | update_quantity | get_cart | apply_coupon | checkout
+Call Schema: { "func_call": "string", "product_id": "string", "quantity": "number", "coupon_code": "string" }
+Response Schema: { "cart_id": "string", "items": [{ "product_id": "string", "name": "string", "quantity": "number", "price": "number" }], "total": "number" }
+---
+Question: Apply the holiday discount code HOLIDAY25 to my current cart.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "HOLIDAY25" }
+Response: { "cart_id": "CART-1122", "items": [{ "product_id": "PROD-303", "name": "Bluetooth Speaker", "quantity": 1, "price": 49.99 }], "total": 37.49 }
+
+Question: Try using the expired coupon code WINTER2022 on my order.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "WINTER2022" }
+Response: { "cart_id": "CART-1122", "items": [{ "product_id": "PROD-303", "name": "Bluetooth Speaker", "quantity": 1, "price": 49.99 }], "total": 49.99 }
+
+Question: Complete the checkout process for my current items.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-1122", "items": [{ "product_id": "PROD-303", "name": "Bluetooth Speaker", "quantity": 1, "price": 49.99 }], "total": 49.99 }
+
+Question: Use the flash sale code FLASH30 to get thirty percent off my total.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "FLASH30" }
+Response: { "cart_id": "CART-4455", "items": [{ "product_id": "PROD-606", "name": "Gaming Mouse", "quantity": 3, "price": 25.00 }], "total": 52.50 }
+
+Question: Attempt to apply an invalid coupon code BADCODE123.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "BADCODE123" }
+Response: { "cart_id": "CART-4455", "items": [{ "product_id": "PROD-606", "name": "Gaming Mouse", "quantity": 3, "price": 25.00 }], "total": 75.00 }
+
+Question: Finalize the purchase for the cart containing the gaming mice.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-4455", "items": [{ "product_id": "PROD-606", "name": "Gaming Mouse", "quantity": 3, "price": 25.00 }], "total": 75.00 }
+
+Question: Apply the free shipping coupon FREESHIP50 to my book order.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "FREESHIP50" }
+Response: { "cart_id": "CART-7788", "items": [{ "product_id": "PROD-909", "name": "Science Fiction Novel", "quantity": 2, "price": 12.99 }], "total": 25.98 }
+
+Question: Try applying the non-existent code GUESSME88.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "GUESSME88" }
+Response: { "cart_id": "CART-7788", "items": [{ "product_id": "PROD-909", "name": "Science Fiction Novel", "quantity": 2, "price": 12.99 }], "total": 25.98 }
+
+Question: Proceed to checkout with the applied free shipping discount.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-7788", "items": [{ "product_id": "PROD-909", "name": "Science Fiction Novel", "quantity": 2, "price": 12.99 }], "total": 25.98 }
+
+Question: Use the VIP member discount code ELITE10 on my furniture cart.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "ELITE10" }
+Response: { "cart_id": "CART-9900", "items": [{ "product_id": "PROD-121", "name": "Office Chair", "quantity": 1, "price": 199.99 }], "total": 179.99 }
+
+Question: Attempt to reuse a single-use coupon code SINGLEUSE used previously.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "SINGLEUSE" }
+Response: { "cart_id": "CART-9900", "items": [{ "product_id": "PROD-121", "name": "Office Chair", "quantity": 1, "price": 199.99 }], "total": 199.99 }
+
+Question: Complete the transaction for the office chair order.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-9900", "items": [{ "product_id": "PROD-121", "name": "Office Chair", "quantity": 1, "price": 199.99 }], "total": 199.99 }

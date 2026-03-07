@@ -1,0 +1,29 @@
+| Context: The garden center stocked 40 bags of mulch, 25 bags of soil, and 60 bags of fertilizer for the spring season. Each pallet was tagged with its contents and weight. Delivery trucks unloaded the materials by noon. | Input: {"question": "What quantities of garden supplies were stocked?"} | Output: {"answer": ["40 bags", "25 bags", "60 bags"]}
+
+| Context: At the auction, the vintage car sold for $25,000, the antique vase fetched $3,500, and the painting went for $12,750. The auctioneer closed the bidding promptly at 5 PM. Buyers arranged immediate pickup for their items. | Input: {"question": "List all final sale prices mentioned."} | Output: {"answer": ["$25,000", "$3,500", "$12,750"]}
+
+| Context: The coding bootcamp lasted 12 weeks in total, divided into 4 weeks of basics, 5 weeks of advanced concepts, and 3 weeks of capstone projects. Students attended lectures daily from morning until evening. Graduation rates have improved significantly this year. | Input: {"question": "What durations are mentioned for the course sections?"} | Output: {"answer": ["12 weeks", "4 weeks", "5 weeks", "3 weeks"]}
+
+| Context: The chemist mixed 15ml of solution X, 30ml of solution Y, and 5ml of indicator Z in the beaker. The mixture turned purple immediately upon contact. Safety goggles were required during the entire procedure. | Input: {"question": "What volumes of liquids were combined?"} | Output: {"answer": ["15ml", "30ml", "5ml"]}
+
+| Context: The hotel room rates are $150.00 for a standard room, $220.00 for a deluxe suite, and $350.00 for the penthouse. Reservations include breakfast and Wi-Fi access. Check-in time is strictly after 3 PM. | Input: {"question": "List all room rates mentioned."} | Output: {"answer": ["$150.00", "$220.00", "$350.00"]}
+
+| Context: The baby weighed 3.2kg at birth, 4.5kg at two months, and 6.1kg at four months. The doctor praised the consistent weight gain during the checkup. The parents kept a detailed log of every measurement. | Input: {"question": "What weight measurements were recorded?"} | Output: {"answer": ["3.2kg", "4.5kg", "6.1kg"]}
+
+| Context: The library acquired 200 new fiction books, 150 non-fiction titles, and 75 reference manuals last month. Cataloging took the staff three full days to complete. The new section opens to the public on Monday. | Input: {"question": "What counts of books were acquired?"} | Output: {"answer": ["200 books", "150 titles", "75 manuals"]}
+
+| Context: The road trip covered 300 miles on day one, 450 miles on day two, and 200 miles on the final day. Fuel stops were planned every 150 miles to ensure safety. The total distance exceeded initial estimates. | Input: {"question": "What distances were driven each day?"} | Output: {"answer": ["300 miles", "450 miles", "200 miles"]}
+
+| Context: The bakery used 10kg of flour, 5kg of yeast, and 2kg of salt for the bulk dough preparation. The mixer ran for forty-five minutes to achieve the right consistency. Loaves were baked in batches of twenty. | Input: {"question": "List all ingredient weights mentioned."} | Output: {"answer": ["10kg", "5kg", "2kg"]}
+
+| Context: The software license costs $99.00 per user, the support package is $49.00 per month, and the enterprise upgrade is $500.00 annually. Discounts apply for teams larger than ten people. Implementation takes about two weeks. | Input: {"question": "What prices are listed for the software services?"} | Output: {"answer": ["$99.00", "$49.00", "$500.00"]}
+
+| Context: The aquarium tank holds 120 liters of water, needs 3 liters of conditioner, and requires 10 grams of salt mix. The filtration system runs continuously to maintain clarity. Water changes occur every two weeks. | Input: {"question": "What quantities are needed for the tank maintenance?"} | Output: {"answer": ["120 liters", "3 liters", "10 grams"]}
+
+| Context: The warehouse inventory shows 500 boxes of nails, 300 boxes of screws, and 800 boxes of anchors. The stockroom manager ordered more supplies due to high demand. Shipments are scheduled for next Tuesday. | Input: {"question": "What item counts are currently in stock?"} | Output: {"answer": ["500 boxes", "300 boxes", "800 boxes"]}
+
+| Context: The marathon participant ran the first 10km in 50 minutes, the next 10km in 55 minutes, and the final 12.2km in 65 minutes. Hydration stations were located every 5 kilometers. The finish line crowd cheered loudly. | Input: {"question": "What split times were recorded for the race?"} | Output: {"answer": ["50 minutes", "55 minutes", "65 minutes"]}
+
+| Context: The construction crew poured 20 cubic meters of concrete, laid 500 bricks, and installed 10 steel beams today. The foreman inspected the work before signing off. Weather conditions were ideal for curing. | Input: {"question": "What quantities of materials were used today?"} | Output: {"answer": ["20 cubic meters", "500 bricks", "10 beams"]}
+
+| Context: The furniture store displays a sofa for $1,200, a coffee table for $350, and a lamp for $85. Delivery fees vary based on the total order value. Customers can finance purchases over twelve months. | Input: {"question": "List all prices shown on the furniture tags."} | Output: {"answer": ["$1,200", "$350", "$85"]}

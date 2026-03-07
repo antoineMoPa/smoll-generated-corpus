@@ -1,0 +1,59 @@
+Context: Maria parked her van at the Sunset Beach to watch the sunset. She sat on the sand for two hours before driving back.
+Input: {"question": "Where did Maria park her van?"}
+Output: {"answer": "Sunset Beach"}
+
+Context: The quarterly review is set for 10 AM in Meeting Hall A on the third floor. Please prepare your financial reports.
+Input: {"question": "Where is the quarterly review set?"}
+Output: {"answer": "Meeting Hall A"}
+
+Context: After school, Liam visited the Book Nook on Elm Street to buy a novel and a notebook. He almost forgot his wallet but found it in his pocket.
+Input: {"question": "Where did Liam go after school?"}
+Output: {"answer": "Book Nook"}
+
+Context: We are currently touring Kyoto and intend to explore the Fushimi Inari shrine this afternoon. The scenery is breathtaking.
+Input: {"question": "Where are they currently touring?"}
+Output: {"answer": "Kyoto"}
+
+Context: The letter was placed in the mailbox of 456 Maple Drive while the residents were away. The postal worker noted the full box.
+Input: {"question": "Where was the letter placed?"}
+Output: {"answer": "mailbox of 456 Maple Drive"}
+
+Context: Nurse Patel works every Thursday at the Community Health Center uptown. You must register online before visiting.
+Input: {"question": "Where does Nurse Patel work?"}
+Output: {"answer": "Community Health Center"}
+
+Context: During the flood, the residents moved to the attic of their building until the water receded. They checked their phones for news.
+Input: {"question": "Where did the residents move during the flood?"}
+Output: {"answer": "attic"}
+
+Context: The new bakery, Sweet Crumb, launched yesterday in the town square next to the fountain. It is quickly becoming a local favorite.
+Input: {"question": "Where did the new bakery launch?"}
+Output: {"answer": "town square"}
+
+Context: Emily misplaced her glasses at the museum when she hurried to see the exhibit earlier. She hopes the security team found them.
+Input: {"question": "Where did Emily misplace her glasses?"}
+Output: {"answer": "museum"}
+
+Context: The music festival is taking place at the Riverfront Arena in Austin next weekend. Passes are limited.
+Input: {"question": "Where is the music festival taking place?"}
+Output: {"answer": "Riverfront Arena"}
+
+Context: He chose to read his novel in the sunny nook of the public library. It was the only spot with natural light.
+Input: {"question": "Where did he choose to read?"}
+Output: {"answer": "sunny nook of the public library"}
+
+Context: The train from Chicago arrived smoothly at Union Station shortly after midnight. Travelers exited the platforms quickly.
+Input: {"question": "Where did the train arrive?"}
+Output: {"answer": "Union Station"}
+
+Context: Meet us at the train depot on 8th Avenue at 7 PM so we can board the express together. Do not delay or we will be left behind.
+Input: {"question": "Where should we meet?"}
+Output: {"answer": "train depot"}
+
+Context: They discovered the finest burgers in the city at Mike's Grill situated in the historic quarter. The meat is juicy and the buns are fresh.
+Input: {"question": "Where did they discover the finest burgers?"}
+Output: {"answer": "Mike's Grill"}
+
+Context: The missing cat was seen hiding under the bench in Central Gardens last night. The family has posted flyers everywhere.
+Input: {"question": "Where was the missing cat seen?"}
+Output: {"answer": "under the bench in Central Gardens"}

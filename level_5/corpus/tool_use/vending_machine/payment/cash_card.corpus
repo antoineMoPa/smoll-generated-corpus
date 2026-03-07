@@ -1,0 +1,51 @@
+Available Tools: process_cash | process_card | process_mobile_pay | get_change | refund_transaction
+Call Schema: { "func_call": "string", "amount": number, "currency": "string", "transaction_id": "string" }
+Response Schema: { "transaction_id": "string", "status": "string", "change": number, "receipt": "string" }
+---
+Question: A customer inserts a $20 bill to buy a soda priced at $1.75.
+Call: { "func_call": "process_cash", "amount": 20.00, "currency": "USD", "transaction_id": "VM-2023-8841" }
+Response: { "transaction_id": "VM-2023-8841", "status": "success", "change": 18.25, "receipt": "RCP-8841-A1" }
+
+Question: Someone pays $3.50 using a credit card for a bag of chips.
+Call: { "func_call": "process_card", "amount": 3.50, "currency": "USD", "transaction_id": "VM-2023-9012" }
+Response: { "transaction_id": "VM-2023-9012", "status": "approved", "change": 0, "receipt": "RCP-9012-B4" }
+
+Question: A user puts in exactly $2.25 in coins for a bottle of water.
+Call: { "func_call": "process_cash", "amount": 2.25, "currency": "USD", "transaction_id": "VM-2023-9155" }
+Response: { "transaction_id": "VM-2023-9155", "status": "success", "change": 0, "receipt": "RCP-9155-C2" }
+
+Question: A customer tries to buy a $4.00 snack but only inserts $3.00 in cash.
+Call: { "func_call": "process_cash", "amount": 3.00, "currency": "USD", "transaction_id": "VM-2023-9201" }
+Response: { "transaction_id": "VM-2023-9201", "status": "insufficient_funds", "change": 0, "receipt": "RCP-9201-ERR" }
+
+Question: A purchase of $6.75 is made using a contactless card.
+Call: { "func_call": "process_card", "amount": 6.75, "currency": "USD", "transaction_id": "VM-2023-9344" }
+Response: { "transaction_id": "VM-2023-9344", "status": "approved", "change": 0, "receipt": "RCP-9344-D9" }
+
+Question: Someone inserts a $10 bill for an item costing $0.90.
+Call: { "func_call": "process_cash", "amount": 10.00, "currency": "USD", "transaction_id": "VM-2023-9488" }
+Response: { "transaction_id": "VM-2023-9488", "status": "success", "change": 9.10, "receipt": "RCP-9488-E3" }
+
+Question: A card payment of $1.50 is attempted but the bank declines it.
+Call: { "func_call": "process_card", "amount": 1.50, "currency": "USD", "transaction_id": "VM-2023-9512" }
+Response: { "transaction_id": "VM-2023-9512", "status": "declined", "change": 0, "receipt": "RCP-9512-ERR" }
+
+Question: A customer inserts $5.00 to buy two items totaling $4.25.
+Call: { "func_call": "process_cash", "amount": 5.00, "currency": "USD", "transaction_id": "VM-2023-9677" }
+Response: { "transaction_id": "VM-2023-9677", "status": "success", "change": 0.75, "receipt": "RCP-9677-F1" }
+
+Question: A premium coffee costing $5.50 is purchased via credit card.
+Call: { "func_call": "process_card", "amount": 5.50, "currency": "USD", "transaction_id": "VM-2023-9803" }
+Response: { "transaction_id": "VM-2023-9803", "status": "approved", "change": 0, "receipt": "RCP-9803-G7" }
+
+Question: A user inserts a $50 bill for a $2.00 candy bar.
+Call: { "func_call": "process_cash", "amount": 50.00, "currency": "USD", "transaction_id": "VM-2023-9921" }
+Response: { "transaction_id": "VM-2023-9921", "status": "success", "change": 48.00, "receipt": "RCP-9921-H2" }
+
+Question: A card transaction for $8.25 fails due to a network timeout.
+Call: { "func_call": "process_card", "amount": 8.25, "currency": "USD", "transaction_id": "VM-2023-9988" }
+Response: { "transaction_id": "VM-2023-9988", "status": "network_error", "change": 0, "receipt": "RCP-9988-ERR" }
+
+Question: Someone pays $12.00 in cash for a meal deal priced at $11.50.
+Call: { "func_call": "process_cash", "amount": 12.00, "currency": "USD", "transaction_id": "VM-2023-1004" }
+Response: { "transaction_id": "VM-2023-1004", "status": "success", "change": 0.50, "receipt": "RCP-1004-J5" }

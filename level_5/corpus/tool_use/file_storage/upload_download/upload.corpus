@@ -1,0 +1,51 @@
+Available Tools: upload_file | download_file | get_upload_url | get_download_url
+Call Schema: { "func_call": "string", "path": "string", "file_name": "string", "size_bytes": number, "content_type": "string" }
+Response Schema: { "file_id": "string", "path": "string", "size_bytes": number, "url": "string", "expires_at": "string" }
+---
+Question: Upload the quarterly financial report PDF to the documents folder.
+Call: { "func_call": "upload_file", "path": "documents/", "file_name": "Q3_Financial_Report.pdf", "size_bytes": 2458900, "content_type": "application/pdf" }
+Response: { "file_id": "file_8a9b2c3d4e5f", "path": "documents/Q3_Financial_Report.pdf", "size_bytes": 2458900, "url": "https://storage.cloud.com/v1/files/file_8a9b2c3d4e5f", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: I need to upload a high-resolution logo image to the images directory.
+Call: { "func_call": "upload_file", "path": "images/", "file_name": "company_logo_4k.png", "size_bytes": 15728640, "content_type": "image/png" }
+Response: { "file_id": "file_1f2e3d4c5b6a", "path": "images/company_logo_4k.png", "size_bytes": 15728640, "url": "https://storage.cloud.com/v1/files/file_1f2e3d4c5b6a", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Please upload the database backup file created last night to the backups folder.
+Call: { "func_call": "upload_file", "path": "backups/", "file_name": "db_backup_20231024.sql.gz", "size_bytes": 524288000, "content_type": "application/gzip" }
+Response: { "file_id": "file_9z8y7x6w5v4u", "path": "backups/db_backup_20231024.sql.gz", "size_bytes": 524288000, "url": "https://storage.cloud.com/v1/files/file_9z8y7x6w5v4u", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Upload the user manual text file to the documents archive.
+Call: { "func_call": "upload_file", "path": "documents/", "file_name": "user_manual_v2.txt", "size_bytes": 45020, "content_type": "text/plain" }
+Response: { "file_id": "file_3t4r5e6w7q8p", "path": "documents/user_manual_v2.txt", "size_bytes": 45020, "url": "https://storage.cloud.com/v1/files/file_3t4r5e6w7q8p", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Store the new product banner JPEG in the images marketing folder.
+Call: { "func_call": "upload_file", "path": "images/", "file_name": "summer_sale_banner.jpg", "size_bytes": 3145728, "content_type": "image/jpeg" }
+Response: { "file_id": "file_2a3b4c5d6e7f", "path": "images/summer_sale_banner.jpg", "size_bytes": 3145728, "url": "https://storage.cloud.com/v1/files/file_2a3b4c5d6e7f", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Upload the server configuration JSON file to the backups config subdirectory.
+Call: { "func_call": "upload_file", "path": "backups/", "file_name": "server_config_prod.json", "size_bytes": 8192, "content_type": "application/json" }
+Response: { "file_id": "file_7g8h9i0j1k2l", "path": "backups/server_config_prod.json", "size_bytes": 8192, "url": "https://storage.cloud.com/v1/files/file_7g8h9i0j1k2l", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: I have a large video presentation to upload to the documents media folder.
+Call: { "func_call": "upload_file", "path": "documents/", "file_name": "annual_meeting_recording.mp4", "size_bytes": 1073741824, "content_type": "video/mp4" }
+Response: { "file_id": "file_5m6n7o8p9q0r", "path": "documents/annual_meeting_recording.mp4", "size_bytes": 1073741824, "url": "https://storage.cloud.com/v1/files/file_5m6n7o8p9q0r", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Upload the icon set SVG file to the images assets directory.
+Call: { "func_call": "upload_file", "path": "images/", "file_name": "ui_icons_set.svg", "size_bytes": 102400, "content_type": "image/svg+xml" }
+Response: { "file_id": "file_4s5t6u7v8w9x", "path": "images/ui_icons_set.svg", "size_bytes": 102400, "url": "https://storage.cloud.com/v1/files/file_4s5t6u7v8w9x", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Please upload the encrypted archive containing sensitive logs to the backups secure folder.
+Call: { "func_call": "upload_file", "path": "backups/", "file_name": "logs_archive_encrypted.zip", "size_bytes": 89478485, "content_type": "application/zip" }
+Response: { "file_id": "file_0y1z2a3b4c5d", "path": "backups/logs_archive_encrypted.zip", "size_bytes": 89478485, "url": "https://storage.cloud.com/v1/files/file_0y1z2a3b4c5d", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Upload the employee handbook Word document to the documents HR folder.
+Call: { "func_call": "upload_file", "path": "documents/", "file_name": "employee_handbook_2024.docx", "size_bytes": 1250000, "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document" }
+Response: { "file_id": "file_6e7f8g9h0i1j", "path": "documents/employee_handbook_2024.docx", "size_bytes": 1250000, "url": "https://storage.cloud.com/v1/files/file_6e7f8g9h0i1j", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Store the raw sensor data CSV file in the documents data directory.
+Call: { "func_call": "upload_file", "path": "documents/", "file_name": "sensor_readings_oct.csv", "size_bytes": 5632000, "content_type": "text/csv" }
+Response: { "file_id": "file_2k3l4m5n6o7p", "path": "documents/sensor_readings_oct.csv", "size_bytes": 5632000, "url": "https://storage.cloud.com/v1/files/file_2k3l4m5n6o7p", "expires_at": "2024-12-31T23:59:59Z" }
+
+Question: Upload the thumbnail GIF for the new campaign to the images marketing folder.
+Call: { "func_call": "upload_file", "path": "images/", "file_name": "campaign_teaser.gif", "size_bytes": 2097152, "content_type": "image/gif" }
+Response: { "file_id": "file_8q9r0s1t2u3v", "path": "images/campaign_teaser.gif", "size_bytes": 2097152, "url": "https://storage.cloud.com/v1/files/file_8q9r0s1t2u3v", "expires_at": "2024-12-31T23:59:59Z" }

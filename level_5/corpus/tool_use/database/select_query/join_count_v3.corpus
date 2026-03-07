@@ -1,0 +1,51 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve customer names and subscription start dates for the first 8 active members.
+Call: { "func_call": "select_with_join", "table": "customers", "columns": ["customers.full_name", "subscriptions.start_date"], "where": "customers.id = subscriptions.customer_id AND subscriptions.status = 'active'", "limit": 8 }
+Response: { "rows": [{"full_name": "Laura Chen", "start_date": "2024-01-10"}, {"full_name": "Marcus Thorne", "start_date": "2024-01-12"}, {"full_name": "Nina Patel", "start_date": "2024-01-15"}, {"full_name": "Oscar Ruiz", "start_date": "2024-01-18"}, {"full_name": "Priya Singh", "start_date": "2024-01-20"}, {"full_name": "Quincy Adams", "start_date": "2024-01-22"}, {"full_name": "Rachel Green", "start_date": "2024-01-25"}, {"full_name": "Sam Wilson", "start_date": "2024-01-28"}], "count": 8, "query_ms": 14 }
+---
+Question: Count the total number of support tickets resolved in the last month.
+Call: { "func_call": "count_records", "table": "tickets", "columns": ["*"], "where": "resolved_at >= '2024-02-01' AND resolved_at <= '2024-02-29'", "limit": 0 }
+Response: { "rows": [], "count": 672, "query_ms": 5 }
+---
+Question: Join employees and departments to list staff names and their department codes for the 'Engineering' division.
+Call: { "func_call": "select_with_join", "table": "employees", "columns": ["employees.first_name", "employees.last_name", "departments.code"], "where": "employees.dept_id = departments.id AND departments.name = 'Engineering'", "limit": 30 }
+Response: { "rows": [{"first_name": "Alan", "last_name": "Turing", "code": "ENG-01"}, {"first_name": "Grace", "last_name": "Hopper", "code": "ENG-02"}, {"first_name": "Linus", "last_name": "Torvalds", "code": "ENG-03"}], "count": 3, "query_ms": 19 }
+---
+Question: How many distinct cities have delivery addresses in the logistics database?
+Call: { "func_call": "count_records", "table": "addresses", "columns": ["DISTINCT city"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 145, "query_ms": 7 }
+---
+Question: Select event titles and venue capacities by joining events and venues for concerts scheduled in June.
+Call: { "func_call": "select_with_join", "table": "events", "columns": ["events.title", "venues.capacity"], "where": "events.venue_id = venues.id AND events.event_type = 'Concert' AND events.date LIKE '2024-06-%'", "limit": 15 }
+Response: { "rows": [{"title": "Summer Jazz Fest", "capacity": 5000}, {"title": "Rock Night Live", "capacity": 12000}, {"title": "Indie Showcase", "capacity": 800}], "count": 3, "query_ms": 23 }
+---
+Question: Count the number of vehicles currently available for rent in the fleet.
+Call: { "func_call": "count_records", "table": "vehicles", "columns": ["*"], "where": "status = 'available'", "limit": 0 }
+Response: { "rows": [], "count": 89, "query_ms": 4 }
+---
+Question: Retrieve book titles and author names by joining books and authors where the genre is 'Science Fiction'.
+Call: { "func_call": "select_with_join", "table": "books", "columns": ["books.title", "authors.name"], "where": "books.author_id = authors.id AND books.genre = 'Science Fiction'", "limit": 20 }
+Response: { "rows": [{"title": "Star Voyager", "name": "Isaac Asimov"}, {"title": "Neuromancer", "name": "William Gibson"}, {"title": "Dune", "name": "Frank Herbert"}], "count": 3, "query_ms": 16 }
+---
+Question: What is the total count of transactions exceeding $500 in value?
+Call: { "func_call": "count_records", "table": "transactions", "columns": ["*"], "where": "amount > 500", "limit": 0 }
+Response: { "rows": [], "count": 2103, "query_ms": 9 }
+---
+Question: Join patients and doctors to find the diagnosis and appointment date for patient ID 772.
+Call: { "func_call": "select_with_join", "table": "patients", "columns": ["appointments.diagnosis", "appointments.date"], "where": "patients.id = appointments.patient_id AND patients.id = 772", "limit": 1 }
+Response: { "rows": [{"diagnosis": "Seasonal Allergies", "date": "2024-03-14"}], "count": 1, "query_ms": 11 }
+---
+Question: Count how many unique tags are associated with blog posts in the CMS.
+Call: { "func_call": "count_records", "table": "post_tags", "columns": ["DISTINCT tag_name"], "where": "", "limit": 0 }
+Response: { "rows": [], "count": 48, "query_ms": 6 }
+---
+Question: List restaurant names and cuisine types by joining restaurants and menus where the average rating is above 4.5.
+Call: { "func_call": "select_with_join", "table": "restaurants", "columns": ["restaurants.name", "menus.cuisine_type"], "where": "restaurants.menu_id = menus.id AND restaurants.rating > 4.5", "limit": 10 }
+Response: { "rows": [{"name": "Le Petit Bistro", "cuisine_type": "French"}, {"name": "Sakura Sushi", "cuisine_type": "Japanese"}, {"name": "Taco Fiesta", "cuisine_type": "Mexican"}], "count": 3, "query_ms": 20 }
+---
+Question: Determine the number of flight records departing from airport 'JFK' in March 2024.
+Call: { "func_call": "count_records", "table": "flights", "columns": ["*"], "where": "departure_airport = 'JFK' AND departure_time >= '2024-03-01' AND departure_time <= '2024-03-31'", "limit": 0 }
+Response: { "rows": [], "count": 1842, "query_ms": 10 }

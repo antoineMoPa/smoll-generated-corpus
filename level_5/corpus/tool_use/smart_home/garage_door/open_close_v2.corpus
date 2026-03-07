@@ -1,0 +1,51 @@
+Available Tools: open_garage | close_garage | get_garage_status | set_garage_timer
+Call Schema: { "func_call": "string", "door_id": "string", "delay_seconds": number }
+Response Schema: { "door_id": "string", "state": "open|closed|opening|closing", "timestamp": "string" }
+---
+Question: My car is stuck outside, can you open the north garage door immediately?
+Call: { "func_call": "open_garage", "door_id": "garage_north_02", "delay_seconds": 0 }
+Response: { "door_id": "garage_north_02", "state": "opening", "timestamp": "2023-11-01T07:22:18Z" }
+
+Question: Please secure the property by closing the east workshop door now.
+Call: { "func_call": "close_garage", "door_id": "workshop_east_4", "delay_seconds": 0 }
+Response: { "door_id": "workshop_east_4", "state": "closing", "timestamp": "2023-11-01T18:40:55Z" }
+
+Question: The movers are arriving, open the large freight door right away.
+Call: { "func_call": "open_garage", "door_id": "freight_door_01", "delay_seconds": 0 }
+Response: { "door_id": "freight_door_01", "state": "opening", "timestamp": "2023-11-02T09:15:30Z" }
+
+Question: It's getting dark, please shut the north garage door for safety.
+Call: { "func_call": "close_garage", "door_id": "garage_north_02", "delay_seconds": 0 }
+Response: { "door_id": "garage_north_02", "state": "closing", "timestamp": "2023-11-02T17:50:12Z" }
+
+Question: We are going on a trip, ensure the west storage door is closed.
+Call: { "func_call": "close_garage", "door_id": "storage_west_5", "delay_seconds": 0 }
+Response: { "door_id": "storage_west_5", "state": "closing", "timestamp": "2023-11-03T08:05:44Z" }
+
+Question: The garbage truck is here, open the alley access door please.
+Call: { "func_call": "open_garage", "door_id": "alley_access_03", "delay_seconds": 0 }
+Response: { "door_id": "alley_access_03", "state": "opening", "timestamp": "2023-11-03T10:30:22Z" }
+
+Question: I left the east workshop door open while painting, close it now.
+Call: { "func_call": "close_garage", "door_id": "workshop_east_4", "delay_seconds": 0 }
+Response: { "door_id": "workshop_east_4", "state": "closing", "timestamp": "2023-11-03T15:12:09Z" }
+
+Question: Welcome us back by opening the south entrance garage door.
+Call: { "func_call": "open_garage", "door_id": "garage_south_06", "delay_seconds": 0 }
+Response: { "door_id": "garage_south_06", "state": "opening", "timestamp": "2023-11-04T16:45:33Z" }
+
+Question: Motion detected at night, immediately close the large freight door.
+Call: { "func_call": "close_garage", "door_id": "freight_door_01", "delay_seconds": 0 }
+Response: { "door_id": "freight_door_01", "state": "closing", "timestamp": "2023-11-04T23:55:17Z" }
+
+Question: I need to take the bike out, please open the west storage door.
+Call: { "func_call": "open_garage", "door_id": "storage_west_5", "delay_seconds": 0 }
+Response: { "door_id": "storage_west_5", "state": "opening", "timestamp": "2023-11-05T08:20:41Z" }
+
+Question: Evening routine, close the south garage door before dinner.
+Call: { "func_call": "close_garage", "door_id": "garage_south_06", "delay_seconds": 0 }
+Response: { "door_id": "garage_south_06", "state": "closing", "timestamp": "2023-11-05T19:10:28Z" }
+
+Question: Starting the day early, please activate the alley access door.
+Call: { "func_call": "open_garage", "door_id": "alley_access_03", "delay_seconds": 0 }
+Response: { "door_id": "alley_access_03", "state": "opening", "timestamp": "2023-11-06T05:45:50Z" }

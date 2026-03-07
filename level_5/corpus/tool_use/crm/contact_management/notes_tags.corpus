@@ -1,0 +1,87 @@
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add a note to contact C-1024 for Sarah Jenkins at Nexus Corp summarizing our introductory call where she expressed interest in the enterprise plan.
+Call: { "func_call": "add_note", "contact_id": "C-1024", "name": "Sarah Jenkins", "email": "sarah.j@nexuscorp.com", "company": "Nexus Corp", "note": "Introductory call completed. Sarah expressed strong interest in the enterprise plan, specifically asking about SSO integration and dedicated support tiers. Follow up scheduled for next Tuesday." }
+Response: { "contact_id": "C-1024", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Tag contact C-2099, Marcus Thorne from Vertex Solutions, as a 'Hot Lead' since he requested a demo immediately after the webinar.
+Call: { "func_call": "add_tag", "contact_id": "C-2099", "name": "Marcus Thorne", "email": "m.thorne@vertexsol.io", "company": "Vertex Solutions", "note": "Hot Lead" }
+Response: { "contact_id": "C-2099", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Record a meeting summary for contact C-3301, Elena Rodriguez at BlueSky Logistics, noting that legal is reviewing the contract and we need to send the revised SLA.
+Call: { "func_call": "add_note", "contact_id": "C-3301", "name": "Elena Rodriguez", "email": "e.rodriguez@blueskylog.com", "company": "BlueSky Logistics", "note": "Meeting summary: Legal team is currently reviewing the master service agreement. Elena requested a revised SLA document highlighting the 99.9% uptime guarantee before they can sign. Action item: Send revised SLA by EOD Thursday." }
+Response: { "contact_id": "C-3301", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add the 'Q4-Target' tag to contact C-4450, David Chen at OmniTech, because his budget cycle aligns with our end-of-year push.
+Call: { "func_call": "add_tag", "contact_id": "C-4450", "name": "David Chen", "email": "dchen@omnitech.net", "company": "OmniTech", "note": "Q4-Target" }
+Response: { "contact_id": "C-4450", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Log a follow-up note for contact C-5120, Jessica Alverez at GreenField Ag, stating that the pilot program started successfully and usage metrics look promising.
+Call: { "func_call": "add_note", "contact_id": "C-5120", "name": "Jessica Alverez", "email": "jalverez@greenfieldag.org", "company": "GreenField Ag", "note": "Pilot program launched successfully on Monday. Initial usage metrics show 85% adoption among the test group within 48 hours. Jessica is pleased with the onboarding speed. Next step: Schedule review meeting for week 3 results." }
+Response: { "contact_id": "C-5120", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Tag contact C-6782, Robert Kim at Stellar Dynamics, with 'Churn-Risk' after he mentioned budget cuts in our last conversation.
+Call: { "func_call": "add_tag", "contact_id": "C-6782", "name": "Robert Kim", "email": "rkim@stellardyn.com", "company": "Stellar Dynamics", "note": "Churn-Risk" }
+Response: { "contact_id": "C-6782", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add a note to contact C-7215, Amanda Foster at Pulse Media, detailing that she wants to postpone the decision until the new fiscal year begins in January.
+Call: { "func_call": "add_note", "contact_id": "C-7215", "name": "Amanda Foster", "email": "afoster@pulsemedia.tv", "company": "Pulse Media", "note": "Decision postponed. Amanda indicated that all new software purchases are frozen until the new fiscal year begins in January. She requested we reconnect during the first week of Jan to restart the procurement process." }
+Response: { "contact_id": "C-7215", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Apply the 'Enterprise-Ready' tag to contact C-8890, Thomas Wright at Apex Industries, following his confirmation of headcount growth.
+Call: { "func_call": "add_tag", "contact_id": "C-8890", "name": "Thomas Wright", "email": "twright@apexind.com", "company": "Apex Industries", "note": "Enterprise-Ready" }
+Response: { "contact_id": "C-8890", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Record a call summary for contact C-9003, Linda Gupta at Solaris Tech, noting objections regarding data migration timelines and our proposed solution.
+Call: { "func_call": "add_note", "contact_id": "C-9003", "name": "Linda Gupta", "email": "lgupta@solaristech.io", "company": "Solaris Tech", "note": "Call summary: Linda raised concerns about the 4-week data migration timeline conflicting with their Q3 audit. Proposed a phased migration approach starting with non-critical datasets to mitigate risk. She agreed to discuss the phased plan with her CTO tomorrow." }
+Response: { "contact_id": "C-9003", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Tag contact C-1156, Brian O'Connor at NorthBridge Finance, as 'Competitor-Win' since he switched from our rival's platform last month.
+Call: { "func_call": "add_tag", "contact_id": "C-1156", "name": "Brian O'Connor", "email": "boconnor@northbridgefin.com", "company": "NorthBridge Finance", "note": "Competitor-Win" }
+Response: { "contact_id": "C-1156", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add a strategic note for contact C-2248, Priya Patel at Quantum Soft, mentioning her interest in our API documentation for a custom integration project.
+Call: { "func_call": "add_note", "contact_id": "C-2248", "name": "Priya Patel", "email": "ppatel@quantumsoft.dev", "company": "Quantum Soft", "note": "Priya is leading a custom integration project and has shown deep interest in our REST API documentation. She specifically asked about rate limits and webhook payloads. Engineering team to schedule a technical deep-dive session next Wednesday." }
+Response: { "contact_id": "C-2248", "status": "success", "updated_fields": ["notes"] }

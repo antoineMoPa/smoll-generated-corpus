@@ -1,0 +1,51 @@
+Available Tools: create_subscription | cancel_subscription | pause_subscription | update_plan | get_subscription
+Call Schema: { "func_call": "string", "customer_id": "string", "plan_id": "string", "trial_days": number }
+Response Schema: { "subscription_id": "string", "status": "active|canceled|paused|trialing", "plan": "string", "current_period_end": "string" }
+---
+Question: Create a new starter plan subscription for customer cust_8821 with a 14-day trial.
+Call: { "func_call": "create_subscription", "customer_id": "cust_8821", "plan_id": "starter", "trial_days": 14 }
+Response: { "subscription_id": "sub_99281a", "status": "trialing", "plan": "starter", "current_period_end": "2023-11-15T00:00:00Z" }
+
+Question: Cancel the subscription sub_7712b for customer cust_4409 who is on the pro plan.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_4409", "plan_id": "pro", "trial_days": 0 }
+Response: { "subscription_id": "sub_7712b", "status": "canceled", "plan": "pro", "current_period_end": "2023-10-30T23:59:59Z" }
+
+Question: Set up an enterprise plan for customer cust_1102 with a 30-day trial period.
+Call: { "func_call": "create_subscription", "customer_id": "cust_1102", "plan_id": "enterprise", "trial_days": 30 }
+Response: { "subscription_id": "sub_3341c", "status": "trialing", "plan": "enterprise", "current_period_end": "2023-12-01T00:00:00Z" }
+
+Question: Terminate the starter subscription sub_5590d belonging to customer cust_6633 immediately.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_6633", "plan_id": "starter", "trial_days": 0 }
+Response: { "subscription_id": "sub_5590d", "status": "canceled", "plan": "starter", "current_period_end": "2023-10-25T12:00:00Z" }
+
+Question: Initialize a pro plan subscription for customer cust_9988 including a 7-day free trial.
+Call: { "func_call": "create_subscription", "customer_id": "cust_9988", "plan_id": "pro", "trial_days": 7 }
+Response: { "subscription_id": "sub_1122e", "status": "trialing", "plan": "pro", "current_period_end": "2023-11-08T00:00:00Z" }
+
+Question: Process a cancellation for the enterprise plan associated with customer cust_2244 and subscription sub_8877f.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_2244", "plan_id": "enterprise", "trial_days": 0 }
+Response: { "subscription_id": "sub_8877f", "status": "canceled", "plan": "enterprise", "current_period_end": "2023-10-28T18:30:00Z" }
+
+Question: Register customer cust_5566 for the starter plan with no trial days.
+Call: { "func_call": "create_subscription", "customer_id": "cust_5566", "plan_id": "starter", "trial_days": 0 }
+Response: { "subscription_id": "sub_4455g", "status": "active", "plan": "starter", "current_period_end": "2023-11-24T00:00:00Z" }
+
+Question: Revoke access for customer cust_7799 by canceling their pro subscription sub_2233h.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_7799", "plan_id": "pro", "trial_days": 0 }
+Response: { "subscription_id": "sub_2233h", "status": "canceled", "plan": "pro", "current_period_end": "2023-10-26T09:15:00Z" }
+
+Question: Create a new enterprise subscription for customer cust_3311 with a standard 14-day trial.
+Call: { "func_call": "create_subscription", "customer_id": "cust_3311", "plan_id": "enterprise", "trial_days": 14 }
+Response: { "subscription_id": "sub_6677i", "status": "trialing", "plan": "enterprise", "current_period_end": "2023-11-10T00:00:00Z" }
+
+Question: Stop the billing for customer cust_8844 on the starter plan, subscription ID sub_9900j.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_8844", "plan_id": "starter", "trial_days": 0 }
+Response: { "subscription_id": "sub_9900j", "status": "canceled", "plan": "starter", "current_period_end": "2023-10-27T14:45:00Z" }
+
+Question: Enroll customer cust_1234 in the pro plan with an extended 21-day trial.
+Call: { "func_call": "create_subscription", "customer_id": "cust_1234", "plan_id": "pro", "trial_days": 21 }
+Response: { "subscription_id": "sub_5678k", "status": "trialing", "plan": "pro", "current_period_end": "2023-11-22T00:00:00Z" }
+
+Question: Finalize the cancellation of the enterprise subscription sub_9012l for customer cust_5678.
+Call: { "func_call": "cancel_subscription", "customer_id": "cust_5678", "plan_id": "enterprise", "trial_days": 0 }
+Response: { "subscription_id": "sub_9012l", "status": "canceled", "plan": "enterprise", "current_period_end": "2023-10-29T08:00:00Z" }

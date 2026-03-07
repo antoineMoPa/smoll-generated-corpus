@@ -1,0 +1,59 @@
+Context: The annual tech conference is scheduled to begin on March 15, 2024, in San Francisco. Attendees should register by the end of February.
+Input: {"question": "When does the annual tech conference begin?"}
+Output: {"answer": "March 15, 2024"}
+
+Context: World War II officially ended in 1945 after years of global conflict. The signing of the surrender documents took place in September of that year.
+Input: {"question": "What year did World War II officially end?"}
+Output: {"answer": "1945"}
+
+Context: Your dental appointment with Dr. Evans is confirmed for next Tuesday at 3:00 PM. Please arrive ten minutes early to fill out any necessary paperwork.
+Input: {"question": "What day is the dental appointment with Dr. Evans?"}
+Output: {"answer": "next Tuesday"}
+
+Context: The construction of the Berlin Wall started on August 13, 1961, dividing the city for decades. It remained standing until November 1989.
+Input: {"question": "When did the construction of the Berlin Wall start?"}
+Output: {"answer": "August 13, 1961"}
+
+Context: The project deadline has been moved to Friday, October 27, 2023, due to unexpected delays in the supply chain. All teams must submit their final reports by then.
+Input: {"question": "What is the new project deadline?"}
+Output: {"answer": "Friday, October 27, 2023"}
+
+Context: Shakespeare was born in Stratford-upon-Avon in April 1564. His exact birth date is traditionally celebrated on April 23.
+Input: {"question": "What year was Shakespeare born?"}
+Output: {"answer": "1564"}
+
+Context: The server maintenance window is planned for this Sunday from 2:00 AM to 6:00 AM EST. Services will be unavailable during this time.
+Input: {"question": "When is the server maintenance window planned?"}
+Output: {"answer": "this Sunday"}
+
+Context: The first human landing on the moon occurred on July 20, 1969, marking a historic milestone for NASA. Neil Armstrong was the first to step onto the lunar surface.
+Input: {"question": "What date did the first human landing on the moon occur?"}
+Output: {"answer": "July 20, 1969"}
+
+Context: Please note that the office will be closed on Monday, January 1, 2024, in observance of New Year's Day. Normal operations will resume on Tuesday.
+Input: {"question": "When will the office be closed for New Year's Day?"}
+Output: {"answer": "Monday, January 1, 2024"}
+
+Context: The Magna Carta was signed by King John of England in 1215, establishing fundamental legal principles. It is considered one of the most important documents in history.
+Input: {"question": "In what year was the Magna Carta signed?"}
+Output: {"answer": "1215"}
+
+Context: The flight to Tokyo departs on Wednesday, November 8, 2023, from Terminal 4. Passengers should check in at least three hours before departure.
+Input: {"question": "What date does the flight to Tokyo depart?"}
+Output: {"answer": "Wednesday, November 8, 2023"}
+
+Context: The company was founded on May 5, 1998, in a small garage in Palo Alto. It has since grown into a global technology leader.
+Input: {"question": "When was the company founded?"}
+Output: {"answer": "May 5, 1998"}
+
+Context: The solar eclipse will be visible across North America on April 8, 2024. Viewing glasses are required to safely observe the event.
+Input: {"question": "When will the solar eclipse be visible?"}
+Output: {"answer": "April 8, 2024"}
+
+Context: Her birthday party is set for next Saturday at the community center. We expect about fifty guests to attend the celebration.
+Input: {"question": "What day is her birthday party?"}
+Output: {"answer": "next Saturday"}
+
+Context: The Treaty of Versailles was signed on June 28, 1919, formally ending the state of war between Germany and the Allied Powers. This event reshaped the map of Europe.
+Input: {"question": "What date was the Treaty of Versailles signed?"}
+Output: {"answer": "June 28, 1919"}

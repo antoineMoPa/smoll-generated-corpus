@@ -1,0 +1,51 @@
+Available Tools: get_temperature | get_humidity | get_wind_speed | get_uv_index
+Call Schema: { "func_call": "string", "location": "string", "unit": "celsius|fahrenheit" }
+Response Schema: { "value": number, "unit": "string", "timestamp": "string" }
+---
+Question: What is the current humidity in Austin?
+Call: { "func_call": "get_humidity", "location": "Austin", "unit": "celsius" }
+Response: { "value": 55, "unit": "%", "timestamp": "2023-10-27T15:00:00Z" }
+
+Question: Check the wind speed in Boston right now.
+Call: { "func_call": "get_wind_speed", "location": "Boston", "unit": "fahrenheit" }
+Response: { "value": 22.4, "unit": "mph", "timestamp": "2023-10-27T15:00:00Z" }
+
+Question: How humid is it in Atlanta today?
+Call: { "func_call": "get_humidity", "location": "Atlanta", "unit": "celsius" }
+Response: { "value": 68, "unit": "%", "timestamp": "2023-10-27T15:01:00Z" }
+
+Question: Get the current wind speed for Nashville.
+Call: { "func_call": "get_wind_speed", "location": "Nashville", "unit": "celsius" }
+Response: { "value": 10.5, "unit": "km/h", "timestamp": "2023-10-27T15:01:00Z" }
+
+Question: What is the humidity level in Las Vegas?
+Call: { "func_call": "get_humidity", "location": "Las Vegas", "unit": "fahrenheit" }
+Response: { "value": 18, "unit": "%", "timestamp": "2023-10-27T15:02:00Z" }
+
+Question: Tell me the wind speed in Anchorage.
+Call: { "func_call": "get_wind_speed", "location": "Anchorage", "unit": "fahrenheit" }
+Response: { "value": 30.2, "unit": "mph", "timestamp": "2023-10-27T15:02:00Z" }
+
+Question: Current humidity in Orlando?
+Call: { "func_call": "get_humidity", "location": "Orlando", "unit": "celsius" }
+Response: { "value": 72, "unit": "%", "timestamp": "2023-10-27T15:03:00Z" }
+
+Question: How fast is the wind blowing in Detroit?
+Call: { "func_call": "get_wind_speed", "location": "Detroit", "unit": "celsius" }
+Response: { "value": 19.8, "unit": "km/h", "timestamp": "2023-10-27T15:03:00Z" }
+
+Question: What is the humidity in Salt Lake City?
+Call: { "func_call": "get_humidity", "location": "Salt Lake City", "unit": "fahrenheit" }
+Response: { "value": 35, "unit": "%", "timestamp": "2023-10-27T15:04:00Z" }
+
+Question: Check the wind speed in Charleston.
+Call: { "func_call": "get_wind_speed", "location": "Charleston", "unit": "fahrenheit" }
+Response: { "value": 15.3, "unit": "mph", "timestamp": "2023-10-27T15:04:00Z" }
+
+Question: Get the humidity for Boise.
+Call: { "func_call": "get_humidity", "location": "Boise", "unit": "celsius" }
+Response: { "value": 42, "unit": "%", "timestamp": "2023-10-27T15:05:00Z" }
+
+Question: What is the current wind speed in Raleigh?
+Call: { "func_call": "get_wind_speed", "location": "Raleigh", "unit": "celsius" }
+Response: { "value": 13.1, "unit": "km/h", "timestamp": "2023-10-27T15:05:00Z" }

@@ -1,0 +1,51 @@
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Lower the brewing duration to 12 seconds for a delicate single origin.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "12s" }
+Response: { "parameter": "duration", "previous_value": "15s", "new_value": "12s" }
+
+Question: Retrieve the active configuration to check if the temperature drifted overnight.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"89C\", \"grind_level\": \"medium\", \"brew_time\": \"12s\"}" }
+
+Question: Extend the brew time to 35 seconds for a French press style extraction.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "35s" }
+Response: { "parameter": "duration", "previous_value": "12s", "new_value": "35s" }
+
+Question: Show me the current machine state before I switch to decaf beans.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"90C\", \"grind_level\": \"coarse\", \"brew_time\": \"35s\"}" }
+
+Question: Set the duration to 20 seconds for a balanced morning cup.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "20s" }
+Response: { "parameter": "duration", "previous_value": "35s", "new_value": "20s" }
+
+Question: Pull the full settings JSON to audit the grind consistency against the brew time.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"92.5C\", \"grind_level\": \"medium_fine\", \"brew_time\": \"20s\"}" }
+
+Question: Decrease the brew time to 10 seconds for an intense lungotto.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "10s" }
+Response: { "parameter": "duration", "previous_value": "20s", "new_value": "10s" }
+
+Question: What are the existing parameters stored in the controller right now?
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"91C\", \"grind_level\": \"fine\", \"brew_time\": \"10s\"}" }
+
+Question: Adjust the extraction time to 27 seconds for a dark roast blend.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "27s" }
+Response: { "parameter": "duration", "previous_value": "10s", "new_value": "27s" }
+
+Question: Fetch the system status to ensure the new timing is saved correctly.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"93C\", \"grind_level\": \"medium_coarse\", \"brew_time\": \"27s\"}" }
+
+Question: Change the brew duration to 16 seconds for a standard espresso shot.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "16s" }
+Response: { "parameter": "duration", "previous_value": "27s", "new_value": "16s" }
+
+Question: Display the current profile settings to verify the update before service starts.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"92C\", \"grind_level\": \"fine\", \"brew_time\": \"16s\"}" }

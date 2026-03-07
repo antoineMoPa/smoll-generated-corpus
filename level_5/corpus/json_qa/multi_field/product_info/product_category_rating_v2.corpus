@@ -1,0 +1,29 @@
+Context: The smart fitness tracker falls under the wearables category and has a strong 4.6-star rating, but it is currently out of stock. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "wearables", "rating": "4.6", "in_stock": "false"}
+
+Context: I found this bamboo cutting board in the kitchenware section with a solid 4.1-star rating, and it is available for immediate purchase. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "kitchenware", "rating": "4.1", "in_stock": "true"}
+
+Context: This cordless drill is listed in the power tools category, holds a 3.9 rating from users, and is backordered until next week. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "power tools", "rating": "3.9", "in_stock": "false"}
+
+Context: The sci-fi anthology I wanted is in the literature category, has an average 4.7 rating, and there are plenty of copies in stock at the local store. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "literature", "rating": "4.7", "in_stock": "true"}
+
+Context: These hiking boots belong to the outdoor gear category, boast a high 4.8 rating, but the size 9 is currently unavailable. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "outdoor gear", "rating": "4.8", "in_stock": "false"}
+
+Context: The video doorbell is part of the security systems category, received a 4.3 rating in recent tests, and is ready to ship today. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "security systems", "rating": "4.3", "in_stock": "true"}
+
+Context: This glass dining table is categorized as home decor, has a disappointing 2.8 rating due to durability issues, and is temporarily out of stock. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "home decor", "rating": "2.8", "in_stock": "false"}
+
+Context: The hyaluronic acid moisturizer is in the beauty products category, enjoys a 4.9 rating from dermatologists, and is fully stocked on the shelf. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "beauty products", "rating": "4.9", "in_stock": "true"}
+
+Context: This puzzle set fits into the educational toys category, has a 4.5 rating from parents, but the warehouse reports it is out of stock. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "educational toys", "rating": "4.5", "in_stock": "false"}
+
+Context: The wireless mouse is a computer peripheral with a 3.7 rating, and it is currently available for same-day delivery. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "computer peripherals", "rating": "3.7", "in_stock": "true"}
+
+Context: This porcelain vase is listed under home accents, has a flawless 5.0 rating, and is in stock at all regional branches. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "home accents", "rating": "5.0", "in_stock": "true"}
+
+Context: The leaf blower is in the lawn care category, holds a mediocre 3.4 rating, and is out of stock due to seasonal demand. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "lawn care", "rating": "3.4", "in_stock": "false"}
+
+Context: This silk scarf belongs to the fashion accessories category, has a strong 4.4 rating, and is available for pickup tomorrow. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "fashion accessories", "rating": "4.4", "in_stock": "true"}
+
+Context: The car seat is categorized under baby safety, received a 4.2 rating for crash tests, but is currently backordered. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "baby safety", "rating": "4.2", "in_stock": "false"}
+
+Context: This electric keyboard is in the music equipment category, has a 4.6 rating from instructors, and is in stock for immediate sale. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "music equipment", "rating": "4.6", "in_stock": "true"}

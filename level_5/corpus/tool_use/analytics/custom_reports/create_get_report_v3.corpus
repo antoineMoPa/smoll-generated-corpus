@@ -1,0 +1,51 @@
+Available Tools: create_report | get_report | list_reports | schedule_report | export_report
+Call Schema: { "func_call": "string", "report_id": "string", "name": "string", "metrics": ["string"], "dimensions": ["string"], "from_date": "string", "to_date": "string" }
+Response Schema: { "report_id": "string", "name": "string", "rows": [{}], "total_rows": number, "generated_at": "string" }
+---
+Question: Generate a new report titled "Winter Sales Analysis" tracking revenue and conversions by region from December 1st to December 31st.
+Call: { "func_call": "create_report", "report_id": "", "name": "Winter Sales Analysis", "metrics": ["revenue", "conversions"], "dimensions": ["region"], "from_date": "2023-12-01", "to_date": "2023-12-31" }
+Response: { "report_id": "rpt_1029m", "name": "Winter Sales Analysis", "rows": [{"region": "North", "revenue": 34500.75, "conversions": 1200}, {"region": "South", "revenue": 28900.50, "conversions": 980}], "total_rows": 2, "generated_at": "2024-01-02T10:15:30Z" }
+
+Question: Retrieve the latest metrics for report rpt_4567n which monitors bounce rate by landing page.
+Call: { "func_call": "get_report", "report_id": "rpt_4567n", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_4567n", "name": "Landing Page Bounce Rate", "rows": [{"page": "/home", "bounce_rate": 45.2}, {"page": "/products", "bounce_rate": 32.8}], "total_rows": 2, "generated_at": "2024-01-05T14:20:15Z" }
+
+Question: Create a report named "Spring Traffic Sources" analyzing sessions and new users by channel for March.
+Call: { "func_call": "create_report", "report_id": "", "name": "Spring Traffic Sources", "metrics": ["sessions", "new_users"], "dimensions": ["channel"], "from_date": "2024-03-01", "to_date": "2024-03-31" }
+Response: { "report_id": "rpt_7890o", "name": "Spring Traffic Sources", "rows": [{"channel": "social", "sessions": 5600, "new_users": 1200}, {"channel": "search", "sessions": 8900, "new_users": 2300}], "total_rows": 2, "generated_at": "2024-04-01T09:00:00Z" }
+
+Question: Fetch data for report rpt_2468p focusing on average order value by customer segment.
+Call: { "func_call": "get_report", "report_id": "rpt_2468p", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_2468p", "name": "AOV by Segment", "rows": [{"segment": "VIP", "aov": 150.00}, {"segment": "Regular", "aov": 45.50}], "total_rows": 2, "generated_at": "2024-02-15T11:30:45Z" }
+
+Question: I need a report called "App Engagement Weekly" tracking screen views and time spent by feature from May 10 to May 17.
+Call: { "func_call": "create_report", "report_id": "", "name": "App Engagement Weekly", "metrics": ["screen_views", "time_spent"], "dimensions": ["feature"], "from_date": "2024-05-10", "to_date": "2024-05-17" }
+Response: { "report_id": "rpt_1357q", "name": "App Engagement Weekly", "rows": [{"feature": "checkout", "screen_views": 3400, "time_spent": 120}, {"feature": "browse", "screen_views": 8900, "time_spent": 300}], "total_rows": 2, "generated_at": "2024-05-18T08:22:10Z" }
+
+Question: Pull the results for report rpt_9753r which measures conversion rate by browser type.
+Call: { "func_call": "get_report", "report_id": "rpt_9753r", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_9753r", "name": "Browser Conversion Rates", "rows": [{"browser": "Chrome", "conversion_rate": 3.5}, {"browser": "Safari", "conversion_rate": 2.8}], "total_rows": 2, "generated_at": "2024-03-20T16:45:00Z" }
+
+Question: Build a report "Summer Promo Performance" to analyze revenue and discount usage by campaign during June.
+Call: { "func_call": "create_report", "report_id": "", "name": "Summer Promo Performance", "metrics": ["revenue", "discount_usage"], "dimensions": ["campaign"], "from_date": "2024-06-01", "to_date": "2024-06-30" }
+Response: { "report_id": "rpt_8642s", "name": "Summer Promo Performance", "rows": [{"campaign": "SunSale", "revenue": 45000.00, "discount_usage": 1200}, {"campaign": "BeachDay", "revenue": 32000.00, "discount_usage": 850}], "total_rows": 2, "generated_at": "2024-07-01T12:10:20Z" }
+
+Question: Get the current stats for report rpt_7531t regarding cart abandonment by device category.
+Call: { "func_call": "get_report", "report_id": "rpt_7531t", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_7531t", "name": "Cart Abandonment by Device", "rows": [{"device_category": "mobile", "abandonment_rate": 68.5}, {"device_category": "desktop", "abandonment_rate": 42.1}], "total_rows": 2, "generated_at": "2024-04-12T09:55:30Z" }
+
+Question: Create "Q1 Retention Report" to view returning user rate by cohort from January 1 to March 31.
+Call: { "func_call": "create_report", "report_id": "", "name": "Q1 Retention Report", "metrics": ["returning_user_rate"], "dimensions": ["cohort"], "from_date": "2024-01-01", "to_date": "2024-03-31" }
+Response: { "report_id": "rpt_9514u", "name": "Q1 Retention Report", "rows": [{"cohort": "Jan", "returning_user_rate": 25.4}, {"cohort": "Feb", "returning_user_rate": 28.1}, {"cohort": "Mar", "returning_user_rate": 22.9}], "total_rows": 3, "generated_at": "2024-04-05T14:30:00Z" }
+
+Question: Retrieve data for report rpt_3698v tracking page load time and error rate by URL.
+Call: { "func_call": "get_report", "report_id": "rpt_3698v", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_3698v", "name": "Performance Metrics by URL", "rows": [{"url": "/api/data", "load_time": 1.2, "error_rate": 0.5}, {"url": "/images/banner", "load_time": 0.8, "error_rate": 0.1}], "total_rows": 2, "generated_at": "2024-05-22T10:15:45Z" }
+
+Question: Generate a report named "Email Campaign ROI" comparing clicks and revenue by template for April.
+Call: { "func_call": "create_report", "report_id": "", "name": "Email Campaign ROI", "metrics": ["clicks", "revenue"], "dimensions": ["template"], "from_date": "2024-04-01", "to_date": "2024-04-30" }
+Response: { "report_id": "rpt_7412w", "name": "Email Campaign ROI", "rows": [{"template": "Newsletter", "clicks": 4500, "revenue": 12000.00}, {"template": "Promo", "clicks": 6200, "revenue": 18500.00}], "total_rows": 2, "generated_at": "2024-05-01T08:00:15Z" }
+
+Question: Fetch the details for report rpt_8520x which analyzes sign-ups by referral source and country.
+Call: { "func_call": "get_report", "report_id": "rpt_8520x", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_8520x", "name": "Sign-ups by Source and Country", "rows": [{"referral_source": "partner", "country": "Spain", "sign-ups": 340}, {"referral_source": "affiliate", "country": "Italy", "sign-ups": 210}], "total_rows": 2, "generated_at": "2024-06-10T13:40:22Z" }

@@ -1,0 +1,51 @@
+Available Tools: grep_file | grep_recursive | grep_case_insensitive | grep_count
+Call Schema: { "func_call": "string", "pattern": "string", "path": "string", "flags": "string" }
+Response Schema: { "matches": [{ "file": "string", "line": "number", "text": "string" }], "count": "number" }
+---
+Question: Find all occurrences of "error" in /var/log recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "error", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/syslog", "line": 1024, "text": "Oct 12 10:00:01 server kernel: [error] disk read failure" }, { "file": "/var/log/auth.log", "line": 55, "text": "Oct 12 09:15:22 server sshd: error: PAM: Authentication failure" }], "count": 2 }
+
+Question: Search for "TODO" in ~/projects ignoring case and showing line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "TODO", "path": "~/projects", "flags": "-i -n" }
+Response: { "matches": [{ "file": "~/projects/src/main.py", "line": 45, "text": "# TODO: Refactor this function" }, { "file": "~/projects/docs/readme.md", "line": 12, "text": "## Todo List" }, { "file": "~/projects/tests/test_utils.py", "line": 88, "text": "# todo: add edge case tests" }], "count": 3 }
+
+Question: Count how many times "password" appears in /etc recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "password", "path": "/etc", "flags": "-i -r" }
+Response: { "matches": [], "count": 14 }
+
+Question: Recursively find "connection timeout" in /var/log with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "connection timeout", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/nginx/error.log", "line": 304, "text": "2023/10/12 14:20:05 [error] connection timeout upstream" }], "count": 1 }
+
+Question: Search for "import os" in ~/projects recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "import os", "path": "~/projects", "flags": "-n" }
+Response: { "matches": [{ "file": "~/projects/src/app.py", "line": 3, "text": "import os" }, { "file": "~/projects/scripts/deploy.py", "line": 5, "text": "import os" }, { "file": "~/projects/tests/setup.py", "line": 2, "text": "import os" }], "count": 3 }
+
+Question: Find "warning" in /var/log recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "warning", "path": "/var/log", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/syslog", "line": 2001, "text": "Oct 12 11:00:00 server kernel: [Warning] low memory" }, { "file": "/var/log/dpkg.log", "line": 450, "text": "2023-10-12 10:30:00 WARNING config file missing" }], "count": 2 }
+
+Question: Count occurrences of "root" in /etc recursively.
+Call: { "func_call": "grep_count", "pattern": "root", "path": "/etc", "flags": "-r" }
+Response: { "matches": [], "count": 27 }
+
+Question: Search for "def main" in ~/projects recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "def main", "path": "~/projects", "flags": "-n" }
+Response: { "matches": [{ "file": "~/projects/src/cli.py", "line": 10, "text": "def main():" }, { "file": "~/projects/tools/analyzer.py", "line": 22, "text": "def main(args):" }], "count": 2 }
+
+Question: Find "failed" in /var/log recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "failed", "path": "/var/log", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/auth.log", "line": 102, "text": "Oct 12 08:00:00 server sshd: Failed password for invalid user admin" }, { "file": "/var/log/syslog", "line": 500, "text": "Oct 12 08:05:00 server systemd: Service db-startup failed" }], "count": 2 }
+
+Question: Recursively search for "localhost" in /etc with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "localhost", "path": "/etc", "flags": "-n" }
+Response: { "matches": [{ "file": "/etc/hosts", "line": 1, "text": "127.0.0.1       localhost" }, { "file": "/etc/hostname", "line": 1, "text": "localhost" }], "count": 2 }
+
+Question: Count "sql" in ~/projects recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "sql", "path": "~/projects", "flags": "-i -r" }
+Response: { "matches": [], "count": 42 }
+
+Question: Find "404" in /var/log recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "404", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/nginx/access.log", "line": 5001, "text": "192.168.1.5 - - [12/Oct/2023:15:00:00 +0000] \"GET /missing.html HTTP/1.1\" 404 162" }, { "file": "/var/log/apache2/error.log", "line": 33, "text": "[Fri Oct 12 15:01:00 2023] [error] File not found: 404" }], "count": 2 }

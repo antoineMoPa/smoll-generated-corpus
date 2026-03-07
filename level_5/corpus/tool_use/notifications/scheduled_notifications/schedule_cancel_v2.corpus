@@ -1,0 +1,51 @@
+Available Tools: schedule_notification | cancel_scheduled | list_scheduled | update_schedule
+Call Schema: { "func_call": "string", "notification_id": "string", "scheduled_at": "string", "recurrence": "string", "channel": "push|sms|email" }
+Response Schema: { "notification_id": "string", "scheduled_at": "string", "status": "scheduled|cancelled", "recurrence": "string" }
+---
+Question: Schedule a daily push notification for user ID usr_9942 to remind them to take medication at 9 AM starting tomorrow.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_daily_meds_02", "scheduled_at": "2023-11-05T09:00:00Z", "recurrence": "daily", "channel": "push" }
+Response: { "notification_id": "ntf_daily_meds_02", "scheduled_at": "2023-11-05T09:00:00Z", "status": "scheduled", "recurrence": "daily" }
+
+Question: Cancel the monthly billing summary scheduled for the first of next month with ID ntf_monthly_bill_88.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_monthly_bill_88", "scheduled_at": "2023-12-01T10:00:00Z", "recurrence": "monthly", "channel": "email" }
+Response: { "notification_id": "ntf_monthly_bill_88", "scheduled_at": "2023-12-01T10:00:00Z", "status": "cancelled", "recurrence": "monthly" }
+
+Question: Set up a bi-weekly SMS reminder for payroll approval every other Thursday at 11 AM starting this week.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_payroll_thu_bi", "scheduled_at": "2023-11-09T11:00:00Z", "recurrence": "bi-weekly", "channel": "sms" }
+Response: { "notification_id": "ntf_payroll_thu_bi", "scheduled_at": "2023-11-09T11:00:00Z", "status": "scheduled", "recurrence": "bi-weekly" }
+
+Question: I need to stop the hourly server status push notification with ID ntf_srv_status_hr_03 immediately.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_srv_status_hr_03", "scheduled_at": "2023-11-05T14:00:00Z", "recurrence": "hourly", "channel": "push" }
+Response: { "notification_id": "ntf_srv_status_hr_03", "scheduled_at": "2023-11-05T14:00:00Z", "status": "cancelled", "recurrence": "hourly" }
+
+Question: Schedule a daily email report for user bob@example.com to be sent at 6 PM starting tonight.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_report_bob_03", "scheduled_at": "2023-11-05T18:00:00Z", "recurrence": "daily", "channel": "email" }
+Response: { "notification_id": "ntf_report_bob_03", "scheduled_at": "2023-11-05T18:00:00Z", "status": "scheduled", "recurrence": "daily" }
+
+Question: Remove the weekly security audit alert scheduled for Monday mornings, ID ntf_sec_aud_mon_07.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_sec_aud_mon_07", "scheduled_at": "2023-11-06T07:00:00Z", "recurrence": "weekly", "channel": "sms" }
+Response: { "notification_id": "ntf_sec_aud_mon_07", "scheduled_at": "2023-11-06T07:00:00Z", "status": "cancelled", "recurrence": "weekly" }
+
+Question: Create a recurring monthly push notification for project reviews every first Monday at 2 PM starting next month.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_review_mon_proj", "scheduled_at": "2023-12-04T14:00:00Z", "recurrence": "monthly", "channel": "push" }
+Response: { "notification_id": "ntf_review_mon_proj", "scheduled_at": "2023-12-04T14:00:00Z", "status": "scheduled", "recurrence": "monthly" }
+
+Question: Cancel the hourly traffic update SMS scheduled for :30 past the hour with identifier ntf_traffic_hr_30.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_traffic_hr_30", "scheduled_at": "2023-11-05T15:30:00Z", "recurrence": "hourly", "channel": "sms" }
+Response: { "notification_id": "ntf_traffic_hr_30", "scheduled_at": "2023-11-05T15:30:00Z", "status": "cancelled", "recurrence": "hourly" }
+
+Question: Schedule a bi-weekly newsletter email to go out every other Friday at 9 AM starting tomorrow.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_news_fri_bi_am", "scheduled_at": "2023-11-10T09:00:00Z", "recurrence": "bi-weekly", "channel": "email" }
+Response: { "notification_id": "ntf_news_fri_bi_am", "scheduled_at": "2023-11-10T09:00:00Z", "status": "scheduled", "recurrence": "bi-weekly" }
+
+Question: Please cancel the monthly subscription renewal push notification, ID ntf_sub_renew_mo_12, effective immediately.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_sub_renew_mo_12", "scheduled_at": "2023-12-01T12:00:00Z", "recurrence": "monthly", "channel": "push" }
+Response: { "notification_id": "ntf_sub_renew_mo_12", "scheduled_at": "2023-12-01T12:00:00Z", "status": "cancelled", "recurrence": "monthly" }
+
+Question: Set a weekly database backup alert via email for every Sunday at 4 AM starting this weekend.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_db_back_sun_alert", "scheduled_at": "2023-11-05T04:00:00Z", "recurrence": "weekly", "channel": "email" }
+Response: { "notification_id": "ntf_db_back_sun_alert", "scheduled_at": "2023-11-05T04:00:00Z", "status": "scheduled", "recurrence": "weekly" }
+
+Question: Stop the hourly API latency report SMS scheduled for the top of the hour, reference ID ntf_api_lat_hr_top.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_api_lat_hr_top", "scheduled_at": "2023-11-05T16:00:00Z", "recurrence": "hourly", "channel": "sms" }
+Response: { "notification_id": "ntf_api_lat_hr_top", "scheduled_at": "2023-11-05T16:00:00Z", "status": "cancelled", "recurrence": "hourly" }

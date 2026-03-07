@@ -1,0 +1,51 @@
+Available Tools: get_exchange_rate | convert_currency | buy_foreign_currency | get_supported_currencies
+Call Schema: { "func_call": "string", "from_currency": "string", "to_currency": "string", "amount": number }
+Response Schema: { "from": "string", "to": "string", "rate": number, "converted_amount": number, "fee": number }
+---
+Question: I'm planning a trip to Tokyo and need to exchange 800 US Dollars for Japanese Yen.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "JPY", "amount": 800 }
+Response: { "from": "USD", "to": "JPY", "rate": 149.50, "converted_amount": 119600.00, "fee": 3.00 }
+
+Question: Can you purchase 1500 Euros for my seminar in Paris using funds from my Canadian Dollar account?
+Call: { "func_call": "buy_foreign_currency", "from_currency": "CAD", "to_currency": "EUR", "amount": 1500 }
+Response: { "from": "CAD", "to": "EUR", "rate": 0.68, "converted_amount": 1020.00, "fee": 12.50 }
+
+Question: What is the conversion result if I send 5000 Australian Dollars to a vendor in New Zealand?
+Call: { "func_call": "convert_currency", "from_currency": "AUD", "to_currency": "NZD", "amount": 5000 }
+Response: { "from": "AUD", "to": "NZD", "rate": 1.08, "converted_amount": 5400.00, "fee": 10.00 }
+
+Question: I need the current rate to change 200 British Pounds into US Dollars for a gift purchase.
+Call: { "func_call": "get_exchange_rate", "from_currency": "GBP", "to_currency": "USD", "amount": 200 }
+Response: { "from": "GBP", "to": "USD", "rate": 1.27, "converted_amount": 254.00, "fee": 0.00 }
+
+Question: Please buy 30,000 Mexican Pesos for my resort stay using my Euro balance.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "EUR", "to_currency": "MXN", "amount": 30000 }
+Response: { "from": "EUR", "to": "MXN", "rate": 18.60, "converted_amount": 558000.00, "fee": 35.00 }
+
+Question: I am paying an invoice in Sweden and must convert 2500 US Dollars to Swedish Krona.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "SEK", "amount": 2500 }
+Response: { "from": "USD", "to": "SEK", "rate": 10.45, "converted_amount": 26125.00, "fee": 14.00 }
+
+Question: How many South African Rands will I get if I convert 900 British Pounds for a safari tour?
+Call: { "func_call": "convert_currency", "from_currency": "GBP", "to_currency": "ZAR", "amount": 900 }
+Response: { "from": "GBP", "to": "ZAR", "rate": 23.15, "converted_amount": 20835.00, "fee": 9.00 }
+
+Question: I need to acquire 8000 Indian Rupees for a consulting fee from my US Dollar account.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "USD", "to_currency": "INR", "amount": 8000 }
+Response: { "from": "USD", "to": "INR", "rate": 83.20, "converted_amount": 665600.00, "fee": 25.00 }
+
+Question: What is the final amount if I swap 600 Singapore Dollars to Australian Dollars for a flight booking?
+Call: { "func_call": "get_exchange_rate", "from_currency": "SGD", "to_currency": "AUD", "amount": 600 }
+Response: { "from": "SGD", "to": "AUD", "rate": 1.12, "converted_amount": 672.00, "fee": 0.00 }
+
+Question: Execute a purchase of 2000 Turkish Lira using my British Pounds for a hotel in Istanbul.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "GBP", "to_currency": "TRY", "amount": 2000 }
+Response: { "from": "GBP", "to": "TRY", "rate": 36.50, "converted_amount": 73000.00, "fee": 20.00 }
+
+Question: I need to convert 15000 Norwegian Krone to US Dollars to settle a shipping cost.
+Call: { "func_call": "convert_currency", "from_currency": "NOK", "to_currency": "USD", "amount": 15000 }
+Response: { "from": "NOK", "to": "USD", "rate": 0.095, "converted_amount": 1425.00, "fee": 5.50 }
+
+Question: Help me buy 12000 Philippine Pesos for my family vacation using my Australian Dollar savings.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "AUD", "to_currency": "PHP", "amount": 12000 }
+Response: { "from": "AUD", "to": "PHP", "rate": 37.80, "converted_amount": 453600.00, "fee": 28.00 }

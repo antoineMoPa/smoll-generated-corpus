@@ -1,0 +1,51 @@
+Available Tools: add_to_cart | remove_from_cart | update_quantity | get_cart | apply_coupon | checkout
+Call Schema: { "func_call": "string", "product_id": "string", "quantity": number, "coupon_code": "string" }
+Response Schema: { "cart_id": "string", "items": [{ "product_id": "string", "name": "string", "quantity": number, "price": number }], "total": number }
+---
+Question: Put four yoga mats into my shopping cart.
+Call: { "func_call": "add_to_cart", "product_id": "YGA-MAT-PRP", "quantity": 4, "coupon_code": null }
+Response: { "cart_id": "cart_5512", "items": [{ "product_id": "YGA-MAT-PRP", "name": "Premium Purple Yoga Mat", "quantity": 4, "price": 24.99 }], "total": 99.96 }
+
+Question: Take two yoga mats out of the cart.
+Call: { "func_call": "remove_from_cart", "product_id": "YGA-MAT-PRP", "quantity": 2, "coupon_code": null }
+Response: { "cart_id": "cart_5512", "items": [{ "product_id": "YGA-MAT-PRP", "name": "Premium Purple Yoga Mat", "quantity": 2, "price": 24.99 }], "total": 49.98 }
+
+Question: I would like to add a stainless steel water bottle.
+Call: { "func_call": "add_to_cart", "product_id": "BTL-SSL-BLU", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_5512", "items": [{ "product_id": "YGA-MAT-PRP", "name": "Premium Purple Yoga Mat", "quantity": 2, "price": 24.99 }, { "product_id": "BTL-SSL-BLU", "name": "Insulated Blue Water Bottle", "quantity": 1, "price": 29.50 }], "total": 79.48 }
+
+Question: Delete the water bottle from my current order.
+Call: { "func_call": "remove_from_cart", "product_id": "BTL-SSL-BLU", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_5512", "items": [{ "product_id": "YGA-MAT-PRP", "name": "Premium Purple Yoga Mat", "quantity": 2, "price": 24.99 }], "total": 49.98 }
+
+Question: Add six bags of premium coffee beans to the cart.
+Call: { "func_call": "add_to_cart", "product_id": "COF-BLN-DRK", "quantity": 6, "coupon_code": null }
+Response: { "cart_id": "cart_9934", "items": [{ "product_id": "COF-BLN-DRK", "name": "Dark Roast Coffee Bean Bag", "quantity": 6, "price": 18.75 }], "total": 112.50 }
+
+Question: Remove three bags of coffee beans from the shopping cart.
+Call: { "func_call": "remove_from_cart", "product_id": "COF-BLN-DRK", "quantity": 3, "coupon_code": null }
+Response: { "cart_id": "cart_9934", "items": [{ "product_id": "COF-BLN-DRK", "name": "Dark Roast Coffee Bean Bag", "quantity": 3, "price": 18.75 }], "total": 56.25 }
+
+Question: Please add a ceramic pour-over set to my purchase.
+Call: { "func_call": "add_to_cart", "product_id": "PRC-CER-WHT", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_9934", "items": [{ "product_id": "COF-BLN-DRK", "name": "Dark Roast Coffee Bean Bag", "quantity": 3, "price": 18.75 }, { "product_id": "PRC-CER-WHT", "name": "White Ceramic Pour-Over Set", "quantity": 1, "price": 34.00 }], "total": 90.25 }
+
+Question: Take the pour-over set out of the cart.
+Call: { "func_call": "remove_from_cart", "product_id": "PRC-CER-WHT", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_9934", "items": [{ "product_id": "COF-BLN-DRK", "name": "Dark Roast Coffee Bean Bag", "quantity": 3, "price": 18.75 }], "total": 56.25 }
+
+Question: Add ten notebooks to my shopping cart.
+Call: { "func_call": "add_to_cart", "product_id": "NTB-LND-GRN", "quantity": 10, "coupon_code": null }
+Response: { "cart_id": "cart_3387", "items": [{ "product_id": "NTB-LND-GRN", "name": "Green Lined Notebook A5", "quantity": 10, "price": 4.50 }], "total": 45.00 }
+
+Question: Please remove four notebooks from my order.
+Call: { "func_call": "remove_from_cart", "product_id": "NTB-LND-GRN", "quantity": 4, "coupon_code": null }
+Response: { "cart_id": "cart_3387", "items": [{ "product_id": "NTB-LND-GRN", "name": "Green Lined Notebook A5", "quantity": 6, "price": 4.50 }], "total": 27.00 }
+
+Question: I need to add a gel pen set to the cart.
+Call: { "func_call": "add_to_cart", "product_id": "PEN-GEL-12", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_3387", "items": [{ "product_id": "NTB-LND-GRN", "name": "Green Lined Notebook A5", "quantity": 6, "price": 4.50 }, { "product_id": "PEN-GEL-12", "name": "Multicolor Gel Pen Set 12pc", "quantity": 1, "price": 12.99 }], "total": 39.99 }
+
+Question: Remove the gel pen set from the cart entirely.
+Call: { "func_call": "remove_from_cart", "product_id": "PEN-GEL-12", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_3387", "items": [{ "product_id": "NTB-LND-GRN", "name": "Green Lined Notebook A5", "quantity": 6, "price": 4.50 }], "total": 27.00 }

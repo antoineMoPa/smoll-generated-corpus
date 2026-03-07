@@ -1,0 +1,51 @@
+Available Tools: list_processes | kill_process | get_process_info | top_processes
+Call Schema: { "func_call": "string", "pid": number, "name": "string", "signal": "string" }
+Response Schema: { "processes": [{ "pid": number, "name": "string", "cpu": number, "mem": number }] }
+---
+Question: Retrieve the full list of active daemons on this machine.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 2001, "name": "apache2", "cpu": 1.2, "mem": 3.4 }, { "pid": 2002, "name": "postgres", "cpu": 5.6, "mem": 12.8 }, { "pid": 2003, "name": "redis", "cpu": 0.4, "mem": 1.1 }] }
+
+Question: Forcefully stop the unresponsive java application with PID 8843.
+Call: { "func_call": "kill_process", "pid": 8843, "name": "java", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 8843, "name": "java", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Which three processes are currently using the most memory?
+Call: { "func_call": "top_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 9100, "name": "docker", "cpu": 10.2, "mem": 45.5 }, { "pid": 9101, "name": "kafka", "cpu": 8.7, "mem": 32.1 }, { "pid": 9102, "name": "elasticsearch", "cpu": 15.3, "mem": 28.9 }] }
+
+Question: Send a hangup signal to the syslog daemon running as process 305.
+Call: { "func_call": "kill_process", "pid": 305, "name": "rsyslogd", "signal": "SIGHUP" }
+Response: { "processes": [{ "pid": 305, "name": "rsyslogd", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Show me all background workers named 'celery'.
+Call: { "func_call": "list_processes", "pid": 0, "name": "celery", "signal": "" }
+Response: { "processes": [{ "pid": 4401, "name": "celery", "cpu": 2.1, "mem": 4.3 }, { "pid": 4402, "name": "celery", "cpu": 1.8, "mem": 3.9 }] }
+
+Question: The redis server on port 6379 (PID 5520) needs to be restarted; kill it now.
+Call: { "func_call": "kill_process", "pid": 5520, "name": "redis-server", "signal": "SIGTERM" }
+Response: { "processes": [{ "pid": 5520, "name": "redis-server", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Check the resource consumption for the apache2 process 7788.
+Call: { "func_call": "get_process_info", "pid": 7788, "name": "apache2", "signal": "" }
+Response: { "processes": [{ "pid": 7788, "name": "apache2", "cpu": 3.2, "mem": 6.7 }] }
+
+Question: Identify all running instances of the docker daemon.
+Call: { "func_call": "list_processes", "pid": 0, "name": "dockerd", "signal": "" }
+Response: { "processes": [{ "pid": 1100, "name": "dockerd", "cpu": 4.5, "mem": 9.2 }] }
+
+Question: Terminate the java heap process 9921 using the interrupt signal.
+Call: { "func_call": "kill_process", "pid": 9921, "name": "java", "signal": "SIGINT" }
+Response: { "processes": [{ "pid": 9921, "name": "java", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: What is the current CPU load for the kafka broker with ID 6005?
+Call: { "func_call": "get_process_info", "pid": 6005, "name": "kafka", "signal": "" }
+Response: { "processes": [{ "pid": 6005, "name": "kafka", "cpu": 22.4, "mem": 18.6 }] }
+
+Question: Eliminate the stuck postgres process 3344 immediately.
+Call: { "func_call": "kill_process", "pid": 3344, "name": "postgres", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 3344, "name": "postgres", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Provide a complete dump of every process running on the host.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 1, "name": "init", "cpu": 0.0, "mem": 0.1 }, { "pid": 50, "name": "kthreadd", "cpu": 0.0, "mem": 0.0 }, { "pid": 88, "name": "rcu_sched", "cpu": 0.0, "mem": 0.0 }] }

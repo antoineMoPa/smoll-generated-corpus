@@ -1,0 +1,51 @@
+Available Tools: scale_out | scale_in | set_auto_scaling | get_scaling_policy
+Call Schema: { "func_call": "string", "group_id": "string", "min_size": number, "max_size": number, "desired": number }
+Response Schema: { "group_id": "string", "current_capacity": number, "status": "string" }
+---
+Question: The mobile app launch is imminent; scale out the ios-backend-services group to handle the initial user rush.
+Call: { "func_call": "scale_out", "group_id": "ios-backend-services", "min_size": 20, "max_size": 150, "desired": 60 }
+Response: { "group_id": "ios-backend-services", "current_capacity": 60, "status": "scaling_up_complete" }
+
+Question: Nightly ETL jobs are complete; scale in the analytics-worker-pool to minimize cloud expenses.
+Call: { "func_call": "scale_in", "group_id": "analytics-worker-pool", "min_size": 5, "max_size": 50, "desired": 5 }
+Response: { "group_id": "analytics-worker-pool", "current_capacity": 5, "status": "scaling_down_complete" }
+
+Question: Configure the search-index-cluster to auto-scale between 8 and 40 nodes, targeting a steady state of 18.
+Call: { "func_call": "set_auto_scaling", "group_id": "search-index-cluster", "min_size": 8, "max_size": 40, "desired": 18 }
+Response: { "group_id": "search-index-cluster", "current_capacity": 18, "status": "policy_updated" }
+
+Question: DDoS attack mitigated but traffic remains high; scale out the firewall-inspection-nodes to maximum tolerance.
+Call: { "func_call": "scale_out", "group_id": "firewall-inspection-nodes", "min_size": 10, "max_size": 200, "desired": 200 }
+Response: { "group_id": "firewall-inspection-nodes", "current_capacity": 200, "status": "scaling_up_complete" }
+
+Question: Weekend lull detected; scale down the customer-support-chat-bots group to the lowest operational level.
+Call: { "func_call": "scale_in", "group_id": "customer-support-chat-bots", "min_size": 2, "max_size": 30, "desired": 2 }
+Response: { "group_id": "customer-support-chat-bots", "current_capacity": 2, "status": "scaling_down_complete" }
+
+Question: Adjust the real-time-bidding-engine parameters to allow scaling from 15 to 75 servers, setting desired count to 25.
+Call: { "func_call": "set_auto_scaling", "group_id": "real-time-bidding-engine", "min_size": 15, "max_size": 75, "desired": 25 }
+Response: { "group_id": "real-time-bidding-engine", "current_capacity": 25, "status": "policy_updated" }
+
+Question: Black Friday traffic is spiking in Asia; scale out the ap-south-cart-processors group immediately.
+Call: { "func_call": "scale_out", "group_id": "ap-south-cart-processors", "min_size": 25, "max_size": 120, "desired": 50 }
+Response: { "group_id": "ap-south-cart-processors", "current_capacity": 50, "status": "scaling_up_complete" }
+
+Question: The holiday sale concluded; please scale in the gift-wrap-rendering-farm to cut costs.
+Call: { "func_call": "scale_in", "group_id": "gift-wrap-rendering-farm", "min_size": 3, "max_size": 60, "desired": 4 }
+Response: { "group_id": "gift-wrap-rendering-farm", "current_capacity": 4, "status": "scaling_down_complete" }
+
+Question: Update the metric-collector-cluster to have a minimum of 10 instances and a maximum of 55, with a desired state of 22.
+Call: { "func_call": "set_auto_scaling", "group_id": "metric-collector-cluster", "min_size": 10, "max_size": 55, "desired": 22 }
+Response: { "group_id": "metric-collector-cluster", "current_capacity": 22, "status": "policy_updated" }
+
+Question: Memory pressure detected on the cache-layer-nodes; trigger a scale out event to add 15 more instances.
+Call: { "func_call": "scale_out", "group_id": "cache-layer-nodes", "min_size": 18, "max_size": 90, "desired": 45 }
+Response: { "group_id": "cache-layer-nodes", "current_capacity": 45, "status": "scaling_up_complete" }
+
+Question: Development environment is idle; scale in the dev-test-runner-pool to the baseline minimum.
+Call: { "func_call": "scale_in", "group_id": "dev-test-runner-pool", "min_size": 1, "max_size": 20, "desired": 1 }
+Response: { "group_id": "dev-test-runner-pool", "current_capacity": 1, "status": "scaling_down_complete" }
+
+Question: Prepare the audio-streaming-transcoders for the morning commute rush by setting auto-scaling limits to 30-110 with a desired count of 55.
+Call: { "func_call": "set_auto_scaling", "group_id": "audio-streaming-transcoders", "min_size": 30, "max_size": 110, "desired": 55 }
+Response: { "group_id": "audio-streaming-transcoders", "current_capacity": 55, "status": "policy_updated" }

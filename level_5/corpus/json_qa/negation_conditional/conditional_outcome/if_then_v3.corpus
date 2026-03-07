@@ -1,0 +1,59 @@
+Context: If the warehouse humidity rises above 70 percent, the dehumidifiers will start running instantly. Sensors check levels every minute.
+Input: {"question": "What happens if the warehouse humidity rises above 70 percent?"}
+Output: {"answer": "the dehumidifiers will start running instantly"}
+
+Context: Unless the invoice is paid by Tuesday, the delivery service will be paused. Customers cannot receive new shipments.
+Input: {"question": "What will happen to the delivery service if the invoice is not paid by Tuesday?"}
+Output: {"answer": "the delivery service will be paused"}
+
+Context: When the smoke detector beeps, all residents must gather at the assembly point. Do not return inside until cleared.
+Input: {"question": "What must residents do if the smoke detector beeps?"}
+Output: {"answer": "gather at the assembly point"}
+
+Context: If the primary network goes down, the router will failover to the secondary line immediately. This transition takes under one second.
+Input: {"question": "What will the router do if the primary network goes down?"}
+Output: {"answer": "failover to the secondary line immediately"}
+
+Context: The lease agreement is terminated if the tenant keeps pets without permission. Violating this clause results in eviction.
+Input: {"question": "What happens to the lease agreement if the tenant keeps pets without permission?"}
+Output: {"answer": "The lease agreement is terminated"}
+
+Context: If snow falls during the festival, the concert will be relocated to the indoor arena. The update will be posted at 6 AM.
+Input: {"question": "Where will the concert be relocated if snow falls during the festival?"}
+Output: {"answer": "the indoor arena"}
+
+Context: Unless you register the device before noon, the warranty coverage will be denied automatically. Late registrations are invalid.
+Input: {"question": "What will happen to the warranty coverage if you do not register the device before noon?"}
+Output: {"answer": "the warranty coverage will be denied automatically"}
+
+Context: When the fuel gauge hits empty, the engine will switch to reserve mode. The range will be limited to five miles.
+Input: {"question": "What will the engine do if the fuel gauge hits empty?"}
+Output: {"answer": "switch to reserve mode"}
+
+Context: If the luggage dimensions exceed 62 inches, an oversized baggage charge will be added at the counter. Domestic rules vary.
+Input: {"question": "What happens if the luggage dimensions exceed 62 inches?"}
+Output: {"answer": "an oversized baggage charge will be added at the counter"}
+
+Context: The pool filtration system will activate if the water clarity sensor detects debris. This keeps the water clean only when needed.
+Input: {"question": "What will the pool filtration system do if the water clarity sensor detects debris?"}
+Output: {"answer": "activate"}
+
+Context: If the operator presses the green lever, the manual override protocol will begin. All valves will close within ten seconds.
+Input: {"question": "What happens if the operator presses the green lever?"}
+Output: {"answer": "the manual override protocol will begin"}
+
+Context: Unless the window is shut tightly, the rain sensor will trigger the indoor alerts repeatedly. Verify the seal before departing.
+Input: {"question": "What will happen if the window is not shut tightly?"}
+Output: {"answer": "the rain sensor will trigger the indoor alerts repeatedly"}
+
+Context: When the crossing gate lowers, all trains must reduce speed to fifteen miles per hour. Workers may then inspect the tracks.
+Input: {"question": "What must trains do if the crossing gate lowers?"}
+Output: {"answer": "reduce speed to fifteen miles per hour"}
+
+Context: If the audit team arrives early, the inspection will be postponed until Monday. Advance notice is mandatory.
+Input: {"question": "What will happen to the inspection if the audit team arrives early?"}
+Output: {"answer": "the inspection will be postponed until Monday"}
+
+Context: The security patch will deploy automatically if the server remains unused for more than forty-five minutes. Backup your data first.
+Input: {"question": "What will the security patch do if the server remains unused for more than forty-five minutes?"}
+Output: {"answer": "deploy automatically"}

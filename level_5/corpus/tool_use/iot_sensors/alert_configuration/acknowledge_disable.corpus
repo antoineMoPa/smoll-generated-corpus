@@ -1,0 +1,51 @@
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Acknowledge the false alarm on temperature sensor TMP-402 in the server room; it spiked briefly due to a door opening.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "TMP-402", "metric": "temperature", "threshold": 28.5, "condition": "above" }
+Response: { "alert_id": "ALT-9921", "sensor_id": "TMP-402", "status": "acknowledged", "threshold": 28.5 }
+
+Question: Disable the humidity alert for sensor HUM-105 in the warehouse because we are entering a scheduled maintenance window for the HVAC system.
+Call: { "func_call": "disable_alert", "sensor_id": "HUM-105", "metric": "humidity", "threshold": 80, "condition": "above" }
+Response: { "alert_id": "ALT-8834", "sensor_id": "HUM-105", "status": "disabled", "threshold": 80 }
+
+Question: The vibration reading on motor sensor VIB-330 was a false positive caused by a nearby truck; please acknowledge this alert.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "VIB-330", "metric": "vibration", "threshold": 4.2, "condition": "above" }
+Response: { "alert_id": "ALT-7712", "sensor_id": "VIB-330", "status": "acknowledged", "threshold": 4.2 }
+
+Question: Turn off the low pressure alert for pipeline sensor PRS-009 while we perform valve calibration during the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "PRS-009", "metric": "pressure", "threshold": 15, "condition": "below" }
+Response: { "alert_id": "ALT-6650", "sensor_id": "PRS-009", "status": "disabled", "threshold": 15 }
+
+Question: Acknowledge the CO2 spike on sensor AIR-221 in the conference room; it was a false alarm triggered by a calibration test.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "AIR-221", "metric": "co2_level", "threshold": 1200, "condition": "above" }
+Response: { "alert_id": "ALT-5543", "sensor_id": "AIR-221", "status": "acknowledged", "threshold": 1200 }
+
+Question: Disable the temperature drop alert for freezer sensor FRZ-88 during the defrost cycle maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "FRZ-88", "metric": "temperature", "threshold": -18, "condition": "below" }
+Response: { "alert_id": "ALT-4421", "sensor_id": "FRZ-88", "status": "disabled", "threshold": -18 }
+
+Question: Please acknowledge the water leak false alarm on sensor LK-004; the sensor was accidentally splashed during cleaning.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "LK-004", "metric": "moisture", "threshold": 10, "condition": "above" }
+Response: { "alert_id": "ALT-3398", "sensor_id": "LK-004", "status": "acknowledged", "threshold": 10 }
+
+Question: Disable the current draw alert for pump motor PMP-55 while we replace the bearing in the scheduled maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "PMP-55", "metric": "current", "threshold": 12.5, "condition": "above" }
+Response: { "alert_id": "ALT-2276", "sensor_id": "PMP-55", "status": "disabled", "threshold": 12.5 }
+
+Question: Acknowledge the airflow anomaly on vent sensor FLO-112; it was a false alarm caused by a temporary blockage that has been cleared.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "FLO-112", "metric": "airflow", "threshold": 300, "condition": "below" }
+Response: { "alert_id": "ALT-1154", "sensor_id": "FLO-112", "status": "acknowledged", "threshold": 300 }
+
+Question: Turn off the noise level alert for sensor DB-99 in the lobby during the construction maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "DB-99", "metric": "decibels", "threshold": 85, "condition": "above" }
+Response: { "alert_id": "ALT-0032", "sensor_id": "DB-99", "status": "disabled", "threshold": 85 }
+
+Question: Acknowledge the voltage fluctuation alert on generator sensor GEN-07; the reading was a false alarm due to a grid switch.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "GEN-07", "metric": "voltage", "threshold": 230, "condition": "below" }
+Response: { "alert_id": "ALT-9987", "sensor_id": "GEN-07", "status": "acknowledged", "threshold": 230 }
+
+Question: Disable the tank level alert for sensor TANK-20 while we perform a full drain and clean during the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "TANK-20", "metric": "liquid_level", "threshold": 5, "condition": "below" }
+Response: { "alert_id": "ALT-8865", "sensor_id": "TANK-20", "status": "disabled", "threshold": 5 }

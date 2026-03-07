@@ -1,0 +1,51 @@
+Available Tools: create_post | create_story | schedule_post | delete_post
+Call Schema: { "func_call": "string", "content": "string", "media_url": "string", "hashtags": ["string"], "scheduled_at": "string" }
+Response Schema: { "post_id": "string", "status": "published|scheduled|draft", "url": "string", "timestamp": "string" }
+---
+Question: Upload a photo recap of the charity gala held last night in Chicago.
+Call: { "func_call": "create_story", "content": "What an incredible night at the Chicago Charity Gala! Thank you to everyone who donated. 🎩✨", "media_url": "https://cdn.events.org/gphotos/chicago_gala_recap.jpg", "hashtags": ["#CharityGala", "#Chicago", "#GivingBack"], "scheduled_at": "" }
+Response: { "post_id": "st_10045", "status": "published", "url": "https://social.app/stories/u/nonprofit_hero/10045", "timestamp": "2023-11-02T09:15:22Z" }
+
+Question: Take down the expired coupon code post_6632 immediately.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_6632", "status": "published", "url": "", "timestamp": "2023-11-02T09:30:10Z" }
+
+Question: Share a quick update about the road trip we just started through the Rockies.
+Call: { "func_call": "create_story", "content": "Hitting the road! First stop: Denver. The views are already amazing. 🏔️🚗", "media_url": "https://cdn.travel.blog/media/rockies_start.mp4", "hashtags": ["#RoadTrip", "#Rockies", "#Adventure", "#TravelLife"], "scheduled_at": "" }
+Response: { "post_id": "st_10048", "status": "published", "url": "https://social.app/stories/u/wander_lisa/10048", "timestamp": "2023-11-02T10:45:33Z" }
+
+Question: Remove the accidental draft post_9981 that was published prematurely.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_9981", "status": "published", "url": "", "timestamp": "2023-11-02T11:00:05Z" }
+
+Question: Post a story announcing the winner of our monthly giveaway.
+Call: { "func_call": "create_story", "content": "And the winner is @lucky_dave! Check your DMs for your prize details. 🎁🎉", "media_url": "https://cdn.contest.com/images/winner_announcement.png", "hashtags": ["#Giveaway", "#Winner", "#Contest"], "scheduled_at": "" }
+Response: { "post_id": "st_10052", "status": "published", "url": "https://social.app/stories/u/brand_giveaways/10052", "timestamp": "2023-11-02T12:20:15Z" }
+
+Question: Delete the obsolete product launch teaser post_2244 since the item is sold out.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_2244", "status": "published", "url": "", "timestamp": "2023-11-02T13:10:40Z" }
+
+Question: Create a story showing the behind-the-scenes setup for tomorrow's webinar.
+Call: { "func_call": "create_story", "content": "Getting the studio ready for tomorrow's big webinar on AI trends! 🎥🤖", "media_url": "https://cdn.tech.co/videos/studio_setup_timelapse.mp4", "hashtags": ["#Webinar", "#BehindTheScenes", "#AI", "#TechTalk"], "scheduled_at": "" }
+Response: { "post_id": "st_10059", "status": "published", "url": "https://social.app/stories/u/tech_insights/10059", "timestamp": "2023-11-02T14:35:50Z" }
+
+Question: Purge the test account verification post_5500 used by the dev team.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_5500", "status": "published", "url": "", "timestamp": "2023-11-02T15:00:00Z" }
+
+Question: Share a quick video story of the snow falling in my backyard in Boston.
+Call: { "func_call": "create_story", "content": "First snow of the season in Boston! ❄️☕️", "media_url": "https://cdn.local.net/clips/boston_snow_fall.mp4", "hashtags": ["#Boston", "#Snow", "#Winter", "#FirstSnow"], "scheduled_at": "" }
+Response: { "post_id": "st_10065", "status": "published", "url": "https://social.app/stories/u/boston_local/10065", "timestamp": "2023-11-02T16:22:18Z" }
+
+Question: Remove the misinformation post_7788 regarding the store hours update.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_7788", "status": "published", "url": "", "timestamp": "2023-11-02T17:05:30Z" }
+
+Question: Post a story celebrating our team reaching 10k followers today.
+Call: { "func_call": "create_story", "content": "We hit 10,000 followers! Thank you all for the support on this journey. 🙌🎈", "media_url": "https://cdn.social.media/graphics/10k_celebration.jpg", "hashtags": ["#10K", "#Milestone", "#Grateful", "#Community"], "scheduled_at": "" }
+Response: { "post_id": "st_10070", "status": "published", "url": "https://social.app/stories/u/growth_brand/10070", "timestamp": "2023-11-02T18:15:45Z" }
+
+Question: Delete the duplicate event reminder post_3399 sent in error.
+Call: { "func_call": "delete_post", "content": "", "media_url": "", "hashtags": [], "scheduled_at": "" }
+Response: { "post_id": "post_3399", "status": "published", "url": "", "timestamp": "2023-11-02T19:00:12Z" }

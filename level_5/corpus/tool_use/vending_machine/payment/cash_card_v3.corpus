@@ -1,0 +1,51 @@
+Available Tools: process_cash | process_card | process_mobile_pay | get_change | refund_transaction
+Call Schema: { "func_call": "string", "amount": number, "currency": "string", "transaction_id": "string" }
+Response Schema: { "transaction_id": "string", "status": "string", "change": number, "receipt": "string" }
+---
+Question: A shopper uses a mobile wallet to pay $4.99 for a fruit cup.
+Call: { "func_call": "process_mobile_pay", "amount": 4.99, "currency": "USD", "transaction_id": "VM-2024-1102" }
+Response: { "transaction_id": "VM-2024-1102", "status": "approved", "change": 0, "receipt": "RCP-1102-K8" }
+
+Question: A customer inserts a $5 bill to purchase gum costing $0.85.
+Call: { "func_call": "process_cash", "amount": 5.00, "currency": "USD", "transaction_id": "VM-2024-1156" }
+Response: { "transaction_id": "VM-2024-1156", "status": "success", "change": 4.15, "receipt": "RCP-1156-L3" }
+
+Question: Someone attempts to buy a $7.00 sandwich with a declined debit card.
+Call: { "func_call": "process_card", "amount": 7.00, "currency": "USD", "transaction_id": "VM-2024-1234" }
+Response: { "transaction_id": "VM-2024-1234", "status": "declined", "change": 0, "receipt": "RCP-1234-ERR" }
+
+Question: A user pays exactly $3.25 in coins for a can of iced tea.
+Call: { "func_call": "process_cash", "amount": 3.25, "currency": "USD", "transaction_id": "VM-2024-1289" }
+Response: { "transaction_id": "VM-2024-1289", "status": "success", "change": 0, "receipt": "RCP-1289-M1" }
+
+Question: A contactless payment of $9.50 is made for a protein bar combo.
+Call: { "func_call": "process_card", "amount": 9.50, "currency": "USD", "transaction_id": "VM-2024-1345" }
+Response: { "transaction_id": "VM-2024-1345", "status": "approved", "change": 0, "receipt": "RCP-1345-N6" }
+
+Question: A customer inserts a $20 bill for an item priced at $14.20.
+Call: { "func_call": "process_cash", "amount": 20.00, "currency": "USD", "transaction_id": "VM-2024-1401" }
+Response: { "transaction_id": "VM-2024-1401", "status": "success", "change": 5.80, "receipt": "RCP-1401-O9" }
+
+Question: Someone tries to use a mobile app to pay $2.50 but the session expires.
+Call: { "func_call": "process_mobile_pay", "amount": 2.50, "currency": "USD", "transaction_id": "VM-2024-1455" }
+Response: { "transaction_id": "VM-2024-1455", "status": "timeout", "change": 0, "receipt": "RCP-1455-ERR" }
+
+Question: A purchase of $1.10 is completed using a credit card.
+Call: { "func_call": "process_card", "amount": 1.10, "currency": "USD", "transaction_id": "VM-2024-1512" }
+Response: { "transaction_id": "VM-2024-1512", "status": "approved", "change": 0, "receipt": "RCP-1512-P4" }
+
+Question: A user inserts $10.00 in cash to buy three snacks totaling $8.75.
+Call: { "func_call": "process_cash", "amount": 10.00, "currency": "USD", "transaction_id": "VM-2024-1578" }
+Response: { "transaction_id": "VM-2024-1578", "status": "success", "change": 1.25, "receipt": "RCP-1578-Q2" }
+
+Question: A customer attempts to insert only $1.00 for a $3.50 drink.
+Call: { "func_call": "process_cash", "amount": 1.00, "currency": "USD", "transaction_id": "VM-2024-1623" }
+Response: { "transaction_id": "VM-2024-1623", "status": "insufficient_funds", "change": 0, "receipt": "RCP-1623-ERR" }
+
+Question: A digital wallet transaction of $15.00 succeeds for a lunch special.
+Call: { "func_call": "process_mobile_pay", "amount": 15.00, "currency": "USD", "transaction_id": "VM-2024-1699" }
+Response: { "transaction_id": "VM-2024-1699", "status": "approved", "change": 0, "receipt": "RCP-1699-R7" }
+
+Question: Someone pays with a $50 note for a $6.30 souvenir.
+Call: { "func_call": "process_cash", "amount": 50.00, "currency": "USD", "transaction_id": "VM-2024-1750" }
+Response: { "transaction_id": "VM-2024-1750", "status": "success", "change": 43.70, "receipt": "RCP-1750-S5" }

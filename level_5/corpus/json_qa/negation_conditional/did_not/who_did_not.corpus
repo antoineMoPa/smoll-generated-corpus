@@ -1,0 +1,59 @@
+Context: The marketing team met to finalize the campaign, and while Sarah, James, and Elena pitched ideas, Marcus remained silent throughout the meeting.
+Input: {"question": "Who did not pitch ideas during the marketing meeting?"}
+Output: {"answer": "Marcus"}
+
+Context: During the group hike, Alice, Ben, and Chloe reached the summit before noon, but David turned back at the halfway point due to fatigue.
+Input: {"question": "Who did not reach the summit before noon?"}
+Output: {"answer": "David"}
+
+Context: The committee approved the budget proposal with votes from Mr. Henderson, Ms. Lee, and Dr. Patel, whereas Mrs. Gable cast the sole dissenting vote.
+Input: {"question": "Who did not approve the budget proposal?"}
+Output: {"answer": "Mrs. Gable"}
+
+Context: At the charity gala, Thomas, Olivia, and Noah donated over five thousand dollars each, but Liam only attended without making a financial contribution.
+Input: {"question": "Who did not donate money at the charity gala?"}
+Output: {"answer": "Liam"}
+
+Context: The software update was successfully installed on the servers managed by Raj, Priya, and Kenji, yet the server overseen by Fatima remained on the old version.
+Input: {"question": "Who did not install the software update on their server?"}
+Output: {"answer": "Fatima"}
+
+Context: While the rest of the cast, including Julian, Sophie, and Marco, rehearsed their lines every morning, Isabella skipped practice to attend to family matters.
+Input: {"question": "Who did not rehearse their lines every morning?"}
+Output: {"answer": "Isabella"}
+
+Context: The expedition team consisting of Arjun, Mei, and Lars documented the rare bird species, but Sven failed to capture any photographs of the event.
+Input: {"question": "Who did not document the rare bird species?"}
+Output: {"answer": "Sven"}
+
+Context: All department heads, specifically Geraldine, Omar, and Yuki, signed the new safety protocol, except for Roberto who refused to put his name on the document.
+Input: {"question": "Who did not sign the new safety protocol?"}
+Output: {"answer": "Roberto"}
+
+Context: During the cleanup drive, neighbors like Mr. Thompson, Mrs. Alvarez, and young Leo collected trash from the park, while Mr. Davies stayed inside his house all day.
+Input: {"question": "Who did not collect trash from the park?"}
+Output: {"answer": "Mr. Davies"}
+
+Context: The band members, Alex, Jordan, and Taylor, performed an encore after the main set, but the drummer, Casey, had already left the stage.
+Input: {"question": "Who did not perform an encore after the main set?"}
+Output: {"answer": "Casey"}
+
+Context: Investors such as Ms. Sterling, Mr. Cao, and Dr. Evans funded the startup's second round, whereas Mr. Blackwood withdrew his interest before the deal closed.
+Input: {"question": "Who did not fund the startup's second round?"}
+Output: {"answer": "Mr. Blackwood"}
+
+Context: In the cooking competition, chefs Maria, Hiroshi, and Pierre presented their desserts on time, but Chef Antoine was disqualified for not submitting a dish.
+Input: {"question": "Who did not present their dessert on time?"}
+Output: {"answer": "Chef Antoine"}
+
+Context: The book club discussed the latest novel, and members like Susan, Greg, and Anita shared their thoughts, while Patrick did not read the book at all.
+Input: {"question": "Who did not read the latest novel?"}
+Output: {"answer": "Patrick"}
+
+Context: Volunteers named Emily, Jackson, and Sophia sorted the donation boxes yesterday, but Mason missed his shift due to a sudden illness.
+Input: {"question": "Who did not sort the donation boxes yesterday?"}
+Output: {"answer": "Mason"}
+
+Context: The board meeting saw attendance from CEO Linda, CFO Robert, and CTO Amelia, but the COO, Daniel, was absent due to travel delays.
+Input: {"question": "Who did not attend the board meeting?"}
+Output: {"answer": "Daniel"}

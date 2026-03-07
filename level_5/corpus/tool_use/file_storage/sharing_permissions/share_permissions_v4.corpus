@@ -1,0 +1,51 @@
+Available Tools: share_file | set_permissions | get_shared_link | revoke_access | list_collaborators
+Call Schema: { "func_call": "string", "file_id": "string", "user_email": "string", "permission": "view|comment|edit", "expires_at": "string" }
+Response Schema: { "file_id": "string", "shared_link": "string", "collaborators": [{ "email": "string", "permission": "string" }] }
+---
+Question: Send the Q4 sales forecast to alex.rivera@sales.net with edit permissions ending next Friday.
+Call: { "func_call": "share_file", "file_id": "sales_forecast_q4_2024.xlsx", "user_email": "alex.rivera@sales.net", "permission": "edit", "expires_at": "2024-12-20T17:00:00Z" }
+Response: { "file_id": "sales_forecast_q4_2024.xlsx", "shared_link": "https://storage.corp.com/s/k8l9m-nop", "collaborators": [{ "email": "alex.rivera@sales.net", "permission": "edit" }] }
+
+Question: Allow the external auditor to view the compliance logs without modification rights for 30 days.
+Call: { "func_call": "set_permissions", "file_id": "compliance_logs_2024.csv", "user_email": "auditor@external-firm.com", "permission": "view", "expires_at": "2024-12-31T23:59:59Z" }
+Response: { "file_id": "compliance_logs_2024.csv", "shared_link": "https://storage.corp.com/s/q1w2e-r3t", "collaborators": [{ "email": "auditor@external-firm.com", "permission": "view" }] }
+
+Question: Let the copywriter add comments to the ad campaign script, access expiring in 4 hours.
+Call: { "func_call": "share_file", "file_id": "ad_campaign_script_v5.docx", "user_email": "copywriter@agency.io", "permission": "comment", "expires_at": "2024-11-15T18:00:00Z" }
+Response: { "file_id": "ad_campaign_script_v5.docx", "shared_link": "https://storage.corp.com/s/y4u5i-o6p", "collaborators": [{ "email": "copywriter@agency.io", "permission": "comment" }] }
+
+Question: Create a permanent shared link for the company handbook and assign it to the onboarding coordinator.
+Call: { "func_call": "get_shared_link", "file_id": "company_handbook_2025.pdf", "user_email": "onboarding@corp.com", "permission": "view", "expires_at": "2099-12-31T23:59:59Z" }
+Response: { "file_id": "company_handbook_2025.pdf", "shared_link": "https://storage.corp.com/s/a7s8d-f9g", "collaborators": [{ "email": "onboarding@corp.com", "permission": "view" }] }
+
+Question: Immediately revoke access for the former intern jane.doe@university.edu from the research database.
+Call: { "func_call": "revoke_access", "file_id": "research_db_dump.sql", "user_email": "jane.doe@university.edu", "permission": "view", "expires_at": "2024-11-15T00:00:00Z" }
+Response: { "file_id": "research_db_dump.sql", "shared_link": "https://storage.corp.com/s/revoked-link", "collaborators": [] }
+
+Question: Display all users with access to the mobile app wireframes and confirm the lead designer has edit rights.
+Call: { "func_call": "list_collaborators", "file_id": "mobile_app_wireframes.fig", "user_email": "lead_designer@corp.com", "permission": "edit", "expires_at": "2025-06-01T00:00:00Z" }
+Response: { "file_id": "mobile_app_wireframes.fig", "shared_link": "https://storage.corp.com/s/z1x2c-v3b", "collaborators": [{ "email": "lead_designer@corp.com", "permission": "edit" }, { "email": "ux_researcher@corp.com", "permission": "comment" }] }
+
+Question: Provide the security team with view-only access to the incident report, valid for exactly 24 hours.
+Call: { "func_call": "set_permissions", "file_id": "incident_report_nov24.pdf", "user_email": "security_ops@corp.com", "permission": "view", "expires_at": "2024-11-16T14:00:00Z" }
+Response: { "file_id": "incident_report_nov24.pdf", "shared_link": "https://storage.corp.com/s/n4m5b-v6c", "collaborators": [{ "email": "security_ops@corp.com", "permission": "view" }] }
+
+Question: Share the API documentation with the integration partner for commenting purposes until the launch date.
+Call: { "func_call": "share_file", "file_id": "api_docs_v2.md", "user_email": "partner_dev@integrations.com", "permission": "comment", "expires_at": "2024-12-01T09:00:00Z" }
+Response: { "file_id": "api_docs_v2.md", "shared_link": "https://storage.corp.com/s/x7c8v-b9n", "collaborators": [{ "email": "partner_dev@integrations.com", "permission": "comment" }] }
+
+Question: Modify the permissions on the inventory list so the warehouse manager has full edit access permanently.
+Call: { "func_call": "set_permissions", "file_id": "inventory_list_warehouse_b.xlsx", "user_email": "warehouse_mgr@corp.com", "permission": "edit", "expires_at": "2099-12-31T23:59:59Z" }
+Response: { "file_id": "inventory_list_warehouse_b.xlsx", "shared_link": "https://storage.corp.com/s/m1n2b-3v4", "collaborators": [{ "email": "warehouse_mgr@corp.com", "permission": "edit" }] }
+
+Question: Generate a temporary view link for the user feedback dataset for the product analyst, expiring at midnight.
+Call: { "func_call": "get_shared_link", "file_id": "user_feedback_raw.parquet", "user_email": "product_analyst@corp.com", "permission": "view", "expires_at": "2024-11-15T23:59:59Z" }
+Response: { "file_id": "user_feedback_raw.parquet", "shared_link": "https://storage.corp.com/s/c5x6z-a7s", "collaborators": [{ "email": "product_analyst@corp.com", "permission": "view" }] }
+
+Question: Grant the communications director comment rights on the press release draft, valid for 5 days.
+Call: { "func_call": "share_file", "file_id": "press_release_launch.docx", "user_email": "comms_director@corp.com", "permission": "comment", "expires_at": "2024-11-20T12:00:00Z" }
+Response: { "file_id": "press_release_launch.docx", "shared_link": "https://storage.corp.com/s/d8f9g-h0j", "collaborators": [{ "email": "comms_director@corp.com", "permission": "comment" }] }
+
+Question: Downgrade the consultant's access from edit to view-only for the legacy code repository.
+Call: { "func_call": "revoke_access", "file_id": "legacy_code_repo.zip", "user_email": "consultant@tech-help.org", "permission": "view", "expires_at": "2024-11-15T08:30:00Z" }
+Response: { "file_id": "legacy_code_repo.zip", "shared_link": "https://storage.corp.com/s/k1l2m-n3o", "collaborators": [{ "email": "consultant@tech-help.org", "permission": "view" }] }

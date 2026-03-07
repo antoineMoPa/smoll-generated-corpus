@@ -1,0 +1,87 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve the first 15 employee names and departments from the staff table.
+Call: { "func_call": "select_records", "table": "staff", "columns": ["name", "department"], "where": "1=1", "limit": 15 }
+Response: { "rows": [{"name": "Sarah Connor", "department": "Security"}, {"name": "John Wick", "department": "Maintenance"}, {"name": "Ellen Ripley", "department": "Operations"}], "count": 3, "query_ms": 14 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Find all available rooms in the hotel with a capacity greater than 4.
+Call: { "func_call": "select_with_filter", "table": "rooms", "columns": ["room_number", "type", "capacity"], "where": "status = 'available' AND capacity > 4", "limit": 25 }
+Response: { "rows": [{"room_number": 305, "type": "Suite", "capacity": 6}, {"room_number": 412, "type": "Family", "capacity": 5}], "count": 2, "query_ms": 9 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve booking details joined with guest names for reservations in London.
+Call: { "func_call": "select_with_join", "table": "bookings", "columns": ["bookings.id", "bookings.check_in", "guests.full_name"], "where": "bookings.city = 'London'", "limit": 15 }
+Response: { "rows": [{"id": 2001, "check_in": "2023-11-01", "full_name": "Arthur Dent"}, {"id": 2005, "check_in": "2023-11-03", "full_name": "Ford Prefect"}], "count": 2, "query_ms": 21 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count how many appointments were scheduled in the last 7 days.
+Call: { "func_call": "count_records", "table": "appointments", "columns": ["id"], "where": "scheduled_date > NOW() - INTERVAL '7 days'", "limit": 1 }
+Response: { "rows": [], "count": 89, "query_ms": 4 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List the top 3 cheapest flights currently available.
+Call: { "func_call": "select_with_filter", "table": "flights", "columns": ["flight_code", "price", "destination"], "where": "seats_available > 0", "limit": 3 }
+Response: { "rows": [{"flight_code": "FL102", "price": 45.00, "destination": "Boston"}, {"flight_code": "FL305", "price": 62.50, "destination": "Chicago"}], "count": 2, "query_ms": 13 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Get all transactions made by account ID 882 in the last month.
+Call: { "func_call": "select_with_filter", "table": "transactions", "columns": ["txn_id", "txn_date", "amount"], "where": "account_id = 882 AND txn_date >= NOW() - INTERVAL '30 days'", "limit": 50 }
+Response: { "rows": [{"txn_id": 4401, "txn_date": "2023-10-20", "amount": -25.00}, {"txn_id": 4410, "txn_date": "2023-10-22", "amount": 1500.00}], "count": 2, "query_ms": 7 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Fetch student names and their enrolled course titles using a join.
+Call: { "func_call": "select_with_join", "table": "students", "columns": ["students.first_name", "courses.title"], "where": "students.enrolled = true", "limit": 40 }
+Response: { "rows": [{"first_name": "Hermione", "title": "Advanced Magic"}, {"first_name": "Harry", "title": "Defense Arts"}], "count": 2, "query_ms": 16 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Show me the first 10 book titles and authors where the genre is 'Sci-Fi'.
+Call: { "func_call": "select_with_filter", "table": "books", "columns": ["title", "author"], "where": "genre = 'Sci-Fi'", "limit": 10 }
+Response: { "rows": [{"title": "Dune", "author": "Frank Herbert"}, {"title": "Neuromancer", "author": "William Gibson"}, {"title": "Foundation", "author": "Isaac Asimov"}], "count": 3, "query_ms": 6 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve all columns for the employee with ID 773.
+Call: { "func_call": "select_records", "table": "staff", "columns": ["*"], "where": "employee_id = 773", "limit": 1 }
+Response: { "rows": [{"employee_id": 773, "name": "Bruce Wayne", "department": "Executive", "salary": 95000}], "count": 1, "query_ms": 3 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List invoices with status 'overdue' joined with client contact info.
+Call: { "func_call": "select_with_join", "table": "invoices", "columns": ["invoices.id", "clients.email", "clients.phone"], "where": "invoices.status = 'overdue'", "limit": 20 }
+Response: { "rows": [{"id": 5501, "email": "contact@stark.com", "phone": "555-0199"}, {"id": 5508, "email": "billing@wayne.com", "phone": "555-0142"}], "count": 2, "query_ms": 19 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count the number of vehicles manufactured after 2020.
+Call: { "func_call": "count_records", "table": "vehicles", "columns": ["vin"], "where": "year > 2020", "limit": 1 }
+Response: { "rows": [], "count": 312, "query_ms": 5 }

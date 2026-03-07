@@ -1,0 +1,51 @@
+Available Tools: get_exchange_rate | convert_currency | buy_foreign_currency | get_supported_currencies
+Call Schema: { "func_call": "string", "from_currency": "string", "to_currency": "string", "amount": number }
+Response Schema: { "from": "string", "to": "string", "rate": number, "converted_amount": number, "fee": number }
+---
+Question: I'm planning a trip to Tokyo and need to exchange 1,200 US Dollars into Japanese Yen.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "JPY", "amount": 1200 }
+Response: { "from": "USD", "to": "JPY", "rate": 149.50, "converted_amount": 179400.00, "fee": 5.00 }
+
+Question: Can you purchase 3,500 Canadian Dollars for my relocation to Toronto using my Euro balance?
+Call: { "func_call": "buy_foreign_currency", "from_currency": "EUR", "to_currency": "CAD", "amount": 3500 }
+Response: { "from": "EUR", "to": "CAD", "rate": 1.48, "converted_amount": 5180.00, "fee": 18.50 }
+
+Question: What is the current rate if I want to swap 900 British Pounds for Australian Dollars before my flight to Sydney?
+Call: { "func_call": "get_exchange_rate", "from_currency": "GBP", "to_currency": "AUD", "amount": 900 }
+Response: { "from": "GBP", "to": "AUD", "rate": 1.92, "converted_amount": 1728.00, "fee": 0.00 }
+
+Question: I need to send 25,000 Mexican Pesos to a vendor in Mexico City from my US Dollar account.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "MXN", "amount": 25000 }
+Response: { "from": "USD", "to": "MXN", "rate": 17.20, "converted_amount": 430000.00, "fee": 12.00 }
+
+Question: Please buy 8,000 Swiss Francs for an investment opportunity using my British Pound funds.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "GBP", "to_currency": "CHF", "amount": 8000 }
+Response: { "from": "GBP", "to": "CHF", "rate": 1.13, "converted_amount": 9040.00, "fee": 25.00 }
+
+Question: How many South Korean Won will I get if I convert 500 US Dollars for a shopping trip to Seoul?
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "KRW", "amount": 500 }
+Response: { "from": "USD", "to": "KRW", "rate": 1315.00, "converted_amount": 657500.00, "fee": 3.00 }
+
+Question: I need to acquire 1,500 Euros for a conference in Paris using my Australian Dollar savings.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "AUD", "to_currency": "EUR", "amount": 1500 }
+Response: { "from": "AUD", "to": "EUR", "rate": 0.61, "converted_amount": 915.00, "fee": 10.00 }
+
+Question: What is the conversion result for sending 4,200 Brazilian Reals to a supplier from my US Dollar account?
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "BRL", "amount": 4200 }
+Response: { "from": "USD", "to": "BRL", "rate": 4.98, "converted_amount": 20916.00, "fee": 15.00 }
+
+Question: Help me check the rate for converting 600 Singapore Dollars to British Pounds for an online service payment.
+Call: { "func_call": "get_exchange_rate", "from_currency": "SGD", "to_currency": "GBP", "amount": 600 }
+Response: { "from": "SGD", "to": "GBP", "rate": 0.59, "converted_amount": 354.00, "fee": 0.00 }
+
+Question: Please execute a purchase of 12,000 Indian Rupees for a subscription fee using my US Dollars.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "USD", "to_currency": "INR", "amount": 12000 }
+Response: { "from": "USD", "to": "INR", "rate": 83.10, "converted_amount": 997200.00, "fee": 8.00 }
+
+Question: I am traveling to Cape Town and need to convert 2,000 British Pounds into South African Rand.
+Call: { "func_call": "convert_currency", "from_currency": "GBP", "to_currency": "ZAR", "amount": 2000 }
+Response: { "from": "GBP", "to": "ZAR", "rate": 23.45, "converted_amount": 46900.00, "fee": 11.00 }
+
+Question: Can you buy 750 Norwegian Krone for a cabin rental using my Euro account?
+Call: { "func_call": "buy_foreign_currency", "from_currency": "EUR", "to_currency": "NOK", "amount": 750 }
+Response: { "from": "EUR", "to": "NOK", "rate": 11.65, "converted_amount": 8737.50, "fee": 6.50 }

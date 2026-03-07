@@ -1,0 +1,51 @@
+Available Tools: create_subscription | cancel_subscription | pause_subscription | update_plan | get_subscription
+Call Schema: { "func_call": "string", "customer_id": "string", "plan_id": "string", "trial_days": number }
+Response Schema: { "subscription_id": "string", "status": "active|canceled|paused|trialing", "plan": "string", "current_period_end": "string" }
+---
+Question: Establish a basic plan subscription for client cli_4021 with a 10-day trial window.
+Call: { "func_call": "create_subscription", "customer_id": "cli_4021", "plan_id": "basic", "trial_days": 10 }
+Response: { "subscription_id": "sub_7291x", "status": "trialing", "plan": "basic", "current_period_end": "2024-01-12T00:00:00Z" }
+
+Question: Terminate the premium service sub_3829y for user usr_5510 effective immediately.
+Call: { "func_call": "cancel_subscription", "customer_id": "usr_5510", "plan_id": "premium", "trial_days": 0 }
+Response: { "subscription_id": "sub_3829y", "status": "canceled", "plan": "premium", "current_period_end": "2024-01-05T16:20:00Z" }
+
+Question: Activate an ultra plan for account acc_9932 including a 45-day free trial.
+Call: { "func_call": "create_subscription", "customer_id": "acc_9932", "plan_id": "ultra", "trial_days": 45 }
+Response: { "subscription_id": "sub_1148z", "status": "trialing", "plan": "ultra", "current_period_end": "2024-02-20T00:00:00Z" }
+
+Question: Revoke the basic tier access for member mem_7744 associated with sub_6655w.
+Call: { "func_call": "cancel_subscription", "customer_id": "mem_7744", "plan_id": "basic", "trial_days": 0 }
+Response: { "subscription_id": "sub_6655w", "status": "canceled", "plan": "basic", "current_period_end": "2024-01-03T11:30:00Z" }
+
+Question: Sign up client cli_2020 for the standard plan with a 5-day introductory trial.
+Call: { "func_call": "create_subscription", "customer_id": "cli_2020", "plan_id": "standard", "trial_days": 5 }
+Response: { "subscription_id": "sub_8832v", "status": "trialing", "plan": "standard", "current_period_end": "2024-01-09T00:00:00Z" }
+
+Question: Process the cancellation of the ultra subscription sub_4421u owned by usr_8811.
+Call: { "func_call": "cancel_subscription", "customer_id": "usr_8811", "plan_id": "ultra", "trial_days": 0 }
+Response: { "subscription_id": "sub_4421u", "status": "canceled", "plan": "ultra", "current_period_end": "2024-01-04T09:45:00Z" }
+
+Question: Register account acc_3399 to the basic plan starting immediately without a trial.
+Call: { "func_call": "create_subscription", "customer_id": "acc_3399", "plan_id": "basic", "trial_days": 0 }
+Response: { "subscription_id": "sub_5510t", "status": "active", "plan": "basic", "current_period_end": "2024-02-05T00:00:00Z" }
+
+Question: End the billing cycle for member mem_6622 on the standard plan, reference sub_9988s.
+Call: { "func_call": "cancel_subscription", "customer_id": "mem_6622", "plan_id": "standard", "trial_days": 0 }
+Response: { "subscription_id": "sub_9988s", "status": "canceled", "plan": "standard", "current_period_end": "2024-01-02T14:15:00Z" }
+
+Question: Generate a new premium subscription for user usr_1155 with a 2-week trial period.
+Call: { "func_call": "create_subscription", "customer_id": "usr_1155", "plan_id": "premium", "trial_days": 14 }
+Response: { "subscription_id": "sub_2277r", "status": "trialing", "plan": "premium", "current_period_end": "2024-01-18T00:00:00Z" }
+
+Question: Disable the ultra plan subscription sub_3344q for client cli_7788 right now.
+Call: { "func_call": "cancel_subscription", "customer_id": "cli_7788", "plan_id": "ultra", "trial_days": 0 }
+Response: { "subscription_id": "sub_3344q", "status": "canceled", "plan": "ultra", "current_period_end": "2024-01-06T10:00:00Z" }
+
+Question: Onboard account acc_5544 to the standard plan featuring a 30-day evaluation trial.
+Call: { "func_call": "create_subscription", "customer_id": "acc_5544", "plan_id": "standard", "trial_days": 30 }
+Response: { "subscription_id": "sub_6633p", "status": "trialing", "plan": "standard", "current_period_end": "2024-02-10T00:00:00Z" }
+
+Question: Finalize the termination of the premium service sub_7766o belonging to member mem_9900.
+Call: { "func_call": "cancel_subscription", "customer_id": "mem_9900", "plan_id": "premium", "trial_days": 0 }
+Response: { "subscription_id": "sub_7766o", "status": "canceled", "plan": "premium", "current_period_end": "2024-01-07T13:25:00Z" }

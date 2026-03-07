@@ -1,0 +1,87 @@
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a login alert to a user in Vancouver regarding a new device.
+Call: { "func_call": "send_sms", "to": "+16045550199", "message": "ALERT: New login detected on your FinTech app from iPhone 14 in Vancouver. If this wasn't you, lock your account immediately.", "from": "FinTech" }
+Response: { "message_id": "msg_2a3b4c5d6e7f", "to": "+16045550199", "status": "sent", "cost": 0.0082, "timestamp": "2023-10-27T15:01:10Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a driver in Rome about a route change due to traffic.
+Call: { "func_call": "send_sms", "to": "+390612345678", "message": "ROUTE UPDATE: Avoid Via Appia due to heavy congestion. Take alternative route B42. ETA adjusted to 14:30.", "from": "LogiRome" }
+Response: { "message_id": "msg_8g9h0i1j2k3l", "to": "+390612345678", "status": "delivered", "cost": 0.051, "timestamp": "2023-10-27T15:02:45Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a concert ticket confirmation to a fan in Seoul.
+Call: { "func_call": "send_sms", "to": "+821098765432", "message": "TICKET CONFIRMED: K-Pop Live at Gangnam Arena on Oct 30. Gate opens at 6 PM. Show your QR code at entry.", "from": "TicketMasterKR" }
+Response: { "message_id": "msg_4m5n6o7p8q9r", "to": "+821098765432", "status": "sent", "cost": 0.040, "timestamp": "2023-10-27T15:04:20Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Remind a student in Boston about an upcoming exam deadline.
+Call: { "func_call": "send_sms", "to": "+16175550123", "message": "REMINDER: Chemistry 101 final exam is tomorrow at 9 AM in Hall B. Bring your ID and calculator.", "from": "BostonUni" }
+Response: { "message_id": "msg_0s1t2u3v4w5x", "to": "+16175550123", "status": "delivered", "cost": 0.0078, "timestamp": "2023-10-27T15:05:55Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a fraud alert to a cardholder in Mexico City.
+Call: { "func_call": "send_sms", "to": "+525512345678", "message": "FRAUD ALERT: Transaction of $450 USD at Electronics Store declined. Reply YES if this was you, otherwise call us.", "from": "BancoSeguro" }
+Response: { "message_id": "msg_6y7z8a9b0c1d", "to": "+525512345678", "status": "sent", "cost": 0.033, "timestamp": "2023-10-27T15:07:30Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a tenant in Dublin about a water meter reading appointment.
+Call: { "func_call": "send_sms", "to": "+35318765432", "message": "APPOINTMENT: Water meter reading scheduled for Oct 29 between 8 AM and 12 PM. No need to be home.", "from": "DublinWater" }
+Response: { "message_id": "msg_2e3f4g5h6i7j", "to": "+35318765432", "status": "delivered", "cost": 0.046, "timestamp": "2023-10-27T15:09:05Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a discount code to a shopper in Los Angeles.
+Call: { "func_call": "send_sms", "to": "+13235550167", "message": "FLASH SALE: Use code SAVE20 for 20% off all sneakers today only. Shop now at TrendyFeet.com!", "from": "TrendyFeet" }
+Response: { "message_id": "msg_8k9l0m1n2o3p", "to": "+13235550167", "status": "sent", "cost": 0.0075, "timestamp": "2023-10-27T15:10:40Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Alert a staff member in Cape Town about a shift swap request.
+Call: { "func_call": "send_sms", "to": "+27219876543", "message": "SHIFT UPDATE: John requested to swap your Tuesday shift for Thursday. Log in to approve or deny.", "from": "StaffRosterZA" }
+Response: { "message_id": "msg_4q5r6s7t8u9v", "to": "+27219876543", "status": "delivered", "cost": 0.025, "timestamp": "2023-10-27T15:12:15Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a weather warning to a resident in Osaka about heavy rain.
+Call: { "func_call": "send_sms", "to": "+81665432109", "message": "WEATHER ALERT: Heavy rainfall expected in Osaka Prefecture until 8 PM. Avoid low-lying areas.", "from": "JapanWeather" }
+Response: { "message_id": "msg_0w1x2y3z4a5b", "to": "+81665432109", "status": "sent", "cost": 0.058, "timestamp": "2023-10-27T15:13:50Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a patient in Stockholm about a prescription ready for pickup.
+Call: { "func_call": "send_sms", "to": "+46812345678", "message": "PRESCRIPTION READY: Your medication is available for pickup at Central Pharmacy. Open until 7 PM.", "from": "HealthCareSE" }
+Response: { "message_id": "msg_6c7d8e9f0g1h", "to": "+46812345678", "status": "delivered", "cost": 0.049, "timestamp": "2023-10-27T15:15:25Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a survey link to a diner in Houston after their meal.
+Call: { "func_call": "send_sms", "to": "+17135550155", "message": "Thanks for dining at BurgerBay! Rate your experience here: bit.ly/survey-bb. Get a free dessert on next visit.", "from": "BurgerBay" }
+Response: { "message_id": "msg_2i3j4k5l6m7n", "to": "+17135550155", "status": "sent", "cost": 0.0075, "timestamp": "2023-10-27T15:17:00Z" }

@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": number, "color": "string" }
+Response Schema: { "light_id": "string", "state": "on|off", "brightness": number, "color": "string" }
+---
+Question: Illuminate the garage light at maximum intensity.
+Call: { "func_call": "turn_on_light", "light_id": "garage", "brightness": 100, "color": "white" }
+Response: { "light_id": "garage", "state": "on", "brightness": 100, "color": "white" }
+
+Question: Deactivate the hallway light right now.
+Call: { "func_call": "turn_off_light", "light_id": "hallway", "brightness": 0, "color": "white" }
+Response: { "light_id": "hallway", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Change the office light brightness to 75%.
+Call: { "func_call": "set_brightness", "light_id": "office", "brightness": 75, "color": "white" }
+Response: { "light_id": "office", "state": "on", "brightness": 75, "color": "white" }
+
+Question: Lower the dining room light to 30%.
+Call: { "func_call": "set_brightness", "light_id": "dining_room", "brightness": 30, "color": "white" }
+Response: { "light_id": "dining_room", "state": "on", "brightness": 30, "color": "white" }
+
+Question: Switch on the patio light but keep it low at 20%.
+Call: { "func_call": "turn_on_light", "light_id": "patio", "brightness": 20, "color": "white" }
+Response: { "light_id": "patio", "state": "on", "brightness": 20, "color": "white" }
+
+Question: Shut down the basement lights.
+Call: { "func_call": "turn_off_light", "light_id": "basement", "brightness": 0, "color": "white" }
+Response: { "light_id": "basement", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Modify the office brightness to 45%.
+Call: { "func_call": "set_brightness", "light_id": "office", "brightness": 45, "color": "white" }
+Response: { "light_id": "office", "state": "on", "brightness": 45, "color": "white" }
+
+Question: Power up the garden light at full strength.
+Call: { "func_call": "turn_on_light", "light_id": "garden", "brightness": 100, "color": "white" }
+Response: { "light_id": "garden", "state": "on", "brightness": 100, "color": "white" }
+
+Question: Turn off the garage light immediately.
+Call: { "func_call": "turn_off_light", "light_id": "garage", "brightness": 0, "color": "white" }
+Response: { "light_id": "garage", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Set the hallway light to a gentle 35% brightness.
+Call: { "func_call": "set_brightness", "light_id": "hallway", "brightness": 35, "color": "white" }
+Response: { "light_id": "hallway", "state": "on", "brightness": 35, "color": "white" }
+
+Question: Activate the dining room light at 90% brightness.
+Call: { "func_call": "turn_on_light", "light_id": "dining_room", "brightness": 90, "color": "white" }
+Response: { "light_id": "dining_room", "state": "on", "brightness": 90, "color": "white" }
+
+Question: Dim the basement light to 5% for storage access.
+Call: { "func_call": "set_brightness", "light_id": "basement", "brightness": 5, "color": "white" }
+Response: { "light_id": "basement", "state": "on", "brightness": 5, "color": "white" }

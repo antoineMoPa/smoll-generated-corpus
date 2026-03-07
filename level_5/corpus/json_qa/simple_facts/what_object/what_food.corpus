@@ -1,0 +1,59 @@
+Context: At the bustling diner, Sarah ordered a large pepperoni pizza and a side of garlic bread. She waited patiently while the chef prepared her meal.
+Input: {"question": "What did Sarah order?"}
+Output: {"answer": "a large pepperoni pizza and a side of garlic bread"}
+
+Context: For breakfast, James cooked three scrambled eggs and toasted two slices of sourdough bread. He served everything on a blue plate with a glass of orange juice.
+Input: {"question": "What did James cook?"}
+Output: {"answer": "three scrambled eggs and toasted two slices of sourdough bread"}
+
+Context: The waiter brought the bill, noting that table four had consumed two bottles of red wine and a chocolate lava cake. The guests seemed very satisfied with their dessert.
+Input: {"question": "What did table four consume?"}
+Output: {"answer": "two bottles of red wine and a chocolate lava cake"}
+
+Context: Maria decided to make a fresh caprese salad using ripe tomatoes, mozzarella cheese, and basil leaves from her garden. She drizzled it with olive oil before serving.
+Input: {"question": "What did Maria make?"}
+Output: {"answer": "a fresh caprese salad"}
+
+Context: During the lunch rush, the kitchen prepared dozens of tuna sandwiches and chicken noodle soups for the waiting customers. The aroma filled the entire restaurant.
+Input: {"question": "What did the kitchen prepare?"}
+Output: {"answer": "dozens of tuna sandwiches and chicken noodle soups"}
+
+Context: After hiking all morning, Alex stopped at a roadside stand to buy a cold lemonade and a bag of pretzels. He sat on a bench to enjoy his snack.
+Input: {"question": "What did Alex buy?"}
+Output: {"answer": "a cold lemonade and a bag of pretzels"}
+
+Context: My grandmother baked a traditional apple pie with a flaky crust and served it warm with a scoop of vanilla ice cream. It was the highlight of the family dinner.
+Input: {"question": "What did my grandmother bake?"}
+Output: {"answer": "a traditional apple pie"}
+
+Context: At the sushi bar, Kenji ordered a platter of salmon nigiri and a bowl of miso soup. He used chopsticks to eat his meal quickly.
+Input: {"question": "What did Kenji order?"}
+Output: {"answer": "a platter of salmon nigiri and a bowl of miso soup"}
+
+Context: The barista handed me a hot latte with oat milk and a blueberry muffin wrapped in paper. I thanked her and walked out into the rain.
+Input: {"question": "What did the barista hand me?"}
+Output: {"answer": "a hot latte with oat milk and a blueberry muffin"}
+
+Context: For the party, David grilled eight beef burgers and corn on the cob for all the guests. Everyone lined up to get their food.
+Input: {"question": "What did David grill?"}
+Output: {"answer": "eight beef burgers and corn on the cob"}
+
+Context: While studying late, Emily ate a bowl of草莓 yogurt and drank a cup of green tea to stay awake. The quiet library was perfect for her work.
+Input: {"question": "What did Emily eat?"}
+Output: {"answer": "a bowl of strawberry yogurt"}
+
+Context: The chef special tonight is a grilled sea bass served with roasted asparagus and lemon butter sauce. Many patrons have already ordered this dish.
+Input: {"question": "What is the chef special?"}
+Output: {"answer": "a grilled sea bass served with roasted asparagus and lemon butter sauce"}
+
+Context: On Sunday mornings, we always make fluffy pancakes topped with maple syrup and fresh berries. It is a tradition everyone loves.
+Input: {"question": "What do we make on Sunday mornings?"}
+Output: {"answer": "fluffy pancakes topped with maple syrup and fresh berries"}
+
+Context: The delivery driver handed over a box containing a spicy pad thai and a spring roll. I immediately opened it to smell the delicious aroma.
+Input: {"question": "What did the delivery driver hand over?"}
+Output: {"answer": "a box containing a spicy pad thai and a spring roll"}
+
+Context: To celebrate his birthday, Tom ate a slice of chocolate cake and drank a glass of sparkling cider. His friends sang happy birthday loudly.
+Input: {"question": "What did Tom eat?"}
+Output: {"answer": "a slice of chocolate cake"}

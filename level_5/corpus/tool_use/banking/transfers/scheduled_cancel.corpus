@@ -1,0 +1,51 @@
+Available Tools: transfer_funds | schedule_transfer | cancel_transfer | get_transfer_status
+Call Schema: { "func_call": "string", "from_account": "string", "to_account": "string", "amount": number, "currency": "string", "scheduled_date": "string" }
+Response Schema: { "transfer_id": "string", "status": "string", "amount": number, "estimated_arrival": "string" }
+---
+Question: Please schedule my monthly rent payment of $2,400 to landlord account 987654321 for next Monday.
+Call: { "func_call": "schedule_transfer", "from_account": "CHK-100234", "to_account": "987654321", "amount": 2400.00, "currency": "USD", "scheduled_date": "2023-11-06" }
+Response: { "transfer_id": "SCH-882910", "status": "scheduled", "amount": 2400.00, "estimated_arrival": "2023-11-06T09:00:00Z" }
+
+Question: I need to set up a recurring transfer of $150 to my savings account every 15th of the month starting today.
+Call: { "func_call": "schedule_transfer", "from_account": "CHK-100234", "to_account": "SAV-556677", "amount": 150.00, "currency": "USD", "scheduled_date": "2023-10-15" }
+Response: { "transfer_id": "SCH-993021", "status": "scheduled", "amount": 150.00, "estimated_arrival": "2023-10-15T08:30:00Z" }
+
+Question: Schedule a bill payment of $89.50 to Electric Company account 445566 for tomorrow morning.
+Call: { "func_call": "schedule_transfer", "from_account": "CHK-100234", "to_account": "445566", "amount": 89.50, "currency": "USD", "scheduled_date": "2023-10-26" }
+Response: { "transfer_id": "SCH-112233", "status": "scheduled", "amount": 89.50, "estimated_arrival": "2023-10-26T10:15:00Z" }
+
+Question: Cancel the pending transfer with ID SCH-882910 immediately; I made a mistake on the amount.
+Call: { "func_call": "cancel_transfer", "from_account": "CHK-100234", "to_account": "987654321", "amount": 0, "currency": "USD", "scheduled_date": "" }
+Response: { "transfer_id": "SCH-882910", "status": "cancelled", "amount": 2400.00, "estimated_arrival": "N/A" }
+
+Question: Please stop the scheduled internet bill payment of $65.00 set for Friday.
+Call: { "func_call": "cancel_transfer", "from_account": "CHK-100234", "to_account": "ISP-998877", "amount": 65.00, "currency": "USD", "scheduled_date": "2023-10-27" }
+Response: { "transfer_id": "SCH-445566", "status": "cancelled", "amount": 65.00, "estimated_arrival": "N/A" }
+
+Question: I need to cancel the recurring transfer to my investment account scheduled for the end of this month.
+Call: { "func_call": "cancel_transfer", "from_account": "CHK-100234", "to_account": "INV-332211", "amount": 500.00, "currency": "USD", "scheduled_date": "2023-10-31" }
+Response: { "transfer_id": "SCH-778899", "status": "cancelled", "amount": 500.00, "estimated_arrival": "N/A" }
+
+Question: Set up an immediate transfer of $1,200 to my brother's account 1122334455 for his birthday.
+Call: { "func_call": "transfer_funds", "from_account": "CHK-100234", "to_account": "1122334455", "amount": 1200.00, "currency": "USD", "scheduled_date": "2023-10-25" }
+Response: { "transfer_id": "TRF-556677", "status": "completed", "amount": 1200.00, "estimated_arrival": "2023-10-25T14:05:00Z" }
+
+Question: Schedule my car loan payment of $450.75 to Finance Corp account 778899 for the 1st of next month.
+Call: { "func_call": "schedule_transfer", "from_account": "CHK-100234", "to_account": "778899", "amount": 450.75, "currency": "USD", "scheduled_date": "2023-11-01" }
+Response: { "transfer_id": "SCH-334455", "status": "scheduled", "amount": 450.75, "estimated_arrival": "2023-11-01T09:30:00Z" }
+
+Question: Cancel the duplicate water bill payment of $42.30 scheduled for tomorrow.
+Call: { "func_call": "cancel_transfer", "from_account": "CHK-100234", "to_account": "WTR-665544", "amount": 42.30, "currency": "USD", "scheduled_date": "2023-10-26" }
+Response: { "transfer_id": "SCH-223344", "status": "cancelled", "amount": 42.30, "estimated_arrival": "N/A" }
+
+Question: Please schedule a weekly transfer of $50 to my grocery budget account starting this Sunday.
+Call: { "func_call": "schedule_transfer", "from_account": "CHK-100234", "to_account": "BUD-123123", "amount": 50.00, "currency": "USD", "scheduled_date": "2023-10-29" }
+Response: { "transfer_id": "SCH-667788", "status": "scheduled", "amount": 50.00, "estimated_arrival": "2023-10-29T08:00:00Z" }
+
+Question: I need to cancel the scheduled transfer of $300 to my charity donation account planned for next week.
+Call: { "func_call": "cancel_transfer", "from_account": "CHK-100234", "to_account": "CHR-999888", "amount": 300.00, "currency": "USD", "scheduled_date": "2023-11-03" }
+Response: { "transfer_id": "SCH-112299", "status": "cancelled", "amount": 300.00, "estimated_arrival": "N/A" }
+
+Question: Schedule the annual insurance premium payment of $1,800 to SafeGuard Insurance account 554433 for December 15th.
+Call: { "func_call": "schedule_transfer", "from_account": "CHK-100234", "to_account": "554433", "amount": 1800.00, "currency": "USD", "scheduled_date": "2023-12-15" }
+Response: { "transfer_id": "SCH-998877", "status": "scheduled", "amount": 1800.00, "estimated_arrival": "2023-12-15T11:00:00Z" }

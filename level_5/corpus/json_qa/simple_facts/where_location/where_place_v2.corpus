@@ -1,0 +1,59 @@
+Context: Emily parked her bicycle near the fountain in Liberty Square before attending the concert. The music started exactly at sunset.
+Input: {"question": "Where did Emily park her bicycle?"}
+Output: {"answer": "near the fountain in Liberty Square"}
+
+Context: The quarterly review will take place in Boardroom A on the tenth floor at 10 AM tomorrow. Please prepare your sales reports.
+Input: {"question": "Where will the quarterly review take place?"}
+Output: {"answer": "Boardroom A"}
+
+Context: On his way home, David visited the Hardware Store on Elm Street to purchase a hammer and some nails. He also bought a roll of tape.
+Input: {"question": "Where did David visit on his way home?"}
+Output: {"answer": "Hardware Store"}
+
+Context: We are currently staying in Kyoto and intend to explore the Fushimi Inari shrine early tomorrow. The cherry blossoms are in full bloom.
+Input: {"question": "Where are they currently staying?"}
+Output: {"answer": "Kyoto"}
+
+Context: The flowers were left on the doorstep of 456 Maple Lane while the residents were at dinner. The delivery person took a photo as proof.
+Input: {"question": "Where were the flowers left?"}
+Output: {"answer": "doorstep of 456 Maple Lane"}
+
+Context: Nurse Johnson administers vaccines every Thursday at the Community Health Center in the north wing. Walk-ins are welcome after 2 PM.
+Input: {"question": "Where does Nurse Johnson administer vaccines?"}
+Output: {"answer": "Community Health Center"}
+
+Context: During the earthquake, the staff moved to the emergency assembly point in the parking lot until the shaking stopped. They accounted for everyone there.
+Input: {"question": "Where did the staff move during the earthquake?"}
+Output: {"answer": "emergency assembly point in the parking lot"}
+
+Context: The new bakery, Sweet Crumb, launched yesterday in the plaza next to the bank. Their sourdough bread is already famous locally.
+Input: {"question": "Where did the new bakery launch?"}
+Output: {"answer": "plaza"}
+
+Context: Lisa forgot her wallet at the gym when she hurried to pick up her kids this afternoon. She plans to return there after work.
+Input: {"question": "Where did Lisa forget her wallet?"}
+Output: {"answer": "gym"}
+
+Context: The summer music festival is set to occur at the Lakeside Amphitheater in Austin next weekend. Early bird passes are almost gone.
+Input: {"question": "Where is the summer music festival set to occur?"}
+Output: {"answer": "Lakeside Amphitheater"}
+
+Context: He chose to read his novel in the sunny alcove of the public library. It was the only spot with comfortable seating.
+Input: {"question": "Where did he choose to read?"}
+Output: {"answer": "sunny alcove of the public library"}
+
+Context: The train from Chicago arrived safely at Union Station shortly after midnight. Travelers queued for taxis immediately.
+Input: {"question": "Where did the train arrive?"}
+Output: {"answer": "Union Station"}
+
+Context: Gather us at the train platform on 3rd Avenue at 7 AM so we can board the express together. Bring your tickets ready.
+Input: {"question": "Where should we gather?"}
+Output: {"answer": "train platform"}
+
+Context: They discovered the finest burgers in the city at Mike's Grill situated in the waterfront district. The fries are crispy and salty.
+Input: {"question": "Where did they discover the finest burgers?"}
+Output: {"answer": "Mike's Grill"}
+
+Context: The missing cat was seen hiding under the bench in Central Gardens last night. The family has posted flyers everywhere.
+Input: {"question": "Where was the missing cat seen?"}
+Output: {"answer": "under the bench in Central Gardens"}

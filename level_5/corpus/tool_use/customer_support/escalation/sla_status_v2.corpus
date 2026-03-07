@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: Assign a 4-hour SLA to ticket TKT-2045 concerning the warehouse inventory sync failure and route it to the Logistics IT team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-2045", "reason": "Warehouse inventory sync failure causing stock discrepancies", "target_team": "Logistics IT" }
+Response: { "ticket_id": "TKT-2045", "escalated_to": "Logistics IT", "reason": "Warehouse inventory sync failure causing stock discrepancies", "sla_hours": 4, "status": "SLA_ACTIVE" }
+
+Question: Verify the escalation progress for ticket TKT-3198 handled by the Cloud Architecture team to ensure the migration rollback is on schedule.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-3198", "reason": "Verification of cloud migration rollback schedule", "target_team": "Cloud Architecture" }
+Response: { "ticket_id": "TKT-3198", "escalated_to": "Cloud Architecture", "reason": "Verification of cloud migration rollback schedule", "sla_hours": 6, "status": "ON_TRACK" }
+
+Question: Immediately escalate ticket TKT-4521 to the Fraud Prevention unit due to multiple unauthorized transaction attempts and enforce a 1-hour window.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-4521", "reason": "Multiple unauthorized transaction attempts detected on merchant account", "target_team": "Fraud Prevention" }
+Response: { "ticket_id": "TKT-4521", "escalated_to": "Fraud Prevention", "reason": "Multiple unauthorized transaction attempts detected on merchant account", "sla_hours": 1, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Transfer ticket TKT-5832 to the Legacy System Maintainers for a COBOL batch job error and apply a 12-hour resolution SLA.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-5832", "reason": "COBOL batch job failing during nightly processing", "target_team": "Legacy System Maintainers" }
+Response: { "ticket_id": "TKT-5832", "escalated_to": "Legacy System Maintainers", "reason": "COBOL batch job failing during nightly processing", "sla_hours": 12, "status": "SLA_ACTIVE" }
+
+Question: Check if ticket TKT-6749 assigned to the User Experience team has resolved the checkout button alignment issue within the 24-hour limit.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-6749", "reason": "Check resolution status of checkout button alignment bug", "target_team": "User Experience" }
+Response: { "ticket_id": "TKT-6749", "escalated_to": "User Experience", "reason": "Check resolution status of checkout button alignment bug", "sla_hours": 24, "status": "RESOLVED_WITHIN_SLA" }
+
+Question: Set a critical 15-minute SLA for ticket TKT-7210 regarding the live chat service outage and assign it to the Real-Time Communications team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-7210", "reason": "Complete outage of live chat service for all users", "target_team": "Real-Time Communications" }
+Response: { "ticket_id": "TKT-7210", "escalated_to": "Real-Time Communications", "reason": "Complete outage of live chat service for all users", "sla_hours": 0.25, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Escalate ticket TKT-8394 to the Identity Management group because the SSO provider is returning invalid tokens and threatening the 2-hour SLA.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-8394", "reason": "SSO provider returning invalid tokens preventing user login", "target_team": "Identity Management" }
+Response: { "ticket_id": "TKT-8394", "escalated_to": "Identity Management", "reason": "SSO provider returning invalid tokens preventing user login", "sla_hours": 2, "status": "BREACH_WARNING_ISSUED" }
+
+Question: Retrieve the status of ticket TKT-9102 sent to the Backup Recovery team to confirm if the database restore finished before the 8-hour deadline.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-9102", "reason": "Confirmation of database restore completion time", "target_team": "Backup Recovery" }
+Response: { "ticket_id": "TKT-9102", "escalated_to": "Backup Recovery", "reason": "Confirmation of database restore completion time", "sla_hours": 8, "status": "SLA_BREACHED" }
+
+Question: Transfer ticket TKT-1287 to the Environmental Controls specialists for a server room temperature alert and enforce a 30-minute response SLA.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-1287", "reason": "Server room temperature exceeding safe operating limits", "target_team": "Environmental Controls" }
+Response: { "ticket_id": "TKT-1287", "escalated_to": "Environmental Controls", "reason": "Server room temperature exceeding safe operating limits", "sla_hours": 0.5, "status": "SLA_ACTIVE" }
+
+Question: Apply a 48-hour SLA to ticket TKT-3456 regarding the quarterly financial report generation delay and route it to the Data Analytics team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-3456", "reason": "Quarterly financial report generation stuck in pending state", "target_team": "Data Analytics" }
+Response: { "ticket_id": "TKT-3456", "escalated_to": "Data Analytics", "reason": "Quarterly financial report generation stuck in pending state", "sla_hours": 48, "status": "SLA_ACTIVE" }
+
+Question: Escalate ticket TKT-5678 to the Vendor Relations team due to a missed delivery from the primary hardware supplier and set a 6-hour resolution target.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-5678", "reason": "Missed hardware delivery from primary supplier impacting deployment", "target_team": "Vendor Relations" }
+Response: { "ticket_id": "TKT-5678", "escalated_to": "Vendor Relations", "reason": "Missed hardware delivery from primary supplier impacting deployment", "sla_hours": 6, "status": "SLA_ACTIVE" }
+
+Question: Check the escalation details for TKT-7890 assigned to the Accessibility Team to see if the screen reader compatibility fix is within the 72-hour window.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-7890", "reason": "Status check on screen reader compatibility fix progress", "target_team": "Accessibility Team" }
+Response: { "ticket_id": "TKT-7890", "escalated_to": "Accessibility Team", "reason": "Status check on screen reader compatibility fix progress", "sla_hours": 72, "status": "ON_TRACK" }

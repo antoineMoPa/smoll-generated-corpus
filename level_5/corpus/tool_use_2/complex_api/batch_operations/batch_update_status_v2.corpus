@@ -1,0 +1,20 @@
+{"func_call": "batch_update", "items": [{"id": "INV-2001", "status": "paid"}, {"id": "INV-2002", "status": "paid"}, {"id": "INV-2003", "status": "paid"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "USR-7712", "status": "banned"}, {"id": "USR-7713", "status": "banned"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "DEV-4401", "status": "offline"}, {"id": "DEV-4402", "status": "offline"}, {"id": "DEV-4403", "status": "offline"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "INV-3099", "status": "voided"}, {"id": "INV-3100", "status": "voided"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "USR-1122", "status": "premium"}, {"id": "USR-1123", "status": "premium"}, {"id": "USR-1124", "status": "premium"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "DEV-8877", "status": "maintenance"}, {"id": "DEV-8878", "status": "maintenance"}], "options": {"on_error": "stop", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "INV-5544", "status": "overdue"}, {"id": "INV-5545", "status": "overdue"}, {"id": "INV-5546", "status": "overdue"}], "options": {"on_error": "skip", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "USR-9988", "status": "guest"}, {"id": "USR-9989", "status": "guest"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "DEV-3322", "status": "active"}, {"id": "DEV-3323", "status": "active"}, {"id": "DEV-3324", "status": "active"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "INV-6611", "status": "draft"}, {"id": "INV-6612", "status": "draft"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "USR-4455", "status": "deleted"}, {"id": "USR-4456", "status": "deleted"}, {"id": "USR-4457", "status": "deleted"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "DEV-7766", "status": "booting"}, {"id": "DEV-7767", "status": "booting"}], "options": {"on_error": "stop", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "INV-8899", "status": "sent"}, {"id": "INV-8900", "status": "sent"}, {"id": "INV-8901", "status": "sent"}], "options": {"on_error": "skip", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "USR-2211", "status": "flagged"}, {"id": "USR-2212", "status": "flagged"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "DEV-5533", "status": "decommissioned"}, {"id": "DEV-5534", "status": "decommissioned"}, {"id": "DEV-5535", "status": "decommissioned"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "INV-1199", "status": "partially_paid"}, {"id": "INV-1200", "status": "partially_paid"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "USR-6677", "status": "trial"}, {"id": "USR-6678", "status": "trial"}, {"id": "USR-6679", "status": "trial"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "DEV-9900", "status": "updating"}, {"id": "DEV-9901", "status": "updating"}], "options": {"on_error": "stop", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "INV-4433", "status": "disputed"}, {"id": "INV-4434", "status": "disputed"}, {"id": "INV-4435", "status": "disputed"}], "options": {"on_error": "skip", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "USR-8822", "status": "suspended"}, {"id": "USR-8823", "status": "suspended"}], "options": {"on_error": "skip", "dry_run": false}}

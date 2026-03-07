@@ -1,0 +1,51 @@
+Available Tools: get_order_status | track_shipment | get_order_history | cancel_order
+Call Schema: { "func_call": "string", "order_id": "string", "tracking_number": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_delivery": "string", "tracking_events": [{ "date": "string", "location": "string", "status": "string" }] }
+---
+Question: Can you display my past purchases and then cancel order #ORD-1029 because I found a cheaper alternative?
+Call: { "func_call": "get_order_history", "order_id": "ORD-1029", "tracking_number": "" }
+Response: { "order_id": "ORD-1029", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I need to void order #ORD-2048 right away as I selected the wrong color by accident.
+Call: { "func_call": "cancel_order", "order_id": "ORD-2048", "tracking_number": "" }
+Response: { "order_id": "ORD-2048", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Please access my recent transactions and cancel #ORD-3067 because the shipping timeframe is unacceptable.
+Call: { "func_call": "get_order_history", "order_id": "ORD-3067", "tracking_number": "" }
+Response: { "order_id": "ORD-3067", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Stop order #ORD-4086 immediately; I have decided I do not require this product anymore.
+Call: { "func_call": "cancel_order", "order_id": "ORD-4086", "tracking_number": "" }
+Response: { "order_id": "ORD-4086", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Show me my purchase log and then cancel #ORD-5015 because the inventory shows it is unavailable.
+Call: { "func_call": "get_order_history", "order_id": "ORD-5015", "tracking_number": "" }
+Response: { "order_id": "ORD-5015", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I wish to cancel order #ORD-6034 due to an unintentional duplicate submission.
+Call: { "func_call": "cancel_order", "order_id": "ORD-6034", "tracking_number": "" }
+Response: { "order_id": "ORD-6034", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Fetch my order records and cancel #ORD-7053 because I prefer to purchase this locally.
+Call: { "func_call": "get_order_history", "order_id": "ORD-7053", "tracking_number": "" }
+Response: { "order_id": "ORD-7053", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Please terminate order #ORD-8072 as the shipping address entered was invalid and needs correction.
+Call: { "func_call": "cancel_order", "order_id": "ORD-8072", "tracking_number": "" }
+Response: { "order_id": "ORD-8072", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Review my previous orders and cancel #ORD-9091 because the discount code failed to process.
+Call: { "func_call": "get_order_history", "order_id": "ORD-9091", "tracking_number": "" }
+Response: { "order_id": "ORD-9091", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I must cancel order #ORD-1130 due to recent safety warnings issued for this item.
+Call: { "func_call": "cancel_order", "order_id": "ORD-1130", "tracking_number": "" }
+Response: { "order_id": "ORD-1130", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: List my order history and cancel #ORD-2249 because I am unhappy with the support team's assistance.
+Call: { "func_call": "get_order_history", "order_id": "ORD-2249", "tracking_number": "" }
+Response: { "order_id": "ORD-2249", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Cancel order #ORD-3368 instantly since I will be away and unable to accept delivery.
+Call: { "func_call": "cancel_order", "order_id": "ORD-3368", "tracking_number": "" }
+Response: { "order_id": "ORD-3368", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }

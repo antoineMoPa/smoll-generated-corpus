@@ -1,0 +1,29 @@
+Context: On March 12, Alice Johnson transferred $450.00 to Bob Smith for the concert tickets. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$450.00", "sender": "Alice Johnson", "recipient": "Bob Smith"}
+
+Context: The invoice shows that Global Tech Inc. paid $12,500 to Supplier Solutions LLC for the quarterly software license. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$12,500", "sender": "Global Tech Inc.", "recipient": "Supplier Solutions LLC"}
+
+Context: Maria Garcia sent €85.50 to her brother Luis Garcia via the banking app yesterday afternoon. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "€85.50", "sender": "Maria Garcia", "recipient": "Luis Garcia"}
+
+Context: A payment of £2,300 was made by Red Lion construction to Steelworks Ltd for the foundation materials. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "£2,300", "sender": "Red Lion construction", "recipient": "Steelworks Ltd"}
+
+Context: David Chen purchased a laptop for $999.99 from ElectroMart, completing the transaction online. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$999.99", "sender": "David Chen", "recipient": "ElectroMart"}
+
+Context: The charity received a donation of $5,000 from the Anderson Family Trust last week. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$5,000", "sender": "the Anderson Family Trust", "recipient": "The charity"}
+
+Context: Sarah Miller reimbursed Tom Wilson $34.20 for the lunch they had together on Tuesday. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$34.20", "sender": "Sarah Miller", "recipient": "Tom Wilson"}
+
+Context: Apex Logistics paid $8,750.00 to Swift Carriers for the freight services rendered in October. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$8,750.00", "sender": "Apex Logistics", "recipient": "Swift Carriers"}
+
+Context: Kenji Tanaka transferred ¥50,000 to Yumi Sato to cover the rental deposit for the apartment. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "¥50,000", "sender": "Kenji Tanaka", "recipient": "Yumi Sato"}
+
+Context: The university collected $15,000 in tuition fees from student James Peterson this semester. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$15,000", "sender": "student James Peterson", "recipient": "The university"}
+
+Context: Emily Brown sent $200 to the Local Food Bank as part of her monthly giving campaign. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$200", "sender": "Emily Brown", "recipient": "the Local Food Bank"}
+
+Context: Blue Ocean Resorts paid $45,000 to Coastal Builders for the renovation of the main lobby. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$45,000", "sender": "Blue Ocean Resorts", "recipient": "Coastal Builders"}
+
+Context: Michael Ross bought a used car for $6,200 from Downtown Auto Sales last Saturday. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$6,200", "sender": "Michael Ross", "recipient": "Downtown Auto Sales"}
+
+Context: The consultant invoice indicates that TechStart Corp owes $3,500 to Jennifer Lee for the audit services. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$3,500", "sender": "TechStart Corp", "recipient": "Jennifer Lee"}
+
+Context: Omar Hassan transferred 1,200 SAR to Fatima Al-Fayed for the family gift exchange. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "1,200 SAR", "sender": "Omar Hassan", "recipient": "Fatima Al-Fayed"}

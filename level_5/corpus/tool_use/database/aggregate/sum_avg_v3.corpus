@@ -1,0 +1,51 @@
+Available Tools: sum_column | avg_column | group_by_query | min_max_query
+Call Schema: { "func_call": "string", "table": "string", "column": "string", "group_by": "string", "where": "string" }
+Response Schema: { "result": number, "groups": [{ "key": "string", "value": number }] }
+---
+Question: What is the total energy consumption recorded for the 'industrial' sector last month?
+Call: { "func_call": "sum_column", "table": "energy_logs", "column": "kwh_usage", "group_by": "", "where": "sector = 'industrial' AND log_date >= '2023-11-01'" }
+Response: { "result": 892340.25, "groups": [] }
+
+Question: Calculate the average delivery time in minutes for orders shipped via express courier.
+Call: { "func_call": "avg_column", "table": "shipments", "column": "delivery_minutes", "group_by": "", "where": "service_type = 'express'" }
+Response: { "result": 45.6, "groups": [] }
+
+Question: Get the sum of repair costs for all vehicles manufactured after 2020.
+Call: { "func_call": "sum_column", "table": "maintenance_records", "column": "repair_cost", "group_by": "", "where": "vehicle_year > 2020" }
+Response: { "result": 34500.90, "groups": [] }
+
+Question: What is the average test score for students enrolled in the 'Physics' course?
+Call: { "func_call": "avg_column", "table": "exam_results", "column": "score", "group_by": "", "where": "course_name = 'Physics'" }
+Response: { "result": 78.25, "groups": [] }
+
+Question: Sum the total rainfall amounts grouped by station ID for the meteorological report.
+Call: { "func_call": "sum_column", "table": "weather_data", "column": "rainfall_mm", "group_by": "station_id", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "ST001", "value": 1240.5 }, { "key": "ST002", "value": 980.2 }, { "key": "ST003", "value": 1560.8 }] }
+
+Question: Calculate the average salary of employees grouped by their department code.
+Call: { "func_call": "avg_column", "table": "employee payroll", "column": "annual_salary", "group_by": "dept_code", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "ENG", "value": 95000.00 }, { "key": "MKT", "value": 72000.50 }, { "key": "HR", "value": 65000.25 }] }
+
+Question: What is the total number of tickets sold grouped by event venue for the summer festival?
+Call: { "func_call": "sum_column", "table": "ticket_sales", "column": "quantity", "group_by": "venue_name", "where": "season = 'summer'" }
+Response: { "result": 0, "groups": [{ "key": "Central Park", "value": 5000 }, { "key": "River Stage", "value": 3200 }, { "key": "City Hall", "value": 1500 }] }
+
+Question: Find the average fuel efficiency grouped by car model for hybrid vehicles only.
+Call: { "func_call": "avg_column", "table": "vehicle_stats", "column": "mpg", "group_by": "model_name", "where": "engine_type = 'hybrid'" }
+Response: { "result": 0, "groups": [{ "key": "Prius", "value": 52.4 }, { "key": "Insight", "value": 48.9 }, { "key": "Niro", "value": 50.1 }] }
+
+Question: Sum the donation amounts for all contributions marked as 'recurring' in the 'Education' fund.
+Call: { "func_call": "sum_column", "table": "donations", "column": "amount", "group_by": "", "where": "fund_type = 'Education' AND frequency = 'recurring'" }
+Response: { "result": 15670.00, "groups": [] }
+
+Question: What is the average temperature recorded by sensors in zone 'A'?
+Call: { "func_call": "avg_column", "table": "sensor_readings", "column": "temperature_c", "group_by": "", "where": "zone_id = 'A'" }
+Response: { "result": 22.4, "groups": [] }
+
+Question: Calculate the total page views grouped by device category for mobile and tablet users.
+Call: { "func_call": "sum_column", "table": "web_analytics", "column": "view_count", "group_by": "device_category", "where": "device_category IN ('mobile', 'tablet')" }
+Response: { "result": 0, "groups": [{ "key": "mobile", "value": 450200 }, { "key": "tablet", "value": 120500 }] }
+
+Question: Get the average processing time grouped by priority level for high-priority tasks.
+Call: { "func_call": "avg_column", "table": "task_queue", "column": "processing_seconds", "group_by": "priority_level", "where": "priority_level = 'high'" }
+Response: { "result": 0, "groups": [{ "key": "Urgent", "value": 12.5 }, { "key": "Critical", "value": 8.2 }, { "key": "Immediate", "value": 5.1 }] }

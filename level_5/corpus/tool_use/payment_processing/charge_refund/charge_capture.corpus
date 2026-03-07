@@ -1,0 +1,51 @@
+Available Tools: charge_card | partial_refund | full_refund | capture_payment | void_payment
+Call Schema: { "func_call": "string", "customer_id": "string", "amount": number, "currency": "string", "payment_method_id": "string", "description": "string" }
+Response Schema: { "transaction_id": "string", "status": "succeeded|failed|pending", "amount": number, "currency": "string" }
+---
+Question: Charge $49.99 to customer CUST-8821 for their monthly subscription renewal using card pm_1A2B3C.
+Call: { "func_call": "charge_card", "customer_id": "CUST-8821", "amount": 49.99, "currency": "USD", "payment_method_id": "pm_1A2B3C", "description": "Monthly subscription renewal" }
+Response: { "transaction_id": "txn_9988776655", "status": "succeeded", "amount": 49.99, "currency": "USD" }
+
+Question: Process a charge of €120.50 for customer CUST-4402 regarding the premium software license purchase via pm_XYZ987.
+Call: { "func_call": "charge_card", "customer_id": "CUST-4402", "amount": 120.50, "currency": "EUR", "payment_method_id": "pm_XYZ987", "description": "Premium software license purchase" }
+Response: { "transaction_id": "txn_1122334455", "status": "succeeded", "amount": 120.50, "currency": "EUR" }
+
+Question: Capture the authorized payment of £250.00 for order #ORD-7734 belonging to customer CUST-9910.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-9910", "amount": 250.00, "currency": "GBP", "payment_method_id": "pm_GB5544", "description": "Capture payment for order #ORD-7734" }
+Response: { "transaction_id": "txn_CAP_556677", "status": "succeeded", "amount": 250.00, "currency": "GBP" }
+
+Question: Charge customer CUST-3321 $15.00 for a one-time ebook download using their saved card pm_BOOK01.
+Call: { "func_call": "charge_card", "customer_id": "CUST-3321", "amount": 15.00, "currency": "USD", "payment_method_id": "pm_BOOK01", "description": "One-time ebook download" }
+Response: { "transaction_id": "txn_EBK_123456", "status": "succeeded", "amount": 15.00, "currency": "USD" }
+
+Question: Execute a charge of €89.99 on customer CUST-7788 for the annual maintenance fee via payment method pm_MAINT99.
+Call: { "func_call": "charge_card", "customer_id": "CUST-7788", "amount": 89.99, "currency": "EUR", "payment_method_id": "pm_MAINT99", "description": "Annual maintenance fee" }
+Response: { "transaction_id": "txn_MNT_987654", "status": "succeeded", "amount": 89.99, "currency": "EUR" }
+
+Question: Capture the pending authorization of $1,250.00 for customer CUST-5543 related to consulting services.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-5543", "amount": 1250.00, "currency": "USD", "payment_method_id": "pm_CONSULT", "description": "Capture payment for consulting services" }
+Response: { "transaction_id": "txn_CNS_445566", "status": "succeeded", "amount": 1250.00, "currency": "USD" }
+
+Question: Bill customer CUST-2210 £45.75 for shipping costs on order #SH-992 using card pm_SHIP22.
+Call: { "func_call": "charge_card", "customer_id": "CUST-2210", "amount": 45.75, "currency": "GBP", "payment_method_id": "pm_SHIP22", "description": "Shipping costs for order #SH-992" }
+Response: { "transaction_id": "txn_SHP_778899", "status": "succeeded", "amount": 45.75, "currency": "GBP" }
+
+Question: Charge $299.00 to customer CUST-6655 for the deluxe package upgrade using payment method pm_DELUXE.
+Call: { "func_call": "charge_card", "customer_id": "CUST-6655", "amount": 299.00, "currency": "USD", "payment_method_id": "pm_DELUXE", "description": "Deluxe package upgrade" }
+Response: { "transaction_id": "txn_DLX_332211", "status": "succeeded", "amount": 299.00, "currency": "USD" }
+
+Question: Capture the pre-authorized amount of €340.25 for customer CUST-1199 regarding hotel booking confirmation.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-1199", "amount": 340.25, "currency": "EUR", "payment_method_id": "pm_Hotel88", "description": "Hotel booking confirmation capture" }
+Response: { "transaction_id": "txn_HTL_665544", "status": "succeeded", "amount": 340.25, "currency": "EUR" }
+
+Question: Process a charge of £12.50 for customer CUST-8832 for a digital magazine subscription via pm_MAG12.
+Call: { "func_call": "charge_card", "customer_id": "CUST-8832", "amount": 12.50, "currency": "GBP", "payment_method_id": "pm_MAG12", "description": "Digital magazine subscription" }
+Response: { "transaction_id": "txn_MAG_990011", "status": "succeeded", "amount": 12.50, "currency": "GBP" }
+
+Question: Charge customer CUST-4477 $75.00 for event registration fees using their primary card pm_EVT75.
+Call: { "func_call": "charge_card", "customer_id": "CUST-4477", "amount": 75.00, "currency": "USD", "payment_method_id": "pm_EVT75", "description": "Event registration fees" }
+Response: { "transaction_id": "txn_EVT_223344", "status": "succeeded", "amount": 75.00, "currency": "USD" }
+
+Question: Capture the held funds of €55.00 for customer CUST-3399 corresponding to a reserved workshop seat.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-3399", "amount": 55.00, "currency": "EUR", "payment_method_id": "pm_WRK55", "description": "Reserved workshop seat capture" }
+Response: { "transaction_id": "txn_WRK_554433", "status": "succeeded", "amount": 55.00, "currency": "EUR" }

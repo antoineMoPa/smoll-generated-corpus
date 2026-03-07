@@ -1,0 +1,87 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Can you get me the full details for the wireless headphones with SKU WH-900X?
+Call: { "func_call": "get_product_details", "query": "WH-900X", "category": "Electronics", "min_price": 0, "max_price": 500, "sort_by": "relevance" }
+Response: { "products": [{ "id": "WH-900X", "name": "Sony Noise Cancelling Wireless Headphones", "price": 349.99, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Show me recommendations similar to the UltraBoost Running Shoes.
+Call: { "func_call": "get_recommendations", "query": "UltraBoost Running Shoes", "category": "Footwear", "min_price": 80, "max_price": 200, "sort_by": "popularity" }
+Response: { "products": [{ "id": "UB-22-BLK", "name": "Adidas UltraBoost 22 Black", "price": 190.00, "rating": 4.7, "in_stock": true }, { "id": "NB-FRESH-X", "name": "New Balance Fresh Foam X", "price": 149.95, "rating": 4.6, "in_stock": true }, { "id": "NK-PEG-39", "name": "Nike Pegasus 39", "price": 120.00, "rating": 4.5, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: I need the product specifications for the espresso machine model Breville-BES870.
+Call: { "func_call": "get_product_details", "query": "Breville-BES870", "category": "Kitchen Appliances", "min_price": 0, "max_price": 1000, "sort_by": "relevance" }
+Response: { "products": [{ "id": "BES870XL", "name": "Breville Barista Express Espresso Machine", "price": 699.95, "rating": 4.9, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: What other laptops are recommended if I'm looking at the MacBook Pro M2?
+Call: { "func_call": "get_recommendations", "query": "MacBook Pro M2", "category": "Computers", "min_price": 1000, "max_price": 3000, "sort_by": "rating" }
+Response: { "products": [{ "id": "DL-XPS-15", "name": "Dell XPS 15 OLED", "price": 2399.00, "rating": 4.7, "in_stock": true }, { "id": "HP-SPEC-14", "name": "HP Spectre x360 14", "price": 1599.99, "rating": 4.6, "in_stock": true }, { "id": "LN-Think-X1", "name": "Lenovo ThinkPad X1 Carbon", "price": 1849.00, "rating": 4.8, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Retrieve details for the organic cotton bed sheets, queen size, SKU Lino-Queen-White.
+Call: { "func_call": "get_product_details", "query": "Lino-Queen-White", "category": "Home & Bedding", "min_price": 50, "max_price": 300, "sort_by": "price_asc" }
+Response: { "products": [{ "id": "LINO-Q-WHT", "name": "Linoto Pure Linen Sheets Queen White", "price": 245.00, "rating": 4.4, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Suggest some hiking backpacks similar to the Osprey Atmos 65.
+Call: { "func_call": "get_recommendations", "query": "Osprey Atmos 65", "category": "Outdoor Gear", "min_price": 150, "max_price": 400, "sort_by": "relevance" }
+Response: { "products": [{ "id": "GRP-TERRA-65", "name": "Gregory Terra 65 Backpack", "price": 289.95, "rating": 4.7, "in_stock": true }, { "id": "DE-AIR-60", "name": "Deuter Aircontact Lite 60+10", "price": 260.00, "rating": 4.6, "in_stock": true }, { "id": "RE-CROWN-60", "name": "REI Co-op Crown 60 Pack", "price": 199.00, "rating": 4.5, "in_stock": true }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Get me the current price and stock status for the Instant Pot Duo Plus.
+Call: { "func_call": "get_product_details", "query": "Instant Pot Duo Plus", "category": "Kitchen Appliances", "min_price": 0, "max_price": 200, "sort_by": "relevance" }
+Response: { "products": [{ "id": "IP-DUO-PLUS-9", "name": "Instant Pot Duo Plus 9-in-1", "price": 119.95, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Find alternatives to the Logitech MX Master 3 mouse.
+Call: { "func_call": "get_recommendations", "query": "Logitech MX Master 3", "category": "Computer Accessories", "min_price": 50, "max_price": 150, "sort_by": "rating" }
+Response: { "products": [{ "id": "RZR-PRO-ULTRA", "name": "Razer Pro Click Ultra", "price": 129.99, "rating": 4.5, "in_stock": true }, { "id": "MS-SURF-PRO", "name": "Microsoft Surface Precision Mouse", "price": 99.99, "rating": 4.4, "in_stock": false }, { "id": "LOG-MX-VERT", "name": "Logitech MX Vertical", "price": 89.99, "rating": 4.6, "in_stock": true }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Look up the details for the Samsung 65-inch QLED 4K TV, model QN65Q80C.
+Call: { "func_call": "get_product_details", "query": "QN65Q80C", "category": "Electronics", "min_price": 1000, "max_price": 3000, "sort_by": "relevance" }
+Response: { "products": [{ "id": "SAM-QN65Q80C", "name": "Samsung 65\" Q80C QLED 4K Smart TV", "price": 1797.99, "rating": 4.7, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Recommend some coffee grinders that pair well with the Breville espresso machine.
+Call: { "func_call": "get_recommendations", "query": "Breville espresso machine grinder", "category": "Kitchen Appliances", "min_price": 50, "max_price": 300, "sort_by": "popularity" }
+Response: { "products": [{ "id": "BAR-SETTE-PRO", "name": "Baratza Sette 270Wi", "price": 299.00, "rating": 4.6, "in_stock": true }, { "id": "FEL-PRO-EVO", "name": "Fellow Ode Brew Grinder", "price": 265.00, "rating": 4.8, "in_stock": false }, { "id": "CAP-INFINI", "name": "Capresso Infinity Conical Burr", "price": 99.99, "rating": 4.3, "in_stock": true }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: I need specs on the Yeti Rambler 30oz Tumbler.
+Call: { "func_call": "get_product_details", "query": "Yeti Rambler 30oz", "category": "Outdoor Gear", "min_price": 0, "max_price": 100, "sort_by": "relevance" }
+Response: { "products": [{ "id": "YETI-RAM-30", "name": "YETI Rambler 30 oz Tumbler with MagSlider", "price": 38.00, "rating": 4.9, "in_stock": true }], "total": 1 }

@@ -1,0 +1,95 @@
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Please apply the SUMMER30 code to my Seafood Shack order and complete the purchase.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_4102", "item_id": "", "quantity": 0, "special_instructions": "SUMMER30" }
+Response: { "order_id": "ord_5512m", "items": [{ "name": "Fish Tacos", "quantity": 2, "price": 13.00 }, { "name": "Ceviche", "quantity": 1, "price": 16.00 }], "total": 29.40, "estimated_delivery_min": 40 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Use the FRIENDS50 promo for my Dumpling Den order and submit it right away.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_7788", "item_id": "", "quantity": 0, "special_instructions": "FRIENDS50" }
+Response: { "order_id": "ord_8823n", "items": [{ "name": "Pork Dumplings", "quantity": 4, "price": 8.50 }, { "name": "Hot Pot Base", "quantity": 1, "price": 12.00 }], "total": 23.00, "estimated_delivery_min": 50 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: I need to apply the KETO15 discount to my Protein Palace order and finalize it.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_2299", "item_id": "", "quantity": 0, "special_instructions": "KETO15" }
+Response: { "order_id": "ord_1134o", "items": [{ "name": "Grilled Salmon", "quantity": 1, "price": 24.00 }, { "name": "Asparagus", "quantity": 1, "price": 7.00 }], "total": 26.35, "estimated_delivery_min": 35 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Apply the STUDENT20 code to my Campus Cafe order and place it immediately.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_6611", "item_id": "", "quantity": 0, "special_instructions": "STUDENT20" }
+Response: { "order_id": "ord_4456p", "items": [{ "name": "Club Sandwich", "quantity": 1, "price": 10.50 }, { "name": "Iced Tea", "quantity": 1, "price": 2.50 }], "total": 10.40, "estimated_delivery_min": 20 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Use the GOURMET10 promo on my French Fork order and confirm the transaction.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_9944", "item_id": "", "quantity": 0, "special_instructions": "GOURMET10" }
+Response: { "order_id": "ord_7789q", "items": [{ "name": "Coq au Vin", "quantity": 1, "price": 28.00 }, { "name": "Baguette", "quantity": 1, "price": 4.00 }], "total": 28.80, "estimated_delivery_min": 55 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Apply the SPICY25 code to my Chili Challenge order and submit it now.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_3377", "item_id": "", "quantity": 0, "special_instructions": "SPICY25" }
+Response: { "order_id": "ord_2201r", "items": [{ "name": "Ghost Pepper Wings", "quantity": 1, "price": 15.00 }, { "name": "Ranch Dip", "quantity": 2, "price": 1.50 }], "total": 13.50, "estimated_delivery_min": 30 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: I want to use the VEGAN50 promo for my Plant Power order and finalize the delivery.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_5522", "item_id": "", "quantity": 0, "special_instructions": "VEGAN50" }
+Response: { "order_id": "ord_9963s", "items": [{ "name": "Beyond Burger", "quantity": 2, "price": 14.00 }, { "name": "Sweet Potato Fries", "quantity": 1, "price": 6.00 }], "total": 17.00, "estimated_delivery_min": 45 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Apply the LOCAL100 discount to my Hometown Hero order and place it immediately.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_8855", "item_id": "", "quantity": 0, "special_instructions": "LOCAL100" }
+Response: { "order_id": "ord_3374t", "items": [{ "name": "Meatloaf Special", "quantity": 1, "price": 18.00 }, { "name": "Mashed Potatoes", "quantity": 1, "price": 5.00 }], "total": 0.00, "estimated_delivery_min": 25 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Use the DESSERT20 code on my Sweet Tooth Bakery order and confirm the purchase.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_1166", "item_id": "", "quantity": 0, "special_instructions": "DESSERT20" }
+Response: { "order_id": "ord_6685u", "items": [{ "name": "Chocolate Cake", "quantity": 1, "price": 8.00 }, { "name": "Ice Cream Scoop", "quantity": 2, "price": 4.00 }], "total": 12.80, "estimated_delivery_min": 15 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Apply the RUSH15 promo to my Quick Bite Express order and submit it now.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_4488", "item_id": "", "quantity": 0, "special_instructions": "RUSH15" }
+Response: { "order_id": "ord_5596v", "items": [{ "name": "Burrito Bowl", "quantity": 1, "price": 12.00 }, { "name": "Chips and Salsa", "quantity": 1, "price": 3.50 }], "total": 13.18, "estimated_delivery_min": 10 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: I need to use the GLOBAL25 code for my World Flavors order and finalize it.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_7733", "item_id": "", "quantity": 0, "special_instructions": "GLOBAL25" }
+Response: { "order_id": "ord_8807w", "items": [{ "name": "Lamb Gyro", "quantity": 1, "price": 13.00 }, { "name": "Falafel Plate", "quantity": 1, "price": 11.00 }], "total": 18.00, "estimated_delivery_min": 40 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Apply the COFFEE50 discount to my Morning Brew order and place it right now.
+Call: { "func_call": "apply_promo", "restaurant_id": "rest_2211", "item_id": "", "quantity": 0, "special_instructions": "COFFEE50" }
+Response: { "order_id": "ord_1128x", "items": [{ "name": "Latte", "quantity": 2, "price": 5.00 }, { "name": "Croissant", "quantity": 1, "price": 3.50 }], "total": 6.75, "estimated_delivery_min": 12 }

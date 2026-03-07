@@ -1,0 +1,59 @@
+Context: At the cozy café, Liam ordered a medium cappuccino and a cinnamon roll. He sat by the window to read his book.
+Input: {"question": "What did Liam order?"}
+Output: {"answer": "a medium cappuccino and a cinnamon roll"}
+
+Context: For dinner, Elena prepared four grilled chicken thighs and a quinoa salad with cucumbers. She garnished the dish with fresh parsley.
+Input: {"question": "What did Elena prepare?"}
+Output: {"answer": "four grilled chicken thighs and a quinoa salad with cucumbers"}
+
+Context: The server presented the check, mentioning that booth seven had enjoyed three craft beers and a tiramisu. The group laughed as they split the cost.
+Input: {"question": "What did booth seven enjoy?"}
+Output: {"answer": "three craft beers and a tiramisu"}
+
+Context: Carlos decided to whip up a batch of chocolate chip cookies using dark chocolate chunks and sea salt. He let them cool on a wire rack.
+Input: {"question": "What did Carlos whip up?"}
+Output: {"answer": "a batch of chocolate chip cookies"}
+
+Context: During the brunch rush, the staff cooked stacks of blueberry pancakes and piles of crispy bacon for the hungry crowd. The smell of coffee wafted through the air.
+Input: {"question": "What did the staff cook?"}
+Output: {"answer": "stacks of blueberry pancakes and piles of crispy bacon"}
+
+Context: After swimming laps, Nina stopped at a kiosk to purchase an iced tea and a banana. She rested on a towel to recover her energy.
+Input: {"question": "What did Nina purchase?"}
+Output: {"answer": "an iced tea and a banana"}
+
+Context: My uncle roasted a whole turkey with herb stuffing and served it with cranberry sauce. It was the centerpiece of the holiday feast.
+Input: {"question": "What did my uncle roast?"}
+Output: {"answer": "a whole turkey"}
+
+Context: At the taco stand, Sofia ordered a trio of fish tacos and a side of guacamole. She added extra lime juice before taking a bite.
+Input: {"question": "What did Sofia order?"}
+Output: {"answer": "a trio of fish tacos and a side of guacamole"}
+
+Context: The barista served me an iced matcha latte with almond milk and a croissant wrapped in foil. I nodded thanks and headed to work.
+Input: {"question": "What did the barista serve me?"}
+Output: {"answer": "an iced matcha latte with almond milk and a croissant"}
+
+Context: For the picnic, Rachel packed twelve ham sandwiches and a container of potato salad for the family. Everyone gathered on the checkered blanket.
+Input: {"question": "What did Rachel pack?"}
+Output: {"answer": "twelve ham sandwiches and a container of potato salad"}
+
+Context: While working overtime, Marcus munched on a handful of almonds and sipped a black coffee to stay focused. The office was silent except for typing.
+Input: {"question": "What did Marcus munch on?"}
+Output: {"answer": "a handful of almonds"}
+
+Context: The daily special today is a mushroom risotto topped with parmesan cheese and truffle oil. Several diners have requested this item.
+Input: {"question": "What is the daily special?"}
+Output: {"answer": "a mushroom risotto topped with parmesan cheese and truffle oil"}
+
+Context: On Friday evenings, we always bake wooden-fired pizzas topped with mozzarella and fresh basil. It is a ritual we never skip.
+Input: {"question": "What do we bake on Friday evenings?"}
+Output: {"answer": "wooden-fired pizzas topped with mozzarella and fresh basil"}
+
+Context: The courier delivered a bag containing a vegetable stir-fry and two fortune cookies. I eagerly untied the knot to see the meal.
+Input: {"question": "What did the courier deliver?"}
+Output: {"answer": "a bag containing a vegetable stir-fry and two fortune cookies"}
+
+Context: To mark her promotion, Jessica enjoyed a piece of lemon tart and a cup of chamomile tea. Her colleagues cheered softly in the background.
+Input: {"question": "What did Jessica enjoy?"}
+Output: {"answer": "a piece of lemon tart"}

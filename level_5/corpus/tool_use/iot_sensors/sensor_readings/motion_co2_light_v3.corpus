@@ -1,0 +1,51 @@
+Available Tools: get_sensor_reading | get_all_sensors | get_sensor_by_location | get_sensor_battery
+Call Schema: { "func_call": "string", "sensor_id": "string", "location": "string", "type": "temperature|humidity|motion|co2|light" }
+Response Schema: { "sensor_id": "string", "type": "string", "value": number, "unit": "string", "timestamp": "string", "battery_pct": number }
+---
+Question: What is the temperature reading in the warehouse loading dock?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "WH-TEMP-09", "location": "Warehouse Loading Dock", "type": "temperature" }
+Response: { "sensor_id": "WH-TEMP-09", "type": "temperature", "value": 18.5, "unit": "celsius", "timestamp": "2023-10-27T15:01:10Z", "battery_pct": 84 }
+
+Question: Check the humidity levels in the greenhouse section B.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "GH-HUM-07", "location": "Greenhouse Section B", "type": "humidity" }
+Response: { "sensor_id": "GH-HUM-07", "type": "humidity", "value": 62, "unit": "percent", "timestamp": "2023-10-27T15:01:15Z", "battery_pct": 91 }
+
+Question: Is there any motion detected in the storage closet?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "STOR-MOT-12", "location": "Storage Closet", "type": "motion" }
+Response: { "sensor_id": "STOR-MOT-12", "type": "motion", "value": 0, "unit": "boolean", "timestamp": "2023-10-27T15:01:22Z", "battery_pct": 55 }
+
+Question: How high is the CO2 concentration in the chemistry lab?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "CHEM-CO2-05", "location": "Chemistry Lab", "type": "co2" }
+Response: { "sensor_id": "CHEM-CO2-05", "type": "co2", "value": 740, "unit": "ppm", "timestamp": "2023-10-27T15:01:28Z", "battery_pct": 79 }
+
+Question: What is the current light intensity in the art studio?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "ART-LGT-04", "location": "Art Studio", "type": "light" }
+Response: { "sensor_id": "ART-LGT-04", "type": "light", "value": 890, "unit": "lux", "timestamp": "2023-10-27T15:01:35Z", "battery_pct": 66 }
+
+Question: Get the temperature inside the server rack enclosure.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "RACK-TEMP-02", "location": "Server Rack Enclosure", "type": "temperature" }
+Response: { "sensor_id": "RACK-TEMP-02", "type": "temperature", "value": 24.2, "unit": "celsius", "timestamp": "2023-10-27T15:01:40Z", "battery_pct": 97 }
+
+Question: Monitor the humidity in the wine cellar.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "WINE-HUM-01", "location": "Wine Cellar", "type": "humidity" }
+Response: { "sensor_id": "WINE-HUM-01", "type": "humidity", "value": 70, "unit": "percent", "timestamp": "2023-10-27T15:01:45Z", "battery_pct": 88 }
+
+Question: Detect if anyone entered the executive bathroom.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "EXEC-MOT-06", "location": "Executive Bathroom", "type": "motion" }
+Response: { "sensor_id": "EXEC-MOT-06", "type": "motion", "value": 1, "unit": "boolean", "timestamp": "2023-10-27T15:01:50Z", "battery_pct": 42 }
+
+Question: Retrieve the carbon dioxide data for the cafeteria.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "CAF-CO2-08", "location": "Cafeteria", "type": "co2" }
+Response: { "sensor_id": "CAF-CO2-08", "type": "co2", "value": 920, "unit": "ppm", "timestamp": "2023-10-27T15:01:55Z", "battery_pct": 61 }
+
+Question: Measure the ambient lighting in the parking garage level 2.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "PARK-LGT-03", "location": "Parking Garage Level 2", "type": "light" }
+Response: { "sensor_id": "PARK-LGT-03", "type": "light", "value": 85, "unit": "lux", "timestamp": "2023-10-27T15:02:00Z", "battery_pct": 73 }
+
+Question: What is the temperature in the pediatric waiting room?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "PED-TEMP-04", "location": "Pediatric Waiting Room", "type": "temperature" }
+Response: { "sensor_id": "PED-TEMP-04", "type": "temperature", "value": 21.8, "unit": "celsius", "timestamp": "2023-10-27T15:02:05Z", "battery_pct": 80 }
+
+Question: Check the humidity sensor in the indoor pool area.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "POOL-HUM-02", "location": "Indoor Pool Area", "type": "humidity" }
+Response: { "sensor_id": "POOL-HUM-02", "type": "humidity", "value": 58, "unit": "percent", "timestamp": "2023-10-27T15:02:10Z", "battery_pct": 94 }

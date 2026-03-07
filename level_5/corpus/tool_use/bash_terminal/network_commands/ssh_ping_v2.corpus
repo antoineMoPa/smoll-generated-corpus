@@ -1,0 +1,51 @@
+Available Tools: curl_get | curl_post | wget_download | ssh_command | ping_host
+Call Schema: { "func_call": "string", "url": "string", "host": "string", "options": "string" }
+Response Schema: { "status_code": number, "output": "string", "elapsed_ms": number }
+---
+Question: Test connectivity to the payment gateway at pay-gw-eu-central.internal.
+Call: { "func_call": "ping_host", "url": "", "host": "pay-gw-eu-central.internal", "options": "-c 5 -i 0.5" }
+Response: { "status_code": 0, "output": "PING pay-gw-eu-central.internal (10.20.30.40): 56 data bytes\n64 bytes from 10.20.30.40: icmp_seq=0 ttl=62 time=2.1 ms\n64 bytes from 10.20.30.40: icmp_seq=1 ttl=62 time=2.3 ms\n64 bytes from 10.20.30.40: icmp_seq=2 ttl=62 time=2.0 ms\n64 bytes from 10.20.30.40: icmp_seq=3 ttl=62 time=2.2 ms\n64 bytes from 10.20.30.40: icmp_seq=4 ttl=62 time=2.1 ms\n\n--- pay-gw-eu-central.internal ping statistics ---\n5 packets transmitted, 5 received, 0% packet loss, time 4ms", "elapsed_ms": 5 }
+---
+Question: Restart the redis cache service on the node cache-master-03.
+Call: { "func_call": "ssh_command", "url": "", "host": "cache-master-03", "options": "sudo systemctl restart redis-server" }
+Response: { "status_code": 0, "output": "", "elapsed_ms": 980 }
+---
+Question: Verify network path to the object storage endpoint at 192.168.50.100.
+Call: { "func_call": "ping_host", "url": "", "host": "192.168.50.100", "options": "-c 4 -W 1" }
+Response: { "status_code": 0, "output": "PING 192.168.50.100 (192.168.50.100): 56 data bytes\n64 bytes from 192.168.50.100: icmp_seq=0 ttl=64 time=0.9 ms\n64 bytes from 192.168.50.100: icmp_seq=1 ttl=64 time=0.8 ms\n64 bytes from 192.168.50.100: icmp_seq=2 ttl=64 time=0.9 ms\n64 bytes from 192.168.50.100: icmp_seq=3 ttl=64 time=1.0 ms\n\n--- 192.168.50.100 ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3ms", "elapsed_ms": 4 }
+---
+Question: Check available inode count on the mail server mail-relay-02.
+Call: { "func_call": "ssh_command", "url": "", "host": "mail-relay-02", "options": "df -i /var/spool/mail" }
+Response: { "status_code": 0, "output": "Filesystem      Inodes   IUsed    IFree IUse% Mounted on\n/dev/sdb1      1048576   12045  1036531    2% /var/spool/mail", "elapsed_ms": 290 }
+---
+Question: Ping the load balancer VIP at 10.10.10.1 with rapid intervals.
+Call: { "func_call": "ping_host", "url": "", "host": "10.10.10.1", "options": "-c 3 -i 0.2" }
+Response: { "status_code": 0, "output": "PING 10.10.10.1 (10.10.10.1): 56 data bytes\n64 bytes from 10.10.10.1: icmp_seq=0 ttl=64 time=0.3 ms\n64 bytes from 10.10.10.1: icmp_seq=1 ttl=64 time=0.4 ms\n64 bytes from 10.10.10.1: icmp_seq=2 ttl=64 time=0.3 ms\n\n--- 10.10.10.1 ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2ms", "elapsed_ms": 3 }
+---
+Question: View the last 50 entries of the kernel log on the database replica db-replica-05.
+Call: { "func_call": "ssh_command", "url": "", "host": "db-replica-05", "options": "tail -n 50 /var/log/kern.log" }
+Response: { "status_code": 0, "output": "Nov 12 08:30:15 db-replica-05 kernel: [12345.678] EXT4-fs (sda1): mounted filesystem with ordered data mode\nNov 12 08:30:16 db-replica-05 kernel: [12346.123] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready\nNov 12 08:30:18 db-replica-05 kernel: [12348.456] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready\nNov 12 08:30:20 db-replica-05 kernel: [12350.789] postgres[9876]: started with pid 9876", "elapsed_ms": 210 }
+---
+Question: Measure round-trip time to the analytics cluster node analytics-worker-07.example.net.
+Call: { "func_call": "ping_host", "url": "", "host": "analytics-worker-07.example.net", "options": "-c 6" }
+Response: { "status_code": 0, "output": "PING analytics-worker-07.example.net (203.0.113.88): 56 data bytes\n64 bytes from 203.0.113.88: icmp_seq=0 ttl=54 time=22.4 ms\n64 bytes from 203.0.113.88: icmp_seq=1 ttl=54 time=21.9 ms\n64 bytes from 203.0.113.88: icmp_seq=2 ttl=54 time=22.1 ms\n64 bytes from 203.0.113.88: icmp_seq=3 ttl=54 time=22.5 ms\n64 bytes from 203.0.113.88: icmp_seq=4 ttl=54 time=22.0 ms\n64 bytes from 203.0.113.88: icmp_seq=5 ttl=54 time=22.3 ms\n\n--- analytics-worker-07.example.net ping statistics ---\n6 packets transmitted, 6 received, 0% packet loss, time 5ms", "elapsed_ms": 6 }
+---
+Question: Display active swarm services on the manager node swarm-mgr-01.
+Call: { "func_call": "ssh_command", "url": "", "host": "swarm-mgr-01", "options": "docker service ls --format 'table {{.Name}}\\t{{.Replicas}}\\t{{.State}}'" }
+Response: { "status_code": 0, "output": "NAME                REPLICAS            STATE\nweb_frontend        3/3                 Running\ndb_backend          1/1                 Running\nlog_collector       5/5                 Running", "elapsed_ms": 380 }
+---
+Question: Ping the secondary DNS server at 10.0.0.54 to check failover latency.
+Call: { "func_call": "ping_host", "url": "", "host": "10.0.0.54", "options": "-c 4" }
+Response: { "status_code": 0, "output": "PING 10.0.0.54 (10.0.0.54): 56 data bytes\n64 bytes from 10.0.0.54: icmp_seq=0 ttl=64 time=0.18 ms\n64 bytes from 10.0.0.54: icmp_seq=1 ttl=64 time=0.16 ms\n64 bytes from 10.0.0.54: icmp_seq=2 ttl=64 time=0.17 ms\n64 bytes from 10.0.0.54: icmp_seq=3 ttl=64 time=0.19 ms\n\n--- 10.0.0.54 ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3ms", "elapsed_ms": 4 }
+---
+Question: Inspect CPU temperature on the edge computing device edge-iota-12.
+Call: { "func_call": "ssh_command", "url": "", "host": "edge-iota-12", "options": "cat /sys/class/thermal/thermal_zone0/temp" }
+Response: { "status_code": 0, "output": "45200", "elapsed_ms": 150 }
+---
+Question: Confirm availability of the logging aggregator at log-aggregator.prod.local.
+Call: { "func_call": "ping_host", "url": "", "host": "log-aggregator.prod.local", "options": "-c 3 -q" }
+Response: { "status_code": 0, "output": "PING log-aggregator.prod.local (172.20.10.5) 56(84) bytes of data.\n\n--- log-aggregator.prod.local ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2ms\nrtt min/avg/max/mdev = 0.310/0.325/0.340/0.012 ms", "elapsed_ms": 3 }
+---
+Question: Upgrade security patches on the bastion host bastion-secure-01 interactively.
+Call: { "func_call": "ssh_command", "url": "", "host": "bastion-secure-01", "options": "sudo yum update --security" }
+Response: { "status_code": 0, "output": "Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\nResolving Dependencies\n--> Running transaction check\n---> Package openssh-server.x86_64 0:7.4p1-21.el7 will be updated\n---> Package openssh-server.x86_64 0:7.4p1-22.el7 will be an update\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package               Arch        Version                Repository       Size\n================================================================================\nUpdating:\n openssh-server        x86_64      7.4p1-22.el7           updates         450 k\n\nTransaction Summary\n================================================================================\nUpgrade  1 Package\n\nTotal download size: 450 k\nIs this ok [y/d/N]: y\nDownloading packages:\nNo Presto metadata available for updates\nopenssh-server-7.4p1-22.el7.x86_64.rpm                     | 450 kB   00:01     \nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Updating   : openssh-server-7.4p1-22.el7.x86_64                               1/2 \n  Cleanup    : openssh-server-7.4p1-21.el7.x86_64                               2/2 \n  Verifying  : openssh-server-7.4p1-22.el7.x86_64                               1/2 \n  Verifying  : openssh-server-7.4p1-21.el7.x86_64                               2/2 \n\nUpdated:\n  openssh-server.x86_64 0:7.4p1-22.el7                                           \n\nComplete!", "elapsed_ms": 18200 }

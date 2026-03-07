@@ -1,0 +1,51 @@
+Available Tools: list_commits | get_commit | create_branch | delete_branch | list_branches | compare_branches
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "branch": "string", "sha": "string" }
+Response Schema: { "commits": [{ "sha": "string", "message": "string", "author": "string", "date": "string" }], "branch": "string" }
+---
+Question: Display the latest commits on the master branch of the bio-tech/genome-sequencer repository.
+Call: { "func_call": "list_commits", "owner": "bio-tech", "repo": "genome-sequencer", "branch": "master", "sha": "" }
+Response: { "commits": [{ "sha": "aa11bb22cc33dd44ee55ff6677889900aabbccdd", "message": "feat: optimize DNA alignment algorithm", "author": "Dr. Alan Grant", "date": "2023-11-05T09:00:00Z" }, { "sha": "bb22cc33dd44ee55ff6677889900aabbccddee11", "message": "fix: correct base-pair counting error", "author": "Ellie Sattler", "date": "2023-11-04T14:20:00Z" }], "branch": "master" }
+
+Question: Retrieve information for commit ff99ee88dd77cc66bb55aa443322110099887766 in the quantum-computing/simulator repo under the experimental branch.
+Call: { "func_call": "get_commit", "owner": "quantum-computing", "repo": "simulator", "branch": "experimental", "sha": "ff99ee88dd77cc66bb55aa443322110099887766" }
+Response: { "commits": [{ "sha": "ff99ee88dd77cc66bb55aa443322110099887766", "message": "feat: implement qubit entanglement visualization", "author": "Richard Feynman Jr.", "date": "2023-11-06T11:30:00Z" }], "branch": "experimental" }
+
+Question: List all recent changes for the weather-prediction repository owned by climate-watch on the develop-ml branch.
+Call: { "func_call": "list_commits", "owner": "climate-watch", "repo": "weather-prediction", "branch": "develop-ml", "sha": "" }
+Response: { "commits": [{ "sha": "112233445566778899aabbccddeeff0011223344", "message": "feat: integrate neural network for storm tracking", "author": "Jane Goodall", "date": "2023-11-07T08:45:00Z" }, { "sha": "2233445566778899aabbccddeeff001122334455", "message": "chore: update training dataset references", "author": "David Attenborough", "date": "2023-11-06T16:10:00Z" }], "branch": "develop-ml" }
+
+Question: Get the specific commit details for 00112233445566778899aabbccddeeff00112233 from the main branch of aero-space/rocket-guidance.
+Call: { "func_call": "get_commit", "owner": "aero-space", "repo": "rocket-guidance", "branch": "main", "sha": "00112233445566778899aabbccddeeff00112233" }
+Response: { "commits": [{ "sha": "00112233445566778899aabbccddeeff00112233", "message": "fix: stabilize gyroscopic sensor readings", "author": "Elon Muskette", "date": "2023-11-08T10:05:00Z" }], "branch": "main" }
+
+Question: What are the most recent updates pushed to the beta branch of the virtual-reality/world-builder repo by meta-verse?
+Call: { "func_call": "list_commits", "owner": "meta-verse", "repo": "world-builder", "branch": "beta", "sha": "" }
+Response: { "commits": [{ "sha": "aabbccddeeff00112233445566778899aabbccdd", "message": "feat: add haptic feedback support", "author": "Mark Zuckerburg", "date": "2023-11-09T13:25:00Z" }, { "sha": "bbccddeeff00112233445566778899aabbccddee", "message": "fix: resolve texture flickering in low light", "author": "Palmer Luckey", "date": "2023-11-09T12:00:00Z" }, { "sha": "ccddeeff00112233445566778899aabbccddeeff", "message": "chore: optimize asset loading times", "author": "John Carmack", "date": "2023-11-08T18:40:00Z" }], "branch": "beta" }
+
+Question: Fetch the content of commit ddeeff00112233445566778899aabbccddeeff00 located in the hotfix/security-patch branch of fintech/secure-wallet.
+Call: { "func_call": "get_commit", "owner": "fintech", "repo": "secure-wallet", "branch": "hotfix/security-patch", "sha": "ddeeff00112233445566778899aabbccddeeff00" }
+Response: { "commits": [{ "sha": "ddeeff00112233445566778899aabbccddeeff00", "message": "fix: patch private key exposure vulnerability", "author": "Satoshi Nakamoto", "date": "2023-11-10T07:15:00Z" }], "branch": "hotfix/security-patch" }
+
+Question: Pull the commit history for the production branch of the inventory-management repo owned by supply-chain-logistics.
+Call: { "func_call": "list_commits", "owner": "supply-chain-logistics", "repo": "inventory-management", "branch": "production", "sha": "" }
+Response: { "commits": [{ "sha": "eeff00112233445566778899aabbccddeeff0011", "message": "feat: automate restocking alerts", "author": "Jeff Bezos", "date": "2023-11-11T09:30:00Z" }, { "sha": "ff00112233445566778899aabbccddeeff001122", "message": "fix: correct stock level synchronization", "author": "Tim Cook", "date": "2023-11-10T15:50:00Z" }], "branch": "production" }
+
+Question: I need to inspect commit 11223344556677889900aabbccddeeff11223344 on the feature/graphql-api branch of social-media/feed-engine.
+Call: { "func_call": "get_commit", "owner": "social-media", "repo": "feed-engine", "branch": "feature/graphql-api", "sha": "11223344556677889900aabbccddeeff11223344" }
+Response: { "commits": [{ "sha": "11223344556677889900aabbccddeeff11223344", "message": "feat: implement nested resolver caching", "author": "Lee Byron", "date": "2023-11-12T11:00:00Z" }], "branch": "feature/graphql-api" }
+
+Question: List the commits for the staging branch of the autonomous-driving/nav-system repo under car-tech-inc.
+Call: { "func_call": "list_commits", "owner": "car-tech-inc", "repo": "nav-system", "branch": "staging", "sha": "" }
+Response: { "commits": [{ "sha": "22334455667788990011aabbccddeeff22334455", "message": "feat: improve lane detection accuracy", "author": "Andrew Ng", "date": "2023-11-13T10:15:00Z" }, { "sha": "33445566778899001122aabbccddeeff33445566", "message": "fix: handle adverse weather sensor noise", "author": "Fei-Fei Li", "date": "2023-11-12T14:30:00Z" }, { "sha": "44556677889900112233aabbccddeeff44556677", "message": "chore: update map data schemas", "author": "Sebastian Thrun", "date": "2023-11-11T16:45:00Z" }], "branch": "staging" }
+
+Question: Show me the details for commit 55667788990011223344556677889900aabbccdd in the main branch of education-tech/lms-platform.
+Call: { "func_call": "get_commit", "owner": "education-tech", "repo": "lms-platform", "branch": "main", "sha": "55667788990011223344556677889900aabbccdd" }
+Response: { "commits": [{ "sha": "55667788990011223344556677889900aabbccdd", "message": "chore: upgrade video streaming library", "author": "Sal Khan", "date": "2023-11-14T08:20:00Z" }], "branch": "main" }
+
+Question: Display the recent commit activity on the release/v3.1 branch for the health-tracker repo by wellness-apps.
+Call: { "func_call": "list_commits", "owner": "wellness-apps", "repo": "health-tracker", "branch": "release/v3.1", "sha": "" }
+Response: { "commits": [{ "sha": "66778899001122334455667788990011aabbccdd", "message": "feat: add sleep cycle analysis", "author": "Dr. Sanjay Gupta", "date": "2023-11-15T12:00:00Z" }, { "sha": "77889900112233445566778899001122aabbccdd", "message": "fix: correct calorie calculation formula", "author": "Jon Kabat-Zinn", "date": "2023-11-14T17:30:00Z" }], "branch": "release/v3.1" }
+
+Question: Get the specific commit data for 8899001122334455667788990011223344556677 on the feature/offline-mode branch of productivity/todo-list.
+Call: { "func_call": "get_commit", "owner": "productivity", "repo": "todo-list", "branch": "feature/offline-mode", "sha": "8899001122334455667788990011223344556677" }
+Response: { "commits": [{ "sha": "8899001122334455667788990011223344556677", "message": "feat: enable local storage synchronization", "author": "Cal Newport", "date": "2023-11-16T09:45:00Z" }], "branch": "feature/offline-mode" }

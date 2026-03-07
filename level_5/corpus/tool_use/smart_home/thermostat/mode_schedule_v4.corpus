@@ -1,0 +1,51 @@
+Available Tools: set_temperature | get_temperature | set_mode | get_schedule
+Call Schema: { "func_call": "string", "device_id": "string", "temperature": "number|null", "mode": "string|null" }
+Response Schema: { "device_id": "string", "current_temp": "number", "target_temp": "number", "mode": "string" }
+---
+Question: Adjust the kitchen thermostat to 23 degrees for cooking dinner.
+Call: { "func_call": "set_temperature", "device_id": "therm_kit_09", "temperature": 23.0, "mode": null }
+Response: { "device_id": "therm_kit_09", "current_temp": 21.5, "target_temp": 23.0, "mode": "heat" }
+
+Question: Lower the sunroom temperature to 19 degrees before sunset.
+Call: { "func_call": "set_temperature", "device_id": "therm_sun_10", "temperature": 19.0, "mode": null }
+Response: { "device_id": "therm_sun_10", "current_temp": 24.3, "target_temp": 19.0, "mode": "cool" }
+
+Question: Raise the attic unit to 25 degrees to prevent freezing pipes.
+Call: { "func_call": "set_temperature", "device_id": "therm_att_11", "temperature": 25.0, "mode": null }
+Response: { "device_id": "therm_att_11", "current_temp": 12.8, "target_temp": 25.0, "mode": "heat" }
+
+Question: Check the current temperature reading in the library.
+Call: { "func_call": "get_temperature", "device_id": "therm_lib_12", "temperature": null, "mode": null }
+Response: { "device_id": "therm_lib_12", "current_temp": 20.1, "target_temp": 21.0, "mode": "heat" }
+
+Question: What is the sensed temperature in the laundry room right now?
+Call: { "func_call": "get_temperature", "device_id": "therm_lau_13", "temperature": null, "mode": null }
+Response: { "device_id": "therm_lau_13", "current_temp": 26.7, "target_temp": 22.0, "mode": "cool" }
+
+Question: Retrieve the temperature status for the pool house controller.
+Call: { "func_call": "get_temperature", "device_id": "therm_pool_14", "temperature": null, "mode": null }
+Response: { "device_id": "therm_pool_14", "current_temp": 18.4, "target_temp": 18.0, "mode": "off" }
+
+Question: Set the den thermostat to eco mode for energy saving tonight.
+Call: { "func_call": "set_mode", "device_id": "therm_den_15", "temperature": null, "mode": "eco" }
+Response: { "device_id": "therm_den_15", "current_temp": 22.2, "target_temp": 19.0, "mode": "eco" }
+
+Question: Change the studio apartment unit to fan-only mode.
+Call: { "func_call": "set_mode", "device_id": "therm_stu_16", "temperature": null, "mode": "fan" }
+Response: { "device_id": "therm_stu_16", "current_temp": 23.9, "target_temp": 23.9, "mode": "fan" }
+
+Question: Put the workshop heater into boost mode for quick warming.
+Call: { "func_call": "set_mode", "device_id": "therm_wrk_17", "temperature": null, "mode": "boost" }
+Response: { "device_id": "therm_wrk_17", "current_temp": 15.3, "target_temp": 28.0, "mode": "boost" }
+
+Question: Fetch the weekly heating plan for the kids' playroom.
+Call: { "func_call": "get_schedule", "device_id": "therm_play_18", "temperature": null, "mode": null }
+Response: { "device_id": "therm_play_18", "current_temp": 21.6, "target_temp": 22.5, "mode": "heat" }
+
+Question: Inspect the programmed schedule for the wine cellar cooling system.
+Call: { "func_call": "get_schedule", "device_id": "therm_wine_19", "temperature": null, "mode": null }
+Response: { "device_id": "therm_wine_19", "current_temp": 14.0, "target_temp": 13.5, "mode": "cool" }
+
+Question: Review the active schedule settings on the porch thermostat.
+Call: { "func_call": "get_schedule", "device_id": "therm_por_20", "temperature": null, "mode": null }
+Response: { "device_id": "therm_por_20", "current_temp": 17.2, "target_temp": 16.0, "mode": "off" }

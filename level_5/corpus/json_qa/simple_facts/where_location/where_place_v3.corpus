@@ -1,0 +1,59 @@
+Context: Emily parked her bicycle near the fountain in Liberty Square to watch the street performers. She stayed there until sunset.
+Input: {"question": "Where did Emily park her bicycle?"}
+Output: {"answer": "near the fountain in Liberty Square"}
+
+Context: The quarterly review will take place at 10 AM in Boardroom 4 on the third floor. Everyone must prepare their sales reports.
+Input: {"question": "Where will the quarterly review take place?"}
+Output: {"answer": "Boardroom 4"}
+
+Context: On his way home, David visited the Hardware Store on Elm Avenue to purchase a hammer and nails. He accidentally left his receipt on the counter.
+Input: {"question": "Where did David go on his way home?"}
+Output: {"answer": "Hardware Store"}
+
+Context: Our family trip is currently based in Kyoto, and we intend to explore the Fushimi Inari shrine this afternoon. The cherry blossoms are in full bloom.
+Input: {"question": "Where is the family trip currently based?"}
+Output: {"answer": "Kyoto"}
+
+Context: The furniture assembly kit was left on the back patio of 456 Maple Drive while the residents were at dinner. The delivery person noted it in the app.
+Input: {"question": "Where was the furniture kit left?"}
+Output: {"answer": "back patio of 456 Maple Drive"}
+
+Context: Nurse Johnson administers vaccines every Thursday at the Community Health Center in the north wing. Walk-ins are accepted until 4 PM.
+Input: {"question": "Where does Nurse Johnson administer vaccines?"}
+Output: {"answer": "Community Health Center"}
+
+Context: When the fire alarm sounded, the employees evacuated to the parking lot behind the building and waited for the all-clear signal. They checked their phones for news.
+Input: {"question": "Where did the employees evacuate to?"}
+Output: {"answer": "parking lot"}
+
+Context: The new bakery, Sweet Crumb, launched yesterday in the downtown plaza next to the bank. The line for donuts is already around the block.
+Input: {"question": "Where did the new bakery launch?"}
+Output: {"answer": "downtown plaza"}
+
+Context: Maria misplaced her scarf at the museum while running to catch the train this afternoon. She hopes the lost and found has it.
+Input: {"question": "Where did Maria misplace her scarf?"}
+Output: {"answer": "museum"}
+
+Context: The international art exhibition is set to open at the Modern Art Gallery in Chicago next week. Early bird passes are available online.
+Input: {"question": "Where will the art exhibition open?"}
+Output: {"answer": "Modern Art Gallery"}
+
+Context: He chose to write his thesis in the silent study hall of the public library. It was the only room without internet distractions.
+Input: {"question": "Where did he choose to write his thesis?"}
+Output: {"answer": "silent study hall of the public library"}
+
+Context: The train from Paris arrived smoothly at Central Station shortly after midnight. Travelers rushed to find taxis.
+Input: {"question": "Where did the train arrive?"}
+Output: {"answer": "Central Station"}
+
+Context: Gather us at the train terminal on 8th Avenue at 7 AM so we can board the express together. Arrive early to get good seats.
+Input: {"question": "Where should we gather?"}
+Output: {"answer": "train terminal"}
+
+Context: Locals claim the finest sushi in the city is served at Sakura House situated in the harbor district. The fish is flown in daily.
+Input: {"question": "Where is the finest sushi served?"}
+Output: {"answer": "Sakura House"}
+
+Context: The missing cat was seen hiding under the slide in Greenfield Park last night. The neighbors are organizing a search party.
+Input: {"question": "Where was the missing cat seen?"}
+Output: {"answer": "under the slide in Greenfield Park"}

@@ -1,0 +1,51 @@
+Available Tools: create_event | create_recurring_event | create_all_day_event
+Call Schema: { "func_call": "string", "title": "string", "start": "string", "end": "string", "location": "string", "description": "string" }
+Response Schema: { "event_id": "string", "title": "string", "start": "string", "end": "string", "calendar": "string" }
+---
+Question: Set up a weekly engineering stand-up every Monday at 9 AM starting next week.
+Call: { "func_call": "create_recurring_event", "title": "Engineering Stand-up", "start": "2023-10-23T09:00:00", "end": "2023-10-23T09:30:00", "location": "Conference Room B", "description": "Weekly sync for the backend team" }
+Response: { "event_id": "evt_rec_001", "title": "Engineering Stand-up", "start": "2023-10-23T09:00:00", "end": "2023-10-23T09:30:00", "calendar": "Work" }
+
+Question: Create an all-day event for Thanksgiving Day this year.
+Call: { "func_call": "create_all_day_event", "title": "Thanksgiving Day", "start": "2023-11-23", "end": "2023-11-23", "location": "", "description": "National Holiday" }
+Response: { "event_id": "evt_all_002", "title": "Thanksgiving Day", "start": "2023-11-23", "end": "2023-11-23", "calendar": "Holidays" }
+
+Question: Schedule a monthly budget review on the last Friday of every month starting November 24th.
+Call: { "func_call": "create_recurring_event", "title": "Monthly Budget Review", "start": "2023-11-24T14:00:00", "end": "2023-11-24T15:00:00", "location": "Zoom", "description": "Review expenses and forecast for next month" }
+Response: { "event_id": "evt_rec_003", "title": "Monthly Budget Review", "start": "2023-11-24T14:00:00", "end": "2023-11-24T15:00:00", "calendar": "Finance" }
+
+Question: Add Sarah Connor's birthday as an annual all-day event.
+Call: { "func_call": "create_all_day_event", "title": "Sarah Connor's Birthday", "start": "1985-05-12", "end": "1985-05-12", "location": "", "description": "Annual birthday reminder" }
+Response: { "event_id": "evt_all_004", "title": "Sarah Connor's Birthday", "start": "1985-05-12", "end": "1985-05-12", "calendar": "Personal" }
+
+Question: Set up a bi-weekly product demo every other Wednesday at 2 PM starting tomorrow.
+Call: { "func_call": "create_recurring_event", "title": "Product Demo", "start": "2023-10-25T14:00:00", "end": "2023-10-25T15:00:00", "location": "Main Auditorium", "description": "Bi-weekly showcase of new features" }
+Response: { "event_id": "evt_rec_005", "title": "Product Demo", "start": "2023-10-25T14:00:00", "end": "2023-10-25T15:00:00", "calendar": "Product" }
+
+Question: Create an all-day event for Christmas Day.
+Call: { "func_call": "create_all_day_event", "title": "Christmas Day", "start": "2023-12-25", "end": "2023-12-25", "location": "", "description": "Public Holiday" }
+Response: { "event_id": "evt_all_006", "title": "Christmas Day", "start": "2023-12-25", "end": "2023-12-25", "calendar": "Holidays" }
+
+Question: Schedule a weekly team lunch every Friday at 12:30 PM starting this week.
+Call: { "func_call": "create_recurring_event", "title": "Team Lunch", "start": "2023-10-27T12:30:00", "end": "2023-10-27T13:30:00", "location": "Cafeteria", "description": "Weekly team bonding lunch" }
+Response: { "event_id": "evt_rec_007", "title": "Team Lunch", "start": "2023-10-27T12:30:00", "end": "2023-10-27T13:30:00", "calendar": "Social" }
+
+Question: Add Independence Day as a recurring all-day event every year.
+Call: { "func_call": "create_all_day_event", "title": "Independence Day", "start": "2023-07-04", "end": "2023-07-04", "location": "", "description": "US National Holiday" }
+Response: { "event_id": "evt_all_008", "title": "Independence Day", "start": "2023-07-04", "end": "2023-07-04", "calendar": "Holidays" }
+
+Question: Create a monthly all-hands meeting on the first Tuesday of each month at 10 AM.
+Call: { "func_call": "create_recurring_event", "title": "All-Hands Meeting", "start": "2023-11-07T10:00:00", "end": "2023-11-07T11:00:00", "location": "Virtual", "description": "Monthly company-wide update" }
+Response: { "event_id": "evt_rec_009", "title": "All-Hands Meeting", "start": "2023-11-07T10:00:00", "end": "2023-11-07T11:00:00", "calendar": "Company" }
+
+Question: Set up an all-day event for New Year's Day.
+Call: { "func_call": "create_all_day_event", "title": "New Year's Day", "start": "2024-01-01", "end": "2024-01-01", "location": "", "description": "Start of the year" }
+Response: { "event_id": "evt_all_010", "title": "New Year's Day", "start": "2024-01-01", "end": "2024-01-01", "calendar": "Holidays" }
+
+Question: Schedule a weekly design critique every Thursday at 3 PM starting next week.
+Call: { "func_call": "create_recurring_event", "title": "Design Critique", "start": "2023-10-26T15:00:00", "end": "2023-10-26T16:00:00", "location": "Design Studio", "description": "Weekly review of design prototypes" }
+Response: { "event_id": "evt_rec_011", "title": "Design Critique", "start": "2023-10-26T15:00:00", "end": "2023-10-26T16:00:00", "calendar": "Design" }
+
+Question: Create an all-day event for Halloween.
+Call: { "func_call": "create_all_day_event", "title": "Halloween", "start": "2023-10-31", "end": "2023-10-31", "location": "", "description": "Spooky day" }
+Response: { "event_id": "evt_all_012", "title": "Halloween", "start": "2023-10-31", "end": "2023-10-31", "calendar": "Personal" }

@@ -1,0 +1,51 @@
+Available Tools: get_sensor_reading | get_all_sensors | get_sensor_by_location | get_sensor_battery
+Call Schema: { "func_call": "string", "sensor_id": "string", "location": "string", "type": "temperature|humidity|motion|co2|light" }
+Response Schema: { "sensor_id": "string", "type": "string", "value": number, "unit": "string", "timestamp": "string", "battery_pct": number }
+---
+Question: What is the current temperature in the server room?
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Server Room", "type": "temperature" }
+Response: { "sensor_id": "SR-TEMP-01", "type": "temperature", "value": 22.4, "unit": "Celsius", "timestamp": "2023-10-27T14:30:00Z", "battery_pct": 85 }
+
+Question: Check the humidity level in the greenhouse.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Greenhouse", "type": "humidity" }
+Response: { "sensor_id": "GH-HUM-04", "type": "humidity", "value": 68.2, "unit": "Percent", "timestamp": "2023-10-27T14:30:05Z", "battery_pct": 92 }
+
+Question: Get the reading from sensor ID TEMP-B2-09.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "TEMP-B2-09", "location": "", "type": "temperature" }
+Response: { "sensor_id": "TEMP-B2-09", "type": "temperature", "value": 19.8, "unit": "Celsius", "timestamp": "2023-10-27T14:29:55Z", "battery_pct": 45 }
+
+Question: How humid is it in the basement storage area?
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Basement Storage", "type": "humidity" }
+Response: { "sensor_id": "BS-HUM-02", "type": "humidity", "value": 42.0, "unit": "Percent", "timestamp": "2023-10-27T14:30:10Z", "battery_pct": 78 }
+
+Question: Retrieve the temperature data for the lobby.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Main Lobby", "type": "temperature" }
+Response: { "sensor_id": "LB-TEMP-00", "type": "temperature", "value": 24.1, "unit": "Celsius", "timestamp": "2023-10-27T14:30:12Z", "battery_pct": 60 }
+
+Question: What does humidity sensor HUM-KIT-03 report?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "HUM-KIT-03", "location": "", "type": "humidity" }
+Response: { "sensor_id": "HUM-KIT-03", "type": "humidity", "value": 55.5, "unit": "Percent", "timestamp": "2023-10-27T14:29:48Z", "battery_pct": 33 }
+
+Question: Is the nursery too cold? Check the temperature.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Nursery", "type": "temperature" }
+Response: { "sensor_id": "NR-TEMP-01", "type": "temperature", "value": 26.5, "unit": "Celsius", "timestamp": "2023-10-27T14:30:15Z", "battery_pct": 88 }
+
+Question: Fetch the latest humidity reading from the warehouse.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Warehouse A", "type": "humidity" }
+Response: { "sensor_id": "WH-HUM-07", "type": "humidity", "value": 38.9, "unit": "Percent", "timestamp": "2023-10-27T14:30:18Z", "battery_pct": 71 }
+
+Question: Get the temperature value for sensor OFF-TEMP-12.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "OFF-TEMP-12", "location": "", "type": "temperature" }
+Response: { "sensor_id": "OFF-TEMP-12", "type": "temperature", "value": 21.0, "unit": "Celsius", "timestamp": "2023-10-27T14:29:50Z", "battery_pct": 54 }
+
+Question: What is the moisture level in the bathroom?
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Bathroom 2", "type": "humidity" }
+Response: { "sensor_id": "B2-HUM-01", "type": "humidity", "value": 75.3, "unit": "Percent", "timestamp": "2023-10-27T14:30:20Z", "battery_pct": 95 }
+
+Question: Check the temperature in the cold storage unit.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Cold Storage", "type": "temperature" }
+Response: { "sensor_id": "CS-TEMP-05", "type": "temperature", "value": 4.2, "unit": "Celsius", "timestamp": "2023-10-27T14:30:22Z", "battery_pct": 82 }
+
+Question: Read the humidity from sensor LAB-HUM-08.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "LAB-HUM-08", "location": "", "type": "humidity" }
+Response: { "sensor_id": "LAB-HUM-08", "type": "humidity", "value": 49.7, "unit": "Percent", "timestamp": "2023-10-27T14:29:58Z", "battery_pct": 67 }

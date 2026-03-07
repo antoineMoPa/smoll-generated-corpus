@@ -1,0 +1,51 @@
+Available Tools: list_inventory | restock_item | get_low_stock | update_price
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number, "price": number }
+Response Schema: { "inventory": [{ "slot_id": "string", "name": "string", "quantity": number, "price": number }] }
+---
+Question: Display the complete stock list for the office breakroom machine.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Pringles Original", "quantity": 9, "price": 1.75 }, { "slot_id": "X2", "name": "Cheez-It Crackers", "quantity": 14, "price": 1.50 }, { "slot_id": "X3", "name": "Almonds Roasted", "quantity": 7, "price": 2.25 }, { "slot_id": "X4", "name": "Granola Bar Oat", "quantity": 22, "price": 1.25 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 16, "price": 1.60 }, { "slot_id": "Y2", "name": "Sour Patch Kids", "quantity": 11, "price": 1.40 }, { "slot_id": "Y3", "name": "Gum Peppermint", "quantity": 30, "price": 0.99 }, { "slot_id": "Y4", "name": "Rice Krispies Treat", "quantity": 19, "price": 1.35 }, { "slot_id": "Z1", "name": "Dr Pepper", "quantity": 28, "price": 2.10 }, { "slot_id": "Z2", "name": "Root Beer", "quantity": 21, "price": 2.10 }, { "slot_id": "Z3", "name": "Orange Soda", "quantity": 15, "price": 2.00 }, { "slot_id": "Z4", "name": "Lemonade Bottle", "quantity": 13, "price": 2.25 }, { "slot_id": "W1", "name": "Smart Water", "quantity": 25, "price": 1.85 }, { "slot_id": "W2", "name": "Coffee Can Cold", "quantity": 10, "price": 3.00 }, { "slot_id": "W3", "name": "Energy Drink Berry", "quantity": 6, "price": 3.25 }, { "slot_id": "W4", "name": "Coconut Water", "quantity": 8, "price": 2.50 }] }
+
+Question: Slot X3 has only 7 bags of almonds left. Please restock 15 units.
+Call: { "func_call": "restock_item", "slot_id": "X3", "quantity": 15, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X3", "name": "Almonds Roasted", "quantity": 22, "price": 2.25 }] }
+
+Question: Add 20 Twix bars to slot Y1 to fill it up.
+Call: { "func_call": "restock_item", "slot_id": "Y1", "quantity": 20, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Y1", "name": "Twix Bar", "quantity": 36, "price": 1.60 }] }
+
+Question: The Dr Pepper supply in Z1 is low; add 24 cans immediately.
+Call: { "func_call": "restock_item", "slot_id": "Z1", "quantity": 24, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Z1", "name": "Dr Pepper", "quantity": 52, "price": 2.10 }] }
+
+Question: Pull up the current inventory levels for every item in the machine.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Pringles Original", "quantity": 9, "price": 1.75 }, { "slot_id": "X2", "name": "Cheez-It Crackers", "quantity": 14, "price": 1.50 }, { "slot_id": "X3", "name": "Almonds Roasted", "quantity": 22, "price": 2.25 }, { "slot_id": "X4", "name": "Granola Bar Oat", "quantity": 22, "price": 1.25 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 36, "price": 1.60 }, { "slot_id": "Y2", "name": "Sour Patch Kids", "quantity": 11, "price": 1.40 }, { "slot_id": "Y3", "name": "Gum Peppermint", "quantity": 30, "price": 0.99 }, { "slot_id": "Y4", "name": "Rice Krispies Treat", "quantity": 19, "price": 1.35 }, { "slot_id": "Z1", "name": "Dr Pepper", "quantity": 52, "price": 2.10 }, { "slot_id": "Z2", "name": "Root Beer", "quantity": 21, "price": 2.10 }, { "slot_id": "Z3", "name": "Orange Soda", "quantity": 15, "price": 2.00 }, { "slot_id": "Z4", "name": "Lemonade Bottle", "quantity": 13, "price": 2.25 }, { "slot_id": "W1", "name": "Smart Water", "quantity": 25, "price": 1.85 }, { "slot_id": "W2", "name": "Coffee Can Cold", "quantity": 10, "price": 3.00 }, { "slot_id": "W3", "name": "Energy Drink Berry", "quantity": 6, "price": 3.25 }, { "slot_id": "W4", "name": "Coconut Water", "quantity": 8, "price": 2.50 }] }
+
+Question: Restock the Energy Drink Berry in slot W3 with 12 cans.
+Call: { "func_call": "restock_item", "slot_id": "W3", "quantity": 12, "price": 0 }
+Response: { "inventory": [{ "slot_id": "W3", "name": "Energy Drink Berry", "quantity": 18, "price": 3.25 }] }
+
+Question: Put 18 bags of Cheez-Its into slot X2.
+Call: { "func_call": "restock_item", "slot_id": "X2", "quantity": 18, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X2", "name": "Cheez-It Crackers", "quantity": 32, "price": 1.50 }] }
+
+Question: Show me the updated full inventory list to confirm the recent restocks.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Pringles Original", "quantity": 9, "price": 1.75 }, { "slot_id": "X2", "name": "Cheez-It Crackers", "quantity": 32, "price": 1.50 }, { "slot_id": "X3", "name": "Almonds Roasted", "quantity": 22, "price": 2.25 }, { "slot_id": "X4", "name": "Granola Bar Oat", "quantity": 22, "price": 1.25 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 36, "price": 1.60 }, { "slot_id": "Y2", "name": "Sour Patch Kids", "quantity": 11, "price": 1.40 }, { "slot_id": "Y3", "name": "Gum Peppermint", "quantity": 30, "price": 0.99 }, { "slot_id": "Y4", "name": "Rice Krispies Treat", "quantity": 19, "price": 1.35 }, { "slot_id": "Z1", "name": "Dr Pepper", "quantity": 52, "price": 2.10 }, { "slot_id": "Z2", "name": "Root Beer", "quantity": 21, "price": 2.10 }, { "slot_id": "Z3", "name": "Orange Soda", "quantity": 15, "price": 2.00 }, { "slot_id": "Z4", "name": "Lemonade Bottle", "quantity": 13, "price": 2.25 }, { "slot_id": "W1", "name": "Smart Water", "quantity": 25, "price": 1.85 }, { "slot_id": "W2", "name": "Coffee Can Cold", "quantity": 10, "price": 3.00 }, { "slot_id": "W3", "name": "Energy Drink Berry", "quantity": 18, "price": 3.25 }, { "slot_id": "W4", "name": "Coconut Water", "quantity": 8, "price": 2.50 }] }
+
+Question: Refill slot Y4 with 25 Rice Krispies Treats.
+Call: { "func_call": "restock_item", "slot_id": "Y4", "quantity": 25, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Y4", "name": "Rice Krispies Treat", "quantity": 44, "price": 1.35 }] }
+
+Question: We need 15 more bottles of Coconut Water in slot W4.
+Call: { "func_call": "restock_item", "slot_id": "W4", "quantity": 15, "price": 0 }
+Response: { "inventory": [{ "slot_id": "W4", "name": "Coconut Water", "quantity": 23, "price": 2.50 }] }
+
+Question: List the status of all slots in the vending unit one more time.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "X1", "name": "Pringles Original", "quantity": 9, "price": 1.75 }, { "slot_id": "X2", "name": "Cheez-It Crackers", "quantity": 32, "price": 1.50 }, { "slot_id": "X3", "name": "Almonds Roasted", "quantity": 22, "price": 2.25 }, { "slot_id": "X4", "name": "Granola Bar Oat", "quantity": 22, "price": 1.25 }, { "slot_id": "Y1", "name": "Twix Bar", "quantity": 36, "price": 1.60 }, { "slot_id": "Y2", "name": "Sour Patch Kids", "quantity": 11, "price": 1.40 }, { "slot_id": "Y3", "name": "Gum Peppermint", "quantity": 30, "price": 0.99 }, { "slot_id": "Y4", "name": "Rice Krispies Treat", "quantity": 44, "price": 1.35 }, { "slot_id": "Z1", "name": "Dr Pepper", "quantity": 52, "price": 2.10 }, { "slot_id": "Z2", "name": "Root Beer", "quantity": 21, "price": 2.10 }, { "slot_id": "Z3", "name": "Orange Soda", "quantity": 15, "price": 2.00 }, { "slot_id": "Z4", "name": "Lemonade Bottle", "quantity": 13, "price": 2.25 }, { "slot_id": "W1", "name": "Smart Water", "quantity": 25, "price": 1.85 }, { "slot_id": "W2", "name": "Coffee Can Cold", "quantity": 10, "price": 3.00 }, { "slot_id": "W3", "name": "Energy Drink Berry", "quantity": 18, "price": 3.25 }, { "slot_id": "W4", "name": "Coconut Water", "quantity": 23, "price": 2.50 }] }
+
+Question: Add 20 packs of peppermint gum to slot Y3.
+Call: { "func_call": "restock_item", "slot_id": "Y3", "quantity": 20, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Y3", "name": "Gum Peppermint", "quantity": 50, "price": 0.99 }] }

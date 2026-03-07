@@ -1,0 +1,59 @@
+Context: If the warehouse humidity rises above 70 percent, the dehumidifiers will start operating instantly. Sensors check levels every five minutes.
+Input: {"question": "What happens if the warehouse humidity rises above 70 percent?"}
+Output: {"answer": "the dehumidifiers will start operating instantly"}
+
+Context: Unless the invoice is paid by Tuesday, the delivery service will be paused. Customers cannot receive new packages until balance is cleared.
+Input: {"question": "What will happen to the delivery service if the invoice is not paid by Tuesday?"}
+Output: {"answer": "the delivery service will be paused"}
+
+Context: When the smoke detector beeps, all residents must gather at the designated assembly point. Do not re-enter the building until cleared.
+Input: {"question": "What must residents do if the smoke detector beeps?"}
+Output: {"answer": "gather at the designated assembly point"}
+
+Context: If the main power grid fails, the hospital generators will engage within ten seconds. Critical care units remain uninterrupted.
+Input: {"question": "What will the hospital generators do if the main power grid fails?"}
+Output: {"answer": "engage within ten seconds"}
+
+Context: The guarantee is cancelled if the vehicle is modified by non-approved mechanics. Unauthorized alterations void the coverage terms.
+Input: {"question": "What happens to the guarantee if the vehicle is modified by unauthorized mechanics?"}
+Output: {"answer": "The guarantee is cancelled"}
+
+Context: If snow falls during the festival, the concert will be relocated to the indoor arena. Updates will be posted by noon.
+Input: {"question": "Where will the concert be relocated if snow falls during the festival?"}
+Output: {"answer": "the indoor arena"}
+
+Context: Unless you register the device before Sunday, your warranty claim will be denied automatically. Expired registrations are not accepted.
+Input: {"question": "What will happen to your warranty claim if you do not register the device before Sunday?"}
+Output: {"answer": "your warranty claim will be denied automatically"}
+
+Context: When the fuel gauge hits empty, the car will switch to limp mode. Engine performance will be severely limited.
+Input: {"question": "What will the car do if the fuel gauge hits empty?"}
+Output: {"answer": "switch to limp mode"}
+
+Context: If the luggage dimensions exceed 62 inches, an oversize charge will be added at the counter. Weight limits also apply.
+Input: {"question": "What happens if the luggage dimensions exceed 62 inches?"}
+Output: {"answer": "an oversize charge will be added at the counter"}
+
+Context: The pool filters will activate if the water clarity sensor detects debris. This keeps the water safe for swimmers.
+Input: {"question": "What will the pool filters do if the water clarity sensor detects debris?"}
+Output: {"answer": "activate"}
+
+Context: If the operator presses the green lever, the emergency brake release will trigger. The train will move within three seconds.
+Input: {"question": "What happens if the operator presses the green lever?"}
+Output: {"answer": "the emergency brake release will trigger"}
+
+Context: Unless the window is closed tightly, the rain sensor will alert the smart home system. Check the seal before storms.
+Input: {"question": "What will happen if the window is not closed tightly?"}
+Output: {"answer": "the rain sensor will alert the smart home system"}
+
+Context: When the pedestrian signal shows walk, all cyclists must yield to people crossing. Riders should dismount if necessary.
+Input: {"question": "What must cyclists do if the pedestrian signal shows walk?"}
+Output: {"answer": "yield to people crossing"}
+
+Context: If the job applicant submits incomplete documents, the review process will be halted until next month. Complete files are mandatory.
+Input: {"question": "What will happen to the review process if the job applicant submits incomplete documents?"}
+Output: {"answer": "the review process will be halted until next month"}
+
+Context: The security patch will apply automatically if the laptop remains connected to Wi-Fi for one hour. Disconnecting may delay installation.
+Input: {"question": "What will the security patch do if the laptop remains connected to Wi-Fi for one hour?"}
+Output: {"answer": "apply automatically"}

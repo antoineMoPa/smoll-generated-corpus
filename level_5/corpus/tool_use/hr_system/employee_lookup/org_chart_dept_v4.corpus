@@ -1,0 +1,51 @@
+Available Tools: search_employee | get_employee_by_id | get_org_chart | list_employees_by_department
+Call Schema: { "func_call": "string", "query": "string", "department": "string", "employee_id": "string" }
+Response Schema: { "employees": [{ "id": "string", "name": "string", "title": "string", "department": "string", "email": "string", "manager": "string" }] }
+---
+Question: Can you display the reporting lines for the Product department?
+Call: { "func_call": "get_org_chart", "query": "", "department": "Product", "employee_id": "" }
+Response: { "employees": [{ "id": "PRD-050", "name": "Elena Rodriguez", "title": "VP of Product", "department": "Product", "email": "e.rodriguez@company.com", "manager": "" }, { "id": "PRD-051", "name": "Franklin Stone", "title": "Senior Product Manager", "department": "Product", "email": "f.stone@company.com", "manager": "PRD-050" }, { "id": "PRD-052", "name": "Grace Hopper", "title": "Product Owner", "department": "Product", "email": "g.hopper@company.com", "manager": "PRD-051" }] }
+
+Question: I need a complete list of staff in the Customer Support division.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Support", "employee_id": "" }
+Response: { "employees": [{ "id": "SUP-060", "name": "Henry Ford", "title": "Head of Support", "department": "Support", "email": "h.ford@company.com", "manager": "" }, { "id": "SUP-061", "name": "Iris West", "title": "Support Team Lead", "department": "Support", "email": "i.west@company.com", "manager": "SUP-060" }, { "id": "SUP-062", "name": "Jack Sparrow", "title": "Customer Success Agent", "department": "Support", "email": "j.sparrow@company.com", "manager": "SUP-061" }] }
+
+Question: Who is currently working in the Legal department?
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Legal", "employee_id": "" }
+Response: { "employees": [{ "id": "LEG-070", "name": "Karen Page", "title": "General Counsel", "department": "Legal", "email": "k.page@company.com", "manager": "" }, { "id": "LEG-071", "name": "Louis Litt", "title": "Senior Attorney", "department": "Legal", "email": "l.litt@company.com", "manager": "LEG-070" }, { "id": "LEG-072", "name": "Mike Ross", "title": "Paralegal", "department": "Legal", "email": "m.ross.legal@company.com", "manager": "LEG-071" }] }
+
+Question: Show me the hierarchy within the IT Operations team.
+Call: { "func_call": "get_org_chart", "query": "", "department": "IT", "employee_id": "" }
+Response: { "employees": [{ "id": "IT-080", "name": "Neo Anderson", "title": "CTO", "department": "IT", "email": "n.anderson@company.com", "manager": "" }, { "id": "IT-081", "name": "Oracle Smith", "title": "Infrastructure Manager", "department": "IT", "email": "o.smith@company.com", "manager": "IT-080" }, { "id": "IT-082", "name": "Trinity Moss", "title": "Network Administrator", "department": "IT", "email": "t.moss@company.com", "manager": "IT-081" }] }
+
+Question: Pull up the full roster for the Research and Development group.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "R&D", "employee_id": "" }
+Response: { "employees": [{ "id": "RND-090", "name": "Peter Parker", "title": "Director of R&D", "department": "R&D", "email": "p.parker@company.com", "manager": "" }, { "id": "RND-091", "name": "Tony Stark", "title": "Lead Researcher", "department": "R&D", "email": "t.stark@company.com", "manager": "RND-090" }, { "id": "RND-092", "name": "Bruce Banner", "title": "Data Scientist", "department": "R&D", "email": "b.banner@company.com", "manager": "RND-091" }] }
+
+Question: What does the organizational chart for Logistics look like?
+Call: { "func_call": "get_org_chart", "query": "", "department": "Logistics", "employee_id": "" }
+Response: { "employees": [{ "id": "LOG-100", "name": "Sarah Connor", "title": "VP of Logistics", "department": "Logistics", "email": "s.connor@company.com", "manager": "" }, { "id": "LOG-101", "name": "Kyle Reese", "title": "Warehouse Manager", "department": "Logistics", "email": "k.reese@company.com", "manager": "LOG-100" }, { "id": "LOG-102", "name": "John Doe", "title": "Supply Chain Analyst", "department": "Logistics", "email": "j.doe@company.com", "manager": "LOG-101" }] }
+
+Question: List everyone employed in the Design department.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Design", "employee_id": "" }
+Response: { "employees": [{ "id": "DSN-110", "name": "Mona Lisa", "title": "Creative Director", "department": "Design", "email": "m.lisa@company.com", "manager": "" }, { "id": "DSN-111", "name": "Vincent Van Gogh", "title": "Senior UX Designer", "department": "Design", "email": "v.gogh@company.com", "manager": "DSN-110" }, { "id": "DSN-112", "name": "Pablo Picasso", "title": "UI Designer", "department": "Design", "email": "p.picasso@company.com", "manager": "DSN-111" }] }
+
+Question: Give me the team structure for the Compliance unit.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Compliance", "employee_id": "" }
+Response: { "employees": [{ "id": "CMP-120", "name": "Atticus Finch", "title": "Chief Compliance Officer", "department": "Compliance", "email": "a.finch@company.com", "manager": "" }, { "id": "CMP-121", "name": "Erin Brockovich", "title": "Compliance Manager", "department": "Compliance", "email": "e.brockovich@company.com", "manager": "CMP-120" }, { "id": "CMP-122", "name": "Sherlock Holmes", "title": "Auditor", "department": "Compliance", "email": "s.holmes@company.com", "manager": "CMP-121" }] }
+
+Question: Retrieve the list of all employees in the Communications department.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Communications", "employee_id": "" }
+Response: { "employees": [{ "id": "COM-130", "name": "Lois Lane", "title": "VP of Communications", "department": "Communications", "email": "l.lane@company.com", "manager": "" }, { "id": "COM-131", "name": "Clark Kent", "title": "Public Relations Manager", "department": "Communications", "email": "c.kent@company.com", "manager": "COM-130" }, { "id": "COM-132", "name": "Jimmy Olsen", "title": "Content Writer", "department": "Communications", "email": "j.olsen@company.com", "manager": "COM-131" }] }
+
+Question: Show me the breakdown of the Quality Assurance team.
+Call: { "func_call": "get_org_chart", "query": "", "department": "QA", "employee_id": "" }
+Response: { "employees": [{ "id": "QA-140", "name": "Wonder Woman", "title": "Head of QA", "department": "QA", "email": "w.woman@company.com", "manager": "" }, { "id": "QA-141", "name": "Cyborg Stone", "title": "QA Lead", "department": "QA", "email": "c.stone@company.com", "manager": "QA-140" }, { "id": "QA-142", "name": "Flash Allen", "title": "Automation Engineer", "department": "QA", "email": "f.allen@company.com", "manager": "QA-141" }] }
+
+Question: I need to see the full staff list for the Training department.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Training", "employee_id": "" }
+Response: { "employees": [{ "id": "TRN-150", "name": "Yoda Master", "title": "Director of Training", "department": "Training", "email": "y.master@company.com", "manager": "" }, { "id": "TRN-151", "name": "Luke Skywalker", "title": "Senior Trainer", "department": "Training", "email": "l.skywalker@company.com", "manager": "TRN-150" }, { "id": "TRN-152", "name": "Leia Organa", "title": "Onboarding Specialist", "department": "Training", "email": "l.organa@company.com", "manager": "TRN-151" }] }
+
+Question: Display the organizational chart for the Security team.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Security", "employee_id": "" }
+Response: { "employees": [{ "id": "SEC-160", "name": "James Bond", "title": "CISO", "department": "Security", "email": "j.bond@company.com", "manager": "" }, { "id": "SEC-161", "name": "Ethan Hunt", "title": "Security Operations Manager", "department": "Security", "email": "e.hunt@company.com", "manager": "SEC-160" }, { "id": "SEC-162", "name": "Natasha Romanoff", "title": "Threat Analyst", "department": "Security", "email": "n.romanoff@company.com", "manager": "SEC-161" }] }

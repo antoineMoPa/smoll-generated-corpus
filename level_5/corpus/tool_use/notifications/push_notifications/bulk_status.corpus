@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Send a bulk marketing push about our summer sale to all users in the iOS segment.
+Call: { "func_call": "send_bulk_push", "user_id": "marketing_bot_01", "title": "Summer Sale Starts Now!", "body": "Get up to 50% off on all items. Shop before stocks run out.", "data": { "campaign_id": "SUM24-001", "segment": "ios_users", "deep_link": "myapp://sale/summer" }, "device_token": "*" }
+Response: { "notification_id": "blk_9a8b7c6d5e4f", "status": "sent", "timestamp": "2024-06-15T09:00:00Z" }
+
+Question: Check the delivery status of the critical server maintenance alert sent earlier today.
+Call: { "func_call": "get_push_status", "user_id": "sys_admin_04", "title": "Server Maintenance Alert", "body": "Scheduled downtime in 30 minutes.", "data": { "alert_level": "critical", "ticket_id": "INC-9921" }, "device_token": "tok_admin_main" }
+Response: { "notification_id": "msg_1122334455", "status": "delivered", "timestamp": "2024-06-15T14:45:22Z" }
+
+Question: Dispatch a bulk notification to premium subscribers regarding the new feature release.
+Call: { "func_call": "send_bulk_push", "user_id": "product_team_lead", "title": "New Feature: Dark Mode", "body": "Your app just got easier on the eyes. Enable Dark Mode in settings today.", "data": { "feature_flag": "dark_mode_v2", "user_tier": "premium" }, "device_token": "*" }
+Response: { "notification_id": "blk_prem_778899", "status": "sent", "timestamp": "2024-06-15T10:30:15Z" }
+
+Question: Verify if the flash sale reminder reached the Android user base successfully.
+Call: { "func_call": "get_push_status", "user_id": "campaign_manager_02", "title": "Flash Sale Ending Soon", "body": "Only 1 hour left to grab your deals!", "data": { "campaign_id": "FLASH-JUN-15", "platform": "android" }, "device_token": "tok_android_batch" }
+Response: { "notification_id": "blk_flash_445566", "status": "delivered", "timestamp": "2024-06-15T18:55:00Z" }
+
+Question: Send an urgent security patch notification to all active devices immediately.
+Call: { "func_call": "send_bulk_push", "user_id": "security_ops", "title": "Urgent Security Update Required", "body": "Please update your app to version 4.2.1 to fix a critical vulnerability.", "data": { "update_version": "4.2.1", "priority": "high", "action": "force_update" }, "device_token": "*" }
+Response: { "notification_id": "blk_sec_001122", "status": "sent", "timestamp": "2024-06-15T03:12:45Z" }
+
+Question: Retrieve the status of the weekend event reminder sent to local users in New York.
+Call: { "func_call": "get_push_status", "user_id": "events_coord_ny", "title": "Weekend Jazz Festival", "body": "Don't miss the live performance at Central Park this Saturday.", "data": { "event_id": "EVT-NY-2024", "location": "New York" }, "device_token": "tok_ny_local" }
+Response: { "notification_id": "msg_ny_998877", "status": "delivered", "timestamp": "2024-06-14T16:20:10Z" }
+
+Question: Broadcast a bulk message to loyalty program members about double points this weekend.
+Call: { "func_call": "send_bulk_push", "user_id": "loyalty_bot", "title": "Double Points Weekend!", "body": "Earn 2x points on every purchase from Friday to Sunday.", "data": { "promo_code": "DOUBLE2X", "member_tier": "gold" }, "device_token": "*" }
+Response: { "notification_id": "blk_loyal_334455", "status": "sent", "timestamp": "2024-06-14T08:00:00Z" }
+
+Question: Check the delivery report for the payment failure alert sent to specific high-value accounts.
+Call: { "func_call": "get_push_status", "user_id": "billing_system", "title": "Payment Method Expired", "body": "Your subscription will be paused unless you update your payment details.", "data": { "account_type": "enterprise", "invoice_id": "INV-2024-055" }, "device_token": "tok_ent_users" }
+Response: { "notification_id": "msg_bill_667788", "status": "failed", "timestamp": "2024-06-15T11:10:33Z" }
+
+Question: Send a bulk push notification announcing the winners of the monthly contest.
+Call: { "func_call": "send_bulk_push", "user_id": "community_mgr", "title": "Contest Winners Announced", "body": "Check the app to see if you won one of the 10 gift cards!", "data": { "contest_id": "JUNE-GIVEAWAY", "prize_count": 10 }, "device_token": "*" }
+Response: { "notification_id": "blk_cont_112233", "status": "sent", "timestamp": "2024-06-15T12:00:00Z" }
+
+Question: Investigate the status of the low battery warning sent to IoT device owners.
+Call: { "func_call": "get_push_status", "user_id": "iot_monitor", "title": "Low Battery Warning", "body": "Your connected thermostat battery is below 10%.", "data": { "device_type": "thermostat", "battery_level": 8 }, "device_token": "tok_iot_group" }
+Response: { "notification_id": "msg_iot_554433", "status": "delivered", "timestamp": "2024-06-15T07:45:12Z" }
+
+Question: Launch a bulk re-engagement campaign for users who haven't opened the app in 30 days.
+Call: { "func_call": "send_bulk_push", "user_id": "retention_bot", "title": "We Miss You!", "body": "Come back and enjoy a special 20% discount just for you.", "data": { "campaign_type": "churn_prevention", "days_inactive": 30, "coupon": "WELCOMEBACK20" }, "device_token": "*" }
+Response: { "notification_id": "blk_ret_990011", "status": "sent", "timestamp": "2024-06-15T15:30:00Z" }
+
+Question: Confirm the delivery status of the system-wide outage resolution notice.
+Call: { "func_call": "get_push_status", "user_id": "status_page_bot", "title": "Service Restored", "body": "All systems are operational. Thank you for your patience.", "data": { "incident_id": "OUT-2024-0615", "resolution_time": "45m" }, "device_token": "tok_all_users" }
+Response: { "notification_id": "msg_ops_223344", "status": "delivered", "timestamp": "2024-06-15T13:25:50Z" }

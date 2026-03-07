@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: Check if we have enough wireless mice in the Chicago warehouse, considering our reorder point is 15 units.
+Call: { "func_call": "check_availability", "sku": "WM-2024-BLK", "location_id": "CHI-WH-01", "threshold": 15 }
+Response: { "sku": "WM-2024-BLK", "product_name": "Wireless Mouse Black", "quantity": 8, "location": "CHI-WH-01", "status": "low_stock" }
+
+Question: What is the current stock level for the ergonomic keyboard at our New York distribution center?
+Call: { "func_call": "get_stock_level", "sku": "KB-ERG-USB", "location_id": "NYC-DC-05", "threshold": 0 }
+Response: { "sku": "KB-ERG-USB", "product_name": "Ergonomic Keyboard USB", "quantity": 142, "location": "NYC-DC-05", "status": "in_stock" }
+
+Question: List all items in the Seattle facility that have dropped below the safety threshold of 20 units.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "SEA-FAC-03", "threshold": 20 }
+Response: { "sku": "HD-4K-MON", "product_name": "4K Monitor 27inch", "quantity": 5, "location": "SEA-FAC-03", "status": "low_stock" }
+
+Question: Retrieve the inventory count for HDMI cables across all shelves in the Dallas depot.
+Call: { "func_call": "get_stock_by_location", "sku": "CBL-HDM-6FT", "location_id": "DAL-DEP-02", "threshold": 0 }
+Response: { "sku": "CBL-HDM-6FT", "product_name": "HDMI Cable 6ft", "quantity": 310, "location": "DAL-DEP-02", "status": "in_stock" }
+
+Question: Is the gaming headset out of stock in the London hub if our minimum required is 10?
+Call: { "func_call": "check_availability", "sku": "HS-GM-RGB", "location_id": "LON-HUB-09", "threshold": 10 }
+Response: { "sku": "HS-GM-RGB", "product_name": "Gaming Headset RGB", "quantity": 0, "location": "LON-HUB-09", "status": "out_of_stock" }
+
+Question: Check the stock status for USB-C hubs in the Toronto warehouse against a threshold of 25.
+Call: { "func_call": "get_stock_level", "sku": "HUB-USBC-7P", "location_id": "TOR-WH-04", "threshold": 25 }
+Response: { "sku": "HUB-USBC-7P", "product_name": "USB-C Hub 7-Port", "quantity": 22, "location": "TOR-WH-04", "status": "low_stock" }
+
+Question: Find any low stock items in the Berlin fulfillment center where the threshold is set to 50 units.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "BER-FUL-07", "threshold": 50 }
+Response: { "sku": "LAP-PRO-15", "product_name": "Laptop Pro 15 inch", "quantity": 12, "location": "BER-FUL-07", "status": "low_stock" }
+
+Question: How many mechanical keyboards are currently stored in the Austin regional office?
+Call: { "func_call": "get_stock_by_location", "sku": "KB-MECH-BLU", "location_id": "AUS-REG-06", "threshold": 0 }
+Response: { "sku": "KB-MECH-BLU", "product_name": "Mechanical Keyboard Blue Switch", "quantity": 67, "location": "AUS-REG-06", "status": "in_stock" }
+
+Question: Verify availability of external SSDs in the Singapore node, alerting if stock falls below 30.
+Call: { "func_call": "check_availability", "sku": "SSD-EXT-1TB", "location_id": "SIN-NODE-08", "threshold": 30 }
+Response: { "sku": "SSD-EXT-1TB", "product_name": "External SSD 1TB", "quantity": 45, "location": "SIN-NODE-08", "status": "in_stock" }
+
+Question: Get the stock level for webcams in the Paris warehouse with a critical threshold of 5.
+Call: { "func_call": "get_stock_level", "sku": "CAM-WEB-1080", "location_id": "PAR-WH-11", "threshold": 5 }
+Response: { "sku": "CAM-WEB-1080", "product_name": "Webcam 1080p", "quantity": 3, "location": "PAR-WH-11", "status": "low_stock" }
+
+Question: Identify all products in the Miami storage unit that are below the reorder point of 100.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "MIA-STO-10", "threshold": 100 }
+Response: { "sku": "PWR-BRK-65W", "product_name": "Power Brick 65W", "quantity": 40, "location": "MIA-STO-10", "status": "low_stock" }
+
+Question: Check the quantity of docking stations available in the Tokyo logistics center.
+Call: { "func_call": "get_stock_by_location", "sku": "DOC-UNI-THU", "location_id": "TKY-LOG-12", "threshold": 0 }
+Response: { "sku": "DOC-UNI-THU", "product_name": "Universal Docking Station", "quantity": 88, "location": "TKY-LOG-12", "status": "in_stock" }

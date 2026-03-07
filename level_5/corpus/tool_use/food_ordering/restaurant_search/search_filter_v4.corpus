@@ -1,0 +1,51 @@
+Available Tools: search_restaurants | filter_by_cuisine | get_restaurant_menu | get_restaurant_details
+Call Schema: { "func_call": "string", "location": "string", "cuisine": "string", "max_delivery_time": number, "min_rating": number }
+Response Schema: { "restaurants": [{ "id": "string", "name": "string", "cuisine": "string", "rating": number, "delivery_time_min": number }], "total": number }
+---
+Question: I'm looking for French bistros in Philadelphia that can arrive in under 55 minutes with a rating of at least 4.4.
+Call: { "func_call": "search_restaurants", "location": "Philadelphia", "cuisine": "French", "max_delivery_time": 55, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_022", "name": "Le Petit Coin", "cuisine": "French", "rating": 4.6, "delivery_time_min": 45 }, { "id": "rest_023", "name": "Parisian Plate", "cuisine": "French", "rating": 4.5, "delivery_time_min": 50 }], "total": 2 }
+
+Question: Find me some Japanese sushi places in San Diego with a minimum rating of 4.2 and delivery within 40 minutes.
+Call: { "func_call": "search_restaurants", "location": "San Diego", "cuisine": "Japanese", "max_delivery_time": 40, "min_rating": 4.2 }
+Response: { "restaurants": [{ "id": "rest_024", "name": "Pacific Roll House", "cuisine": "Japanese", "rating": 4.3, "delivery_time_min": 35 }, { "id": "rest_025", "name": "Sushi Bay", "cuisine": "Japanese", "rating": 4.7, "delivery_time_min": 38 }], "total": 2 }
+
+Question: Are there any Greek restaurants in Las Vegas that deliver in 30 minutes or less and have a 4.0+ rating?
+Call: { "func_call": "search_restaurants", "location": "Las Vegas", "cuisine": "Greek", "max_delivery_time": 30, "min_rating": 4.0 }
+Response: { "restaurants": [{ "id": "rest_026", "name": "Olympus Grill", "cuisine": "Greek", "rating": 4.1, "delivery_time_min": 28 }], "total": 1 }
+
+Question: Search for Korean BBQ options in Los Angeles with a high rating of 4.5 or better, delivery time up to 65 minutes.
+Call: { "func_call": "search_restaurants", "location": "Los Angeles", "cuisine": "Korean", "max_delivery_time": 65, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_027", "name": "Seoul Fire", "cuisine": "Korean", "rating": 4.8, "delivery_time_min": 55 }, { "id": "rest_028", "name": "K-Town BBQ", "cuisine": "Korean", "rating": 4.6, "delivery_time_min": 60 }], "total": 2 }
+
+Question: I need Vietnamese pho in Minneapolis, anything rated 3.9 or higher that arrives within 50 minutes.
+Call: { "func_call": "search_restaurants", "location": "Minneapolis", "cuisine": "Vietnamese", "max_delivery_time": 50, "min_rating": 3.9 }
+Response: { "restaurants": [{ "id": "rest_029", "name": "Mekong Noodles", "cuisine": "Vietnamese", "rating": 4.0, "delivery_time_min": 42 }, { "id": "rest_030", "name": "Saigon Street", "cuisine": "Vietnamese", "rating": 4.2, "delivery_time_min": 48 }], "total": 2 }
+
+Question: Locate Spanish tapas spots in Dallas with a minimum rating of 4.3 and a max delivery window of 45 minutes.
+Call: { "func_call": "search_restaurants", "location": "Dallas", "cuisine": "Spanish", "max_delivery_time": 45, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_031", "name": "Barcelona Bites", "cuisine": "Spanish", "rating": 4.5, "delivery_time_min": 40 }], "total": 1 }
+
+Question: Can you find Lebanese restaurants in Detroit that have at least 4.1 stars and deliver in under an hour?
+Call: { "func_call": "search_restaurants", "location": "Detroit", "cuisine": "Lebanese", "max_delivery_time": 60, "min_rating": 4.1 }
+Response: { "restaurants": [{ "id": "rest_032", "name": "Cedar House", "cuisine": "Lebanese", "rating": 4.4, "delivery_time_min": 50 }, { "id": "rest_033", "name": "Beirut Express", "cuisine": "Lebanese", "rating": 4.2, "delivery_time_min": 55 }], "total": 2 }
+
+Question: Show me Brazilian steakhouses in Orlando with a rating above 4.6 and delivery time under 70 minutes.
+Call: { "func_call": "search_restaurants", "location": "Orlando", "cuisine": "Brazilian", "max_delivery_time": 70, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_034", "name": "Rio Grande Grill", "cuisine": "Brazilian", "rating": 4.7, "delivery_time_min": 65 }], "total": 1 }
+
+Question: I'm craving Ethiopian food in Washington DC, looking for places with 4.0+ ratings and delivery within 55 minutes.
+Call: { "func_call": "search_restaurants", "location": "Washington DC", "cuisine": "Ethiopian", "max_delivery_time": 55, "min_rating": 4.0 }
+Response: { "restaurants": [{ "id": "rest_035", "name": "Addis Ababa Kitchen", "cuisine": "Ethiopian", "rating": 4.3, "delivery_time_min": 45 }, { "id": "rest_036", "name": "Blue Nile Cafe", "cuisine": "Ethiopian", "rating": 4.1, "delivery_time_min": 52 }], "total": 2 }
+
+Question: Find Chinese dim sum in San Jose that can deliver in 35 minutes or less with a minimum rating of 4.4.
+Call: { "func_call": "search_restaurants", "location": "San Jose", "cuisine": "Chinese", "max_delivery_time": 35, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_037", "name": "Golden Dragon Dim Sum", "cuisine": "Chinese", "rating": 4.6, "delivery_time_min": 30 }, { "id": "rest_038", "name": "Jade Palace", "cuisine": "Chinese", "rating": 4.5, "delivery_time_min": 33 }], "total": 2 }
+
+Question: Search for German breweries and eateries in Milwaukee with a rating of at least 3.8 and delivery under 40 minutes.
+Call: { "func_call": "search_restaurants", "location": "Milwaukee", "cuisine": "German", "max_delivery_time": 40, "min_rating": 3.8 }
+Response: { "restaurants": [{ "id": "rest_039", "name": "Bavarian Hall", "cuisine": "German", "rating": 4.0, "delivery_time_min": 35 }], "total": 1 }
+
+Question: Help me locate Caribbean jerk chicken spots in Tampa with a 4.2+ rating and max delivery time of 50 minutes.
+Call: { "func_call": "search_restaurants", "location": "Tampa", "cuisine": "Caribbean", "max_delivery_time": 50, "min_rating": 4.2 }
+Response: { "restaurants": [{ "id": "rest_040", "name": "Island Spice", "cuisine": "Caribbean", "rating": 4.5, "delivery_time_min": 45 }, { "id": "rest_041", "name": "Jerk Town", "cuisine": "Caribbean", "rating": 4.3, "delivery_time_min": 48 }], "total": 2 }

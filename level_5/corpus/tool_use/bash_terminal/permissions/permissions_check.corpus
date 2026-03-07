@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Check the current permissions for the nginx configuration file at /etc/nginx/nginx.conf.
+Call: { "func_call": "check_permissions", "path": "/etc/nginx/nginx.conf", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Add the user 'deploy_bot' to the 'docker' group so they can manage containers.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "deploy_bot:docker" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Fix the permissions on the private SSH key located at /home/alice/.ssh/id_rsa to be readable only by the owner.
+Call: { "func_call": "chmod", "path": "/home/alice/.ssh/id_rsa", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-------" }
+
+Question: Change the ownership of the web root directory /var/www/html to the 'www-data' user and group.
+Call: { "func_call": "chown", "path": "/var/www/html", "mode": "", "owner": "www-data:www-data" }
+Response: { "success": true, "previous_mode": "drwxr-xr-x", "new_mode": "drwxr-xr-x" }
+
+Question: Verify the permissions on the cron log file /var/log/cron.log before rotating it.
+Call: { "func_call": "check_permissions", "path": "/var/log/cron.log", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r-----", "new_mode": "-rw-r-----" }
+
+Question: Grant the 'backup_admin' user membership in the 'tape' group for accessing backup drives.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "backup_admin:tape" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Make the startup script /opt/app/startup.sh executable for everyone.
+Call: { "func_call": "chmod", "path": "/opt/app/startup.sh", "mode": "755", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rwxr-xr-x" }
+
+Question: Transfer ownership of the database dump /tmp/db_backup.sql to the 'postgres' user.
+Call: { "func_call": "chown", "path": "/tmp/db_backup.sql", "mode": "", "owner": "postgres:postgres" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Check if the firewall rules file /etc/iptables/rules.v4 has the correct restrictive permissions.
+Call: { "func_call": "check_permissions", "path": "/etc/iptables/rules.v4", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Add the developer 'sarah' to the 'sudo' group to allow administrative access.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "sarah:sudo" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Set the sticky bit on the shared temporary directory /tmp/shared_projects so users can only delete their own files.
+Call: { "func_call": "chmod", "path": "/tmp/shared_projects", "mode": "1777", "owner": "" }
+Response: { "success": true, "previous_mode": "drwxrwxrwx", "new_mode": "drwxrwxrwt" }
+
+Question: Change the owner of the mail spool directory /var/mail to the 'mail' group while keeping the root user.
+Call: { "func_call": "chown", "path": "/var/mail", "mode": "", "owner": "root:mail" }
+Response: { "success": true, "previous_mode": "drwxrwsr-x", "new_mode": "drwxrwsr-x" }

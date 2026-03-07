@@ -1,0 +1,51 @@
+Available Tools: list_processes | kill_process | get_process_info | top_processes
+Call Schema: { "func_call": "string", "pid": number, "name": "string", "signal": "string" }
+Response Schema: { "processes": [{ "pid": number, "name": "string", "cpu": number, "mem": number }] }
+---
+Question: Show me all the currently running processes on the system.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 1024, "name": "nginx", "cpu": 0.5, "mem": 1.2 }, { "pid": 1025, "name": "python", "cpu": 2.3, "mem": 4.5 }, { "pid": 1026, "name": "node", "cpu": 1.1, "mem": 3.2 }] }
+
+Question: I need to terminate the python script running as process 4592 immediately.
+Call: { "func_call": "kill_process", "pid": 4592, "name": "python", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 4592, "name": "python", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: What are the top 5 processes consuming the most CPU right now?
+Call: { "func_call": "top_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 8821, "name": "chrome", "cpu": 45.2, "mem": 12.4 }, { "pid": 8822, "name": "chrome", "cpu": 32.1, "mem": 8.9 }, { "pid": 3301, "name": "mysql", "cpu": 15.5, "mem": 22.1 }] }
+
+Question: Please send a graceful termination signal to the nginx worker process 2048.
+Call: { "func_call": "kill_process", "pid": 2048, "name": "nginx", "signal": "SIGTERM" }
+Response: { "processes": [{ "pid": 2048, "name": "nginx", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: List all processes and filter for any named 'node'.
+Call: { "func_call": "list_processes", "pid": 0, "name": "node", "signal": "" }
+Response: { "processes": [{ "pid": 5501, "name": "node", "cpu": 3.4, "mem": 5.6 }, { "pid": 5502, "name": "node", "cpu": 0.2, "mem": 1.1 }] }
+
+Question: The mysql process 7734 is unresponsive, force kill it now.
+Call: { "func_call": "kill_process", "pid": 7734, "name": "mysql", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 7734, "name": "mysql", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Get me the details for process 9912 which should be a chrome instance.
+Call: { "func_call": "get_process_info", "pid": 9912, "name": "chrome", "signal": "" }
+Response: { "processes": [{ "pid": 9912, "name": "chrome", "cpu": 12.8, "mem": 15.3 }] }
+
+Question: Find all running instances of python and show their resource usage.
+Call: { "func_call": "list_processes", "pid": 0, "name": "python", "signal": "" }
+Response: { "processes": [{ "pid": 3101, "name": "python", "cpu": 5.5, "mem": 8.2 }, { "pid": 3105, "name": "python", "cpu": 0.1, "mem": 2.4 }, { "pid": 3110, "name": "python", "cpu": 12.0, "mem": 14.1 }] }
+
+Question: Stop the node application on port 3000, process ID 6621, using the default terminate signal.
+Call: { "func_call": "kill_process", "pid": 6621, "name": "node", "signal": "SIGTERM" }
+Response: { "processes": [{ "pid": 6621, "name": "node", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Display the current status of the nginx master process 101.
+Call: { "func_call": "get_process_info", "pid": 101, "name": "nginx", "signal": "" }
+Response: { "processes": [{ "pid": 101, "name": "nginx", "cpu": 0.3, "mem": 0.8 }] }
+
+Question: I see a zombie chrome process 9999, please ensure it is killed.
+Call: { "func_call": "kill_process", "pid": 9999, "name": "chrome", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 9999, "name": "chrome", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: List every process currently active on the server regardless of name.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 1, "name": "systemd", "cpu": 0.1, "mem": 0.5 }, { "pid": 202, "name": "sshd", "cpu": 0.0, "mem": 0.3 }, { "pid": 404, "name": "cron", "cpu": 0.0, "mem": 0.2 }] }

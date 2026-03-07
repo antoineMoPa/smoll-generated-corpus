@@ -1,0 +1,51 @@
+Available Tools: get_historical_readings | get_average_reading | get_min_max | export_sensor_data
+Call Schema: { "func_call": "string", "sensor_id": "string", "from": "string", "to": "string", "interval": "string" }
+Response Schema: { "sensor_id": "string", "readings": [{ "timestamp": "string", "value": number }], "avg": number, "min": number, "max": number }
+---
+Question: Retrieve the minimum and maximum wind speed readings for sensor WIND-11 on the rooftop tower between dawn and dusk yesterday, using a 30-minute interval.
+Call: { "func_call": "get_min_max", "sensor_id": "WIND-11", "from": "2023-10-25T06:00:00Z", "to": "2023-10-25T18:00:00Z", "interval": "30m" }
+Response: { "sensor_id": "WIND-11", "readings": [], "avg": 12.8, "min": 3.5, "max": 24.2 }
+
+Question: Export all rainfall accumulation data from sensor RAIN-202 located in the botanical garden for the past month as a CSV file for the landscaping crew.
+Call: { "func_call": "export_sensor_data", "sensor_id": "RAIN-202", "from": "2023-09-26T00:00:00Z", "to": "2023-10-26T23:59:59Z", "interval": "1h" }
+Response: { "sensor_id": "RAIN-202", "readings": [{ "timestamp": "2023-10-26T14:00:00Z", "value": 2.4 }, { "timestamp": "2023-10-26T15:00:00Z", "value": 5.1 }], "avg": 1.8, "min": 0.0, "max": 18.5 }
+
+Question: Check sensor RAD-55 in the radiology lab for any radiation spikes by getting the min and max values over the last 6 hours with 5-minute intervals.
+Call: { "func_call": "get_min_max", "sensor_id": "RAD-55", "from": "2023-10-26T08:00:00Z", "to": "2023-10-26T14:00:00Z", "interval": "5m" }
+Response: { "sensor_id": "RAD-55", "readings": [], "avg": 0.12, "min": 0.08, "max": 0.19 }
+
+Question: Generate a CSV export of torque data for engine sensor TRQ-88 from the maintenance window start until now to assess mechanical stress.
+Call: { "func_call": "export_sensor_data", "sensor_id": "TRQ-88", "from": "2023-10-26T10:00:00Z", "to": "2023-10-26T16:00:00Z", "interval": "2m" }
+Response: { "sensor_id": "TRQ-88", "readings": [{ "timestamp": "2023-10-26T15:58:00Z", "value": 320.5 }, { "timestamp": "2023-10-26T16:00:00Z", "value": 325.0 }], "avg": 310.2, "min": 280.0, "max": 340.8 }
+
+Question: What were the lowest and highest pH levels recorded by sensor PH-303 in the aquarium tank during the feeding cycle this morning?
+Call: { "func_call": "get_min_max", "sensor_id": "PH-303", "from": "2023-10-26T07:00:00Z", "to": "2023-10-26T09:00:00Z", "interval": "10m" }
+Response: { "sensor_id": "PH-303", "readings": [], "avg": 7.4, "min": 7.1, "max": 7.8 }
+
+Question: Export the full UV index log from sensor UV-101 on the solar panel array for the entire week to evaluate exposure risks.
+Call: { "func_call": "export_sensor_data", "sensor_id": "UV-101", "from": "2023-10-19T00:00:00Z", "to": "2023-10-26T23:59:59Z", "interval": "1h" }
+Response: { "sensor_id": "UV-101", "readings": [{ "timestamp": "2023-10-26T12:00:00Z", "value": 8.2 }, { "timestamp": "2023-10-26T13:00:00Z", "value": 7.9 }], "avg": 4.5, "min": 0.0, "max": 9.5 }
+
+Question: Identify potential overheating events by retrieving the min and max temperatures from sensor HEAT-99 in the server rack over the last 12 hours.
+Call: { "func_call": "get_min_max", "sensor_id": "HEAT-99", "from": "2023-10-26T02:00:00Z", "to": "2023-10-26T14:00:00Z", "interval": "15m" }
+Response: { "sensor_id": "HEAT-99", "readings": [], "avg": 45.2, "min": 38.0, "max": 52.5 }
+
+Question: Create a downloadable CSV report of oxygen saturation levels from sensor O2-44 in the hospital ward for the night shift to monitor patient safety.
+Call: { "func_call": "export_sensor_data", "sensor_id": "O2-44", "from": "2023-10-25T20:00:00Z", "to": "2023-10-26T08:00:00Z", "interval": "30m" }
+Response: { "sensor_id": "O2-44", "readings": [{ "timestamp": "2023-10-26T02:00:00Z", "value": 98.5 }, { "timestamp": "2023-10-26T02:30:00Z", "value": 98.2 }], "avg": 98.0, "min": 96.5, "max": 99.1 }
+
+Question: Get the minimum and maximum current readings for power sensor AMP-77 in the manufacturing line during the high-load test last Friday.
+Call: { "func_call": "get_min_max", "sensor_id": "AMP-77", "from": "2023-10-20T13:00:00Z", "to": "2023-10-20T15:00:00Z", "interval": "1m" }
+Response: { "sensor_id": "AMP-77", "readings": [], "avg": 15.4, "min": 12.1, "max": 18.9 }
+
+Question: Export seismic activity data from sensor SEIS-01 near the fault line for the past 48 hours to analyze tremor patterns.
+Call: { "func_call": "export_sensor_data", "sensor_id": "SEIS-01", "from": "2023-10-24T14:00:00Z", "to": "2023-10-26T14:00:00Z", "interval": "10m" }
+Response: { "sensor_id": "SEIS-01", "readings": [{ "timestamp": "2023-10-25T22:00:00Z", "value": 0.4 }, { "timestamp": "2023-10-25T22:10:00Z", "value": 0.6 }], "avg": 0.2, "min": 0.0, "max": 1.2 }
+
+Question: Analyze particulate matter levels in the city center by finding the min and max PM2.5 readings from sensor PM-25 during rush hour yesterday.
+Call: { "func_call": "get_min_max", "sensor_id": "PM-25", "from": "2023-10-25T07:00:00Z", "to": "2023-10-25T09:00:00Z", "interval": "5m" }
+Response: { "sensor_id": "PM-25", "readings": [], "avg": 35.6, "min": 22.1, "max": 58.4 }
+
+Question: Export the complete methane concentration history from sensor CH4-12 in the landfill site for the last 24 hours to ensure regulatory compliance.
+Call: { "func_call": "export_sensor_data", "sensor_id": "CH4-12", "from": "2023-10-25T14:00:00Z", "to": "2023-10-26T14:00:00Z", "interval": "1h" }
+Response: { "sensor_id": "CH4-12", "readings": [{ "timestamp": "2023-10-26T10:00:00Z", "value": 45.0 }, { "timestamp": "2023-10-26T11:00:00Z", "value": 48.2 }], "avg": 42.5, "min": 30.0, "max": 65.0 }

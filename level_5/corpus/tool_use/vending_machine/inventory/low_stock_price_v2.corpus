@@ -1,0 +1,51 @@
+Available Tools: list_inventory | restock_item | get_low_stock | update_price
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number, "price": number }
+Response Schema: { "inventory": [{ "slot_id": "string", "name": "string", "quantity": number, "price": number }] }
+---
+Question: Identify which products are critically low in the library break room dispenser.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "J1", "name": "Green Tea", "quantity": 1, "price": 1.80 }, { "slot_id": "J2", "name": "Rice Cake", "quantity": 2, "price": 1.10 }] }
+
+Question: Raise the price of the Espresso Shot in slot K4 to $4.00 starting today.
+Call: { "func_call": "update_price", "slot_id": "K4", "quantity": 0, "price": 4.00 }
+Response: { "inventory": [{ "slot_id": "K4", "name": "Espresso Shot", "quantity": 10, "price": 4.00 }] }
+
+Question: Display the full inventory list for the shopping mall food court machine.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "L1", "name": "Pretzel Bag", "quantity": 15, "price": 2.20 }, { "slot_id": "L2", "name": "Cola Can", "quantity": 25, "price": 1.95 }, { "slot_id": "L3", "name": "Cookie Pack", "quantity": 8, "price": 1.50 }] }
+
+Question: Update the cost of the Mixed Nuts in slot M2 to $3.25 due to inflation.
+Call: { "func_call": "update_price", "slot_id": "M2", "quantity": 0, "price": 3.25 }
+Response: { "inventory": [{ "slot_id": "M2", "name": "Mixed Nuts", "quantity": 6, "price": 3.25 }] }
+
+Question: Flag any beverages in the train station kiosk that have fewer than 4 units left.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "N1", "name": "Orange Juice", "quantity": 3, "price": 2.50 }, { "slot_id": "N2", "name": "Mineral Water", "quantity": 0, "price": 1.20 }] }
+
+Question: Adjust the price for the Hot Chocolate in slot P5 to $2.99 effective immediately.
+Call: { "func_call": "update_price", "slot_id": "P5", "quantity": 0, "price": 2.99 }
+Response: { "inventory": [{ "slot_id": "P5", "name": "Hot Chocolate", "quantity": 14, "price": 2.99 }] }
+
+Question: Generate a low stock report for the office building elevator lobby machine.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Q1", "name": "Breath Mints", "quantity": 2, "price": 0.85 }, { "slot_id": "Q2", "name": "Protein Bar", "quantity": 1, "price": 2.75 }] }
+
+Question: Change the vending price of the Potato Chips in slot R3 to $1.65 to clear stock.
+Call: { "func_call": "update_price", "slot_id": "R3", "quantity": 0, "price": 1.65 }
+Response: { "inventory": [{ "slot_id": "R3", "name": "Potato Chips", "quantity": 11, "price": 1.65 }] }
+
+Question: What items in the cinema lobby machine require urgent restocking?
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "S1", "name": "Popcorn Box", "quantity": 0, "price": 4.50 }, { "slot_id": "S2", "name": "Sour Candy", "quantity": 2, "price": 1.35 }] }
+
+Question: Set the new price for the Coconut Water in slot T2 to $3.10.
+Call: { "func_call": "update_price", "slot_id": "T2", "quantity": 0, "price": 3.10 }
+Response: { "inventory": [{ "slot_id": "T2", "name": "Coconut Water", "quantity": 9, "price": 3.10 }] }
+
+Question: Check the warehouse break area machine for any slots containing less than 6 items.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "U1", "name": "Coffee Pod", "quantity": 4, "price": 1.25 }, { "slot_id": "U2", "name": "Oatmeal Cup", "quantity": 5, "price": 2.10 }] }
+
+Question: Modify the price of the Grape Soda in slot V4 to $1.75 for the weekend sale.
+Call: { "func_call": "update_price", "slot_id": "V4", "quantity": 0, "price": 1.75 }
+Response: { "inventory": [{ "slot_id": "V4", "name": "Grape Soda", "quantity": 30, "price": 1.75 }] }

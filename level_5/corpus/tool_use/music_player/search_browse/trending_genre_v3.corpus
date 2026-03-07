@@ -1,0 +1,63 @@
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Search for rock anthems from the 80s.
+Call: { "func_call": "get_genre_playlist", "query": "80s rock classics", "limit": 10, "genre": "rock" }
+Response: { "results": [{ "id": "rk_80_01", "title": "Sweet Child O' Mine", "artist": "Guns N' Roses", "duration_seconds": 356 }, { "id": "rk_80_02", "title": "Livin' on a Prayer", "artist": "Bon Jovi", "duration_seconds": 249 }, { "id": "rk_80_03", "title": "Back in Black", "artist": "AC/DC", "duration_seconds": 255 }, { "id": "rk_80_04", "title": "Billie Jean", "artist": "Michael Jackson", "duration_seconds": 294 }, { "id": "rk_80_05", "title": "Every Breath You Take", "artist": "The Police", "duration_seconds": 253 }, { "id": "rk_80_06", "title": "Don't Stop Believin'", "artist": "Journey", "duration_seconds": 251 }, { "id": "rk_80_07", "title": "Smells Like Teen Spirit", "artist": "Nirvana", "duration_seconds": 301 }, { "id": "rk_80_08", "title": "Under Pressure", "artist": "Queen", "duration_seconds": 248 }, { "id": "rk_80_09", "title": "Beat It", "artist": "Michael Jackson", "duration_seconds": 258 }, { "id": "rk_80_10", "title": "Welcome to the Jungle", "artist": "Guns N' Roses", "duration_seconds": 313 }], "total": 180 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Find me some country hits for a road trip.
+Call: { "func_call": "get_genre_playlist", "query": "country road trip", "limit": 12, "genre": "country" }
+Response: { "results": [{ "id": "ct_001", "title": "Take Me Home, Country Roads", "artist": "John Denver", "duration_seconds": 193 }, { "id": "ct_002", "title": "Friends in Low Places", "artist": "Garth Brooks", "duration_seconds": 259 }, { "id": "ct_003", "title": "Before He Cheats", "artist": "Carrie Underwood", "duration_seconds": 199 }, { "id": "ct_004", "title": "Crazy", "artist": "Patsy Cline", "duration_seconds": 158 }, { "id": "ct_005", "title": "Wagon Wheel", "artist": "Darius Rucker", "duration_seconds": 190 }, { "id": "ct_006", "title": "The Gambler", "artist": "Kenny Rogers", "duration_seconds": 214 }, { "id": "ct_007", "title": "Jolene", "artist": "Dolly Parton", "duration_seconds": 162 }, { "id": "ct_008", "title": "Chicken Fried", "artist": "Zac Brown Band", "duration_seconds": 255 }, { "id": "ct_009", "title": "Tennessee Whiskey", "artist": "Chris Stapleton", "duration_seconds": 292 }, { "id": "ct_010", "title": "Body Like a Back Road", "artist": "Sam Hunt", "duration_seconds": 167 }, { "id": "ct_011", "title": "Hurricane", "artist": "Luke Combs", "duration_seconds": 205 }, { "id": "ct_012", "title": "Fast Car", "artist": "Luke Combs", "duration_seconds": 236 }], "total": 145 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: What are the top R&B songs this week?
+Call: { "func_call": "get_trending", "query": "weekly R&B top 10", "limit": 10, "genre": "R&B" }
+Response: { "results": [{ "id": "rb_trend_01", "title": "Rich Baby Daddy", "artist": "Drake", "duration_seconds": 223 }, { "id": "rb_trend_02", "title": "Boy's a liar Pt. 2", "artist": "PinkPantheress", "duration_seconds": 131 }, { "id": "rb_trend_03", "title": "Creepin'", "artist": "Metro Boomin", "duration_seconds": 221 }, { "id": "rb_trend_04", "title": "Shirt", "artist": "SZA", "duration_seconds": 195 }, { "id": "rb_trend_05", "title": "Spin Bout U", "artist": "Drake", "duration_seconds": 184 }, { "id": "rb_trend_06", "title": "Nobody", "artist": "Dylan Scott", "duration_seconds": 178 }, { "id": "rb_trend_07", "title": "Superhero", "artist": "Metro Boomin", "duration_seconds": 197 }, { "id": "rb_trend_08", "title": "Die For You", "artist": "The Weeknd", "duration_seconds": 260 }, { "id": "rb_trend_09", "title": "Used to Be Young", "artist": "Miley Cyrus", "duration_seconds": 189 }, { "id": "rb_trend_10", "title": "On My Mama", "artist": "Victoria Monét", "duration_seconds": 173 }], "total": 60 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: I need a playlist for working out with high energy.
+Call: { "func_call": "get_genre_playlist", "query": "gym motivation", "limit": 8, "genre": "workout" }
+Response: { "results": [{ "id": "wk_001", "title": "Stronger", "artist": "Kanye West", "duration_seconds": 311 }, { "id": "wk_002", "title": "Eye of the Tiger", "artist": "Survivor", "duration_seconds": 246 }, { "id": "wk_003", "title": "Lose Yourself", "artist": "Eminem", "duration_seconds": 326 }, { "id": "wk_004", "title": "Till I Collapse", "artist": "Eminem", "duration_seconds": 297 }, { "id": "wk_005", "title": "Power", "artist": "Kanye West", "duration_seconds": 292 }, { "id": "wk_006", "title": "Remember the Name", "artist": "Fort Minor", "duration_seconds": 230 }, { "id": "wk_007", "title": "Can't Be Touched", "artist": "Roy Jones Jr.", "duration_seconds": 254 }, { "id": "wk_008", "title": "X Gon' Give It To Ya", "artist": "DMX", "duration_seconds": 229 }], "total": 75 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Show me the latest indie folk releases.
+Call: { "func_call": "get_trending", "query": "new indie folk", "limit": 6, "genre": "indie" }
+Response: { "results": [{ "id": "if_new_01", "title": "Holocene", "artist": "Bon Iver", "duration_seconds": 337 }, { "id": "if_new_02", "title": "Home", "artist": "Edward Sharpe", "duration_seconds": 308 }, { "id": "if_new_03", "title": "Little Talks", "artist": "Of Monsters and Men", "duration_seconds": 264 }, { "id": "if_new_04", "title": "Stubborn Love", "artist": "The Lumineers", "duration_seconds": 235 }, { "id": "if_new_05", "title": "Ho Hey", "artist": "The Lumineers", "duration_seconds": 163 }, { "id": "if_new_06", "title": "Riptide", "artist": "Vance Joy", "duration_seconds": 204 }], "total": 30 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Play some Latin pop for a party.
+Call: { "func_call": "get_genre_playlist", "query": "latin party hits", "limit": 10, "genre": "latin" }
+Response: { "results": [{ "id": "lat_001", "title": "Despacito", "artist": "Luis Fonsi", "duration_seconds": 229 }, { "id": "lat_002", "title": "Bailando", "artist": "Enrique Iglesias", "duration_seconds": 240 }, { "id": "lat_003", "title": "Danza Kuduro", "artist": "Don Omar", "duration_seconds": 196 }, { "id": "lat_004", "title": "La Tortura", "artist": "Shakira", "duration_seconds": 213 }, { "id": "lat_005", "title": "Hips Don't Lie", "artist": "Shakira", "duration_seconds": 218 }, { "id": "lat_006", "title": "Vivir Mi Vida", "artist": "Marc Anthony", "duration_seconds": 244 }, { "id": "lat_007", "title": "Gasolina", "artist": "Daddy Yankee", "duration_seconds": 193 }, { "id": "lat_008", "title": "Mi Gente", "artist": "J Balvin", "duration_seconds": 189 }, { "id": "lat_009", "title": "Con Calma", "artist": "Daddy Yankee", "duration_seconds": 192 }, { "id": "lat_010", "title": "Taki Taki", "artist": "DJ Snake", "duration_seconds": 212 }], "total": 110 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: What are the trending metal tracks globally?
+Call: { "func_call": "get_trending", "query": "global metal charts", "limit": 7, "genre": "metal" }
+Response: { "results": [{ "id": "mt_gl_01", "title": "Enter Sandman", "artist": "Metallica", "duration_seconds": 331 }, { "id": "mt_gl_02", "title": "Ace of Spades", "artist": "Motörhead", "duration_seconds": 169 }, { "id": "mt_gl_03", "title": "Paranoid", "artist": "Black Sabbath", "duration_seconds": 170 }, { "id": "mt_gl_04", "title": "Breaking the Law", "artist": "Judas Priest", "duration_seconds": 156 }, { "id": "mt_gl_05", "title": "Raining Blood", "artist": "Slayer", "duration_seconds": 257 }, { "id": "mt_gl_06", "title": "Iron Man", "artist": "Black Sabbath", "duration_seconds": 358 }, { "id": "mt_gl_07", "title": "Master of Puppets", "artist": "Metallica", "duration_seconds": 515 }], "total": 45 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Find me a chill lo-fi beat playlist for reading.
+Call: { "func_call": "get_genre_playlist", "query": "lo-fi study beats", "limit": 9, "genre": "lo-fi" }
+Response: { "results": [{ "id": "lo_001", "title": "Midnight City Vibes", "artist": "Chill Hop Music", "duration_seconds": 180 }, { "id": "lo_002", "title": "Rainy Day Coffee", "artist": "Lo-Fi Girl", "duration_seconds": 165 }, { "id": "lo_003", "title": "Sleepy Cat", "artist": "Idealism", "duration_seconds": 142 }, { "id": "lo_004", "title": "Bookstore Walk", "artist": "Kupla", "duration_seconds": 158 }, { "id": "lo_005", "title": "Quiet Moments", "artist": "Aso", "duration_seconds": 173 }, { "id": "lo_006", "title": "Nostalgic Tape", "artist": "SwuM", "duration_seconds": 190 }, { "id": "lo_007", "title": "Late Night Study", "artist": "Pandrezz", "duration_seconds": 145 }, { "id": "lo_008", "title": "Cloud Watching", "artist": "Philanthrope", "duration_seconds": 160 }, { "id": "lo_009", "title": "Paper Planes", "artist": "Nymano", "duration_seconds": 152 }], "total": 200 }

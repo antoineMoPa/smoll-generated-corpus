@@ -1,0 +1,59 @@
+Context: The green crate weighs 68 kg, while the yellow crate weighs 41 kg.
+Input: {"question": "What is the weight difference between the green crate and the yellow crate?"}
+Output: {"answer": "27 kg"}
+
+Context: In 2019, the bakery baked 3,400 loaves, but in 2020 output fell to 2,850 loaves.
+Input: {"question": "How many fewer loaves were baked in 2020 compared to 2019?"}
+Output: {"answer": "550 loaves"}
+
+Context: David cycled 22.4 kilometers on Friday and 18.9 kilometers on Saturday.
+Input: {"question": "What is the difference in distance David cycled between Friday and Saturday?"}
+Output: {"answer": "3.5 kilometers"}
+
+Context: The legacy database handles 320 queries per minute, while the updated system manages 750 queries per minute.
+Input: {"question": "How many more queries per minute can the updated system handle than the legacy one?"}
+Output: {"answer": "430 queries per minute"}
+
+Context: Studio Unit C rents for $1,450 monthly, and Studio Unit D rents for $1,625 monthly.
+Input: {"question": "What is the monthly rent difference between Unit D and Unit C?"}
+Output: {"answer": "$175"}
+
+Context: The primary reservoir contains 850 gallons of fuel, whereas the secondary reservoir holds 620 gallons.
+Input: {"question": "How much more fuel does the primary reservoir hold than the secondary one?"}
+Output: {"answer": "230 gallons"}
+
+Context: Squad Red achieved 102 points in the tournament, and Squad Blue achieved 94 points.
+Input: {"question": "By what margin did Squad Red defeat Squad Blue in points?"}
+Output: {"answer": "8 points"}
+
+Context: The train journey to Paris lasts 5 hours, but the trip to Berlin takes 8 hours.
+Input: {"question": "How much longer is the trip to Berlin compared to the trip to Paris?"}
+Output: {"answer": "3 hours"}
+
+Context: Shop M moved 5,200 products this month, while Shop N moved 4,750 products.
+Input: {"question": "What is the difference in product volume between Shop M and Shop N?"}
+Output: {"answer": "450 products"}
+
+Context: The screen time on Tablet X is 10 hours, whereas Tablet Y operates for 15 hours.
+Input: {"question": "How many additional hours of battery life does Tablet Y have over Tablet X?"}
+Output: {"answer": "5 hours"}
+
+Context: Hill Top C stands at 1,450 meters, and Hill Top D stands at 1,120 meters.
+Input: {"question": "What is the height difference between Hill Top C and Hill Top D?"}
+Output: {"answer": "330 meters"}
+
+Context: The recipe calls for 75 grams of sugar, but the bowl currently contains 48 grams.
+Input: {"question": "How many grams of sugar are missing from the current amount?"}
+Output: {"answer": "27 grams"}
+
+Context: Task One finished in 30 hours, while Task Two required 48 hours.
+Input: {"question": "How many extra hours did Task Two take compared to Task One?"}
+Output: {"answer": "18 hours"}
+
+Context: The heat index in Miami was 105°F, while the heat index in Denver was 72°F.
+Input: {"question": "What is the temperature gap between Miami and Denver?"}
+Output: {"answer": "33°F"}
+
+Context: Museum Wing A displays 8,400 artifacts, and Museum Wing B displays 6,150 artifacts.
+Input: {"question": "How many more artifacts are in Wing A than in Wing B?"}
+Output: {"answer": "2,250 artifacts"}

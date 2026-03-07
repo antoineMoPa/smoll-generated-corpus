@@ -1,0 +1,51 @@
+Available Tools: add_to_cart | remove_from_cart | update_quantity | get_cart | apply_coupon | checkout
+Call Schema: { "func_call": "string", "product_id": "string", "quantity": "number", "coupon_code": "string" }
+Response Schema: { "cart_id": "string", "items": [{ "product_id": "string", "name": "string", "quantity": "number", "price": "number" }], "total": "number" }
+---
+Question: Apply the holiday special code HOLIDAY25 to my current basket.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "HOLIDAY25" }
+Response: { "cart_id": "CART-4412", "items": [{ "product_id": "PROD-303", "name": "Bluetooth Speaker", "quantity": 2, "price": 45.00 }], "total": 67.50 }
+
+Question: Try using the outdated coupon code WINTER2022 on my order.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "WINTER2022" }
+Response: { "cart_id": "CART-4412", "items": [{ "product_id": "PROD-303", "name": "Bluetooth Speaker", "quantity": 2, "price": 45.00 }], "total": 90.00 }
+
+Question: Complete the checkout process for the speakers in my cart.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-4412", "items": [{ "product_id": "PROD-303", "name": "Bluetooth Speaker", "quantity": 2, "price": 45.00 }], "total": 90.00 }
+
+Question: Use the clearance sale code CLEAR70 to get seventy percent off.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "CLEAR70" }
+Response: { "cart_id": "CART-5589", "items": [{ "product_id": "PROD-412", "name": "Running Shoes", "quantity": 1, "price": 120.00 }], "total": 36.00 }
+
+Question: Attempt to apply a malformed coupon code BAD-CODE-123.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "BAD-CODE-123" }
+Response: { "cart_id": "CART-5589", "items": [{ "product_id": "PROD-412", "name": "Running Shoes", "quantity": 1, "price": 120.00 }], "total": 120.00 }
+
+Question: Finalize the purchase for the cart containing the running shoes.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-5589", "items": [{ "product_id": "PROD-412", "name": "Running Shoes", "quantity": 1, "price": 120.00 }], "total": 120.00 }
+
+Question: Apply the student discount code STUDENT10 to my textbook order.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "STUDENT10" }
+Response: { "cart_id": "CART-6623", "items": [{ "product_id": "PROD-771", "name": "Calculus Textbook", "quantity": 1, "price": 85.00 }], "total": 76.50 }
+
+Question: Try applying the restricted code REGIONLOCK which is invalid here.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "REGIONLOCK" }
+Response: { "cart_id": "CART-6623", "items": [{ "product_id": "PROD-771", "name": "Calculus Textbook", "quantity": 1, "price": 85.00 }], "total": 76.50 }
+
+Question: Proceed to checkout with the student discount applied.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-6623", "items": [{ "product_id": "PROD-771", "name": "Calculus Textbook", "quantity": 1, "price": 85.00 }], "total": 76.50 }
+
+Question: Use the loyalty reward code LOYAL20 on my furniture cart.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "LOYAL20" }
+Response: { "cart_id": "CART-9102", "items": [{ "product_id": "PROD-995", "name": "Office Chair", "quantity": 1, "price": 250.00 }], "total": 200.00 }
+
+Question: Attempt to reuse an expired seasonal coupon code SPRING24.
+Call: { "func_call": "apply_coupon", "product_id": "", "quantity": 0, "coupon_code": "SPRING24" }
+Response: { "cart_id": "CART-9102", "items": [{ "product_id": "PROD-995", "name": "Office Chair", "quantity": 1, "price": 250.00 }], "total": 200.00 }
+
+Question: Complete the transaction for the office chair order.
+Call: { "func_call": "checkout", "product_id": "", "quantity": 0, "coupon_code": "" }
+Response: { "cart_id": "CART-9102", "items": [{ "product_id": "PROD-995", "name": "Office Chair", "quantity": 1, "price": 250.00 }], "total": 200.00 }

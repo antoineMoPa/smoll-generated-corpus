@@ -1,0 +1,51 @@
+Available Tools: get_current_weather | get_feels_like | get_pressure | get_visibility
+Call Schema: { "func_call": "string", "location": "string", "metrics": ["string"] }
+Response Schema: { "location": "string", "metrics": { "temperature": number, "humidity": number, "pressure": number } }
+---
+Question: What are the current temperature, humidity, and pressure in Dubai, UAE?
+Call: { "func_call": "get_current_weather", "location": "Dubai, UAE", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Dubai, UAE", "metrics": { "temperature": 38.4, "humidity": 45, "pressure": 1006.7 } }
+
+Question: I need the weather stats for Bangkok, Thailand including temp, moisture, and air pressure.
+Call: { "func_call": "get_current_weather", "location": "Bangkok, Thailand", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Bangkok, Thailand", "metrics": { "temperature": 33.1, "humidity": 79, "pressure": 1008.3 } }
+
+Question: Fetch the temperature, humidity, and pressure readings for Cape Town, South Africa.
+Call: { "func_call": "get_current_weather", "location": "Cape Town, South Africa", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Cape Town, South Africa", "metrics": { "temperature": 21.5, "humidity": 62, "pressure": 1014.9 } }
+
+Question: Can you get the current weather metrics for Oslo, Norway? Specifically temp, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Oslo, Norway", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Oslo, Norway", "metrics": { "temperature": 5.2, "humidity": 76, "pressure": 1019.4 } }
+
+Question: What is the temperature, humidity level, and barometric pressure in Lima, Peru right now?
+Call: { "func_call": "get_current_weather", "location": "Lima, Peru", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Lima, Peru", "metrics": { "temperature": 18.7, "humidity": 81, "pressure": 1012.1 } }
+
+Question: Please retrieve temperature, humidity, and pressure data for Seoul, South Korea.
+Call: { "func_call": "get_current_weather", "location": "Seoul, South Korea", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Seoul, South Korea", "metrics": { "temperature": 13.9, "humidity": 58, "pressure": 1015.6 } }
+
+Question: Get me the full weather breakdown for Nairobi, Kenya: temperature, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Nairobi, Kenya", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Nairobi, Kenya", "metrics": { "temperature": 24.3, "humidity": 52, "pressure": 1013.8 } }
+
+Question: I need to know the temperature, relative humidity, and atmospheric pressure in Vienna, Austria.
+Call: { "func_call": "get_current_weather", "location": "Vienna, Austria", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Vienna, Austria", "metrics": { "temperature": 10.8, "humidity": 69, "pressure": 1017.2 } }
+
+Question: What are the current conditions in Vancouver, Canada? Looking for temp, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Vancouver, Canada", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Vancouver, Canada", "metrics": { "temperature": 11.4, "humidity": 74, "pressure": 1010.5 } }
+
+Question: Fetch temperature, humidity, and pressure for Buenos Aires, Argentina.
+Call: { "func_call": "get_current_weather", "location": "Buenos Aires, Argentina", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Buenos Aires, Argentina", "metrics": { "temperature": 22.6, "humidity": 65, "pressure": 1011.9 } }
+
+Question: Give me the weather metrics for Istanbul, Turkey: temperature, humidity, and pressure.
+Call: { "func_call": "get_current_weather", "location": "Istanbul, Turkey", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Istanbul, Turkey", "metrics": { "temperature": 16.5, "humidity": 70, "pressure": 1013.3 } }
+
+Question: Check the temperature, humidity, and pressure in Honolulu, USA.
+Call: { "func_call": "get_current_weather", "location": "Honolulu, USA", "metrics": ["temperature", "humidity", "pressure"] }
+Response: { "location": "Honolulu, USA", "metrics": { "temperature": 28.9, "humidity": 67, "pressure": 1014.1 } }

@@ -1,0 +1,51 @@
+Available Tools: request_leave | get_leave_balance | approve_leave | reject_leave | get_leave_history
+Call Schema: { "func_call": "string", "employee_id": "string", "leave_type": "vacation|sick|personal|parental", "from_date": "string", "to_date": "string" }
+Response Schema: { "request_id": "string", "status": "pending|approved|rejected", "days_requested": number, "balance_remaining": number }
+---
+Question: Approve the vacation request for employee EMP-2941 from 2023-11-15 to 2023-11-22.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-2941", "leave_type": "vacation", "from_date": "2023-11-15", "to_date": "2023-11-22" }
+Response: { "request_id": "REQ-8832", "status": "approved", "days_requested": 8, "balance_remaining": 12 }
+
+Question: Reject the sick leave request for employee EMP-1023 from 2023-10-05 to 2023-10-06 due to missing medical certificate.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-1023", "leave_type": "sick", "from_date": "2023-10-05", "to_date": "2023-10-06" }
+Response: { "request_id": "REQ-9921", "status": "rejected", "days_requested": 2, "balance_remaining": 15 }
+
+Question: Manager needs to approve the parental leave for EMP-5512 starting 2024-01-10 ending 2024-03-10.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-5512", "leave_type": "parental", "from_date": "2024-01-10", "to_date": "2024-03-10" }
+Response: { "request_id": "REQ-1104", "status": "approved", "days_requested": 60, "balance_remaining": 0 }
+
+Question: Deny the personal leave request for EMP-3387 from 2023-12-24 to 2023-12-26 because of critical project deadlines.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-3387", "leave_type": "personal", "from_date": "2023-12-24", "to_date": "2023-12-26" }
+Response: { "request_id": "REQ-4459", "status": "rejected", "days_requested": 3, "balance_remaining": 5 }
+
+Question: Process approval for EMP-7721's vacation from 2024-02-14 to 2024-02-18.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-7721", "leave_type": "vacation", "from_date": "2024-02-14", "to_date": "2024-02-18" }
+Response: { "request_id": "REQ-6632", "status": "approved", "days_requested": 5, "balance_remaining": 8 }
+
+Question: Reject the vacation request for EMP-4409 from 2023-09-01 to 2023-09-15 as the team is understaffed during that period.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-4409", "leave_type": "vacation", "from_date": "2023-09-01", "to_date": "2023-09-15" }
+Response: { "request_id": "REQ-7788", "status": "rejected", "days_requested": 15, "balance_remaining": 20 }
+
+Question: Approve the sick leave for EMP-8890 covering 2023-11-01 to 2023-11-03.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-8890", "leave_type": "sick", "from_date": "2023-11-01", "to_date": "2023-11-03" }
+Response: { "request_id": "REQ-2231", "status": "approved", "days_requested": 3, "balance_remaining": 10 }
+
+Question: Deny the personal leave for EMP-1156 from 2024-05-20 to 2024-05-22 due to insufficient notice period.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-1156", "leave_type": "personal", "from_date": "2024-05-20", "to_date": "2024-05-22" }
+Response: { "request_id": "REQ-3345", "status": "rejected", "days_requested": 3, "balance_remaining": 7 }
+
+Question: Finalize approval for EMP-6623's parental leave from 2023-08-15 to 2023-10-15.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-6623", "leave_type": "parental", "from_date": "2023-08-15", "to_date": "2023-10-15" }
+Response: { "request_id": "REQ-5567", "status": "approved", "days_requested": 62, "balance_remaining": 0 }
+
+Question: Reject the sick leave request for EMP-9934 from 2023-07-10 to 2023-07-11 because the dates conflict with a mandatory training session.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-9934", "leave_type": "sick", "from_date": "2023-07-10", "to_date": "2023-07-11" }
+Response: { "request_id": "REQ-8899", "status": "rejected", "days_requested": 2, "balance_remaining": 12 }
+
+Question: Approve the personal leave for EMP-2245 from 2024-03-05 to 2024-03-05.
+Call: { "func_call": "approve_leave", "employee_id": "EMP-2245", "leave_type": "personal", "from_date": "2024-03-05", "to_date": "2024-03-05" }
+Response: { "request_id": "REQ-1122", "status": "approved", "days_requested": 1, "balance_remaining": 4 }
+
+Question: Deny the vacation request for EMP-5578 from 2023-12-20 to 2024-01-05 due to blacked-out holiday period policies.
+Call: { "func_call": "reject_leave", "employee_id": "EMP-5578", "leave_type": "vacation", "from_date": "2023-12-20", "to_date": "2024-01-05" }
+Response: { "request_id": "REQ-9988", "status": "rejected", "days_requested": 17, "balance_remaining": 25 }

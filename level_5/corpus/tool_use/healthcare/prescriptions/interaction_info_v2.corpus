@@ -1,0 +1,51 @@
+Available Tools: get_prescriptions | request_refill | check_drug_interaction | get_medication_info
+Call Schema: { "func_call": "string", "patient_id": "string", "medication": "string", "dosage": "string" }
+Response Schema: { "prescription_id": "string", "medication": "string", "dosage": "string", "refills_remaining": number, "status": "string" }
+---
+Question: Investigate possible reactions between Ciprofloxacin and Antacids for patient P-1029.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-1029", "medication": "Ciprofloxacin, Antacids", "dosage": "500mg, 400mg" }
+Response: { "prescription_id": "RX-30491", "medication": "Ciprofloxacin, Antacids", "dosage": "500mg, 400mg", "refills_remaining": 0, "status": "MODERATE_INTERACTION: Antacids reduce Ciprofloxacin absorption" }
+
+Question: Obtain prescribing guidelines for Gabapentin for patient P-4482.
+Call: { "func_call": "get_medication_info", "patient_id": "P-4482", "medication": "Gabapentin", "dosage": "300mg" }
+Response: { "prescription_id": "RX-55102", "medication": "Gabapentin", "dosage": "300mg", "refills_remaining": 6, "status": "INFO_RETRIEVED: Anticonvulsant also used for nerve pain" }
+
+Question: Determine safety concerns when mixing Fluoxetine and St. John's Wort for patient P-7765.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-7765", "medication": "Fluoxetine, St. John's Wort", "dosage": "20mg, Herbal" }
+Response: { "prescription_id": "RX-88321", "medication": "Fluoxetine, St. John's Wort", "dosage": "20mg, Herbal", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: High risk of Serotonin Syndrome" }
+
+Question: Review dosage instructions for Prednisone assigned to patient P-2298.
+Call: { "func_call": "get_medication_info", "patient_id": "P-2298", "medication": "Prednisone", "dosage": "10mg" }
+Response: { "prescription_id": "RX-11943", "medication": "Prednisone", "dosage": "10mg", "refills_remaining": 0, "status": "INFO_RETRIEVED: Corticosteroid, taper dose gradually to avoid withdrawal" }
+
+Question: Scan for adverse effects between Potassium supplements and Spironolactone for patient P-6612.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-6612", "medication": "Potassium, Spironolactone", "dosage": "20mEq, 25mg" }
+Response: { "prescription_id": "RX-44782", "medication": "Potassium, Spironolactone", "dosage": "20mEq, 25mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: Risk of severe hyperkalemia" }
+
+Question: Access therapeutic details for Omeprazole for patient P-9933.
+Call: { "func_call": "get_medication_info", "patient_id": "P-9933", "medication": "Omeprazole", "dosage": "20mg" }
+Response: { "prescription_id": "RX-22674", "medication": "Omeprazole", "dosage": "20mg", "refills_remaining": 3, "status": "INFO_RETRIEVED: Proton pump inhibitor for acid reflux" }
+
+Question: Verify compatibility of Clarithromycin and Colchicine for patient P-3371.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-3371", "medication": "Clarithromycin, Colchicine", "dosage": "500mg, 0.6mg" }
+Response: { "prescription_id": "RX-66198", "medication": "Clarithromycin, Colchicine", "dosage": "500mg, 0.6mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: Potential fatal colchicine toxicity" }
+
+Question: Retrieve usage parameters for Montelukast for patient P-5589.
+Call: { "func_call": "get_medication_info", "patient_id": "P-5589", "medication": "Montelukast", "dosage": "10mg" }
+Response: { "prescription_id": "RX-99445", "medication": "Montelukast", "dosage": "10mg", "refills_remaining": 2, "status": "INFO_RETRIEVED: Leukotriene receptor antagonist for asthma maintenance" }
+
+Question: Analyze drug conflict between Methotrexate and Trimethoprim for patient P-8844.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-8844", "medication": "Methotrexate, Trimethoprim", "dosage": "15mg, 160mg" }
+Response: { "prescription_id": "RX-33567", "medication": "Methotrexate, Trimethoprim", "dosage": "15mg, 160mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: Increased bone marrow suppression" }
+
+Question: Get administration advice for Insulin Glargine for patient P-1156.
+Call: { "func_call": "get_medication_info", "patient_id": "P-1156", "medication": "Insulin Glargine", "dosage": "20 units" }
+Response: { "prescription_id": "RX-77889", "medication": "Insulin Glargine", "dosage": "20 units", "refills_remaining": 4, "status": "INFO_RETRIEVED: Long-acting basal insulin, inject at same time daily" }
+
+Question: Check interaction severity between Sildenafil and Nitroglycerin for patient P-4403.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-4403", "medication": "Sildenafil, Nitroglycerin", "dosage": "50mg, 0.4mg" }
+Response: { "prescription_id": "RX-55234", "medication": "Sildenafil, Nitroglycerin", "dosage": "50mg, 0.4mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: Severe hypotension risk" }
+
+Question: Lookup mechanism of action for Amlodipine for patient P-6678.
+Call: { "func_call": "get_medication_info", "patient_id": "P-6678", "medication": "Amlodipine", "dosage": "5mg" }
+Response: { "prescription_id": "RX-11256", "medication": "Amlodipine", "dosage": "5mg", "refills_remaining": 5, "status": "INFO_RETRIEVED: Calcium channel blocker for hypertension and angina" }

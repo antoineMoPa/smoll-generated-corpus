@@ -1,0 +1,51 @@
+Available Tools: get_weather_alerts | get_storm_warnings | get_air_quality_index
+Call Schema: { "func_call": "string", "location": "string", "severity": "string" }
+Response Schema: { "alerts": [{ "type": "string", "severity": "string", "message": "string", "expires": "string" }] }
+---
+Question: Are there any active coastal storm warnings for Miami Beach right now?
+Call: { "func_call": "get_storm_warnings", "location": "Miami Beach, FL", "severity": "high" }
+Response: { "alerts": [{ "type": "Coastal Storm Warning", "severity": "high", "message": "Dangerous surf and rip currents expected. Coastal flooding likely during high tide.", "expires": "2024-05-20T18:00:00Z" }] }
+
+Question: Check for tornado alerts in Oklahoma City with severe intensity.
+Call: { "func_call": "get_weather_alerts", "location": "Oklahoma City, OK", "severity": "severe" }
+Response: { "alerts": [{ "type": "Tornado Warning", "severity": "severe", "message": "A confirmed tornado is moving northeast at 45 mph. Take shelter immediately in an interior room.", "expires": "2024-05-20T14:30:00Z" }] }
+
+Question: I need to know if there are blizzard conditions affecting Denver.
+Call: { "func_call": "get_weather_alerts", "location": "Denver, CO", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Blizzard Warning", "severity": "extreme", "message": "Heavy snow and winds gusting up to 60 mph will create whiteout conditions. Travel is strongly discouraged.", "expires": "2024-05-21T06:00:00Z" }] }
+
+Question: Is there a flood warning active for the banks of the Mississippi River in St. Louis?
+Call: { "func_call": "get_weather_alerts", "location": "St. Louis, MO", "severity": "high" }
+Response: { "alerts": [{ "type": "Flood Warning", "severity": "high", "message": "The Mississippi River has crested above flood stage. Low-lying areas near the levee are inundated.", "expires": "2024-05-22T12:00:00Z" }] }
+
+Question: Get storm warnings for the Outer Banks regarding coastal storms.
+Call: { "func_call": "get_storm_warnings", "location": "Outer Banks, NC", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Coastal Storm Watch", "severity": "moderate", "message": "Potential for significant beach erosion and minor coastal flooding over the next 24 hours.", "expires": "2024-05-20T20:00:00Z" }] }
+
+Question: Are there any severe tornado watches issued for Topeka?
+Call: { "func_call": "get_weather_alerts", "location": "Topeka, KS", "severity": "severe" }
+Response: { "alerts": [{ "type": "Tornado Watch", "severity": "severe", "message": "Atmospheric conditions are favorable for the development of severe tornadoes. Stay weather aware.", "expires": "2024-05-20T22:00:00Z" }] }
+
+Question: Check for blizzard warnings in Billings due to extreme cold and snow.
+Call: { "func_call": "get_storm_warnings", "location": "Billings, MT", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Blizzard Warning", "severity": "extreme", "message": "Life-threatening cold and blowing snow expected. Wind chills may drop to -40F.", "expires": "2024-05-21T09:00:00Z" }] }
+
+Question: What flood alerts are currently active for Houston?
+Call: { "func_call": "get_weather_alerts", "location": "Houston, TX", "severity": "high" }
+Response: { "alerts": [{ "type": "Flash Flood Warning", "severity": "high", "message": "Heavy rainfall has caused rapid rises in bayous. Do not attempt to cross flooded roadways.", "expires": "2024-05-20T16:45:00Z" }] }
+
+Question: Retrieve any coastal storm alerts for San Diego.
+Call: { "func_call": "get_weather_alerts", "location": "San Diego, CA", "severity": "moderate" }
+Response: { "alerts": [{ "type": "High Surf Advisory", "severity": "moderate", "message": "Large breaking waves of 6 to 9 feet expected. Dangerous swimming and surfing conditions.", "expires": "2024-05-20T21:00:00Z" }] }
+
+Question: Is there a tornado emergency in effect for Joplin?
+Call: { "func_call": "get_storm_warnings", "location": "Joplin, MO", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Tornado Emergency", "severity": "extreme", "message": "A large and extremely dangerous tornado is heading toward populated areas. This is a life-threatening situation.", "expires": "2024-05-20T15:15:00Z" }] }
+
+Question: Check for flood statements regarding the Red River in Fargo.
+Call: { "func_call": "get_weather_alerts", "location": "Fargo, ND", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Flood Statement", "severity": "moderate", "message": "River levels are rising steadily but remain below major flood stage. Monitoring continues.", "expires": "2024-05-21T08:00:00Z" }] }
+
+Question: Get details on any blizzard watches for Cheyenne.
+Call: { "func_call": "get_storm_warnings", "location": "Cheyenne, WY", "severity": "high" }
+Response: { "alerts": [{ "type": "Blizzard Watch", "severity": "high", "message": "Conditions are favorable for a blizzard to develop tomorrow morning. Prepare for hazardous travel.", "expires": "2024-05-21T04:00:00Z" }] }

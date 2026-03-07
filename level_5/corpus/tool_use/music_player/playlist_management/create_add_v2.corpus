@@ -1,0 +1,51 @@
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Generate a new playlist titled "Late Night Coding" for my programming sessions.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Late Night Coding", "track_id": "" }
+Response: { "playlist_id": "pl_1029", "name": "Late Night Coding", "track_count": 0, "duration_seconds": 0 }
+
+Question: Insert track "trk_3041" into the "Late Night Coding" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_1029", "name": "", "track_id": "trk_3041" }
+Response: { "playlist_id": "pl_1029", "name": "Late Night Coding", "track_count": 1, "duration_seconds": 267 }
+
+Question: I need a playlist called "Sunday Brunch" for weekend mornings.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Sunday Brunch", "track_id": "" }
+Response: { "playlist_id": "pl_5678", "name": "Sunday Brunch", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the song with ID "trk_9988" to "Sunday Brunch".
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_5678", "name": "", "track_id": "trk_9988" }
+Response: { "playlist_id": "pl_5678", "name": "Sunday Brunch", "track_count": 1, "duration_seconds": 192 }
+
+Question: Create a playlist named "Winter Skiing" for the slopes.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Winter Skiing", "track_id": "" }
+Response: { "playlist_id": "pl_2211", "name": "Winter Skiing", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add track "trk_4433" to the "Winter Skiing" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_2211", "name": "", "track_id": "trk_4433" }
+Response: { "playlist_id": "pl_2211", "name": "Winter Skiing", "track_count": 1, "duration_seconds": 230 }
+
+Question: Let's make a playlist called "Yoga Flow" for meditation.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Yoga Flow", "track_id": "" }
+Response: { "playlist_id": "pl_6655", "name": "Yoga Flow", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the track "trk_7766" to "Yoga Flow".
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_6655", "name": "", "track_id": "trk_7766" }
+Response: { "playlist_id": "pl_6655", "name": "Yoga Flow", "track_count": 1, "duration_seconds": 345 }
+
+Question: I want a playlist named "Gaming Session" for late night raids.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Gaming Session", "track_id": "" }
+Response: { "playlist_id": "pl_8899", "name": "Gaming Session", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add track "trk_1234" to the "Gaming Session" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_8899", "name": "", "track_id": "trk_1234" }
+Response: { "playlist_id": "pl_8899", "name": "Gaming Session", "track_count": 1, "duration_seconds": 205 }
+
+Question: Create a playlist titled "Beach Vibes" for summer holidays.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Beach Vibes", "track_id": "" }
+Response: { "playlist_id": "pl_3322", "name": "Beach Vibes", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the song "trk_5544" to the "Beach Vibes" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_3322", "name": "", "track_id": "trk_5544" }
+Response: { "playlist_id": "pl_3322", "name": "Beach Vibes", "track_count": 1, "duration_seconds": 218 }

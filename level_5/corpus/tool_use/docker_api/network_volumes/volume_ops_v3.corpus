@@ -1,0 +1,51 @@
+Available Tools: create_network | list_networks | create_volume | list_volumes | mount_volume
+Call Schema: { "func_call": "string", "name": "string", "driver": "string", "container_id": "string", "mount_path": "string" }
+Response Schema: { "id": "string", "name": "string", "driver": "string", "scope": "string", "containers": ["string"] }
+---
+Question: Provision a volume for the Kafka broker to retain message logs and mount it to the data path.
+Call: { "func_call": "mount_volume", "name": "kafka_log_storage", "driver": "local", "container_id": "k9l8m7n6o5p4", "mount_path": "/var/lib/kafka/data" }
+Response: { "id": "vol_d6e7f8g9h0", "name": "kafka_log_storage", "driver": "local", "scope": "local", "containers": ["k9l8m7n6o5p4"] }
+
+Question: Attach a persistent disk to the Jenkins controller to save build history and workspace configurations.
+Call: { "func_call": "mount_volume", "name": "jenkins_home_vol", "driver": "local", "container_id": "q1w2e3r4t5y6", "mount_path": "/var/jenkins_home" }
+Response: { "id": "vol_i1j2k3l4m5", "name": "jenkins_home_vol", "driver": "local", "scope": "local", "containers": ["q1w2e3r4t5y6"] }
+
+Question: Mount a dedicated storage volume to the Prometheus container for long-term metric retention.
+Call: { "func_call": "mount_volume", "name": "prometheus_data", "driver": "local", "container_id": "u7i8o9p0a1s2", "mount_path": "/prometheus/data" }
+Response: { "id": "vol_n6o7p8q9r0", "name": "prometheus_data", "driver": "local", "scope": "local", "containers": ["u7i8o9p0a1s2"] }
+
+Question: Ensure the Grafana instance persists dashboards and plugins by mounting a volume to its library folder.
+Call: { "func_call": "mount_volume", "name": "grafana_lib_vol", "driver": "local", "container_id": "d3f4g5h6j7k8", "mount_path": "/var/lib/grafana" }
+Response: { "id": "vol_s1t2u3v4w5", "name": "grafana_lib_vol", "driver": "local", "scope": "local", "containers": ["d3f4g5h6j7k8"] }
+
+Question: Create a mount point for the SonarQube server to store analysis reports and database files locally.
+Call: { "func_call": "mount_volume", "name": "sonarqube_data", "driver": "local", "container_id": "l9z0x1c2v3b4", "mount_path": "/opt/sonarqube/data" }
+Response: { "id": "vol_x6y7z8a9b0", "name": "sonarqube_data", "driver": "local", "scope": "local", "containers": ["l9z0x1c2v3b4"] }
+
+Question: Mount a volume to the MinIO object storage container to persist buckets and object metadata.
+Call: { "func_call": "mount_volume", "name": "minio_storage_vol", "driver": "local", "container_id": "n5m6b7v8c9x0", "mount_path": "/data" }
+Response: { "id": "vol_c1d2e3f4g5", "name": "minio_storage_vol", "driver": "local", "scope": "local", "containers": ["n5m6b7v8c9x0"] }
+
+Question: Attach a persistent volume to the Harbor registry container to store Docker images and charts.
+Call: { "func_call": "mount_volume", "name": "harbor_image_store", "driver": "local", "container_id": "z1a2s3d4f5g6", "mount_path": "/harbor/data" }
+Response: { "id": "vol_h6i7j8k9l0", "name": "harbor_image_store", "driver": "local", "scope": "local", "containers": ["z1a2s3d4f5g6"] }
+
+Question: Mount a volume for the Vault server to securely persist encrypted secrets and audit logs.
+Call: { "func_call": "mount_volume", "name": "vault_file_store", "driver": "local", "container_id": "h7j8k9l0m1n2", "mount_path": "/vault/data" }
+Response: { "id": "vol_m1n2o3p4q5", "name": "vault_file_store", "driver": "local", "scope": "local", "containers": ["h7j8k9l0m1n2"] }
+
+Question: Provide persistent storage for the Consul agent to maintain service catalog data and key-value pairs.
+Call: { "func_call": "mount_volume", "name": "consul_data_vol", "driver": "local", "container_id": "r6t7y8u9i0o1", "mount_path": "/consul/data" }
+Response: { "id": "vol_r6s7t8u9v0", "name": "consul_data_vol", "driver": "local", "scope": "local", "containers": ["r6t7y8u9i0o1"] }
+
+Question: Mount a volume to the Etcd container to ensure cluster state and configuration are saved across restarts.
+Call: { "func_call": "mount_volume", "name": "etcd_member_data", "driver": "local", "container_id": "p2a3s4d5f6g7", "mount_path": "/etcd-data" }
+Response: { "id": "vol_w1x2y3z4a5", "name": "etcd_member_data", "driver": "local", "scope": "local", "containers": ["p2a3s4d5f6g7"] }
+
+Question: Attach a shared volume to the Traefik proxy to persist ACME certificates and dynamic configuration.
+Call: { "func_call": "mount_volume", "name": "traefik_cert_vol", "driver": "local", "container_id": "h8j9k0l1z2x3", "mount_path": "/letsencrypt" }
+Response: { "id": "vol_b6c7d8e9f0", "name": "traefik_cert_vol", "driver": "local", "scope": "local", "containers": ["h8j9k0l1z2x3"] }
+
+Question: Mount a volume to the Airflow worker container to store DAG files and execution logs permanently.
+Call: { "func_call": "mount_volume", "name": "airflow_dags_vol", "driver": "local", "container_id": "c4v5b6n7m8q9", "mount_path": "/opt/airflow/dags" }
+Response: { "id": "vol_g1h2i3j4k5", "name": "airflow_dags_vol", "driver": "local", "scope": "local", "containers": ["c4v5b6n7m8q9"] }

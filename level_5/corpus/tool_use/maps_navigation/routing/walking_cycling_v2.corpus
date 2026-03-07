@@ -1,0 +1,47 @@
+Question: How do I walk from the Sydney Opera House to the Royal Botanic Garden entrance?
+Call: { "func_call": "get_directions", "origin": "Sydney Opera House, Sydney", "destination": "Royal Botanic Garden, Sydney", "mode": "walking" }
+Response: { "distance_km": 0.7, "duration_minutes": 9, "steps": [ { "instruction": "Exit the Opera House and head south along the promenade.", "distance_km": 0.3 }, { "instruction": "Turn left at the garden gates near Mrs Macquaries Chair.", "distance_km": 0.4 } ] }
+
+Question: What is the best cycling route from Alcatraz Ferry Terminal to Crissy Field?
+Call: { "func_call": "get_directions", "origin": "Pier 33, San Francisco", "destination": "Crissy Field, San Francisco", "mode": "cycling" }
+Response: { "distance_km": 4.2, "duration_minutes": 18, "steps": [ { "instruction": "Head west on the Embarcadero bike path.", "distance_km": 2.5 }, { "instruction": "Continue onto Marina Boulevard.", "distance_km": 1.2 }, { "instruction": "Enter Crissy Field at the main parking lot.", "distance_km": 0.5 } ] }
+
+Question: I need walking directions from the Vatican Museums to St. Peter's Square.
+Call: { "func_call": "get_directions", "origin": "Vatican Museums, Vatican City", "destination": "St. Peter's Square, Vatican City", "mode": "walking" }
+Response: { "distance_km": 0.5, "duration_minutes": 7, "steps": [ { "instruction": "Exit the museums and turn right onto Via della Conciliazione.", "distance_km": 0.4 }, { "instruction": "Walk straight until the colonnade of St. Peter's Basilica.", "distance_km": 0.1 } ] }
+
+Question: Can you map a cycling path from Kensington Gardens to Notting Hill Gate?
+Call: { "func_call": "get_directions", "origin": "Kensington Gardens, London", "destination": "Notting Hill Gate, London", "mode": "cycling" }
+Response: { "distance_km": 1.6, "duration_minutes": 9, "steps": [ { "instruction": "Exit the gardens at Lancaster Gate.", "distance_km": 0.3 }, { "instruction": "Turn left onto Bayswater Road.", "distance_km": 0.8 }, { "instruction": "Turn right onto Notting Hill Gate.", "distance_km": 0.5 } ] }
+
+Question: How do I walk from Senso-ji Temple to Asakusa Station?
+Call: { "func_call": "get_directions", "origin": "Senso-ji Temple, Tokyo", "destination": "Asakusa Station, Tokyo", "mode": "walking" }
+Response: { "distance_km": 0.6, "duration_minutes": 8, "steps": [ { "instruction": "Walk down Nakamise-dori shopping street.", "distance_km": 0.4 }, { "instruction": "Pass through Kaminarimon Gate and continue to the station.", "distance_km": 0.2 } ] }
+
+Question: Find a cycling route from Grant Park to Wrigley Field in Chicago.
+Call: { "func_call": "get_directions", "origin": "Grant Park, Chicago", "destination": "Wrigley Field, Chicago", "mode": "cycling" }
+Response: { "distance_km": 9.3, "duration_minutes": 42, "steps": [ { "instruction": "Head north on Michigan Avenue.", "distance_km": 3.5 }, { "instruction": "Turn left onto Diversey Parkway.", "distance_km": 5.0 }, { "instruction": "Turn right onto Sheffield Avenue to reach the stadium.", "distance_km": 0.8 } ] }
+
+Question: Walking directions from the Pantheon to Piazza Navona.
+Call: { "func_call": "get_directions", "origin": "Pantheon, Rome", "destination": "Piazza Navona, Rome", "mode": "walking" }
+Response: { "distance_km": 0.5, "duration_minutes": 6, "steps": [ { "instruction": "Exit the Pantheon and head west on Via della Rotonda.", "distance_km": 0.2 }, { "instruction": "Turn left onto Via di Santa Maria dell'Anima.", "distance_km": 0.3 } ] }
+
+Question: What is the cycling route from English Bay to Kitsilano Beach?
+Call: { "func_call": "get_directions", "origin": "English Bay, Vancouver", "destination": "Kitsilano Beach, Vancouver", "mode": "cycling" }
+Response: { "distance_km": 3.8, "duration_minutes": 15, "steps": [ { "instruction": "Follow the seawall path west along Beach Avenue.", "distance_km": 2.2 }, { "instruction": "Cross the Burrard Street Bridge.", "distance_km": 1.0 }, { "instruction": "Turn right onto Cornwall Avenue to reach the beach.", "distance_km": 0.6 } ] }
+
+Question: How can I walk from the Empire State Building to Bryant Park?
+Call: { "func_call": "get_directions", "origin": "Empire State Building, New York", "destination": "Bryant Park, New York", "mode": "walking" }
+Response: { "distance_km": 0.8, "duration_minutes": 10, "steps": [ { "instruction": "Head north on 5th Avenue.", "distance_km": 0.5 }, { "instruction": "Turn left onto West 40th Street.", "distance_km": 0.3 } ] }
+
+Question: Cycling directions from Muir Woods visitor center to Stinson Beach.
+Call: { "func_call": "get_directions", "origin": "Muir Woods National Monument, Mill Valley", "destination": "Stinson Beach, Mill Valley", "mode": "cycling" }
+Response: { "distance_km": 11.2, "duration_minutes": 55, "steps": [ { "instruction": "Exit the park onto Muir Woods Road.", "distance_km": 2.5 }, { "instruction": "Turn left onto Highway 1 heading west.", "distance_km": 8.0 }, { "instruction": "Arrive at Stinson Beach parking area.", "distance_km": 0.7 } ] }
+
+Question: Walk from the Arc de Triomphe to the Champs-Élysées gardens.
+Call: { "func_call": "get_directions", "origin": "Arc de Triomphe, Paris", "destination": "Jardin des Champs-Élysées, Paris", "mode": "walking" }
+Response: { "distance_km": 0.9, "duration_minutes": 11, "steps": [ { "instruction": "Descend from the monument towards the avenue.", "distance_km": 0.2 }, { "instruction": "Walk southeast along the central promenade.", "distance_km": 0.7 } ] }
+
+Question: Cycling path from Hampstead Heath to King's Cross Station.
+Call: { "func_call": "get_directions", "origin": "Hampstead Heath, London", "destination": "King's Cross Station, London", "mode": "cycling" }
+Response: { "distance_km": 5.1, "duration_minutes": 24, "steps": [ { "instruction": "Exit the heath via Flask Walk.", "distance_km": 0.6 }, { "instruction": "Turn right onto Haverstock Hill.", "distance_km": 2.2 }, { "instruction": "Follow the cycle superhighway south to the station.", "distance_km": 2.3 } ] }

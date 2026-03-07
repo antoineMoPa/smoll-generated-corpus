@@ -1,0 +1,51 @@
+Available Tools: create_network | list_networks | create_volume | list_volumes | mount_volume
+Call Schema: { "func_call": "string", "name": "string", "driver": "string", "container_id": "string", "mount_path": "string" }
+Response Schema: { "id": "string", "name": "string", "driver": "string", "scope": "string", "containers": ["string"] }
+---
+Question: Generate a new bridge network called analytics-pipeline-net for our data processing containers.
+Call: { "func_call": "create_network", "name": "analytics-pipeline-net", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_7d8e9f0a1b2c3d4e", "name": "analytics-pipeline-net", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: Enumerate all available networks to confirm the existence of the auth-service-isolation net.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_auth_01", "cnt_auth_02", "cnt_ldap"] }
+
+Question: Deploy an overlay network named cluster-sync-mesh for cross-node synchronization.
+Call: { "func_call": "create_network", "name": "cluster-sync-mesh", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_sync_5r4t3y2u", "name": "cluster-sync-mesh", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Configure a host network labeled gpu-rendering-host for direct GPU passthrough workloads.
+Call: { "func_call": "create_network", "name": "gpu-rendering-host", "driver": "host", "container_id": "", "mount_path": "" }
+Response: { "id": "net_host_gpu_8i7o6p5a", "name": "gpu-rendering-host", "driver": "host", "scope": "local", "containers": [] }
+
+Question: Instantiate a standard bridge network for the inventory-management-stack services.
+Call: { "func_call": "create_network", "name": "inventory-management-stack", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_brd_inv_9s8d7f6g", "name": "inventory-management-stack", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: Fetch the current network registry to validate connectivity for the notification-hub service.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_notify_001", "cnt_notify_002"] }
+
+Question: Setup an overlay network designated global-log-aggregator for distributed logging nodes.
+Call: { "func_call": "create_network", "name": "global-log-aggregator", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_log_3h4j5k6l", "name": "global-log-aggregator", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Form a bridge network titled qa-staging-env for isolated quality assurance testing.
+Call: { "func_call": "create_network", "name": "qa-staging-env", "driver": "bridge", "container_id": "", "mount_path": "" }
+Response: { "id": "net_brd_qa_7z8x9c0v", "name": "qa-staging-env", "driver": "bridge", "scope": "local", "containers": [] }
+
+Question: Survey all active networks to inspect the configuration of the metrics-collector-net.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_telegraf", "cnt_influxdb", "cnt_kapacitor"] }
+
+Question: Provision a host driver network named low-latency-trader for high-frequency trading tasks.
+Call: { "func_call": "create_network", "name": "low-latency-trader", "driver": "host", "container_id": "", "mount_path": "" }
+Response: { "id": "net_host_lat_2q3w4e5r", "name": "low-latency-trader", "driver": "host", "scope": "local", "containers": [] }
+
+Question: Construct an overlay network called backend-api-fabric to interconnect microservice endpoints.
+Call: { "func_call": "create_network", "name": "backend-api-fabric", "driver": "overlay", "container_id": "", "mount_path": "" }
+Response: { "id": "net_ov_api_6t7y8u9i", "name": "backend-api-fabric", "driver": "overlay", "scope": "swarm", "containers": [] }
+
+Question: Review the network catalog to verify the setup of the deployment-orchestrator-net.
+Call: { "func_call": "list_networks", "name": "", "driver": "", "container_id": "", "mount_path": "" }
+Response: { "id": "", "name": "", "driver": "", "scope": "", "containers": ["cnt_argo", "cnt_helm", "cnt_kubectl"] }

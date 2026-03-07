@@ -1,0 +1,51 @@
+Available Tools: run_container | stop_container | start_container | remove_container | list_containers
+Call Schema: { "func_call": "string", "container_id": "string", "image": "string", "name": "string", "ports": "string", "env": ["string"] }
+Response Schema: { "container_id": "string", "name": "string", "image": "string", "state": "running|stopped|exited", "ports": "string" }
+
+Question: Display all active containers currently serving traffic.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "x9y8z7w6", "name": "frontend-react", "image": "node:18", "state": "running", "ports": "3000:3000" }
+
+Question: Identify any containers that halted due to resource limits.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "v5u4t3s2", "name": "data-ingestor", "image": "python:3.9", "state": "stopped", "ports": "" }
+
+Question: Retrieve a full inventory of containers including those that finished execution.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "r1q2p3o4", "name": "cron-scheduler", "image": "alpine:latest", "state": "exited", "ports": "" }
+
+Question: Purge the container labeled 'old-monitor' regardless of its current status.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "old-monitor", "ports": "", "env": [] }
+Response: { "container_id": "n5m6l7k8", "name": "old-monitor", "image": "prometheus:latest", "state": "exited", "ports": "" }
+
+Question: Immediately delete the container instance with identifier 'b2c3d4e5'.
+Call: { "func_call": "remove_container", "container_id": "b2c3d4e5", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "b2c3d4e5", "name": "temp-analytics", "image": "spark:3.2", "state": "exited", "ports": "" }
+
+Question: Enumerate all non-running containers to free up disk space.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "j9i8h7g6", "name": "log-archiver", "image": "busybox:1.35", "state": "stopped", "ports": "" }
+
+Question: Permanently discard the finished container 'unit-test-suite'.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "unit-test-suite", "ports": "", "env": [] }
+Response: { "container_id": "f5e4d3c2", "name": "unit-test-suite", "image": "golang:1.19", "state": "exited", "ports": "" }
+
+Question: Erase all records of the container known as 'dev-sandbox'.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "dev-sandbox", "ports": "", "env": [] }
+Response: { "container_id": "b1a2z3y4", "name": "dev-sandbox", "image": "debian:bullseye", "state": "exited", "ports": "" }
+
+Question: Filter the container list to show only those that have terminated.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "x5w6v7u8", "name": "etl-pipeline", "image": "airflow:2.5", "state": "exited", "ports": "" }
+
+Question: Eliminate container 't9s8r7q6' using the force option to ignore running state.
+Call: { "func_call": "remove_container", "container_id": "t9s8r7q6", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "t9s8r7q6", "name": "zombie-process", "image": "centos:7", "state": "exited", "ports": "" }
+
+Question: Audit all live containers to verify stability before pruning.
+Call: { "func_call": "list_containers", "container_id": "", "image": "", "name": "", "ports": "", "env": [] }
+Response: { "container_id": "p1o2n3m4", "name": "auth-service", "image": "keycloak:latest", "state": "running", "ports": "8443:8443" }
+
+Question: Forcefully terminate and remove 'backup-worker' which is unresponsive.
+Call: { "func_call": "remove_container", "container_id": "", "image": "", "name": "backup-worker", "ports": "", "env": [] }
+Response: { "container_id": "l5k4j3i2", "name": "backup-worker", "image": "restic:latest", "state": "exited", "ports": "" }

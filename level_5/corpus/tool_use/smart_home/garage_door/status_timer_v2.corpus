@@ -1,0 +1,51 @@
+Available Tools: open_garage | close_garage | get_garage_status | set_garage_timer
+Call Schema: { "func_call": "string", "door_id": "string", "delay_seconds": number }
+Response Schema: { "door_id": "string", "state": "open|closed|opening|closing", "timestamp": "string" }
+---
+Question: Can you tell me if the north entry garage is open right now?
+Call: { "func_call": "get_garage_status", "door_id": "garage_north_05", "delay_seconds": 0 }
+Response: { "door_id": "garage_north_05", "state": "closed", "timestamp": "2023-11-01T09:15:30Z" }
+
+Question: Program the east wing door to shut automatically in 8 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_east_06", "delay_seconds": 480 }
+Response: { "door_id": "garage_east_06", "state": "open", "timestamp": "2023-11-01T09:18:45Z" }
+
+Question: What is the current status of the storage unit garage door?
+Call: { "func_call": "get_garage_status", "door_id": "garage_storage_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_storage_07", "state": "closing", "timestamp": "2023-11-01T09:22:10Z" }
+
+Question: I need the north entry door to close in 3 minutes please.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_north_05", "delay_seconds": 180 }
+Response: { "door_id": "garage_north_05", "state": "open", "timestamp": "2023-11-01T09:30:05Z" }
+
+Question: Check whether the basement garage door is currently open.
+Call: { "func_call": "get_garage_status", "door_id": "garage_basement_08", "delay_seconds": 0 }
+Response: { "door_id": "garage_basement_08", "state": "open", "timestamp": "2023-11-01T10:05:20Z" }
+
+Question: Set a timer for the east wing door to close after 25 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_east_06", "delay_seconds": 1500 }
+Response: { "door_id": "garage_east_06", "state": "open", "timestamp": "2023-11-01T10:12:33Z" }
+
+Question: Has the storage door finished opening yet?
+Call: { "func_call": "get_garage_status", "door_id": "garage_storage_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_storage_07", "state": "opening", "timestamp": "2023-11-01T10:25:48Z" }
+
+Question: Schedule the basement door to auto-close in 4 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_basement_08", "delay_seconds": 240 }
+Response: { "door_id": "garage_basement_08", "state": "open", "timestamp": "2023-11-01T10:40:15Z" }
+
+Question: Please verify the state of the north entry garage door.
+Call: { "func_call": "get_garage_status", "door_id": "garage_north_05", "delay_seconds": 0 }
+Response: { "door_id": "garage_north_05", "state": "closed", "timestamp": "2023-11-01T11:00:00Z" }
+
+Question: Enable the auto-shut feature for the east wing in 12 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_east_06", "delay_seconds": 720 }
+Response: { "door_id": "garage_east_06", "state": "open", "timestamp": "2023-11-01T11:15:22Z" }
+
+Question: Is the storage garage door fully closed or still moving?
+Call: { "func_call": "get_garage_status", "door_id": "garage_storage_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_storage_07", "state": "closed", "timestamp": "2023-11-01T11:30:40Z" }
+
+Question: Set the basement garage timer to 45 minutes from now.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_basement_08", "delay_seconds": 2700 }
+Response: { "door_id": "garage_basement_08", "state": "open", "timestamp": "2023-11-01T11:45:55Z" }

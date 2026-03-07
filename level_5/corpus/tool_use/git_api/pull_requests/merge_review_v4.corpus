@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "string", "head": "string", "base": "string" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Submit an approval for pull request 56 in the cloud-migrate repository owned by dev-ops-group.
+Call: { "func_call": "add_pr_review", "owner": "dev-ops-group", "repo": "cloud-migrate", "pr_number": 56, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 56, "title": "Migrate database to AWS RDS", "state": "open", "author": "jordan_cloud", "changed_files": 11, "mergeable": true }
+
+Question: Merge pull request 215 for the user-profiles project under the org social-net.
+Call: { "func_call": "merge_pr", "owner": "social-net", "repo": "user-profiles", "pr_number": 215, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 215, "title": "Add avatar upload functionality", "state": "merged", "author": "taylor_social", "changed_files": 8, "mergeable": true }
+
+Question: Request changes on PR 14 in the api-gateway repo owned by micro-services because rate limiting is broken.
+Call: { "func_call": "add_pr_review", "owner": "micro-services", "repo": "api-gateway", "pr_number": 14, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 14, "title": "Implement Redis rate limiter", "state": "open", "author": "casey_backend", "changed_files": 6, "mergeable": true }
+
+Question: Attempt to merge PR 89 in the react-components repository owned by web-team, but it has conflicts.
+Call: { "func_call": "merge_pr", "owner": "web-team", "repo": "react-components", "pr_number": 89, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 89, "title": "Upgrade React to version 18", "state": "open", "author": "morgan_frontend", "changed_files": 22, "mergeable": false }
+
+Question: Leave a positive review for PR 404 in the security-audit repo maintained by trust-team.
+Call: { "func_call": "add_pr_review", "owner": "trust-team", "repo": "security-audit", "pr_number": 404, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 404, "title": "Fix XSS vulnerability in search", "state": "open", "author": "riley_sec", "changed_files": 3, "mergeable": true }
+
+Question: Merge the hotfix PR 77 in the billing-engine repo owned by fintech-solutions.
+Call: { "func_call": "merge_pr", "owner": "fintech-solutions", "repo": "billing-engine", "pr_number": 77, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 77, "title": "Correct tax calculation logic", "state": "merged", "author": "avery_finance", "changed_files": 2, "mergeable": true }
+
+Question: Submit a review requesting changes on PR 92 in the ml-pipeline repo under the owner data-science due to model drift.
+Call: { "func_call": "add_pr_review", "owner": "data-science", "repo": "ml-pipeline", "pr_number": 92, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 92, "title": "Retrain recommendation model", "state": "open", "author": "quinn_data", "changed_files": 14, "mergeable": true }
+
+Question: Try to merge PR 330 in the container-registry repo owned by infra-core, but the branch is behind.
+Call: { "func_call": "merge_pr", "owner": "infra-core", "repo": "container-registry", "pr_number": 330, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 330, "title": "Update Docker base images", "state": "open", "author": "skyler_devops", "changed_files": 5, "mergeable": false }
+
+Question: Add an approving review to PR 18 in the graphql-api repository owned by api-team.
+Call: { "func_call": "add_pr_review", "owner": "api-team", "repo": "graphql-api", "pr_number": 18, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 18, "title": "Add pagination to user query", "state": "open", "author": "dakota_api", "changed_files": 7, "mergeable": true }
+
+Question: Merge pull request 555 for the landing-page project under the owner marketing-web.
+Call: { "func_call": "merge_pr", "owner": "marketing-web", "repo": "landing-page", "pr_number": 555, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 555, "title": "Refresh summer campaign visuals", "state": "merged", "author": "reese_design", "changed_files": 19, "mergeable": true }
+
+Question: Request changes on PR 61 in the order-processing repo owned by e-comm-platform because error handling is missing.
+Call: { "func_call": "add_pr_review", "owner": "e-comm-platform", "repo": "order-processing", "pr_number": 61, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 61, "title": "Refactor checkout flow", "state": "open", "author": "jamie_fullstack", "changed_files": 10, "mergeable": true }
+
+Question: Attempt to merge PR 102 in the chat-service repo owned by comms-eng, but there are unresolved conflicts.
+Call: { "func_call": "merge_pr", "owner": "comms-eng", "repo": "chat-service", "pr_number": 102, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 102, "title": "Enable end-to-end encryption", "state": "open", "author": "blake_security", "changed_files": 13, "mergeable": false }

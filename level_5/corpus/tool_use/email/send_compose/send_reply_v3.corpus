@@ -1,0 +1,51 @@
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Email the quarterly budget forecast to the finance committee.
+Call: { "func_call": "send_email", "to": ["cfo@globalinc.com", "analyst@globalinc.com"], "cc": ["auditor@globalinc.com"], "subject": "Q4 Budget Forecast - Final Draft", "body": "Hi Committee,\n\nPlease review the attached Q4 budget forecast. We need approval by Thursday to proceed with allocations.\n\nRegards,\nSarah Jenkins", "attachments": ["q4_budget_forecast.xlsx"] }
+Response: { "message_id": "msg_10293m", "status": "sent", "timestamp": "2023-10-25T09:15:00Z" }
+
+Question: Create a draft message to the recruiting agency regarding open roles.
+Call: { "func_call": "compose_draft", "to": ["partners@talentfinders.co"], "cc": [], "subject": "New Requisitions: Senior Developers", "body": "Hello,\n\nWe have opened three new positions for Senior Python Developers. Please prioritize candidates with cloud experience.\n\nBest,\nRecruiting Lead", "attachments": [] }
+Response: { "message_id": "draft_20485n", "status": "draft", "timestamp": "2023-10-25T10:30:22Z" }
+
+Question: Reply to the venue coordinator confirming the catering menu.
+Call: { "func_call": "send_reply", "to": ["events@grandviewhall.com"], "cc": [], "subject": "Re: Catering Selection for Nov 12", "body": "Hi Team,\n\nWe have finalized the menu. Please proceed with the vegetarian option for all guests as discussed.\n\nThanks,\nEvent Planner", "attachments": [] }
+Response: { "message_id": "msg_30596o", "status": "sent", "timestamp": "2023-10-25T11:45:10Z" }
+
+Question: Forward the security audit results to the CTO.
+Call: { "func_call": "forward_email", "to": ["cto@securetech.io"], "cc": ["security-ops@securetech.io"], "subject": "Fwd: Annual Security Audit Results", "body": "Hi,\n\nForwarding the final audit report. There are two critical items we need to address immediately.\n\nRegards,\nInfoSec Manager", "attachments": ["security_audit_2023.pdf"] }
+Response: { "message_id": "msg_40617p", "status": "sent", "timestamp": "2023-10-25T08:20:45Z" }
+
+Question: Send the travel itinerary to the executive assistant.
+Call: { "func_call": "send_email", "to": ["assistant@execsuite.com"], "cc": ["travel@agency.com"], "subject": "Itinerary: Tokyo Trip - Nov 5-10", "body": "Hi,\n\nAttached is the confirmed itinerary for the Tokyo business trip. Please ensure car service is booked for airport transfers.\n\nBest,\nExec Assistant", "attachments": ["tokyo_itinerary_nov.pdf"] }
+Response: { "message_id": "msg_50728q", "status": "sent", "timestamp": "2023-10-25T13:10:33Z" }
+
+Question: Draft a newsletter announcement about the new office location.
+Call: { "func_call": "compose_draft", "to": ["newsletter@company.com"], "cc": [], "subject": "Big News: We Are Moving!", "body": "Hi Everyone,\n\nWe are excited to announce that our new headquarters will open on January 1st. More details on the relocation process will follow soon.\n\nCheers,\nOperations Team", "attachments": [] }
+Response: { "message_id": "draft_60839r", "status": "draft", "timestamp": "2023-10-25T14:55:12Z" }
+
+Question: Reply to the customer apologizing for the shipping delay.
+Call: { "func_call": "send_reply", "to": ["customer@emailprovider.com"], "cc": ["logistics@shop.com"], "subject": "Re: Order #55432 Status", "body": "Dear Customer,\n\nWe sincerely apologize for the delay in your shipment. Your order has been expedited and will arrive by tomorrow.\n\nSincerely,\nCustomer Support", "attachments": [] }
+Response: { "message_id": "msg_70940s", "status": "sent", "timestamp": "2023-10-25T15:30:05Z" }
+
+Question: Send the project timeline update to the stakeholders.
+Call: { "func_call": "send_email", "to": ["stakeholders@projectx.org"], "cc": ["pm@projectx.org"], "subject": "Project X Timeline Update - Week 42", "body": "Hi All,\n\nPlease see the updated timeline attached. We are currently on track for the November launch date.\n\nRegards,\nProject Manager", "attachments": ["timeline_update_w42.mpp"] }
+Response: { "message_id": "msg_81051t", "status": "sent", "timestamp": "2023-10-25T16:45:50Z" }
+
+Question: Forward the press release draft to the PR agency for review.
+Call: { "func_call": "forward_email", "to": ["review@pragency.com"], "cc": ["marketing-dir@mycorp.com"], "subject": "Fwd: Draft Press Release - Product Launch", "body": "Hi Team,\n\nPlease review the attached draft for our upcoming product launch. We need your feedback by end of day.\n\nThanks,\nComms Lead", "attachments": ["press_release_draft_v2.docx"] }
+Response: { "message_id": "msg_91162u", "status": "sent", "timestamp": "2023-10-25T09:05:18Z" }
+
+Question: Compose a draft email to the landlord about lease renewal.
+Call: { "func_call": "compose_draft", "to": ["landlord@propertymgr.com"], "cc": [], "subject": "Lease Renewal Inquiry - Suite 400", "body": "Hello,\n\nOur lease for Suite 400 is expiring in three months. We would like to discuss renewal terms and potential rent adjustments.\n\nBest,\nFacilities Manager", "attachments": [] }
+Response: { "message_id": "draft_01273v", "status": "draft", "timestamp": "2023-10-25T11:20:40Z" }
+
+Question: Reply to the developer confirming the code merge request.
+Call: { "func_call": "send_reply", "to": ["dev@softwarehouse.io"], "cc": ["tech-lead@softwarehouse.io"], "subject": "Re: Merge Request #405", "body": "Hi,\n\nI have reviewed the changes and approved the merge request. Please deploy to the staging environment.\n\nThanks,\nSenior Dev", "attachments": [] }
+Response: { "message_id": "msg_11384w", "status": "sent", "timestamp": "2023-10-25T17:15:22Z" }
+
+Question: Send the safety compliance report to the regulatory board.
+Call: { "func_call": "send_email", "to": ["submissions@regboard.gov"], "cc": ["compliance@myfirm.com"], "subject": "Safety Compliance Report - Q3 2023", "body": "Dear Board,\n\nAttached is our Q3 safety compliance report as required by regulation 14-B. Please let us know if further documentation is needed.\n\nRegards,\nCompliance Officer", "attachments": ["safety_report_q3_2023.pdf"] }
+Response: { "message_id": "msg_21495x", "status": "sent", "timestamp": "2023-10-25T10:40:55Z" }

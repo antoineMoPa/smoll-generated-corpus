@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: Determine if the noise-canceling headphones in the Boston hub meet the minimum requirement of 12 units.
+Call: { "func_call": "check_availability", "sku": "HP-NC-SLV", "location_id": "BOS-HUB-13", "threshold": 12 }
+Response: { "sku": "HP-NC-SLV", "product_name": "Noise Canceling Headphones Silver", "quantity": 9, "location": "BOS-HUB-13", "status": "low_stock" }
+
+Question: What is the total inventory of standing desks at the Denver distribution facility?
+Call: { "func_call": "get_stock_level", "sku": "DSK-STD-WHT", "location_id": "DEN-DIS-14", "threshold": 0 }
+Response: { "sku": "DSK-STD-WHT", "product_name": "Standing Desk White", "quantity": 205, "location": "DEN-DIS-14", "status": "in_stock" }
+
+Question: Show me all items in the Phoenix warehouse that have fallen below the safety limit of 35.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "PHX-WH-15", "threshold": 35 }
+Response: { "sku": "CHR-ERG-MESH", "product_name": "Ergonomic Mesh Chair", "quantity": 18, "location": "PHX-WH-15", "status": "low_stock" }
+
+Question: Retrieve the count of Ethernet cables stored in the Atlanta regional depot.
+Call: { "func_call": "get_stock_by_location", "sku": "CBL-ETH-CAT6", "location_id": "ATL-DEP-16", "threshold": 0 }
+Response: { "sku": "CBL-ETH-CAT6", "product_name": "Ethernet Cable Cat6", "quantity": 550, "location": "ATL-DEP-16", "status": "in_stock" }
+
+Question: Is the laser printer out of stock in the Vancouver node given a threshold of 5?
+Call: { "func_call": "check_availability", "sku": "PRT-LSR-BW", "location_id": "VAN-NODE-17", "threshold": 5 }
+Response: { "sku": "PRT-LSR-BW", "product_name": "Laser Printer B&W", "quantity": 0, "location": "VAN-NODE-17", "status": "out_of_stock" }
+
+Question: Check the stock status for tablet stands in the Dublin facility against a reorder point of 40.
+Call: { "func_call": "get_stock_level", "sku": "STD-TAB-ADJ", "location_id": "DUB-FAC-18", "threshold": 40 }
+Response: { "sku": "STD-TAB-ADJ", "product_name": "Adjustable Tablet Stand", "quantity": 33, "location": "DUB-FAC-18", "status": "low_stock" }
+
+Question: Find any products in the Mumbai logistics center where stock is under 60 units.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "MUM-LOG-19", "threshold": 60 }
+Response: { "sku": "PROJ-4K-SMT", "product_name": "4K Smart Projector", "quantity": 24, "location": "MUM-LOG-19", "status": "low_stock" }
+
+Question: How many wireless chargers are currently held in the San Diego storage unit?
+Call: { "func_call": "get_stock_by_location", "sku": "CHG-WRL-15W", "location_id": "SAN-STO-20", "threshold": 0 }
+Response: { "sku": "CHG-WRL-15W", "product_name": "Wireless Charger 15W", "quantity": 92, "location": "SAN-STO-20", "status": "in_stock" }
+
+Question: Verify availability of paper shredders in the Oslo hub, flagging if below 8 units.
+Call: { "func_call": "check_availability", "sku": "SHR-PAP-CRS", "location_id": "OSL-HUB-21", "threshold": 8 }
+Response: { "sku": "SHR-PAP-CRS", "product_name": "Cross Cut Paper Shredder", "quantity": 15, "location": "OSL-HUB-21", "status": "in_stock" }
+
+Question: Get the inventory level for conference cameras in the Sydney warehouse with a critical threshold of 10.
+Call: { "func_call": "get_stock_level", "sku": "CAM-CONF-4K", "location_id": "SYD-WH-22", "threshold": 10 }
+Response: { "sku": "CAM-CONF-4K", "product_name": "4K Conference Camera", "quantity": 4, "location": "SYD-WH-22", "status": "low_stock" }
+
+Question: Identify all low stock items in the Houston fulfillment center below the limit of 75.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "HOU-FUL-23", "threshold": 75 }
+Response: { "sku": "MON-ULTR-34", "product_name": "Ultrawide Monitor 34 inch", "quantity": 29, "location": "HOU-FUL-23", "status": "low_stock" }
+
+Question: Check the quantity of smart locks available in the Amsterdam distribution point.
+Call: { "func_call": "get_stock_by_location", "sku": "LCK-SMT-WFI", "location_id": "AMS-DIS-24", "threshold": 0 }
+Response: { "sku": "LCK-SMT-WFI", "product_name": "WiFi Smart Lock", "quantity": 110, "location": "AMS-DIS-24", "status": "in_stock" }

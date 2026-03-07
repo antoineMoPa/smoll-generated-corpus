@@ -1,0 +1,51 @@
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Locate blues songs by B.B. King.
+Call: { "func_call": "search_tracks", "query": "B.B. King", "limit": 4, "genre": "blues" }
+Response: { "results": [ { "id": "trk_1101", "title": "The Thrill Is Gone", "artist": "B.B. King", "duration_seconds": 312 }, { "id": "trk_1102", "title": "Lucille", "artist": "B.B. King", "duration_seconds": 295 }, { "id": "trk_1103", "title": "Sweet Little Angel", "artist": "B.B. King", "duration_seconds": 188 }, { "id": "trk_1104", "title": "Every Day I Have the Blues", "artist": "B.B. King", "duration_seconds": 204 } ], "total": 29 }
+
+Question: Find pop artists similar to Dua Lipa.
+Call: { "func_call": "search_artist", "query": "Dua Lipa", "limit": 3, "genre": "pop" }
+Response: { "results": [ { "id": "art_801", "title": "Dua Lipa", "artist": "Dua Lipa", "duration_seconds": 0 }, { "id": "art_802", "title": "Dua Saleh", "artist": "Dua Saleh", "duration_seconds": 0 }, { "id": "art_803", "title": "Lipa Schmeltzer", "artist": "Lipa Schmeltzer", "duration_seconds": 0 } ], "total": 12 }
+
+Question: Search for punk tracks by Green Day.
+Call: { "func_call": "search_tracks", "query": "Green Day", "limit": 5, "genre": "punk" }
+Response: { "results": [ { "id": "trk_2250", "title": "Basket Case", "artist": "Green Day", "duration_seconds": 183 }, { "id": "trk_2251", "title": "American Idiot", "artist": "Green Day", "duration_seconds": 174 }, { "id": "trk_2252", "title": "Boulevard of Broken Dreams", "artist": "Green Day", "duration_seconds": 262 }, { "id": "trk_2253", "title": "Good Riddance", "artist": "Green Day", "duration_seconds": 153 }, { "id": "trk_2254", "title": "Holiday", "artist": "Green Day", "duration_seconds": 232 } ], "total": 76 }
+
+Question: Look up funk artists like Parliament.
+Call: { "func_call": "search_artist", "query": "Parliament", "limit": 2, "genre": "funk" }
+Response: { "results": [ { "id": "art_901", "title": "Parliament", "artist": "Parliament", "duration_seconds": 0 }, { "id": "art_902", "title": "Parliament-Funkadelic", "artist": "P-Funk All Stars", "duration_seconds": 0 } ], "total": 6 }
+
+Question: Get disco tracks by Donna Summer.
+Call: { "func_call": "search_tracks", "query": "Donna Summer", "limit": 3, "genre": "disco" }
+Response: { "results": [ { "id": "trk_3350", "title": "Hot Stuff", "artist": "Donna Summer", "duration_seconds": 225 }, { "id": "trk_3351", "title": "Bad Girls", "artist": "Donna Summer", "duration_seconds": 298 }, { "id": "trk_3352", "title": "I Feel Love", "artist": "Donna Summer", "duration_seconds": 347 } ], "total": 41 }
+
+Question: Find folk songs by Bob Dylan.
+Call: { "func_call": "search_tracks", "query": "Bob Dylan", "limit": 4, "genre": "folk" }
+Response: { "results": [ { "id": "trk_4450", "title": "Blowin' in the Wind", "artist": "Bob Dylan", "duration_seconds": 164 }, { "id": "trk_4451", "title": "Like a Rolling Stone", "artist": "Bob Dylan", "duration_seconds": 369 }, { "id": "trk_4452", "title": "The Times They Are a-Changin'", "artist": "Bob Dylan", "duration_seconds": 195 }, { "id": "trk_4453", "title": "Knockin' on Heaven's Door", "artist": "Bob Dylan", "duration_seconds": 151 } ], "total": 98 }
+
+Question: Search for Latin artists like Shakira.
+Call: { "func_call": "search_artist", "query": "Shakira", "limit": 2, "genre": "latin" }
+Response: { "results": [ { "id": "art_601", "title": "Shakira", "artist": "Shakira", "duration_seconds": 0 }, { "id": "art_602", "title": "Shakira Isabel", "artist": "Shakira Isabel", "duration_seconds": 0 } ], "total": 9 }
+
+Question: Locate grunge tracks by Nirvana.
+Call: { "func_call": "search_tracks", "query": "Nirvana", "limit": 3, "genre": "grunge" }
+Response: { "results": [ { "id": "trk_5550", "title": "Smells Like Teen Spirit", "artist": "Nirvana", "duration_seconds": 301 }, { "id": "trk_5551", "title": "Come As You Are", "artist": "Nirvana", "duration_seconds": 219 }, { "id": "trk_5552", "title": "Lithium", "artist": "Nirvana", "duration_seconds": 257 } ], "total": 52 }
+
+Question: Find house music by Daft Punk.
+Call: { "func_call": "search_tracks", "query": "Daft Punk", "limit": 4, "genre": "house" }
+Response: { "results": [ { "id": "trk_6650", "title": "One More Time", "artist": "Daft Punk", "duration_seconds": 320 }, { "id": "trk_6651", "title": "Around the World", "artist": "Daft Punk", "duration_seconds": 429 }, { "id": "trk_6652", "title": "Harder, Better, Faster, Stronger", "artist": "Daft Punk", "duration_seconds": 224 }, { "id": "trk_6653", "title": "Get Lucky", "artist": "Daft Punk", "duration_seconds": 248 } ], "total": 34 }
+
+Question: Search for gospel artists like Kirk Franklin.
+Call: { "func_call": "search_artist", "query": "Kirk Franklin", "limit": 2, "genre": "gospel" }
+Response: { "results": [ { "id": "art_401", "title": "Kirk Franklin", "artist": "Kirk Franklin", "duration_seconds": 0 }, { "id": "art_402", "title": "Kirk Franklin & The Family", "artist": "Kirk Franklin", "duration_seconds": 0 } ], "total": 7 }
+
+Question: Get ambient tracks by Brian Eno.
+Call: { "func_call": "search_tracks", "query": "Brian Eno", "limit": 3, "genre": "ambient" }
+Response: { "results": [ { "id": "trk_7750", "title": "An Ending (Ascent)", "artist": "Brian Eno", "duration_seconds": 223 }, { "id": "trk_7751", "title": "Music for Airports", "artist": "Brian Eno", "duration_seconds": 1020 }, { "id": "trk_7752", "title": "Deep Blue Day", "artist": "Brian Eno", "duration_seconds": 245 } ], "total": 18 }
+
+Question: Find synth-pop artists like Depeche Mode.
+Call: { "func_call": "search_artist", "query": "Depeche Mode", "limit": 2, "genre": "synth-pop" }
+Response: { "results": [ { "id": "art_201", "title": "Depeche Mode", "artist": "Depeche Mode", "duration_seconds": 0 }, { "id": "art_202", "title": "Depeche Mode Tribute", "artist": "Mode Covers", "duration_seconds": 0 } ], "total": 11 }

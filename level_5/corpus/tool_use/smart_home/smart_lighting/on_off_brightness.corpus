@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": number, "color": "string" }
+Response Schema: { "light_id": "string", "state": "on|off", "brightness": number, "color": "string" }
+---
+Question: Turn on the living room light at 80% brightness.
+Call: { "func_call": "turn_on_light", "light_id": "living_room", "brightness": 80, "color": "white" }
+Response: { "light_id": "living_room", "state": "on", "brightness": 80, "color": "white" }
+
+Question: Switch off the bedroom light completely.
+Call: { "func_call": "turn_off_light", "light_id": "bedroom", "brightness": 0, "color": "white" }
+Response: { "light_id": "bedroom", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Set the kitchen light brightness to 100%.
+Call: { "func_call": "set_brightness", "light_id": "kitchen", "brightness": 100, "color": "white" }
+Response: { "light_id": "kitchen", "state": "on", "brightness": 100, "color": "white" }
+
+Question: Dim the living room light to 25%.
+Call: { "func_call": "set_brightness", "light_id": "living_room", "brightness": 25, "color": "white" }
+Response: { "light_id": "living_room", "state": "on", "brightness": 25, "color": "white" }
+
+Question: Turn on the bedroom light but keep it dim at 15%.
+Call: { "func_call": "turn_on_light", "light_id": "bedroom", "brightness": 15, "color": "white" }
+Response: { "light_id": "bedroom", "state": "on", "brightness": 15, "color": "white" }
+
+Question: Power down the kitchen lights.
+Call: { "func_call": "turn_off_light", "light_id": "kitchen", "brightness": 0, "color": "white" }
+Response: { "light_id": "kitchen", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Adjust the living room brightness to 50%.
+Call: { "func_call": "set_brightness", "light_id": "living_room", "brightness": 50, "color": "white" }
+Response: { "light_id": "living_room", "state": "on", "brightness": 50, "color": "white" }
+
+Question: Activate the kitchen light at full brightness.
+Call: { "func_call": "turn_on_light", "light_id": "kitchen", "brightness": 100, "color": "white" }
+Response: { "light_id": "kitchen", "state": "on", "brightness": 100, "color": "white" }
+
+Question: Turn off the living room light immediately.
+Call: { "func_call": "turn_off_light", "light_id": "living_room", "brightness": 0, "color": "white" }
+Response: { "light_id": "living_room", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Set the bedroom light to a cozy 40% brightness.
+Call: { "func_call": "set_brightness", "light_id": "bedroom", "brightness": 40, "color": "white" }
+Response: { "light_id": "bedroom", "state": "on", "brightness": 40, "color": "white" }
+
+Question: Turn on the kitchen light at 60% brightness.
+Call: { "func_call": "turn_on_light", "light_id": "kitchen", "brightness": 60, "color": "white" }
+Response: { "light_id": "kitchen", "state": "on", "brightness": 60, "color": "white" }
+
+Question: Dim the bedroom light to 10% for sleeping.
+Call: { "func_call": "set_brightness", "light_id": "bedroom", "brightness": 10, "color": "white" }
+Response: { "light_id": "bedroom", "state": "on", "brightness": 10, "color": "white" }

@@ -1,0 +1,51 @@
+Available Tools: run_container | stop_container | start_container | remove_container | list_containers
+Call Schema: { "func_call": "string", "container_id": "string", "image": "string", "name": "string", "ports": "string", "env": ["string"] }
+Response Schema: { "container_id": "string", "name": "string", "image": "string", "state": "running|stopped|exited", "ports": "string" }
+---
+Question: Deploy a memcached service named session-store mapping port 11211 on the host.
+Call: { "func_call": "run_container", "container_id": "", "image": "memcached:1.6", "name": "session-store", "ports": "11211:11211", "env": [] }
+Response: { "container_id": "h9i8j7k6l5m4", "name": "session-store", "image": "memcached:1.6", "state": "running", "ports": "11211:11211" }
+
+Question: Initialize a rabbitmq message broker called msg-queue with management port exposed and default user configured.
+Call: { "func_call": "run_container", "container_id": "", "image": "rabbitmq:3-management", "name": "msg-queue", "ports": "15672:15672", "env": ["RABBITMQ_DEFAULT_USER=guest", "RABBITMQ_DEFAULT_PASS=guest"] }
+Response: { "container_id": "n3o4p5q6r7s8", "name": "msg-queue", "image": "rabbitmq:3-management", "state": "running", "ports": "15672:15672" }
+
+Question: Halt the memcached instance session-store immediately.
+Call: { "func_call": "stop_container", "container_id": "h9i8j7k6l5m4", "image": "", "name": "session-store", "ports": "", "env": [] }
+Response: { "container_id": "h9i8j7k6l5m4", "name": "session-store", "image": "memcached:1.6", "state": "stopped", "ports": "11211:11211" }
+
+Question: Spin up a grafana monitoring dashboard named viz-board on port 3001.
+Call: { "func_call": "run_container", "container_id": "", "image": "grafana/grafana:latest", "name": "viz-board", "ports": "3001:3000", "env": ["GF_SECURITY_ADMIN_PASSWORD=admin123"] }
+Response: { "container_id": "t9u8v7w6x5y4", "name": "viz-board", "image": "grafana/grafana:latest", "state": "running", "ports": "3001:3000" }
+
+Question: Terminate the rabbitmq broker msg-queue gracefully.
+Call: { "func_call": "stop_container", "container_id": "n3o4p5q6r7s8", "image": "", "name": "msg-queue", "ports": "", "env": [] }
+Response: { "container_id": "n3o4p5q6r7s8", "name": "msg-queue", "image": "rabbitmq:3-management", "state": "stopped", "ports": "15672:15672" }
+
+Question: Launch an elasticsearch search engine named search-core exposing port 9200 with single node discovery.
+Call: { "func_call": "run_container", "container_id": "", "image": "elasticsearch:8.9", "name": "search-core", "ports": "9200:9200", "env": ["discovery.type=single-node", "xpack.security.enabled=false"] }
+Response: { "container_id": "z3a4b5c6d7e8", "name": "search-core", "image": "elasticsearch:8.9", "state": "running", "ports": "9200:9200" }
+
+Question: Stop the grafana dashboard viz-board.
+Call: { "func_call": "stop_container", "container_id": "t9u8v7w6x5y4", "image": "", "name": "viz-board", "ports": "", "env": [] }
+Response: { "container_id": "t9u8v7w6x5y4", "name": "viz-board", "image": "grafana/grafana:latest", "state": "stopped", "ports": "3001:3000" }
+
+Question: Run a traefik reverse proxy named edge-router mapping ports 80 and 443.
+Call: { "func_call": "run_container", "container_id": "", "image": "traefik:v2.10", "name": "edge-router", "ports": "80:80,443:443", "env": ["TRAEFIK_API_INSECURE=true"] }
+Response: { "container_id": "f9g8h7i6j5k4", "name": "edge-router", "image": "traefik:v2.10", "state": "running", "ports": "80:80,443:443" }
+
+Question: Shut down the elasticsearch cluster search-core.
+Call: { "func_call": "stop_container", "container_id": "z3a4b5c6d7e8", "image": "", "name": "search-core", "ports": "", "env": [] }
+Response: { "container_id": "z3a4b5c6d7e8", "name": "search-core", "image": "elasticsearch:8.9", "state": "stopped", "ports": "9200:9200" }
+
+Question: Start a celery worker named task-worker using python image with redis broker URL set.
+Call: { "func_call": "run_container", "container_id": "", "image": "python:3.9-slim", "name": "task-worker", "ports": "", "env": ["CELERY_BROKER_URL=redis://redis:6379/0"] }
+Response: { "container_id": "l3m4n5o6p7q8", "name": "task-worker", "image": "python:3.9-slim", "state": "running", "ports": "" }
+
+Question: Stop the traefik proxy edge-router.
+Call: { "func_call": "stop_container", "container_id": "f9g8h7i6j5k4", "image": "", "name": "edge-router", "ports": "", "env": [] }
+Response: { "container_id": "f9g8h7i6j5k4", "name": "edge-router", "image": "traefik:v2.10", "state": "stopped", "ports": "80:80,443:443" }
+
+Question: Deploy a prometheus metrics collector named metrics-svc on port 9090 with config path set.
+Call: { "func_call": "run_container", "container_id": "", "image": "prom/prometheus:v2.45", "name": "metrics-svc", "ports": "9090:9090", "env": ["PROMETHEUS_CONFIG=/etc/prometheus/prometheus.yml"] }
+Response: { "container_id": "r9s8t7u6v5w4", "name": "metrics-svc", "image": "prom/prometheus:v2.45", "state": "running", "ports": "9090:9090" }

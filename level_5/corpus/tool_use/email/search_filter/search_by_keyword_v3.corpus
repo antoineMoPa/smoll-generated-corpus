@@ -1,0 +1,51 @@
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Retrieve shipping notifications from FedEx regarding my package delivery.
+Call: { "func_call": "search_emails", "query": "shipping notification", "from": "fedex.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_7001", "from": "tracking@fedex.com", "subject": "Your FedEx package is on the way", "date": "2023-11-01T08:15:00Z" }, { "id": "msg_7002", "from": "updates@fedex.com", "subject": "Delivery Update: Package Delivered", "date": "2023-11-02T14:30:00Z" }], "count": 2 }
+
+Question: Find all promotional emails from Netflix about new releases.
+Call: { "func_call": "search_emails", "query": "new releases", "from": "info@netflix.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_5023", "from": "recommendations@netflix.com", "subject": "New on Netflix: Watch Now", "date": "2023-10-28T10:00:00Z" }], "count": 1 }
+
+Question: Search for flight itineraries sent by Delta Airlines.
+Call: { "func_call": "search_emails", "query": "flight itinerary", "from": "delta.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_3344", "from": "reservations@delta.com", "subject": "Your Delta Flight Itinerary #DL4592", "date": "2023-11-05T09:20:00Z" }, { "id": "msg_3345", "from": "checkin@delta.com", "subject": "Check-in Open for Your Upcoming Flight", "date": "2023-11-04T07:00:00Z" }], "count": 2 }
+
+Question: Locate password reset requests from the Microsoft Office portal.
+Call: { "func_call": "search_emails", "query": "password reset", "from": "account.microsoft.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_8812", "from": "no-reply@account.microsoft.com", "subject": "Reset your Microsoft account password", "date": "2023-10-30T16:10:00Z" }], "count": 1 }
+
+Question: Find meeting agendas from the Marketing Team lead.
+Call: { "func_call": "search_emails", "query": "meeting agenda", "from": "lead@marketing.team", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_6677", "from": "j.doe@marketing.team", "subject": "Agenda: Weekly Marketing Sync", "date": "2023-11-03T11:45:00Z" }, { "id": "msg_6678", "from": "j.doe@marketing.team", "subject": "Updated Agenda: Campaign Launch Discussion", "date": "2023-11-01T09:30:00Z" }], "count": 2 }
+
+Question: Search for receipts from Starbucks regarding coffee purchases.
+Call: { "func_call": "search_emails", "query": "receipt", "from": "starbucks.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_2299", "from": "rewards@starbucks.com", "subject": "Your Starbucks Receipt", "date": "2023-11-06T08:05:00Z" }, { "id": "msg_2300", "from": "rewards@starbucks.com", "subject": "Receipt for Order #12345", "date": "2023-11-05T07:50:00Z" }, { "id": "msg_2301", "from": "rewards@starbucks.com", "subject": "Transaction Summary", "date": "2023-11-04T12:15:00Z" }], "count": 3 }
+
+Question: Retrieve invoices from WebHost Pro for domain renewal.
+Call: { "func_call": "search_emails", "query": "invoice", "from": "billing@webhostpro.net", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_4102", "from": "accounts@webhostpro.net", "subject": "Invoice #WHP-2023-11: Domain Renewal", "date": "2023-11-01T10:00:00Z" }], "count": 1 }
+
+Question: Find security alerts from PayPal regarding login attempts.
+Call: { "func_call": "search_emails", "query": "security alert", "from": "service@paypal.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_9933", "from": "security@paypal.com", "subject": "Alert: New Login Detected", "date": "2023-10-29T13:22:00Z" }, { "id": "msg_9934", "from": "security@paypal.com", "subject": "Verify Your Recent Activity", "date": "2023-10-27T18:40:00Z" }], "count": 2 }
+
+Question: Search for workshop invitations from the Local Library.
+Call: { "func_call": "search_emails", "query": "workshop invitation", "from": "events@locallibrary.org", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_5566", "from": "programs@locallibrary.org", "subject": "Invitation: Coding Workshop for Kids", "date": "2023-11-02T15:00:00Z" }], "count": 1 }
+
+Question: Locate order confirmations from Target for home goods.
+Call: { "func_call": "search_emails", "query": "order confirmation", "from": "target.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_7788", "from": "orders@target.com", "subject": "Target Order Confirmation #TGT-998877", "date": "2023-11-04T19:30:00Z" }, { "id": "msg_7789", "from": "shipping@target.com", "subject": "Your Target Order Has Shipped", "date": "2023-11-05T10:15:00Z" }], "count": 2 }
+
+Question: Find password reset emails from the University Student Portal.
+Call: { "func_call": "search_emails", "query": "password reset", "from": "it@university.edu", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_1122", "from": "helpdesk@university.edu", "subject": "Student Portal Password Reset Request", "date": "2023-10-31T14:55:00Z" }], "count": 1 }
+
+Question: Search for meeting recaps from the Sales Director.
+Call: { "func_call": "search_emails", "query": "meeting recap", "from": "director@sales.dept", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_3366", "from": "m.smith@sales.dept", "subject": "Recap: Q4 Sales Strategy Meeting", "date": "2023-11-03T17:00:00Z" }, { "id": "msg_3367", "from": "m.smith@sales.dept", "subject": "Notes from Regional Sales Review", "date": "2023-10-30T16:20:00Z" }], "count": 2 }

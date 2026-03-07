@@ -1,0 +1,87 @@
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Register four new electric vehicle models in the automotive inventory database.
+Call: { "func_call": "bulk_insert", "table": "vehicles", "data": [ { "vin": "EV-2024-001", "make": "VoltDrive", "model": "Sedan X", "year": 2024, "price": 42000 }, { "vin": "EV-2024-002", "make": "VoltDrive", "model": "SUV Pro", "year": 2024, "price": 55000 }, { "vin": "EV-2024-003", "make": "GreenMotion", "model": "Hatchback Lite", "year": 2024, "price": 28500 }, { "vin": "EV-2024-004", "make": "GreenMotion", "model": "Truck Heavy", "year": 2024, "price": 68000 } ] }
+Response: { "id": 50112, "table": "vehicles", "inserted": 4, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Import three high-priority support tickets escalated from the weekend shift.
+Call: { "func_call": "bulk_insert", "table": "support_tickets", "data": [ { "ticket_id": "SUP-9901", "priority": "high", "category": "billing", "subject": "Duplicate charge on invoice #442" }, { "ticket_id": "SUP-9902", "priority": "critical", "category": "outage", "subject": "Service unavailable in EU-West region" }, { "ticket_id": "SUP-9903", "priority": "high", "category": "security", "subject": "Suspicious login attempt detected" } ] }
+Response: { "id": 77301, "table": "support_tickets", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add six new workshop sessions to the training calendar for next month.
+Call: { "func_call": "bulk_insert", "table": "events", "data": [ { "event_code": "WRK-PY-01", "title": "Python Basics", "date": "2023-11-05", "capacity": 30 }, { "event_code": "WRK-JS-02", "title": "Advanced JavaScript", "date": "2023-11-06", "capacity": 25 }, { "event_code": "WRK-DB-03", "title": "SQL Optimization", "date": "2023-11-10", "capacity": 20 }, { "event_code": "WRK-AI-04", "title": "Intro to Machine Learning", "date": "2023-11-12", "capacity": 40 }, { "event_code": "WRK-UX-05", "title": "User Research Methods", "date": "2023-11-15", "capacity": 15 }, { "event_code": "WRK-DEV-06", "title": "DevOps Fundamentals", "date": "2023-11-18", "capacity": 35 } ] }
+Response: { "id": 33405, "table": "events", "inserted": 6, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log five payment gateway timeout errors occurring during the flash sale.
+Call: { "func_call": "bulk_insert", "table": "transaction_logs", "data": [ { "txn_id": "TXN-881", "timestamp": "2023-10-28T10:01:00Z", "status": "failed", "reason": "Gateway timeout" }, { "txn_id": "TXN-882", "timestamp": "2023-10-28T10:01:15Z", "status": "failed", "reason": "Gateway timeout" }, { "txn_id": "TXN-883", "timestamp": "2023-10-28T10:02:30Z", "status": "failed", "reason": "Connection reset" }, { "txn_id": "TXN-884", "timestamp": "2023-10-28T10:03:45Z", "status": "failed", "reason": "Gateway timeout" }, { "txn_id": "TXN-885", "timestamp": "2023-10-28T10:04:10Z", "status": "failed", "reason": "Service unavailable" } ] }
+Response: { "id": 66209, "table": "transaction_logs", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Populate the warehouse database with eight new raw material batches.
+Call: { "func_call": "bulk_insert", "table": "inventory", "data": [ { "batch_id": "RAW-001", "material": "Steel Rods", "quantity": 5000, "unit": "kg" }, { "batch_id": "RAW-002", "material": "Copper Wire", "quantity": 1200, "unit": "m" }, { "batch_id": "RAW-003", "material": "Plastic Pellets", "quantity": 3000, "unit": "kg" }, { "batch_id": "RAW-004", "material": "Aluminum Sheets", "quantity": 800, "unit": "sqm" }, { "batch_id": "RAW-005", "material": "Glass Panes", "quantity": 450, "unit": "units" }, { "batch_id": "RAW-006", "material": "Rubber Strips", "quantity": 2000, "unit": "m" }, { "batch_id": "RAW-007", "material": "Carbon Fiber", "quantity": 150, "unit": "kg" }, { "batch_id": "RAW-008", "material": "Silicon Wafers", "quantity": 600, "unit": "units" } ] }
+Response: { "id": 91008, "table": "inventory", "inserted": 8, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Create accounts for two new regional managers in the HR system.
+Call: { "func_call": "bulk_insert", "table": "employees", "data": [ { "emp_id": "EMP-401", "name": "Alice Johnson", "position": "Regional Manager", "region": "North America" }, { "emp_id": "EMP-402", "name": "Bob Chen", "position": "Regional Manager", "region": "Asia Pacific" } ] }
+Response: { "id": 22506, "table": "employees", "inserted": 2, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Record four failed authentication attempts from suspicious IP addresses.
+Call: { "func_call": "bulk_insert", "table": "security_logs", "data": [ { "log_id": "SEC-101", "ip": "192.168.1.55", "attempt_time": "2023-10-28T22:10:00Z", "reason": "Invalid password" }, { "log_id": "SEC-102", "ip": "10.0.0.99", "attempt_time": "2023-10-28T22:12:30Z", "reason": "Account locked" }, { "log_id": "SEC-103", "ip": "172.16.0.44", "attempt_time": "2023-10-28T22:15:45Z", "reason": "Expired token" }, { "log_id": "SEC-104", "ip": "192.168.1.55", "attempt_time": "2023-10-28T22:18:00Z", "reason": "Invalid password" } ] }
+Response: { "id": 55881, "table": "security_logs", "inserted": 4, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Upload three new podcast episodes to the media content library.
+Call: { "func_call": "bulk_insert", "table": "media_assets", "data": [ { "asset_id": "POD-201", "title": "Tech Trends 2024", "duration": 1800, "format": "mp3" }, { "asset_id": "POD-202", "title": "Interview with CEO", "duration": 2400, "format": "mp3" }, { "asset_id": "POD-203", "title": "Q&A Session", "duration": 1500, "format": "mp3" } ] }
+Response: { "id": 40332, "table": "media_assets", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Insert five new flight routes into the airline scheduling database.
+Call: { "func_call": "bulk_insert", "table": "flight_routes", "data": [ { "route_code": "FL-NYC-LON", "origin": "New York", "destination": "London", "frequency": "daily" }, { "route_code": "FL-LON-PAR", "origin": "London", "destination": "Paris", "frequency": "twice daily" }, { "route_code": "FL-PAR-ROM", "origin": "Paris", "destination": "Rome", "frequency": "daily" }, { "route_code": "FL-ROM-TKY", "origin": "Rome", "destination": "Tokyo", "frequency": "weekly" }, { "route_code": "FL-TKY-SYD", "origin": "Tokyo", "destination": "Sydney", "frequency": "daily" } ] }
+Response: { "id": 78905, "table": "flight_routes", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log six temperature sensor readings from the cold storage facility.
+Call: { "func_call": "bulk_insert", "table": "sensor_data", "data": [ { "sensor_id": "TEMP-01", "reading": -18.5, "unit": "celsius", "timestamp": "2023-10-28T12:00:00Z" }, { "sensor_id": "TEMP-02", "reading": -19.0, "unit": "celsius", "timestamp": "2023-10-28T12:00:00Z" }, { "sensor_id": "TEMP-03", "reading": -17.8, "unit": "celsius", "timestamp": "2023-10-28T12:00:00Z" }, { "sensor_id": "TEMP-04", "reading": -18.2, "unit": "celsius", "timestamp": "2023-10-28T12:00:00Z" }, { "sensor_id": "TEMP-05", "reading": -20.1, "unit": "celsius", "timestamp": "2023-10-28T12:00:00Z" }, { "sensor_id": "TEMP-06", "reading": -18.9, "unit": "celsius", "timestamp": "2023-10-28T12:00:00Z" } ] }
+Response: { "id": 11223, "table": "sensor_data", "inserted": 6, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add four new subscription tiers to the SaaS pricing table.
+Call: { "func_call": "bulk_insert", "table": "subscription_plans", "data": [ { "plan_id": "PLAN-BASIC", "name": "Basic Starter", "price": 9.99, "features": "5 users, 10GB storage" }, { "plan_id": "PLAN-PRO", "name": "Professional", "price": 29.99, "features": "20 users, 100GB storage" }, { "plan_id": "PLAN-BIZ", "name": "Business", "price": 79.99, "features": "Unlimited users, 1TB storage" }, { "plan_id": "PLAN-ENT", "name": "Enterprise", "price": 199.99, "features": "Custom solutions, Dedicated support" } ] }
+Response: { "id": 30045, "table": "subscription_plans", "inserted": 4, "status": "success" }

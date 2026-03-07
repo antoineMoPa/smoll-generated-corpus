@@ -1,0 +1,51 @@
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Could you prepare a large cappuccino with strong strength and soy milk?
+Call: { "func_call": "brew_cappuccino", "size": "large", "strength": "strong", "milk": "soy" }
+Response: { "order_id": "CAP-2024-101", "status": "brewing", "estimated_seconds": 80 }
+
+Question: I'd like a small coffee with mild strength and skim milk.
+Call: { "func_call": "brew_coffee", "size": "small", "strength": "mild", "milk": "skim" }
+Response: { "order_id": "COF-2024-102", "status": "brewing", "estimated_seconds": 30 }
+
+Question: Make me a medium cappuccino with medium strength and coconut milk.
+Call: { "func_call": "brew_cappuccino", "size": "medium", "strength": "medium", "milk": "coconut" }
+Response: { "order_id": "CAP-2024-103", "status": "brewing", "estimated_seconds": 58 }
+
+Question: Please brew a large coffee with strong strength and whole milk.
+Call: { "func_call": "brew_coffee", "size": "large", "strength": "strong", "milk": "whole" }
+Response: { "order_id": "COF-2024-104", "status": "brewing", "estimated_seconds": 55 }
+
+Question: Can I get a small cappuccino with mild strength and oat milk?
+Call: { "func_call": "brew_cappuccino", "size": "small", "strength": "mild", "milk": "oat" }
+Response: { "order_id": "CAP-2024-105", "status": "brewing", "estimated_seconds": 48 }
+
+Question: I need a medium coffee with strong strength and almond milk.
+Call: { "func_call": "brew_coffee", "size": "medium", "strength": "strong", "milk": "almond" }
+Response: { "order_id": "COF-2024-106", "status": "brewing", "estimated_seconds": 52 }
+
+Question: Brew a large cappuccino with mild strength and soy milk.
+Call: { "func_call": "brew_cappuccino", "size": "large", "strength": "mild", "milk": "soy" }
+Response: { "order_id": "CAP-2024-107", "status": "brewing", "estimated_seconds": 72 }
+
+Question: I want a small coffee with medium strength and coconut milk.
+Call: { "func_call": "brew_coffee", "size": "small", "strength": "medium", "milk": "coconut" }
+Response: { "order_id": "COF-2024-108", "status": "brewing", "estimated_seconds": 32 }
+
+Question: Prepare a medium cappuccino with strong strength and skim milk.
+Call: { "func_call": "brew_cappuccino", "size": "medium", "strength": "strong", "milk": "skim" }
+Response: { "order_id": "CAP-2024-109", "status": "brewing", "estimated_seconds": 64 }
+
+Question: Can I have a large coffee with mild strength and oat milk?
+Call: { "func_call": "brew_coffee", "size": "large", "strength": "mild", "milk": "oat" }
+Response: { "order_id": "COF-2024-110", "status": "brewing", "estimated_seconds": 50 }
+
+Question: Make a small cappuccino with strong strength and whole milk.
+Call: { "func_call": "brew_cappuccino", "size": "small", "strength": "strong", "milk": "whole" }
+Response: { "order_id": "CAP-2024-111", "status": "brewing", "estimated_seconds": 45 }
+
+Question: Brew a medium coffee with medium strength and almond milk.
+Call: { "func_call": "brew_coffee", "size": "medium", "strength": "medium", "milk": "almond" }
+Response: { "order_id": "COF-2024-112", "status": "brewing", "estimated_seconds": 46 }

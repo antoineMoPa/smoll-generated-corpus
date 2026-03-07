@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+---
+Question: Can you tell me how many stars the tensorflow repository has under the google owner?
+Call: { "func_call": "get_repo_info", "owner": "google", "repo": "tensorflow", "description": "", "private": false }
+Response: { "repo": "tensorflow", "owner": "google", "url": "https://github.com/google/tensorflow", "stars": 182405, "forks": 87321, "default_branch": "master" }
+
+Question: I need details on the react project maintained by facebook.
+Call: { "func_call": "get_repo_info", "owner": "facebook", "repo": "react", "description": "", "private": false }
+Response: { "repo": "react", "owner": "facebook", "url": "https://github.com/facebook/react", "stars": 215890, "forks": 44210, "default_branch": "main" }
+
+Question: What is the default branch for the linux kernel repo owned by torvalds?
+Call: { "func_call": "get_repo_info", "owner": "torvalds", "repo": "linux", "description": "", "private": false }
+Response: { "repo": "linux", "owner": "torvalds", "url": "https://github.com/torvalds/linux", "stars": 156700, "forks": 52300, "default_branch": "master" }
+
+Question: Show me the stats for the private internal-tools repository owned by acme-corp.
+Call: { "func_call": "get_repo_info", "owner": "acme-corp", "repo": "internal-tools", "description": "", "private": true }
+Response: { "repo": "internal-tools", "owner": "acme-corp", "url": "https://github.com/acme-corp/internal-tools", "stars": 12, "forks": 4, "default_branch": "main" }
+
+Question: Get information about the vscode repository from microsoft.
+Call: { "func_call": "get_repo_info", "owner": "microsoft", "repo": "vscode", "description": "", "private": false }
+Response: { "repo": "vscode", "owner": "microsoft", "url": "https://github.com/microsoft/vscode", "stars": 158900, "forks": 28400, "default_branch": "main" }
+
+Question: List all repositories available for the user 'jdoe-dev'.
+Call: { "func_call": "list_repos", "owner": "jdoe-dev", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "jdoe-dev", "url": "https://github.com/jdoe-dev", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Please list every public repository under the organization 'apache'.
+Call: { "func_call": "list_repos", "owner": "apache", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "apache", "url": "https://github.com/apache", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Can you show me the private repos owned by 'secure-systems-inc'?
+Call: { "func_call": "list_repos", "owner": "secure-systems-inc", "repo": "", "description": "", "private": true }
+Response: { "repo": "*", "owner": "secure-systems-inc", "url": "https://github.com/secure-systems-inc", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: I want to see the fork count for the pandas library under pydata.
+Call: { "func_call": "get_repo_info", "owner": "pydata", "repo": "pandas", "description": "", "private": false }
+Response: { "repo": "pandas", "owner": "pydata", "url": "https://github.com/pydata/pandas", "stars": 39500, "forks": 16200, "default_branch": "main" }
+
+Question: Retrieve the URL and star count for the flutter repo owned by flutter.
+Call: { "func_call": "get_repo_info", "owner": "flutter", "repo": "flutter", "description": "", "private": false }
+Response: { "repo": "flutter", "owner": "flutter", "url": "https://github.com/flutter/flutter", "stars": 159200, "forks": 26800, "default_branch": "master" }
+
+Question: List all repositories for the owner 'startups-unicorns' including private ones.
+Call: { "func_call": "list_repos", "owner": "startups-unicorns", "repo": "", "description": "", "private": false }
+Response: { "repo": "*", "owner": "startups-unicorns", "url": "https://github.com/startups-unicorns", "stars": 0, "forks": 0, "default_branch": "N/A" }
+
+Question: Get the details for the ansible project under the ansible organization.
+Call: { "func_call": "get_repo_info", "owner": "ansible", "repo": "ansible", "description": "", "private": false }
+Response: { "repo": "ansible", "owner": "ansible", "url": "https://github.com/ansible/ansible", "stars": 58400, "forks": 23100, "default_branch": "devel" }

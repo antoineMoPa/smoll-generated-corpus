@@ -1,0 +1,14 @@
+{"func_call": "get_order_with_items", "id": "ord_4521z", "include": ["line_items", "totals"]}
+{"id": "ord_4521z", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_4521z", "customer": "Sophia Martinez", "date": "2023-12-01", "status": "shipped", "items": [{"product_id": "prod_201", "name": "Wireless Mouse", "qty": 2, "unit_price": 34.99}, {"product_id": "prod_202", "name": "Mouse Pad", "qty": 1, "unit_price": 12.50}], "totals": {"subtotal": 82.48, "tax": 6.60, "shipping": 5.99, "total": 95.07}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_8899y", "include": ["line_items"]}
+{"id": "ord_8899y", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_8899y", "customer": "Oliver Thompson", "date": "2023-12-02", "status": "processing", "items": [{"product_id": "prod_305", "name": "Gaming Headset", "qty": 1, "unit_price": 89.99}, {"product_id": "prod_306", "name": "Mic Boom Arm", "qty": 1, "unit_price": 45.00}], "totals": {"subtotal": 134.99, "tax": 10.80, "shipping": 0.00, "total": 145.79}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_1122x", "include": ["totals", "line_items"]}
+{"id": "ord_1122x", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_1122x", "customer": "Emma Wilson", "date": "2023-11-30", "status": "delivered", "items": [{"product_id": "prod_410", "name": "Portable Charger", "qty": 1, "unit_price": 49.99}, {"product_id": "prod_411", "name": "USB-C Cable 3pk", "qty": 1, "unit_price": 19.99}], "totals": {"subtotal": 69.98, "tax": 5.60, "shipping": 4.50, "total": 80.08}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_5544w", "include": ["line_items"]}
+{"id": "ord_5544w", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_5544w", "customer": "Liam Anderson", "date": "2023-12-03", "status": "pending", "items": [{"product_id": "prod_520", "name": "Smart Bulb 4pk", "qty": 2, "unit_price": 29.99}, {"product_id": "prod_521", "name": "Smart Plug", "qty": 3, "unit_price": 14.99}], "totals": {"subtotal": 104.95, "tax": 8.40, "shipping": 7.99, "total": 121.34}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_7766v", "include": ["totals"]}
+{"id": "ord_7766v", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_7766v", "customer": "Ava Robinson", "date": "2023-11-29", "status": "shipped", "items": [{"product_id": "prod_630", "name": "Instant Pot", "qty": 1, "unit_price": 99.95}, {"product_id": "prod_631", "name": "Glass Lid", "qty": 1, "unit_price": 19.95}], "totals": {"subtotal": 119.90, "tax": 9.59, "shipping": 0.00, "total": 129.49}}]}}

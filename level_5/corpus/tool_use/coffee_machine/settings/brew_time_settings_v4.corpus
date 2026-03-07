@@ -1,0 +1,51 @@
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Lower the brew time to 12 seconds for a swift lungo extraction.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "12s" }
+Response: { "parameter": "duration", "previous_value": "15s", "new_value": "12s" }
+
+Question: Retrieve the full configuration list to audit the evening shift parameters.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"90C\", \"grind_level\": \"medium_coarse\", \"brew_time\": \"12s\"}" }
+
+Question: Extend the brewing duration to 35 seconds for a large mug fill.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "35s" }
+Response: { "parameter": "duration", "previous_value": "12s", "new_value": "35s" }
+
+Question: Check the existing machine state before switching to decaf beans.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"89C\", \"grind_level\": \"coarse\", \"brew_time\": \"35s\"}" }
+
+Question: Set the brew timer to 20 seconds for a balanced Americano base.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "20s" }
+Response: { "parameter": "duration", "previous_value": "35s", "new_value": "20s" }
+
+Question: Show me all active variables to ensure the grinder is synchronized with the timer.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"92.5C\", \"grind_level\": \"fine\", \"brew_time\": \"20s\"}" }
+
+Question: Modify the extraction time to 27 seconds for a rich crema finish.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "27s" }
+Response: { "parameter": "duration", "previous_value": "20s", "new_value": "27s" }
+
+Question: Pull the current settings data to update the barista training manual.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"93C\", \"grind_level\": \"medium\", \"brew_time\": \"27s\"}" }
+
+Question: Decrease the brew length to 16 seconds for a high-acidity profile.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "16s" }
+Response: { "parameter": "duration", "previous_value": "27s", "new_value": "16s" }
+
+Question: List the present system values to verify the high-acidity mode is engaged.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"91C\", \"grind_level\": \"extra_fine\", \"brew_time\": \"16s\"}" }
+
+Question: Adjust the duration to 24 seconds for a standard house blend shot.
+Call: { "func_call": "set_brew_time", "parameter": "duration", "value": "24s" }
+Response: { "parameter": "duration", "previous_value": "16s", "new_value": "24s" }
+
+Question: Output the complete settings JSON to confirm the house blend parameters are saved.
+Call: { "func_call": "get_current_settings", "parameter": "all", "value": "true" }
+Response: { "parameter": "all", "previous_value": "null", "new_value": "{\"temperature\": \"92C\", \"grind_level\": \"fine\", \"brew_time\": \"24s\"}" }

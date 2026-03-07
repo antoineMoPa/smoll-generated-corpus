@@ -1,0 +1,59 @@
+Context: After the concert, Liam told Noah that he would drive everyone home.
+Input: {"question": "Who does 'he' refer to in the sentence?"}
+Output: {"answer": "Liam"}
+
+Context: Jessica and Megan went to the park, but she left her sunglasses on the bench.
+Input: {"question": "Who does 'she' refer to in this context?"}
+Output: {"answer": "Jessica"}
+
+Context: The siblings, Ethan and Sophia, played chess until they reached a draw.
+Input: {"question": "Who does 'they' refer to in the story?"}
+Output: {"answer": "Ethan and Sophia"}
+
+Context: When Lisa confronted Mark about the broken vase, he confessed to knocking it over.
+Input: {"question": "Who does 'he' refer to when confessing?"}
+Output: {"answer": "Mark"}
+
+Context: Professor Lee explained the theory to Student Kim, but he struggled to understand the concept.
+Input: {"question": "Who does 'he' refer to in this scenario?"}
+Output: {"answer": "Student Kim"}
+
+Context: Ryan and Chloe rehearsed all night, yet they still made mistakes during the performance.
+Input: {"question": "Who does 'they' refer to in the sentence?"}
+Output: {"answer": "Ryan and Chloe"}
+
+Context: Before the trip, Anna reminded Ben that he needed to pack his passport.
+Input: {"question": "Who does 'he' refer to regarding the passport?"}
+Output: {"answer": "Ben"}
+
+Context: Carlos showed the recipe to his friend, Diego, because he thought it tasted too salty.
+Input: {"question": "Who does 'he' refer to when noting the taste?"}
+Output: {"answer": "Carlos"}
+
+Context: The manager spoke to the intern and the supervisor, but they missed the deadline.
+Input: {"question": "Who does 'they' refer to in this interaction?"}
+Output: {"answer": "the intern and the supervisor"}
+
+Context: While skiing, Emma fell down the slope and broke her ski, so Jake helped her up.
+Input: {"question": "Who does 'her' refer to in the sentence?"}
+Output: {"answer": "Emma"}
+
+Context: David asked Rachel if she could lend him some money for lunch.
+Input: {"question": "Who does 'she' refer to when asked for money?"}
+Output: {"answer": "Rachel"}
+
+Context: The director and the producer watched the film, and they agreed it needed more editing.
+Input: {"question": "Who does 'they' refer to in the agreement?"}
+Output: {"answer": "The director and the producer"}
+
+Context: Susan watched as Brian baked the cake, surprised that he finished it so early.
+Input: {"question": "Who does 'he' refer to regarding the baking?"}
+Output: {"answer": "Brian"}
+
+Context: George lent the tool to Frank, but he returned it damaged later that afternoon.
+Input: {"question": "Who does 'he' refer to when returning the tool?"}
+Output: {"answer": "Frank"}
+
+Context: Ava and Isabella planted a garden, and they watered it every morning last week.
+Input: {"question": "Who does 'they' refer to in the watering activity?"}
+Output: {"answer": "Ava and Isabella"}

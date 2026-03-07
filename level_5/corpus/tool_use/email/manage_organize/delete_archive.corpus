@@ -1,0 +1,51 @@
+Available Tools: move_to_folder | create_label | delete_email | archive_email | unsubscribe
+Call Schema: { "func_call": "string", "message_id": "string", "folder": "string", "label": "string" }
+Response Schema: { "message_id": "string", "action": "string", "status": "string" }
+---
+Question: Delete the spam email with ID msg_9921 immediately.
+Call: { "func_call": "delete_email", "message_id": "msg_9921", "folder": "", "label": "" }
+Response: { "message_id": "msg_9921", "action": "delete_email", "status": "success" }
+
+Question: Archive the old project update email numbered msg_4402 to clear my inbox.
+Call: { "func_call": "archive_email", "message_id": "msg_4402", "folder": "", "label": "" }
+Response: { "message_id": "msg_4402", "action": "archive_email", "status": "success" }
+
+Question: I want to unsubscribe from the Daily Tech Newsletter associated with message msg_7733.
+Call: { "func_call": "unsubscribe", "message_id": "msg_7733", "folder": "", "label": "" }
+Response: { "message_id": "msg_7733", "action": "unsubscribe", "status": "success" }
+
+Question: Please delete the promotional email msg_1129 regarding the summer sale.
+Call: { "func_call": "delete_email", "message_id": "msg_1129", "folder": "", "label": "" }
+Response: { "message_id": "msg_1129", "action": "delete_email", "status": "success" }
+
+Question: Archive the receipt email msg_5588 for my records.
+Call: { "func_call": "archive_email", "message_id": "msg_5588", "folder": "", "label": "" }
+Response: { "message_id": "msg_5588", "action": "archive_email", "status": "success" }
+
+Question: Unsubscribe me from the marketing list found in message msg_3341.
+Call: { "func_call": "unsubscribe", "message_id": "msg_3341", "folder": "", "label": "" }
+Response: { "message_id": "msg_3341", "action": "unsubscribe", "status": "success" }
+
+Question: Delete the corrupted attachment notification with ID msg_8812.
+Call: { "func_call": "delete_email", "message_id": "msg_8812", "folder": "", "label": "" }
+Response: { "message_id": "msg_8812", "action": "delete_email", "status": "success" }
+
+Question: Archive the team meeting notes email msg_2290.
+Call: { "func_call": "archive_email", "message_id": "msg_2290", "folder": "", "label": "" }
+Response: { "message_id": "msg_2290", "action": "archive_email", "status": "success" }
+
+Question: Stop sending me updates from this sender by unsubscribing via message msg_6654.
+Call: { "func_call": "unsubscribe", "message_id": "msg_6654", "folder": "", "label": "" }
+Response: { "message_id": "msg_6654", "action": "unsubscribe", "status": "success" }
+
+Question: Delete the duplicate invitation email msg_9001.
+Call: { "func_call": "delete_email", "message_id": "msg_9001", "folder": "", "label": "" }
+Response: { "message_id": "msg_9001", "action": "delete_email", "status": "success" }
+
+Question: Archive the quarterly report notification msg_3321.
+Call: { "func_call": "archive_email", "message_id": "msg_3321", "folder": "", "label": "" }
+Response: { "message_id": "msg_3321", "action": "archive_email", "status": "success" }
+
+Question: Unsubscribe from the weekly digest linked to message msg_4455.
+Call: { "func_call": "unsubscribe", "message_id": "msg_4455", "folder": "", "label": "" }
+Response: { "message_id": "msg_4455", "action": "unsubscribe", "status": "success" }

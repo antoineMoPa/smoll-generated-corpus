@@ -1,0 +1,51 @@
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Email the safety inspection results to the facility manager.
+Call: { "func_call": "send_email", "to": ["facility.mgr@buildco.com"], "cc": ["safety@buildco.com"], "subject": "Safety Inspection Report - Building B", "body": "Hi,\n\nAttached are the results from today's safety inspection in Building B. No critical issues were found, but two minor repairs are recommended.\n\nRegards,\nInspector J. Smith", "attachments": ["inspection_report_b_nov01.pdf"] }
+Response: { "message_id": "msg_10293m", "status": "sent", "timestamp": "2023-11-01T09:20:15Z" }
+
+Question: Draft a message to the catering company for the lunch meeting.
+Call: { "func_call": "compose_draft", "to": ["orders@gourmetdeli.com"], "cc": [], "subject": "Catering Order for Nov 5th Team Lunch", "body": "Hello,\n\nWe would like to place an order for 12 sandwiches and 2 large salads for delivery on November 5th at 12:00 PM. Please confirm availability.\n\nThanks,\nEvent Coordinator", "attachments": [] }
+Response: { "message_id": "draft_20485n", "status": "draft", "timestamp": "2023-11-01T10:45:30Z" }
+
+Question: Reply to the developer confirming the code merge is complete.
+Call: { "func_call": "send_reply", "to": ["dev.lead@softwarehub.io"], "cc": [], "subject": "Re: PR #405 Merge Status", "body": "Hi,\n\nI have reviewed the changes and merged PR #405 into the main branch. All tests are passing.\n\nBest,\nSenior Dev", "attachments": [] }
+Response: { "message_id": "msg_30576o", "status": "sent", "timestamp": "2023-11-01T11:15:42Z" }
+
+Question: Forward the quarterly budget spreadsheet to the CFO.
+Call: { "func_call": "forward_email", "to": ["cfo@globalcorp.com"], "cc": ["finance-team@globalcorp.com"], "subject": "Fwd: Q4 Budget Projections", "body": "Hi,\n\nForwarding the latest budget projections for Q4 as discussed in yesterday's meeting. Please review the highlighted sections.\n\nRegards,\nFinancial Analyst", "attachments": ["q4_budget_proj.xlsx"] }
+Response: { "message_id": "msg_40687p", "status": "sent", "timestamp": "2023-11-01T13:05:18Z" }
+
+Question: Send the travel itinerary to the executive assistant.
+Call: { "func_call": "send_email", "to": ["ea@executive.com"], "cc": ["travel@agency.com"], "subject": "Itinerary: Tokyo Trip Nov 10-15", "body": "Hi,\n\nPlease find the finalized travel itinerary for the Tokyo trip attached. Flight confirmations and hotel reservations are included.\n\nBest,\nTravel Desk", "attachments": ["tokyo_itinerary_nov.pdf"] }
+Response: { "message_id": "msg_50798q", "status": "sent", "timestamp": "2023-11-01T14:30:55Z" }
+
+Question: Compose a draft announcement about the new office policy.
+Call: { "func_call": "compose_draft", "to": ["all-employees@startup.io"], "cc": [], "subject": "Update: Remote Work Policy Effective Dec 1", "body": "Team,\n\nStarting December 1st, we are updating our remote work policy to allow hybrid schedules. Please read the attached document for full details.\n\nCheers,\nPeople Ops", "attachments": [] }
+Response: { "message_id": "draft_60809r", "status": "draft", "timestamp": "2023-11-01T15:20:10Z" }
+
+Question: Reply to the customer requesting a refund receipt.
+Call: { "func_call": "send_reply", "to": ["customer88@email.com"], "cc": ["billing@shopify-store.com"], "subject": "Re: Refund Request #7721", "body": "Hello,\n\nYour refund has been processed successfully. Attached is the receipt for your records. The funds should appear in your account within 3-5 business days.\n\nSincerely,\nCustomer Support", "attachments": ["refund_receipt_7721.pdf"] }
+Response: { "message_id": "msg_70910s", "status": "sent", "timestamp": "2023-11-01T16:45:33Z" }
+
+Question: Send the project timeline to the stakeholders.
+Call: { "func_call": "send_email", "to": ["stakeholders@venture.cap"], "cc": ["pm@venture.cap"], "subject": "Project Horizon: Updated Timeline", "body": "Dear Stakeholders,\n\nAttached is the updated Gantt chart for Project Horizon. We are currently on track for the December launch.\n\nRegards,\nProject Manager", "attachments": ["horizon_timeline_v2.mpp"] }
+Response: { "message_id": "msg_81021t", "status": "sent", "timestamp": "2023-11-01T08:50:22Z" }
+
+Question: Forward the security alert logs to the CISO.
+Call: { "func_call": "forward_email", "to": ["ciso@securenet.org"], "cc": ["soc-team@securenet.org"], "subject": "Fwd: Critical Security Alerts - Nov 1", "body": "Hi,\n\nForwarding the raw logs regarding the suspicious activity detected this morning. The SOC team is investigating.\n\nBest,\nSecurity Analyst", "attachments": ["security_logs_nov01.txt"] }
+Response: { "message_id": "msg_91132u", "status": "sent", "timestamp": "2023-11-01T07:15:40Z" }
+
+Question: Draft an email to the vendor regarding late delivery.
+Call: { "func_call": "compose_draft", "to": ["support@logistics-pro.com"], "cc": ["purchasing@myfirm.com"], "subject": "Urgent: Delayed Shipment #9988", "body": "Hello,\n\nOur records show that shipment #9988 was due yesterday but has not arrived. Please provide an updated ETA immediately.\n\nRegards,\nSupply Chain Manager", "attachments": [] }
+Response: { "message_id": "draft_01243v", "status": "draft", "timestamp": "2023-11-01T12:10:05Z" }
+
+Question: Reply to the intern confirming their start date.
+Call: { "func_call": "send_reply", "to": ["intern.candidate@uni.edu"], "cc": ["hr-interns@myfirm.com"], "subject": "Re: Internship Start Date Confirmation", "body": "Hi,\n\nWe are excited to confirm your start date as November 15th. Please arrive at the reception desk by 9:00 AM.\n\nWelcome aboard,\nHR Team", "attachments": [] }
+Response: { "message_id": "msg_11354w", "status": "sent", "timestamp": "2023-11-01T17:30:12Z" }
+
+Question: Send the monthly newsletter to the subscriber list.
+Call: { "func_call": "send_email", "to": ["subscribers@newsletter.io"], "cc": [], "subject": "November Newsletter: Industry Trends", "body": "Hi Everyone,\n\nCheck out this month's edition featuring top industry trends and upcoming webinars. Enjoy!\n\nBest,\nEditorial Team", "attachments": ["nov_newsletter.html"] }
+Response: { "message_id": "msg_21465x", "status": "sent", "timestamp": "2023-11-01T18:00:00Z" }

@@ -1,0 +1,51 @@
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Show me the pipeline summary for Q3 2024 grouped by region with a filter for enterprise deals only.
+Call: { "func_call": "get_pipeline_summary", "period": "Q3-2024", "group_by": "region", "filters": "deal_type:enterprise" }
+Response: { "period": "Q3-2024", "total_value": 4500000, "deal_count": 34, "conversion_rate": 0.22 }
+
+Question: I need an activity report for last month broken down by sales rep, filtering for calls made only.
+Call: { "func_call": "get_activity_report", "period": "last_month", "group_by": "sales_rep", "filters": "activity_type:call" }
+Response: { "period": "last_month", "total_value": 1250, "deal_count": 1250, "conversion_rate": 0.0 }
+
+Question: Generate a pipeline summary for the current week grouped by stage, excluding cold leads.
+Call: { "func_call": "get_pipeline_summary", "period": "current_week", "group_by": "stage", "filters": "status:not_cold" }
+Response: { "period": "current_week", "total_value": 890000, "deal_count": 12, "conversion_rate": 0.15 }
+
+Question: Pull the activity report for Q1 2024 grouped by rep, showing only emails sent.
+Call: { "func_call": "get_activity_report", "period": "Q1-2024", "group_by": "sales_rep", "filters": "activity_type:email" }
+Response: { "period": "Q1-2024", "total_value": 3400, "deal_count": 3400, "conversion_rate": 0.0 }
+
+Question: What does the pipeline look like for last quarter grouped by industry, filtered for deals over $50k?
+Call: { "func_call": "get_pipeline_summary", "period": "last_quarter", "group_by": "industry", "filters": "value_gt:50000" }
+Response: { "period": "last_quarter", "total_value": 2100000, "deal_count": 18, "conversion_rate": 0.28 }
+
+Question: Give me the activity report for yesterday grouped by rep, focusing on meetings booked.
+Call: { "func_call": "get_activity_report", "period": "yesterday", "group_by": "sales_rep", "filters": "activity_type:meeting" }
+Response: { "period": "yesterday", "total_value": 45, "deal_count": 45, "conversion_rate": 0.0 }
+
+Question: Show the pipeline summary for the year-to-date grouped by product line, including only won deals.
+Call: { "func_call": "get_pipeline_summary", "period": "YTD", "group_by": "product_line", "filters": "status:won" }
+Response: { "period": "YTD", "total_value": 6750000, "deal_count": 89, "conversion_rate": 1.0 }
+
+Question: Retrieve the activity report for the last 14 days grouped by team, filtering for demo requests.
+Call: { "func_call": "get_activity_report", "period": "last_14_days", "group_by": "team", "filters": "activity_type:demo_request" }
+Response: { "period": "last_14_days", "total_value": 112, "deal_count": 112, "conversion_rate": 0.0 }
+
+Question: I need a pipeline summary for November 2023 grouped by source, filtering for inbound leads.
+Call: { "func_call": "get_pipeline_summary", "period": "Nov-2023", "group_by": "source", "filters": "lead_source:inbound" }
+Response: { "period": "Nov-2023", "total_value": 1200000, "deal_count": 25, "conversion_rate": 0.19 }
+
+Question: Generate an activity report for Q2 grouped by rep, showing total calls and meetings combined.
+Call: { "func_call": "get_activity_report", "period": "Q2", "group_by": "sales_rep", "filters": "activity_type:call,meeting" }
+Response: { "period": "Q2", "total_value": 2800, "deal_count": 2800, "conversion_rate": 0.0 }
+
+Question: Show the pipeline summary for this month grouped by owner, excluding any deals marked as lost.
+Call: { "func_call": "get_pipeline_summary", "period": "this_month", "group_by": "owner", "filters": "status:not_lost" }
+Response: { "period": "this_month", "total_value": 950000, "deal_count": 14, "conversion_rate": 0.21 }
+
+Question: Pull the activity report for the last week grouped by region, filtering specifically for follow-up emails.
+Call: { "func_call": "get_activity_report", "period": "last_week", "group_by": "region", "filters": "activity_type:follow_up_email" }
+Response: { "period": "last_week", "total_value": 890, "deal_count": 890, "conversion_rate": 0.0 }

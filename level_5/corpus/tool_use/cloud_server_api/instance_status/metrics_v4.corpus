@@ -1,0 +1,51 @@
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: What are the disk I/O and CPU stats for instance i-1f2e3d4c5b in af-south-1?
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-1f2e3d4c5b", "region": "af-south-1", "filter": "disk,cpu" }
+Response: { "instances": [{ "id": "i-1f2e3d4c5b", "type": "m5.2xlarge", "state": "running", "ip": "10.50.60.70" }] }
+
+Question: Show me GPU utilization and memory for render-farm-node-09 in eu-west-3.
+Call: { "func_call": "get_instance_metrics", "instance_id": "render-farm-node-09", "region": "eu-west-3", "filter": "gpu,memory" }
+Response: { "instances": [{ "id": "render-farm-node-09", "type": "g4dn.xlarge", "state": "running", "ip": "172.18.22.11" }] }
+
+Question: Retrieve swap usage and network errors for legacy-app-server in ap-south-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "legacy-app-server", "region": "ap-south-2", "filter": "swap,network" }
+Response: { "instances": [{ "id": "legacy-app-server", "type": "t3.large", "state": "running", "ip": "192.168.99.88" }] }
+
+Question: Get full system metrics for instance i-7h8j9k0l1m in ca-west-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-7h8j9k0l1m", "region": "ca-west-1", "filter": "cpu,memory,network,disk" }
+Response: { "instances": [{ "id": "i-7h8j9k0l1m", "type": "c7i.medium", "state": "running", "ip": "54.123.45.67" }] }
+
+Question: Check thermal stats and fan speed for cooling-monitor-01 in il-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "cooling-monitor-01", "region": "il-central-1", "filter": "thermal,fan" }
+Response: { "instances": [{ "id": "cooling-monitor-01", "type": "m6g.large", "state": "running", "ip": "10.99.88.77" }] }
+
+Question: What is the storage latency and CPU queue depth for db-replica-05 in mx-central-1?
+Call: { "func_call": "get_instance_metrics", "instance_id": "db-replica-05", "region": "mx-central-1", "filter": "storage,cpu" }
+Response: { "instances": [{ "id": "db-replica-05", "type": "r7i.2xlarge", "state": "running", "ip": "172.40.10.5" }] }
+
+Question: Display container memory and CPU limits for k8s-worker-pod-12 in eu-south-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "k8s-worker-pod-12", "region": "eu-south-2", "filter": "container_memory,container_cpu" }
+Response: { "instances": [{ "id": "k8s-worker-pod-12", "type": "t4g.medium", "state": "running", "ip": "10.20.30.40" }] }
+
+Question: Fetch uptime and reboot count for bastion-host-secure in us-iso-east-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "bastion-host-secure", "region": "us-iso-east-1", "filter": "uptime,reboot" }
+Response: { "instances": [{ "id": "bastion-host-secure", "type": "m5.large", "state": "running", "ip": "192.100.1.1" }] }
+
+Question: Monitor process count and thread usage for java-app-cluster-03 in ap-east-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "java-app-cluster-03", "region": "ap-east-1", "filter": "process,thread" }
+Response: { "instances": [{ "id": "java-app-cluster-03", "type": "c6a.xlarge", "state": "running", "ip": "172.55.66.77" }] }
+
+Question: Get detailed IO wait and context switches for scheduler-daemon in eu-central-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "scheduler-daemon", "region": "eu-central-2", "filter": "iowait,context_switch" }
+Response: { "instances": [{ "id": "scheduler-daemon", "type": "m7i.large", "state": "running", "ip": "10.111.222.33" }] }
+
+Question: Report load average and idle CPU for background-job-runner in us-west-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "background-job-runner", "region": "us-west-1", "filter": "load_average,idle_cpu" }
+Response: { "instances": [{ "id": "background-job-runner", "type": "t3.xlarge", "state": "running", "ip": "54.99.88.77" }] }
+
+Question: Check interrupt rate and softirq stats for packet-inspector-07 in ap-northeast-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "packet-inspector-07", "region": "ap-northeast-2", "filter": "interrupt,softirq" }
+Response: { "instances": [{ "id": "packet-inspector-07", "type": "c7g.medium", "state": "running", "ip": "172.88.99.11" }] }

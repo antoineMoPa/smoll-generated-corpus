@@ -1,0 +1,51 @@
+Available Tools: get_page_views | get_unique_visitors | get_session_duration | get_bounce_rate
+Call Schema: { "func_call": "string", "url": "string", "from_date": "string", "to_date": "string", "granularity": "hourly|daily|weekly|monthly" }
+Response Schema: { "url": "string", "period": "string", "views": number, "unique_visitors": number, "avg_session_seconds": number, "bounce_rate": number }
+---
+Question: What are the view statistics for the spring fashion catalog page this month?
+Call: { "func_call": "get_page_views", "url": "https://store.fashionhub.net/collections/spring-2024", "from_date": "2023-03-01", "to_date": "2023-03-31", "granularity": "daily" }
+Response: { "url": "https://store.fashionhub.net/collections/spring-2024", "period": "2023-03-01 to 2023-03-31", "views": 28400, "unique_visitors": 19200, "avg_session_seconds": 185, "bounce_rate": 0.28 }
+
+Question: Can you check the unique visitor count for the tech news homepage last weekend?
+Call: { "func_call": "get_unique_visitors", "url": "https://news.techdaily.com/", "from_date": "2023-07-15", "to_date": "2023-07-16", "granularity": "hourly" }
+Response: { "url": "https://news.techdaily.com/", "period": "2023-07-15 to 2023-07-16", "views": 52000, "unique_visitors": 38500, "avg_session_seconds": 245, "bounce_rate": 0.45 }
+
+Question: I need the bounce rate data for the premium subscription page during the holiday sale.
+Call: { "func_call": "get_bounce_rate", "url": "https://service.streamline.io/premium", "from_date": "2022-11-25", "to_date": "2022-11-30", "granularity": "daily" }
+Response: { "url": "https://service.streamline.io/premium", "period": "2022-11-25 to 2022-11-30", "views": 15600, "unique_visitors": 11200, "avg_session_seconds": 290, "bounce_rate": 0.19 }
+
+Question: How long did users stay on the new recipe blog post yesterday?
+Call: { "func_call": "get_session_duration", "url": "https://blog.foodiecorner.com/quick-pasta-recipes", "from_date": "2023-08-05", "to_date": "2023-08-05", "granularity": "hourly" }
+Response: { "url": "https://blog.foodiecorner.com/quick-pasta-recipes", "period": "2023-08-05", "views": 4100, "unique_visitors": 3600, "avg_session_seconds": 135, "bounce_rate": 0.52 }
+
+Question: Show me the session duration metrics for the order status page last Friday.
+Call: { "func_call": "get_session_duration", "url": "https://store.fashionhub.net/orders/status", "from_date": "2023-07-21", "to_date": "2023-07-21", "granularity": "hourly" }
+Response: { "url": "https://store.fashionhub.net/orders/status", "period": "2023-07-21", "views": 2200, "unique_visitors": 2150, "avg_session_seconds": 65, "bounce_rate": 0.08 }
+
+Question: What is the bounce rate trend for the developer tools page over the last quarter?
+Call: { "func_call": "get_bounce_rate", "url": "https://service.streamline.io/dev-tools", "from_date": "2023-04-01", "to_date": "2023-06-30", "granularity": "monthly" }
+Response: { "url": "https://service.streamline.io/dev-tools", "period": "2023-04-01 to 2023-06-30", "views": 9800, "unique_visitors": 6500, "avg_session_seconds": 410, "bounce_rate": 0.22 }
+
+Question: Retrieve the view counts for the black Friday archive page last November.
+Call: { "func_call": "get_page_views", "url": "https://store.fashionhub.net/archives/black-friday-2022", "from_date": "2022-11-01", "to_date": "2022-11-30", "granularity": "weekly" }
+Response: { "url": "https://store.fashionhub.net/archives/black-friday-2022", "period": "2022-11-01 to 2022-11-30", "views": 35000, "unique_visitors": 24000, "avg_session_seconds": 155, "bounce_rate": 0.38 }
+
+Question: Analyze the user retention on the onboarding checklist page for the past week.
+Call: { "func_call": "get_bounce_rate", "url": "https://docs.streamline.io/onboarding/checklist", "from_date": "2023-08-01", "to_date": "2023-08-07", "granularity": "daily" }
+Response: { "url": "https://docs.streamline.io/onboarding/checklist", "period": "2023-08-01 to 2023-08-07", "views": 1450, "unique_visitors": 980, "avg_session_seconds": 380, "bounce_rate": 0.14 }
+
+Question: How long did visitors stay on the client testimonials page last year?
+Call: { "func_call": "get_session_duration", "url": "https://service.streamline.io/testimonials", "from_date": "2022-01-01", "to_date": "2022-12-31", "granularity": "monthly" }
+Response: { "url": "https://service.streamline.io/testimonials", "period": "2022-01-01 to 2022-12-31", "views": 18900, "unique_visitors": 12400, "avg_session_seconds": 275, "bounce_rate": 0.25 }
+
+Question: Get the bounce rate for the fitness app signup page during the New Year campaign.
+Call: { "func_call": "get_bounce_rate", "url": "https://store.fashionhub.net/fitness-signup", "from_date": "2023-01-01", "to_date": "2023-01-15", "granularity": "daily" }
+Response: { "url": "https://store.fashionhub.net/fitness-signup", "period": "2023-01-01 to 2023-01-15", "views": 24500, "unique_visitors": 18900, "avg_session_seconds": 95, "bounce_rate": 0.48 }
+
+Question: What were the session duration stats for the support ticket page last Monday?
+Call: { "func_call": "get_session_duration", "url": "https://news.techdaily.com/support/tickets", "from_date": "2023-07-31", "to_date": "2023-07-31", "granularity": "hourly" }
+Response: { "url": "https://news.techdaily.com/support/tickets", "period": "2023-07-31", "views": 680, "unique_visitors": 540, "avg_session_seconds": 220, "bounce_rate": 0.31 }
+
+Question: Pull the full analytics report for the SDK reference page over the last two weeks.
+Call: { "func_call": "get_page_views", "url": "https://docs.streamline.io/sdk/reference", "from_date": "2023-07-20", "to_date": "2023-08-02", "granularity": "daily" }
+Response: { "url": "https://docs.streamline.io/sdk/reference", "period": "2023-07-20 to 2023-08-02", "views": 16700, "unique_visitors": 11200, "avg_session_seconds": 465, "bounce_rate": 0.16 }

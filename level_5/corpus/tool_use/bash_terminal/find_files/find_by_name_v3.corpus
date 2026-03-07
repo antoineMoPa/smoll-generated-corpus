@@ -1,0 +1,51 @@
+Available Tools: find_by_name | find_by_extension | find_by_size | find_by_date
+Call Schema: { "func_call": "string", "path": "string", "pattern": "string", "type": "string" }
+Response Schema: { "matches": ["string"], "count": number }
+---
+Question: Retrieve all PDF documents stored in the /home/admin/reports directory.
+Call: { "func_call": "find_by_extension", "path": "/home/admin/reports", "pattern": "*.pdf", "type": "file" }
+Response: { "matches": ["/home/admin/reports/q1_summary.pdf", "/home/admin/reports/annual_review.pdf"], "count": 2 }
+
+Question: Locate the specific password file named .passwd in the /etc/security folder.
+Call: { "func_call": "find_by_name", "path": "/etc/security", "pattern": ".passwd", "type": "file" }
+Response: { "matches": ["/etc/security/.passwd"], "count": 1 }
+
+Question: Find all Ruby source files within the /opt/app/lib path.
+Call: { "func_call": "find_by_extension", "path": "/opt/app/lib", "pattern": "*.rb", "type": "file" }
+Response: { "matches": ["/opt/app/lib/core.rb", "/opt/app/lib/models/user.rb", "/opt/app/lib/controllers/api.rb"], "count": 3 }
+
+Question: Search for the nginx.conf configuration file in the /etc/nginx directory.
+Call: { "func_call": "find_by_name", "path": "/etc/nginx", "pattern": "nginx.conf", "type": "file" }
+Response: { "matches": ["/etc/nginx/nginx.conf"], "count": 1 }
+
+Question: List all SQLite database files located in /var/lib/mobile/data.
+Call: { "func_call": "find_by_extension", "path": "/var/lib/mobile/data", "pattern": "*.db", "type": "file" }
+Response: { "matches": ["/var/lib/mobile/data/local_store.db", "/var/lib/mobile/data/cache.db", "/var/lib/mobile/data/logs.db"], "count": 3 }
+
+Question: Find any file named .gitignore in the /src/project-alpha directory tree.
+Call: { "func_call": "find_by_name", "path": "/src/project-alpha", "pattern": ".gitignore", "type": "file" }
+Response: { "matches": ["/src/project-alpha/.gitignore", "/src/project-alpha/modules/auth/.gitignore"], "count": 2 }
+
+Question: Search for all PowerShell scripts in the /scripts/deploy folder.
+Call: { "func_call": "find_by_extension", "path": "/scripts/deploy", "pattern": "*.ps1", "type": "file" }
+Response: { "matches": ["/scripts/deploy/setup.ps1", "/scripts/deploy/cleanup.ps1", "/scripts/deploy/update.ps1"], "count": 3 }
+
+Question: Locate all YAML manifest files in /k8s/production/configs.
+Call: { "func_call": "find_by_extension", "path": "/k8s/production/configs", "pattern": "*.yaml", "type": "file" }
+Response: { "matches": ["/k8s/production/configs/deployment.yaml", "/k8s/production/configs/service.yaml"], "count": 2 }
+
+Question: Find the specific file named package.json in /home/frontend/dashboard.
+Call: { "func_call": "find_by_name", "path": "/home/frontend/dashboard", "pattern": "package.json", "type": "file" }
+Response: { "matches": ["/home/frontend/dashboard/package.json"], "count": 1 }
+
+Question: List all Markdown documentation files in the /docs/wiki directory.
+Call: { "func_call": "find_by_extension", "path": "/docs/wiki", "pattern": "*.md", "type": "file" }
+Response: { "matches": ["/docs/wiki/index.md", "/docs/wiki/contributing.md", "/docs/wiki/faq.md"], "count": 3 }
+
+Question: Search for any file named requirements.txt in the /python/ml-models folder.
+Call: { "func_call": "find_by_name", "path": "/python/ml-models", "pattern": "requirements.txt", "type": "file" }
+Response: { "matches": ["/python/ml-models/requirements.txt", "/python/ml-models/preprocessing/requirements.txt"], "count": 2 }
+
+Question: Find all TAR archive files in /mnt/backup/archives.
+Call: { "func_call": "find_by_extension", "path": "/mnt/backup/archives", "pattern": "*.tar", "type": "file" }
+Response: { "matches": ["/mnt/backup/archives/full_backup.tar", "/mnt/backup/archives/incremental.tar"], "count": 2 }

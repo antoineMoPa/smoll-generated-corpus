@@ -1,0 +1,51 @@
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Create a new playlist called "Morning Run" for my workout tracks.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Morning Run", "track_id": "" }
+Response: { "playlist_id": "pl_8923", "name": "Morning Run", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the track with ID "trk_5510" to my "Morning Run" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_8923", "name": "", "track_id": "trk_5510" }
+Response: { "playlist_id": "pl_8923", "name": "Morning Run", "track_count": 1, "duration_seconds": 214 }
+
+Question: I need a new playlist named "Study Session" to help me focus.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Study Session", "track_id": "" }
+Response: { "playlist_id": "pl_9001", "name": "Study Session", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the song "trk_7721" to the "Study Session" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_9001", "name": "", "track_id": "trk_7721" }
+Response: { "playlist_id": "pl_9001", "name": "Study Session", "track_count": 1, "duration_seconds": 185 }
+
+Question: Let's make a playlist called "Friday Night" for the party this weekend.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Friday Night", "track_id": "" }
+Response: { "playlist_id": "pl_3344", "name": "Friday Night", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add track "trk_1102" to the "Friday Night" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_3344", "name": "", "track_id": "trk_1102" }
+Response: { "playlist_id": "pl_3344", "name": "Friday Night", "track_count": 1, "duration_seconds": 245 }
+
+Question: Create a playlist named "Rainy Day Jazz" for relaxing afternoons.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Rainy Day Jazz", "track_id": "" }
+Response: { "playlist_id": "pl_5567", "name": "Rainy Day Jazz", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the track "trk_8899" to "Rainy Day Jazz".
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_5567", "name": "", "track_id": "trk_8899" }
+Response: { "playlist_id": "pl_5567", "name": "Rainy Day Jazz", "track_count": 1, "duration_seconds": 310 }
+
+Question: I want a playlist called "Gym PRs" to track my personal records.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Gym PRs", "track_id": "" }
+Response: { "playlist_id": "pl_7788", "name": "Gym PRs", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add track "trk_2233" to the "Gym PRs" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_7788", "name": "", "track_id": "trk_2233" }
+Response: { "playlist_id": "pl_7788", "name": "Gym PRs", "track_count": 1, "duration_seconds": 198 }
+
+Question: Create a playlist named "Road Trip 2024" for our upcoming drive.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Road Trip 2024", "track_id": "" }
+Response: { "playlist_id": "pl_4455", "name": "Road Trip 2024", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the song "trk_6677" to the "Road Trip 2024" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_4455", "name": "", "track_id": "trk_6677" }
+Response: { "playlist_id": "pl_4455", "name": "Road Trip 2024", "track_count": 1, "duration_seconds": 225 }

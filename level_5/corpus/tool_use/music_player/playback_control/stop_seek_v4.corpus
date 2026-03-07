@@ -1,0 +1,51 @@
+Available Tools: play | pause | stop | skip_next | skip_previous | seek
+Call Schema: { "func_call": "string", "track_id": "string", "position_seconds": number }
+Response Schema: { "track_id": "string", "title": "string", "artist": "string", "state": "playing|paused|stopped", "position_seconds": number }
+---
+Question: Cease all audio playback immediately.
+Call: { "func_call": "stop", "track_id": "trk_44512", "position_seconds": 0 }
+Response: { "track_id": "trk_44512", "title": "Smells Like Teen Spirit", "artist": "Nirvana", "state": "stopped", "position_seconds": 0 }
+
+Question: Advance the track to the 90-second point.
+Call: { "func_call": "seek", "track_id": "trk_44512", "position_seconds": 90 }
+Response: { "track_id": "trk_44512", "title": "Smells Like Teen Spirit", "artist": "Nirvana", "state": "playing", "position_seconds": 90 }
+
+Question: Terminate the current song.
+Call: { "func_call": "stop", "track_id": "trk_67890", "position_seconds": 0 }
+Response: { "track_id": "trk_67890", "title": "Rolling in the Deep", "artist": "Adele", "state": "stopped", "position_seconds": 0 }
+
+Question: Navigate to 3 minutes and 20 seconds within the file.
+Call: { "func_call": "seek", "track_id": "trk_67890", "position_seconds": 200 }
+Response: { "track_id": "trk_67890", "title": "Rolling in the Deep", "artist": "Adele", "state": "playing", "position_seconds": 200 }
+
+Question: Shut down the media player.
+Call: { "func_call": "stop", "track_id": "trk_22334", "position_seconds": 0 }
+Response: { "track_id": "trk_22334", "title": "Uptown Funk", "artist": "Bruno Mars", "state": "stopped", "position_seconds": 0 }
+
+Question: Set the playback cursor to 1 minute and 45 seconds.
+Call: { "func_call": "seek", "track_id": "trk_22334", "position_seconds": 105 }
+Response: { "track_id": "trk_22334", "title": "Uptown Funk", "artist": "Bruno Mars", "state": "playing", "position_seconds": 105 }
+
+Question: Abort the ongoing track execution.
+Call: { "func_call": "stop", "track_id": "trk_88776", "position_seconds": 0 }
+Response: { "track_id": "trk_88776", "title": "Bad Guy", "artist": "Billie Eilish", "state": "stopped", "position_seconds": 0 }
+
+Question: Relocate playback to exactly 55 seconds.
+Call: { "func_call": "seek", "track_id": "trk_88776", "position_seconds": 55 }
+Response: { "track_id": "trk_88776", "title": "Bad Guy", "artist": "Billie Eilish", "state": "playing", "position_seconds": 55 }
+
+Question: Discontinue the music stream.
+Call: { "func_call": "stop", "track_id": "trk_11223", "position_seconds": 0 }
+Response: { "track_id": "trk_11223", "title": "Watermelon Sugar", "artist": "Harry Styles", "state": "stopped", "position_seconds": 0 }
+
+Question: Fast forward to the 2-minute and 30-second mark.
+Call: { "func_call": "seek", "track_id": "trk_11223", "position_seconds": 150 }
+Response: { "track_id": "trk_11223", "title": "Watermelon Sugar", "artist": "Harry Styles", "state": "playing", "position_seconds": 150 }
+
+Question: Bring the current track to a halt.
+Call: { "func_call": "stop", "track_id": "trk_55667", "position_seconds": 0 }
+Response: { "track_id": "trk_55667", "title": "Peaches", "artist": "Justin Bieber", "state": "stopped", "position_seconds": 0 }
+
+Question: Adjust the playhead to 4 minutes and 10 seconds.
+Call: { "func_call": "seek", "track_id": "trk_55667", "position_seconds": 250 }
+Response: { "track_id": "trk_55667", "title": "Peaches", "artist": "Justin Bieber", "state": "playing", "position_seconds": 250 }

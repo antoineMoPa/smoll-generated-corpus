@@ -1,0 +1,47 @@
+Question: How do I cycle from the Alamo to the River Walk in San Antonio?
+Call: { "func_call": "get_directions", "origin": "The Alamo, San Antonio, TX", "destination": "San Antonio River Walk, San Antonio, TX", "mode": "cycling" }
+Response: { "distance_km": 1.2, "duration_minutes": 8, "steps": [ { "instruction": "Head east on Commerce St toward Bowie St", "distance_km": 0.2 }, { "instruction": "Turn left onto Bowie St", "distance_km": 0.3 }, { "instruction": "Turn right onto E Crockett St", "distance_km": 0.4 }, { "instruction": "Enter River Walk path near River Centre", "distance_km": 0.3 } ] }
+
+Question: What are the walking directions from Pike Place Market to the Seattle Great Wheel?
+Call: { "func_call": "get_directions", "origin": "Pike Place Market, Seattle, WA", "destination": "Seattle Great Wheel, Seattle, WA", "mode": "walking" }
+Response: { "distance_km": 0.9, "duration_minutes": 12, "steps": [ { "instruction": "Head south on 1st Ave toward Pine St", "distance_km": 0.4 }, { "instruction": "Turn left onto Pike St", "distance_km": 0.2 }, { "instruction": "Continue onto Alaskan Way", "distance_km": 0.3 } ] }
+
+Question: Give me transit directions from JFK Airport to Times Square in New York.
+Call: { "func_call": "get_directions", "origin": "JFK International Airport, Queens, NY", "destination": "Times Square, New York, NY", "mode": "transit" }
+Response: { "distance_km": 26.8, "duration_minutes": 65, "steps": [ { "instruction": "Take the AirTrain to Jamaica Station", "distance_km": 8.5 }, { "instruction": "Transfer to the E Subway Train towards Manhattan", "distance_km": 0.1 }, { "instruction": "Ride to 42nd St - Port Authority Bus Terminal", "distance_km": 17.8 }, { "instruction": "Walk east to Times Square", "distance_km": 0.4 } ] }
+
+Question: How can I drive from the Statue of Liberty Ferry Terminal to Brooklyn Bridge Park?
+Call: { "func_call": "get_directions", "origin": "Battery Park Ferry Terminal, New York, NY", "destination": "Brooklyn Bridge Park, Brooklyn, NY", "mode": "driving" }
+Response: { "distance_km": 5.4, "duration_minutes": 16, "steps": [ { "instruction": "Head north on State St", "distance_km": 0.3 }, { "instruction": "Merge onto FDR Drive N", "distance_km": 2.1 }, { "instruction": "Take exit for Brooklyn Bridge", "distance_km": 1.5 }, { "instruction": "Turn right onto Adams St", "distance_km": 1.5 } ] }
+
+Question: I need cycling instructions from Golden Gate Park to Twin Peaks in San Francisco.
+Call: { "func_call": "get_directions", "origin": "Golden Gate Park, San Francisco, CA", "destination": "Twin Peaks, San Francisco, CA", "mode": "cycling" }
+Response: { "distance_km": 7.3, "duration_minutes": 35, "steps": [ { "instruction": "Exit park via Stanyan St", "distance_km": 0.5 }, { "instruction": "Head south on Stanyan St", "distance_km": 1.2 }, { "instruction": "Turn left onto Market St", "distance_km": 3.8 }, { "instruction": "Turn right onto Twin Peaks Blvd", "distance_km": 1.8 } ] }
+
+Question: What is the driving route from Navy Pier to Willis Tower in Chicago?
+Call: { "func_call": "get_directions", "origin": "Navy Pier, Chicago, IL", "destination": "Willis Tower, Chicago, IL", "mode": "driving" }
+Response: { "distance_km": 4.2, "duration_minutes": 14, "steps": [ { "instruction": "Head west on Grand Ave", "distance_km": 1.8 }, { "instruction": "Turn left onto N Lake Shore Dr", "distance_km": 0.9 }, { "instruction": "Turn right onto W Jackson Blvd", "distance_km": 1.2 }, { "instruction": "Arrive at Willis Tower on S Wacker Dr", "distance_km": 0.3 } ] }
+
+Question: Walk me from the Liberty Bell to Independence Hall in Philadelphia.
+Call: { "func_call": "get_directions", "origin": "Liberty Bell Center, Philadelphia, PA", "destination": "Independence Hall, Philadelphia, PA", "mode": "walking" }
+Response: { "distance_km": 0.2, "duration_minutes": 3, "steps": [ { "instruction": "Exit Liberty Bell Center onto Market St", "distance_km": 0.05 }, { "instruction": "Cross 6th St", "distance_km": 0.05 }, { "instruction": "Enter Independence National Historical Park", "distance_km": 0.1 } ] }
+
+Question: How do I get from Fenway Park to the New England Aquarium via public transit in Boston?
+Call: { "func_call": "get_directions", "origin": "Fenway Park, Boston, MA", "destination": "New England Aquarium, Boston, MA", "mode": "transit" }
+Response: { "distance_km": 6.1, "duration_minutes": 32, "steps": [ { "instruction": "Walk to Kenmore Station", "distance_km": 0.3 }, { "instruction": "Board the Green Line (B, C, or D) towards Park Street", "distance_km": 0.2 }, { "instruction": "Transfer at Park Street to the Blue Line towards Wonderland", "distance_km": 0.0 }, { "instruction": "Exit at Aquarium Station", "distance_km": 5.4 }, { "instruction": "Walk to Atlantic Ave entrance", "distance_km": 0.2 } ] }
+
+Question: Provide cycling directions from Venice Beach to Santa Monica Pier in Los Angeles.
+Call: { "func_call": "get_directions", "origin": "Venice Beach Boardwalk, Venice, CA", "destination": "Santa Monica Pier, Santa Monica, CA", "mode": "cycling" }
+Response: { "distance_km": 4.5, "duration_minutes": 20, "steps": [ { "instruction": "Head north on Ocean Front Walk", "distance_km": 2.8 }, { "instruction": "Continue onto Marvin Braude Bike Path", "distance_km": 1.5 }, { "instruction": "Turn right onto Colorado Ave", "distance_km": 0.2 } ] }
+
+Question: What are the driving directions from Space Needle to Mount Rainier National Park entrance?
+Call: { "func_call": "get_directions", "origin": "Space Needle, Seattle, WA", "destination": "Mount Rainier National Park, Ashford, WA", "mode": "driving" }
+Response: { "distance_km": 145.2, "duration_minutes": 135, "steps": [ { "instruction": "Head south on Broad St to I-5 S", "distance_km": 1.2 }, { "instruction": "Merge onto I-5 S", "distance_km": 45.5 }, { "instruction": "Take exit 142A for WA-512 E towards Puyallup", "distance_km": 15.8 }, { "instruction": "Continue onto WA-702 E", "distance_km": 82.7 } ] }
+
+Question: Drive from the National Mall to Arlington National Cemetery in Washington DC.
+Call: { "func_call": "get_directions", "origin": "National Mall, Washington, DC", "destination": "Arlington National Cemetery, Arlington, VA", "mode": "driving" }
+Response: { "distance_km": 6.8, "duration_minutes": 18, "steps": [ { "instruction": "Head west on Constitution Ave NW", "distance_km": 1.5 }, { "instruction": "Turn left onto 23rd St NW", "distance_km": 0.8 }, { "instruction": "Cross Arlington Memorial Bridge", "distance_km": 1.2 }, { "instruction": "Follow Memorial Ave to cemetery entrance", "distance_km": 3.3 } ] }
+
+Question: Transit route from Denver Union Station to Red Rocks Amphitheatre.
+Call: { "func_call": "get_directions", "origin": "Denver Union Station, Denver, CO", "destination": "Red Rocks Amphitheatre, Morrison, CO", "mode": "transit" }
+Response: { "distance_km": 24.6, "duration_minutes": 75, "steps": [ { "instruction": "Board the W Line Light Rail at Union Station", "distance_km": 0.1 }, { "instruction": "Ride to Alameda Station", "distance_km": 12.5 }, { "instruction": "Transfer to Bus Route 16L towards Red Rocks", "distance_km": 0.2 }, { "instruction": "Disembark at Red Rocks Park & Ride", "distance_km": 11.6 }, { "instruction": "Walk to amphitheatre entrance", "distance_km": 0.2 } ] }

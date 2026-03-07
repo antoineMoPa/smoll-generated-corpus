@@ -1,0 +1,59 @@
+Context: The webinar is set to begin at 2:30 PM in the virtual hall. Please log in five minutes early to test your audio.
+Input: {"question": "When does the webinar start?"}
+Output: {"answer": "2:30 PM"}
+
+Context: We chose to have breakfast before dawn to catch the sunrise hike. The trailhead was empty at that hour.
+Input: {"question": "What time did you eat breakfast?"}
+Output: {"answer": "before dawn"}
+
+Context: The ferry to the island leaves strictly at 8:15 AM from dock 9. Passengers must board by 8:00 AM.
+Input: {"question": "When does the ferry depart?"}
+Output: {"answer": "8:15 AM"}
+
+Context: He typically goes to the gym late at night to avoid the crowds. The equipment is always available then.
+Input: {"question": "When does he go to the gym?"}
+Output: {"answer": "late at night"}
+
+Context: The library closes at 9:00 PM on Tuesdays and 6:00 PM on Fridays. Return your books before the doors lock.
+Input: {"question": "What time does the library close on Tuesdays?"}
+Output: {"answer": "9:00 PM"}
+
+Context: They reached the summit right after sunrise to watch the clouds clear. The view was breathtaking at that moment.
+Input: {"question": "When did they reach the summit?"}
+Output: {"answer": "right after sunrise"}
+
+Context: The internet connection failed at 3:45 PM during the video call, causing a brief interruption. IT restored it within ten minutes.
+Input: {"question": "At what time did the internet fail?"}
+Output: {"answer": "3:45 PM"}
+
+Context: Her class at the university starts at 1:00 PM exactly, so she leaves home by noon. Tardiness affects her participation grade.
+Input: {"question": "When does her class start?"}
+Output: {"answer": "1:00 PM"}
+
+Context: We intend to view the meteor shower at midnight when visibility is highest. The forecast predicts clear skies.
+Input: {"question": "When will you view the meteor shower?"}
+Output: {"answer": "at midnight"}
+
+Context: The courier is scheduled to arrive between 9:00 AM and 11:00 AM next Monday. Please ensure someone is present to receive the parcel.
+Input: {"question": "When is the courier scheduled to arrive?"}
+Output: {"answer": "between 9:00 AM and 11:00 AM"}
+
+Context: The moon rose at 8:45 PM, illuminating the garden path. It made for a lovely evening walk.
+Input: {"question": "What time did the moon rise?"}
+Output: {"answer": "8:45 PM"}
+
+Context: You must water the plants three times a week, once on Monday, once on Wednesday, and once on Friday. Overwatering can damage the roots.
+Input: {"question": "When should you water the plants?"}
+Output: {"answer": "once on Monday, once on Wednesday, and once on Friday"}
+
+Context: The concert begins at 7:30 PM Central Time and runs for ninety minutes. Doors open an hour prior.
+Input: {"question": "What time does the concert begin?"}
+Output: {"answer": "7:30 PM"}
+
+Context: They planned to gather for lunch at quarter to one in the afternoon. The bistro downtown is their favorite place.
+Input: {"question": "When did they plan to gather for lunch?"}
+Output: {"answer": "at quarter to one"}
+
+Context: The museum opens at 11:00 AM on holidays, which is later than standard days. Visitors often queue up before opening.
+Input: {"question": "When does the museum open on holidays?"}
+Output: {"answer": "11:00 AM"}

@@ -1,0 +1,51 @@
+Available Tools: get_weather_alerts | get_storm_warnings | get_air_quality_index
+Call Schema: { "func_call": "string", "location": "string", "severity": "string" }
+Response Schema: { "alerts": [{ "type": "string", "severity": "string", "message": "string", "expires": "string" }] }
+---
+Question: Are there any heat advisories currently active for Phoenix?
+Call: { "func_call": "get_weather_alerts", "location": "Phoenix, AZ", "severity": "high" }
+Response: { "alerts": [{ "type": "Excessive Heat Warning", "severity": "high", "message": "Dangerously hot conditions with temperatures up to 115F expected. Drink plenty of fluids and stay in air-conditioned rooms.", "expires": "2024-05-22T20:00:00Z" }] }
+
+Question: Check for hurricane warnings along the Gulf Coast in Mobile.
+Call: { "func_call": "get_storm_warnings", "location": "Mobile, AL", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Hurricane Warning", "severity": "extreme", "message": "Life-threatening storm surge and damaging winds expected within 36 hours. Evacuate immediately if ordered.", "expires": "2024-05-23T06:00:00Z" }] }
+
+Question: I need to know if there are high wind warnings affecting Albuquerque.
+Call: { "func_call": "get_weather_alerts", "location": "Albuquerque, NM", "severity": "moderate" }
+Response: { "alerts": [{ "type": "High Wind Warning", "severity": "moderate", "message": "West winds 25 to 35 mph with gusts up to 60 mph expected. Secure outdoor objects and use caution while driving.", "expires": "2024-05-21T18:00:00Z" }] }
+
+Question: Is there a winter storm warning active for the mountains near Asheville?
+Call: { "func_call": "get_storm_warnings", "location": "Asheville, NC", "severity": "high" }
+Response: { "alerts": [{ "type": "Winter Storm Warning", "severity": "high", "message": "Heavy snow expected above 3000 feet. Total snow accumulations of 8 to 12 inches possible.", "expires": "2024-05-22T10:00:00Z" }] }
+
+Question: Get storm warnings for Galveston regarding tropical storms.
+Call: { "func_call": "get_storm_warnings", "location": "Galveston, TX", "severity": "high" }
+Response: { "alerts": [{ "type": "Tropical Storm Warning", "severity": "high", "message": "Tropical storm conditions expected within 36 hours. Prepare for power outages and heavy rain.", "expires": "2024-05-23T12:00:00Z" }] }
+
+Question: Are there any severe thunderstorm warnings issued for Nashville?
+Call: { "func_call": "get_weather_alerts", "location": "Nashville, TN", "severity": "severe" }
+Response: { "alerts": [{ "type": "Severe Thunderstorm Warning", "severity": "severe", "message": "Damaging winds up to 70 mph and quarter size hail possible. Move to an interior room on the lowest floor.", "expires": "2024-05-21T19:30:00Z" }] }
+
+Question: Check for ice storm warnings in Little Rock due to freezing rain.
+Call: { "func_call": "get_storm_warnings", "location": "Little Rock, AR", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Ice Storm Warning", "severity": "extreme", "message": "Significant ice accumulations of up to half an inch expected. Power outages and tree damage are likely.", "expires": "2024-05-22T08:00:00Z" }] }
+
+Question: What flood watches are currently active for Sacramento?
+Call: { "func_call": "get_weather_alerts", "location": "Sacramento, CA", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Flood Watch", "severity": "moderate", "message": "Heavy rain may cause flooding of rivers, creeks, and urban areas. Monitor later forecasts.", "expires": "2024-05-21T22:00:00Z" }] }
+
+Question: Retrieve any dust storm alerts for Lubbock.
+Call: { "func_call": "get_weather_alerts", "location": "Lubbock, TX", "severity": "high" }
+Response: { "alerts": [{ "type": "Dust Storm Warning", "severity": "high", "message": "Visibility near zero due to blowing dust. Do not drive into a dust storm. Pull aside, stay parked, and turn off lights.", "expires": "2024-05-21T17:00:00Z" }] }
+
+Question: Is there a lake effect snow warning in effect for Buffalo?
+Call: { "func_call": "get_storm_warnings", "location": "Buffalo, NY", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Lake Effect Snow Warning", "severity": "extreme", "message": "Heavy lake effect snow bands will produce snowfall rates of 3 inches per hour. Travel will be nearly impossible.", "expires": "2024-05-22T14:00:00Z" }] }
+
+Question: Check for rip current statements regarding the beaches in Virginia Beach.
+Call: { "func_call": "get_weather_alerts", "location": "Virginia Beach, VA", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Rip Current Statement", "severity": "moderate", "message": "High risk of rip currents expected. Swim near a lifeguard and know how to escape if caught.", "expires": "2024-05-21T20:00:00Z" }] }
+
+Question: Get details on any extreme cold warnings for International Falls.
+Call: { "func_call": "get_storm_warnings", "location": "International Falls, MN", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Extreme Cold Warning", "severity": "extreme", "message": "Dangerously cold wind chills as low as -50F expected. Frostbite and hypothermia can occur within minutes.", "expires": "2024-05-22T11:00:00Z" }] }

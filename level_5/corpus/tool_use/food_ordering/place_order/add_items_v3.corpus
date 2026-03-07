@@ -1,0 +1,95 @@
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Add two lobster rolls from Harbor Catch, toasted bun and no mayo please.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_5599", "item_id": "item_lb_04", "quantity": 2, "special_instructions": "toasted bun, no mayo" }
+Response: { "order_id": "ord_77201", "items": [{ "name": "Lobster Roll", "quantity": 2, "price": 24.50 }], "total": 49.00, "estimated_delivery_min": 45 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: I want six spring rolls from Dragon Wok, fried crispy and served with sweet chili sauce.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_8832", "item_id": "item_sr_11", "quantity": 6, "special_instructions": "fried crispy, sweet chili sauce" }
+Response: { "order_id": "ord_44519", "items": [{ "name": "Vegetable Spring Rolls", "quantity": 6, "price": 8.00 }], "total": 48.00, "estimated_delivery_min": 30 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Add one BBQ rib platter from Smokehouse Joe, extra sauce on the side and coleslaw.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_3310", "item_id": "item_rb_22", "quantity": 1, "special_instructions": "extra sauce, include coleslaw" }
+Response: { "order_id": "ord_99823", "items": [{ "name": "BBQ Rib Platter", "quantity": 1, "price": 28.75 }], "total": 28.75, "estimated_delivery_min": 50 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Get me three falafel wraps from Mediterranean Breeze, no pickles and extra tahini.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_6671", "item_id": "item_fw_08", "quantity": 3, "special_instructions": "no pickles, extra tahini" }
+Response: { "order_id": "ord_11294", "items": [{ "name": "Falafel Wrap", "quantity": 3, "price": 10.50 }], "total": 31.50, "estimated_delivery_min": 25 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Add four bowls of ramen from Noodle House, soft boiled egg and extra naruto.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_9945", "item_id": "item_rm_33", "quantity": 4, "special_instructions": "soft boiled egg, extra naruto" }
+Response: { "order_id": "ord_55678", "items": [{ "name": "Tonkotsu Ramen", "quantity": 4, "price": 15.00 }], "total": 60.00, "estimated_delivery_min": 35 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: I need two fish and chips from Ocean View, tartar sauce on the side and no peas.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_2256", "item_id": "item_fc_05", "quantity": 2, "special_instructions": "tartar sauce on side, no peas" }
+Response: { "order_id": "ord_88901", "items": [{ "name": "Fish and Chips", "quantity": 2, "price": 19.25 }], "total": 38.50, "estimated_delivery_min": 40 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Add one spinach quiche from Cafe Paris, warm slice and side salad included.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_7712", "item_id": "item_qu_02", "quantity": 1, "special_instructions": "warm slice, side salad included" }
+Response: { "order_id": "ord_33456", "items": [{ "name": "Spinach Quiche", "quantity": 1, "price": 14.50 }], "total": 14.50, "estimated_delivery_min": 20 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Order five meatballs subs from Tony's Deli, extra marinara and provolone cheese.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_4489", "item_id": "item_mb_19", "quantity": 5, "special_instructions": "extra marinara, provolone cheese" }
+Response: { "order_id": "ord_66732", "items": [{ "name": "Meatball Sub", "quantity": 5, "price": 11.00 }], "total": 55.00, "estimated_delivery_min": 30 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Add three mango lassis from Spice Route, extra thick and no sugar added.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_1198", "item_id": "item_ml_07", "quantity": 3, "special_instructions": "extra thick, no sugar" }
+Response: { "order_id": "ord_22109", "items": [{ "name": "Mango Lassi", "quantity": 3, "price": 6.75 }], "total": 20.25, "estimated_delivery_min": 15 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Get me two grilled salmon fillets from Sea Grill, lemon butter sauce and asparagus.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_5534", "item_id": "item_gs_14", "quantity": 2, "special_instructions": "lemon butter sauce, with asparagus" }
+Response: { "order_id": "ord_99045", "items": [{ "name": "Grilled Salmon Fillet", "quantity": 2, "price": 22.00 }], "total": 44.00, "estimated_delivery_min": 45 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: Add one tiramisu from Bella Dolce, extra cocoa dusting and no coffee soak.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_8867", "item_id": "item_tr_03", "quantity": 1, "special_instructions": "extra cocoa dusting, no coffee soak" }
+Response: { "order_id": "ord_44328", "items": [{ "name": "Tiramisu", "quantity": 1, "price": 9.50 }], "total": 9.50, "estimated_delivery_min": 25 }
+
+Available Tools: add_item_to_order | remove_item | apply_promo | place_order | get_order_estimate
+Call Schema: { "func_call": "string", "restaurant_id": "string", "item_id": "string", "quantity": number, "special_instructions": "string" }
+Response Schema: { "order_id": "string", "items": [{ "name": "string", "quantity": number, "price": number }], "total": number, "estimated_delivery_min": number }
+---
+Question: I need four beef burritos from Adobe Cantina, extra guac and sour cream on top.
+Call: { "func_call": "add_item_to_order", "restaurant_id": "rest_3376", "item_id": "item_bb_25", "quantity": 4, "special_instructions": "extra guac, sour cream on top" }
+Response: { "order_id": "ord_77561", "items": [{ "name": "Beef Burrito", "quantity": 4, "price": 13.25 }], "total": 53.00, "estimated_delivery_min": 35 }

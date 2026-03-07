@@ -1,0 +1,95 @@
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Display the sales figures for February 2024 categorized by district, with no additional filters applied.
+Call: { "func_call": "get_sales_report", "period": "2024-02", "group_by": "district", "filters": "" }
+Response: { "period": "2024-02", "total_value": 328900.45, "deal_count": 98, "conversion_rate": 0.16 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Can you provide the H1 2023 revenue totals segmented by partner type, restricting to Gold tier partners?
+Call: { "func_call": "get_sales_report", "period": "2023-H1", "group_by": "partner_type", "filters": "tier=Gold" }
+Response: { "period": "2023-H1", "total_value": 1450200.80, "deal_count": 267, "conversion_rate": 0.29 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: I need the weekly report for week 42 of 2023 grouped by salesperson, filtering for new business only.
+Call: { "func_call": "get_sales_report", "period": "2023-W42", "group_by": "salesperson", "filters": "deal_type=new_business" }
+Response: { "period": "2023-W42", "total_value": 89300.15, "deal_count": 23, "conversion_rate": 0.14 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: What were the Q3 2022 results grouped by market sector, excluding government contracts?
+Call: { "func_call": "get_sales_report", "period": "2022-Q3", "group_by": "market_sector", "filters": "exclude_sector=government" }
+Response: { "period": "2022-Q3", "total_value": 2890000.50, "deal_count": 412, "conversion_rate": 0.26 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Pull the April 2024 metrics grouped by lead owner, focusing on deals worth more than $5000.
+Call: { "func_call": "get_sales_report", "period": "2024-04", "group_by": "lead_owner", "filters": "min_value=5000" }
+Response: { "period": "2024-04", "total_value": 156700.30, "deal_count": 55, "conversion_rate": 0.20 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Show the 2023 year-end summary grouped by solution type, including only renewal deals.
+Call: { "func_call": "get_sales_report", "period": "2023", "group_by": "solution_type", "filters": "deal_category=renewal" }
+Response: { "period": "2023", "total_value": 6740500.90, "deal_count": 890, "conversion_rate": 0.33 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Retrieve the May 2023 data grouped by marketing channel, filtering for organic traffic sources.
+Call: { "func_call": "get_sales_report", "period": "2023-05", "group_by": "marketing_channel", "filters": "traffic_type=organic" }
+Response: { "period": "2023-05", "total_value": 210400.60, "deal_count": 78, "conversion_rate": 0.18 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Give me the Q1 2024 performance broken down by branch office, limited to the EMEA region.
+Call: { "func_call": "get_sales_report", "period": "2024-Q1", "group_by": "branch_office", "filters": "region=EMEA" }
+Response: { "period": "2024-Q1", "total_value": 1820300.25, "deal_count": 305, "conversion_rate": 0.25 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: I need the August 2023 report grouped by customer size, excluding enterprise accounts.
+Call: { "func_call": "get_sales_report", "period": "2023-08", "group_by": "customer_size", "filters": "exclude_size=enterprise" }
+Response: { "period": "2023-08", "total_value": 445600.80, "deal_count": 156, "conversion_rate": 0.19 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Show the full year 2022 stats grouped by payment method, filtering for credit card transactions.
+Call: { "func_call": "get_sales_report", "period": "2022", "group_by": "payment_method", "filters": "method=credit_card" }
+Response: { "period": "2022", "total_value": 3150000.00, "deal_count": 520, "conversion_rate": 0.27 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Get the Q4 2024 summary grouped by referral source, including only partner referrals.
+Call: { "func_call": "get_sales_report", "period": "2024-Q4", "group_by": "referral_source", "filters": "source_type=partner" }
+Response: { "period": "2024-Q4", "total_value": 920150.40, "deal_count": 210, "conversion_rate": 0.30 }
+
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Provide the sales breakdown for June 2022 grouped by contract length, filtering for annual subscriptions.
+Call: { "func_call": "get_sales_report", "period": "2022-06", "group_by": "contract_length", "filters": "duration=annual" }
+Response: { "period": "2022-06", "total_value": 530200.95, "deal_count": 88, "conversion_rate": 0.22 }

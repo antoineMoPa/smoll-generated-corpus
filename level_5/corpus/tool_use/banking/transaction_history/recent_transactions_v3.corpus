@@ -1,0 +1,55 @@
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Retrieve the 12 most recent items for my money market account MM-223344.
+Call: { "func_call": "get_transactions", "account_id": "MM-223344", "from_date": "2023-08-01", "to_date": "2023-09-30", "limit": 12 }
+Response: { "transactions": [{ "id": "TXN-10001", "date": "2023-09-29", "description": "Interest Accrual", "amount": 45.67, "type": "credit" }, { "id": "TXN-10002", "date": "2023-09-25", "description": "Wire Transfer Out", "amount": 5000.00, "type": "debit" }, { "id": "TXN-10003", "date": "2023-09-20", "description": "Dividend Reinvestment", "amount": 120.50, "type": "credit" }, { "id": "TXN-10004", "date": "2023-09-15", "description": "Service Charge", "amount": 15.00, "type": "debit" }, { "id": "TXN-10005", "date": "2023-09-10", "description": "Deposit - Cash", "amount": 200.00, "type": "credit" }, { "id": "TXN-10006", "date": "2023-09-05", "description": "Check #1024", "amount": 350.25, "type": "debit" }, { "id": "TXN-10007", "date": "2023-09-01", "description": "Monthly Maintenance Fee", "amount": 10.00, "type": "debit" }, { "id": "TXN-10008", "date": "2023-08-28", "description": "Transfer from Savings", "amount": 1000.00, "type": "credit" }, { "id": "TXN-10009", "date": "2023-08-25", "description": "ATM Fee Reimbursement", "amount": 3.50, "type": "credit" }, { "id": "TXN-10010", "date": "2023-08-20", "description": "Online Bill Pay", "amount": 89.99, "type": "debit" }, { "id": "TXN-10011", "date": "2023-08-15", "description": "Interest Payment", "amount": 42.10, "type": "credit" }, { "id": "TXN-10012", "date": "2023-08-10", "description": "Check #1023", "amount": 150.00, "type": "debit" }], "total": 12 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Display the 2 latest entries for credit card CC-55443322.
+Call: { "func_call": "get_transactions", "account_id": "CC-55443322", "from_date": "2023-11-01", "to_date": "2023-11-30", "limit": 2 }
+Response: { "transactions": [{ "id": "TXN-20001", "date": "2023-11-29", "description": "Home Depot", "amount": 89.45, "type": "debit" }, { "id": "TXN-20002", "date": "2023-11-28", "description": "Shell Station", "amount": 45.00, "type": "debit" }], "total": 2 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: What are the 9 previous transactions on trust account TRU-998877?
+Call: { "func_call": "get_transactions", "account_id": "TRU-998877", "from_date": "2023-06-01", "to_date": "2023-12-31", "limit": 9 }
+Response: { "transactions": [{ "id": "TXN-30001", "date": "2023-12-15", "description": "Beneficiary Distribution", "amount": 2500.00, "type": "debit" }, { "id": "TXN-30002", "date": "2023-11-30", "description": "Trustee Fee", "amount": 150.00, "type": "debit" }, { "id": "TXN-30003", "date": "2023-11-15", "description": "Rental Income", "amount": 1800.00, "type": "credit" }, { "id": "TXN-30004", "date": "2023-10-30", "description": "Property Tax Payment", "amount": 450.00, "type": "debit" }, { "id": "TXN-30005", "date": "2023-10-15", "description": "Repair Service - Plumber", "amount": 220.00, "type": "debit" }, { "id": "TXN-30006", "date": "2023-09-30", "description": "Rental Income", "amount": 1800.00, "type": "credit" }, { "id": "TXN-30007", "date": "2023-09-15", "description": "Insurance Premium", "amount": 300.00, "type": "debit" }, { "id": "TXN-30008", "date": "2023-08-30", "description": "Rental Income", "amount": 1800.00, "type": "credit" }, { "id": "TXN-30009", "date": "2023-08-15", "description": "Landscaping Service", "amount": 175.00, "type": "debit" }], "total": 9 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: List the 15 most recent movements for payroll account PAY-112233.
+Call: { "func_call": "get_transactions", "account_id": "PAY-112233", "from_date": "2023-10-01", "to_date": "2023-10-31", "limit": 15 }
+Response: { "transactions": [{ "id": "TXN-40001", "date": "2023-10-31", "description": "Salary - J. Doe", "amount": 3200.00, "type": "debit" }, { "id": "TXN-40002", "date": "2023-10-31", "description": "Salary - A. Smith", "amount": 2800.00, "type": "debit" }, { "id": "TXN-40003", "date": "2023-10-31", "description": "Payroll Taxes", "amount": 1500.00, "type": "debit" }, { "id": "TXN-40004", "date": "2023-10-30", "description": "Funding Transfer", "amount": 10000.00, "type": "credit" }, { "id": "TXN-40005", "date": "2023-10-15", "description": "Salary - J. Doe", "amount": 3200.00, "type": "debit" }, { "id": "TXN-40006", "date": "2023-10-15", "description": "Salary - A. Smith", "amount": 2800.00, "type": "debit" }, { "id": "TXN-40007", "date": "2023-10-15", "description": "Payroll Taxes", "amount": 1500.00, "type": "debit" }, { "id": "TXN-40008", "date": "2023-10-14", "description": "Funding Transfer", "amount": 10000.00, "type": "credit" }, { "id": "TXN-40009", "date": "2023-10-10", "description": "Bonus - J. Doe", "amount": 500.00, "type": "debit" }, { "id": "TXN-40010", "date": "2023-10-05", "description": "Contractor Payment", "amount": 1200.00, "type": "debit" }, { "id": "TXN-40011", "date": "2023-10-04", "description": "Software Subscription", "amount": 99.00, "type": "debit" }, { "id": "TXN-40012", "date": "2023-10-03", "description": "Office Supplies", "amount": 45.50, "type": "debit" }, { "id": "TXN-40013", "date": "2023-10-02", "description": "Utility Bill", "amount": 120.00, "type": "debit" }, { "id": "TXN-40014", "date": "2023-10-01", "description": "Rent Payment", "amount": 2000.00, "type": "debit" }, { "id": "TXN-40015", "date": "2023-10-01", "description": "Initial Deposit", "amount": 5000.00, "type": "credit" }], "total": 15 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Show me the 3 latest records for escrow account ESC-667788.
+Call: { "func_call": "get_transactions", "account_id": "ESC-667788", "from_date": "2023-11-15", "to_date": "2023-11-30", "limit": 3 }
+Response: { "transactions": [{ "id": "TXN-50001", "date": "2023-11-28", "description": "Release to Seller", "amount": 150000.00, "type": "debit" }, { "id": "TXN-50002", "date": "2023-11-20", "description": "Inspection Fee", "amount": 450.00, "type": "debit" }, { "id": "TXN-50003", "date": "2023-11-18", "description": "Earnest Money Deposit", "amount": 10000.00, "type": "credit" }], "total": 3 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Fetch the 11 most recent activities on charity account CHR-445566.
+Call: { "func_call": "get_transactions", "account_id": "CHR-445566", "from_date": "2023-01-01", "to_date": "2023-12-31", "limit": 11 }
+Response: { "transactions": [{ "id": "TXN-60001", "date": "2023-12-20", "description": "Donation - Red Cross", "amount": 5000.00, "type": "debit" }, { "id": "TXN-60002", "date": "2023-12-15", "description": "Grant Received", "amount": 25000.00, "type": "credit" }, { "id": "TXN-60003", "date": "2023-11-30", "description": "Event Expenses", "amount": 1200.00, "type": "debit" }, { "id": "TXN-60004", "date": "2023-11-15", "description": "Donation - Local Shelter", "amount": 2000.00, "type": "debit" }, { "id": "TXN-60005", "date": "2023-10-30", "description": "Membership Dues", "amount": 500.00, "type": "credit" }, { "id": "TXN-60006", "date": "2023-10-15", "description": "Office Rent", "amount": 800.00, "type": "debit" }, { "id": "TXN-60007", "date": "2023-09-30", "description": "Donation - Food Bank", "amount": 3000.00, "type": "debit" }, { "id": "TXN-60008", "date": "2023-09-15", "description": "Fundraising Event Income", "amount": 15000.00, "type": "credit" }, { "id": "TXN-60009", "date": "2023-08-30", "description": "Marketing Materials", "amount": 450.00, "type": "debit" }, { "id": "TXN-60010", "date": "2023-08-15", "description": "Donation - Animal Rescue", "amount": 1500.00, "type": "debit" }, { "id": "TXN-60011", "date": "2023-07-30", "description": "Volunteer Stipend", "amount": 300.00, "type": "debit" }], "total": 11 }
+
+Available Tools: get_transactions | get_transaction_by_id | get_statements | search_transactions
+Call Schema: { "func_call": "string", "account_id": "string", "from_date": "string", "to_date": "string", "limit": number }
+Response Schema: { "transactions": [{ "id": "string", "date": "string", "description": "string", "amount": number, "type": "debit|credit" }], "total": number }
+---
+Question: Provide the 5 latest logs for crypto wallet CRY-889900.
+Call: { "func_call": "get_transactions", "account_id": "CRY-889900", "from_date": "2023-11-01", "to_date": "2023-11-30", "limit": 5 }
+Response: { "transactions": [{ "id": "TXN-70001", "date": "2023-11-29", "description": "Buy BTC", "amount": 500.00, "type": "debit" }, { "id": "TXN-70002", "date": "2023-11-25", "description": "Sell ETH", "amount": 1200.00, "type": "credit" }, { "id": "TXN-70003", "date": "2023-11-20", "description": "Network Fee", "amount": 15.50, "type": "debit" }, { "id": "TXN-70004", "date": "2023-11-15", "description": "Transfer from Exchange", "amount": 2500.00, "type": "credit" }, { "id": "TXN-70005", "date": "2023-11-10", "description": "Buy SOL", "amount": 300.00, "type": "debit" }], "total": 5 }

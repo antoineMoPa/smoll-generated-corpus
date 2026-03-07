@@ -1,0 +1,59 @@
+Context: First, David sliced the onions. Next, he sautéed them in olive oil. Finally, he added the tomatoes to the pan.
+Input: {"question": "What happened first?"}
+Output: {"answer": "David sliced the onions"}
+
+Context: The eclipse began with a small bite taken out of the sun. Darkness fell completely at midday. The light returned fully an hour later.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The light returned fully an hour later"}
+
+Context: To fix the leak, start by turning off the main water valve. Then, drain the remaining water from the pipes. Replace the broken washer and tighten the connections.
+Input: {"question": "What happened first?"}
+Output: {"answer": "turning off the main water valve"}
+
+Context: Sarah fed the dog, walked around the block, and then locked the front door before bed.
+Input: {"question": "What happened last?"}
+Output: {"answer": "locked the front door before bed"}
+
+Context: The experiment commenced when the laser was activated. Smoke rose instantly from the target. The sensors recorded the data after five seconds.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the laser was activated"}
+
+Context: First, the writer outlined the plot. Second, she drafted the first chapter. Third, she edited the dialogue. Lastly, she submitted the manuscript.
+Input: {"question": "What happened last?"}
+Output: {"answer": "she submitted the manuscript"}
+
+Context: He unlocked the car, started the engine, and merged onto the highway.
+Input: {"question": "What happened first?"}
+Output: {"answer": "He unlocked the car"}
+
+Context: The festival opened with a ribbon-cutting ceremony. Food trucks lined the streets throughout the afternoon. The celebration ended with a live jazz concert.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The celebration ended with a live jazz concert"}
+
+Context: Before painting the wall, clean the surface with soap and water. Apply a coat of primer to ensure adhesion. Roll on the blue paint and let it dry overnight.
+Input: {"question": "What happened first?"}
+Output: {"answer": "clean the surface with soap and water"}
+
+Context: The mechanic inspected the brakes, replaced the worn pads, and then test drove the vehicle.
+Input: {"question": "What happened last?"}
+Output: {"answer": "test drove the vehicle"}
+
+Context: First, the eggs were laid in the nest. Days passed as the mother bird kept them warm. Soon, the chicks hatched and began to chirp.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the eggs were laid in the nest"}
+
+Context: The file was uploaded to the server, processed by the algorithm, and then archived in the database.
+Input: {"question": "What happened last?"}
+Output: {"answer": "archived in the database"}
+
+Context: To bake bread, first mix the yeast with warm water. Knead the dough until it is smooth. Let it rise in a warm place for an hour.
+Input: {"question": "What happened first?"}
+Output: {"answer": "mix the yeast with warm water"}
+
+Context: The movie started with a dramatic chase scene. The plot thickened during the middle act. The story resolved with a happy ending.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The story resolved with a happy ending"}
+
+Context: First, the students gathered in the auditorium. Then, the principal gave a speech. After the announcements, everyone went to class.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the students gathered in the auditorium"}

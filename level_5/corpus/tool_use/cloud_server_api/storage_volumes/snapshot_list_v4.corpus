@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: Enumerate all storage blocks in the eu-west-2 zone to find unused capacity for new deployments.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-9z8y7x6w5v4u3t2s1", "size_gb": 250, "state": "available", "attached_to": "" }
+
+Question: Generate a recovery point for the analytics volume vol-analytics-raw before running the ETL pipeline.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-analytics-raw", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-analytics-raw", "size_gb": 1200, "state": "snapshotting", "attached_to": "i-etl-worker-05" }
+
+Question: Inspect the properties of volume vol-backup-daily to ensure it is not currently mounted to any compute node.
+Call: { "func_call": "list_volumes", "volume_id": "vol-backup-daily", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-backup-daily", "size_gb": 500, "state": "available", "attached_to": "" }
+
+Question: Capture an image of the application log volume vol-app-logs-prod immediately following the security audit.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-app-logs-prod", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-app-logs-prod", "size_gb": 85, "state": "snapshotting", "attached_to": "i-log-aggregator-09" }
+
+Question: Display all disks connected to server i-db-replica-02 to confirm the transaction log drive is active.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "i-db-replica-02", "size_gb": 0 }
+Response: { "volume_id": "vol-txn-log-02", "size_gb": 100, "state": "in-use", "attached_to": "i-db-replica-02" }
+
+Question: Perform a snapshot operation on the media storage volume vol-media-assets before the content migration begins.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-media-assets", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-media-assets", "size_gb": 3000, "state": "snapshotting", "attached_to": "i-cdn-origin-04" }
+
+Question: Verify the detachment status of volume vol-legacy-app to see if it is ready for termination.
+Call: { "func_call": "list_volumes", "volume_id": "vol-legacy-app", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-legacy-app", "size_gb": 40, "state": "available", "attached_to": "" }
+
+Question: Secure a point-in-time copy of the secrets volume vol-vault-store during the monthly compliance check.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-vault-store", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-vault-store", "size_gb": 10, "state": "snapshotting", "attached_to": "i-security-hsm-01" }
+
+Question: Query all volumes exceeding 2TB in the ap-south-1 region to review storage costs.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-warehouse-large", "size_gb": 4500, "state": "in-use", "attached_to": "i-data-mart-03" }
+
+Question: Trigger a backup for the session store volume vol-sessions-cache right before the cluster restart.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-sessions-cache", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-sessions-cache", "size_gb": 32, "state": "snapshotting", "attached_to": "i-session-manager-07" }
+
+Question: Fetch the metadata for volume vol-staging-test to determine if it holds any persistent data.
+Call: { "func_call": "list_volumes", "volume_id": "vol-staging-test", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-staging-test", "size_gb": 60, "state": "available", "attached_to": "" }
+
+Question: Create a safeguard snapshot of the customer database volume vol-cust-db-main prior to the schema update.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-cust-db-main", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-cust-db-main", "size_gb": 950, "state": "snapshotting", "attached_to": "i-db-primary-08" }

@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "string", "head": "string", "base": "string" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Generate a pull request in the geo-mapping repo owned by map-tech to merge feature/3d-terrain into main with the title "Enable 3D Terrain Rendering".
+Call: { "func_call": "create_pr", "owner": "map-tech", "repo": "geo-mapping", "pr_number": 0, "title": "Enable 3D Terrain Rendering", "head": "feature/3d-terrain", "base": "main" }
+Response: { "pr_number": 412, "title": "Enable 3D Terrain Rendering", "state": "open", "author": "map-tech", "changed_files": 27, "mergeable": true }
+
+Question: Show me the open pull requests for the chat-bot-core repository under the comm-solutions organization.
+Call: { "func_call": "list_prs", "owner": "comm-solutions", "repo": "chat-bot-core", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 76, "title": "Implement Natural Language Understanding", "state": "open", "author": "nlp_expert", "changed_files": 14, "mergeable": false }
+
+Question: Create a PR in the video-streaming repo owned by media-flow to merge hotfix/buffer-lag into develop titled "Reduce Video Buffering Latency".
+Call: { "func_call": "create_pr", "owner": "media-flow", "repo": "video-streaming", "pr_number": 0, "title": "Reduce Video Buffering Latency", "head": "hotfix/buffer-lag", "base": "develop" }
+Response: { "pr_number": 159, "title": "Reduce Video Buffering Latency", "state": "open", "author": "media-flow", "changed_files": 5, "mergeable": true }
+
+Question: List all active pull requests for the supply-chain-tracker project managed by logistics-pro.
+Call: { "func_call": "list_prs", "owner": "logistics-pro", "repo": "supply-chain-tracker", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 203, "title": "Integrate RFID Scanner API", "state": "open", "author": "iot_dev", "changed_files": 9, "mergeable": true }
+
+Question: Submit a new pull request to the energy-monitor repo owned by green-tech merging feature/solar-panel-calc into main with the title "Add Solar Panel Efficiency Calculator".
+Call: { "func_call": "create_pr", "owner": "green-tech", "repo": "energy-monitor", "pr_number": 0, "title": "Add Solar Panel Efficiency Calculator", "head": "feature/solar-panel-calc", "base": "main" }
+Response: { "pr_number": 84, "title": "Add Solar Panel Efficiency Calculator", "state": "open", "author": "green-tech", "changed_files": 16, "mergeable": true }
+
+Question: What pull requests are pending in the database-sharding repo belonging to scale-systems?
+Call: { "func_call": "list_prs", "owner": "scale-systems", "repo": "database-sharding", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 33, "title": "Implement Automatic Shard Rebalancing", "state": "open", "author": "db_admin", "changed_files": 21, "mergeable": false }
+
+Question: Open a PR for the image-compressor repo owned by pixel-perfect to merge refactor/png-algo into master titled "Optimize PNG Compression Algorithm".
+Call: { "func_call": "create_pr", "owner": "pixel-perfect", "repo": "image-compressor", "pr_number": 0, "title": "Optimize PNG Compression Algorithm", "head": "refactor/png-algo", "base": "master" }
+Response: { "pr_number": 91, "title": "Optimize PNG Compression Algorithm", "state": "open", "author": "pixel-perfect", "changed_files": 8, "mergeable": true }
+
+Question: Retrieve the list of open PRs for the weather-prediction repository under the climate-data organization.
+Call: { "func_call": "list_prs", "owner": "climate-data", "repo": "weather-prediction", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 128, "title": "Update Hurricane Tracking Model", "state": "open", "author": "meteorologist_jane", "changed_files": 35, "mergeable": true }
+
+Question: Create a pull request in the fleet-management repo owned by transport-inc to merge feature/route-optimization into main with the title "Implement Dynamic Route Optimization".
+Call: { "func_call": "create_pr", "owner": "transport-inc", "repo": "fleet-management", "pr_number": 0, "title": "Implement Dynamic Route Optimization", "head": "feature/route-optimization", "base": "main" }
+Response: { "pr_number": 57, "title": "Implement Dynamic Route Optimization", "state": "open", "author": "transport-inc", "changed_files": 19, "mergeable": true }
+
+Question: List pending pull requests for the crypto-wallet project under the block-chain-org organization.
+Call: { "func_call": "list_prs", "owner": "block-chain-org", "repo": "crypto-wallet", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 244, "title": "Add Multi-Signature Support", "state": "open", "author": "crypto_dev", "changed_files": 13, "mergeable": false }
+
+Question: Submit a new PR to the hr-portal repo owned by people-ops to merge content/leave-policy-update into main titled "Update Employee Leave Policy Docs".
+Call: { "func_call": "create_pr", "owner": "people-ops", "repo": "hr-portal", "pr_number": 0, "title": "Update Employee Leave Policy Docs", "head": "content/leave-policy-update", "base": "main" }
+Response: { "pr_number": 62, "title": "Update Employee Leave Policy Docs", "state": "open", "author": "people-ops", "changed_files": 4, "mergeable": true }
+
+Question: Show me the current pull requests for the smart-home-hub repository managed by iot-innovations.
+Call: { "func_call": "list_prs", "owner": "iot-innovations", "repo": "smart-home-hub", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 175, "title": "Support Zigbee 3.0 Protocol", "state": "open", "author": "embedded_eng", "changed_files": 23, "mergeable": true }

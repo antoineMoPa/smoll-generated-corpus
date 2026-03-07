@@ -1,0 +1,39 @@
+| Context: The annual strategy summit featured CEO Rachel Stone, CTO Marcus Lee, and CFO Diana Ross. They outlined the roadmap for global expansion. Consultant Brian Ford joined remotely to present market analysis. | Input: {"question": "Who led the annual strategy summit?"} | Output: {"answer": ["Rachel Stone", "Marcus Lee", "Diana Ross", "Brian Ford"]}
+
+| Context: At the charity auction, donors Arthur Pendelton and Beatrice Crowe pledged significant amounts for the new hospital wing. Auctioneer Clyde Banks facilitated the bidding process. Volunteer Dana Evans recorded the final totals. | Input: {"question": "Who made pledges at the charity auction?"} | Output: {"answer": ["Arthur Pendelton", "Beatrice Crowe"]}
+
+| Context: The cybersecurity task force comprises analysts Ethan Hunt, Fiona Green, and George Miller. They are currently patching vulnerabilities in the main server. Specialist Helen Troy will arrive tomorrow to lead the forensics team. | Input: {"question": "Who makes up the current cybersecurity task force?"} | Output: {"answer": ["Ethan Hunt", "Fiona Green", "George Miller"]}
+
+| Context: During the city council meeting, Mayor James Cook, Councilor Lisa Mones, and Councilor Mike Nails debated the zoning laws. Police Chief Nancy Oaks provided statistics on crime rates. The session ended with a vote on the new budget. | Input: {"question": "Which officials participated in the city council meeting?"} | Output: {"answer": ["James Cook", "Lisa Mones", "Mike Nails", "Nancy Oaks"]}
+
+| Context: The poetry reading at the cafe attracted writers Olivia Pine, Peter Quill, and Quinn Rivers. Speaker Sam Steele arrived late due to traffic but still recited his latest work. The audience applauded enthusiastically. | Input: {"question": "Who attended the poetry reading?"} | Output: {"answer": ["Olivia Pine", "Peter Quill", "Quinn Rivers", "Sam Steele"]}
+
+| Context: For the robotics competition, students Tyler Adams, Uma Singh, and Victor Zhou built a prototype arm. Mentor Wendy Cross helped them troubleshoot the code. Judge Xavier Yen evaluated their design innovation. | Input: {"question": "Who built the prototype for the robotics competition?"} | Output: {"answer": ["Tyler Adams", "Uma Singh", "Victor Zhou"]}
+
+| Context: The conference panel included moderators Yara Blanc, Zack Dean, and Alice Frost. Speakers Bob Gates and Carol Hill discussed renewable energy trends. The event was streamed live to thousands of viewers. | Input: {"question": "Who served as moderators for the conference panel?"} | Output: {"answer": ["Yara Blanc", "Zack Dean", "Alice Frost"]}
+
+| Context: In the executive suite, VP David Ice, Director Eva Jay, and Manager Felix Kim reviewed the quarterly earnings. Auditor Grace Lee checked the compliance documents. They approved the bonus structure for the staff. | Input: {"question": "Who reviewed the quarterly earnings?"} | Output: {"answer": ["David Ice", "Eva Jay", "Felix Kim", "Grace Lee"]}
+
+| Context: The mountain climbing crew was guided by leader Hugo Max and porter Iris Nova. Climbers Jack Oil, Kate Plum, and Leo Rain summited the peak before sunset. They celebrated with a group photo. | Input: {"question": "Who was part of the mountain climbing crew?"} | Output: {"answer": ["Hugo Max", "Iris Nova", "Jack Oil", "Kate Plum", "Leo Rain"]}
+
+| Context: At the media briefing, Senator Maria Sun, Representative Nick Tide, and Governor Oscar Vale addressed the housing crisis. Reporter Penny West asked about the timeline for repairs. The briefing lasted forty-five minutes. | Input: {"question": "Which politicians spoke at the media briefing?"} | Output: {"answer": ["Maria Sun", "Nick Tide", "Oscar Vale"]}
+
+| Context: The photography gallery displayed images by artists Quincy Blue, Rosa Red, and Seth Gray. Curator Tara White explained the themes to the guests. Critic Uriel Black published an article about the exhibit. | Input: {"question": "Whose images were displayed in the photography gallery?"} | Output: {"answer": ["Quincy Blue", "Rosa Red", "Seth Gray"]}
+
+| Context: The emergency response unit consisted of Captain Vera Gold, Paramedic Will Silver, and Dispatcher Xena Bronze. They coordinated the rescue efforts during the flood. Intern York Dust delivered supplies to the station. | Input: {"question": "Who comprised the emergency response unit?"} | Output: {"answer": ["Vera Gold", "Will Silver", "Xena Bronze"]}
+
+| Context: At the class reunion, alumni Zack Iron, Yvonne Steel, and Xavier Tin met after fifteen years. Professor Adam Copper gave a speech about the university's history. Dean Betty Brass introduced the new scholarship fund. | Input: {"question": "Which alumni met at the class reunion?"} | Output: {"answer": ["Zack Iron", "Yvonne Steel", "Xavier Tin"]}
+
+| Context: The theater production stars actors Clyde Wood, Diane Fire, and Earl Water. Director Faye Earth coordinated the stage movements. Producer Gale Wind secured funding for the tour. | Input: {"question": "Who are the starring actors in the theater production?"} | Output: {"answer": ["Clyde Wood", "Diane Fire", "Earl Water"]}
+
+| Context: The quiz bowl team from Riverdale High included contestants Holly Leaf, Ivy Branch, and Jade Root. Coach Kelly Trunk drilled them on history facts. They defeated the team from Oakwood High in the finals. | Input: {"question": "Who were the contestants from Riverdale High?"} | Output: {"answer": ["Holly Leaf", "Ivy Branch", "Jade Root"]}
+
+| Context: The app developers, Logan Code, Mia Data, and Noah Byte, demonstrated their prototype to stakeholders. Investor Olivia Cloud inquired about user retention metrics. She agreed to invest alongside partner Paul Server. | Input: {"question": "Who developed the app prototype?"} | Output: {"answer": ["Logan Code", "Mia Data", "Noah Byte"]}
+
+| Context: The ballet performance featured principals Ruby Toe, Samuel Leap, and Tara Spin. Conductor Vincent Beat directed the live orchestra. The crowd cheered loudly after the final act. | Input: {"question": "Who were the principal dancers in the ballet?"} | Output: {"answer": ["Ruby Toe", "Samuel Leap", "Tara Spin"]}
+
+| Context: The clinical study was conducted by Dr. Emily Lab, Dr. Fred Scope, and Dr. Gina Test. They analyzed patient data over two years at the clinic. Reviewer Hugo Chart verified the statistical results. | Input: {"question": "Who conducted the clinical study?"} | Output: {"answer": ["Emily Lab", "Fred Scope", "Gina Test"]}
+
+| Context: The park restoration crew included volunteers Ian Sod, Jane Seed, and Kyle Bloom. They planted over two hundred trees by evening. Supervisor Lisa Grass commended their efficiency. | Input: {"question": "Who volunteered for the park restoration?"} | Output: {"answer": ["Ian Sod", "Jane Seed", "Kyle Bloom"]}
+
+| Context: The baking show finalists were bakers Marco Dough, Nina Flour, and Omar Sugar. Judge Patricia Salt evaluated the texture of the cakes. Host Quentin Spice declared Nina the winner. | Input: {"question": "Who were the finalists in the baking show?"} | Output: {"answer": ["Marco Dough", "Nina Flour", "Omar Sugar"]}

@@ -1,0 +1,51 @@
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: What are the real-time CPU and RAM figures for instance i-1122334455 in af-south-1?
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-1122334455", "region": "af-south-1", "filter": "cpu,memory" }
+Response: { "instances": [{ "id": "i-1122334455", "type": "m5.2xlarge", "state": "running", "ip": "10.50.60.70" }] }
+
+Question: Show me disk I/O and CPU load for storage-node-alpha in eu-west-3.
+Call: { "func_call": "get_instance_metrics", "instance_id": "storage-node-alpha", "region": "eu-west-3", "filter": "disk,cpu" }
+Response: { "instances": [{ "id": "storage-node-alpha", "type": "i3.xlarge", "state": "running", "ip": "172.18.22.11" }] }
+
+Question: Retrieve network packets and memory allocation for queue-worker-09 in ap-south-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "queue-worker-09", "region": "ap-south-1", "filter": "network,memory" }
+Response: { "instances": [{ "id": "queue-worker-09", "type": "t3.large", "state": "running", "ip": "192.168.99.88" }] }
+
+Question: Get comprehensive stats (CPU, memory, disk) for instance i-abc123def456 in us-west-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-abc123def456", "region": "us-west-1", "filter": "cpu,memory,disk" }
+Response: { "instances": [{ "id": "i-abc123def456", "type": "r5.large", "state": "running", "ip": "54.180.10.5" }] }
+
+Question: Check GPU utilization and memory usage for render-farm-unit-05 in eu-central-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "render-farm-unit-05", "region": "eu-central-2", "filter": "gpu,memory" }
+Response: { "instances": [{ "id": "render-farm-unit-05", "type": "g4dn.xlarge", "state": "running", "ip": "10.99.88.77" }] }
+
+Question: What is the CPU frequency and network speed for compute-cluster-master in ca-west-1?
+Call: { "func_call": "get_instance_metrics", "instance_id": "compute-cluster-master", "region": "ca-west-1", "filter": "cpu,network" }
+Response: { "instances": [{ "id": "compute-cluster-master", "type": "c7i.2xlarge", "state": "running", "ip": "172.25.30.40" }] }
+
+Question: Display swap usage and network errors for legacy-app-server in il-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "legacy-app-server", "region": "il-central-1", "filter": "swap,network" }
+Response: { "instances": [{ "id": "legacy-app-server", "type": "t2.micro", "state": "running", "ip": "10.1.2.3" }] }
+
+Question: Fetch CPU, memory, and disk I/O for data-lake-ingest-02 in ap-east-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "data-lake-ingest-02", "region": "ap-east-1", "filter": "cpu,memory,disk" }
+Response: { "instances": [{ "id": "data-lake-ingest-02", "type": "m6g.large", "state": "running", "ip": "172.31.55.66" }] }
+
+Question: Monitor process count and CPU time for scheduler-daemon-01 in mx-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "scheduler-daemon-01", "region": "mx-central-1", "filter": "process,cpu" }
+Response: { "instances": [{ "id": "scheduler-daemon-01", "type": "t4g.medium", "state": "running", "ip": "192.168.77.88" }] }
+
+Question: Get detailed network latency and CPU interrupts for edge-router-hk in ap-east-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "edge-router-hk", "region": "ap-east-2", "filter": "network,cpu" }
+Response: { "instances": [{ "id": "edge-router-hk", "type": "c5n.xlarge", "state": "running", "ip": "10.200.100.50" }] }
+
+Question: Report memory pressure, CPU, and network drops for monitoring-agent-99 in us-gov-east-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "monitoring-agent-99", "region": "us-gov-east-1", "filter": "memory,cpu,network" }
+Response: { "instances": [{ "id": "monitoring-agent-99", "type": "m5.large", "state": "running", "ip": "172.32.11.22" }] }
+
+Question: Check current thread count and network bandwidth for microservice-auth in eu-south-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "microservice-auth", "region": "eu-south-2", "filter": "thread,network" }
+Response: { "instances": [{ "id": "microservice-auth", "type": "t3.small", "state": "running", "ip": "10.55.44.33" }] }

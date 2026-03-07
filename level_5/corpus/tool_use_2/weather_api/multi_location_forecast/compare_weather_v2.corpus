@@ -1,0 +1,20 @@
+{"func_call": "get_multi_location_forecast", "locations": ["Houston", "Phoenix", "Dallas"], "days": 2, "metrics": ["high", "low", "humidity"]}
+{"func_call": "compare_weather", "locations": ["Kyoto", "Nara"], "days": 6, "metrics": ["condition", "uv_index"]}
+{"func_call": "get_multi_location_forecast", "locations": ["Boston", "Miami", "Denver"], "days": 8, "metrics": ["low", "snow_cm"]}
+{"func_call": "compare_weather", "locations": ["Brisbane", "Perth"], "days": 3, "metrics": ["high", "wind_dir", "condition"]}
+{"func_call": "get_regional_summary", "locations": ["Florence", "Venice", "Turin"], "days": 4, "metrics": ["low", "precip_prob"]}
+{"func_call": "get_multi_location_forecast", "locations": ["Calgary", "Ottawa", "Quebec City"], "days": 5, "metrics": ["wind_kph", "condition"]}
+{"func_call": "compare_weather", "locations": ["Chennai", "Hyderabad", "Pune"], "days": 4, "metrics": ["low", "humidity"]}
+{"func_call": "get_multi_location_forecast", "locations": ["Doha", "Abu Dhabi", "Muscat"], "days": 3, "metrics": ["high", "feels_like", "wind_kph"]}
+{"func_call": "compare_weather", "locations": ["Las Vegas", "Sacramento", "San Diego"], "days": 6, "metrics": ["uv_index", "condition"]}
+{"func_call": "get_regional_summary", "locations": ["Valencia", "Bilbao", "Malaga"], "days": 2, "metrics": ["low", "snow_cm"]}
+{"func_call": "get_multi_location_forecast", "locations": ["Kazan", "Sochi", "Yekaterinburg"], "days": 7, "metrics": ["high", "wind_dir", "condition"]}
+{"func_call": "compare_weather", "locations": ["Manila", "Cebu", "Davao"], "days": 5, "metrics": ["precip_prob", "low"]}
+{"func_call": "get_multi_location_forecast", "locations": ["Pretoria", "Bloemfontein", "Port Elizabeth"], "days": 4, "metrics": ["high", "uv_index", "wind_kph"]}
+{"func_call": "compare_weather", "locations": ["Cordoba", "Mendoza", "Rosario"], "days": 2, "metrics": ["condition", "humidity"]}
+{"func_call": "get_regional_summary", "locations": ["Helsinki", "Bergen", "Aarhus"], "days": 6, "metrics": ["high", "wind_dir"]}
+{"func_call": "get_multi_location_forecast", "locations": ["Puebla", "Tijuana", "Cancun"], "days": 3, "metrics": ["low", "precip_prob", "condition"]}
+{"func_call": "compare_weather", "locations": ["Bursa", "Antalya", "Trabzon"], "days": 8, "metrics": ["high", "feels_like", "wind_kph"]}
+{"func_call": "get_multi_location_forecast", "locations": ["Pattaya", "Hat Yai", "Krabi"], "days": 4, "metrics": ["humidity", "condition"]}
+{"func_call": "compare_weather", "locations": ["Heraklion", "Larissa", "Volos"], "days": 3, "metrics": ["low", "uv_index"]}
+{"func_call": "get_regional_summary", "locations": ["Madeira", "Braga", "Coimbra"], "days": 5, "metrics": ["high", "precip_prob", "wind_dir"]}

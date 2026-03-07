@@ -1,0 +1,51 @@
+Available Tools: scale_out | scale_in | set_auto_scaling | get_scaling_policy
+Call Schema: { "func_call": "string", "group_id": "string", "min_size": number, "max_size": number, "desired": number }
+Response Schema: { "group_id": "string", "current_capacity": number, "status": "string" }
+---
+Question: Holiday traffic is expected to spike; scale out the retail-checkout-cluster to handle the increased load.
+Call: { "func_call": "scale_out", "group_id": "retail-checkout-cluster", "min_size": 20, "max_size": 150, "desired": 80 }
+Response: { "group_id": "retail-checkout-cluster", "current_capacity": 80, "status": "scaling_up_complete" }
+
+Question: The nightly analytics job is complete; scale in the data-warehouse-workers to conserve resources.
+Call: { "func_call": "scale_in", "group_id": "data-warehouse-workers", "min_size": 5, "max_size": 50, "desired": 5 }
+Response: { "group_id": "data-warehouse-workers", "current_capacity": 5, "status": "scaling_down_complete" }
+
+Question: Configure the mobile-api-backend group to auto-scale between 8 and 40 instances, targeting 15 currently.
+Call: { "func_call": "set_auto_scaling", "group_id": "mobile-api-backend", "min_size": 8, "max_size": 40, "desired": 15 }
+Response: { "group_id": "mobile-api-backend", "current_capacity": 15, "status": "policy_updated" }
+
+Question: Sudden surge in chat requests detected; scale out the customer-support-bot-fleet to maximum capacity.
+Call: { "func_call": "scale_out", "group_id": "customer-support-bot-fleet", "min_size": 10, "max_size": 200, "desired": 200 }
+Response: { "group_id": "customer-support-bot-fleet", "current_capacity": 200, "status": "scaling_up_complete" }
+
+Question: Weekend maintenance window is active; scale down the search-index-rebuilders to the minimum safe count.
+Call: { "func_call": "scale_in", "group_id": "search-index-rebuilders", "min_size": 2, "max_size": 30, "desired": 2 }
+Response: { "group_id": "search-index-rebuilders", "current_capacity": 2, "status": "scaling_down_complete" }
+
+Question: Adjust the game-server-shards parameters to allow scaling between 15 and 100 nodes, setting desired count to 25.
+Call: { "func_call": "set_auto_scaling", "group_id": "game-server-shards", "min_size": 15, "max_size": 100, "desired": 25 }
+Response: { "group_id": "game-server-shards", "current_capacity": 25, "status": "policy_updated" }
+
+Question: Marketing campaign launch in APAC; scale out the apac-notification-dispatchers to manage the volume.
+Call: { "func_call": "scale_out", "group_id": "apac-notification-dispatchers", "min_size": 12, "max_size": 75, "desired": 40 }
+Response: { "group_id": "apac-notification-dispatchers", "current_capacity": 40, "status": "scaling_up_complete" }
+
+Question: The A/B testing phase concluded; please scale in the experiment-tracker-servers to reduce costs.
+Call: { "func_call": "scale_in", "group_id": "experiment-tracker-servers", "min_size": 3, "max_size": 20, "desired": 4 }
+Response: { "group_id": "experiment-tracker-servers", "current_capacity": 4, "status": "scaling_down_complete" }
+
+Question: Update the metric-collector-cluster to have a minimum of 7 instances and a maximum of 50, with a desired state of 18.
+Call: { "func_call": "set_auto_scaling", "group_id": "metric-collector-cluster", "min_size": 7, "max_size": 50, "desired": 18 }
+Response: { "group_id": "metric-collector-cluster", "current_capacity": 18, "status": "policy_updated" }
+
+Question: Memory pressure high on the cache-layer-nodes; trigger a scale out event to add 15 more instances.
+Call: { "func_call": "scale_out", "group_id": "cache-layer-nodes", "min_size": 10, "max_size": 80, "desired": 35 }
+Response: { "group_id": "cache-layer-nodes", "current_capacity": 35, "status": "scaling_up_complete" }
+
+Question: Backup storage nodes are idle; scale in the backup-archive-pool to the baseline minimum.
+Call: { "func_call": "scale_in", "group_id": "backup-archive-pool", "min_size": 1, "max_size": 12, "desired": 1 }
+Response: { "group_id": "backup-archive-pool", "current_capacity": 1, "status": "scaling_down_complete" }
+
+Question: Prepare the audio-rendering-farm for the morning podcast rush by setting auto-scaling limits to 25-110 with a desired count of 50.
+Call: { "func_call": "set_auto_scaling", "group_id": "audio-rendering-farm", "min_size": 25, "max_size": 110, "desired": 50 }
+Response: { "group_id": "audio-rendering-farm", "current_capacity": 50, "status": "policy_updated" }

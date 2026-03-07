@@ -1,0 +1,51 @@
+Available Tools: create_report | get_report | list_reports | schedule_report | export_report
+Call Schema: { "func_call": "string", "report_id": "string", "name": "string", "metrics": ["string"], "dimensions": ["string"], "from_date": "string", "to_date": "string" }
+Response Schema: { "report_id": "string", "name": "string", "rows": [{}], "total_rows": number, "generated_at": "string" }
+---
+Question: Generate a new report titled "Winter Sales Analysis" tracking revenue and units sold by region from December 1st to December 31st.
+Call: { "func_call": "create_report", "report_id": "", "name": "Winter Sales Analysis", "metrics": ["revenue", "units_sold"], "dimensions": ["region"], "from_date": "2023-12-01", "to_date": "2023-12-31" }
+Response: { "report_id": "rpt_1010m", "name": "Winter Sales Analysis", "rows": [{"region": "North", "revenue": 45000.00, "units_sold": 1200}, {"region": "South", "revenue": 32000.00, "units_sold": 950}], "total_rows": 2, "generated_at": "2024-01-02T10:15:30Z" }
+
+Question: Fetch the latest data for report rpt_2020n which monitors bounce rate by landing page.
+Call: { "func_call": "get_report", "report_id": "rpt_2020n", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_2020n", "name": "Landing Page Bounce Rate", "rows": [{"page": "/home", "bounce_rate": 35.5}, {"page": "/products", "bounce_rate": 42.1}], "total_rows": 2, "generated_at": "2024-01-05T14:20:45Z" }
+
+Question: Create a report named "Q1 User Acquisition" analyzing new users and conversions by channel from January 1 to March 31.
+Call: { "func_call": "create_report", "report_id": "", "name": "Q1 User Acquisition", "metrics": ["new_users", "conversions"], "dimensions": ["channel"], "from_date": "2024-01-01", "to_date": "2024-03-31" }
+Response: { "report_id": "rpt_3030o", "name": "Q1 User Acquisition", "rows": [{"channel": "social", "new_users": 5000, "conversions": 150}, {"channel": "search", "new_users": 8000, "conversions": 400}], "total_rows": 2, "generated_at": "2024-04-01T09:00:00Z" }
+
+Question: Retrieve the results for report rpt_4040p titled "Daily Active Users Trend".
+Call: { "func_call": "get_report", "report_id": "rpt_4040p", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_4040p", "name": "Daily Active Users Trend", "rows": [{"date": "2024-01-10", "dau": 12500}, {"date": "2024-01-11", "dau": 13100}], "total_rows": 2, "generated_at": "2024-01-12T08:30:15Z" }
+
+Question: I need a report called "Product Category Revenue" comparing revenue across categories for February.
+Call: { "func_call": "create_report", "report_id": "", "name": "Product Category Revenue", "metrics": ["revenue"], "dimensions": ["category"], "from_date": "2024-02-01", "to_date": "2024-02-29" }
+Response: { "report_id": "rpt_5050q", "name": "Product Category Revenue", "rows": [{"category": "Electronics", "revenue": 120000.00}, {"category": "Clothing", "revenue": 85000.00}, {"category": "Home", "revenue": 45000.00}], "total_rows": 3, "generated_at": "2024-03-01T11:45:20Z" }
+
+Question: Get the data for report rpt_6060r which tracks average order value by customer segment.
+Call: { "func_call": "get_report", "report_id": "rpt_6060r", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_6060r", "name": "AOV by Segment", "rows": [{"segment": "VIP", "aov": 250.50}, {"segment": "Regular", "aov": 85.20}], "total_rows": 2, "generated_at": "2024-02-15T16:10:05Z" }
+
+Question: Build a report "Spring Campaign ROI" focusing on ROI and clicks by campaign for April.
+Call: { "func_call": "create_report", "report_id": "", "name": "Spring Campaign ROI", "metrics": ["roi", "clicks"], "dimensions": ["campaign"], "from_date": "2024-04-01", "to_date": "2024-04-30" }
+Response: { "report_id": "rpt_7070s", "name": "Spring Campaign ROI", "rows": [{"campaign": "SpringSale", "roi": 3.5, "clicks": 15000}, {"campaign": "NewArrivals", "roi": 2.8, "clicks": 12000}], "total_rows": 2, "generated_at": "2024-05-01T13:25:40Z" }
+
+Question: Pull the current metrics for report rpt_8080t regarding cart abandonment rate by device.
+Call: { "func_call": "get_report", "report_id": "rpt_8080t", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_8080t", "name": "Cart Abandonment by Device", "rows": [{"device": "mobile", "abandonment_rate": 68.5}, {"device": "desktop", "abandonment_rate": 52.3}], "total_rows": 2, "generated_at": "2024-03-20T09:55:12Z" }
+
+Question: Create a report named "Regional Conversion Rates" to analyze conversion rates by state from May 1 to May 15.
+Call: { "func_call": "create_report", "report_id": "", "name": "Regional Conversion Rates", "metrics": ["conversion_rate"], "dimensions": ["state"], "from_date": "2024-05-01", "to_date": "2024-05-15" }
+Response: { "report_id": "rpt_9090u", "name": "Regional Conversion Rates", "rows": [{"state": "CA", "conversion_rate": 3.2}, {"state": "NY", "conversion_rate": 2.9}, {"state": "TX", "conversion_rate": 3.5}], "total_rows": 3, "generated_at": "2024-05-16T10:30:00Z" }
+
+Question: Fetch report rpt_1212v which tracks returning visitors and page views by browser.
+Call: { "func_call": "get_report", "report_id": "rpt_1212v", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_1212v", "name": "Browser Performance", "rows": [{"browser": "Chrome", "returning_visitors": 4500, "page_views": 25000}, {"browser": "Safari", "returning_visitors": 2100, "page_views": 12000}], "total_rows": 2, "generated_at": "2024-04-10T15:40:22Z" }
+
+Question: Generate "Summer Traffic Overview" to view sessions and bounce rate by city from June 1 to August 31.
+Call: { "func_call": "create_report", "report_id": "", "name": "Summer Traffic Overview", "metrics": ["sessions", "bounce_rate"], "dimensions": ["city"], "from_date": "2024-06-01", "to_date": "2024-08-31" }
+Response: { "report_id": "rpt_3434w", "name": "Summer Traffic Overview", "rows": [{"city": "London", "sessions": 30000, "bounce_rate": 40.0}, {"city": "Paris", "sessions": 25000, "bounce_rate": 38.5}], "total_rows": 2, "generated_at": "2024-09-01T08:15:55Z" }
+
+Question: Retrieve the data for report rpt_5656x analyzing cost per acquisition and revenue by keyword.
+Call: { "func_call": "get_report", "report_id": "rpt_5656x", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_5656x", "name": "Keyword Efficiency", "rows": [{"keyword": "buy shoes", "cpa": 15.50, "revenue": 450.00}, {"keyword": "running gear", "cpa": 22.00, "revenue": 600.00}], "total_rows": 2, "generated_at": "2024-07-15T12:05:33Z" }

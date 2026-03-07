@@ -1,0 +1,51 @@
+Available Tools: sum_column | avg_column | group_by_query | min_max_query
+Call Schema: { "func_call": "string", "table": "string", "column": "string", "group_by": "string", "where": "string" }
+Response Schema: { "result": number, "groups": [{ "key": "string", "value": number }] }
+---
+Question: What is the total revenue from all orders placed in the 'electronics' category?
+Call: { "func_call": "sum_column", "table": "orders", "column": "total_amount", "group_by": "", "where": "category = 'electronics'" }
+Response: { "result": 45892.50, "groups": [] }
+
+Question: Calculate the average session duration for users who logged in via mobile devices last week.
+Call: { "func_call": "avg_column", "table": "user_sessions", "column": "duration_seconds", "group_by": "", "where": "device_type = 'mobile' AND login_date >= '2023-10-01'" }
+Response: { "result": 342.8, "groups": [] }
+
+Question: Get the sum of product prices for all items currently in stock with a quantity greater than 50.
+Call: { "func_call": "sum_column", "table": "products", "column": "price", "group_by": "", "where": "stock_quantity > 50" }
+Response: { "result": 12450.75, "groups": [] }
+
+Question: What is the average order total for customers located in New York?
+Call: { "func_call": "avg_column", "table": "orders", "column": "total_amount", "group_by": "", "where": "city = 'New York'" }
+Response: { "result": 89.45, "groups": [] }
+
+Question: Sum the total session durations grouped by browser type for the analytics dashboard.
+Call: { "func_call": "sum_column", "table": "user_sessions", "column": "duration_seconds", "group_by": "browser_type", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "Chrome", "value": 154020 }, { "key": "Safari", "value": 98340 }, { "key": "Firefox", "value": 45120 }] }
+
+Question: Calculate the average price of products grouped by their manufacturer brand.
+Call: { "func_call": "avg_column", "table": "products", "column": "price", "group_by": "brand", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "Samsung", "value": 450.20 }, { "key": "Apple", "value": 899.99 }, { "key": "Sony", "value": 320.50 }] }
+
+Question: What is the total sales amount grouped by region for the Q3 report?
+Call: { "func_call": "sum_column", "table": "orders", "column": "total_amount", "group_by": "region", "where": "quarter = 'Q3'" }
+Response: { "result": 0, "groups": [{ "key": "North", "value": 125000.00 }, { "key": "South", "value": 98400.50 }, { "key": "East", "value": 110200.75 }, { "key": "West", "value": 134500.25 }] }
+
+Question: Find the average session duration grouped by user subscription tier.
+Call: { "func_call": "avg_column", "table": "user_sessions", "column": "duration_seconds", "group_by": "subscription_tier", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "Free", "value": 120.5 }, { "key": "Basic", "value": 245.3 }, { "key": "Premium", "value": 410.8 }] }
+
+Question: Sum the order totals for all completed transactions in the 'clothing' department.
+Call: { "func_call": "sum_column", "table": "orders", "column": "total_amount", "group_by": "", "where": "department = 'clothing' AND status = 'completed'" }
+Response: { "result": 23105.60, "groups": [] }
+
+Question: What is the average price of electronics products made by 'LG'?
+Call: { "func_call": "avg_column", "table": "products", "column": "price", "group_by": "", "where": "category = 'electronics' AND brand = 'LG'" }
+Response: { "result": 567.30, "groups": [] }
+
+Question: Calculate the total session time grouped by operating system for iOS and Android only.
+Call: { "func_call": "sum_column", "table": "user_sessions", "column": "duration_seconds", "group_by": "os_name", "where": "os_name IN ('iOS', 'Android')" }
+Response: { "result": 0, "groups": [{ "key": "iOS", "value": 204500 }, { "key": "Android", "value": 189300 }] }
+
+Question: Get the average order value grouped by payment method for successful orders.
+Call: { "func_call": "avg_column", "table": "orders", "column": "total_amount", "group_by": "payment_method", "where": "status = 'success'" }
+Response: { "result": 0, "groups": [{ "key": "Credit Card", "value": 105.40 }, { "key": "PayPal", "value": 92.15 }, { "key": "Bank Transfer", "value": 210.50 }] }

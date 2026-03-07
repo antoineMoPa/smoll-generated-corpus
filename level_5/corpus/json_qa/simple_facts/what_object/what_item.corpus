@@ -1,0 +1,59 @@
+Context: Maria rushed into the kitchen and grabbed her silver toaster to make breakfast before work. She plugged it in immediately.
+Input: {"question": "What did Maria grab?"}
+Output: {"answer": "silver toaster"}
+
+Context: While cleaning the attic, James found an old wooden chest filled with winter clothes. The lid was slightly broken.
+Input: {"question": "What did James find?"}
+Output: {"answer": "old wooden chest"}
+
+Context: The teacher asked the students to bring a red calculator for the math exam tomorrow. Everyone nodded in agreement.
+Input: {"question": "What did the students need to bring?"}
+Output: {"answer": "red calculator"}
+
+Context: After the storm, Sarah noticed her blue umbrella was missing from the hallway stand. She suspected her brother took it.
+Input: {"question": "What was missing from the hallway stand?"}
+Output: {"answer": "blue umbrella"}
+
+Context: David went to the hardware store and bought a heavy hammer to fix the loose fence post. He paid with cash.
+Input: {"question": "What did David buy?"}
+Output: {"answer": "heavy hammer"}
+
+Context: During the hike, Emily realized she had left her black compass back at the campsite. She had to turn around to get it.
+Input: {"question": "What did Emily leave at the campsite?"}
+Output: {"answer": "black compass"}
+
+Context: The chef carefully sharpened his stainless steel knife before slicing the tomatoes for the salad. The blade gleamed under the lights.
+Input: {"question": "What did the chef sharpen?"}
+Output: {"answer": "stainless steel knife"}
+
+Context: Tom searched his entire bedroom but could not locate his green backpack where he usually left it. He began to panic about being late.
+Input: {"question": "What could Tom not locate?"}
+Output: {"answer": "green backpack"}
+
+Context: For the science project, Lisa used a clear microscope to examine the leaf cells. The image appeared magnified on the screen.
+Input: {"question": "What did Lisa use for the science project?"}
+Output: {"answer": "clear microscope"}
+
+Context: My grandmother handed me her ceramic teapot so I could pour the hot tea for our guests. It was decorated with blue flowers.
+Input: {"question": "What did my grandmother hand me?"}
+Output: {"answer": "ceramic teapot"}
+
+Context: The mechanic lifted the heavy wrench to tighten the bolt on the car engine. Oil stained his gloves.
+Input: {"question": "What did the mechanic lift?"}
+Output: {"answer": "heavy wrench"}
+
+Context: Kevin accidentally dropped his leather wallet in the parking lot and didn't notice until he reached the checkout counter. He rushed back to look for it.
+Input: {"question": "What did Kevin drop in the parking lot?"}
+Output: {"answer": "leather wallet"}
+
+Context: To measure the fabric accurately, the tailor picked up a yellow tape measure from the sewing table. The numbers were clearly marked.
+Input: {"question": "What did the tailor pick up?"}
+Output: {"answer": "yellow tape measure"}
+
+Context: During the power outage, Rachel lit a white candle to provide some light in the living room. The flame flickered gently.
+Input: {"question": "What did Rachel light?"}
+Output: {"answer": "white candle"}
+
+Context: The gardener watered the flowers using a plastic watering can that he bought last spring. It had a long spout for precision.
+Input: {"question": "What did the gardener use to water the flowers?"}
+Output: {"answer": "plastic watering can"}

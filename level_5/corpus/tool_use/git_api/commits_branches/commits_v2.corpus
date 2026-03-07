@@ -1,0 +1,51 @@
+Available Tools: list_commits | get_commit | create_branch | delete_branch | list_branches | compare_branches
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "branch": "string", "sha": "string" }
+Response Schema: { "commits": [{ "sha": "string", "message": "string", "author": "string", "date": "string" }], "branch": "string" }
+---
+Question: Display the latest commits on the production branch of the health-tech/patient-portal repository.
+Call: { "func_call": "list_commits", "owner": "health-tech", "repo": "patient-portal", "branch": "production", "sha": "" }
+Response: { "commits": [{ "sha": "aa11bb22cc33dd44ee55ff6677889900aabbccdd", "message": "fix: correct appointment scheduling timezone", "author": "Dr. Alan Grant", "date": "2023-11-05T09:00:00Z" }, { "sha": "bb22cc33dd44ee55ff6677889900aabbccddee11", "message": "feat: add telemedicine video integration", "author": "Beth Dutton", "date": "2023-11-04T14:20:00Z" }], "branch": "production" }
+
+Question: Retrieve details for commit 11223344556677889900aabbccddeeff11223344 in the staging branch of auto-motive/vehicle-tracker.
+Call: { "func_call": "get_commit", "owner": "auto-motive", "repo": "vehicle-tracker", "branch": "staging", "sha": "11223344556677889900aabbccddeeff11223344" }
+Response: { "commits": [{ "sha": "11223344556677889900aabbccddeeff11223344", "message": "chore: update GPS library dependencies", "author": "Carl Sagan", "date": "2023-11-06T11:15:00Z" }], "branch": "staging" }
+
+Question: What are the most recent changes pushed to the main branch of the edu-platform/learning-management repo by school-district-one?
+Call: { "func_call": "list_commits", "owner": "school-district-one", "repo": "learning-management", "branch": "main", "sha": "" }
+Response: { "commits": [{ "sha": "cc33dd44ee55ff6677889900aabbccddeeff1122", "message": "feat: implement gradebook export to CSV", "author": "Diana Ross", "date": "2023-11-07T08:45:00Z" }, { "sha": "dd44ee55ff6677889900aabbccddeeff11223344", "message": "fix: resolve student login session timeout", "author": "Evan Wright", "date": "2023-11-06T16:30:00Z" }, { "sha": "ee55ff6677889900aabbccddeeff112233445566", "message": "chore: upgrade database schema version", "author": "Fiona Apple", "date": "2023-11-05T10:00:00Z" }], "branch": "main" }
+
+Question: I need the specific commit information for 22334455667788990011aabbccddeeff22334455 from the feature/paywall branch of news-daily/mobile-app.
+Call: { "func_call": "get_commit", "owner": "news-daily", "repo": "mobile-app", "branch": "feature/paywall", "sha": "22334455667788990011aabbccddeeff22334455" }
+Response: { "commits": [{ "sha": "22334455667788990011aabbccddeeff22334455", "message": "feat: add subscription tier selection UI", "author": "George Lucas", "date": "2023-11-08T13:20:00Z" }], "branch": "feature/paywall" }
+
+Question: List all commits for the develop branch of the food-delivery/ordering-system repository owned by quick-bite-inc.
+Call: { "func_call": "list_commits", "owner": "quick-bite-inc", "repo": "ordering-system", "branch": "develop", "sha": "" }
+Response: { "commits": [{ "sha": "ff6677889900aabbccddeeff1122334455667788", "message": "feat: integrate real-time driver tracking", "author": "Hannah Montana", "date": "2023-11-09T09:30:00Z" }, { "sha": "0077889900aabbccddeeff112233445566778899", "message": "fix: correct tip calculation logic", "author": "Ian Somerhalder", "date": "2023-11-08T15:45:00Z" }], "branch": "develop" }
+
+Question: Get the details for commit 3344556677889900112233445566778899001122 found in the hotfix/security-patch branch of bank-secure/core-ledger.
+Call: { "func_call": "get_commit", "owner": "bank-secure", "repo": "core-ledger", "branch": "hotfix/security-patch", "sha": "3344556677889900112233445566778899001122" }
+Response: { "commits": [{ "sha": "3344556677889900112233445566778899001122", "message": "fix: patch encryption vulnerability in transaction log", "author": "Julia Roberts", "date": "2023-11-10T07:00:00Z" }], "branch": "hotfix/security-patch" }
+
+Question: Pull the commit history for the main branch of the travel-booking/flight-search repo owned by sky-high-travel.
+Call: { "func_call": "list_commits", "owner": "sky-high-travel", "repo": "flight-search", "branch": "main", "sha": "" }
+Response: { "commits": [{ "sha": "11889900aabbccddeeff11223344556677889900", "message": "feat: add multi-city itinerary planner", "author": "Kevin Bacon", "date": "2023-11-11T12:15:00Z" }, { "sha": "229900aabbccddeeff1122334455667788990011", "message": "chore: update airline API endpoints", "author": "Laura Palmer", "date": "2023-11-10T18:00:00Z" }], "branch": "main" }
+
+Question: I need to see the content of commit 4455667788990011223344556677889900112233 on the feature/dark-mode branch of design-studio/ui-kit.
+Call: { "func_call": "get_commit", "owner": "design-studio", "repo": "ui-kit", "branch": "feature/dark-mode", "sha": "4455667788990011223344556677889900112233" }
+Response: { "commits": [{ "sha": "4455667788990011223344556677889900112233", "message": "feat: implement theme switcher component", "author": "Michael Scott", "date": "2023-11-12T10:30:00Z" }], "branch": "feature/dark-mode" }
+
+Question: List the commits for the release/v3.1 branch of the chat-app/messaging-engine repo under connect-global.
+Call: { "func_call": "list_commits", "owner": "connect-global", "repo": "messaging-engine", "branch": "release/v3.1", "sha": "" }
+Response: { "commits": [{ "sha": "33aabbccddeeff11223344556677889900112233", "message": "feat: add end-to-end encryption for groups", "author": "Nancy Drew", "date": "2023-11-13T09:00:00Z" }, { "sha": "44bbccddeeff1122334455667788990011223344", "message": "fix: handle large file upload failures", "author": "Oscar Wilde", "date": "2023-11-12T14:15:00Z" }, { "sha": "55ccddeeff112233445566778899001122334455", "message": "chore: optimize message database indexing", "author": "Penny Lane", "date": "2023-11-11T11:45:00Z" }], "branch": "release/v3.1" }
+
+Question: Fetch details for commit 5566778899001122334455667788990011223344 in the main branch of energy-grid/smart-meter.
+Call: { "func_call": "get_commit", "owner": "energy-grid", "repo": "smart-meter", "branch": "main", "sha": "5566778899001122334455667788990011223344" }
+Response: { "commits": [{ "sha": "5566778899001122334455667788990011223344", "message": "feat: add real-time consumption analytics", "author": "Quentin Tarantino", "date": "2023-11-14T08:20:00Z" }], "branch": "main" }
+
+Question: Show me the recent commit activity on the experiment/ai-bot branch for the customer-support/ticket-system repo by help-desk-pro.
+Call: { "func_call": "list_commits", "owner": "help-desk-pro", "repo": "ticket-system", "branch": "experiment/ai-bot", "sha": "" }
+Response: { "commits": [{ "sha": "66ddeeff11223344556677889900112233445566", "message": "feat: integrate LLM for auto-responses", "author": "Rosie the Riveter", "date": "2023-11-15T13:40:00Z" }, { "sha": "77eeff1122334455667788990011223344556677", "message": "fix: prevent infinite loop in suggestion engine", "author": "Steve Jobs", "date": "2023-11-14T17:10:00Z" }], "branch": "experiment/ai-bot" }
+
+Question: Get the specific commit data for 6677889900112233445566778899001122334455 on the refactor/database-migration branch of legacy-systems/inventory.
+Call: { "func_call": "get_commit", "owner": "legacy-systems", "repo": "inventory", "branch": "refactor/database-migration", "sha": "6677889900112233445566778899001122334455" }
+Response: { "commits": [{ "sha": "6677889900112233445566778899001122334455", "message": "chore: migrate product table to NoSQL", "author": "Tony Stark", "date": "2023-11-16T10:05:00Z" }], "branch": "refactor/database-migration" }

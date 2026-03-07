@@ -1,0 +1,51 @@
+Available Tools: search_restaurants | filter_by_cuisine | get_restaurant_menu | get_restaurant_details
+Call Schema: { "func_call": "string", "location": "string", "cuisine": "string", "max_delivery_time": number, "min_rating": number }
+Response Schema: { "restaurants": [{ "id": "string", "name": "string", "cuisine": "string", "rating": number, "delivery_time_min": number }], "total": number }
+---
+Question: Find me some highly rated Italian places in Chicago that can deliver within 40 minutes.
+Call: { "func_call": "search_restaurants", "location": "Chicago", "cuisine": "Italian", "max_delivery_time": 40, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_001", "name": "Luigi's Trattoria", "cuisine": "Italian", "rating": 4.7, "delivery_time_min": 35 }, { "id": "rest_002", "name": "Milano Pizza Co", "cuisine": "Italian", "rating": 4.6, "delivery_time_min": 38 }], "total": 2 }
+
+Question: I'm craving Thai food in Seattle, preferably something with at least a 4.0 rating.
+Call: { "func_call": "search_restaurants", "location": "Seattle", "cuisine": "Thai", "max_delivery_time": 90, "min_rating": 4.0 }
+Response: { "restaurants": [{ "id": "rest_003", "name": "Bangkok Street Food", "cuisine": "Thai", "rating": 4.2, "delivery_time_min": 45 }, { "id": "rest_004", "name": "Siam Garden", "cuisine": "Thai", "rating": 4.4, "delivery_time_min": 50 }, { "id": "rest_005", "name": "Pad Thai Palace", "cuisine": "Thai", "rating": 4.0, "delivery_time_min": 60 }], "total": 3 }
+
+Question: Show me Mexican restaurants in Austin with a delivery time under 30 minutes and a rating above 4.5.
+Call: { "func_call": "search_restaurants", "location": "Austin", "cuisine": "Mexican", "max_delivery_time": 30, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_006", "name": "Taco Libre", "cuisine": "Mexican", "rating": 4.8, "delivery_time_min": 25 }], "total": 1 }
+
+Question: Can you find Indian cuisine options in New York City that have a minimum rating of 4.3?
+Call: { "func_call": "search_restaurants", "location": "New York City", "cuisine": "Indian", "max_delivery_time": 60, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_007", "name": "Mumbai Express", "cuisine": "Indian", "rating": 4.5, "delivery_time_min": 40 }, { "id": "rest_008", "name": "Curry House NYC", "cuisine": "Indian", "rating": 4.3, "delivery_time_min": 55 }], "total": 2 }
+
+Question: Look for Italian restaurants in Boston, no rating filter needed, but must deliver in under 50 mins.
+Call: { "func_call": "search_restaurants", "location": "Boston", "cuisine": "Italian", "max_delivery_time": 50, "min_rating": 0 }
+Response: { "restaurants": [{ "id": "rest_009", "name": "North End Pasta", "cuisine": "Italian", "rating": 3.9, "delivery_time_min": 30 }, { "id": "rest_010", "name": "Giuseppe's", "cuisine": "Italian", "rating": 4.1, "delivery_time_min": 45 }], "total": 2 }
+
+Question: I need fast Mexican food in Denver, anything with at least a 3.5 star rating is fine.
+Call: { "func_call": "search_restaurants", "location": "Denver", "cuisine": "Mexican", "max_delivery_time": 25, "min_rating": 3.5 }
+Response: { "restaurants": [{ "id": "rest_011", "name": "Burrito Bros", "cuisine": "Mexican", "rating": 3.8, "delivery_time_min": 20 }, { "id": "rest_012", "name": "El Camino", "cuisine": "Mexican", "rating": 4.0, "delivery_time_min": 22 }], "total": 2 }
+
+Question: Search for Thai restaurants in Portland with excellent ratings, say 4.7 or higher.
+Call: { "func_call": "search_restaurants", "location": "Portland", "cuisine": "Thai", "max_delivery_time": 75, "min_rating": 4.7 }
+Response: { "restaurants": [{ "id": "rest_013", "name": "Golden Lotus", "cuisine": "Thai", "rating": 4.9, "delivery_time_min": 55 }], "total": 1 }
+
+Question: Find Indian restaurants in San Francisco that can deliver within an hour and have at least 4.2 stars.
+Call: { "func_call": "search_restaurants", "location": "San Francisco", "cuisine": "Indian", "max_delivery_time": 60, "min_rating": 4.2 }
+Response: { "restaurants": [{ "id": "rest_014", "name": "Spice Route", "cuisine": "Indian", "rating": 4.4, "delivery_time_min": 45 }, { "id": "rest_015", "name": "Tandoor Tales", "cuisine": "Indian", "rating": 4.2, "delivery_time_min": 58 }], "total": 2 }
+
+Question: Are there any Italian spots in Miami with a 4.0+ rating and delivery under 35 minutes?
+Call: { "func_call": "search_restaurants", "location": "Miami", "cuisine": "Italian", "max_delivery_time": 35, "min_rating": 4.0 }
+Response: { "restaurants": [{ "id": "rest_016", "name": "Venice Beach Italian", "cuisine": "Italian", "rating": 4.3, "delivery_time_min": 30 }], "total": 1 }
+
+Question: Help me find Mexican food in Phoenix with a very high rating of 4.6 or more.
+Call: { "func_call": "search_restaurants", "location": "Phoenix", "cuisine": "Mexican", "max_delivery_time": 45, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_017", "name": "Desert Tacos", "cuisine": "Mexican", "rating": 4.7, "delivery_time_min": 35 }, { "id": "rest_018", "name": "Cactus Cantina", "cuisine": "Mexican", "rating": 4.6, "delivery_time_min": 40 }], "total": 2 }
+
+Question: Search for Thai cuisine in Atlanta, allowing up to 60 minutes for delivery, min rating 3.8.
+Call: { "func_call": "search_restaurants", "location": "Atlanta", "cuisine": "Thai", "max_delivery_time": 60, "min_rating": 3.8 }
+Response: { "restaurants": [{ "id": "rest_019", "name": "Peach Tree Thai", "cuisine": "Thai", "rating": 4.1, "delivery_time_min": 50 }, { "id": "rest_020", "name": "Sweet Basil", "cuisine": "Thai", "rating": 3.9, "delivery_time_min": 55 }], "total": 2 }
+
+Question: Locate Indian restaurants in Houston with a max delivery time of 45 mins and rating over 4.4.
+Call: { "func_call": "search_restaurants", "location": "Houston", "cuisine": "Indian", "max_delivery_time": 45, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_021", "name": "Houston Curry Club", "cuisine": "Indian", "rating": 4.5, "delivery_time_min": 40 }], "total": 1 }

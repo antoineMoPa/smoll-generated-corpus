@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: List all storage volumes currently available in the us-east-1 region to check for unattached resources.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-0a1b2c3d4e5f6g7h8", "size_gb": 100, "state": "available", "attached_to": "" }
+
+Question: I need to create a backup snapshot of the database volume vol-db-prod-01 before applying tonight's patches.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-db-prod-01", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-db-prod-01", "size_gb": 500, "state": "snapshotting", "attached_to": "i-0987654321abcdef0" }
+
+Question: Show me the details of the newly created volume vol-new-archive to confirm its size and attachment status.
+Call: { "func_call": "list_volumes", "volume_id": "vol-new-archive", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-new-archive", "size_gb": 2000, "state": "available", "attached_to": "" }
+
+Question: Take a snapshot of the web server root volume vol-web-root-99 immediately after the deployment finished.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-web-root-99", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-web-root-99", "size_gb": 50, "state": "snapshotting", "attached_to": "i-11223344556677889" }
+
+Question: List all volumes attached to instance i-app-cluster-node-3 to verify the data disk is mounted.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "i-app-cluster-node-3", "size_gb": 0 }
+Response: { "volume_id": "vol-data-node-3", "size_gb": 250, "state": "in-use", "attached_to": "i-app-cluster-node-3" }
+
+Question: Create a point-in-time backup for the logging volume vol-logs-central before rotating the logs.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-logs-central", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-logs-central", "size_gb": 150, "state": "snapshotting", "attached_to": "i-logger-main-01" }
+
+Question: Check the status of volume vol-migration-temp to see if it has finished detaching from the old instance.
+Call: { "func_call": "list_volumes", "volume_id": "vol-migration-temp", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-migration-temp", "size_gb": 75, "state": "available", "attached_to": "" }
+
+Question: Snapshot the critical config volume vol-config-store as part of the weekly disaster recovery drill.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-config-store", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-config-store", "size_gb": 20, "state": "snapshotting", "attached_to": "i-config-master-00" }
+
+Question: List all volumes with a size greater than 1TB to identify candidates for compression or archiving.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-big-data-lake", "size_gb": 5000, "state": "in-use", "attached_to": "i-analytics-engine-01" }
+
+Question: Initiate a snapshot for the cache volume vol-redis-persistent right before the maintenance window starts.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-redis-persistent", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-redis-persistent", "size_gb": 64, "state": "snapshotting", "attached_to": "i-cache-node-primary" }
+
+Question: Retrieve the current state of volume vol-orphaned-check to determine if it can be safely deleted.
+Call: { "func_call": "list_volumes", "volume_id": "vol-orphaned-check", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-orphaned-check", "size_gb": 120, "state": "available", "attached_to": "" }
+
+Question: Create a backup snapshot of the user home directory volume vol-home-users prior to the system upgrade.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-home-users", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-home-users", "size_gb": 800, "state": "snapshotting", "attached_to": "i-file-server-02" }

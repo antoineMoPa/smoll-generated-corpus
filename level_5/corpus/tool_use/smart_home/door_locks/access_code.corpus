@@ -1,0 +1,87 @@
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Set a temporary access code 8492 for the guest Sarah on the front door lock FD-01.
+Call: { "func_call": "set_access_code", "lock_id": "FD-01", "user_id": "sarah_guest", "code": "8492" }
+Response: { "lock_id": "FD-01", "state": "locked", "last_action_by": "sarah_guest", "timestamp": "2023-10-27T14:30:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Check the current status of the back door lock BD-02 to see if it is secured.
+Call: { "func_call": "get_lock_status", "lock_id": "BD-02", "user_id": "admin_main", "code": "" }
+Response: { "lock_id": "BD-02", "state": "locked", "last_action_by": "admin_main", "timestamp": "2023-10-27T14:32:15Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Create a one-time code 1105 for the plumber visiting the side entrance SE-03.
+Call: { "func_call": "set_access_code", "lock_id": "SE-03", "user_id": "plumber_temp", "code": "1105" }
+Response: { "lock_id": "SE-03", "state": "locked", "last_action_by": "plumber_temp", "timestamp": "2023-10-27T09:15:45Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Verify the state of the garage entry lock GE-04 after the kids came home.
+Call: { "func_call": "get_lock_status", "lock_id": "GE-04", "user_id": "parent_01", "code": "" }
+Response: { "lock_id": "GE-04", "state": "unlocked", "last_action_by": "child_02", "timestamp": "2023-10-27T15:45:22Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Assign code 7734 to the dog walker for the front door FD-01.
+Call: { "func_call": "set_access_code", "lock_id": "FD-01", "user_id": "dog_walker_jen", "code": "7734" }
+Response: { "lock_id": "FD-01", "state": "locked", "last_action_by": "dog_walker_jen", "timestamp": "2023-10-27T11:00:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Get the latest activity log for the patio lock PT-05.
+Call: { "func_call": "get_lock_status", "lock_id": "PT-05", "user_id": "security_sys", "code": "" }
+Response: { "lock_id": "PT-05", "state": "locked", "last_action_by": "auto_timer", "timestamp": "2023-10-27T22:00:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Set up a weekend code 9921 for my aunt visiting the front door FD-01.
+Call: { "func_call": "set_access_code", "lock_id": "FD-01", "user_id": "aunt_mary", "code": "9921" }
+Response: { "lock_id": "FD-01", "state": "locked", "last_action_by": "aunt_mary", "timestamp": "2023-10-28T08:20:10Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Check if the basement door BM-06 was left open by mistake.
+Call: { "func_call": "get_lock_status", "lock_id": "BM-06", "user_id": "home_owner", "code": "" }
+Response: { "lock_id": "BM-06", "state": "unlocked", "last_action_by": "home_owner", "timestamp": "2023-10-27T18:10:33Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Generate a delivery code 3388 for the front porch lock FP-07.
+Call: { "func_call": "set_access_code", "lock_id": "FP-07", "user_id": "delivery_service", "code": "3388" }
+Response: { "lock_id": "FP-07", "state": "locked", "last_action_by": "delivery_service", "timestamp": "2023-10-27T13:45:50Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Retrieve the status of the shed lock SH-08 to confirm it is secure for the night.
+Call: { "func_call": "get_lock_status", "lock_id": "SH-08", "user_id": "night_routine", "code": "" }
+Response: { "lock_id": "SH-08", "state": "locked", "last_action_by": "night_routine", "timestamp": "2023-10-27T23:05:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Issue a temporary code 5566 for the house sitter on the main entry ME-09.
+Call: { "func_call": "set_access_code", "lock_id": "ME-09", "user_id": "house_sitter_alex", "code": "5566" }
+Response: { "lock_id": "ME-09", "state": "locked", "last_action_by": "house_sitter_alex", "timestamp": "2023-10-29T10:00:00Z" }

@@ -1,0 +1,59 @@
+Context: The orange tabby named Luna enjoys sleeping on the sunny windowsill all morning.
+Input: {"question": "What cat enjoys sleeping on the sunny windowsill?"}
+Output: {"answer": "orange tabby"}
+
+Context: A large gray whale breached near the rocky coastline during high tide.
+Input: {"question": "What mammal breached near the rocky coastline?"}
+Output: {"answer": "gray whale"}
+
+Context: The gardener waters the tulips and daffodils every evening before dusk.
+Input: {"question": "What flowers does the gardener water every evening?"}
+Output: {"answer": "tulips and daffodils"}
+
+Context: My brother rescued a stray beagle from the roadside yesterday afternoon.
+Input: {"question": "What dog did my brother rescue from the roadside?"}
+Output: {"answer": "stray beagle"}
+
+Context: A flock of geese flew south over the frozen lake looking for warmer climates.
+Input: {"question": "What birds flew south over the frozen lake?"}
+Output: {"answer": "geese"}
+
+Context: The shiny red ladybug landed softly on the vibrant green leaf.
+Input: {"question": "What insect landed on the green leaf?"}
+Output: {"answer": "red ladybug"}
+
+Context: Throughout the summer, the gray wolf hunts in packs across the tundra.
+Input: {"question": "What animal hunts in packs across the tundra?"}
+Output: {"answer": "gray wolf"}
+
+Context: A spotted deer grazed silently in the meadow eating fresh clover.
+Input: {"question": "What creature grazed in the meadow eating clover?"}
+Output: {"answer": "spotted deer"}
+
+Context: The sturdy mule carried the heavy supplies up the steep mountain trail.
+Input: {"question": "What animal carried the heavy supplies?"}
+Output: {"answer": "mule"}
+
+Context: A cardinal sang loudly from the branch of the maple tree in the yard.
+Input: {"question": "What bird sang from the maple tree?"}
+Output: {"answer": "cardinal"}
+
+Context: The neighborhood cat, a siamese named Milo, meowed softly at the back door.
+Input: {"question": "What cat meowed at the back door?"}
+Output: {"answer": "siamese"}
+
+Context: A purple octopus hides among the coral reefs where predators cannot see it.
+Input: {"question": "What creature hides among the coral reefs?"}
+Output: {"answer": "purple octopus"}
+
+Context: The cows rested lazily in the shade of the big oak tree during noon.
+Input: {"question": "What animals rested in the shade of the oak tree?"}
+Output: {"answer": "cows"}
+
+Context: A striped skunk wandered into the backyard searching for grubs.
+Input: {"question": "What animal wandered into the backyard?"}
+Output: {"answer": "striped skunk"}
+
+Context: The pet parrot mimics every sound it hears throughout the day.
+Input: {"question": "What pet mimics sounds throughout the day?"}
+Output: {"answer": "parrot"}

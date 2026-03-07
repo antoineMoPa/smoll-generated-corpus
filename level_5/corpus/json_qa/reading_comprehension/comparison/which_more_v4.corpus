@@ -1,0 +1,59 @@
+Context: The green motorcycle reaches 120 miles per hour, while the yellow bus maxes out at 65 miles per hour.
+Input: {"question": "Which vehicle is quicker?"}
+Output: {"answer": "green motorcycle"}
+
+Context: Alex earned $850 this week, but Jamie only earned $320.
+Input: {"question": "Who made more income?"}
+Output: {"answer": "Alex"}
+
+Context: The Burj Khalifa rises 828 meters high, whereas the Empire State Building stands at 381 meters.
+Input: {"question": "Which building is higher?"}
+Output: {"answer": "Burj Khalifa"}
+
+Context: My tablet has 64 gigabytes of storage, but the smartphone has 256 gigabytes.
+Input: {"question": "Which device has more storage?"}
+Output: {"answer": "smartphone"}
+
+Context: The national museum displays 12,000 artifacts, while the local gallery shows only 400 pieces.
+Input: {"question": "Which place has more items?"}
+Output: {"answer": "national museum"}
+
+Context: During the swim meet, Clara finished 8 lengths, but Ben completed 10 lengths.
+Input: {"question": "Who swam more lengths?"}
+Output: {"answer": "Ben"}
+
+Context: This crate of apples weighs 12 kilograms, and that crate of oranges weighs 9 kilograms.
+Input: {"question": "Which crate is heavier?"}
+Output: {"answer": "crate of apples"}
+
+Context: The city center condo costs $3,100 per month, while the rural cottage rents for $950 monthly.
+Input: {"question": "Which rental is pricier?"}
+Output: {"answer": "city center condo"}
+
+Context: The Caspian Sea covers 371,000 square kilometers, while Lake Victoria spans 68,800 square kilometers.
+Input: {"question": "Which body of water is larger?"}
+Output: {"answer": "Caspian Sea"}
+
+Context: The baker added 4 tablespoons of vanilla to the cookies, but only 2 tablespoons to the brownies.
+Input: {"question": "Which batch received more vanilla?"}
+Output: {"answer": "cookies"}
+
+Context: In 2023, London recorded 9 million visitors, while Paris welcomed 6.5 million tourists.
+Input: {"question": "Which city had more visitors?"}
+Output: {"answer": "London"}
+
+Context: The hydroelectric dam produces 800 megawatts, while the geothermal plant generates 450 megawatts.
+Input: {"question": "Which facility produces more power?"}
+Output: {"answer": "hydroelectric dam"}
+
+Context: Noah wrote 30 lines of code today, but Olivia wrote 55 lines.
+Input: {"question": "Who wrote more code?"}
+Output: {"answer": "Olivia"}
+
+Context: The diamond ring weighs 3 grams, and the platinum ring weighs 2.5 grams.
+Input: {"question": "Which ring is heavier?"}
+Output: {"answer": "diamond ring"}
+
+Context: The home team hit 14 home runs this season, while the visiting team hit 9 home runs.
+Input: {"question": "Which team hit more home runs?"}
+Output: {"answer": "home team"}

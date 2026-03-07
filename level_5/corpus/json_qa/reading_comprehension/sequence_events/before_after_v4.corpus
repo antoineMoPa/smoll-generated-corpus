@@ -1,0 +1,59 @@
+Context: Alex watered the garden before he mowed the lawn in the afternoon.
+Input: {"question": "What happened before Alex mowed the lawn?"}
+Output: {"answer": "Alex watered the garden"}
+
+Context: The painter mixed the colors and then applied the first coat to the wall.
+Input: {"question": "What happened after the painter mixed the colors?"}
+Output: {"answer": "applied the first coat to the wall"}
+
+Context: After the rain stopped, the children ran outside to jump in the puddles.
+Input: {"question": "What happened before the children ran outside?"}
+Output: {"answer": "the rain stopped"}
+
+Context: Lisa booked her flight and immediately started packing her bags for the trip.
+Input: {"question": "What happened after Lisa booked her flight?"}
+Output: {"answer": "immediately started packing her bags"}
+
+Context: The alarm sounded loudly right before the fire drill commenced in the school.
+Input: {"question": "What happened before the fire drill commenced?"}
+Output: {"answer": "The alarm sounded loudly"}
+
+Context: Tom submitted his resume and waited three days for an interview request.
+Input: {"question": "What happened after Tom submitted his resume?"}
+Output: {"answer": "waited three days for an interview request"}
+
+Context: Before the movie began, the audience settled into their seats quietly.
+Input: {"question": "What happened before the movie began?"}
+Output: {"answer": "the audience settled into their seats"}
+
+Context: The cat knocked over the vase and then hid under the sofa quickly.
+Input: {"question": "What happened after the cat knocked over the vase?"}
+Output: {"answer": "hid under the sofa quickly"}
+
+Context: Engineers tested the prototype prior to launching the product at the conference.
+Input: {"question": "What happened before engineers launched the product?"}
+Output: {"answer": "Engineers tested the prototype"}
+
+Context: The bell rang for recess and the students rushed out of the classroom.
+Input: {"question": "What happened after the bell rang for recess?"}
+Output: {"answer": "the students rushed out of the classroom"}
+
+Context: Mike washed his hands after he finished preparing the raw chicken.
+Input: {"question": "What happened before Mike washed his hands?"}
+Output: {"answer": "he finished preparing the raw chicken"}
+
+Context: The flowers were watered in the morning and opened fully by noon.
+Input: {"question": "What happened after the flowers were watered?"}
+Output: {"answer": "opened fully by noon"}
+
+Context: Before the class dismissed, the teacher collected the homework assignments from the desks.
+Input: {"question": "What happened before the class dismissed?"}
+Output: {"answer": "the teacher collected the homework assignments"}
+
+Context: The bicycle slipped on the wet leaves and fell into the ditch moments later.
+Input: {"question": "What happened after the bicycle slipped on the wet leaves?"}
+Output: {"answer": "fell into the ditch"}
+
+Context: Sophie finished her coffee before she logged into the video conference call.
+Input: {"question": "What happened before Sophie logged into the video conference?"}
+Output: {"answer": "Sophie finished her coffee"}

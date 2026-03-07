@@ -1,0 +1,51 @@
+Available Tools: list_commits | get_commit | create_branch | delete_branch | list_branches | compare_branches
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "branch": "string", "sha": "string" }
+Response Schema: { "commits": [{ "sha": "string", "message": "string", "author": "string", "date": "string" }], "branch": "string" }
+---
+Question: Show me the last few commits on the main branch of the acme-corp/backend-api repository.
+Call: { "func_call": "list_commits", "owner": "acme-corp", "repo": "backend-api", "branch": "main", "sha": "" }
+Response: { "commits": [{ "sha": "a1b2c3d4e5f6789012345678901234567890abcd", "message": "feat: add user authentication middleware", "author": "Alice Johnson", "date": "2023-10-25T14:30:00Z" }, { "sha": "b2c3d4e5f6789012345678901234567890abcdef", "message": "fix: resolve database connection timeout", "author": "Bob Smith", "date": "2023-10-24T09:15:00Z" }, { "sha": "c3d4e5f6789012345678901234567890abcdef12", "message": "chore: update dependencies to latest versions", "author": "Charlie Brown", "date": "2023-10-23T16:45:00Z" }], "branch": "main" }
+
+Question: I need the details for commit 8f7e6d5c4b3a29182736455463728190abcdef12 in the open-source/project-x repo under the dev branch.
+Call: { "func_call": "get_commit", "owner": "open-source", "repo": "project-x", "branch": "dev", "sha": "8f7e6d5c4b3a29182736455463728190abcdef12" }
+Response: { "commits": [{ "sha": "8f7e6d5c4b3a29182736455463728190abcdef12", "message": "feat: implement real-time notification service", "author": "Diana Prince", "date": "2023-10-26T11:20:00Z" }], "branch": "dev" }
+
+Question: List all recent commits for the finance-app repository owned by globex-corp on the release/v2.0 branch.
+Call: { "func_call": "list_commits", "owner": "globex-corp", "repo": "finance-app", "branch": "release/v2.0", "sha": "" }
+Response: { "commits": [{ "sha": "d4e5f6789012345678901234567890abcdef1234", "message": "fix: correct currency conversion rounding error", "author": "Eve Adams", "date": "2023-10-27T08:00:00Z" }, { "sha": "e5f6789012345678901234567890abcdef123456", "message": "feat: add support for crypto wallets", "author": "Frank Miller", "date": "2023-10-26T13:45:00Z" }], "branch": "release/v2.0" }
+
+Question: Retrieve the specific commit information for 1a2b3c4d5e6f789012345678901234567890aaaa from the main branch of tech-startup/mobile-ios.
+Call: { "func_call": "get_commit", "owner": "tech-startup", "repo": "mobile-ios", "branch": "main", "sha": "1a2b3c4d5e6f789012345678901234567890aaaa" }
+Response: { "commits": [{ "sha": "1a2b3c4d5e6f789012345678901234567890aaaa", "message": "chore: remove deprecated UI components", "author": "Grace Lee", "date": "2023-10-25T10:10:00Z" }], "branch": "main" }
+
+Question: What are the latest changes pushed to the staging branch of the e-commerce-platform repo by retail-giant?
+Call: { "func_call": "list_commits", "owner": "retail-giant", "repo": "e-commerce-platform", "branch": "staging", "sha": "" }
+Response: { "commits": [{ "sha": "f6789012345678901234567890abcdef12345678", "message": "feat: integrate new payment gateway", "author": "Henry Ford", "date": "2023-10-28T15:30:00Z" }, { "sha": "789012345678901234567890abcdef1234567890", "message": "fix: handle empty cart edge case", "author": "Ivy Chen", "date": "2023-10-28T14:15:00Z" }, { "sha": "89012345678901234567890abcdef12345678901", "message": "chore: update CI/CD pipeline configuration", "author": "Jack Wilson", "date": "2023-10-27T17:00:00Z" }], "branch": "staging" }
+
+Question: Get the details for commit 9012345678901234567890abcdef123456789012 found in the feature/search-enhancement branch of media-hub/backend.
+Call: { "func_call": "get_commit", "owner": "media-hub", "repo": "backend", "branch": "feature/search-enhancement", "sha": "9012345678901234567890abcdef123456789012" }
+Response: { "commits": [{ "sha": "9012345678901234567890abcdef123456789012", "message": "feat: implement elastic search indexing", "author": "Karen White", "date": "2023-10-29T09:45:00Z" }], "branch": "feature/search-enhancement" }
+
+Question: Pull the commit history for the main branch of the logistics-tracker repo owned by ship-fast-inc.
+Call: { "func_call": "list_commits", "owner": "ship-fast-inc", "repo": "logistics-tracker", "branch": "main", "sha": "" }
+Response: { "commits": [{ "sha": "012345678901234567890abcdef1234567890123", "message": "fix: correct GPS coordinate parsing", "author": "Leo Martinez", "date": "2023-10-30T12:00:00Z" }, { "sha": "12345678901234567890abcdef12345678901234", "message": "feat: add driver rating system", "author": "Mia Thompson", "date": "2023-10-29T16:20:00Z" }], "branch": "main" }
+
+Question: I need to see the content of commit abcdef123456789012345678901234567890ffff on the hotfix/login-bug branch of social-net/app.
+Call: { "func_call": "get_commit", "owner": "social-net", "repo": "app", "branch": "hotfix/login-bug", "sha": "abcdef123456789012345678901234567890ffff" }
+Response: { "commits": [{ "sha": "abcdef123456789012345678901234567890ffff", "message": "fix: prevent SQL injection in login form", "author": "Noah Davis", "date": "2023-10-31T08:30:00Z" }], "branch": "hotfix/login-bug" }
+
+Question: List the commits for the develop branch of the data-pipeline repo under analytics-pro.
+Call: { "func_call": "list_commits", "owner": "analytics-pro", "repo": "data-pipeline", "branch": "develop", "sha": "" }
+Response: { "commits": [{ "sha": "bcdef123456789012345678901234567890fffff", "message": "feat: add Kafka stream processing", "author": "Olivia Garcia", "date": "2023-11-01T10:00:00Z" }, { "sha": "cdef123456789012345678901234567890ffffff", "message": "chore: refactor data validation module", "author": "Peter Robinson", "date": "2023-10-31T14:45:00Z" }, { "sha": "def123456789012345678901234567890fffffff", "message": "fix: handle null values in JSON input", "author": "Quinn Taylor", "date": "2023-10-30T11:30:00Z" }], "branch": "develop" }
+
+Question: Fetch details for commit 23456789012345678901234567890abcdef1234 in the main branch of cloud-services/infrastructure.
+Call: { "func_call": "get_commit", "owner": "cloud-services", "repo": "infrastructure", "branch": "main", "sha": "23456789012345678901234567890abcdef1234" }
+Response: { "commits": [{ "sha": "23456789012345678901234567890abcdef1234", "message": "chore: update Terraform provider versions", "author": "Rachel Green", "date": "2023-11-02T09:15:00Z" }], "branch": "main" }
+
+Question: Show me the recent commit activity on the release-candidate branch for the gaming-engine repo by pixel-studios.
+Call: { "func_call": "list_commits", "owner": "pixel-studios", "repo": "gaming-engine", "branch": "release-candidate", "sha": "" }
+Response: { "commits": [{ "sha": "3456789012345678901234567890abcdef12345", "message": "feat: optimize rendering pipeline", "author": "Samuel Jackson", "date": "2023-11-03T13:00:00Z" }, { "sha": "456789012345678901234567890abcdef123456", "message": "fix: resolve memory leak in texture loader", "author": "Tina Fey", "date": "2023-11-02T16:30:00Z" }], "branch": "release-candidate" }
+
+Question: Get the specific commit data for 56789012345678901234567890abcdef1234567 on the feature/api-v2 branch of dev-tools/cli.
+Call: { "func_call": "get_commit", "owner": "dev-tools", "repo": "cli", "branch": "feature/api-v2", "sha": "56789012345678901234567890abcdef1234567" }
+Response: { "commits": [{ "sha": "56789012345678901234567890abcdef1234567", "message": "feat: add interactive command prompts", "author": "Ursula K. Le Guin", "date": "2023-11-04T10:45:00Z" }], "branch": "feature/api-v2" }

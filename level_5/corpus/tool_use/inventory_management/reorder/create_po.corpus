@@ -1,0 +1,95 @@
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: We need to restock 500 units of SKU-8821 from GlobalTech Supplies with delivery expected by next Friday.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-8821", "quantity": 500, "supplier_id": "SUP-GT-001", "expected_delivery": "2023-11-24" }
+Response: { "po_id": "PO-2023-99102", "sku": "SKU-8821", "quantity": 500, "supplier": "GlobalTech Supplies", "status": "Pending", "expected_delivery": "2023-11-24" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Create a purchase order for 1200 widgets (SKU-WID-04) from Apex Manufacturing, delivery needed in 10 days.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-WID-04", "quantity": 1200, "supplier_id": "SUP-AM-045", "expected_delivery": "2023-11-30" }
+Response: { "po_id": "PO-2023-99103", "sku": "SKU-WID-04", "quantity": 1200, "supplier": "Apex Manufacturing", "status": "Confirmed", "expected_delivery": "2023-11-30" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Order 75 units of premium sensors SKU-SNS-99 from ElectroParts Inc., expected arrival December 5th.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-SNS-99", "quantity": 75, "supplier_id": "SUP-EP-112", "expected_delivery": "2023-12-05" }
+Response: { "po_id": "PO-2023-99104", "sku": "SKU-SNS-99", "quantity": 75, "supplier": "ElectroParts Inc.", "status": "Processing", "expected_delivery": "2023-12-05" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Initiate a reorder for 3000 packaging boxes (SKU-BOX-12) via QuickPack Solutions for delivery on November 28.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-BOX-12", "quantity": 3000, "supplier_id": "SUP-QP-089", "expected_delivery": "2023-11-28" }
+Response: { "po_id": "PO-2023-99105", "sku": "SKU-BOX-12", "quantity": 3000, "supplier": "QuickPack Solutions", "status": "Pending", "expected_delivery": "2023-11-28" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: We need 250 motors, model SKU-MTR-55, from HeavyDuty Industries, delivered by December 12th.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-MTR-55", "quantity": 250, "supplier_id": "SUP-HD-203", "expected_delivery": "2023-12-12" }
+Response: { "po_id": "PO-2023-99106", "sku": "SKU-MTR-55", "quantity": 250, "supplier": "HeavyDuty Industries", "status": "Confirmed", "expected_delivery": "2023-12-12" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Place an order for 600 cables (SKU-CBL-07) with FastWire Distributors, expecting delivery in one week.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-CBL-07", "quantity": 600, "supplier_id": "SUP-FW-334", "expected_delivery": "2023-11-21" }
+Response: { "po_id": "PO-2023-99107", "sku": "SKU-CBL-07", "quantity": 600, "supplier": "FastWire Distributors", "status": "Processing", "expected_delivery": "2023-11-21" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Request 1500 units of SKU-LED-22 from BrightLight Co., delivery scheduled for December 1st.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-LED-22", "quantity": 1500, "supplier_id": "SUP-BL-556", "expected_delivery": "2023-12-01" }
+Response: { "po_id": "PO-2023-99108", "sku": "SKU-LED-22", "quantity": 1500, "supplier": "BrightLight Co.", "status": "Pending", "expected_delivery": "2023-12-01" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Generate a PO for 40 industrial pumps (SKU-PMP-88) supplied by FlowMaster LLC, arriving December 15.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-PMP-88", "quantity": 40, "supplier_id": "SUP-FM-678", "expected_delivery": "2023-12-15" }
+Response: { "po_id": "PO-2023-99109", "sku": "SKU-PMP-88", "quantity": 40, "supplier": "FlowMaster LLC", "status": "Confirmed", "expected_delivery": "2023-12-15" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Order 900 brackets, SKU-BRK-33, from SteelWorks Partners with an expected delivery date of November 25.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-BRK-33", "quantity": 900, "supplier_id": "SUP-SW-721", "expected_delivery": "2023-11-25" }
+Response: { "po_id": "PO-2023-99110", "sku": "SKU-BRK-33", "quantity": 900, "supplier": "SteelWorks Partners", "status": "Processing", "expected_delivery": "2023-11-25" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: We need to restock 200 control panels (SKU-CTRL-01) from AutoSys Components by December 8.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-CTRL-01", "quantity": 200, "supplier_id": "SUP-AS-845", "expected_delivery": "2023-12-08" }
+Response: { "po_id": "PO-2023-99111", "sku": "SKU-CTRL-01", "quantity": 200, "supplier": "AutoSys Components", "status": "Pending", "expected_delivery": "2023-12-08" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Create a purchase order for 3500 screws (SKU-SCR-09) from FastenerHub, delivery expected November 22.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-SCR-09", "quantity": 3500, "supplier_id": "SUP-FH-912", "expected_delivery": "2023-11-22" }
+Response: { "po_id": "PO-2023-99112", "sku": "SKU-SCR-09", "quantity": 3500, "supplier": "FastenerHub", "status": "Confirmed", "expected_delivery": "2023-11-22" }
+
+Available Tools: create_purchase_order | get_po_status | cancel_po | get_reorder_suggestions
+Call Schema: { "func_call": "string", "sku": "string", "quantity": number, "supplier_id": "string", "expected_delivery": "string" }
+Response Schema: { "po_id": "string", "sku": "string", "quantity": number, "supplier": "string", "status": "string", "expected_delivery": "string" }
+---
+Question: Order 180 hydraulic hoses (SKU-HSE-44) from FluidDynamic Corp, to be delivered by December 20.
+Call: { "func_call": "create_purchase_order", "sku": "SKU-HSE-44", "quantity": 180, "supplier_id": "SUP-FD-033", "expected_delivery": "2023-12-20" }
+Response: { "po_id": "PO-2023-99113", "sku": "SKU-HSE-44", "quantity": 180, "supplier": "FluidDynamic Corp", "status": "Processing", "expected_delivery": "2023-12-20" }

@@ -1,0 +1,62 @@
+Available Tools: create_deal | update_deal_stage | get_deal | list_deals_by_stage | close_deal
+Call Schema: { "func_call": "string", "deal_id": "string", "contact_id": "string", "stage": "string", "value": number }
+Response Schema: { "deal_id": "string", "name": "string", "stage": "string", "value": number, "probability": number }
+---
+Question: Retrieve all opportunities currently in the needs analysis phase.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Needs Analysis", "value": 0 }
+Response: { "deal_id": "DL-4012", "name": "Solaris Energy Monitoring", "stage": "Needs Analysis", "value": 67500, "probability": 25 }
+
+---
+Question: What deals are pending executive approval right now?
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Executive Approval", "value": 0 }
+Response: { "deal_id": "DL-7823", "name": "Apex Security Audit", "stage": "Executive Approval", "value": 195000, "probability": 90 }
+
+---
+Question: List every deal we have in the contract review stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Contract Review", "value": 0 }
+Response: { "deal_id": "DL-3391", "name": "UrbanDev CRM Implementation", "stage": "Contract Review", "value": 82000, "probability": 80 }
+
+---
+Question: Show me the pipeline for deals marked as technical validation.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Technical Validation", "value": 0 }
+Response: { "deal_id": "DL-5544", "name": "BioMed Lab Equipment Lease", "stage": "Technical Validation", "value": 410000, "probability": 55 }
+
+---
+Question: Pull up the list of deals currently in the initial contact stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Initial Contact", "value": 0 }
+Response: { "deal_id": "DL-9102", "name": "GreenField Agriculture App", "stage": "Initial Contact", "value": 12000, "probability": 10 }
+
+---
+Question: Close deal DL-6721 as won because the wire transfer cleared.
+Call: { "func_call": "close_deal", "deal_id": "DL-6721", "contact_id": "CT-512", "stage": "Closed Won", "value": 330000 }
+Response: { "deal_id": "DL-6721", "name": "Nexus Telecom Fiber Optic", "stage": "Closed Won", "value": 330000, "probability": 100 }
+
+---
+Question: Mark deal DL-8834 as lost; the stakeholder left the company.
+Call: { "func_call": "close_deal", "deal_id": "DL-8834", "contact_id": "CT-667", "stage": "Closed Lost", "value": 45000 }
+Response: { "deal_id": "DL-8834", "name": "SwiftShip Logistics Dashboard", "stage": "Closed Lost", "value": 45000, "probability": 0 }
+
+---
+Question: Update deal DL-1156 to closed won status following the board meeting.
+Call: { "func_call": "close_deal", "deal_id": "DL-1156", "contact_id": "CT-299", "stage": "Closed Won", "value": 520000 }
+Response: { "deal_id": "DL-1156", "name": "Omega Bank Core Banking System", "stage": "Closed Won", "value": 520000, "probability": 100 }
+
+---
+Question: Close deal DL-3378 as lost because the requirements changed drastically.
+Call: { "func_call": "close_deal", "deal_id": "DL-3378", "contact_id": "CT-441", "stage": "Closed Lost", "value": 18500 }
+Response: { "deal_id": "DL-3378", "name": "BistroChain Inventory Module", "stage": "Closed Lost", "value": 18500, "probability": 0 }
+
+---
+Question: Finalize deal DL-7799 as won; the signed agreement was received this morning.
+Call: { "func_call": "close_deal", "deal_id": "DL-7799", "contact_id": "CT-883", "stage": "Closed Won", "value": 275000 }
+Response: { "deal_id": "DL-7799", "name": "AeroSpace Drone Fleet Software", "stage": "Closed Won", "value": 275000, "probability": 100 }
+
+---
+Question: Show me all deals in the pricing discussion stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Pricing Discussion", "value": 0 }
+Response: { "deal_id": "DL-2265", "name": "FitLife Gym Membership Portal", "stage": "Pricing Discussion", "value": 34000, "probability": 45 }
+
+---
+Question: Close deal DL-5512 as lost; the vendor selection process was canceled.
+Call: { "func_call": "close_deal", "deal_id": "DL-5512", "contact_id": "CT-734", "stage": "Closed Lost", "value": 145000 }
+Response: { "deal_id": "DL-5512", "name": "MetroCity Traffic Control System", "stage": "Closed Lost", "value": 145000, "probability": 0 }

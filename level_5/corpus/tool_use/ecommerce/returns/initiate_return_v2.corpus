@@ -1,0 +1,51 @@
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: I need to return the wireless mouse (SKU-882) from order ORD-4455 because it stopped connecting.
+Call: { "func_call": "initiate_return", "order_id": "ORD-4455", "item_id": "SKU-882", "reason": "defective" }
+Response: { "return_id": "RET-102938", "status": "approved", "refund_amount": 29.99, "label_url": "https://shipping.example.com/labels/RET-102938.pdf" }
+
+Question: Please start a return for item SKU-331 in order ORD-7766; the dress is too small.
+Call: { "func_call": "initiate_return", "order_id": "ORD-7766", "item_id": "SKU-331", "reason": "wrong size" }
+Response: { "return_id": "RET-405162", "status": "approved", "refund_amount": 59.95, "label_url": "https://shipping.example.com/labels/RET-405162.pdf" }
+
+Question: The tablet case I received (SKU-994, order ORD-2211) has a different pattern than shown online. Start a return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-2211", "item_id": "SKU-994", "reason": "not as described" }
+Response: { "return_id": "RET-718293", "status": "pending_review", "refund_amount": 34.50, "label_url": "https://shipping.example.com/labels/RET-718293.pdf" }
+
+Question: I want to return the green scarf (SKU-557) from order ORD-9900 because it is the wrong size.
+Call: { "func_call": "initiate_return", "order_id": "ORD-9900", "item_id": "SKU-557", "reason": "wrong size" }
+Response: { "return_id": "RET-329485", "status": "approved", "refund_amount": 18.00, "label_url": "https://shipping.example.com/labels/RET-329485.pdf" }
+
+Question: Begin the return process for order ORD-6633, item SKU-225, due to a faulty charger port.
+Call: { "func_call": "initiate_return", "order_id": "ORD-6633", "item_id": "SKU-225", "reason": "defective" }
+Response: { "return_id": "RET-546712", "status": "approved", "refund_amount": 45.99, "label_url": "https://shipping.example.com/labels/RET-546712.pdf" }
+
+Question: The yoga mat for SKU-773 in order ORD-5588 is thinner than advertised and not as described. Please initiate a return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-5588", "item_id": "SKU-773", "reason": "not as described" }
+Response: { "return_id": "RET-881029", "status": "approved", "refund_amount": 22.50, "label_url": "https://shipping.example.com/labels/RET-881029.pdf" }
+
+Question: I received the black pants in grey for item SKU-449 in order ORD-3377. It is effectively the wrong size for my needs. Initiate return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-3377", "item_id": "SKU-449", "reason": "wrong size" }
+Response: { "return_id": "RET-662134", "status": "approved", "refund_amount": 39.99, "label_url": "https://shipping.example.com/labels/RET-662134.pdf" }
+
+Question: The toaster oven heating element failed immediately (defective). Order is ORD-8844, item is SKU-116. Start the return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-8844", "item_id": "SKU-116", "reason": "defective" }
+Response: { "return_id": "RET-993847", "status": "approved", "refund_amount": 89.00, "label_url": "https://shipping.example.com/labels/RET-993847.pdf" }
+
+Question: Please generate a return label for item SKU-662 in order ORD-1155. The color specifications were not as described.
+Call: { "func_call": "initiate_return", "order_id": "ORD-1155", "item_id": "SKU-662", "reason": "not as described" }
+Response: { "return_id": "RET-227456", "status": "approved", "refund_amount": 125.75, "label_url": "https://shipping.example.com/labels/RET-227456.pdf" }
+
+Question: Initiate a return for order ORD-4422, item SKU-991, because the boots are the wrong size.
+Call: { "func_call": "initiate_return", "order_id": "ORD-4422", "item_id": "SKU-991", "reason": "wrong size" }
+Response: { "return_id": "RET-118899", "status": "approved", "refund_amount": 135.00, "label_url": "https://shipping.example.com/labels/RET-118899.pdf" }
+
+Question: The vase arrived with a chip in the rim (defective). Order ID is ORD-7799, item ID is SKU-338.
+Call: { "func_call": "initiate_return", "order_id": "ORD-7799", "item_id": "SKU-338", "reason": "defective" }
+Response: { "return_id": "RET-445566", "status": "approved", "refund_amount": 42.30, "label_url": "https://shipping.example.com/labels/RET-445566.pdf" }
+
+Question: Start a return for the hoodie (SKU-204) in order ORD-5511. The fabric composition is completely different than advertised, so it is not as described.
+Call: { "func_call": "initiate_return", "order_id": "ORD-5511", "item_id": "SKU-204", "reason": "not as described" }
+Response: { "return_id": "RET-778899", "status": "pending_review", "refund_amount": 65.00, "label_url": "https://shipping.example.com/labels/RET-778899.pdf" }

@@ -1,0 +1,29 @@
+Context: Marcus Thorne is a 34-year-old architect living in Seattle. He recently designed the new library downtown. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Marcus Thorne", "age": "34", "city": "Seattle"}
+
+Context: Living in Austin, Elena Rodriguez celebrated her 29th birthday last week. She works as a software engineer at a local startup. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Elena Rodriguez", "age": "29", "city": "Austin"}
+
+Context: At 62 years old, Arthur Peng resides in Chicago and enjoys walking by the lake. He is a retired history professor. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Arthur Peng", "age": "62", "city": "Chicago"}
+
+Context: Sophie Dubois, a 41-year-old chef, has called New Orleans home for over a decade. Her restaurant serves traditional Creole cuisine. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Sophie Dubois", "age": "41", "city": "New Orleans"}
+
+Context: James O'Malley is 19 and currently attends college in Boston. He majors in biological sciences and lives on campus. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "James O'Malley", "age": "19", "city": "Boston"}
+
+Context: In Miami, 55-year-old Isabella Santos runs a successful graphic design firm. She moved there from Colombia twenty years ago. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Isabella Santos", "age": "55", "city": "Miami"}
+
+Context: Kenji Sato is a 27-year-old musician based in Portland. He plays the violin in the city symphony orchestra. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Kenji Sato", "age": "27", "city": "Portland"}
+
+Context: Originally from Denver, 48-year-old Sarah Jenkins now works as a pilot. She flies commercial routes across the country. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Sarah Jenkins", "age": "48", "city": "Denver"}
+
+Context: Liam Murphy, aged 33, is a firefighter stationed in Philadelphia. He has lived in the city since he was a child. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Liam Murphy", "age": "33", "city": "Philadelphia"}
+
+Context: Priya Patel is 24 years old and works as a journalist in San Francisco. She covers technology trends for a major online publication. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Priya Patel", "age": "24", "city": "San Francisco"}
+
+Context: Robert Vance, a 71-year-old retired banker, spends his winters in Phoenix. He enjoys golfing at the local country club. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Robert Vance", "age": "71", "city": "Phoenix"}
+
+Context: Maria Gonzalez is 36 and teaches elementary school in Detroit. She has received several awards for her teaching methods. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Maria Gonzalez", "age": "36", "city": "Detroit"}
+
+Context: At the age of 50, David Kim manages a bookstore in Nashville. He is known for hosting weekly poetry readings. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "David Kim", "age": "50", "city": "Nashville"}
+
+Context: Olivia Bennett, 22, is an intern at a law firm in Washington D.C. She plans to attend law school next year. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Olivia Bennett", "age": "22", "city": "Washington D.C."}
+
+Context: Thomas Wright is a 45-year-old carpenter living in Minneapolis. He specializes in restoring historic homes in the area. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Thomas Wright", "age": "45", "city": "Minneapolis"}

@@ -1,0 +1,51 @@
+Available Tools: search_restaurants | filter_by_cuisine | get_restaurant_menu | get_restaurant_details
+Call Schema: { "func_call": "string", "location": "string", "cuisine": "string", "max_delivery_time": number, "min_rating": number }
+Response Schema: { "restaurants": [{ "id": "string", "name": "string", "cuisine": "string", "rating": number, "delivery_time_min": number }], "total": number }
+---
+Question: I want to order Japanese food in Los Angeles, looking for places with at least 4.5 stars that deliver in 50 minutes or less.
+Call: { "func_call": "search_restaurants", "location": "Los Angeles", "cuisine": "Japanese", "max_delivery_time": 50, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_022", "name": "Sakura Sushi", "cuisine": "Japanese", "rating": 4.6, "delivery_time_min": 45 }, { "id": "rest_023", "name": "Tokyo Bites", "cuisine": "Japanese", "rating": 4.8, "delivery_time_min": 30 }], "total": 2 }
+
+Question: Find me some French restaurants in Philadelphia that can get here within 70 minutes, no specific rating requirement.
+Call: { "func_call": "search_restaurants", "location": "Philadelphia", "cuisine": "French", "max_delivery_time": 70, "min_rating": 0 }
+Response: { "restaurants": [{ "id": "rest_024", "name": "Le Petit Bistro", "cuisine": "French", "rating": 4.2, "delivery_time_min": 65 }, { "id": "rest_025", "name": "Parisian Corner", "cuisine": "French", "rating": 3.9, "delivery_time_min": 55 }], "total": 2 }
+
+Question: Could you locate Chinese takeout in San Diego with a rating of 4.0 or higher and delivery under 40 minutes?
+Call: { "func_call": "search_restaurants", "location": "San Diego", "cuisine": "Chinese", "max_delivery_time": 40, "min_rating": 4.0 }
+Response: { "restaurants": [{ "id": "rest_026", "name": "Dragon Wok", "cuisine": "Chinese", "rating": 4.3, "delivery_time_min": 35 }], "total": 1 }
+
+Question: Show me Greek options in Nashville, needing a minimum of 4.4 stars and arrival within an hour.
+Call: { "func_call": "search_restaurants", "location": "Nashville", "cuisine": "Greek", "max_delivery_time": 60, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_027", "name": "Olympus Grill", "cuisine": "Greek", "rating": 4.7, "delivery_time_min": 50 }, { "id": "rest_028", "name": "Athena's Kitchen", "cuisine": "Greek", "rating": 4.5, "delivery_time_min": 55 }], "total": 2 }
+
+Question: I'm looking for Korean BBQ in Las Vegas, anything rated 3.8 or above with a max delivery time of 45 mins.
+Call: { "func_call": "search_restaurants", "location": "Las Vegas", "cuisine": "Korean", "max_delivery_time": 45, "min_rating": 3.8 }
+Response: { "restaurants": [{ "id": "rest_029", "name": "Seoul Garden", "cuisine": "Korean", "rating": 4.1, "delivery_time_min": 40 }, { "id": "rest_030", "name": "K-Town Smokehouse", "cuisine": "Korean", "rating": 3.9, "delivery_time_min": 42 }], "total": 2 }
+
+Question: Search for Vietnamese pho spots in Minneapolis with excellent reviews, at least 4.6 stars, delivering in 55 minutes.
+Call: { "func_call": "search_restaurants", "location": "Minneapolis", "cuisine": "Vietnamese", "max_delivery_time": 55, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_031", "name": "Mekong Noodles", "cuisine": "Vietnamese", "rating": 4.8, "delivery_time_min": 50 }], "total": 1 }
+
+Question: Find American burger joints in Detroit that deliver within 30 minutes and have a rating of 4.2 or more.
+Call: { "func_call": "search_restaurants", "location": "Detroit", "cuisine": "American", "max_delivery_time": 30, "min_rating": 4.2 }
+Response: { "restaurants": [{ "id": "rest_032", "name": "Motor City Burgers", "cuisine": "American", "rating": 4.4, "delivery_time_min": 25 }, { "id": "rest_033", "name": "Burger Barn", "cuisine": "American", "rating": 4.2, "delivery_time_min": 28 }], "total": 2 }
+
+Question: Are there any Spanish tapas places in Orlando with a 4.3+ rating and delivery time under 65 minutes?
+Call: { "func_call": "search_restaurants", "location": "Orlando", "cuisine": "Spanish", "max_delivery_time": 65, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_034", "name": "Barcelona Bites", "cuisine": "Spanish", "rating": 4.5, "delivery_time_min": 60 }], "total": 1 }
+
+Question: Help me locate Lebanese restaurants in Charlotte, requiring a minimum rating of 4.0 and max delivery of 50 mins.
+Call: { "func_call": "search_restaurants", "location": "Charlotte", "cuisine": "Lebanese", "max_delivery_time": 50, "min_rating": 4.0 }
+Response: { "restaurants": [{ "id": "rest_035", "name": "Cedar Grove", "cuisine": "Lebanese", "rating": 4.3, "delivery_time_min": 45 }, { "id": "rest_036", "name": "Beirut Express", "cuisine": "Lebanese", "rating": 4.1, "delivery_time_min": 48 }], "total": 2 }
+
+Question: I need Ethiopian food in Columbus, Ohio, with at least a 4.5 star rating and delivery within 75 minutes.
+Call: { "func_call": "search_restaurants", "location": "Columbus", "cuisine": "Ethiopian", "max_delivery_time": 75, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_037", "name": "Addis Ababa Kitchen", "cuisine": "Ethiopian", "rating": 4.7, "delivery_time_min": 70 }], "total": 1 }
+
+Question: Look for Brazilian steakhouses in Tampa that can deliver in under 80 minutes, rating doesn't matter.
+Call: { "func_call": "search_restaurants", "location": "Tampa", "cuisine": "Brazilian", "max_delivery_time": 80, "min_rating": 0 }
+Response: { "restaurants": [{ "id": "rest_038", "name": "Rio Grande Grill", "cuisine": "Brazilian", "rating": 4.0, "delivery_time_min": 75 }, { "id": "rest_039", "name": "Sao Paulo Churrasco", "cuisine": "Brazilian", "rating": 3.8, "delivery_time_min": 78 }], "total": 2 }
+
+Question: Find Mediterranean eateries in Raleigh with a rating of 4.4 or higher and a delivery window of 40 minutes.
+Call: { "func_call": "search_restaurants", "location": "Raleigh", "cuisine": "Mediterranean", "max_delivery_time": 40, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_040", "name": "Olive Branch", "cuisine": "Mediterranean", "rating": 4.6, "delivery_time_min": 35 }, { "id": "rest_041", "name": "Sea breeze Cafe", "cuisine": "Mediterranean", "rating": 4.4, "delivery_time_min": 38 }], "total": 2 }

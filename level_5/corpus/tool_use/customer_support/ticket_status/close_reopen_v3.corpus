@@ -1,0 +1,51 @@
+Available Tools: get_ticket_status | list_open_tickets | add_reply | close_ticket | reopen_ticket
+Call Schema: { "func_call": "string", "ticket_id": "string", "customer_id": "string", "reply": "string" }
+Response Schema: { "ticket_id": "string", "status": "open|in_progress|resolved|closed", "replies": [{ "author": "string", "message": "string", "timestamp": "string" }] }
+---
+Question: Please close ticket T-3091 for customer C-882 after confirming the database sync is complete.
+Call: { "func_call": "close_ticket", "ticket_id": "T-3091", "customer_id": "C-882", "reply": "Database synchronization verified. Closing ticket." }
+Response: { "ticket_id": "T-3091", "status": "closed", "replies": [ { "author": "SupportAgent_06", "message": "Database synchronization verified. Closing ticket.", "timestamp": "2023-11-02T08:15:00Z" } ] }
+
+Question: Customer C-449 reported that the patch for ticket T-7721 caused a regression; please reopen it.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-7721", "customer_id": "C-449", "reply": "Regression detected after patch application. Reopening for rollback analysis." }
+Response: { "ticket_id": "T-7721", "status": "open", "replies": [ { "author": "SupportAgent_07", "message": "Regression detected after patch application. Reopening for rollback analysis.", "timestamp": "2023-11-02T10:22:15Z" } ] }
+
+Question: Go ahead and close ticket T-6543 for user C-991 since they confirmed the email notifications are working.
+Call: { "func_call": "close_ticket", "ticket_id": "T-6543", "customer_id": "C-991", "reply": "Email notification delivery confirmed. Marking as closed." }
+Response: { "ticket_id": "T-6543", "status": "closed", "replies": [ { "author": "SupportAgent_08", "message": "Email notification delivery confirmed. Marking as closed.", "timestamp": "2023-11-03T09:45:30Z" } ] }
+
+Question: We need to reopen ticket T-2288 for customer C-117 because they found the report generator times out.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-2288", "customer_id": "C-117", "reply": "Report generator timeout issue persists. Reopening ticket." }
+Response: { "ticket_id": "T-2288", "status": "open", "replies": [ { "author": "SupportAgent_06", "message": "Report generator timeout issue persists. Reopening ticket.", "timestamp": "2023-11-03T12:10:45Z" } ] }
+
+Question: Close ticket T-9988 for customer C-334 now that the SSL certificate has been renewed.
+Call: { "func_call": "close_ticket", "ticket_id": "T-9988", "customer_id": "C-334", "reply": "SSL certificate renewal completed. Closing ticket." }
+Response: { "ticket_id": "T-9988", "status": "closed", "replies": [ { "author": "SupportAgent_09", "message": "SSL certificate renewal completed. Closing ticket.", "timestamp": "2023-11-04T07:30:12Z" } ] }
+
+Question: Please reopen T-5511 for C-662; the user says the search function returns empty results.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-5511", "customer_id": "C-662", "reply": "Search indexing failure reported. Reopening for backend review." }
+Response: { "ticket_id": "T-5511", "status": "open", "replies": [ { "author": "SupportAgent_07", "message": "Search indexing failure reported. Reopening for backend review.", "timestamp": "2023-11-04T14:20:55Z" } ] }
+
+Question: Execute a close action on ticket T-1010 for customer C-558 after successful server migration.
+Call: { "func_call": "close_ticket", "ticket_id": "T-1010", "customer_id": "C-558", "reply": "Server migration finalized without errors. Closing ticket." }
+Response: { "ticket_id": "T-1010", "status": "closed", "replies": [ { "author": "SupportAgent_10", "message": "Server migration finalized without errors. Closing ticket.", "timestamp": "2023-11-05T11:05:40Z" } ] }
+
+Question: Reopen ticket T-4433 for C-776 because the two-factor authentication codes are not arriving.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-4433", "customer_id": "C-776", "reply": "2FA code delivery failure unresolved. Reopening ticket." }
+Response: { "ticket_id": "T-4433", "status": "open", "replies": [ { "author": "SupportAgent_08", "message": "2FA code delivery failure unresolved. Reopening ticket.", "timestamp": "2023-11-05T16:50:22Z" } ] }
+
+Question: Close ticket T-8877 for customer C-223 as the storage quota increase has been applied.
+Call: { "func_call": "close_ticket", "ticket_id": "T-8877", "customer_id": "C-223", "reply": "Storage quota increased per request. Closing ticket." }
+Response: { "ticket_id": "T-8877", "status": "closed", "replies": [ { "author": "SupportAgent_06", "message": "Storage quota increased per request. Closing ticket.", "timestamp": "2023-11-06T10:15:08Z" } ] }
+
+Question: Customer C-995 needs ticket T-3322 reopened; the video upload fails specifically for files over 2GB.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-3322", "customer_id": "C-995", "reply": "Upload failure reproducible for large files. Reopening for size limit debugging." }
+Response: { "ticket_id": "T-3322", "status": "open", "replies": [ { "author": "SupportAgent_09", "message": "Upload failure reproducible for large files. Reopening for size limit debugging.", "timestamp": "2023-11-06T13:40:19Z" } ] }
+
+Question: Finalize and close ticket T-6060 for customer C-404 following the firewall rule update.
+Call: { "func_call": "close_ticket", "ticket_id": "T-6060", "customer_id": "C-404", "reply": "Firewall rules updated and connectivity restored. Closing ticket." }
+Response: { "ticket_id": "T-6060", "status": "closed", "replies": [ { "author": "SupportAgent_07", "message": "Firewall rules updated and connectivity restored. Closing ticket.", "timestamp": "2023-11-07T09:25:50Z" } ] }
+
+Question: Reopen T-9090 for C-887 because the dark mode toggle is not saving user preferences.
+Call: { "func_call": "reopen_ticket", "ticket_id": "T-9090", "customer_id": "C-887", "reply": "User preference persistence failing in dark mode. Reopening ticket." }
+Response: { "ticket_id": "T-9090", "status": "open", "replies": [ { "author": "SupportAgent_10", "message": "User preference persistence failing in dark mode. Reopening ticket.", "timestamp": "2023-11-07T15:10:33Z" } ] }

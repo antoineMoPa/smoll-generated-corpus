@@ -1,0 +1,51 @@
+Available Tools: create_folder | move_file | copy_file | rename_file | delete_file | list_folder
+Call Schema: { "func_call": "string", "path": "string", "destination": "string", "new_name": "string" }
+Response Schema: { "path": "string", "entries": [{ "name": "string", "type": "file|folder", "size_bytes": number }], "status": "string" }
+---
+Question: Create a new folder named "Summer_Promos" inside the marketing directory.
+Call: { "func_call": "create_folder", "path": "/marketing/Summer_Promos", "destination": "", "new_name": "" }
+Response: { "path": "/marketing", "entries": [{ "name": "Summer_Promos", "type": "folder", "size_bytes": 0 }, { "name": "strategy.pptx", "type": "file", "size_bytes": 56000 }], "status": "success" }
+
+Question: Move the file "inventory_list.csv" from the root data folder to the backup folder.
+Call: { "func_call": "move_file", "path": "/data/inventory_list.csv", "destination": "/backup", "new_name": "" }
+Response: { "path": "/backup", "entries": [{ "name": "inventory_list.csv", "type": "file", "size_bytes": 204800 }, { "name": "system_log", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Create a folder called "Video_Renders" within the production directory.
+Call: { "func_call": "create_folder", "path": "/production/Video_Renders", "destination": "", "new_name": "" }
+Response: { "path": "/production", "entries": [{ "name": "Video_Renders", "type": "folder", "size_bytes": 0 }, { "name": "script_v3.txt", "type": "file", "size_bytes": 8192 }], "status": "success" }
+
+Question: Move "final_cut_v4.mp4" from the production/drafts folder to the production/Video_Renders folder.
+Call: { "func_call": "move_file", "path": "/production/drafts/final_cut_v4.mp4", "destination": "/production/Video_Renders", "new_name": "" }
+Response: { "path": "/production/Video_Renders", "entries": [{ "name": "final_cut_v4.mp4", "type": "file", "size_bytes": 89000500 }], "status": "success" }
+
+Question: Create a subfolder named "Q1_Financials" inside the finance directory.
+Call: { "func_call": "create_folder", "path": "/finance/Q1_Financials", "destination": "", "new_name": "" }
+Response: { "path": "/finance", "entries": [{ "name": "Q1_Financials", "type": "folder", "size_bytes": 0 }, { "name": "ledger_2023.xlsx", "type": "file", "size_bytes": 45000 }], "status": "success" }
+
+Question: Move the file "audit_report_draft.docx" from the finance/temp folder to the finance/Q1_Financials folder.
+Call: { "func_call": "move_file", "path": "/finance/temp/audit_report_draft.docx", "destination": "/finance/Q1_Financials", "new_name": "" }
+Response: { "path": "/finance/Q1_Financials", "entries": [{ "name": "audit_report_draft.docx", "type": "file", "size_bytes": 125000 }], "status": "success" }
+
+Question: Create a new folder named "Client_Logos" in the assets root.
+Call: { "func_call": "create_folder", "path": "/assets/Client_Logos", "destination": "", "new_name": "" }
+Response: { "path": "/assets", "entries": [{ "name": "Client_Logos", "type": "folder", "size_bytes": 0 }, { "name": "fonts", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Move "logo_primary.svg" from the downloads folder into the newly created Client_Logos folder.
+Call: { "func_call": "move_file", "path": "/downloads/logo_primary.svg", "destination": "/assets/Client_Logos", "new_name": "" }
+Response: { "path": "/assets/Client_Logos", "entries": [{ "name": "logo_primary.svg", "type": "file", "size_bytes": 15400 }], "status": "success" }
+
+Question: Create a folder called "Deprecated_APIs" inside the dev directory.
+Call: { "func_call": "create_folder", "path": "/dev/Deprecated_APIs", "destination": "", "new_name": "" }
+Response: { "path": "/dev", "entries": [{ "name": "Deprecated_APIs", "type": "folder", "size_bytes": 0 }, { "name": "Q1_Financials", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Move the file "api_v0_sdk.zip" from the dev/legacy folder to the dev/Deprecated_APIs folder.
+Call: { "func_call": "move_file", "path": "/dev/legacy/api_v0_sdk.zip", "destination": "/dev/Deprecated_APIs", "new_name": "" }
+Response: { "path": "/dev/Deprecated_APIs", "entries": [{ "name": "api_v0_sdk.zip", "type": "file", "size_bytes": 5242880 }], "status": "success" }
+
+Question: Create a folder named "Safety_Manuals" within the hr directory.
+Call: { "func_call": "create_folder", "path": "/hr/Safety_Manuals", "destination": "", "new_name": "" }
+Response: { "path": "/hr", "entries": [{ "name": "Safety_Manuals", "type": "folder", "size_bytes": 0 }, { "name": "recruitment", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Move "fire_drill_procedure.pdf" from the hr/temp_docs folder to the hr/Safety_Manuals folder.
+Call: { "func_call": "move_file", "path": "/hr/temp_docs/fire_drill_procedure.pdf", "destination": "/hr/Safety_Manuals", "new_name": "" }
+Response: { "path": "/hr/Safety_Manuals", "entries": [{ "name": "fire_drill_procedure.pdf", "type": "file", "size_bytes": 340200 }], "status": "success" }

@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Please start the web server instance i-a1b2c3d4 in the US East region.
+Call: { "func_call": "start_instance", "instance_id": "i-a1b2c3d4", "region": "us-east-1" }
+Response: { "instance_id": "i-a1b2c3d4", "state": "running", "message": "Instance i-a1b2c3d4 successfully started in us-east-1." }
+
+Question: I need to stop the database replica i-9f8e7d6c located in Europe West.
+Call: { "func_call": "stop_instance", "instance_id": "i-9f8e7d6c", "region": "eu-west-2" }
+Response: { "instance_id": "i-9f8e7d6c", "state": "stopped", "message": "Instance i-9f8e7d6c successfully stopped in eu-west-2." }
+
+Question: Can you bring up the analytics node i-55443322 in the Asia Pacific Southeast zone?
+Call: { "func_call": "start_instance", "instance_id": "i-55443322", "region": "ap-southeast-1" }
+Response: { "instance_id": "i-55443322", "state": "running", "message": "Instance i-55443322 successfully started in ap-southeast-1." }
+
+Question: Shut down the legacy application server i-deadbeef in us-east-1 immediately.
+Call: { "func_call": "stop_instance", "instance_id": "i-deadbeef", "region": "us-east-1" }
+Response: { "instance_id": "i-deadbeef", "state": "stopped", "message": "Instance i-deadbeef successfully stopped in us-east-1." }
+
+Question: Start the batch processing worker i-11223344 in the eu-west-2 region.
+Call: { "func_call": "start_instance", "instance_id": "i-11223344", "region": "eu-west-2" }
+Response: { "instance_id": "i-11223344", "state": "running", "message": "Instance i-11223344 successfully started in eu-west-2." }
+
+Question: Please halt the development environment instance i-abcd1234 in ap-southeast-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-abcd1234", "region": "ap-southeast-1" }
+Response: { "instance_id": "i-abcd1234", "state": "stopped", "message": "Instance i-abcd1234 successfully stopped in ap-southeast-1." }
+
+Question: Bring the cache server i-ffee0011 online in us-east-1.
+Call: { "func_call": "start_instance", "instance_id": "i-ffee0011", "region": "us-east-1" }
+Response: { "instance_id": "i-ffee0011", "state": "running", "message": "Instance i-ffee0011 successfully started in us-east-1." }
+
+Question: Stop the monitoring agent i-88776655 running in eu-west-2.
+Call: { "func_call": "stop_instance", "instance_id": "i-88776655", "region": "eu-west-2" }
+Response: { "instance_id": "i-88776655", "state": "stopped", "message": "Instance i-88776655 successfully stopped in eu-west-2." }
+
+Question: Activate the backup node i-22334455 in the ap-southeast-1 datacenter.
+Call: { "func_call": "start_instance", "instance_id": "i-22334455", "region": "ap-southeast-1" }
+Response: { "instance_id": "i-22334455", "state": "running", "message": "Instance i-22334455 successfully started in ap-southeast-1." }
+
+Question: Power off the test instance i-99887766 in us-east-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-99887766", "region": "us-east-1" }
+Response: { "instance_id": "i-99887766", "state": "stopped", "message": "Instance i-99887766 successfully stopped in us-east-1." }
+
+Question: Start the microservice container host i-5a6b7c8d in eu-west-2.
+Call: { "func_call": "start_instance", "instance_id": "i-5a6b7c8d", "region": "eu-west-2" }
+Response: { "instance_id": "i-5a6b7c8d", "state": "running", "message": "Instance i-5a6b7c8d successfully started in eu-west-2." }
+
+Question: Terminate the session for instance i-1a2b3c4d by stopping it in ap-southeast-1.
+Call: { "func_call": "stop_instance", "instance_id": "i-1a2b3c4d", "region": "ap-southeast-1" }
+Response: { "instance_id": "i-1a2b3c4d", "state": "stopped", "message": "Instance i-1a2b3c4d successfully stopped in ap-southeast-1." }

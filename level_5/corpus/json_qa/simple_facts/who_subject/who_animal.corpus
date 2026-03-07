@@ -1,0 +1,59 @@
+Context: The golden retriever named Max loves to chase balls in the park every afternoon.
+Input: {"question": "What animal loves to chase balls in the park?"}
+Output: {"answer": "golden retriever"}
+
+Context: A small green tree frog sat quietly on a lily pad near the edge of the pond.
+Input: {"question": "What creature sat quietly on a lily pad?"}
+Output: {"answer": "green tree frog"}
+
+Context: The farmer feeds the pigs and chickens early in the morning before sunrise.
+Input: {"question": "What animals does the farmer feed early in the morning?"}
+Output: {"answer": "pigs and chickens"}
+
+Context: My sister adopted a tabby cat from the local shelter last weekend.
+Input: {"question": "What pet did my sister adopt from the shelter?"}
+Output: {"answer": "tabby cat"}
+
+Context: A herd of elephants migrated across the dry savanna looking for water.
+Input: {"question": "What animals migrated across the dry savanna?"}
+Output: {"answer": "elephants"}
+
+Context: The black beetle crawled slowly up the rough bark of the oak tree.
+Input: {"question": "What insect crawled up the oak tree?"}
+Output: {"answer": "black beetle"}
+
+Context: During the winter, the brown bear sleeps quietly in its cave.
+Input: {"question": "What animal sleeps in a cave during the winter?"}
+Output: {"answer": "brown bear"}
+
+Context: A fluffy white rabbit hopped through the garden eating fresh carrots.
+Input: {"question": "What creature hopped through the garden eating carrots?"}
+Output: {"answer": "fluffy white rabbit"}
+
+Context: The old horse pulled the heavy wagon down the muddy road.
+Input: {"question": "What animal pulled the heavy wagon?"}
+Output: {"answer": "horse"}
+
+Context: A blue jay built a nest high up in the pine tree outside my window.
+Input: {"question": "What bird built a nest in the pine tree?"}
+Output: {"answer": "blue jay"}
+
+Context: The family dog, a beagle named Buster, barked loudly at the mail carrier.
+Input: {"question": "What dog barked at the mail carrier?"}
+Output: {"answer": "beagle"}
+
+Context: A giant squid lives deep in the ocean where sunlight rarely reaches.
+Input: {"question": "What creature lives deep in the ocean?"}
+Output: {"answer": "giant squid"}
+
+Context: The sheep grazed peacefully on the green hillside under the warm sun.
+Input: {"question": "What animals grazed on the green hillside?"}
+Output: {"answer": "sheep"}
+
+Context: A red fox sneaked into the henhouse looking for eggs.
+Input: {"question": "What animal sneaked into the henhouse?"}
+Output: {"answer": "red fox"}
+
+Context: The pet hamster runs on its wheel every night after everyone goes to sleep.
+Input: {"question": "What pet runs on a wheel every night?"}
+Output: {"answer": "hamster"}

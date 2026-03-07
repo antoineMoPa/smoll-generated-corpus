@@ -1,0 +1,51 @@
+Available Tools: add_to_cart | remove_from_cart | update_quantity | get_cart | apply_coupon | checkout
+Call Schema: { "func_call": "string", "product_id": "string", "quantity": number, "coupon_code": "string" }
+Response Schema: { "cart_id": "string", "items": [{ "product_id": "string", "name": "string", "quantity": number, "price": number }], "total": number }
+---
+Question: Put four ceramic coffee mugs into my cart.
+Call: { "func_call": "add_to_cart", "product_id": "MUG-CER-WHT", "quantity": 4, "coupon_code": null }
+Response: { "cart_id": "cart_3301", "items": [{ "product_id": "MUG-CER-WHT", "name": "White Ceramic Coffee Mug", "quantity": 4, "price": 8.99 }], "total": 35.96 }
+
+Question: Take two of the white mugs out of the shopping cart.
+Call: { "func_call": "remove_from_cart", "product_id": "MUG-CER-WHT", "quantity": 2, "coupon_code": null }
+Response: { "cart_id": "cart_3301", "items": [{ "product_id": "MUG-CER-WHT", "name": "White Ceramic Coffee Mug", "quantity": 2, "price": 8.99 }], "total": 17.98 }
+
+Question: I would like to add a stainless steel water bottle to my order.
+Call: { "func_call": "add_to_cart", "product_id": "BTL-SS-BLU", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_3301", "items": [{ "product_id": "MUG-CER-WHT", "name": "White Ceramic Coffee Mug", "quantity": 2, "price": 8.99 }, { "product_id": "BTL-SS-BLU", "name": "Insulated Stainless Steel Water Bottle", "quantity": 1, "price": 24.50 }], "total": 42.48 }
+
+Question: Please delete the blue water bottle from the current cart.
+Call: { "func_call": "remove_from_cart", "product_id": "BTL-SS-BLU", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_3301", "items": [{ "product_id": "MUG-CER-WHT", "name": "White Ceramic Coffee Mug", "quantity": 2, "price": 8.99 }], "total": 17.98 }
+
+Question: Add six notebooks with lined paper to the cart.
+Call: { "func_call": "add_to_cart", "product_id": "NB-LND-RED", "quantity": 6, "coupon_code": null }
+Response: { "cart_id": "cart_5592", "items": [{ "product_id": "NB-LND-RED", "name": "Red Lined Notebook A5", "quantity": 6, "price": 4.25 }], "total": 25.50 }
+
+Question: Remove three red notebooks from my shopping list.
+Call: { "func_call": "remove_from_cart", "product_id": "NB-LND-RED", "quantity": 3, "coupon_code": null }
+Response: { "cart_id": "cart_5592", "items": [{ "product_id": "NB-LND-RED", "name": "Red Lined Notebook A5", "quantity": 3, "price": 4.25 }], "total": 12.75 }
+
+Question: I need to add a black gel pen set to my purchase.
+Call: { "func_call": "add_to_cart", "product_id": "PEN-GEL-BLK", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_5592", "items": [{ "product_id": "NB-LND-RED", "name": "Red Lined Notebook A5", "quantity": 3, "price": 4.25 }, { "product_id": "PEN-GEL-BLK", "name": "Black Gel Pen 12-Pack", "quantity": 1, "price": 11.99 }], "total": 24.74 }
+
+Question: Take the gel pen set out of the cart completely.
+Call: { "func_call": "remove_from_cart", "product_id": "PEN-GEL-BLK", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_5592", "items": [{ "product_id": "NB-LND-RED", "name": "Red Lined Notebook A5", "quantity": 3, "price": 4.25 }], "total": 12.75 }
+
+Question: Add ten rolls of packing tape to the order.
+Call: { "func_call": "add_to_cart", "product_id": "TPE-PCK-CLR", "quantity": 10, "coupon_code": null }
+Response: { "cart_id": "cart_6684", "items": [{ "product_id": "TPE-PCK-CLR", "name": "Clear Packing Tape Roll", "quantity": 10, "price": 3.49 }], "total": 34.90 }
+
+Question: Please remove four rolls of packing tape from my cart.
+Call: { "func_call": "remove_from_cart", "product_id": "TPE-PCK-CLR", "quantity": 4, "coupon_code": null }
+Response: { "cart_id": "cart_6684", "items": [{ "product_id": "TPE-PCK-CLR", "name": "Clear Packing Tape Roll", "quantity": 6, "price": 3.49 }], "total": 20.94 }
+
+Question: Add a heavy-duty box cutter to the shopping cart.
+Call: { "func_call": "add_to_cart", "product_id": "CTR-BOX-HVY", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_6684", "items": [{ "product_id": "TPE-PCK-CLR", "name": "Clear Packing Tape Roll", "quantity": 6, "price": 3.49 }, { "product_id": "CTR-BOX-HVY", "name": "Heavy Duty Box Cutter", "quantity": 1, "price": 14.75 }], "total": 35.69 }
+
+Question: Remove the box cutter from the current order.
+Call: { "func_call": "remove_from_cart", "product_id": "CTR-BOX-HVY", "quantity": 1, "coupon_code": null }
+Response: { "cart_id": "cart_6684", "items": [{ "product_id": "TPE-PCK-CLR", "name": "Clear Packing Tape Roll", "quantity": 6, "price": 3.49 }], "total": 20.94 }

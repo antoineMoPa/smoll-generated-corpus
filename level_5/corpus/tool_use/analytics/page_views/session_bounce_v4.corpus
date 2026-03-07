@@ -1,0 +1,51 @@
+Available Tools: get_page_views | get_unique_visitors | get_session_duration | get_bounce_rate
+Call Schema: { "func_call": "string", "url": "string", "from_date": "string", "to_date": "string", "granularity": "hourly|daily|weekly|monthly" }
+Response Schema: { "url": "string", "period": "string", "views": number, "unique_visitors": number, "avg_session_seconds": number, "bounce_rate": number }
+---
+Question: What were the view counts for the autumn footwear collection page during September?
+Call: { "func_call": "get_page_views", "url": "https://store.fashionhub.net/collections/autumn-boots", "from_date": "2023-09-01", "to_date": "2023-09-30", "granularity": "daily" }
+Response: { "url": "https://store.fashionhub.net/collections/autumn-boots", "period": "2023-09-01 to 2023-09-30", "views": 28400, "unique_visitors": 19200, "avg_session_seconds": 165, "bounce_rate": 0.38 }
+
+Question: Can you retrieve the unique visitor data for the crypto news homepage last week?
+Call: { "func_call": "get_unique_visitors", "url": "https://news.chainwatch.io/", "from_date": "2023-10-02", "to_date": "2023-10-08", "granularity": "daily" }
+Response: { "url": "https://news.chainwatch.io/", "period": "2023-10-02 to 2023-10-08", "views": 62100, "unique_visitors": 41500, "avg_session_seconds": 245, "bounce_rate": 0.52 }
+
+Question: I need the session duration metrics for the premium subscription tier page during the holiday sale.
+Call: { "func_call": "get_session_duration", "url": "https://saas.streamline.io/plans/premium", "from_date": "2022-11-20", "to_date": "2022-12-05", "granularity": "weekly" }
+Response: { "url": "https://saas.streamline.io/plans/premium", "period": "2022-11-20 to 2022-12-05", "views": 11200, "unique_visitors": 7800, "avg_session_seconds": 290, "bounce_rate": 0.27 }
+
+Question: How did traffic behave on the electric vehicle review article yesterday?
+Call: { "func_call": "get_bounce_rate", "url": "https://auto.reviews.com/ev-sedan-2024-review", "from_date": "2023-10-15", "to_date": "2023-10-15", "granularity": "hourly" }
+Response: { "url": "https://auto.reviews.com/ev-sedan-2024-review", "period": "2023-10-15", "views": 5400, "unique_visitors": 4100, "avg_session_seconds": 120, "bounce_rate": 0.61 }
+
+Question: Show me the bounce rate for the order tracking portal over the last weekend.
+Call: { "func_call": "get_bounce_rate", "url": "https://logistics.fastship.com/track", "from_date": "2023-10-14", "to_date": "2023-10-15", "granularity": "daily" }
+Response: { "url": "https://logistics.fastship.com/track", "period": "2023-10-14 to 2023-10-15", "views": 3300, "unique_visitors": 3150, "avg_session_seconds": 55, "bounce_rate": 0.14 }
+
+Question: What is the session duration trend for the data security whitepaper page over the last month?
+Call: { "func_call": "get_session_duration", "url": "https://enterprise.securenet.com/resources/security-whitepaper", "from_date": "2023-09-01", "to_date": "2023-09-30", "granularity": "weekly" }
+Response: { "url": "https://enterprise.securenet.com/resources/security-whitepaper", "period": "2023-09-01 to 2023-09-30", "views": 4200, "unique_visitors": 2900, "avg_session_seconds": 410, "bounce_rate": 0.22 }
+
+Question: Retrieve the unique visitor stats for the spring garden tools archive from last March.
+Call: { "func_call": "get_unique_visitors", "url": "https://store.gardenpro.com/archives/spring-tools-2023", "from_date": "2023-03-01", "to_date": "2023-03-31", "granularity": "monthly" }
+Response: { "url": "https://store.gardenpro.com/archives/spring-tools-2023", "period": "2023-03-01 to 2023-03-31", "views": 3100, "unique_visitors": 2400, "avg_session_seconds": 135, "bounce_rate": 0.45 }
+
+Question: Analyze the bounce rate on the python integration tutorial page for the past 72 hours.
+Call: { "func_call": "get_bounce_rate", "url": "https://dev.apihub.com/tutorials/python-integration", "from_date": "2023-10-12", "to_date": "2023-10-14", "granularity": "daily" }
+Response: { "url": "https://dev.apihub.com/tutorials/python-integration", "period": "2023-10-12 to 2023-10-14", "views": 1560, "unique_visitors": 1100, "avg_session_seconds": 380, "bounce_rate": 0.19 }
+
+Question: How long did users stay on the client testimonial video page last quarter?
+Call: { "func_call": "get_session_duration", "url": "https://media.brandstory.com/testimonials/q3-2023", "from_date": "2023-07-01", "to_date": "2023-09-30", "granularity": "monthly" }
+Response: { "url": "https://media.brandstory.com/testimonials/q3-2023", "period": "2023-07-01 to 2023-09-30", "views": 15800, "unique_visitors": 10200, "avg_session_seconds": 425, "bounce_rate": 0.16 }
+
+Question: Get the page view counts for the fitness app signup landing page during the marathon event.
+Call: { "func_call": "get_page_views", "url": "https://fit.lifeapp.com/signup/marathon-promo", "from_date": "2023-04-15", "to_date": "2023-04-17", "granularity": "hourly" }
+Response: { "url": "https://fit.lifeapp.com/signup/marathon-promo", "period": "2023-04-15 to 2023-04-17", "views": 32500, "unique_visitors": 24000, "avg_session_seconds": 95, "bounce_rate": 0.39 }
+
+Question: What were the unique visitor numbers for the investor relations page last Friday?
+Call: { "func_call": "get_unique_visitors", "url": "https://corp.globalfinance.com/investors", "from_date": "2023-10-13", "to_date": "2023-10-13", "granularity": "hourly" }
+Response: { "url": "https://corp.globalfinance.com/investors", "period": "2023-10-13", "views": 890, "unique_visitors": 620, "avg_session_seconds": 215, "bounce_rate": 0.28 }
+
+Question: Pull the full analytics report for the graphql schema documentation page over the last two weeks.
+Call: { "func_call": "get_session_duration", "url": "https://docs.apihub.com/schema/graphql", "from_date": "2023-10-01", "to_date": "2023-10-14", "granularity": "weekly" }
+Response: { "url": "https://docs.apihub.com/schema/graphql", "period": "2023-10-01 to 2023-10-14", "views": 18900, "unique_visitors": 13400, "avg_session_seconds": 490, "bounce_rate": 0.20 }

@@ -1,0 +1,79 @@
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Locate posts about street food in Bangkok.
+Call: { "func_call": "search_posts", "query": "street food", "hashtag": "", "location": "Bangkok", "limit": 14 }
+Response: { "results": [{ "id": "p_9001", "type": "post", "content": "Best Pad Thai stall in Chinatown! 🍜 #streetfood", "likes": 4500 }, { "id": "p_9002", "type": "post", "content": "Night market adventures in Bangkok.", "likes": 3200 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find users who are jazz musicians in New Orleans.
+Call: { "func_call": "search_users", "query": "jazz musician", "hashtag": "", "location": "New Orleans", "limit": 9 }
+Response: { "results": [{ "id": "u_5501", "type": "user", "content": "Louis Brass Band | Live at French Quarter", "likes": 28900 }, { "id": "u_5502", "type": "user", "content": "Sarah on Sax | NOLA Jazz", "likes": 19400 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Show me posts with #skiing from Colorado.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "skiing", "location": "Colorado", "limit": 22 }
+Response: { "results": [{ "id": "p_2205", "type": "post", "content": "Powder day at Aspen! ⛷️ #skiing", "likes": 6700 }, { "id": "p_2206", "type": "post", "content": "Sunset run down Vail Mountain.", "likes": 5100 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for tech reviewers in San Francisco.
+Call: { "func_call": "search_users", "query": "tech reviewer", "hashtag": "", "location": "San Francisco", "limit": 11 }
+Response: { "results": [{ "id": "u_8803", "type": "user", "content": "Bay Area Tech Unboxed | Latest Gadgets", "likes": 54000 }, { "id": "u_8804", "type": "user", "content": "Silicon Valley Insider Reviews", "likes": 41200 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Look for posts about sustainable fashion.
+Call: { "func_call": "search_posts", "query": "sustainable fashion", "hashtag": "", "location": "", "limit": 16 }
+Response: { "results": [{ "id": "p_4405", "type": "post", "content": "Thrift haul: amazing vintage finds today!", "likes": 1100 }, { "id": "p_4406", "type": "post", "content": "Why organic cotton matters for the planet.", "likes": 850 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find users specializing in yoga in Vancouver.
+Call: { "func_call": "search_users", "query": "yoga instructor", "hashtag": "", "location": "Vancouver", "limit": 4 }
+Response: { "results": [{ "id": "u_1109", "type": "user", "content": "Mindful Movement Vancouver | Daily Flow", "likes": 16700 }, { "id": "u_1110", "type": "user", "content": "Zen Yoga Studio BC", "likes": 13500 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts tagged #architecture from Dubai.
+Call: { "func_call": "search_posts", "query": "", "hashtag": "architecture", "location": "Dubai", "limit": 30 }
+Response: { "results": [{ "id": "p_6607", "type": "post", "content": "The Burj Khalifa at night is breathtaking 🏙️ #architecture", "likes": 9800 }, { "id": "p_6608", "type": "post", "content": "Modern design in the Marina district.", "likes": 8400 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for coffee bloggers in Melbourne.
+Call: { "func_call": "search_users", "query": "coffee blogger", "hashtag": "", "location": "Melbourne", "limit": 5 }
+Response: { "results": [{ "id": "u_3308", "type": "user", "content": "Melbourne Coffee Culture | Latte Art", "likes": 21500 }, { "id": "u_3309", "type": "user", "content": "Cafe Hopper AU | Reviews", "likes": 17800 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Find posts discussing hiking trails.
+Call: { "func_call": "search_posts", "query": "hiking trails", "hashtag": "", "location": "", "limit": 13 }
+Response: { "results": [{ "id": "p_7709", "type": "post", "content": "Top 10 hidden gems for weekend hikes.", "likes": 1450 }, { "id": "p_7710", "type": "post", "content": "Gear checklist for long distance trekking.", "likes": 1120 }], "total": 2 }
+
+Available Tools: search_posts | search_users | get_trending_hashtags | get_explore_feed
+Call Schema: { "func_call": "string", "query": "string", "hashtag": "string", "location": "string", "limit": number }
+Response Schema: { "results": [{ "id": "string", "type": "post|user", "content": "string", "likes": number }], "total": number }
+---
+Question: Search for users who love baking in Chicago.
+Call: { "func_call": "search_users", "query": "baking", "hashtag": "", "location": "Chicago", "limit": 8 }
+Response: { "results": [{ "id": "u_4412", "type": "user", "content": "Windy City Sweets | Custom Cakes", "likes": 33600 }, { "id": "u_4413", "type": "user", "content": "Home Baker Chi | Daily Treats", "likes": 25900 }], "total": 2 }

@@ -1,0 +1,62 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: It's late at night, please turn the volume down to 15 for night mode.
+Call: { "func_call": "set_volume", "level": 15, "preset": "night_mode" }
+Response: { "volume": 15, "muted": false, "equalizer_preset": "night_mode" }
+
+---
+Question: Turn up the music to 85, we are starting the party.
+Call: { "func_call": "set_volume", "level": 85, "preset": "party_mode" }
+Response: { "volume": 85, "muted": false, "equalizer_preset": "party_mode" }
+
+---
+Question: Mute the audio immediately, I need to take a call.
+Call: { "func_call": "mute", "level": 40, "preset": "default" }
+Response: { "volume": 40, "muted": true, "equalizer_preset": "default" }
+
+---
+Question: Unmute the speakers and keep the volume at what it was before.
+Call: { "func_call": "unmute", "level": 40, "preset": "default" }
+Response: { "volume": 40, "muted": false, "equalizer_preset": "default" }
+
+---
+Question: Set the volume to 50 and switch the equalizer to rock preset.
+Call: { "func_call": "set_volume", "level": 50, "preset": "rock" }
+Response: { "volume": 50, "muted": false, "equalizer_preset": "rock" }
+
+---
+Question: Please mute the system while I check the notifications.
+Call: { "func_call": "mute", "level": 65, "preset": "pop" }
+Response: { "volume": 65, "muted": true, "equalizer_preset": "pop" }
+
+---
+Question: Change the volume to 30 for background listening and use the jazz preset.
+Call: { "func_call": "set_volume", "level": 30, "preset": "jazz" }
+Response: { "volume": 30, "muted": false, "equalizer_preset": "jazz" }
+
+---
+Question: Unmute the device and boost the volume to 90 for the gym session.
+Call: { "func_call": "unmute", "level": 90, "preset": "bass_boost" }
+Response: { "volume": 90, "muted": false, "equalizer_preset": "bass_boost" }
+
+---
+Question: Set the volume to 0 effectively muting it, but keep the state as unmuted for now.
+Call: { "func_call": "set_volume", "level": 0, "preset": "flat" }
+Response: { "volume": 0, "muted": false, "equalizer_preset": "flat" }
+
+---
+Question: Activate mute mode while preserving the current 75 volume level.
+Call: { "func_call": "mute", "level": 75, "preset": "classical" }
+Response: { "volume": 75, "muted": true, "equalizer_preset": "classical" }
+
+---
+Question: Raise the volume to 60 and apply the acoustic preset for this song.
+Call: { "func_call": "set_volume", "level": 60, "preset": "acoustic" }
+Response: { "volume": 60, "muted": false, "equalizer_preset": "acoustic" }
+
+---
+Question: Unmute the player and reset volume to a comfortable 45 for morning news.
+Call: { "func_call": "unmute", "level": 45, "preset": "voice_enhance" }
+Response: { "volume": 45, "muted": false, "equalizer_preset": "voice_enhance" }

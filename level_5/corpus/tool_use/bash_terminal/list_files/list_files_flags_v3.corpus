@@ -1,0 +1,47 @@
+Question: Display detailed file information for the /opt/software directory including hidden items.
+Call: { "func_call": "ls_la", "path": "/opt/software", "flags": "-la" }
+Response: { "entries": ["drwxr-xr-x 4 root root 4096 Nov 05 10:15 .", "drwxr-xr-x 12 root root 4096 Oct 20 08:30 ..", "-rw-r--r-- 1 root root 1024 Nov 05 10:15 .version", "drwxr-xr-x 2 root root 4096 Nov 05 10:14 bin", "-rwxr-xr-x 1 root root 524288 Nov 05 10:14 installer.sh"], "count": 5 }
+
+Question: Show human-readable file sizes within the media images folder.
+Call: { "func_call": "ls_lh", "path": "/home/carlos/Media/Images", "flags": "-lh" }
+Response: { "entries": ["total 3.8G", "-rw-r--r-- 1 carlos carlos 1.2G Nov 06 09:00 vacation_2024.raw", "-rw-r--r-- 1 carlos carlos 450M Nov 06 09:15 concert.jpg", "-rw-r--r-- 1 carlos carlos 2.1G Nov 06 10:30 drone_footage.mp4"], "count": 4 }
+
+Question: Recursively list all components in the library src tree.
+Call: { "func_call": "ls_R", "path": "/usr/local/lib/mylib/src", "flags": "-R" }
+Response: { "entries": [".:", "main.c", "config.h", "./core:", "engine.c", "types.h", "./net:", "socket.c", "protocol.h"], "count": 7 }
+
+Question: List configuration files in /etc/nginx sorted by size.
+Call: { "func_call": "ls", "path": "/etc/nginx", "flags": "--sort=size" }
+Response: { "entries": ["mime.types", "nginx.conf", "sites-available", "sites-enabled", "modules.conf"], "count": 5 }
+
+Question: Reveal hidden configuration files in the current workspace.
+Call: { "func_call": "ls", "path": "./workspace", "flags": "-a" }
+Response: { "entries": [".", "..", ".gitignore", ".dockerignore", ".env.local", ".vscode"], "count": 6 }
+
+Question: List archive files in /var/backups sorted by modification timestamp.
+Call: { "func_call": "ls", "path": "/var/backups", "flags": "-lt" }
+Response: { "entries": ["db_dump_20241107.sql", "sys_config_20241106.tar", "full_backup_20241105.gz", "logs_20241104.zip"], "count": 4 }
+
+Question: Get a verbose listing of the /cache directory showing all attributes.
+Call: { "func_call": "ls_la", "path": "/var/cache/apt", "flags": "-la" }
+Response: { "entries": ["drwxr-xr-x 8 root root 4096 Nov 07 11:00 .", "drwxr-xr-x 15 root root 4096 Oct 15 09:00 ..", "-rw-r--r-- 1 root root 15M Nov 07 10:55 pkgcache.bin", "-rw-r--r-- 1 root root 8.2M Nov 07 10:55 srcpkgcache.bin", "drwxr-xr-x 2 root root 4096 Nov 07 10:50 archives"], "count": 5 }
+
+Question: Display human-readable sizes for the data volume snapshots.
+Call: { "func_call": "ls_lh", "path": "/mnt/data/snapshots", "flags": "-lh" }
+Response: { "entries": ["total 12T", "drwxr-xr-x 2 root root 4.0K Feb 15 00:00 snap_001", "drwxr-xr-x 2 root root 4.0K May 20 00:00 snap_002", "-rw-r--r-- 1 root root 8.5T Aug 10 23:59 full_backup_q3.tar"], "count": 4 }
+
+Question: Recursive list of the dependencies folder in the mobile app project.
+Call: { "func_call": "ls_R", "path": "/home/dev/mobile_app/dependencies", "flags": "-R" }
+Response: { "entries": [".:", "flutter", "dart", "./flutter:", "bin", "cache", "./dart:", "sdk", "pub"], "count": 7 }
+
+Question: List executables in /usr/local/bin sorted by file size descending.
+Call: { "func_call": "ls", "path": "/usr/local/bin", "flags": "--sort=size" }
+Response: { "entries": ["docker", "kubectl", "terraform", "ansible", "helm"], "count": 5 }
+
+Question: Show all keys and config files in the .gnupg directory.
+Call: { "func_call": "ls", "path": "/home/diana/.gnupg", "flags": "-a" }
+Response: { "entries": [".", "..", "pubring.kbx", "trustdb.gpg", "private-keys-v1.d", "gpg-agent.conf"], "count": 6 }
+
+Question: List container logs in /var/lib/docker/containers sorted by time.
+Call: { "func_call": "ls", "path": "/var/lib/docker/containers", "flags": "-lt" }
+Response: { "entries": ["f9e8d7c6b5a4", "a1b2c3d4e5f6", "9876543210ab", "web-server-json.log"], "count": 4 }

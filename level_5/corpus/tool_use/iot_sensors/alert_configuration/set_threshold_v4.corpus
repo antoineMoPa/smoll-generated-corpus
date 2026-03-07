@@ -1,0 +1,87 @@
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Establish a high voltage alert for the generator room if it exceeds 240 volts.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "gen-vol-13", "metric": "voltage", "threshold": 240, "condition": "above" }
+Response: { "alert_id": "alt-9933", "sensor_id": "gen-vol-13", "status": "active", "threshold": 240 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Configure the wine cellar temperature sensor to trigger if it drops below 12 degrees.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "wine-temp-14", "metric": "temperature", "threshold": 12, "condition": "below" }
+Response: { "alert_id": "alt-9934", "sensor_id": "wine-temp-14", "status": "active", "threshold": 12 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set a water leak alert for the bathroom if moisture levels go above 5 percent.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "bth-moi-15", "metric": "moisture", "threshold": 5, "condition": "above" }
+Response: { "alert_id": "alt-9935", "sensor_id": "bth-moi-15", "status": "active", "threshold": 5 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Alert me if the data center pressure falls below 980 hPa.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "dc-prs-16", "metric": "pressure", "threshold": 980, "condition": "below" }
+Response: { "alert_id": "alt-9936", "sensor_id": "dc-prs-16", "status": "active", "threshold": 980 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Configure a critical smoke detection alert for the kitchen if particles exceed 0.5 mg/m3.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "kit-smk-17", "metric": "smoke", "threshold": 0.5, "condition": "above" }
+Response: { "alert_id": "alt-9937", "sensor_id": "kit-smk-17", "status": "active", "threshold": 0.5 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set a low light warning for the storage closet if illumination drops below 50 lux.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "stor-lgt-18", "metric": "light", "threshold": 50, "condition": "below" }
+Response: { "alert_id": "alt-9938", "sensor_id": "stor-lgt-18", "status": "active", "threshold": 50 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Trigger an alert if the server rack current rises above 15 amps.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "rack-cur-19", "metric": "current", "threshold": 15, "condition": "above" }
+Response: { "alert_id": "alt-9939", "sensor_id": "rack-cur-19", "status": "active", "threshold": 15 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set a safety alert for the pool area if water temperature goes below 20 degrees.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "pool-temp-20", "metric": "temperature", "threshold": 20, "condition": "below" }
+Response: { "alert_id": "alt-9940", "sensor_id": "pool-temp-20", "status": "active", "threshold": 20 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Configure the ventilation shaft to alert if airflow drops below 200 CFM.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "vent-flow-21", "metric": "airflow", "threshold": 200, "condition": "below" }
+Response: { "alert_id": "alt-9941", "sensor_id": "vent-flow-21", "status": "active", "threshold": 200 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Set a noise level alert for the library if decibels exceed 45 dB.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "lib-noi-22", "metric": "noise", "threshold": 45, "condition": "above" }
+Response: { "alert_id": "alt-9942", "sensor_id": "lib-noi-22", "status": "active", "threshold": 45 }
+
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Create a vibration warning for the elevator motor if it goes above 2 mm/s.
+Call: { "func_call": "set_alert_threshold", "sensor_id": "elv-vib-23", "metric": "vibration", "threshold": 2, "condition": "above" }
+Response: { "alert_id": "alt-9943", "sensor_id": "elv-vib-23", "status": "active", "threshold": 2 }

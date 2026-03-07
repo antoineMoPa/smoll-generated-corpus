@@ -1,0 +1,51 @@
+Available Tools: update_record | update_batch | soft_delete | restore_record
+Call Schema: { "func_call": "string", "table": "string", "id": number, "data": {}, "where": "string" }
+Response Schema: { "affected_rows": number, "status": "string", "updated_at": "string" }
+---
+Question: Modify the first name for user ID 5012 to 'Alexandra'.
+Call: { "func_call": "update_record", "table": "users", "id": 5012, "data": { "first_name": "Alexandra" }, "where": "id = 5012" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:12:44Z" }
+
+Question: Set the order status for ID 3345 to 'processing'.
+Call: { "func_call": "update_record", "table": "orders", "id": 3345, "data": { "status": "processing", "processed_by": "system_auto" }, "where": "id = 3345" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:13:22Z" }
+
+Question: Raise the cost of item ID 204 to 89.95.
+Call: { "func_call": "update_record", "table": "products", "id": 204, "data": { "price": 89.95, "currency": "EUR" }, "where": "id = 204" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:14:08Z" }
+
+Question: Update the middle initial for user ID 774 to 'J'.
+Call: { "func_call": "update_record", "table": "users", "id": 774, "data": { "middle_initial": "J" }, "where": "id = 774" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:15:33Z" }
+
+Question: Flag order ID 1120 as 'cancelled' due to stock shortage.
+Call: { "func_call": "update_record", "table": "orders", "id": 1120, "data": { "status": "cancelled", "cancellation_reason": "Out of stock" }, "where": "id = 1120" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:16:47Z" }
+
+Question: Reset the warehouse stock for product ID 609 to 1200 units.
+Call: { "func_call": "update_record", "table": "products", "id": 609, "data": { "stock_quantity": 1200 }, "where": "id = 609" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:17:59Z" }
+
+Question: Change the mobile number for user ID 9902 to +44-20-7946-0958.
+Call: { "func_call": "update_record", "table": "users", "id": 9902, "data": { "phone": "+44-20-7946-0958" }, "where": "id = 9902" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:18:21Z" }
+
+Question: Revise the billing address for order ID 5588 to 45 Oak Lane, Dublin.
+Call: { "func_call": "update_record", "table": "orders", "id": 5588, "data": { "billing_address": "45 Oak Lane, Dublin", "city": "Dublin" }, "where": "id = 5588" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:19:45Z" }
+
+Question: Discount product ID 337 to 9.99 for clearance.
+Call: { "func_call": "update_record", "table": "products", "id": 337, "data": { "price": 9.99, "clearance_flag": true }, "where": "id = 337" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:20:12Z" }
+
+Question: Upgrade the subscription level for user ID 42 to 'enterprise'.
+Call: { "func_call": "update_record", "table": "users", "id": 42, "data": { "account_tier": "enterprise", "tier_start_date": "2023-11-05" }, "where": "id = 42" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:21:38Z" }
+
+Question: Switch the shipping carrier for order ID 8819 to 'FedEx'.
+Call: { "func_call": "update_record", "table": "orders", "id": 8819, "data": { "delivery_method": "FedEx", "tracking_number": "FX123456789" }, "where": "id = 8819" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:22:54Z" }
+
+Question: Refresh the specs for product ID 445 to list USB-C support.
+Call: { "func_call": "update_record", "table": "products", "id": 445, "data": { "description": "New version featuring USB-C connectivity and fast charging." }, "where": "id = 445" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:23:41Z" }

@@ -1,0 +1,59 @@
+Context: Maria finished her homework before she went to the park to play soccer.
+Input: {"question": "What happened before Maria went to the park?"}
+Output: {"answer": "Maria finished her homework"}
+
+Context: The chef chopped the vegetables and then added them to the boiling pot.
+Input: {"question": "What happened after the chef chopped the vegetables?"}
+Output: {"answer": "added them to the boiling pot"}
+
+Context: After the storm passed, the family cleaned up the debris in their yard.
+Input: {"question": "What happened before the family cleaned up the debris?"}
+Output: {"answer": "the storm passed"}
+
+Context: James boarded the train and immediately fell asleep during the long journey.
+Input: {"question": "What happened after James boarded the train?"}
+Output: {"answer": "immediately fell asleep"}
+
+Context: The lights flickered violently right before the entire building lost power.
+Input: {"question": "What happened before the entire building lost power?"}
+Output: {"answer": "The lights flickered violently"}
+
+Context: Sarah submitted her application and waited two weeks for a response.
+Input: {"question": "What happened after Sarah submitted her application?"}
+Output: {"answer": "waited two weeks for a response"}
+
+Context: Before the concert started, the band tuned their instruments on stage.
+Input: {"question": "What happened before the concert started?"}
+Output: {"answer": "the band tuned their instruments"}
+
+Context: The dog chased the squirrel up the tree and then barked loudly at the base.
+Input: {"question": "What happened after the dog chased the squirrel up the tree?"}
+Output: {"answer": "barked loudly at the base"}
+
+Context: Scientists analyzed the data samples prior to publishing their findings in the journal.
+Input: {"question": "What happened before scientists published their findings?"}
+Output: {"answer": "Scientists analyzed the data samples"}
+
+Context: The clock struck midnight and the party guests began to leave the hall.
+Input: {"question": "What happened after the clock struck midnight?"}
+Output: {"answer": "the party guests began to leave the hall"}
+
+Context: David locked the front door after he turned off all the lights inside.
+Input: {"question": "What happened before David locked the front door?"}
+Output: {"answer": "he turned off all the lights inside"}
+
+Context: The seeds were planted in the spring and bloomed beautifully by summer.
+Input: {"question": "What happened after the seeds were planted?"}
+Output: {"answer": "bloomed beautifully by summer"}
+
+Context: Before the meeting ended, the manager distributed the new schedule to everyone.
+Input: {"question": "What happened before the meeting ended?"}
+Output: {"answer": "the manager distributed the new schedule"}
+
+Context: The car skidded on the ice and crashed into the guardrail seconds later.
+Input: {"question": "What happened after the car skidded on the ice?"}
+Output: {"answer": "crashed into the guardrail"}
+
+Context: Elena packed her suitcase before she called a taxi to the airport.
+Input: {"question": "What happened before Elena called a taxi?"}
+Output: {"answer": "Elena packed her suitcase"}

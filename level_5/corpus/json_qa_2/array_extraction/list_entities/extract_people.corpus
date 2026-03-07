@@ -1,0 +1,39 @@
+| Context: The quarterly review meeting included Sarah Jenkins, Michael Chen, and Priya Patel. They discussed the upcoming product launch strategies for the next fiscal year. David Wong joined the call late to present the financial projections. | Input: {"question": "Who was present at the quarterly review?"} | Output: {"answer": ["Sarah Jenkins", "Michael Chen", "Priya Patel", "David Wong"]}
+
+| Context: During the charity gala, Robert Miller and Elena Rodriguez signed the donation agreement on behalf of their foundations. James O'Connor witnessed the signing as the legal representative. Later, Maria Gomez thanked them for their generous contributions. | Input: {"question": "Who signed the agreement?"} | Output: {"answer": ["Robert Miller", "Elena Rodriguez"]}
+
+| Context: The software development team consists of Alex Turner, Bethany Cole, and Chris Evans. They are currently working on the new mobile application interface. Daniel Kim will be joining the team next week as a senior designer. | Input: {"question": "Who are the current members of the software development team?"} | Output: {"answer": ["Alex Turner", "Bethany Cole", "Chris Evans"]}
+
+| Context: At the town hall, Mayor Linda Thompson addressed the crowd alongside Councilman Tom Harris and Councilwoman Susan Lee. They outlined the new infrastructure plans for the city center. Fire Chief Mark Davis also spoke about safety protocols. | Input: {"question": "Which officials spoke at the town hall?"} | Output: {"answer": ["Linda Thompson", "Tom Harris", "Susan Lee", "Mark Davis"]}
+
+| Context: The book club met at the library to discuss the latest novel. Attendees included Jessica Brown, Kevin White, and Laura Green. Nathan Black arrived just as the discussion was ending. | Input: {"question": "Who attended the book club meeting?"} | Output: {"answer": ["Jessica Brown", "Kevin White", "Laura Green", "Nathan Black"]}
+
+| Context: For the science project, Olivia Martinez, Peter Clark, and Quinn Lewis formed a group. They decided to build a model volcano for the fair. Rachel King offered to help them with the presentation slides. | Input: {"question": "Who formed the science project group?"} | Output: {"answer": ["Olivia Martinez", "Peter Clark", "Quinn Lewis"]}
+
+| Context: The wedding party featured bridesmaids Emily Hall, Sophie Young, and Grace Allen. The groomsmen were William Scott, Henry Adams, and George Baker. The ceremony was officiated by Reverend John Smith. | Input: {"question": "Who were the bridesmaids and groomsmen?"} | Output: {"answer": ["Emily Hall", "Sophie Young", "Grace Allen", "William Scott", "Henry Adams", "George Baker"]}
+
+| Context: In the boardroom, CEO Amanda Foster, CFO Brian Cook, and CTO Cynthia Reed reviewed the merger details. Legal counsel Derek Morgan advised on the regulatory compliance issues. They all agreed to proceed with the acquisition. | Input: {"question": "Who reviewed the merger details?"} | Output: {"answer": ["Amanda Foster", "Brian Cook", "Cynthia Reed", "Derek Morgan"]}
+
+| Context: The hiking expedition was led by guide Frank Hughes and assistant Gloria Price. Participants included Harry Evans, Irene Hill, and Jack Moore. They reached the summit before noon despite the foggy conditions. | Input: {"question": "Who participated in the hiking expedition?"} | Output: {"answer": ["Frank Hughes", "Gloria Price", "Harry Evans", "Irene Hill", "Jack Moore"]}
+
+| Context: During the press conference, Senator Karen Wright, Representative Leo Carter, and Governor Mia Phillips answered questions from the media. They focused on the new education bill. Journalist Noah Edwards recorded the entire event. | Input: {"question": "Which politicians spoke at the press conference?"} | Output: {"answer": ["Karen Wright", "Leo Carter", "Mia Phillips"]}
+
+| Context: The art exhibition showcased works by painters Oscar Nelson, Paula Parker, and Quentin Ross. Curator Rita Stewart gave a tour to the visiting dignitaries. Critic Sam Taylor wrote a glowing review of the show. | Input: {"question": "Whose works were showcased in the art exhibition?"} | Output: {"answer": ["Oscar Nelson", "Paula Parker", "Quentin Ross"]}
+
+| Context: The crisis management team included Director Tina Baker, Analyst Uma Patel, and Coordinator Victor Zhang. They worked through the night to resolve the server outage. Intern Wendy Liu brought them coffee and updates. | Input: {"question": "Who was on the crisis management team?"} | Output: {"answer": ["Tina Baker", "Uma Patel", "Victor Zhang"]}
+
+| Context: At the family reunion, cousins Xavier Johnson, Yolanda King, and Zachary Lee reconnected after ten years. Aunt Alice Morgan prepared a large feast for everyone. Uncle Bob Norton told stories about their grandparents. | Input: {"question": "Which cousins reconnected at the reunion?"} | Output: {"answer": ["Xavier Johnson", "Yolanda King", "Zachary Lee"]}
+
+| Context: The film cast features actors Charlie Davis, Diana Evans, and Edward Fox. Director Fiona Gray praised their performances during the interview. Producer Gordon Hill announced a sequel is in development. | Input: {"question": "Who are the main actors in the film?"} | Output: {"answer": ["Charlie Davis", "Diana Evans", "Edward Fox"]}
+
+| Context: The debate team from Lincoln High included debaters Hannah Irwin, Isaac Jones, and Julia Kent. Their coach, Mr. Alan Long, prepared them for the regional finals. They won against the team from Washington High. | Input: {"question": "Who were the debaters from Lincoln High?"} | Output: {"answer": ["Hannah Irwin", "Isaac Jones", "Julia Kent"]}
+
+| Context: The startup founders, Liam Mason, Maya Nguyen, and Nathan Owen, pitched their idea to investors. Investor Olivia Perry asked detailed questions about their revenue model. She decided to fund their project along with partner Paul Quinn. | Input: {"question": "Who are the startup founders?"} | Output: {"answer": ["Liam Mason", "Maya Nguyen", "Nathan Owen"]}
+
+| Context: The orchestra concert featured soloists Rose Smith, Samuel Thomas, and Tara Upton. Conductor Vincent Walker led the symphony with great energy. The audience gave them a standing ovation at the end. | Input: {"question": "Who were the soloists in the orchestra concert?"} | Output: {"answer": ["Rose Smith", "Samuel Thomas", "Tara Upton"]}
+
+| Context: The research paper was authored by Dr. Emily Vance, Dr. Fred Walsh, and Dr. Gina Xenos. They conducted experiments over three years at the university. Peer reviewer Hugo York validated their methodology. | Input: {"question": "Who authored the research paper?"} | Output: {"answer": ["Emily Vance", "Fred Walsh", "Gina Xenos"]}
+
+| Context: The volunteer group for the beach cleanup included Ian Zane, Jane Bell, and Kyle Ross. They collected over fifty bags of trash by noon. Supervisor Lisa Chen thanked them for their hard work. | Input: {"question": "Who volunteered for the beach cleanup?"} | Output: {"answer": ["Ian Zane", "Jane Bell", "Kyle Ross"]}
+
+| Context: The cooking competition finalists were chefs Marco Silva, Nina Petrov, and Omar Hassan. Judge Patricia Stone tasted each dish carefully. Host Quentin Blake announced Marco as the winner. | Input: {"question": "Who were the finalists in the cooking competition?"} | Output: {"answer": ["Marco Silva", "Nina Petrov", "Omar Hassan"]}

@@ -1,0 +1,20 @@
+{"func_call": "batch_update", "items": [{"id": "ORD-1001", "status": "shipped"}, {"id": "ORD-1002", "status": "shipped"}, {"id": "ORD-1003", "status": "shipped"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "TKT-5501", "status": "resolved"}, {"id": "TKT-5502", "status": "resolved"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ACC-9921", "status": "suspended"}, {"id": "ACC-9922", "status": "suspended"}, {"id": "ACC-9923", "status": "suspended"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ORD-2045", "status": "cancelled"}, {"id": "ORD-2046", "status": "cancelled"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "TKT-8812", "status": "in_progress"}, {"id": "TKT-8813", "status": "in_progress"}, {"id": "TKT-8814", "status": "in_progress"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ACC-3301", "status": "verified"}, {"id": "ACC-3302", "status": "verified"}], "options": {"on_error": "stop", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ORD-7734", "status": "refunded"}, {"id": "ORD-7735", "status": "refunded"}, {"id": "ORD-7736", "status": "refunded"}], "options": {"on_error": "skip", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "TKT-1122", "status": "pending_review"}, {"id": "TKT-1123", "status": "pending_review"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ACC-4455", "status": "active"}, {"id": "ACC-4456", "status": "active"}, {"id": "ACC-4457", "status": "active"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "ORD-6678", "status": "processing"}, {"id": "ORD-6679", "status": "processing"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "TKT-9900", "status": "closed"}, {"id": "TKT-9901", "status": "closed"}, {"id": "TKT-9902", "status": "closed"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ACC-1234", "status": "locked"}, {"id": "ACC-1235", "status": "locked"}], "options": {"on_error": "stop", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ORD-5566", "status": "delivered"}, {"id": "ORD-5567", "status": "delivered"}, {"id": "ORD-5568", "status": "delivered"}], "options": {"on_error": "skip", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "TKT-7788", "status": "escalated"}, {"id": "TKT-7789", "status": "escalated"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ACC-8899", "status": "archived"}, {"id": "ACC-8800", "status": "archived"}, {"id": "ACC-8801", "status": "archived"}], "options": {"on_error": "stop", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "ORD-3344", "status": "on_hold"}, {"id": "ORD-3345", "status": "on_hold"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "TKT-2233", "status": "waiting_customer"}, {"id": "TKT-2234", "status": "waiting_customer"}, {"id": "TKT-2235", "status": "waiting_customer"}], "options": {"on_error": "skip", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ACC-5544", "status": "pending_activation"}, {"id": "ACC-5545", "status": "pending_activation"}], "options": {"on_error": "stop", "dry_run": false}}
+{"func_call": "batch_update", "items": [{"id": "ORD-9988", "status": "returned"}, {"id": "ORD-9989", "status": "returned"}, {"id": "ORD-9990", "status": "returned"}], "options": {"on_error": "skip", "dry_run": true}}
+{"func_call": "batch_update", "items": [{"id": "TKT-6655", "status": "reopened"}, {"id": "TKT-6656", "status": "reopened"}], "options": {"on_error": "skip", "dry_run": false}}

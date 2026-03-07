@@ -1,0 +1,87 @@
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Register four new medical supply items in the hospital inventory database.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "MED-GLO-001", "name": "Nitrile Exam Gloves", "price": 12.99, "stock": 5000 }, { "sku": "MED-MASK-002", "name": "Surgical Face Masks", "price": 8.50, "stock": 3000 }, { "sku": "MED-SYR-003", "name": "Sterile Syringes 10ml", "price": 15.00, "stock": 2000 }, { "sku": "MED-BAND-004", "name": "Elastic Bandages", "price": 4.25, "stock": 1500 } ] }
+Response: { "id": 9101, "table": "products", "inserted": 4, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log three security alert events triggered by the firewall in the Tokyo data center.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-05T13:45:10Z", "level": "CRITICAL", "service": "firewall-jp", "message": "Suspicious inbound traffic detected from IP 192.168.4.5" }, { "timestamp": "2023-11-05T13:45:12Z", "level": "ERROR", "service": "firewall-jp", "message": "Port scan attempt blocked: source 10.0.0.99" }, { "timestamp": "2023-11-05T13:46:00Z", "level": "WARN", "service": "firewall-jp", "message": "Repeated failed authentication attempts" } ] }
+Response: { "id": 55201, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Import six new regional managers into the employee directory for the EMEA division.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "p.miller@globalcorp.eu", "role": "manager", "department": "Sales", "active": true }, { "email": "a.schmidt@globalcorp.eu", "role": "manager", "department": "Operations", "active": true }, { "email": "l.dubois@globalcorp.eu", "role": "manager", "department": "HR", "active": true }, { "email": "g.rossi@globalcorp.eu", "role": "manager", "department": "Finance", "active": false }, { "email": "m.garcia@globalcorp.eu", "role": "manager", "department": "Marketing", "active": true }, { "email": "s.kowalski@globalcorp.eu", "role": "manager", "department": "IT", "active": true } ] }
+Response: { "id": 11500, "table": "users", "inserted": 6, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add five new artisanal coffee blends to the beverage catalog.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "COF-ESP-001", "name": "Dark Roast Espresso", "price": 18.99, "stock": 400 }, { "sku": "COF-LAT-002", "name": "Hazelnut Latte Blend", "price": 16.50, "stock": 350 }, { "sku": "COF-COL-003", "name": "Single Origin Colombian", "price": 22.00, "stock": 200 }, { "sku": "COF-DEC-004", "name": "Decaf House Mix", "price": 15.99, "stock": 500 }, { "sku": "COF-VAN-005", "name": "Vanilla Bean Cold Brew", "price": 19.50, "stock": 250 } ] }
+Response: { "id": 9102, "table": "products", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Record a sequence of payment gateway timeouts occurring during the flash sale.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-05T18:01:05Z", "level": "ERROR", "service": "payment-gateway", "message": "Transaction timeout for order #7721" }, { "timestamp": "2023-11-05T18:01:12Z", "level": "ERROR", "service": "payment-gateway", "message": "Transaction timeout for order #7722" }, { "timestamp": "2023-11-05T18:01:18Z", "level": "CRITICAL", "service": "payment-gateway", "message": "Service degradation detected" } ] }
+Response: { "id": 55202, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Bulk insert eight new gardening tools into the home improvement inventory.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "GRD-SHO-001", "name": "Steel Shovel", "price": 29.99, "stock": 100 }, { "sku": "GRD-RAK-002", "name": "Leaf Rake", "price": 14.50, "stock": 150 }, { "sku": "GRD-HOE-003", "name": "Garden Hoe", "price": 18.00, "stock": 80 }, { "sku": "GRD-TRO-004", "name": "Hand Trowel", "price": 9.99, "stock": 300 }, { "sku": "GRD-SHE-005", "name": "Pruning Shears", "price": 24.99, "stock": 120 }, { "sku": "GRD-FOR-006", "name": "Digging Fork", "price": 32.50, "stock": 60 }, { "sku": "GRD-WAT-007", "name": "Watering Can", "price": 19.99, "stock": 200 }, { "sku": "GRD-GLO-008", "name": "Protective Gloves", "price": 12.00, "stock": 400 } ] }
+Response: { "id": 9103, "table": "products", "inserted": 8, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add two new audit analysts to the compliance team user list.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "auditor.x@securefirm.com", "role": "analyst", "department": "Compliance", "active": true }, { "email": "auditor.y@securefirm.com", "role": "senior_analyst", "department": "Compliance", "active": true } ] }
+Response: { "id": 11501, "table": "users", "inserted": 2, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log four cache eviction events from the Redis cluster in the US-East region.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-05T20:10:00Z", "level": "INFO", "service": "cache-manager", "message": "Evicting stale keys for session_store" }, { "timestamp": "2023-11-05T20:10:05Z", "level": "INFO", "service": "cache-manager", "message": "Memory usage dropped to 75%" }, { "timestamp": "2023-11-05T20:15:00Z", "level": "WARN", "service": "cache-manager", "message": "High eviction rate detected" }, { "timestamp": "2023-11-05T20:15:30Z", "level": "INFO", "service": "cache-manager", "message": "Cache rebalancing complete" } ] }
+Response: { "id": 55203, "table": "event_logs", "inserted": 4, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Upload three new yoga mats and accessories to the fitness equipment store.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "FIT-YOG-001", "name": "Non-Slip Yoga Mat", "price": 35.00, "stock": 200 }, { "sku": "FIT-BLK-002", "name": "Cork Yoga Block", "price": 12.99, "stock": 350 }, { "sku": "FIT-STR-003", "name": "Resistance Strap", "price": 8.50, "stock": 500 } ] }
+Response: { "id": 9104, "table": "products", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Register five new internship candidates for the summer program database.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "intern.1@university.edu", "role": "intern", "department": "Research", "active": true }, { "email": "intern.2@university.edu", "role": "intern", "department": "Development", "active": true }, { "email": "intern.3@university.edu", "role": "intern", "department": "Design", "active": true }, { "email": "intern.4@university.edu", "role": "intern", "department": "Data", "active": false }, { "email": "intern.5@university.edu", "role": "intern", "department": "Support", "active": true } ] }
+Response: { "id": 11502, "table": "users", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Insert a batch of six failed email delivery notifications from the marketing campaign.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-11-06T09:00:01Z", "level": "ERROR", "service": "email-sender", "message": "Bounce: Invalid recipient address user1@example.com" }, { "timestamp": "2023-11-06T09:00:02Z", "level": "ERROR", "service": "email-sender", "message": "Bounce: Mailbox full user2@example.com" }, { "timestamp": "2023-11-06T09:00:03Z", "level": "WARN", "service": "email-sender", "message": "Deferred: Greylisting detected user3@example.com" }, { "timestamp": "2023-11-06T09:00:04Z", "level": "ERROR", "service": "email-sender", "message": "Bounce: Domain not found user4@fake domain.com" }, { "timestamp": "2023-11-06T09:00:05Z", "level": "ERROR", "service": "email-sender", "message": "Bounce: Spam filter rejection user5@example.com" }, { "timestamp": "2023-11-06T09:00:06Z", "level": "INFO", "service": "email-sender", "message": "Batch processing completed with errors" } ] }
+Response: { "id": 55204, "table": "event_logs", "inserted": 6, "status": "success" }

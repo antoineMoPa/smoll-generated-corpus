@@ -1,0 +1,51 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Locate mechanical keyboards with RGB lighting under $150.
+Call: { "func_call": "search_products", "query": "mechanical keyboard RGB", "category": "electronics", "min_price": 40, "max_price": 150, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_110", "name": "KeyMaster RGB Pro", "price": 89.99, "rating": 4.7, "in_stock": true }, { "id": "elec_111", "name": "TypeWave Mechanical", "price": 120.00, "rating": 4.5, "in_stock": true }, { "id": "elec_112", "name": "ClickClack Board", "price": 65.50, "rating": 4.2, "in_stock": false } ], "total": 3 }
+
+Question: Show me organic green tea bags in the grocery section.
+Call: { "func_call": "search_products", "query": "organic green tea", "category": "grocery", "min_price": 5, "max_price": 20, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "groc_201", "name": "ZenLeaf Green Tea", "price": 8.99, "rating": 4.6, "in_stock": true }, { "id": "groc_202", "name": "PureGarden Tea Bags", "price": 12.50, "rating": 4.8, "in_stock": true }, { "id": "groc_203", "name": "NatureBrew Organic", "price": 15.00, "rating": 4.4, "in_stock": true } ], "total": 3 }
+
+Question: Find waterproof hiking boots for men under $200.
+Call: { "func_call": "search_products", "query": "men waterproof hiking boots", "category": "clothing", "min_price": 80, "max_price": 200, "sort_by": "relevance" }
+Response: { "products": [ { "id": "cloth_401", "name": "TrailBlazer Waterproof", "price": 145.00, "rating": 4.8, "in_stock": true }, { "id": "cloth_402", "name": "MountainPeak Boots", "price": 110.50, "rating": 4.5, "in_stock": true }, { "id": "cloth_403", "name": "RidgeWalker Pro", "price": 189.99, "rating": 4.9, "in_stock": false } ], "total": 3 }
+
+Question: Search for stainless steel cookware sets.
+Call: { "func_call": "search_products", "query": "stainless steel cookware set", "category": "home_goods", "min_price": 100, "max_price": 400, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "home_501", "name": "ChefElite Steel Set", "price": 299.00, "rating": 4.9, "in_stock": true }, { "id": "home_502", "name": "KitchenPro Basics", "price": 150.00, "rating": 4.6, "in_stock": true }, { "id": "home_503", "name": "DuraCook Collection", "price": 225.50, "rating": 4.7, "in_stock": true } ], "total": 3 }
+
+Question: Get me graphic novels for teenagers under $25.
+Call: { "func_call": "search_products", "query": "teen graphic novel", "category": "books", "min_price": 10, "max_price": 25, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "book_501", "name": "Hero Academy Vol 1", "price": 12.99, "rating": 4.5, "in_stock": true }, { "id": "book_502", "name": "Space Pirates Saga", "price": 14.50, "rating": 4.3, "in_stock": true }, { "id": "book_503", "name": "Mystery High Comic", "price": 19.95, "rating": 4.7, "in_stock": false } ], "total": 3 }
+
+Question: Find wireless gaming mice with high DPI.
+Call: { "func_call": "search_products", "query": "wireless gaming mouse high DPI", "category": "electronics", "min_price": 30, "max_price": 100, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_120", "name": "SpeedClick Wireless", "price": 59.99, "rating": 4.8, "in_stock": true }, { "id": "elec_121", "name": "PrecisionGamer Mouse", "price": 75.00, "rating": 4.6, "in_stock": true }, { "id": "elec_122", "name": "RapidFire Pointer", "price": 45.50, "rating": 4.4, "in_stock": true } ], "total": 3 }
+
+Question: Look for wool blend scarves in winter accessories.
+Call: { "func_call": "search_products", "query": "wool blend scarf", "category": "clothing", "min_price": 15, "max_price": 60, "sort_by": "relevance" }
+Response: { "products": [ { "id": "cloth_501", "name": "CozyWrap Wool Scarf", "price": 35.00, "rating": 4.7, "in_stock": true }, { "id": "cloth_502", "name": "WinterSoft Blend", "price": 28.50, "rating": 4.5, "in_stock": true }, { "id": "cloth_503", "name": "ArcticKnit Accessory", "price": 42.00, "rating": 4.9, "in_stock": false } ], "total": 3 }
+
+Question: Search for biographies of historical figures.
+Call: { "func_call": "search_products", "query": "historical figure biography", "category": "books", "min_price": 12, "max_price": 35, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "book_601", "name": "Life of Lincoln", "price": 24.99, "rating": 4.8, "in_stock": true }, { "id": "book_602", "name": "Churchill's Years", "price": 19.50, "rating": 4.6, "in_stock": true }, { "id": "book_603", "name": "Napoleon Rising", "price": 29.95, "rating": 4.4, "in_stock": true } ], "total": 3 }
+
+Question: Find air purifiers for large rooms under $250.
+Call: { "func_call": "search_products", "query": "air purifier large room", "category": "home_goods", "min_price": 80, "max_price": 250, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "home_601", "name": "PureAir Max", "price": 129.00, "rating": 4.6, "in_stock": true }, { "id": "home_602", "name": "BreezeCleaner Pro", "price": 189.99, "rating": 4.7, "in_stock": true }, { "id": "home_603", "name": "FreshZone Unit", "price": 210.00, "rating": 4.5, "in_stock": false } ], "total": 3 }
+
+Question: Show me Bluetooth speakers portable and waterproof.
+Call: { "func_call": "search_products", "query": "portable waterproof bluetooth speaker", "category": "electronics", "min_price": 25, "max_price": 80, "sort_by": "rating_desc" }
+Response: { "products": [ { "id": "elec_130", "name": "SplashSound Mini", "price": 45.00, "rating": 4.8, "in_stock": true }, { "id": "elec_131", "name": "OceanBeat Speaker", "price": 60.50, "rating": 4.6, "in_stock": true }, { "id": "elec_132", "name": "DuraTunes Portable", "price": 35.99, "rating": 4.4, "in_stock": true } ], "total": 3 }
+
+Question: Find yoga mats non-slip extra thick.
+Call: { "func_call": "search_products", "query": "non-slip extra thick yoga mat", "category": "sports", "min_price": 20, "max_price": 60, "sort_by": "relevance" }
+Response: { "products": [ { "id": "sport_101", "name": "ZenGrip Mat", "price": 32.00, "rating": 4.7, "in_stock": true }, { "id": "sport_102", "name": "FlexiYoga Thick", "price": 45.50, "rating": 4.9, "in_stock": true }, { "id": "sport_103", "name": "BalancePro Floor", "price": 28.99, "rating": 4.5, "in_stock": false } ], "total": 3 }
+
+Question: Search for fantasy board games for 4 players.
+Call: { "func_call": "search_products", "query": "fantasy board game 4 players", "category": "toys", "min_price": 30, "max_price": 70, "sort_by": "price_asc" }
+Response: { "products": [ { "id": "toy_201", "name": "DragonQuest Adventure", "price": 39.99, "rating": 4.8, "in_stock": true }, { "id": "toy_202", "name": "Kingdom Builders", "price": 45.00, "rating": 4.6, "in_stock": true }, { "id": "toy_203", "name": "Mystic Realms Game", "price": 55.50, "rating": 4.7, "in_stock": true } ], "total": 3 }

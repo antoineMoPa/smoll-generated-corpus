@@ -1,0 +1,39 @@
+Available Tools: list_inventory | restock_item | get_low_stock | update_price
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number, "price": number }
+Response Schema: { "inventory": [{ "slot_id": "string", "name": "string", "quantity": number, "price": number }] }
+Question: Display the entire contents of the snack kiosk.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "E1", "name": "Popcorn Salted", "quantity": 10, "price": 2.25 }, { "slot_id": "E2", "name": "Granola Bars", "quantity": 5, "price": 1.80 }, { "slot_id": "E3", "name": "Fruit Gummies", "quantity": 22, "price": 1.40 }, { "slot_id": "E4", "name": "Cashews Roasted", "quantity": 7, "price": 2.50 }, { "slot_id": "F1", "name": "Twix Bar", "quantity": 30, "price": 1.65 }, { "slot_id": "F2", "name": "Hershey Kisses", "quantity": 25, "price": 1.65 }, { "slot_id": "F3", "name": "Jelly Beans", "quantity": 12, "price": 1.90 }, { "slot_id": "F4", "name": "Milky Way", "quantity": 18, "price": 1.65 }, { "slot_id": "G1", "name": "Orange Soda", "quantity": 40, "price": 2.10 }, { "slot_id": "G2", "name": "Root Beer", "quantity": 35, "price": 2.10 }, { "slot_id": "G3", "name": "Lemon Lime", "quantity": 28, "price": 2.10 }, { "slot_id": "G4", "name": "Cherry Cola", "quantity": 32, "price": 2.10 }, { "slot_id": "H1", "name": "Spring Water", "quantity": 50, "price": 1.25 }, { "slot_id": "H2", "name": "Sports Drink Blue", "quantity": 20, "price": 2.40 }, { "slot_id": "H3", "name": "Green Tea", "quantity": 15, "price": 2.05 }, { "slot_id": "H4", "name": "Energy Drink", "quantity": 9, "price": 3.75 }] }
+Question: Slot E2 is almost empty on Granola Bars. Please add 15 units.
+Call: { "func_call": "restock_item", "slot_id": "E2", "quantity": 15, "price": 0 }
+Response: { "inventory": [{ "slot_id": "E2", "name": "Granola Bars", "quantity": 20, "price": 1.80 }] }
+Question: Refill the Twix supply in slot F1 with 20 bars.
+Call: { "func_call": "restock_item", "slot_id": "F1", "quantity": 20, "price": 0 }
+Response: { "inventory": [{ "slot_id": "F1", "name": "Twix Bar", "quantity": 50, "price": 1.65 }] }
+Question: The Orange Soda in G1 needs replenishing. Add 25 cans.
+Call: { "func_call": "restock_item", "slot_id": "G1", "quantity": 25, "price": 0 }
+Response: { "inventory": [{ "slot_id": "G1", "name": "Orange Soda", "quantity": 65, "price": 2.10 }] }
+Question: Report the current inventory levels for all products.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "E1", "name": "Popcorn Salted", "quantity": 10, "price": 2.25 }, { "slot_id": "E2", "name": "Granola Bars", "quantity": 20, "price": 1.80 }, { "slot_id": "E3", "name": "Fruit Gummies", "quantity": 22, "price": 1.40 }, { "slot_id": "E4", "name": "Cashews Roasted", "quantity": 7, "price": 2.50 }, { "slot_id": "F1", "name": "Twix Bar", "quantity": 50, "price": 1.65 }, { "slot_id": "F2", "name": "Hershey Kisses", "quantity": 25, "price": 1.65 }, { "slot_id": "F3", "name": "Jelly Beans", "quantity": 12, "price": 1.90 }, { "slot_id": "F4", "name": "Milky Way", "quantity": 18, "price": 1.65 }, { "slot_id": "G1", "name": "Orange Soda", "quantity": 65, "price": 2.10 }, { "slot_id": "G2", "name": "Root Beer", "quantity": 35, "price": 2.10 }, { "slot_id": "G3", "name": "Lemon Lime", "quantity": 28, "price": 2.10 }, { "slot_id": "G4", "name": "Cherry Cola", "quantity": 32, "price": 2.10 }, { "slot_id": "H1", "name": "Spring Water", "quantity": 50, "price": 1.25 }, { "slot_id": "H2", "name": "Sports Drink Blue", "quantity": 20, "price": 2.40 }, { "slot_id": "H3", "name": "Green Tea", "quantity": 15, "price": 2.05 }, { "slot_id": "H4", "name": "Energy Drink", "quantity": 9, "price": 3.75 }] }
+Question: The Energy Drink stock in H4 is dangerously low. Restock with 12 cans.
+Call: { "func_call": "restock_item", "slot_id": "H4", "quantity": 12, "price": 0 }
+Response: { "inventory": [{ "slot_id": "H4", "name": "Energy Drink", "quantity": 21, "price": 3.75 }] }
+Question: Add 18 bags of Popcorn to slot E1.
+Call: { "func_call": "restock_item", "slot_id": "E1", "quantity": 18, "price": 0 }
+Response: { "inventory": [{ "slot_id": "E1", "name": "Popcorn Salted", "quantity": 28, "price": 2.25 }] }
+Question: Please list the full inventory again to confirm the new counts.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "E1", "name": "Popcorn Salted", "quantity": 28, "price": 2.25 }, { "slot_id": "E2", "name": "Granola Bars", "quantity": 20, "price": 1.80 }, { "slot_id": "E3", "name": "Fruit Gummies", "quantity": 22, "price": 1.40 }, { "slot_id": "E4", "name": "Cashews Roasted", "quantity": 7, "price": 2.50 }, { "slot_id": "F1", "name": "Twix Bar", "quantity": 50, "price": 1.65 }, { "slot_id": "F2", "name": "Hershey Kisses", "quantity": 25, "price": 1.65 }, { "slot_id": "F3", "name": "Jelly Beans", "quantity": 12, "price": 1.90 }, { "slot_id": "F4", "name": "Milky Way", "quantity": 18, "price": 1.65 }, { "slot_id": "G1", "name": "Orange Soda", "quantity": 65, "price": 2.10 }, { "slot_id": "G2", "name": "Root Beer", "quantity": 35, "price": 2.10 }, { "slot_id": "G3", "name": "Lemon Lime", "quantity": 28, "price": 2.10 }, { "slot_id": "G4", "name": "Cherry Cola", "quantity": 32, "price": 2.10 }, { "slot_id": "H1", "name": "Spring Water", "quantity": 50, "price": 1.25 }, { "slot_id": "H2", "name": "Sports Drink Blue", "quantity": 20, "price": 2.40 }, { "slot_id": "H3", "name": "Green Tea", "quantity": 15, "price": 2.05 }, { "slot_id": "H4", "name": "Energy Drink", "quantity": 21, "price": 3.75 }] }
+Question: Restock Milky Way bars in slot F4 with 22 units.
+Call: { "func_call": "restock_item", "slot_id": "F4", "quantity": 22, "price": 0 }
+Response: { "inventory": [{ "slot_id": "F4", "name": "Milky Way", "quantity": 40, "price": 1.65 }] }
+Question: We need more Sports Drink in slot H2. Add 25 bottles.
+Call: { "func_call": "restock_item", "slot_id": "H2", "quantity": 25, "price": 0 }
+Response: { "inventory": [{ "slot_id": "H2", "name": "Sports Drink Blue", "quantity": 45, "price": 2.40 }] }
+Question: Show me the current status of every slot in the snack kiosk.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "E1", "name": "Popcorn Salted", "quantity": 28, "price": 2.25 }, { "slot_id": "E2", "name": "Granola Bars", "quantity": 20, "price": 1.80 }, { "slot_id": "E3", "name": "Fruit Gummies", "quantity": 22, "price": 1.40 }, { "slot_id": "E4", "name": "Cashews Roasted", "quantity": 7, "price": 2.50 }, { "slot_id": "F1", "name": "Twix Bar", "quantity": 50, "price": 1.65 }, { "slot_id": "F2", "name": "Hershey Kisses", "quantity": 25, "price": 1.65 }, { "slot_id": "F3", "name": "Jelly Beans", "quantity": 12, "price": 1.90 }, { "slot_id": "F4", "name": "Milky Way", "quantity": 40, "price": 1.65 }, { "slot_id": "G1", "name": "Orange Soda", "quantity": 65, "price": 2.10 }, { "slot_id": "G2", "name": "Root Beer", "quantity": 35, "price": 2.10 }, { "slot_id": "G3", "name": "Lemon Lime", "quantity": 28, "price": 2.10 }, { "slot_id": "G4", "name": "Cherry Cola", "quantity": 32, "price": 2.10 }, { "slot_id": "H1", "name": "Spring Water", "quantity": 50, "price": 1.25 }, { "slot_id": "H2", "name": "Sports Drink Blue", "quantity": 45, "price": 2.40 }, { "slot_id": "H3", "name": "Green Tea", "quantity": 15, "price": 2.05 }, { "slot_id": "H4", "name": "Energy Drink", "quantity": 21, "price": 3.75 }] }
+Question: Restock Green Tea in slot H3 with 20 bottles.
+Call: { "func_call": "restock_item", "slot_id": "H3", "quantity": 20, "price": 0 }
+Response: { "inventory": [{ "slot_id": "H3", "name": "Green Tea", "quantity": 35, "price": 2.05 }] }

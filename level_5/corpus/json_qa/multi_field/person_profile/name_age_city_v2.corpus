@@ -1,0 +1,29 @@
+Context: Daniel Foster is a 38-year-old dentist practicing in Atlanta. He recently opened a new clinic in the northern suburbs. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Daniel Foster", "age": "38", "city": "Atlanta"}
+
+Context: Living in San Diego, Chloe Nguyen celebrated her 31st birthday yesterday. She works as a marine biologist at the coastal institute. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Chloe Nguyen", "age": "31", "city": "San Diego"}
+
+Context: At 59 years old, Gregory Hall resides in Las Vegas and enjoys visiting the casinos. He is a retired electrical engineer. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Gregory Hall", "age": "59", "city": "Las Vegas"}
+
+Context: Maya Al-Fayed, a 44-year-old lawyer, has called Houston home for fifteen years. Her firm specializes in corporate mergers. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Maya Al-Fayed", "age": "44", "city": "Houston"}
+
+Context: Lucas Silva is 20 and currently attends art school in Santa Fe. He majors in sculpture and lives in a shared studio. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Lucas Silva", "age": "20", "city": "Santa Fe"}
+
+Context: In Charlotte, 63-year-old Patricia Moore runs a successful landscaping business. She moved there from Ohio thirty years ago. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Patricia Moore", "age": "63", "city": "Charlotte"}
+
+Context: Hiroshi Tanaka is a 26-year-old gamer based in Raleigh. He streams competitive matches on a popular platform. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Hiroshi Tanaka", "age": "26", "city": "Raleigh"}
+
+Context: Originally from Indianapolis, 52-year-old Rebecca Stone now works as a real estate agent. She sells luxury homes across the state. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Rebecca Stone", "age": "52", "city": "Indianapolis"}
+
+Context: Noah Williams, aged 28, is a paramedic stationed in Baltimore. He has lived in the city since graduating from academy. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Noah Williams", "age": "28", "city": "Baltimore"}
+
+Context: Aisha Johnson is 35 years old and works as a data scientist in Salt Lake City. She develops algorithms for a tech giant. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Aisha Johnson", "age": "35", "city": "Salt Lake City"}
+
+Context: Vincent Rossi, a 68-year-old retired chef, spends his summers in Orlando. He enjoys fishing at the nearby lakes. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Vincent Rossi", "age": "68", "city": "Orlando"}
+
+Context: Laura Schmidt is 40 and teaches high school chemistry in Milwaukee. She has led the robotics team to national finals. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Laura Schmidt", "age": "40", "city": "Milwaukee"}
+
+Context: At the age of 47, Kevin Brooks manages a coffee roastery in Portland, Maine. He is known for sourcing beans directly from farmers. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Kevin Brooks", "age": "47", "city": "Portland"}
+
+Context: Jasmine Lee, 23, is an apprentice architect in Kansas City. She plans to lead her own firm within a decade. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Jasmine Lee", "age": "23", "city": "Kansas City"}
+
+Context: Albert Rivera is a 56-year-old mechanic living in Tucson. He specializes in restoring classic American muscle cars. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Albert Rivera", "age": "56", "city": "Tucson"}

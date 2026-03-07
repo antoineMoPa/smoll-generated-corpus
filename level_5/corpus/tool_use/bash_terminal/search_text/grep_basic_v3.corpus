@@ -1,0 +1,47 @@
+Question: Locate all lines containing 'FATAL' in the payment gateway log.
+Call: { "func_call": "grep_file", "pattern": "FATAL", "path": "/var/log/payments/gateway.log", "flags": "" }
+Response: { "matches": [{ "file": "/var/log/payments/gateway.log", "line": 156, "text": "2023-11-05 14:22:10 FATAL Transaction ID 9982 failed verification" }, { "file": "/var/log/payments/gateway.log", "line": 189, "text": "2023-11-05 14:25:33 FATAL Service unreachable" }], "count": 2 }
+
+Question: Search recursively for FIXME tags in the legacy codebase.
+Call: { "func_call": "grep_recursive", "pattern": "FIXME", "path": "./legacy/modules", "flags": "" }
+Response: { "matches": [{ "file": "./legacy/modules/auth.c", "line": 88, "text": "// FIXME: Replace hardcoded salt with random generator" }, { "file": "./legacy/modules/session.cpp", "line": 412, "text": "/* FIXME: Memory leak in loop */" }], "count": 2 }
+
+Question: Count how many times 'secret_key' appears in the secrets file, ignoring case.
+Call: { "func_call": "grep_count", "pattern": "secret_key", "path": "/opt/app/secrets.yaml", "flags": "-i" }
+Response: { "matches": [], "count": 3 }
+
+Question: Find all import statements for 'pandas' in the analytics scripts.
+Call: { "func_call": "grep_recursive", "pattern": "import pandas", "path": "./analytics/reports", "flags": "" }
+Response: { "matches": [{ "file": "./analytics/reports/sales.py", "line": 4, "text": "import pandas as pd" }, { "file": "./analytics/reports/inventory.py", "line": 2, "text": "import pandas" }, { "file": "./analytics/reports/forecast.py", "line": 6, "text": "import pandas as pd" }], "count": 3 }
+
+Question: Search for 'gateway' in the router configuration files case-insensitively.
+Call: { "func_call": "grep_case_insensitive", "pattern": "gateway", "path": "/etc/router/routes.conf", "flags": "-i" }
+Response: { "matches": [{ "file": "/etc/router/routes.conf", "line": 5, "text": "# Default Gateway Settings" }, { "file": "/etc/router/routes.conf", "line": 8, "text": "gateway 192.168.0.1" }], "count": 2 }
+
+Question: Locate all occurrences of 'PANIC' in the kernel logs.
+Call: { "func_call": "grep_recursive", "pattern": "PANIC", "path": "/var/log/kern.log", "flags": "" }
+Response: { "matches": [{ "file": "/var/log/kern.log", "line": 2048, "text": "Nov 01 03:15:22 kernel PANIC: Unable to mount root fs" }], "count": 1 }
+
+Question: Find lines with 'db_password' in the docker compose file.
+Call: { "func_call": "grep_file", "pattern": "db_password", "path": "./docker-compose.yml", "flags": "" }
+Response: { "matches": [{ "file": "./docker-compose.yml", "line": 15, "text": "      DB_PASSWORD: super_secure_123" }, { "file": "./docker-compose.yml", "line": 28, "text": "      # db_password rotated weekly" }], "count": 2 }
+
+Question: Search recursively for 'debugger' in the test suite to find breakpoints.
+Call: { "func_call": "grep_recursive", "pattern": "debugger", "path": "./tests/unit", "flags": "" }
+Response: { "matches": [{ "file": "./tests/unit/login.spec.js", "line": 33, "text": "debugger; // Stop here" }, { "file": "./tests/unit/profile.spec.js", "line": 19, "text": "if (error) debugger;" }], "count": 2 }
+
+Question: Count occurrences of 'INFO' in the startup log.
+Call: { "func_call": "grep_count", "pattern": "INFO", "path": "/var/log/startup.log", "flags": "" }
+Response: { "matches": [], "count": 15 }
+
+Question: Find all SQL query strings containing 'DROP TABLE' in the migration scripts.
+Call: { "func_call": "grep_recursive", "pattern": "DROP TABLE", "path": "./db/migrations", "flags": "" }
+Response: { "matches": [{ "file": "./db/migrations/001_cleanup.sql", "line": 12, "text": "DROP TABLE IF EXISTS temp_users;" }, { "file": "./db/migrations/005_reset.sql", "line": 4, "text": "DROP TABLE logs;" }], "count": 2 }
+
+Question: Search for 'access denied' in the web server log, ignoring case.
+Call: { "func_call": "grep_case_insensitive", "pattern": "access denied", "path": "/var/log/nginx/error.log", "flags": "-i" }
+Response: { "matches": [{ "file": "/var/log/nginx/error.log", "line": 772, "text": "2023/11/02 10:11:05 [error] Access denied for /admin from 203.0.113.5" }, { "file": "/var/log/nginx/error.log", "line": 780, "text": "2023/11/02 10:12:30 [error] Access denied for /api/private from 198.51.100.2" }], "count": 2 }
+
+Question: Find all instances of 'author' in the metadata files.
+Call: { "func_call": "grep_recursive", "pattern": "\"author\"", "path": "./docs/meta", "flags": "" }
+Response: { "matches": [{ "file": "./docs/meta/intro.json", "line": 2, "text": "  \"author\": \"Jane Doe\"," }, { "file": "./docs/meta/contrib.json", "line": 2, "text": "  \"author\": \"John Smith\"," }], "count": 2 }

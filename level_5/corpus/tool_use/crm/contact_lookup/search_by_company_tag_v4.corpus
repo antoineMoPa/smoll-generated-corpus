@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Display all staff members employed by Nexus Robotics.
+Call: { "func_call": "find_contacts_by_company", "query": "Nexus Robotics", "field": "company", "limit": 60 }
+Response: { "contacts": [{ "id": "c_2001", "name": "Ethan Blake", "email": "eblake@nexusrobotics.ai", "company": "Nexus Robotics", "phone": "+1-555-2001" }, { "id": "c_2002", "name": "Maya Singh", "email": "msingh@nexusrobotics.ai", "company": "Nexus Robotics", "phone": "+1-555-2002" }, { "id": "c_2003", "name": "Noah Carter", "email": "ncarter@nexusrobotics.ai", "company": "Nexus Robotics", "phone": "+1-555-2003" }], "total": 3 }
+
+Question: List every contact labeled as a beta tester.
+Call: { "func_call": "find_contacts_by_tag", "query": "beta_tester", "field": "tag", "limit": 80 }
+Response: { "contacts": [{ "id": "c_2101", "name": "Isabella Moore", "email": "imoore@testlab.org", "company": "Test Lab", "phone": "+1-555-2101" }, { "id": "c_2102", "name": "Liam Harris", "email": "lharris@devzone.io", "company": "Dev Zone", "phone": "+1-555-2102" }], "total": 2 }
+
+Question: Who is working at Silverline Financial?
+Call: { "func_call": "find_contacts_by_company", "query": "Silverline Financial", "field": "company", "limit": 25 }
+Response: { "contacts": [{ "id": "c_2201", "name": "Charlotte King", "email": "cking@silverlinefin.com", "company": "Silverline Financial", "phone": "+1-555-2201" }], "total": 1 }
+
+Question: Retrieve all contacts marked with the inactive status.
+Call: { "func_call": "find_contacts_by_tag", "query": "inactive", "field": "tag", "limit": 45 }
+Response: { "contacts": [{ "id": "c_2301", "name": "Oliver Scott", "email": "oscott@dormant.net", "company": "Dormant Ltd", "phone": "+1-555-2301" }, { "id": "c_2302", "name": "Amelia White", "email": "awhite@pausecorp.com", "company": "Pause Corp", "phone": "+1-555-2302" }, { "id": "c_2303", "name": "Elijah Green", "email": "egreen@haltinc.org", "company": "Halt Inc", "phone": "+1-555-2303" }], "total": 3 }
+
+Question: I need the list of premium members for the conference.
+Call: { "func_call": "find_contacts_by_tag", "query": "premium", "field": "tag", "limit": 35 }
+Response: { "contacts": [{ "id": "c_2401", "name": "Jameson Reed", "email": "jreed@luxurygroup.com", "company": "Luxury Group", "phone": "+1-555-2401" }, { "id": "c_2402", "name": "Harper Lewis", "email": "hlewis@eliteclub.co", "company": "Elite Club", "phone": "+1-555-2402" }], "total": 2 }
+
+Question: Find the team at CloudNine Systems.
+Call: { "func_call": "find_contacts_by_company", "query": "CloudNine Systems", "field": "company", "limit": 55 }
+Response: { "contacts": [{ "id": "c_2501", "name": "Benjamin Hall", "email": "bhall@cloudnine.sys", "company": "CloudNine Systems", "phone": "+1-555-2501" }, { "id": "c_2502", "name": "Evelyn Young", "email": "eyoung@cloudnine.sys", "company": "CloudNine Systems", "phone": "+1-555-2502" }], "total": 2 }
+
+Question: Show me all leads currently in the pipeline.
+Call: { "func_call": "find_contacts_by_tag", "query": "lead", "field": "tag", "limit": 90 }
+Response: { "contacts": [{ "id": "c_2601", "name": "Alexander Allen", "email": "aallen@pipeline.io", "company": "Pipeline IO", "phone": "+1-555-2601" }, { "id": "c_2602", "name": "Abigail Hill", "email": "ahill@prospecthub.com", "company": "Prospect Hub", "phone": "+1-555-2602" }, { "id": "c_2603", "name": "Henry Adams", "email": "hadams@leadflow.net", "company": "Lead Flow", "phone": "+1-555-2603" }, { "id": "c_2604", "name": "Emily Baker", "email": "ebaker@dealstream.org", "company": "Deal Stream", "phone": "+1-555-2604" }], "total": 4 }
+
+Question: Get the directory for GreenField Energy.
+Call: { "func_call": "find_contacts_by_company", "query": "GreenField Energy", "field": "company", "limit": 20 }
+Response: { "contacts": [{ "id": "c_2701", "name": "Sebastian Nelson", "email": "snelson@greenfield.energy", "company": "GreenField Energy", "phone": "+1-555-2701" }, { "id": "c_2702", "name": "Mia Campbell", "email": "mcampbell@greenfield.energy", "company": "GreenField Energy", "phone": "+1-555-2702" }, { "id": "c_2703", "name": "Jack Mitchell", "email": "jmitchell@greenfield.energy", "company": "GreenField Energy", "phone": "+1-555-2703" }], "total": 3 }
+
+Question: Identify all partners tagged in our database.
+Call: { "func_call": "find_contacts_by_tag", "query": "partner", "field": "tag", "limit": 15 }
+Response: { "contacts": [{ "id": "c_2801", "name": "Logan Roberts", "email": "lroberts@alliance.com", "company": "Alliance Co", "phone": "+1-555-2801" }], "total": 1 }
+
+Question: Pull up former employees from TechGiant Inc.
+Call: { "func_call": "find_contacts_by_company", "query": "TechGiant Inc", "field": "company", "limit": 30 }
+Response: { "contacts": [{ "id": "c_2901", "name": "Aria Phillips", "email": "aphillips@techgiant.old", "company": "TechGiant Inc", "phone": "+1-555-2901" }, { "id": "c_2902", "name": "Caleb Evans", "email": "cevans@techgiant.old", "company": "TechGiant Inc", "phone": "+1-555-2902" }], "total": 2 }
+
+Question: List all ambassadors linked to Summit Peak.
+Call: { "func_call": "find_contacts_by_company", "query": "Summit Peak", "field": "company", "limit": 12 }
+Response: { "contacts": [{ "id": "c_3001", "name": "Zoe Turner", "email": "zturner@summitpeak.amb", "company": "Summit Peak", "phone": "+1-555-3001" }, { "id": "c_3002", "name": "Isaac Collins", "email": "icollins@summitpeak.amb", "company": "Summit Peak", "phone": "+1-555-3002" }, { "id": "c_3003", "name": "Lily Edwards", "email": "ledwards@summitpeak.amb", "company": "Summit Peak", "phone": "+1-555-3003" }, { "id": "c_3004", "name": "Gabriel Stewart", "email": "gstewart@summitpeak.amb", "company": "Summit Peak", "phone": "+1-555-3004" }], "total": 4 }
+
+Question: Find contacts flagged as high_priority.
+Call: { "func_call": "find_contacts_by_tag", "query": "high_priority", "field": "tag", "limit": 40 }
+Response: { "contacts": [{ "id": "c_3101", "name": "Nora Sanchez", "email": "nsanchez@urgent.biz", "company": "Urgent Biz", "phone": "+1-555-3101" }, { "id": "c_3102", "name": "Julian Morris", "email": "jmorris@critical.net", "company": "Critical Net", "phone": "+1-555-3102" }], "total": 2 }

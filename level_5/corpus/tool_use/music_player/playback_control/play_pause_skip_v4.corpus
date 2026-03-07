@@ -1,0 +1,51 @@
+Available Tools: play | pause | stop | skip_next | skip_previous | seek
+Call Schema: { "func_call": "string", "track_id": "string", "position_seconds": number }
+Response Schema: { "track_id": "string", "title": "string", "artist": "string", "state": "playing|paused|stopped", "position_seconds": number }
+---
+Question: Start playing Watermelon Sugar by Harry Styles.
+Call: { "func_call": "play", "track_id": "hs_watermelon_sugar_14", "position_seconds": 0 }
+Response: { "track_id": "hs_watermelon_sugar_14", "title": "Watermelon Sugar", "artist": "Harry Styles", "state": "playing", "position_seconds": 0 }
+
+Question: Pause the current track right now.
+Call: { "func_call": "pause", "track_id": "ab_save_your_tears_22", "position_seconds": 178 }
+Response: { "track_id": "ab_save_your_tears_22", "title": "Save Your Tears", "artist": "The Weeknd", "state": "paused", "position_seconds": 178 }
+
+Question: Skip to the next song in the queue.
+Call: { "func_call": "skip_next", "track_id": "dp_don_t_start_now_08", "position_seconds": 0 }
+Response: { "track_id": "dp_don_t_start_now_08", "title": "Don't Start Now", "artist": "Dua Lipa", "state": "playing", "position_seconds": 0 }
+
+Question: Go back to the previous track.
+Call: { "func_call": "skip_previous", "track_id": "es_perfect_19", "position_seconds": 0 }
+Response: { "track_id": "es_perfect_19", "title": "Perfect", "artist": "Ed Sheeran", "state": "playing", "position_seconds": 0 }
+
+Question: Play Stay by The Kid LAROI and Justin Bieber from the beginning.
+Call: { "func_call": "play", "track_id": "kljb_stay_33", "position_seconds": 0 }
+Response: { "track_id": "kljb_stay_33", "title": "Stay", "artist": "The Kid LAROI & Justin Bieber", "state": "playing", "position_seconds": 0 }
+
+Question: Pause the song Heat Waves immediately.
+Call: { "func_call": "pause", "track_id": "gg_heat_waves_41", "position_seconds": 95 }
+Response: { "track_id": "gg_heat_waves_41", "title": "Heat Waves", "artist": "Glass Animals", "state": "paused", "position_seconds": 95 }
+
+Question: Skip forward to the next track please.
+Call: { "func_call": "skip_next", "track_id": "jb_peaches_27", "position_seconds": 0 }
+Response: { "track_id": "jb_peaches_27", "title": "Peaches", "artist": "Justin Bieber", "state": "playing", "position_seconds": 0 }
+
+Question: Rewind to the start of the previous song.
+Call: { "func_call": "skip_previous", "track_id": "ts_willow_55", "position_seconds": 0 }
+Response: { "track_id": "ts_willow_55", "title": "willow", "artist": "Taylor Swift", "state": "playing", "position_seconds": 0 }
+
+Question: Play Good As Hell by Lizzo.
+Call: { "func_call": "play", "track_id": "lz_good_as_hell_60", "position_seconds": 0 }
+Response: { "track_id": "lz_good_as_hell_60", "title": "Good As Hell", "artist": "Lizzo", "state": "playing", "position_seconds": 0 }
+
+Question: Pause playback on Industry Baby.
+Call: { "func_call": "pause", "track_id": "ln_industry_baby_38", "position_seconds": 112 }
+Response: { "track_id": "ln_industry_baby_38", "title": "INDUSTRY BABY", "artist": "Lil Nas X", "state": "paused", "position_seconds": 112 }
+
+Question: Jump to the next song in the playlist.
+Call: { "func_call": "skip_next", "track_id": "ob_easy_on_me_44", "position_seconds": 0 }
+Response: { "track_id": "ob_easy_on_me_44", "title": "Easy On Me", "artist": "Adele", "state": "playing", "position_seconds": 0 }
+
+Question: Go back to the track before this one.
+Call: { "func_call": "skip_previous", "track_id": "dm_montero_51", "position_seconds": 0 }
+Response: { "track_id": "dm_montero_51", "title": "MONTERO (Call Me By Your Name)", "artist": "Lil Nas X", "state": "playing", "position_seconds": 0 }

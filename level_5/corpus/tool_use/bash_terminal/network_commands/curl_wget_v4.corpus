@@ -1,0 +1,47 @@
+Question: Query the inventory database for stock levels of product SKU 'LAPTOP-PRO-15' in the Berlin warehouse.
+Call: { "func_call": "curl_get", "url": "https://inventory.internal.net/api/v2/stock?sku=LAPTOP-PRO-15&warehouse=BER", "host": "inventory.internal.net", "options": "-H \"Authorization: Bearer inv_token_9876\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"sku\": \"LAPTOP-PRO-15\", \"warehouse\": \"BER\", \"quantity\": 42, \"reserved\": 5, \"last_updated\": \"2023-11-15T09:20:10Z\"}", "elapsed_ms": 67 }
+
+Question: Register a new IoT sensor device with the cloud gateway using a POST request containing device metadata.
+Call: { "func_call": "curl_post", "url": "https://iot-gateway.cloud.io/devices/register", "host": "iot-gateway.cloud.io", "options": "-H \"Content-Type: application/json\" -d \"{\\\"device_id\\\": \\\"sens_445566\\\", \\\"type\\\": \\\"temperature\\\", \\\"location\\\": \\\"warehouse-floor-2\\\"}\"" }
+Response: { "status_code": 201, "output": "{\"device_id\": \"sens_445566\", \"status\": \"active\", \"mqtt_topic\": \"iot/sens_445566/data\", \"created_at\": \"2023-11-15T10:05:33Z\"}", "elapsed_ms": 198 }
+
+Question: Download the official Kubernetes v1.28 binary for Linux amd64 architecture to the local tools directory.
+Call: { "func_call": "wget_download", "url": "https://dl.k8s.io/v1.28.0/bin/linux/amd64/kubectl", "host": "dl.k8s.io", "options": "-O ./bin/kubectl --chmod=755" }
+Response: { "status_code": 200, "output": "kubectl  100%[===================>]  45.20M  12.5MB/s    in 3.6s     \n2023-11-15 10:10:45 (12.5 MB/s) - './bin/kubectl' saved [47396864/47396864]", "elapsed_ms": 3650 }
+
+Question: Fetch the current exchange rates for USD against EUR, GBP, and JPY from the financial data provider.
+Call: { "func_call": "curl_get", "url": "https://api.finxchange.com/v1/rates?base=USD&symbols=EUR,GBP,JPY", "host": "api.finxchange.com", "options": "-H \"X-RapidAPI-Key: rapid_key_abc123\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"base\": \"USD\", \"date\": \"2023-11-15\", \"rates\": {\"EUR\": 0.92, \"GBP\": 0.79, \"JPY\": 149.50}}", "elapsed_ms": 112 }
+
+Question: Submit a support ticket to the helpdesk system regarding a network outage in the East region.
+Call: { "func_call": "curl_post", "url": "https://helpdesk.corp.com/api/tickets", "host": "helpdesk.corp.com", "options": "-H \"Content-Type: application/json\" -H \"Authorization: Basic dXNlcjpwYXNz\" -d \"{\\\"subject\\\": \\\"Network Outage\\\", \\\"priority\\\": \\\"high\\\", \\\"region\\\": \\\"East\\\"}\"" }
+Response: { "status_code": 201, "output": "{\"ticket_id\": \"TKT-998877\", \"subject\": \"Network Outage\", \"status\": \"open\", \"assigned_to\": null, \"created_at\": \"2023-11-15T11:15:00Z\"}", "elapsed_ms": 245 }
+
+Question: Download the quarterly financial report Excel spreadsheet from the secure file server.
+Call: { "func_call": "wget_download", "url": "https://files.secure-corp.com/finance/2023/Q3/report_final.xlsx", "host": "files.secure-corp.com", "options": "--user=analyst --password=secret_pass -P ./reports/fin" }
+Response: { "status_code": 200, "output": "report_final.xlsx  100%[===================>]   2.15M  --.-KB/s    in 0.8s     \n2023-11-15 11:20:12 (2.69 MB/s) - './reports/fin/report_final.xlsx' saved [2254890/2254890]", "elapsed_ms": 840 }
+
+Question: Check the latency and packet loss to the primary DNS resolver using a ping command.
+Call: { "func_call": "ping_host", "url": "", "host": "8.8.8.8", "options": "-c 4 -W 2" }
+Response: { "status_code": 0, "output": "PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.\n64 bytes from 8.8.8.8: icmp_seq=1 ttl=116 time=14.2 ms\n64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=13.9 ms\n64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=14.1 ms\n64 bytes from 8.8.8.8: icmp_seq=4 ttl=116 time=14.0 ms\n\n--- 8.8.8.8 ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3004ms\nrtt min/avg/max/mdev = 13.902/14.050/14.201/0.112 ms", "elapsed_ms": 3005 }
+
+Question: Rotate the API secret key for the mobile application by posting a renewal request to the security service.
+Call: { "func_call": "curl_post", "url": "https://sec.ops.internal/v1/keys/rotate", "host": "sec.ops.internal", "options": "-H \"Content-Type: application/json\" -H \"X-Admin-Token: admin_secure_xyz\" -d \"{\\\"app_id\\\": \\\"mobile_ios_v2\\\", \\\"reason\\\": \\\"scheduled_rotation\\\"}\"" }
+Response: { "status_code": 200, "output": "{\"app_id\": \"mobile_ios_v2\", \"old_key_revoked\": true, \"new_key_id\": \"key_20231115_001\", \"expires_at\": \"2024-11-15T12:00:00Z\"}", "elapsed_ms": 156 }
+
+Question: Retrieve the list of running containers on the production node via the Docker daemon socket proxy.
+Call: { "func_call": "curl_get", "url": "http://docker-proxy.prod.local/containers/json?filters={\\\"status\\\":[\\\"running\\\"]}", "host": "docker-proxy.prod.local", "options": "-H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "[{\"Id\": \"a1b2c3d4\", \"Names\": [\"/web-nginx\"], \"Image\": \"nginx:latest\", \"State\": \"running\"}, {\"Id\": \"e5f6g7h8\", \"Names\": [\"/api-node\"], \"Image\": \"node:18-alpine\", \"State\": \"running\"}]", "elapsed_ms": 48 }
+
+Question: Download the GeoIP database file used for traffic routing decisions from the CDN edge.
+Call: { "func_call": "wget_download", "url": "https://cdn.geo-service.net/db/maxmind-country.mmdb", "host": "cdn.geo-service.net", "options": "-O ./data/geo/maxmind-country.mmdb --timestamping" }
+Response: { "status_code": 200, "output": "maxmind-country.mmdb  100%[===================>]   3.40M  5.20MB/s    in 0.7s     \n2023-11-15 12:30:45 (5.20 MB/s) - './data/geo/maxmind-country.mmdb' saved [3565120/3565120]", "elapsed_ms": 680 }
+
+Question: Trigger a cache flush for the user session store by sending a purge command to the Redis management API.
+Call: { "func_call": "curl_post", "url": "https://redis-mgmt.cluster.io/api/v1/cache/flush", "host": "redis-mgmt.cluster.io", "options": "-H \"Content-Type: application/json\" -d \"{\\\"pattern\\\": \\\"session:*\\\", \\\"async\\\": true}\"" }
+Response: { "status_code": 202, "output": "{\"job_id\": \"flush_778899\", \"status\": \"queued\", \"keys_matched_estimate\": 15402}", "elapsed_ms": 22 }
+
+Question: Fetch the schema definition for the 'customers' table from the data dictionary service.
+Call: { "func_call": "curl_get", "url": "https://data-dict.internal/api/schemas/customers", "host": "data-dict.internal", "options": "-H \"Accept: application/json\" -H \"X-DB-User: readonly_bot\"" }
+Response: { "status_code": 200, "output": "{\"table\": \"customers\", \"columns\": [{\"name\": \"id\", \"type\": \"uuid\"}, {\"name\": \"email\", \"type\": \"varchar(255)\"}, {\"name\": \"created_at\", \"type\": \"timestamp\"}], \"primary_key\": \"id\"}", "elapsed_ms": 39 }

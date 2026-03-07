@@ -1,0 +1,51 @@
+Available Tools: send_email | compose_draft | send_reply | forward_email
+Call Schema: { "func_call": "string", "to": ["string"], "cc": ["string"], "subject": "string", "body": "string", "attachments": ["string"] }
+Response Schema: { "message_id": "string", "status": "sent|draft|failed", "timestamp": "string" }
+---
+Question: Send the weekly status report to the project team.
+Call: { "func_call": "send_email", "to": ["j.miller@techcorp.com", "s.lee@techcorp.com"], "cc": ["manager@techcorp.com"], "subject": "Weekly Status Update - Oct 24", "body": "Hi team,\n\nAttached is the weekly status report for the Phoenix project. Please review before our Monday meeting.\n\nBest,\nAlex", "attachments": ["weekly_status_oct24.pdf"] }
+Response: { "message_id": "msg_89234a", "status": "sent", "timestamp": "2023-10-24T14:30:00Z" }
+
+Question: Draft an email to the vendor asking for a price quote on new servers.
+Call: { "func_call": "compose_draft", "to": ["sales@cloudinfra.net"], "cc": [], "subject": "RFQ: Enterprise Server Cluster", "body": "Hello,\n\nWe are looking to purchase a new server cluster. Could you please provide a quote for 5 units of model X-900 with 128GB RAM?\n\nRegards,\nDavid Chen", "attachments": [] }
+Response: { "message_id": "draft_11209b", "status": "draft", "timestamp": "2023-10-24T15:12:45Z" }
+
+Question: Reply to Sarah confirming the meeting time for tomorrow.
+Call: { "func_call": "send_reply", "to": ["sarah.j@designstudio.io"], "cc": [], "subject": "Re: Design Review Meeting", "body": "Hi Sarah,\n\nYes, 2 PM tomorrow works perfectly for me. I'll send the calendar invite shortly.\n\nThanks,\nMike", "attachments": [] }
+Response: { "message_id": "msg_9921c", "status": "sent", "timestamp": "2023-10-24T16:05:22Z" }
+
+Question: Forward the client feedback document to the product team with a note.
+Call: { "func_call": "forward_email", "to": ["product-team@mycompany.com"], "cc": ["lead@mycompany.com"], "subject": "Fwd: Client Feedback - Q3", "body": "Team,\n\nPlease see the attached feedback from our key client. We need to discuss these points in the next sprint planning.\n\nThanks,\nEmma", "attachments": ["client_feedback_q3.docx"] }
+Response: { "message_id": "msg_7732d", "status": "sent", "timestamp": "2023-10-24T16:45:10Z" }
+
+Question: Send an invoice to the billing department.
+Call: { "func_call": "send_email", "to": ["billing@vendor.com"], "cc": ["accounts@mycompany.com"], "subject": "Invoice #4022 - October Services", "body": "Please find attached invoice #4022 for October consulting services. Payment terms are Net 30.\n\nBest regards,\nFinance Dept", "attachments": ["invoice_4022.pdf"] }
+Response: { "message_id": "msg_3341e", "status": "sent", "timestamp": "2023-10-24T09:15:33Z" }
+
+Question: Compose a draft invitation for the holiday party.
+Call: { "func_call": "compose_draft", "to": ["all-staff@mycompany.com"], "cc": [], "subject": "You're Invited: Annual Holiday Party!", "body": "Hi Everyone,\n\nJoin us for our annual holiday party on December 15th at the Grand Hotel. More details to follow!\n\nCheers,\nHR Team", "attachments": [] }
+Response: { "message_id": "draft_5562f", "status": "draft", "timestamp": "2023-10-24T11:20:00Z" }
+
+Question: Reply to the support ticket confirming the issue is resolved.
+Call: { "func_call": "send_reply", "to": ["user123@example.com"], "cc": ["support-lead@mycompany.com"], "subject": "Re: Ticket #9981 - Login Issue", "body": "Hello,\n\nWe have applied the patch and verified that your login issue is now resolved. Please try again and let us know if you encounter any further problems.\n\nBest,\nSupport Team", "attachments": [] }
+Response: { "message_id": "msg_6673g", "status": "sent", "timestamp": "2023-10-24T13:40:15Z" }
+
+Question: Send the signed contract to the legal team.
+Call: { "func_call": "send_email", "to": ["legal@partners.com"], "cc": ["ceo@mycompany.com"], "subject": "Signed Contract - Project Alpha", "body": "Hi Legal Team,\n\nAttached is the fully signed contract for Project Alpha. Please proceed with the next steps.\n\nRegards,\nJohn Doe", "attachments": ["signed_contract_alpha.pdf"] }
+Response: { "message_id": "msg_4452h", "status": "sent", "timestamp": "2023-10-24T10:05:50Z" }
+
+Question: Forward the marketing analytics report to the CEO.
+Call: { "func_call": "forward_email", "to": ["ceo@mycompany.com"], "cc": ["cmo@mycompany.com"], "subject": "Fwd: Q3 Marketing Analytics", "body": "Hi,\n\nForwarding the latest analytics report as requested. The conversion rates are up by 15%.\n\nBest,\nMarketing Analyst", "attachments": ["q3_analytics.xlsx"] }
+Response: { "message_id": "msg_2231i", "status": "sent", "timestamp": "2023-10-24T08:30:12Z" }
+
+Question: Draft an email to the IT helpdesk about a broken printer.
+Call: { "func_call": "compose_draft", "to": ["helpdesk@mycompany.com"], "cc": [], "subject": "Issue: Printer on 3rd Floor Jammed", "body": "Hi IT,\n\nThe printer on the 3rd floor near the breakroom is jammed and showing an error code E05. Can someone take a look?\n\nThanks,\nOffice Admin", "attachments": [] }
+Response: { "message_id": "draft_8891j", "status": "draft", "timestamp": "2023-10-24T14:55:20Z" }
+
+Question: Reply to the client approving the design mockup.
+Call: { "func_call": "send_reply", "to": ["contact@clientcorp.com"], "cc": ["design-lead@mycompany.com"], "subject": "Re: Design Mockup Approval", "body": "Hi,\n\nThe design looks great! You have our approval to move forward with development.\n\nBest,\nProduct Manager", "attachments": [] }
+Response: { "message_id": "msg_1120k", "status": "sent", "timestamp": "2023-10-24T17:10:05Z" }
+
+Question: Send the updated employee handbook to all managers.
+Call: { "func_call": "send_email", "to": ["managers@mycompany.com"], "cc": ["hr-director@mycompany.com"], "subject": "Updated Employee Handbook 2024", "body": "Dear Managers,\n\nPlease find the updated employee handbook attached. Ensure your teams review the new remote work policies by next Friday.\n\nRegards,\nHR", "attachments": ["employee_handbook_2024.pdf"] }
+Response: { "message_id": "msg_5543l", "status": "sent", "timestamp": "2023-10-24T09:45:30Z" }

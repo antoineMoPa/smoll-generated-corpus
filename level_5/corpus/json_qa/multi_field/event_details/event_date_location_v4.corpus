@@ -1,0 +1,29 @@
+Context: The Winter Wonderland Fair opens on December 1, 2024, at the Central Plaza in Chicago. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Winter Wonderland Fair", "date": "December 1, 2024", "location": "Central Plaza in Chicago"}
+
+Context: Celebrate Tom's Retirement Party on Friday, November 8th, at the Seaside Banquet Hall. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Tom's Retirement Party", "date": "Friday, November 8th", "location": "Seaside Banquet Hall"}
+
+Context: The finals match between the Hawks and the Eagles is set for April 20, 2025, at Wembley Stadium. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "finals match between the Hawks and the Eagles", "date": "April 20, 2025", "location": "Wembley Stadium"}
+
+Context: The mayor invites citizens to the Summer Solstice Fest on June 21st at the Riverfront Park. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Summer Solstice Fest", "date": "June 21st", "location": "Riverfront Park"}
+
+Context: Do not miss the International Robotics Summit occurring from September 5 to September 7, 2024, in Tokyo, Japan. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "International Robotics Summit", "date": "September 5 to September 7, 2024", "location": "Tokyo, Japan"}
+
+Context: Alex and Jordan's Anniversary Dinner will take place on October 12, 2024, at the Hilltop Restaurant. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Alex and Jordan's Anniversary Dinner", "date": "October 12, 2024", "location": "Hilltop Restaurant"}
+
+Context: The local soccer club holds their first practice of the season on August 15th at Greenfield Arena. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "first practice of the season", "date": "August 15th", "location": "Greenfield Arena"}
+
+Context: Join the Renewable Energy Symposium on March 3, 2025, held at the Convention Center in Berlin. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Renewable Energy Symposium", "date": "March 3, 2025", "location": "Convention Center in Berlin"}
+
+Context: The community farmers market returns on every Saturday starting May 1st at Oak Avenue near the Library. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "community farmers market", "date": "every Saturday starting May 1st", "location": "Oak Avenue near the Library"}
+
+Context: The Golden Globe Awards ceremony is scheduled for January 7, 2025, at the Beverly Hilton Hotel. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Golden Globe Awards ceremony", "date": "January 7, 2025", "location": "Beverly Hilton Hotel"}
+
+Context: Sign up for the Coding Bootcamp Intro on April 22, 2024, located at the Tech Hub in Seattle. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Coding Bootcamp Intro", "date": "April 22, 2024", "location": "Tech Hub in Seattle"}
+
+Context: The fun run named "Steps for Survival" occurs on Sunday, October 6th, beginning at Beachside Boardwalk. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Steps for Survival", "date": "Sunday, October 6th", "location": "Beachside Boardwalk"}
+
+Context: The quarterly board review is planned for February 28, 2025, in the executive suite of the South Tower. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "quarterly board review", "date": "February 28, 2025", "location": "executive suite of the South Tower"}
+
+Context: Enjoy the Folk Music Weekend on August 9, 2024, at the Red Rock Amphitheater. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Folk Music Weekend", "date": "August 9, 2024", "location": "Red Rock Amphitheater"}
+
+Context: The medical school convocation will be conducted on May 30, 2025, at the Grand Auditorium. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "medical school convocation", "date": "May 30, 2025", "location": "Grand Auditorium"}

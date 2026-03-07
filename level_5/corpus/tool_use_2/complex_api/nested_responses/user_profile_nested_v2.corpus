@@ -1,0 +1,59 @@
+{"func_call": "get_user_profile", "id": "usr_9k8j7h6g", "include": ["address", "preferences", "stats"]}
+{"id": "usr_9k8j7h6g", "data": {"profile": {"name": "Yuki Tanaka", "email": "y.tanaka@jpconnect.jp", "address": {"street": "9-3 Shibuya Crossing", "city": "Osaka", "country": "Japan"}, "preferences": {"theme": "dark", "language": "ja-JP"}}, "stats": {"logins": 203, "purchases": 55}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_5f4d3s2a", "include": ["address", "preferences", "stats"]}
+{"id": "usr_5f4d3s2a", "data": {"profile": {"name": "Noah Williams", "email": "n.williams@canadanet.ca", "address": {"street": "450 Yonge Street", "city": "Toronto", "country": "Canada"}, "preferences": {"theme": "light", "language": "en-CA"}}, "stats": {"logins": 112, "purchases": 24}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_1q2w3e4r", "include": ["address", "preferences", "stats"]}
+{"id": "usr_1q2w3e4r", "data": {"profile": {"name": "Sofia Bergman", "email": "s.bergman@swedenpost.se", "address": {"street": "12 Drottninggatan", "city": "Stockholm", "country": "Sweden"}, "preferences": {"theme": "system", "language": "sv-SE"}}, "stats": {"logins": 287, "purchases": 63}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_7z8x9c0v", "include": ["address", "preferences", "stats"]}
+{"id": "usr_7z8x9c0v", "data": {"profile": {"name": "Ravi Patel", "email": "r.patel@indiatech.in", "address": {"street": "77 Brigade Road", "city": "Mumbai", "country": "India"}, "preferences": {"theme": "dark", "language": "hi-IN"}}, "stats": {"logins": 65, "purchases": 11}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_3b4n5m6k", "include": ["address", "preferences", "stats"]}
+{"id": "usr_3b4n5m6k", "data": {"profile": {"name": "Chloe Martin", "email": "c.martin@francelink.fr", "address": {"street": "55 Champs-Élysées", "city": "Paris", "country": "France"}, "preferences": {"theme": "light", "language": "fr-FR"}}, "stats": {"logins": 340, "purchases": 78}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_9p0o8i7u", "include": ["address", "preferences", "stats"]}
+{"id": "usr_9p0o8i7u", "data": {"profile": {"name": "Mateo Lopez", "email": "m.lopez@argentinanet.ar", "address": {"street": "200 Florida Street", "city": "Buenos Aires", "country": "Argentina"}, "preferences": {"theme": "system", "language": "es-AR"}}, "stats": {"logins": 156, "purchases": 32}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_6y5t4r3e", "include": ["address", "preferences", "stats"]}
+{"id": "usr_6y5t4r3e", "data": {"profile": {"name": "Aisha Mohammed", "email": "a.mohammed@nigeriaconnect.ng", "address": {"street": "14 Victoria Island", "city": "Lagos", "country": "Nigeria"}, "preferences": {"theme": "dark", "language": "en-NG"}}, "stats": {"logins": 92, "purchases": 18}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_2w1q0p9o", "include": ["address", "preferences", "stats"]}
+{"id": "usr_2w1q0p9o", "data": {"profile": {"name": "Luca Bianchi", "email": "l.bianchi@italyweb.it", "address": {"street": "88 Corso Vittorio", "city": "Rome", "country": "Italy"}, "preferences": {"theme": "light", "language": "it-IT"}}, "stats": {"logins": 221, "purchases": 49}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_8l7k6j5h", "include": ["address", "preferences", "stats"]}
+{"id": "usr_8l7k6j5h", "data": {"profile": {"name": "Eva Novak", "email": "e.novak@czechpost.cz", "address": {"street": "25 Wenceslas Square", "city": "Prague", "country": "Czechia"}, "preferences": {"theme": "system", "language": "cs-CZ"}}, "stats": {"logins": 134, "purchases": 27}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_4g3f2d1s", "include": ["address", "preferences", "stats"]}
+{"id": "usr_4g3f2d1s", "data": {"profile": {"name": "Omar Farooq", "email": "o.farooq@pakistannet.pk", "address": {"street": "60 Mall Road", "city": "Lahore", "country": "Pakistan"}, "preferences": {"theme": "dark", "language": "ur-PK"}}, "stats": {"logins": 78, "purchases": 14}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_0a9s8d7f", "include": ["address", "preferences", "stats"]}
+{"id": "usr_0a9s8d7f", "data": {"profile": {"name": "Mia Anderson", "email": "m.anderson@nzmail.co.nz", "address": {"street": "30 Queen Street", "city": "Auckland", "country": "New Zealand"}, "preferences": {"theme": "light", "language": "en-NZ"}}, "stats": {"logins": 198, "purchases": 42}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_5h6j7k8l", "include": ["address", "preferences", "stats"]}
+{"id": "usr_5h6j7k8l", "data": {"profile": {"name": "Dimitri Papadopoulos", "email": "d.papa@greekenet.gr", "address": {"street": "10 Syntagma Square", "city": "Athens", "country": "Greece"}, "preferences": {"theme": "system", "language": "el-GR"}}, "stats": {"logins": 105, "purchases": 22}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_1z2x3c4v", "include": ["address", "preferences", "stats"]}
+{"id": "usr_1z2x3c4v", "data": {"profile": {"name": "Isabella Santos", "email": "i.santos@portugalmail.pt", "address": {"street": "50 Rua Augusta", "city": "Lisbon", "country": "Portugal"}, "preferences": {"theme": "dark", "language": "pt-PT"}}, "stats": {"logins": 245, "purchases": 56}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_7b8n9m0k", "include": ["address", "preferences", "stats"]}
+{"id": "usr_7b8n9m0k", "data": {"profile": {"name": "Ethan Harris", "email": "e.harris@singaporepost.sg", "address": {"street": "8 Orchard Road", "city": "Singapore", "country": "Singapore"}, "preferences": {"theme": "light", "language": "en-SG"}}, "stats": {"logins": 367, "purchases": 81}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_3q4w5e6r", "include": ["address", "preferences", "stats"]}
+{"id": "usr_3q4w5e6r", "data": {"profile": {"name": "Layla Al-Mansoori", "email": "l.almansoori@qatarnet.qa", "address": {"street": "22 Corniche Street", "city": "Doha", "country": "Qatar"}, "preferences": {"theme": "system", "language": "ar-QA"}}, "stats": {"logins": 83, "purchases": 17}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_9t8y7u6i", "include": ["address", "preferences", "stats"]}
+{"id": "usr_9t8y7u6i", "data": {"profile": {"name": "Felix Schmidt", "email": "f.schmidt@swissmail.ch", "address": {"street": "15 Bahnhofstrasse", "city": "Zurich", "country": "Switzerland"}, "preferences": {"theme": "dark", "language": "de-CH"}}, "stats": {"logins": 210, "purchases": 46}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_5o4p3a2s", "include": ["address", "preferences", "stats"]}
+{"id": "usr_5o4p3a2s", "data": {"profile": {"name": "Nina Petrov", "email": "n.petrov@ukrainemail.ua", "address": {"street": "40 Khreshchatyk Street", "city": "Kyiv", "country": "Ukraine"}, "preferences": {"theme": "light", "language": "uk-UA"}}, "stats": {"logins": 129, "purchases": 26}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_1d2f3g4h", "include": ["address", "preferences", "stats"]}
+{"id": "usr_1d2f3g4h", "data": {"profile": {"name": "Jack Thompson", "email": "j.thompson@southafricamail.za", "address": {"street": "75 Long Street", "city": "Cape Town", "country": "South Africa"}, "preferences": {"theme": "system", "language": "en-ZA"}}, "stats": {"logins": 167, "purchases": 35}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_7j8k9l0z", "include": ["address", "preferences", "stats"]}
+{"id": "usr_7j8k9l0z", "data": {"profile": {"name": "Camila Diaz", "email": "c.diaz@colombianet.co", "address": {"street": "100 Carrera 7", "city": "Bogotá", "country": "Colombia"}, "preferences": {"theme": "dark", "language": "es-CO"}}, "stats": {"logins": 95, "purchases": 20}, "recent": []}}
+
+{"func_call": "get_user_profile", "id": "usr_3x4c5v6b", "include": ["address", "preferences", "stats"]}
+{"id": "usr_3x4c5v6b", "data": {"profile": {"name": "Henrik Jensen", "email": "h.jensen@denmarkpost.dk", "address": {"street": "18 Strøget", "city": "Copenhagen", "country": "Denmark"}, "preferences": {"theme": "light", "language": "da-DK"}}, "stats": {"logins": 234, "purchases": 51}, "recent": []}}

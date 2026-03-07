@@ -1,0 +1,51 @@
+Available Tools: upload_file | download_file | get_upload_url | get_download_url
+Call Schema: { "func_call": "string", "path": "string", "file_name": "string", "size_bytes": number, "content_type": "string" }
+Response Schema: { "file_id": "string", "path": "string", "size_bytes": "number", "url": "string", "expires_at": "string" }
+---
+Question: Could you provide a temporary link for the annual budget spreadsheet in the accounting directory?
+Call: { "func_call": "get_download_url", "path": "/accounting/budgets", "file_name": "Annual_Budget_2025.xlsx", "size_bytes": 1890400, "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }
+Response: { "file_id": "file_9z8y7x6w", "path": "/accounting/budgets/Annual_Budget_2025.xlsx", "size_bytes": 1890400, "url": "https://storage.example.com/dl/9z8y7x6w?sig=aBc789", "expires_at": "2024-11-01T10:00:00Z" }
+
+Question: Fetch the error log file from the application server right now.
+Call: { "func_call": "download_file", "path": "/logs/app", "file_name": "error_log_2024-11-01.log", "size_bytes": 2340100, "content_type": "text/plain" }
+Response: { "file_id": "file_5v4u3t2s", "path": "/logs/app/error_log_2024-11-01.log", "size_bytes": 2340100, "url": "direct://stream/5v4u3t2s", "expires_at": null }
+
+Question: I need a presigned URL for the training webinar recording that lasts two hours.
+Call: { "func_call": "get_download_url", "path": "/training/webinars", "file_name": "onsession_nov_2024.mp4", "size_bytes": 210000000, "content_type": "video/mp4" }
+Response: { "file_id": "file_1r2q3p4o", "path": "/training/webinars/onsession_nov_2024.mp4", "size_bytes": 210000000, "url": "https://cdn.example.com/secure/1r2q3p4o?token=xyz123", "expires_at": "2024-11-01T16:30:00Z" }
+
+Question: Please retrieve the user data backup from the cold storage archive.
+Call: { "func_call": "download_file", "path": "/backups/users", "file_name": "users_dump_2024.tar.gz", "size_bytes": 560000000, "content_type": "application/gzip" }
+Response: { "file_id": "file_7n8m9l0k", "path": "/backups/users/users_dump_2024.tar.gz", "size_bytes": 560000000, "url": "direct://stream/7n8m9l0k", "expires_at": null }
+
+Question: Generate a download link for the new hire checklist PDF.
+Call: { "func_call": "get_download_url", "path": "/hr/onboarding", "file_name": "New_Hire_Checklist.pdf", "size_bytes": 450200, "content_type": "application/pdf" }
+Response: { "file_id": "file_3j4i5h6g", "path": "/hr/onboarding/New_Hire_Checklist.pdf", "size_bytes": 450200, "url": "https://storage.example.com/dl/3j4i5h6g?sig=dEf456", "expires_at": "2024-11-02T08:45:00Z" }
+
+Question: Directly pull the environment variables YAML file for production.
+Call: { "func_call": "download_file", "path": "/config/prod", "file_name": "env_vars_prod.yaml", "size_bytes": 3200, "content_type": "application/x-yaml" }
+Response: { "file_id": "file_9f0e1d2c", "path": "/config/prod/env_vars_prod.yaml", "size_bytes": 3200, "url": "direct://stream/9f0e1d2c", "expires_at": null }
+
+Question: Create a short-term URL for the product banner image.
+Call: { "func_call": "get_download_url", "path": "/marketing/banners", "file_name": "winter_sale_banner.jpg", "size_bytes": 1200000, "content_type": "image/jpeg" }
+Response: { "file_id": "file_5b6a7z8y", "path": "/marketing/banners/winter_sale_banner.jpg", "size_bytes": 1200000, "url": "https://cdn.example.com/secure/5b6a7z8y?token=jKl789", "expires_at": "2024-11-01T22:15:00Z" }
+
+Question: Download the customer feedback dataset in CSV format.
+Call: { "func_call": "download_file", "path": "/analytics/feedback", "file_name": "customer_feedback_q4.csv", "size_bytes": 8900000, "content_type": "text/csv" }
+Response: { "file_id": "file_1x2w3v4u", "path": "/analytics/feedback/customer_feedback_q4.csv", "size_bytes": 8900000, "url": "direct://stream/1x2w3v4u", "expires_at": null }
+
+Question: Get me a temporary link to the roadmap presentation deck.
+Call: { "func_call": "get_download_url", "path": "/strategy/roadmaps", "file_name": "2025_product_roadmap.pptx", "size_bytes": 7800000, "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation" }
+Response: { "file_id": "file_7t8s9r0q", "path": "/strategy/roadmaps/2025_product_roadmap.pptx", "size_bytes": 7800000, "url": "https://storage.example.com/dl/7t8s9r0q?sig=mNo654", "expires_at": "2024-11-01T11:30:00Z" }
+
+Question: Fetch the mobile app update package for iOS immediately.
+Call: { "func_call": "download_file", "path": "/releases/ios/v3.0", "file_name": "app_update_v3.0.ipa", "size_bytes": 62000000, "content_type": "application/octet-stream" }
+Response: { "file_id": "file_3p4o5n6m", "path": "/releases/ios/v3.0/app_update_v3.0.ipa", "size_bytes": 62000000, "url": "direct://stream/3p4o5n6m", "expires_at": null }
+
+Question: Generate a secure URL for the network topology diagram.
+Call: { "func_call": "get_download_url", "path": "/infrastructure/maps", "file_name": "network_topology_2024.png", "size_bytes": 340000, "content_type": "image/png" }
+Response: { "file_id": "file_9l0k1j2i", "path": "/infrastructure/maps/network_topology_2024.png", "size_bytes": 340000, "url": "https://cdn.example.com/secure/9l0k1j2i?token=pQr321", "expires_at": "2024-11-01T19:45:00Z" }
+
+Question: Download the SSL certificate bundle from the security vault.
+Call: { "func_call": "download_file", "path": "/security/certs", "file_name": "wildcard_cert_bundle.crt", "size_bytes": 4096, "content_type": "application/x-pem-file" }
+Response: { "file_id": "file_5h6g7f8e", "path": "/security/certs/wildcard_cert_bundle.crt", "size_bytes": 4096, "url": "direct://stream/5h6g7f8e", "expires_at": null }

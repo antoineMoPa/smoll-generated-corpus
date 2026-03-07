@@ -1,0 +1,51 @@
+Available Tools: get_exchange_rate | convert_currency | buy_foreign_currency | get_supported_currencies
+Call Schema: { "func_call": "string", "from_currency": "string", "to_currency": "string", "amount": number }
+Response Schema: { "from": "string", "to": "string", "rate": number, "converted_amount": number, "fee": number }
+---
+Question: I'm traveling to London next week and need to know how many British Pounds I'll get for 500 US Dollars.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "GBP", "amount": 500 }
+Response: { "from": "USD", "to": "GBP", "rate": 0.79, "converted_amount": 395.00, "fee": 2.50 }
+
+Question: Can you help me buy 2000 Euros for my upcoming business trip to Berlin using my USD account?
+Call: { "func_call": "buy_foreign_currency", "from_currency": "USD", "to_currency": "EUR", "amount": 2000 }
+Response: { "from": "USD", "to": "EUR", "rate": 0.92, "converted_amount": 1840.00, "fee": 15.00 }
+
+Question: I need to send an international wire transfer of 10,000 Japanese Yen from my Canadian Dollar account. What is the conversion?
+Call: { "func_call": "convert_currency", "from_currency": "CAD", "to_currency": "JPY", "amount": 10000 }
+Response: { "from": "CAD", "to": "JPY", "rate": 108.45, "converted_amount": 1084500.00, "fee": 25.00 }
+
+Question: What is the current exchange rate if I want to convert 750 Australian Dollars to US Dollars for a hotel deposit?
+Call: { "func_call": "get_exchange_rate", "from_currency": "AUD", "to_currency": "USD", "amount": 750 }
+Response: { "from": "AUD", "to": "USD", "rate": 0.66, "converted_amount": 495.00, "fee": 0.00 }
+
+Question: Please purchase 50,000 Mexican Pesos for my vacation in Cancun using my US Dollars.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "USD", "to_currency": "MXN", "amount": 50000 }
+Response: { "from": "USD", "to": "MXN", "rate": 17.15, "converted_amount": 857500.00, "fee": 45.00 }
+
+Question: I am sending money to a supplier in Switzerland and need to convert 3,000 US Dollars to Swiss Francs.
+Call: { "func_call": "convert_currency", "from_currency": "USD", "to_currency": "CHF", "amount": 3000 }
+Response: { "from": "USD", "to": "CHF", "rate": 0.88, "converted_amount": 2640.00, "fee": 12.00 }
+
+Question: How much New Zealand Dollar will I receive if I convert 1,200 British Pounds for my trip to Auckland?
+Call: { "func_call": "convert_currency", "from_currency": "GBP", "to_currency": "NZD", "amount": 1200 }
+Response: { "from": "GBP", "to": "NZD", "rate": 2.05, "converted_amount": 2460.00, "fee": 8.50 }
+
+Question: I need to buy 5,000 Indian Rupees for a software license payment from my Euro account.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "EUR", "to_currency": "INR", "amount": 5000 }
+Response: { "from": "EUR", "to": "INR", "rate": 90.25, "converted_amount": 451250.00, "fee": 20.00 }
+
+Question: What is the rate and final amount if I convert 800 Singapore Dollars to US Dollars for an online purchase?
+Call: { "func_call": "get_exchange_rate", "from_currency": "SGD", "to_currency": "USD", "amount": 800 }
+Response: { "from": "SGD", "to": "USD", "rate": 0.74, "converted_amount": 592.00, "fee": 0.00 }
+
+Question: Please execute a purchase of 1,500 Brazilian Reals using my US Dollars for an upcoming conference in Sao Paulo.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "USD", "to_currency": "BRL", "amount": 1500 }
+Response: { "from": "USD", "to": "BRL", "rate": 4.95, "converted_amount": 7425.00, "fee": 18.00 }
+
+Question: I need to convert 4,000 South Korean Won to US Dollars to reconcile an expense report.
+Call: { "func_call": "convert_currency", "from_currency": "KRW", "to_currency": "USD", "amount": 4000 }
+Response: { "from": "KRW", "to": "USD", "rate": 0.00076, "converted_amount": 3.04, "fee": 1.50 }
+
+Question: Help me buy 10,000 Thai Baht for my holiday in Phuket using my British Pound savings.
+Call: { "func_call": "buy_foreign_currency", "from_currency": "GBP", "to_currency": "THB", "amount": 10000 }
+Response: { "from": "GBP", "to": "THB", "rate": 44.80, "converted_amount": 448000.00, "fee": 22.00 }

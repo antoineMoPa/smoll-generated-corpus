@@ -1,0 +1,298 @@
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_8h7g6f5e4d3c",
+  "operations": [
+    { "type": "insert", "table": "vendors", "data": { "vendor_id": 2099, "name": "Global Supplies Inc", "contact": "procurement@globalsupplies.net" } },
+    { "type": "insert", "table": "purchase_orders", "data": { "po_id": 7005, "vendor_id": 2099, "total": 3450.50 } }
+  ]
+}
+{
+  "transaction_id": "txn_8h7g6f5e4d3c",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 53,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_2b3c4d5e6f7a",
+  "operations": [
+    { "type": "update", "table": "stock_levels", "data": { "item_id": 404, "quantity": -12 } },
+    { "type": "insert", "table": "delivery_logs", "data": { "log_id": 991, "item_id": 404, "status": "dispatched" } }
+  ]
+}
+{
+  "transaction_id": "txn_2b3c4d5e6f7a",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 18,
+  "error": { "code": "CHECK_CONSTRAINT_VIOLATION", "message": "stock_levels.quantity cannot drop below zero" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_ccddee112233",
+  "operations": [
+    { "type": "insert", "table": "staff", "data": { "staff_id": 882, "name": "Priya Patel", "division": "Sales" } },
+    { "type": "update", "table": "divisions", "data": { "div_name": "Sales", "employee_count": 28 } },
+    { "type": "insert", "table": "compensation", "data": { "staff_id": 882, "annual_pay": 72000 } }
+  ]
+}
+{
+  "transaction_id": "txn_ccddee112233",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 71,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_aabb11223344",
+  "operations": [
+    { "type": "delete", "table": "auth_tokens", "data": { "token_id": "tok_xyz789" } },
+    { "type": "update", "table": "members", "data": { "member_id": 101, "last_access": "2023-11-15T14:30:00Z" } }
+  ]
+}
+{
+  "transaction_id": "txn_aabb11223344",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 29,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_9988776655aa",
+  "operations": [
+    { "type": "insert", "table": "bills", "data": { "bill_id": 4002, "total": 250.75, "state": "pending" } },
+    { "type": "insert", "table": "bill_details", "data": { "bill_id": 4002, "service": "Repair", "price": 250.75 } },
+    { "type": "update", "table": "accounts_payable", "data": { "account_id": 55, "outstanding": 3200.00 } }
+  ]
+}
+{
+  "transaction_id": "txn_9988776655aa",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 21,
+  "error": { "code": "FOREIGN_KEY_VIOLATION", "message": "account_id 55 not found in accounts_payable" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_c0ffee123456",
+  "operations": [
+    { "type": "update", "table": "wallets", "data": { "wallet_id": 205, "funds": 1200.00 } },
+    { "type": "update", "table": "wallets", "data": { "wallet_id": 206, "funds": 800.00 } }
+  ]
+}
+{
+  "transaction_id": "txn_c0ffee123456",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 35,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_babe567890ab",
+  "operations": [
+    { "type": "insert", "table": "articles", "data": { "article_id": 88, "headline": "Market Trends", "writer_id": 12 } },
+    { "type": "insert", "table": "categories", "data": { "article_id": 88, "label": "finance" } },
+    { "type": "insert", "table": "categories", "data": { "article_id": 88, "label": "global" } },
+    { "type": "update", "table": "writers", "data": { "writer_id": 12, "article_total": 45 } }
+  ]
+}
+{
+  "transaction_id": "txn_babe567890ab",
+  "status": "committed",
+  "operations_applied": 4,
+  "duration_ms": 92,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_556677889900",
+  "operations": [
+    { "type": "insert", "table": "bookings", "data": { "booking_id": 333, "customer": "Tom Hardy", "room_id": 12 } },
+    { "type": "update", "table": "rooms", "data": { "room_id": 12, "availability": "booked" } }
+  ]
+}
+{
+  "transaction_id": "txn_556677889900",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 16,
+  "error": { "code": "UNIQUE_CONSTRAINT_VIOLATION", "message": "room_id 12 is already booked for selected dates" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_778899001122",
+  "operations": [
+    { "type": "delete", "table": "wishlist_items", "data": { "list_id": 44, "item_id": 88 } },
+    { "type": "insert", "table": "purchases", "data": { "purchase_id": 6003, "list_id": 44, "amount": 120.00 } },
+    { "type": "update", "table": "inventory", "data": { "item_id": 88, "remaining": 15 } }
+  ]
+}
+{
+  "transaction_id": "txn_778899001122",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 44,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_ff00ee11dd22",
+  "operations": [
+    { "type": "insert", "table": "audit_trail", "data": { "entry_id": 500, "action": "password_reset", "actor": "support" } },
+    { "type": "update", "table": "profiles", "data": { "handle": "support", "reset_count": 2 } }
+  ]
+}
+{
+  "transaction_id": "txn_ff00ee11dd22",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 24,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_1a2b3c4d5e6f",
+  "operations": [
+    { "type": "update", "table": "memberships", "data": { "mem_id": 77, "active": false } },
+    { "type": "insert", "table": "cancellation_req", "data": { "mem_id": 77, "refund_amt": 15.00, "cause": "expired_card" } },
+    { "type": "delete", "table": "api_keys", "data": { "mem_id": 77 } }
+  ]
+}
+{
+  "transaction_id": "txn_1a2b3c4d5e6f",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 30,
+  "error": { "code": "NOT_NULL_VIOLATION", "message": "cancellation_req.cause cannot be null" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_9z8y7x6w5v4u",
+  "operations": [
+    { "type": "insert", "table": "initiatives", "data": { "init_id": 50, "title": "Beta Launch", "owner": "Jane Roe" } },
+    { "type": "insert", "table": "milestones", "data": { "ms_id": 201, "init_id": 50, "note": "Deploy Stage" } },
+    { "type": "insert", "table": "milestones", "data": { "ms_id": 202, "init_id": 50, "note": "User Testing" } }
+  ]
+}
+{
+  "transaction_id": "txn_9z8y7x6w5v4u",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 58,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_q1w2e3r4t5y6",
+  "operations": [
+    { "type": "update", "table": "depot_inventory", "data": { "code": "D-55", "count": 200 } },
+    { "type": "update", "table": "depot_inventory", "data": { "code": "D-55", "count": 190 } }
+  ]
+}
+{
+  "transaction_id": "txn_q1w2e3r4t5y6",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 13,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_m9n8b7v6c5x4",
+  "operations": [
+    { "type": "insert", "table": "replies", "data": { "reply_id": 99, "thread_id": 30, "content": "Thanks for sharing" } },
+    { "type": "update", "table": "threads", "data": { "thread_id": 30, "reply_total": 14 } },
+    { "type": "insert", "table": "alerts", "data": { "user_id": 30, "text": "New reply received" } }
+  ]
+}
+{
+  "transaction_id": "txn_m9n8b7v6c5x4",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 27,
+  "error": { "code": "DATA_EXCEPTION", "message": "content length exceeds column limit for 'content'" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_l0k9j8h7g6f5",
+  "operations": [
+    { "type": "delete", "table": "staging_records", "data": { "group_id": "grp_005" } },
+    { "type": "insert", "table": "historical_records", "data": { "group_id": "grp_005", "archived_date": "2023-12-01" } }
+  ]
+}
+{
+  "transaction_id": "txn_l0k9j8h7g6f5",
+  "status": "committed",
+  "operations_applied": 2,
+  "duration_ms": 105,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_p0o9i8u7y6t5",
+  "operations": [
+    { "type": "insert", "table": "incidents", "data": { "inc_id": 450, "topic": "Server Down", "severity": "critical" } },
+    { "type": "insert", "table": "incident_log", "data": { "inc_id": 450, "step": "opened", "agent": "auto" } },
+    { "type": "update", "table": "profiles", "data": { "user_id": 90, "active_incidents": 5 } }
+  ]
+}
+{
+  "transaction_id": "txn_p0o9i8u7y6t5",
+  "status": "committed",
+  "operations_applied": 3,
+  "duration_ms": 50,
+  "error": {}
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_r4e3w2q1a0s9",
+  "operations": [
+    { "type": "update", "table": "ledgers", "data": { "ref": "LED-789", "value": 10000 } },
+    { "type": "update", "table": "ledgers", "data": { "ref": "LED-321", "value": -10000 } }
+  ]
+}
+{
+  "transaction_id": "txn_r4e3w2q1a0s9",
+  "status": "rolled_back",
+  "operations_applied": 0,
+  "duration_ms": 11,
+  "error": { "code": "CHECK_CONSTRAINT_VIOLATION", "message": "ledger value cannot be negative" }
+}
+
+{
+  "func_call": "begin_transaction",
+  "transaction_id": "txn_z1x2c3v4b5n6",
+  "operations": [
+    { "type": "insert", "table": "seminars", "data": { "sem_id": 303, "title": "AI Workshop", "schedule": "2024-06-15" } },
+    { "type": "insert", "table": "enrollments", "data": { "sem_id": 303, "participant": "Carol Danvers" } },
+    { "type": "insert", "table": "enrollments", "data": { "sem_id": 303, "participant": "Tony Stark" } },
+    { "type": "update", "table": "seminars", "data": { "sem_id": 303, "enrolled_total": 2 } }
+  ]
+}
+{
+  "transaction_id": "txn_z1x2c3v4b5n6",
+  "status": "committed",
+  "operations_applied": 4,
+  "duration_ms": 82,
+  "error": {}
+}

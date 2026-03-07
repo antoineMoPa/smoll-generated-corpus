@@ -1,0 +1,51 @@
+Available Tools: open_garage | close_garage | get_garage_status | set_garage_timer
+Call Schema: { "func_call": "string", "door_id": "string", "delay_seconds": number }
+Response Schema: { "door_id": "string", "state": "open|closed|opening|closing", "timestamp": "string" }
+---
+Question: Can you tell me if the east wing garage is open right now?
+Call: { "func_call": "get_garage_status", "door_id": "garage_east_05", "delay_seconds": 0 }
+Response: { "door_id": "garage_east_05", "state": "open", "timestamp": "2023-11-02T09:15:30Z" }
+
+Question: Please program the north gate to shut automatically in 8 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_north_06", "delay_seconds": 480 }
+Response: { "door_id": "garage_north_06", "state": "open", "timestamp": "2023-11-02T09:18:45Z" }
+
+Question: I need to know the current position of the barn door immediately.
+Call: { "func_call": "get_garage_status", "door_id": "garage_barn_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_barn_07", "state": "closing", "timestamp": "2023-11-02T09:22:10Z" }
+
+Question: Set a timer so the east wing door closes in 12 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_east_05", "delay_seconds": 720 }
+Response: { "door_id": "garage_east_05", "state": "open", "timestamp": "2023-11-02T09:30:00Z" }
+
+Question: Has the south entrance garage finished opening yet?
+Call: { "func_call": "get_garage_status", "door_id": "garage_south_08", "delay_seconds": 0 }
+Response: { "door_id": "garage_south_08", "state": "opening", "timestamp": "2023-11-02T10:05:22Z" }
+
+Question: Arrange for the north gate to auto-close after 25 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_north_06", "delay_seconds": 1500 }
+Response: { "door_id": "garage_north_06", "state": "open", "timestamp": "2023-11-02T10:12:33Z" }
+
+Question: Check whether the barn door is currently secured.
+Call: { "func_call": "get_garage_status", "door_id": "garage_barn_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_barn_07", "state": "closed", "timestamp": "2023-11-02T10:20:15Z" }
+
+Question: Make the south entrance door close automatically in 3 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_south_08", "delay_seconds": 180 }
+Response: { "door_id": "garage_south_08", "state": "open", "timestamp": "2023-11-02T10:25:40Z" }
+
+Question: What is the status of the east wing garage at this moment?
+Call: { "func_call": "get_garage_status", "door_id": "garage_east_05", "delay_seconds": 0 }
+Response: { "door_id": "garage_east_05", "state": "closed", "timestamp": "2023-11-02T10:45:50Z" }
+
+Question: Enable the auto-shut feature for the north gate in 45 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_north_06", "delay_seconds": 2700 }
+Response: { "door_id": "garage_north_06", "state": "open", "timestamp": "2023-11-02T11:00:05Z" }
+
+Question: Is the barn door fully closed or still moving?
+Call: { "func_call": "get_garage_status", "door_id": "garage_barn_07", "delay_seconds": 0 }
+Response: { "door_id": "garage_barn_07", "state": "closed", "timestamp": "2023-11-02T11:15:20Z" }
+
+Question: Set the timer for the south entrance to close in 18 minutes.
+Call: { "func_call": "set_garage_timer", "door_id": "garage_south_08", "delay_seconds": 1080 }
+Response: { "door_id": "garage_south_08", "state": "open", "timestamp": "2023-11-02T11:30:45Z" }

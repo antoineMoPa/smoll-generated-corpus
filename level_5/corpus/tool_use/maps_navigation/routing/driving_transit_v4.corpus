@@ -1,0 +1,47 @@
+Question: How do I cycle from the Brooklyn Bridge to Prospect Park in New York?
+Call: { "func_call": "get_directions", "origin": "Brooklyn Bridge, New York, NY", "destination": "Prospect Park, Brooklyn, NY", "mode": "cycling" }
+Response: { "distance_km": 5.4, "duration_minutes": 22, "steps": [ { "instruction": "Exit the bridge onto Adams St", "distance_km": 0.8 }, { "instruction": "Turn left onto Flatbush Ave Extension", "distance_km": 3.2 }, { "instruction": "Enter Prospect Park at Grand Army Plaza", "distance_km": 1.4 } ] }
+
+Question: What are the walking directions from the Alamo to the River Walk in San Antonio?
+Call: { "func_call": "get_directions", "origin": "The Alamo, San Antonio, TX", "destination": "River Walk, San Antonio, TX", "mode": "walking" }
+Response: { "distance_km": 0.6, "duration_minutes": 8, "steps": [ { "instruction": "Head south on Alamo Plaza", "distance_km": 0.2 }, { "instruction": "Turn right onto Crockett St", "distance_km": 0.3 }, { "instruction": "Descend stairs to the River Walk path", "distance_km": 0.1 } ] }
+
+Question: Give me transit directions from LAX Airport to Santa Monica Pier in Los Angeles.
+Call: { "func_call": "get_directions", "origin": "LAX Airport, Los Angeles, CA", "destination": "Santa Monica Pier, Santa Monica, CA", "mode": "transit" }
+Response: { "distance_km": 18.2, "duration_minutes": 65, "steps": [ { "instruction": "Take the LAX FlyAway Bus to Union Station", "distance_km": 0.5 }, { "instruction": "Board the Metro Expo Line towards Santa Monica", "distance_km": 16.8 }, { "instruction": "Exit at Downtown Santa Monica Station", "distance_km": 0.1 }, { "instruction": "Walk west to the pier", "distance_km": 0.8 } ] }
+
+Question: How can I drive from Mount Rushmore to Crazy Horse Memorial in South Dakota?
+Call: { "func_call": "get_directions", "origin": "Mount Rushmore National Memorial, Keystone, SD", "destination": "Crazy Horse Memorial, Custer, SD", "mode": "driving" }
+Response: { "distance_km": 27.3, "duration_minutes": 32, "steps": [ { "instruction": "Head south on SD-244", "distance_km": 11.5 }, { "instruction": "Turn left onto US-16 W", "distance_km": 14.2 }, { "instruction": "Turn right onto Crazy Horse Rd", "distance_km": 1.6 } ] }
+
+Question: I need cycling instructions from Golden Gate Park to Alcatraz Ferry Terminal in San Francisco.
+Call: { "func_call": "get_directions", "origin": "Golden Gate Park, San Francisco, CA", "destination": "Pier 33 Alcatraz Landing, San Francisco, CA", "mode": "cycling" }
+Response: { "distance_km": 9.1, "duration_minutes": 35, "steps": [ { "instruction": "Exit park onto Stanyan St", "distance_km": 0.4 }, { "instruction": "Ride north on Masonic Ave", "distance_km": 2.8 }, { "instruction": "Turn right onto Bay St bike lane", "distance_km": 4.5 }, { "instruction": "Arrive at Pier 33", "distance_km": 1.4 } ] }
+
+Question: What is the walking route from the Liberty Bell to Independence Hall in Philadelphia?
+Call: { "func_call": "get_directions", "origin": "Liberty Bell Center, Philadelphia, PA", "destination": "Independence Hall, Philadelphia, PA", "mode": "walking" }
+Response: { "distance_km": 0.3, "duration_minutes": 4, "steps": [ { "instruction": "Exit the visitor center", "distance_km": 0.1 }, { "instruction": "Cross Chestnut St", "distance_km": 0.1 }, { "instruction": "Enter Independence Hall through the north gate", "distance_km": 0.1 } ] }
+
+Question: Drive me from Space Center Houston to the Houston Zoo.
+Call: { "func_call": "get_directions", "origin": "Space Center Houston, Houston, TX", "destination": "Houston Zoo, Houston, TX", "mode": "driving" }
+Response: { "distance_km": 38.5, "duration_minutes": 42, "steps": [ { "instruction": "Head west on NASA Pkwy", "distance_km": 12.4 }, { "instruction": "Merge onto I-45 N", "distance_km": 22.1 }, { "instruction": "Take exit 47C for US-59 S", "distance_km": 2.5 }, { "instruction": "Exit at Hermann Park Dr", "distance_km": 1.5 } ] }
+
+Question: How do I get from Pike Place Market to the University of Washington via bus in Seattle?
+Call: { "func_call": "get_directions", "origin": "Pike Place Market, Seattle, WA", "destination": "University of Washington, Seattle, WA", "mode": "transit" }
+Response: { "distance_km": 6.8, "duration_minutes": 25, "steps": [ { "instruction": "Walk to 3rd Ave & Pine St", "distance_km": 0.2 }, { "instruction": "Board Bus Route 44 towards UW", "distance_km": 0.1 }, { "instruction": "Ride to NE 45th St & 15th Ave NE", "distance_km": 6.3 }, { "instruction": "Walk south to campus entrance", "distance_km": 0.2 } ] }
+
+Question: Provide cycling directions from Millennium Park to Wrigley Field in Chicago.
+Call: { "func_call": "get_directions", "origin": "Millennium Park, Chicago, IL", "destination": "Wrigley Field, Chicago, IL", "mode": "cycling" }
+Response: { "distance_km": 10.5, "duration_minutes": 48, "steps": [ { "instruction": "Head north on Michigan Ave bike lane", "distance_km": 2.1 }, { "instruction": "Turn left onto Diversey Pkwy", "distance_km": 6.8 }, { "instruction": "Turn right onto Clark St", "distance_km": 1.4 }, { "instruction": "Arrive at Wrigley Field", "distance_km": 0.2 } ] }
+
+Question: What are the driving directions from Glacier National Park entrance to Whitefish, Montana?
+Call: { "func_call": "get_directions", "origin": "Glacier National Park West Entrance, MT", "destination": "Whitefish, MT", "mode": "driving" }
+Response: { "distance_km": 45.2, "duration_minutes": 50, "steps": [ { "instruction": "Head west on US-2 W", "distance_km": 32.5 }, { "instruction": "Continue straight onto US-93 N", "distance_km": 10.2 }, { "instruction": "Turn right onto Spokane Ave", "distance_km": 2.5 } ] }
+
+Question: Transit route from Times Square to JFK Airport in New York.
+Call: { "func_call": "get_directions", "origin": "Times Square-42nd St Station, New York, NY", "destination": "JFK International Airport, Queens, NY", "mode": "transit" }
+Response: { "distance_km": 25.8, "duration_minutes": 52, "steps": [ { "instruction": "Board the E Train towards Jamaica Center", "distance_km": 0.2 }, { "instruction": "Transfer at Sutphin Blvd to the AirTrain JFK", "distance_km": 0.1 }, { "instruction": "Ride AirTrain to Terminal 4", "distance_km": 25.5 } ] }
+
+Question: Walking directions from the French Quarter to City Park in New Orleans.
+Call: { "func_call": "get_directions", "origin": "Jackson Square, New Orleans, LA", "destination": "City Park, New Orleans, LA", "mode": "walking" }
+Response: { "distance_km": 4.2, "duration_minutes": 55, "steps": [ { "instruction": "Head north on Decatur St", "distance_km": 1.5 }, { "instruction": "Turn left onto Canal St", "distance_km": 2.1 }, { "instruction": "Cross the neutral ground and enter City Park", "distance_km": 0.6 } ] }

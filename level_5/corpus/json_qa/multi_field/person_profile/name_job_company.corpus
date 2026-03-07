@@ -1,0 +1,29 @@
+Context: Sarah Chen works as a Senior Data Analyst at TechFlow Solutions in Seattle. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Sarah Chen", "job": "Senior Data Analyst", "company": "TechFlow Solutions"}
+
+Context: During the quarterly review, Marcus Johnson, the Chief Financial Officer of GreenLeaf Industries, presented the budget. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Marcus Johnson", "job": "Chief Financial Officer", "company": "GreenLeaf Industries"}
+
+Context: Elena Rodriguez serves as the Lead UX Designer for Creative Pulse Agency, where she manages the mobile app team. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Elena Rodriguez", "job": "Lead UX Designer", "company": "Creative Pulse Agency"}
+
+Context: As the newly appointed Operations Manager at BuildRight Construction, David Kim oversees all site logistics. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "David Kim", "job": "Operations Manager", "company": "BuildRight Construction"}
+
+Context: Priya Patel, a Marketing Director at NovaStream Media, led the campaign strategy for the product launch. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Priya Patel", "job": "Marketing Director", "company": "NovaStream Media"}
+
+Context: Robert Thorne is the Head of Security at IronClad Systems, ensuring network integrity for global clients. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Robert Thorne", "job": "Head of Security", "company": "IronClad Systems"}
+
+Context: Working remotely from Austin, Jessica Lee acts as a Customer Success Manager for CloudNine Software. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Jessica Lee", "job": "Customer Success Manager", "company": "CloudNine Software"}
+
+Context: The project was handed over to Ahmed Hassan, the Senior Civil Engineer at UrbanPlan Associates. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Ahmed Hassan", "job": "Senior Civil Engineer", "company": "UrbanPlan Associates"}
+
+Context: Olivia Martinez joined Horizon Financial as a Risk Assessment Specialist last month. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Olivia Martinez", "job": "Risk Assessment Specialist", "company": "Horizon Financial"}
+
+Context: As the VP of Sales at Apex Motors, Thomas Wright closed the deal with the European distributor. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Thomas Wright", "job": "VP of Sales", "company": "Apex Motors"}
+
+Context: Dr. Emily Foster, the Research Director at BioGen Labs, published her findings on gene editing yesterday. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Emily Foster", "job": "Research Director", "company": "BioGen Labs"}
+
+Context: Kevin O'Connor works tirelessly as a Supply Chain Coordinator for GlobalTrade Logistics. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Kevin O'Connor", "job": "Supply Chain Coordinator", "company": "GlobalTrade Logistics"}
+
+Context: Sophia Nguyen, the Content Strategy Lead at WordWise Publishing, edited the final manuscript. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Sophia Nguyen", "job": "Content Strategy Lead", "company": "WordWise Publishing"}
+
+Context: James Wilson serves as the IT Support Manager at EduTech Solutions, helping schools upgrade their networks. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "James Wilson", "job": "IT Support Manager", "company": "EduTech Solutions"}
+
+Context: Maria Garcia, a Human Resources Business Partner at Stellar Corp, facilitated the hiring workshop. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Maria Garcia", "job": "Human Resources Business Partner", "company": "Stellar Corp"}

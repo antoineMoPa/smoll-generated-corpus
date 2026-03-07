@@ -1,0 +1,51 @@
+Available Tools: play | pause | stop | skip_next | skip_previous | seek
+Call Schema: { "func_call": "string", "track_id": "string", "position_seconds": number }
+Response Schema: { "track_id": "string", "title": "string", "artist": "string", "state": "playing|paused|stopped", "position_seconds": number }
+---
+Question: Start playing Midnight Rain by Taylor Swift.
+Call: { "func_call": "play", "track_id": "ts_midnight_rain_04", "position_seconds": 0 }
+Response: { "track_id": "ts_midnight_rain_04", "title": "Midnight Rain", "artist": "Taylor Swift", "state": "playing", "position_seconds": 0 }
+
+Question: Pause the current track immediately.
+Call: { "func_call": "pause", "track_id": "bk_blinding_lights_01", "position_seconds": 142 }
+Response: { "track_id": "bk_blinding_lights_01", "title": "Blinding Lights", "artist": "The Weeknd", "state": "paused", "position_seconds": 142 }
+
+Question: Skip to the next song in the queue.
+Call: { "func_call": "skip_next", "track_id": "du_levitating_09", "position_seconds": 0 }
+Response: { "track_id": "du_levitating_09", "title": "Levitating", "artist": "Dua Lipa", "state": "playing", "position_seconds": 0 }
+
+Question: Go back to the previous track.
+Call: { "func_call": "skip_previous", "track_id": "ed_shape_of_you_03", "position_seconds": 0 }
+Response: { "track_id": "ed_shape_of_you_03", "title": "Shape of You", "artist": "Ed Sheeran", "state": "playing", "position_seconds": 0 }
+
+Question: Play As It Was by Harry Styles from the beginning.
+Call: { "func_call": "play", "track_id": "hs_as_it_was_02", "position_seconds": 0 }
+Response: { "track_id": "hs_as_it_was_02", "title": "As It Was", "artist": "Harry Styles", "state": "playing", "position_seconds": 0 }
+
+Question: Pause the song Bad Habit right now.
+Call: { "func_call": "pause", "track_id": "sg_bad_habit_07", "position_seconds": 88 }
+Response: { "track_id": "sg_bad_habit_07", "title": "Bad Habit", "artist": "Steve Lacy", "state": "paused", "position_seconds": 88 }
+
+Question: Skip forward to the next track please.
+Call: { "func_call": "skip_next", "track_id": "ol_good_4_u_05", "position_seconds": 0 }
+Response: { "track_id": "ol_good_4_u_05", "title": "good 4 u", "artist": "Olivia Rodrigo", "state": "playing", "position_seconds": 0 }
+
+Question: Rewind to the start of the previous song.
+Call: { "func_call": "skip_previous", "track_id": "pb_dynamite_08", "position_seconds": 0 }
+Response: { "track_id": "pb_dynamite_08", "title": "Dynamite", "artist": "BTS", "state": "playing", "position_seconds": 0 }
+
+Question: Play Flowers by Miley Cyrus.
+Call: { "func_call": "play", "track_id": "mc_flowers_11", "position_seconds": 0 }
+Response: { "track_id": "mc_flowers_11", "title": "Flowers", "artist": "Miley Cyrus", "state": "playing", "position_seconds": 0 }
+
+Question: Pause playback on Anti-Hero.
+Call: { "func_call": "pause", "track_id": "ts_anti_hero_06", "position_seconds": 205 }
+Response: { "track_id": "ts_anti_hero_06", "title": "Anti-Hero", "artist": "Taylor Swift", "state": "paused", "position_seconds": 205 }
+
+Question: Jump to the next song in the playlist.
+Call: { "func_call": "skip_next", "track_id": "sw_cruel_summer_10", "position_seconds": 0 }
+Response: { "track_id": "sw_cruel_summer_10", "title": "Cruel Summer", "artist": "Taylor Swift", "state": "playing", "position_seconds": 0 }
+
+Question: Go back to the track before this one.
+Call: { "func_call": "skip_previous", "track_id": "dr_gods_plan_12", "position_seconds": 0 }
+Response: { "track_id": "dr_gods_plan_12", "title": "God's Plan", "artist": "Drake", "state": "playing", "position_seconds": 0 }

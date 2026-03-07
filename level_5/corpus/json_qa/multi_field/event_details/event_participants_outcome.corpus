@@ -1,0 +1,29 @@
+Context: At the annual chess championship, Magnus Carlsen and Hikaru Nakamura competed in a intense final match that ended with Carlsen securing the title. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Magnus Carlsen and Hikaru Nakamura", "outcome": "Carlsen securing the title"}
+
+Context: The peace negotiations between representatives from France and Germany resulted in a signed treaty after three days of debate. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "representatives from France and Germany", "outcome": "a signed treaty"}
+
+Context: During the science fair, students Alice Wong and Bob Smith presented their projects, but only Alice Wong won the first-place award. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Alice Wong and Bob Smith", "outcome": "only Alice Wong won the first-place award"}
+
+Context: The merger discussion involved CEOs from TechCorp and GlobalSoft, concluding with an agreement to combine operations by next quarter. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "CEOs from TechCorp and GlobalSoft", "outcome": "an agreement to combine operations by next quarter"}
+
+Context: In the marathon last Sunday, elite runners from Kenya and Ethiopia participated, with the Ethiopian athlete taking the gold medal. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "elite runners from Kenya and Ethiopia", "outcome": "the Ethiopian athlete taking the gold medal"}
+
+Context: The board meeting included members Sarah Jenkins, David Lee, and Maria Garcia, and they voted unanimously to approve the new budget. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Sarah Jenkins, David Lee, and Maria Garcia", "outcome": "voted unanimously to approve the new budget"}
+
+Context: Debaters from Oxford University and Cambridge University faced off in the finals, where Oxford was declared the winner by a narrow margin. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Debaters from Oxford University and Cambridge University", "outcome": "Oxford was declared the winner by a narrow margin"}
+
+Context: The labor strike negotiations featured union leader John Doe and factory management, resulting in a tentative contract agreement. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "union leader John Doe and factory management", "outcome": "a tentative contract agreement"}
+
+Context: Tennis rivals Serena Williams and Naomi Osaka played an exhibition match that ended in a draw due to rain interruption. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Serena Williams and Naomi Osaka", "outcome": "ended in a draw due to rain interruption"}
+
+Context: Representatives from the United Nations and the Red Cross met to coordinate relief efforts, successfully establishing a joint task force. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Representatives from the United Nations and the Red Cross", "outcome": "successfully establishing a joint task force"}
+
+Context: The coding hackathon saw teams from Google, Microsoft, and Amazon compete, with the Microsoft team taking home the grand prize. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "teams from Google, Microsoft, and Amazon", "outcome": "the Microsoft team taking home the grand prize"}
+
+Context: Diplomats from Brazil and Argentina held talks regarding trade tariffs, which concluded with a mutual reduction of fees. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Diplomats from Brazil and Argentina", "outcome": "a mutual reduction of fees"}
+
+Context: The courtroom trial involved prosecutor Jane Roe and defendant Mark Twain, ending with a verdict of not guilty. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "prosecutor Jane Roe and defendant Mark Twain", "outcome": "a verdict of not guilty"}
+
+Context: Shareholders from Apex Industries and Zenith Corp attended the emergency meeting, deciding to halt the acquisition process. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Shareholders from Apex Industries and Zenith Corp", "outcome": "deciding to halt the acquisition process"}
+
+Context: Athletes from the local high school and the visiting academy competed in the relay race, with the visiting academy breaking the school record. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Athletes from the local high school and the visiting academy", "outcome": "the visiting academy breaking the school record"}

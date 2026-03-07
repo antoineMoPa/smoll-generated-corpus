@@ -1,0 +1,51 @@
+Available Tools: search_restaurants | filter_by_cuisine | get_restaurant_menu | get_restaurant_details
+Call Schema: { "func_call": "string", "location": "string", "cuisine": "string", "max_delivery_time": number, "min_rating": number }
+Response Schema: { "restaurants": [{ "id": "string", "name": "string", "cuisine": "string", "rating": number, "delivery_time_min": number }], "total": number }
+---
+Question: Find me some highly rated Korean spots in Atlanta that can deliver within 35 minutes, then get the menu for the top result.
+Call: { "func_call": "search_restaurants", "location": "Atlanta, GA", "cuisine": "Korean", "max_delivery_time": 35, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_021", "name": "Seoul Kitchen", "cuisine": "Korean", "rating": 4.8, "delivery_time_min": 30 }, { "id": "rest_022", "name": "Kimchi House", "cuisine": "Korean", "rating": 4.7, "delivery_time_min": 33 }], "total": 2 }
+---
+Question: I need a tapas bar in San Diego with at least a 4.5 rating. Once you find one, show me their full menu.
+Call: { "func_call": "search_restaurants", "location": "San Diego, CA", "cuisine": "Tapas", "max_delivery_time": 45, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_023", "name": "Barcelona Bites", "cuisine": "Tapas", "rating": 4.9, "delivery_time_min": 40 }], "total": 1 }
+---
+Question: Search for Ethiopian restaurants in Minneapolis under 40 minutes delivery time and get the details for the first one found.
+Call: { "func_call": "search_restaurants", "location": "Minneapolis, MN", "cuisine": "Ethiopian", "max_delivery_time": 40, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_024", "name": "Addis Ababa", "cuisine": "Ethiopian", "rating": 4.6, "delivery_time_min": 35 }, { "id": "rest_025", "name": "Blue Nile", "cuisine": "Ethiopian", "rating": 4.4, "delivery_time_min": 38 }], "total": 2 }
+---
+Question: Look for seafood shacks in Baltimore with a minimum rating of 4.4, then retrieve the menu for the highest-rated option.
+Call: { "func_call": "search_restaurants", "location": "Baltimore, MD", "cuisine": "Seafood", "max_delivery_time": 50, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_026", "name": "Harbor Catch", "cuisine": "Seafood", "rating": 4.8, "delivery_time_min": 42 }, { "id": "rest_027", "name": "Crab Shack MD", "cuisine": "Seafood", "rating": 4.5, "delivery_time_min": 48 }], "total": 2 }
+---
+Question: Find Brazilian steakhouse options in Dallas that deliver in under 55 minutes and have a 4.7+ rating, then get the restaurant details.
+Call: { "func_call": "search_restaurants", "location": "Dallas, TX", "cuisine": "Brazilian", "max_delivery_time": 55, "min_rating": 4.7 }
+Response: { "restaurants": [{ "id": "rest_028", "name": "Churrasco Prime", "cuisine": "Brazilian", "rating": 4.9, "delivery_time_min": 50 }], "total": 1 }
+---
+Question: Search for gluten-free bakeries in Phoenix with a 4.6 rating or higher, and pull up the menu for the best match.
+Call: { "func_call": "search_restaurants", "location": "Phoenix, AZ", "cuisine": "Gluten-Free", "max_delivery_time": 30, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_029", "name": "Pure Flourless", "cuisine": "Gluten-Free", "rating": 4.8, "delivery_time_min": 25 }, { "id": "rest_030", "name": "Desert Delights GF", "cuisine": "Gluten-Free", "rating": 4.7, "delivery_time_min": 28 }], "total": 2 }
+---
+Question: I want Lebanese food in Detroit delivered within 45 minutes. Find places with at least 4.5 stars and get the details for the first one.
+Call: { "func_call": "search_restaurants", "location": "Detroit, MI", "cuisine": "Lebanese", "max_delivery_time": 45, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_031", "name": "Cedar Grill", "cuisine": "Lebanese", "rating": 4.7, "delivery_time_min": 40 }, { "id": "rest_032", "name": "Beirut Express", "cuisine": "Lebanese", "rating": 4.6, "delivery_time_min": 43 }], "total": 2 }
+---
+Question: Locate ramen shops in Las Vegas that can deliver in 25 minutes or less with a rating above 4.3, then show me the menu for the top pick.
+Call: { "func_call": "search_restaurants", "location": "Las Vegas, NV", "cuisine": "Ramen", "max_delivery_time": 25, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_033", "name": "Neon Noodles", "cuisine": "Ramen", "rating": 4.8, "delivery_time_min": 20 }, { "id": "rest_034", "name": "Vegas Ramen Bar", "cuisine": "Ramen", "rating": 4.4, "delivery_time_min": 24 }], "total": 2 }
+---
+Question: Find Caribbean restaurants in Orlando with a 4.6+ rating and delivery under 50 minutes, then get the full details.
+Call: { "func_call": "search_restaurants", "location": "Orlando, FL", "cuisine": "Caribbean", "max_delivery_time": 50, "min_rating": 4.6 }
+Response: { "restaurants": [{ "id": "rest_035", "name": "Island Spice", "cuisine": "Caribbean", "rating": 4.9, "delivery_time_min": 45 }], "total": 1 }
+---
+Question: Search for Peruvian food in Houston with a minimum 4.5 rating and max 40 min delivery, then retrieve the menu.
+Call: { "func_call": "search_restaurants", "location": "Houston, TX", "cuisine": "Peruvian", "max_delivery_time": 40, "min_rating": 4.5 }
+Response: { "restaurants": [{ "id": "rest_036", "name": "Lima Fresh", "cuisine": "Peruvian", "rating": 4.7, "delivery_time_min": 35 }, { "id": "rest_037", "name": "Andes Flavor", "cuisine": "Peruvian", "rating": 4.6, "delivery_time_min": 38 }], "total": 2 }
+---
+Question: Find soul food spots in Memphis delivering within 60 minutes with at least 4.4 stars, and get the restaurant details.
+Call: { "func_call": "search_restaurants", "location": "Memphis, TN", "cuisine": "Soul Food", "max_delivery_time": 60, "min_rating": 4.4 }
+Response: { "restaurants": [{ "id": "rest_038", "name": "Southern Comfort Kitchen", "cuisine": "Soul Food", "rating": 4.8, "delivery_time_min": 55 }], "total": 1 }
+---
+Question: Look for German breweries in Milwaukee with a 4.3 rating or better and delivery under 45 minutes, then show the menu.
+Call: { "func_call": "search_restaurants", "location": "Milwaukee, WI", "cuisine": "German", "max_delivery_time": 45, "min_rating": 4.3 }
+Response: { "restaurants": [{ "id": "rest_039", "name": "Bavarian Haus", "cuisine": "German", "rating": 4.6, "delivery_time_min": 40 }, { "id": "rest_040", "name": "Pretzel & Pint", "cuisine": "German", "rating": 4.4, "delivery_time_min": 44 }], "total": 2 }

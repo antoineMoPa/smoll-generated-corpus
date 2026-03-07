@@ -1,0 +1,20 @@
+{"func_call": "check_stock_levels", "product_id": "HOME-CHR-088", "options": {"color": "Cream", "size": "Large", "material": "Ceramic"}}
+{"func_call": "update_price_tag", "product_id": "HOME-LMP-102", "options": {"color": "Brass", "size": "Medium", "material": "Glass"}}
+{"func_call": "schedule_delivery", "product_id": "HOME-SOF-205", "options": {"color": "Navy", "size": "3-Seater", "material": "Velvet"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-TBL-310", "options": {"color": "Oak", "size": "Dining", "material": "Solid Wood"}}
+{"func_call": "update_price_tag", "product_id": "HOME-RUG-415", "options": {"color": "Beige", "size": "8x10", "material": "Wool"}}
+{"func_call": "schedule_delivery", "product_id": "HOME-BED-520", "options": {"color": "White", "size": "Queen", "material": "Upholstered"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-DSK-625", "options": {"color": "Black", "size": "Standing", "material": "Bamboo"}}
+{"func_call": "update_price_tag", "product_id": "HOME-MIR-730", "options": {"color": "Gold", "size": "Round", "material": "Metal Frame"}}
+{"func_call": "schedule_delivery", "product_id": "HOME-ARM-835", "options": {"color": "Grey", "size": "Recliner", "material": "Leather"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-SHF-940", "options": {"color": "Walnut", "size": "Floating", "material": "Engineered Wood"}}
+{"func_call": "update_price_tag", "product_id": "HOME-VSE-045", "options": {"color": "Blue", "size": "Tall", "material": "Porcelain"}}
+{"func_call": "schedule_delivery", "product_id": "HOME-OTT-150", "options": {"color": "Emerald", "size": "Square", "material": "Linen"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-CLK-255", "options": {"color": "Silver", "size": "Wall", "material": "Steel"}}
+{"func_call": "update_price_tag", "product_id": "HOME-PLT-360", "options": {"color": "Terracotta", "size": "Small", "material": "Clay"}}
+{"func_call": "schedule_delivery", "product_id": "HOME-DRS-465", "options": {"color": "Mahogany", "size": "Double", "material": "Hardwood"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-PIL-570", "options": {"color": "Lavender", "size": "Standard", "material": "Memory Foam"}}
+{"func_call": "update_price_tag", "product_id": "HOME-LGT-675", "options": {"color": "Chrome", "size": "Floor", "material": "Aluminum"}}
+{"func_call": "schedule_delivery", "product_id": "HOME-CAB-780", "options": {"color": "Pine", "size": "Storage", "material": "Particle Board"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-BNK-885", "options": {"color": "Teal", "size": "Compact", "material": "Fabric"}}
+{"func_call": "update_price_tag", "product_id": "HOME-TRAY-990", "options": {"color": "Copper", "size": "Serving", "material": "Metal"}}

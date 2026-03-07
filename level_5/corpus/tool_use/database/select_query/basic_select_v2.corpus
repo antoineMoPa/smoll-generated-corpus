@@ -1,0 +1,87 @@
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Fetch the first 15 employee names and departments from the staff table.
+Call: { "func_call": "select_records", "table": "staff", "columns": ["name", "department"], "where": "1=1", "limit": 15 }
+Response: { "rows": [{"name": "Sarah Connor", "department": "Security"}, {"name": "Kyle Reese", "department": "Logistics"}, {"name": "John Doe", "department": "IT"}], "count": 3, "query_ms": 14 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Find all available conference rooms with capacity greater than 20.
+Call: { "func_call": "select_with_filter", "table": "rooms", "columns": ["room_id", "location", "capacity"], "where": "is_available = true AND capacity > 20", "limit": 10 }
+Response: { "rows": [{"room_id": 301, "location": "Floor 3", "capacity": 25}, {"room_id": 405, "location": "Floor 4", "capacity": 50}], "count": 2, "query_ms": 9 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve invoice amounts joined with client company names for invoices due in London.
+Call: { "func_call": "select_with_join", "table": "invoices", "columns": ["invoices.amount", "clients.company_name"], "where": "clients.city = 'London'", "limit": 25 }
+Response: { "rows": [{"amount": 1500.75, "company_name": "TechCorp Ltd"}, {"amount": 320.00, "company_name": "Baker Street Ops"}], "count": 2, "query_ms": 21 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count how many events were scheduled for next month.
+Call: { "func_call": "count_records", "table": "events", "columns": ["event_id"], "where": "event_date BETWEEN NOW() AND NOW() + INTERVAL '30 days'", "limit": 1 }
+Response: { "rows": [], "count": 28, "query_ms": 7 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List the top 3 lowest rated movies currently in the database.
+Call: { "func_call": "select_with_filter", "table": "movies", "columns": ["title", "rating", "genre"], "where": "rating IS NOT NULL", "limit": 3 }
+Response: { "rows": [{"title": "Bad Movie 1", "rating": 1.2, "genre": "Drama"}, {"title": "Worst Film", "rating": 0.5, "genre": "Action"}], "count": 2, "query_ms": 19 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Get all reservations made by guest ID 882 in the last 48 hours.
+Call: { "func_call": "select_with_filter", "table": "reservations", "columns": ["id", "check_in", "room_number"], "where": "guest_id = 882 AND created_at >= NOW() - INTERVAL '48 hours'", "limit": 50 }
+Response: { "rows": [{"id": 4401, "check_in": "2023-11-01", "room_number": 204}, {"id": 4405, "check_in": "2023-11-02", "room_number": 310}], "count": 2, "query_ms": 10 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Fetch student grades and their associated course titles using a join.
+Call: { "func_call": "select_with_join", "table": "enrollments", "columns": ["enrollments.grade", "courses.title"], "where": "enrollments.semester = 'Fall 2023'", "limit": 100 }
+Response: { "rows": [{"grade": "A", "title": "Advanced Physics"}, {"grade": "B+", "title": "Calculus II"}], "count": 2, "query_ms": 16 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Show me the first 10 book titles and authors where the genre is 'Mystery'.
+Call: { "func_call": "select_with_filter", "table": "books", "columns": ["title", "author"], "where": "genre = 'Mystery'", "limit": 10 }
+Response: { "rows": [{"title": "The Silent Clue", "author": "Agatha Christie"}, {"title": "Dark Water", "author": "Arthur Conan Doyle"}, {"title": "Midnight Train", "author": "Raymond Chandler"}], "count": 3, "query_ms": 8 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Retrieve all columns for the supplier with ID 'SUP-99'.
+Call: { "func_call": "select_records", "table": "suppliers", "columns": ["*"], "where": "supplier_id = 'SUP-99'", "limit": 1 }
+Response: { "rows": [{"supplier_id": "SUP-99", "name": "Global Parts Inc", "contact": "555-0199", "active": true}], "count": 1, "query_ms": 5 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: List shipments with status 'in_transit' joined with destination warehouse names.
+Call: { "func_call": "select_with_join", "table": "shipments", "columns": ["shipments.tracking_id", "warehouses.name"], "where": "shipments.status = 'in_transit'", "limit": 40 }
+Response: { "rows": [{"tracking_id": "TRK-1001", "name": "West Coast Hub"}, {"tracking_id": "TRK-1005", "name": "Central Depot"}], "count": 2, "query_ms": 23 }
+
+Available Tools: select_records | select_with_filter | select_with_join | count_records
+Call Schema: { "func_call": "string", "table": "string", "columns": ["string"], "where": "string", "limit": number }
+Response Schema: { "rows": [{}], "count": number, "query_ms": number }
+---
+Question: Count the number of tasks assigned to user ID 55 that are not completed.
+Call: { "func_call": "count_records", "table": "tasks", "columns": ["task_id"], "where": "assignee_id = 55 AND status != 'completed'", "limit": 1 }
+Response: { "rows": [], "count": 17, "query_ms": 4 }

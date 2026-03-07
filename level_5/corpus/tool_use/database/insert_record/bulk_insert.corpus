@@ -1,0 +1,95 @@
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add a new batch of summer clothing items to the product catalog including t-shirts and shorts.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "SUM-TS-001", "name": "Cotton Crew Neck", "price": 19.99, "stock": 500 }, { "sku": "SUM-SH-002", "name": "Linen Chino Shorts", "price": 34.50, "stock": 200 }, { "sku": "SUM-HAT-003", "name": "Straw Sun Hat", "price": 24.99, "stock": 150 } ] }
+Response: { "id": 8921, "table": "products", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log three critical system errors that occurred during the midnight maintenance window.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-10-27T00:14:22Z", "level": "ERROR", "service": "auth-gateway", "message": "Connection timeout to Redis cluster" }, { "timestamp": "2023-10-27T00:15:01Z", "level": "CRITICAL", "service": "payment-processor", "message": "Failed to initialize secure enclave" }, { "timestamp": "2023-10-27T00:16:45Z", "level": "ERROR", "service": "inventory-sync", "message": "Database lock wait timeout exceeded" } ] }
+Response: { "id": 44502, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Import a list of five new enterprise users from the Q4 partner onboarding CSV.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "j.doe@acmecorp.com", "role": "admin", "department": "Engineering", "active": true }, { "email": "s.smith@acmecorp.com", "role": "editor", "department": "Marketing", "active": true }, { "email": "m.jones@acmecorp.com", "role": "viewer", "department": "Sales", "active": false }, { "email": "r.wilson@acmecorp.com", "role": "admin", "department": "HR", "active": true }, { "email": "k.lee@acmecorp.com", "role": "editor", "department": "Finance", "active": true } ] }
+Response: { "id": 10293, "table": "users", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Populate the electronics section with four new laptop models and their specifications.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "ELEC-LAP-101", "name": "ProBook X1", "price": 1299.00, "stock": 45 }, { "sku": "ELEC-LAP-102", "name": "UltraSlim Air", "price": 999.50, "stock": 120 }, { "sku": "ELEC-LAP-103", "name": "GamerRig Z9", "price": 2450.00, "stock": 30 }, { "sku": "ELEC-LAP-104", "name": "Studio Display 16", "price": 1899.99, "stock": 60 } ] }
+Response: { "id": 8922, "table": "products", "inserted": 4, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Record a sequence of user login events from the London office this morning.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-10-27T08:02:11Z", "level": "INFO", "service": "auth-service", "message": "User login successful: UK-LON-001" }, { "timestamp": "2023-10-27T08:05:33Z", "level": "INFO", "service": "auth-service", "message": "User login successful: UK-LON-042" }, { "timestamp": "2023-10-27T08:12:09Z", "level": "WARN", "service": "auth-service", "message": "Multiple failed login attempts: UK-LON-099" } ] }
+Response: { "id": 44503, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Bulk insert a dataset of six winter accessories into the inventory system.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "WIN-SCF-001", "name": "Merino Wool Scarf", "price": 45.00, "stock": 300 }, { "sku": "WIN-GLV-002", "name": "Leather Touchscreen Gloves", "price": 55.00, "stock": 250 }, { "sku": "WIN-BEAN-003", "name": "Knit Beanie", "price": 15.99, "stock": 600 }, { "sku": "WIN-COAT-004", "name": "Parka Jacket", "price": 189.99, "stock": 80 }, { "sku": "WIN-BOT-005", "name": "Insulated Boots", "price": 120.00, "stock": 150 }, { "sku": "WIN-EAR-006", "name": "Faux Fur Earmuffs", "price": 22.50, "stock": 400 } ] }
+Response: { "id": 8923, "table": "products", "inserted": 6, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add four new beta testers to the user database with temporary accounts.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "beta1@testmail.com", "role": "tester", "department": "QA", "active": true }, { "email": "beta2@testmail.com", "role": "tester", "department": "QA", "active": true }, { "email": "beta3@testmail.com", "role": "tester", "department": "UX", "active": true }, { "email": "beta4@testmail.com", "role": "tester", "department": "Dev", "active": false } ] }
+Response: { "id": 10294, "table": "users", "inserted": 4, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Insert a batch of API rate limit warning logs generated by the monitoring script.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-10-27T14:22:00Z", "level": "WARN", "service": "api-gateway", "message": "Rate limit 80% reached for client ID 9921" }, { "timestamp": "2023-10-27T14:23:15Z", "level": "WARN", "service": "api-gateway", "message": "Rate limit 90% reached for client ID 1102" }, { "timestamp": "2023-10-27T14:24:30Z", "level": "ERROR", "service": "api-gateway", "message": "Rate limit exceeded for client ID 9921" } ] }
+Response: { "id": 44504, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Upload five new organic food items to the grocery product catalog.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "GRC-ORG-001", "name": "Organic Bananas", "price": 3.99, "stock": 1000 }, { "sku": "GRC-ORG-002", "name": "Free Range Eggs", "price": 5.49, "stock": 450 }, { "sku": "GRC-ORG-003", "name": "Almond Milk", "price": 4.29, "stock": 300 }, { "sku": "GRC-ORG-004", "name": "Quinoa Grain", "price": 8.99, "stock": 200 }, { "sku": "GRC-ORG-005", "name": "Avocado Oil", "price": 12.50, "stock": 150 } ] }
+Response: { "id": 8924, "table": "products", "inserted": 5, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Register a group of three contractors hired for the upcoming hackathon.
+Call: { "func_call": "bulk_insert", "table": "users", "data": [ { "email": "contractor.a@freelance.net", "role": "contributor", "department": "External", "active": true }, { "email": "contractor.b@freelance.net", "role": "contributor", "department": "External", "active": true }, { "email": "contractor.c@freelance.net", "role": "observer", "department": "External", "active": true } ] }
+Response: { "id": 10295, "table": "users", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Log a series of database backup completion events from the nightly cron job.
+Call: { "func_call": "bulk_insert", "table": "event_logs", "data": [ { "timestamp": "2023-10-27T03:00:05Z", "level": "INFO", "service": "db-backup", "message": "Backup started for primary_db" }, { "timestamp": "2023-10-27T03:15:22Z", "level": "INFO", "service": "db-backup", "message": "Backup completed successfully: primary_db (2.4GB)" }, { "timestamp": "2023-10-27T03:15:25Z", "level": "INFO", "service": "db-backup", "message": "Backup verification passed" } ] }
+Response: { "id": 44505, "table": "event_logs", "inserted": 3, "status": "success" }
+
+Available Tools: insert_record | bulk_insert | insert_and_return
+Call Schema: { "func_call": "string", "table": "string", "data": {} }
+Response Schema: { "id": number, "table": "string", "inserted": number, "status": "string" }
+---
+Question: Add a collection of seven home decor items to the seasonal products table.
+Call: { "func_call": "bulk_insert", "table": "products", "data": [ { "sku": "DEC-LAMP-001", "name": "Ceramic Table Lamp", "price": 49.99, "stock": 75 }, { "sku": "DEC-RUG-002", "name": "Jute Area Rug", "price": 89.00, "stock": 40 }, { "sku": "DEC-VASE-003", "name": "Glass Flower Vase", "price": 24.50, "stock": 120 }, { "sku": "DEC-PIL-004", "name": "Velvet Throw Pillow", "price": 19.99, "stock": 200 }, { "sku": "DEC-MIR-005", "name": "Round Wall Mirror", "price": 65.00, "stock": 55 }, { "sku": "DEC-CLK-006", "name": "Minimalist Wall Clock", "price": 34.99, "stock": 90 }, { "sku": "DEC-CAN-007", "name": "Scented Soy Candle", "price": 14.99, "stock": 350 } ] }
+Response: { "id": 8925, "table": "products", "inserted": 7, "status": "success" }

@@ -1,0 +1,51 @@
+Available Tools: curl_get | curl_post | wget_download | ssh_command | ping_host
+Call Schema: { "func_call": "string", "url": "string", "host": "string", "options": "string" }
+Response Schema: { "status_code": number, "output": "string", "elapsed_ms": number }
+---
+Question: Query the inventory database for stock levels of SKU-9982 in the Tokyo warehouse via a GET request.
+Call: { "func_call": "curl_get", "url": "https://inventory-api.retail-global.com/stock?sku=SKU-9982&location=TYO", "host": "inventory-api.retail-global.com", "options": "-H \"X-API-Key: inv_key_776655\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"sku\": \"SKU-9982\", \"location\": \"TYO\", \"quantity\": 450, \"reserved\": 20, \"last_updated\": \"2023-11-15T09:12:00Z\"}", "elapsed_ms": 67 }
+
+Question: Register a new IoT device sensor with the cloud platform using a POST request containing device metadata.
+Call: { "func_call": "curl_post", "url": "https://iot-cloud.platform.io/devices/register", "host": "iot-cloud.platform.io", "options": "-H \"Content-Type: application/json\" -d \"{\\\"device_id\\\": \\\"sens_4421\\\", \\\"type\\\": \\\"temperature\\\", \\\"firmware\\\": \\\"v3.1.0\\\"}\"" }
+Response: { "status_code": 201, "output": "{\"device_id\": \"sens_4421\", \"token\": \"dev_tok_xyz987\", \"endpoint\": \"mqtt://iot-cloud.platform.io:8883\", \"status\": \"active\"}", "elapsed_ms": 198 }
+
+Question: Download the official PostgreSQL Docker image manifest list from the container registry.
+Call: { "func_call": "wget_download", "url": "https://registry.hub.docker.com/v2/library/postgresql/manifests/15-alpine", "host": "registry.hub.docker.com", "options": "-O ./manifests/postgres-15-alpine.json --header=\"Accept: application/vnd.docker.distribution.manifest.list.v2+json\"" }
+Response: { "status_code": 200, "output": "postgres-15-alpine.json  100%[===================>]   2.15K  --.-KB/s    in 0.1s     \n2023-11-15 09:15:45 (21.5 KB/s) - './manifests/postgres-15-alpine.json' saved [2201/2201]", "elapsed_ms": 110 }
+
+Question: Fetch the current exchange rates for EUR, GBP, and JPY against USD from the financial data provider.
+Call: { "func_call": "curl_get", "url": "https://fx.data-provider.net/rates?base=USD&symbols=EUR,GBP,JPY", "host": "fx.data-provider.net", "options": "-H \"Authorization: Bearer fx_token_112233\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"base\": \"USD\", \"date\": \"2023-11-15\", \"rates\": {\"EUR\": 0.92, \"GBP\": 0.79, \"JPY\": 149.50}}", "elapsed_ms": 54 }
+
+Question: Submit a fraud alert event to the security operations center with transaction details.
+Call: { "func_call": "curl_post", "url": "https://soc.security-corp.internal/api/v1/alerts", "host": "soc.security-corp.internal", "options": "-H \"Content-Type: application/json\" -H \"X-SOC-Key: soc_key_abc123\" -d \"{\\\"alert_type\\\": \\\"fraud\\\", \\\"txn_id\\\": \\\"txn_998877\\\", \\\"amount\\\": 5000.00, \\\"reason\\\": \\\"velocity_check_failed\\\"}\"" }
+Response: { "status_code": 202, "output": "{\"alert_id\": \"alt_556677\", \"queued\": true, \"priority\": \"high\", \"timestamp\": \"2023-11-15T09:20:11Z\"}", "elapsed_ms": 38 }
+
+Question: Download the quarterly compliance report Excel file from the legal document repository.
+Call: { "func_call": "wget_download", "url": "https://docs.legal-archive.com/compliance/2023/Q3/report_q3_2023.xlsx", "host": "docs.legal-archive.com", "options": "-P ./reports/compliance --user=\"legal_bot\" --password=\"secure_pass_99\"" }
+Response: { "status_code": 200, "output": "report_q3_2023.xlsx  100%[===================>]  1.20M  --.-KB/s    in 0.8s     \n2023-11-15 09:22:30 (1.5 MB/s) - './reports/compliance/report_q3_2023.xlsx' saved [1258291/1258291]", "elapsed_ms": 845 }
+
+Question: Verify the latency to the primary DNS resolver using a ping command.
+Call: { "func_call": "ping_host", "url": "", "host": "8.8.8.8", "options": "-c 4 -W 2" }
+Response: { "status_code": 0, "output": "PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.\n64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=12.4 ms\n64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=11.9 ms\n64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=12.1 ms\n64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=12.0 ms\n\n--- 8.8.8.8 ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3004ms\nrtt min/avg/max/mdev = 11.9/12.1/12.4/0.1 ms", "elapsed_ms": 3005 }
+
+Question: Rotate the API credentials for the marketing automation tool by posting new secrets to the vault service.
+Call: { "func_call": "curl_post", "url": "https://vault.secure-infra.net/v1/secret/marketing/rotate", "host": "vault.secure-infra.net", "options": "-H \"X-Vault-Token: hvs_secret_token_9988\" -H \"Content-Type: application/json\" -d \"{\\\"service\\\": \\\"hubspot\\\", \\\"reason\\\": \\\"scheduled_rotation\\\"}\"" }
+Response: { "status_code": 200, "output": "{\"version\": 4, \"created_at\": \"2023-11-15T09:25:00Z\", \"lease_id\": \"lease_mk_778899\", \"status\": \"rotated\"}", "elapsed_ms": 145 }
+
+Question: Retrieve the list of active Kubernetes pods in the production namespace via the cluster API.
+Call: { "func_call": "curl_get", "url": "https://k8s-api.prod-cluster.io/api/v1/namespaces/prod/pods", "host": "k8s-api.prod-cluster.io", "options": "-H \"Authorization: Bearer k8s_svc_acct_token\" -H \"Accept: application/json\"" }
+Response: { "status_code": 200, "output": "{\"items\": [{\"metadata\": {\"name\": \"web-frontend-7d9f\"}, \"status\": {\"phase\": \"Running\"}}, {\"metadata\": {\"name\": \"api-gateway-5c8b\"}, \"status\": {\"phase\": \"Running\"}}], \"kind\": \"PodList\"}", "elapsed_ms": 92 }
+
+Question: Download the geospatial shapefile for North American regions from the GIS data portal.
+Call: { "func_call": "wget_download", "url": "https://gis-data.openmaps.org/data/na_regions_2023.zip", "host": "gis-data.openmaps.org", "options": "-O ./gis/na_regions_2023.zip --continue" }
+Response: { "status_code": 206, "output": "na_regions_2023.zip  100%[===================>]  45.20M  12.5MB/s    in 3.6s     \n2023-11-15 09:30:15 (12.5 MB/s) - './gis/na_regions_2023.zip' saved [47396864/47396864]", "elapsed_ms": 3650 }
+
+Question: Execute a remote cleanup script on the backup server to remove logs older than 30 days.
+Call: { "func_call": "ssh_command", "url": "", "host": "backup-srv-02.internal", "options": "bash /scripts/cleanup_logs.sh --days 30 --verbose" }
+Response: { "status_code": 0, "output": "Starting cleanup on backup-srv-02...\nFound 142 files older than 30 days in /var/log/app.\nDeleted 142 files.\nFreed 4.5GB disk space.\nCleanup completed successfully.", "elapsed_ms": 4500 }
+
+Question: Get the current status of the message queue broker cluster health check endpoint.
+Call: { "func_call": "curl_get", "url": "https://mq-broker.stream-services.net/health/cluster", "host": "mq-broker.stream-services.net", "options": "-H \"Accept: application/json\" -H \"X-Cluster-ID: prod-cluster-01\"" }
+Response: { "status_code": 200, "output": "{\"cluster_id\": \"prod-cluster-01\", \"nodes\": 3, \"leader\": \"node-01\", \"replication_lag_ms\": 12, \"status\": \"healthy\", \"messages_pending\": 1540}", "elapsed_ms": 28 }

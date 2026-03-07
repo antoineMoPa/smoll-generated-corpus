@@ -1,0 +1,51 @@
+Available Tools: create_event | create_recurring_event | create_all_day_event
+Call Schema: { "func_call": "string", "title": "string", "start": "string", "end": "string", "location": "string", "description": "string" }
+Response Schema: { "event_id": "string", "title": "string", "start": "string", "end": "string", "calendar": "string" }
+---
+Question: Arrange a design critique for the mobile app redesign on Tuesday at 2 PM in the Creative Studio.
+Call: { "func_call": "create_event", "title": "Mobile App Design Critique", "start": "2023-11-07T14:00:00Z", "end": "2023-11-07T15:30:00Z", "location": "Creative Studio", "description": "Review high-fidelity mockups for the iOS update." }
+Response: { "event_id": "evt_5512aa1", "title": "Mobile App Design Critique", "start": "2023-11-07T14:00:00Z", "end": "2023-11-07T15:30:00Z", "calendar": "Design" }
+
+Question: Book a coffee chat with Maria to discuss the internship program at Bean & Brew on Thursday at 10 AM.
+Call: { "func_call": "create_event", "title": "Coffee with Maria - Internships", "start": "2023-11-09T10:00:00Z", "end": "2023-11-09T10:45:00Z", "location": "Bean & Brew", "description": "Finalize selections for the summer internship cohort." }
+Response: { "event_id": "evt_6623bb2", "title": "Coffee with Maria - Internships", "start": "2023-11-09T10:00:00Z", "end": "2023-11-09T10:45:00Z", "calendar": "HR" }
+
+Question: Schedule a bi-weekly sprint planning meeting every other Wednesday at 11 AM starting next week.
+Call: { "func_call": "create_recurring_event", "title": "Sprint Planning", "start": "2023-11-08T11:00:00Z", "end": "2023-11-08T12:30:00Z", "location": "Jira Board / Zoom", "description": "Plan tasks and estimate stories for the upcoming sprint." }
+Response: { "event_id": "evt_rec_7734cc3", "title": "Sprint Planning", "start": "2023-11-08T11:00:00Z", "end": "2023-11-08T12:30:00Z", "calendar": "Engineering" }
+
+Question: Create an event for the annual company picnic on December 15th from 12 PM to 5 PM at Central Park.
+Call: { "func_call": "create_all_day_event", "title": "Annual Company Picnic", "start": "2023-12-15T12:00:00Z", "end": "2023-12-15T17:00:00Z", "location": "Central Park, Great Lawn", "description": "Team building activities and lunch for all staff." }
+Response: { "event_id": "evt_8845dd4", "title": "Annual Company Picnic", "start": "2023-12-15T12:00:00Z", "end": "2023-12-15T17:00:00Z", "calendar": "Company" }
+
+Question: Set up a vendor negotiation call with TechSupplies Inc. for Monday at 9:30 AM via Google Meet.
+Call: { "func_call": "create_event", "title": "Vendor Negotiation - TechSupplies", "start": "2023-11-06T09:30:00Z", "end": "2023-11-06T10:30:00Z", "location": "Google Meet", "description": "Discuss pricing tiers for the new hardware order." }
+Response: { "event_id": "evt_9956ee5", "title": "Vendor Negotiation - TechSupplies", "start": "2023-11-06T09:30:00Z", "end": "2023-11-06T10:30:00Z", "calendar": "Procurement" }
+
+Question: Book a car service appointment for oil change and tire rotation on November 12th at 8 AM.
+Call: { "func_call": "create_event", "title": "Car Service Appointment", "start": "2023-11-12T08:00:00Z", "end": "2023-11-12T09:30:00Z", "location": "QuickLube Downtown", "description": "Routine maintenance for the company vehicle." }
+Response: { "event_id": "evt_1067ff6", "title": "Car Service Appointment", "start": "2023-11-12T08:00:00Z", "end": "2023-11-12T09:30:00Z", "calendar": "Personal" }
+
+Question: Schedule a quarterly business review with the sales team for next Friday at 1 PM in the Skyline Room.
+Call: { "func_call": "create_event", "title": "Q4 Sales Review", "start": "2023-11-10T13:00:00Z", "end": "2023-11-10T15:00:00Z", "location": "Skyline Room", "description": "Analyze Q3 performance and set Q4 targets." }
+Response: { "event_id": "evt_2178gg7", "title": "Q4 Sales Review", "start": "2023-11-10T13:00:00Z", "end": "2023-11-10T15:00:00Z", "calendar": "Sales" }
+
+Question: Create a recurring yoga class every Tuesday and Thursday at 6 PM starting November 14th.
+Call: { "func_call": "create_recurring_event", "title": "Evening Yoga", "start": "2023-11-14T18:00:00Z", "end": "2023-11-14T19:00:00Z", "location": "Zen Studio", "description": "Weekly wellness session for employees." }
+Response: { "event_id": "evt_rec_3289hh8", "title": "Evening Yoga", "start": "2023-11-14T18:00:00Z", "end": "2023-11-14T19:00:00Z", "calendar": "Wellness" }
+
+Question: Book a lunch interview with candidate Alex Chen at The Burger Joint on Wednesday at 12 PM.
+Call: { "func_call": "create_event", "title": "Interview: Alex Chen", "start": "2023-11-08T12:00:00Z", "end": "2023-11-08T13:00:00Z", "location": "The Burger Joint", "description": "Final round cultural fit interview for the Senior Dev role." }
+Response: { "event_id": "evt_4390ii9", "title": "Interview: Alex Chen", "start": "2023-11-08T12:00:00Z", "end": "2023-11-08T13:00:00Z", "calendar": "HR" }
+
+Question: Schedule a server maintenance window for this Saturday from 2 AM to 6 AM.
+Call: { "func_call": "create_event", "title": "Server Maintenance Window", "start": "2023-11-11T02:00:00Z", "end": "2023-11-11T06:00:00Z", "location": "Remote / Data Center", "description": "Apply security patches and reboot core systems." }
+Response: { "event_id": "evt_5401jj0", "title": "Server Maintenance Window", "start": "2023-11-11T02:00:00Z", "end": "2023-11-11T06:00:00Z", "calendar": "IT Ops" }
+
+Question: Set up a brainstorming session for the holiday marketing campaign on Monday at 3 PM in the Breakout Room.
+Call: { "func_call": "create_event", "title": "Holiday Campaign Brainstorm", "start": "2023-11-13T15:00:00Z", "end": "2023-11-13T16:30:00Z", "location": "Breakout Room", "description": "Generate ideas for the December social media push." }
+Response: { "event_id": "evt_6512kk1", "title": "Holiday Campaign Brainstorm", "start": "2023-11-13T15:00:00Z", "end": "2023-11-13T16:30:00Z", "calendar": "Marketing" }
+
+Question: Book a flight confirmation call with TravelAgent Pro on November 20th at 11 AM.
+Call: { "func_call": "create_event", "title": "Flight Confirmation Call", "start": "2023-11-20T11:00:00Z", "end": "2023-11-20T11:30:00Z", "location": "Phone", "description": "Confirm details for the Tokyo business trip." }
+Response: { "event_id": "evt_7623ll2", "title": "Flight Confirmation Call", "start": "2023-11-20T11:00:00Z", "end": "2023-11-20T11:30:00Z", "calendar": "Travel" }

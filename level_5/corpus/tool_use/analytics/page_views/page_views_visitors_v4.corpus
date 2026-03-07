@@ -1,0 +1,51 @@
+Available Tools: get_page_views | get_unique_visitors | get_session_duration | get_bounce_rate
+Call Schema: { "func_call": "string", "url": "string", "from_date": "string", "to_date": "string", "granularity": "hourly|daily|weekly|monthly" }
+Response Schema: { "url": "string", "period": "string", "views": number, "unique_visitors": number, "avg_session_seconds": number, "bounce_rate": number }
+---
+Question: What was the total traffic for the support portal during the software update window?
+Call: { "func_call": "get_page_views", "url": "https://support.microsoft.com/windows", "from_date": "2023-11-14", "to_date": "2023-11-14", "granularity": "hourly" }
+Response: { "url": "https://support.microsoft.com/windows", "period": "2023-11-14 to 2023-11-14", "views": 892000, "unique_visitors": 654000, "avg_session_seconds": 330, "bounce_rate": 0.29 }
+
+Question: Can you show me the visitor count for the newsletter signup page last month?
+Call: { "func_call": "get_unique_visitors", "url": "https://substack.com/signup", "from_date": "2023-09-01", "to_date": "2023-09-30", "granularity": "daily" }
+Response: { "url": "https://substack.com/signup", "period": "2023-09-01 to 2023-09-30", "views": 125600, "unique_visitors": 98400, "avg_session_seconds": 145, "bounce_rate": 0.61 }
+
+Question: I need a weekly report on the community guidelines page for Q3.
+Call: { "func_call": "get_page_views", "url": "https://discord.com/guidelines", "from_date": "2023-07-01", "to_date": "2023-09-30", "granularity": "weekly" }
+Response: { "url": "https://discord.com/guidelines", "period": "2023-07-01 to 2023-09-30", "views": 567800, "unique_visitors": 412000, "avg_session_seconds": 480, "bounce_rate": 0.33 }
+
+Question: How did the black friday deals page perform hour-by-hour yesterday?
+Call: { "func_call": "get_page_views", "url": "https://walmart.com/deals/black-friday", "from_date": "2023-11-24", "to_date": "2023-11-24", "granularity": "hourly" }
+Response: { "url": "https://walmart.com/deals/black-friday", "period": "2023-11-24 to 2023-11-24", "views": 3450000, "unique_visitors": 2100000, "avg_session_seconds": 210, "bounce_rate": 0.18 }
+
+Question: Pull the monthly statistics for the developer API documentation in October.
+Call: { "func_call": "get_page_views", "url": "https://stripe.com/docs/api", "from_date": "2023-10-01", "to_date": "2023-10-31", "granularity": "monthly" }
+Response: { "url": "https://stripe.com/docs/api", "period": "2023-10-01 to 2023-10-31", "views": 780000, "unique_visitors": 520000, "avg_session_seconds": 620, "bounce_rate": 0.24 }
+
+Question: Check the bounce rate and session length for the webinar registration page last week.
+Call: { "func_call": "get_page_views", "url": "https://zoom.us/webinar/register", "from_date": "2023-10-16", "to_date": "2023-10-22", "granularity": "daily" }
+Response: { "url": "https://zoom.us/webinar/register", "period": "2023-10-16 to 2023-10-22", "views": 45600, "unique_visitors": 38900, "avg_session_seconds": 290, "bounce_rate": 0.44 }
+
+Question: What were the unique visitor numbers for the press release archive in August?
+Call: { "func_call": "get_unique_visitors", "url": "https://meta.com/newsroom", "from_date": "2023-08-01", "to_date": "2023-08-31", "granularity": "weekly" }
+Response: { "url": "https://meta.com/newsroom", "period": "2023-08-01 to 2023-08-31", "views": 210000, "unique_visitors": 145000, "avg_session_seconds": 350, "bounce_rate": 0.51 }
+
+Question: Get the daily traffic breakdown for the event schedule page during the conference.
+Call: { "func_call": "get_page_views", "url": "https://ces.tech/schedule", "from_date": "2023-01-05", "to_date": "2023-01-08", "granularity": "daily" }
+Response: { "url": "https://ces.tech/schedule", "period": "2023-01-05 to 2023-01-08", "views": 156000, "unique_visitors": 112000, "avg_session_seconds": 405, "bounce_rate": 0.36 }
+
+Question: Show me the hourly performance of the password reset page during the security alert.
+Call: { "func_call": "get_page_views", "url": "https://paypal.com/security/reset", "from_date": "2023-06-12", "to_date": "2023-06-12", "granularity": "hourly" }
+Response: { "url": "https://paypal.com/security/reset", "period": "2023-06-12 to 2023-06-12", "views": 234000, "unique_visitors": 198000, "avg_session_seconds": 85, "bounce_rate": 0.78 }
+
+Question: Retrieve the monthly view counts for the sustainability report page for 2022.
+Call: { "func_call": "get_page_views", "url": "https://unilever.com/sustainability", "from_date": "2022-12-01", "to_date": "2022-12-31", "granularity": "monthly" }
+Response: { "url": "https://unilever.com/sustainability", "period": "2022-12-01 to 2022-12-31", "views": 67800, "unique_visitors": 54200, "avg_session_seconds": 510, "bounce_rate": 0.27 }
+
+Question: How many people accessed the demo request form in the first two weeks of November?
+Call: { "func_call": "get_page_views", "url": "https://salesforce.com/request-demo", "from_date": "2023-11-01", "to_date": "2023-11-14", "granularity": "daily" }
+Response: { "url": "https://salesforce.com/request-demo", "period": "2023-11-01 to 2023-11-14", "views": 28900, "unique_visitors": 24500, "avg_session_seconds": 260, "bounce_rate": 0.41 }
+
+Question: Analyze the weekly traffic trends for the user feedback forum in September.
+Call: { "func_call": "get_unique_visitors", "url": "https://forum.figma.com/feedback", "from_date": "2023-09-01", "to_date": "2023-09-30", "granularity": "weekly" }
+Response: { "url": "https://forum.figma.com/feedback", "period": "2023-09-01 to 2023-09-30", "views": 445000, "unique_visitors": 310000, "avg_session_seconds": 720, "bounce_rate": 0.15 }

@@ -1,0 +1,51 @@
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Generate a new playlist titled "Sleep Sounds" for bedtime relaxation.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Sleep Sounds", "track_id": "" }
+Response: { "playlist_id": "pl_1029", "name": "Sleep Sounds", "track_count": 0, "duration_seconds": 0 }
+
+Question: Insert track "trk_3341" into the "Sleep Sounds" collection.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_1029", "name": "", "track_id": "trk_3341" }
+Response: { "playlist_id": "pl_1029", "name": "Sleep Sounds", "track_count": 1, "duration_seconds": 420 }
+
+Question: I need a playlist called "Cooking Vibes" for kitchen prep.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Cooking Vibes", "track_id": "" }
+Response: { "playlist_id": "pl_5821", "name": "Cooking Vibes", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the song with ID "trk_9912" to my "Cooking Vibes" list.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_5821", "name": "", "track_id": "trk_9912" }
+Response: { "playlist_id": "pl_5821", "name": "Cooking Vibes", "track_count": 1, "duration_seconds": 178 }
+
+Question: Make a new playlist named "Commuter Mix" for the train ride.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Commuter Mix", "track_id": "" }
+Response: { "playlist_id": "pl_7734", "name": "Commuter Mix", "track_count": 0, "duration_seconds": 0 }
+
+Question: Include track "trk_4456" in the "Commuter Mix" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_7734", "name": "", "track_id": "trk_4456" }
+Response: { "playlist_id": "pl_7734", "name": "Commuter Mix", "track_count": 1, "duration_seconds": 203 }
+
+Question: Create a playlist called "Gaming Focus" to help me concentrate.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Gaming Focus", "track_id": "" }
+Response: { "playlist_id": "pl_2298", "name": "Gaming Focus", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the audio file "trk_6603" to the "Gaming Focus" playlist.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_2298", "name": "", "track_id": "trk_6603" }
+Response: { "playlist_id": "pl_2298", "name": "Gaming Focus", "track_count": 1, "duration_seconds": 256 }
+
+Question: Set up a playlist named "Sunday Brunch" for the weekend gathering.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Sunday Brunch", "track_id": "" }
+Response: { "playlist_id": "pl_8811", "name": "Sunday Brunch", "track_count": 0, "duration_seconds": 0 }
+
+Question: Put track "trk_1159" into the "Sunday Brunch" list.
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_8811", "name": "", "track_id": "trk_1159" }
+Response: { "playlist_id": "pl_8811", "name": "Sunday Brunch", "track_count": 1, "duration_seconds": 192 }
+
+Question: I want a playlist titled "Late Night Coding" for debugging sessions.
+Call: { "func_call": "create_playlist", "playlist_id": "", "name": "Late Night Coding", "track_id": "" }
+Response: { "playlist_id": "pl_3377", "name": "Late Night Coding", "track_count": 0, "duration_seconds": 0 }
+
+Question: Add the track identified as "trk_5582" to "Late Night Coding".
+Call: { "func_call": "add_to_playlist", "playlist_id": "pl_3377", "name": "", "track_id": "trk_5582" }
+Response: { "playlist_id": "pl_3377", "name": "Late Night Coding", "track_count": 1, "duration_seconds": 340 }

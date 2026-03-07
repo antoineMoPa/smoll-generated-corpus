@@ -1,0 +1,51 @@
+Available Tools: move_to_folder | create_label | delete_email | archive_email | unsubscribe
+Call Schema: { "func_call": "string", "message_id": "string", "folder": "string", "label": "string" }
+Response Schema: { "message_id": "string", "action": "string", "status": "string" }
+---
+Question: Transfer the receipt from CoffeeShop Downtown to the 'Expenses' folder and tag it as 'Food-Bev'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_4421xy", "folder": "Expenses", "label": "Food-Bev" }
+Response: { "message_id": "msg_4421xy", "action": "move_and_label", "status": "success" }
+
+Question: Sort the workout plan from FitLife Gym by moving it to 'Health' and labeling it 'Fitness-Plan'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_7765bc", "folder": "Health", "label": "Fitness-Plan" }
+Response: { "message_id": "msg_7765bc", "action": "move_and_label", "status": "success" }
+
+Question: Take the flight confirmation from SkyHigh Airlines, put it in the 'Trips' folder, and apply the 'Flight-Info' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_3390de", "folder": "Trips", "label": "Flight-Info" }
+Response: { "message_id": "msg_3390de", "action": "move_and_label", "status": "success" }
+
+Question: Move the warranty registration from ElectroMart to the 'Warranties' folder and label it 'Electronics'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_8812fg", "folder": "Warranties", "label": "Electronics" }
+Response: { "message_id": "msg_8812fg", "action": "move_and_label", "status": "success" }
+
+Question: File the bank statement from FirstNational into the 'Banking' folder and mark it with the 'Statement-Oct' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_2256hi", "folder": "Banking", "label": "Statement-Oct" }
+Response: { "message_id": "msg_2256hi", "action": "move_and_label", "status": "success" }
+
+Question: Move the recipe collection from ChefMaster to the 'Cooking' folder and add the 'Recipes' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_6643jk", "folder": "Cooking", "label": "Recipes" }
+Response: { "message_id": "msg_6643jk", "action": "move_and_label", "status": "success" }
+
+Question: Organize the car insurance quote by moving it to 'Insurance' and labeling it 'Auto-Policy'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_1198lm", "folder": "Insurance", "label": "Auto-Policy" }
+Response: { "message_id": "msg_1198lm", "action": "move_and_label", "status": "success" }
+
+Question: Move the software license key from DevTools Inc to the 'Licenses' folder and tag it as 'Software-Key'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_5532no", "folder": "Licenses", "label": "Software-Key" }
+Response: { "message_id": "msg_5532no", "action": "move_and_label", "status": "success" }
+
+Question: File the concert tickets from TicketMaster into the 'Entertainment' folder and apply the 'Concert' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_9901pq", "folder": "Entertainment", "label": "Concert" }
+Response: { "message_id": "msg_9901pq", "action": "move_and_label", "status": "success" }
+
+Question: Move the pet vaccination record from VetCare to the 'Pets' folder and label it 'Medical-Record'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_3345rs", "folder": "Pets", "label": "Medical-Record" }
+Response: { "message_id": "msg_3345rs", "action": "move_and_label", "status": "success" }
+
+Question: Organize the utility bill from PowerCo by moving it to 'Bills' and labeling it 'Electricity'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_7789tu", "folder": "Bills", "label": "Electricity" }
+Response: { "message_id": "msg_7789tu", "action": "move_and_label", "status": "success" }
+
+Question: Move the donation receipt from CharityOrg to the 'Donations' folder and add the 'Tax-Deductible' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_2267vw", "folder": "Donations", "label": "Tax-Deductible" }
+Response: { "message_id": "msg_2267vw", "action": "move_and_label", "status": "success" }

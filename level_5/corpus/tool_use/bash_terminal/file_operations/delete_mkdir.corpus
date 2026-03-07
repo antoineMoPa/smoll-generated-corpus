@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Remove the temporary cache file generated during the last build process.
+Call: { "func_call": "delete_file", "source": "/tmp/build_cache_8923.tmp", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/build_cache_8923.tmp" }
+
+Question: Create a new directory structure for the upcoming marketing campaign assets.
+Call: { "func_call": "create_dir", "source": "/var/www/projects/campaign_q4", "destination": "" }
+Response: { "success": true, "message": "Directory /var/www/projects/campaign_q4 created successfully" }
+
+Question: Delete the old error log that is no longer needed for debugging.
+Call: { "func_call": "delete_file", "source": "/var/log/app/error_log_2023_old.txt", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /var/log/app/error_log_2023_old.txt" }
+
+Question: Set up a fresh workspace directory for the data science team's new project.
+Call: { "func_call": "create_dir", "source": "/home/data_science/project_alpha", "destination": "" }
+Response: { "success": true, "message": "Directory /home/data_science/project_alpha created successfully" }
+
+Question: Clean up the temporary session file left by the crashed user instance.
+Call: { "func_call": "delete_file", "source": "/tmp/user_session_9921.lock", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/user_session_9921.lock" }
+
+Question: Create a backup directory to store nightly database dumps.
+Call: { "func_call": "create_dir", "source": "/mnt/backups/db_nightly", "destination": "" }
+Response: { "success": true, "message": "Directory /mnt/backups/db_nightly created successfully" }
+
+Question: Remove the partial download file that was interrupted yesterday.
+Call: { "func_call": "delete_file", "source": "/home/user/downloads/installer.part", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /home/user/downloads/installer.part" }
+
+Question: Initialize a new directory for storing raw sensor logs from the IoT devices.
+Call: { "func_call": "create_dir", "source": "/var/log/sensors/raw_data", "destination": "" }
+Response: { "success": true, "message": "Directory /var/log/sensors/raw_data created successfully" }
+
+Question: Delete the deprecated configuration file that was replaced in the last update.
+Call: { "func_call": "delete_file", "source": "/etc/myapp/config_deprecated_v1.json", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /etc/myapp/config_deprecated_v1.json" }
+
+Question: Create a directory for the new microservice deployment artifacts.
+Call: { "func_call": "create_dir", "source": "/opt/services/payment-gateway/artifacts", "destination": "" }
+Response: { "success": true, "message": "Directory /opt/services/payment-gateway/artifacts created successfully" }
+
+Question: Remove the temporary swap file used during the large image processing task.
+Call: { "func_call": "delete_file", "source": "/tmp/img_process_swap_4421.dat", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/img_process_swap_4421.dat" }
+
+Question: Set up a directory for temporary test results before they are archived.
+Call: { "func_call": "create_dir", "source": "/var/tmp/test_results/current_run", "destination": "" }
+Response: { "success": true, "message": "Directory /var/tmp/test_results/current_run created successfully" }

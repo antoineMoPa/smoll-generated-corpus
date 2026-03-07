@@ -1,0 +1,51 @@
+Available Tools: curl_get | curl_post | wget_download | ssh_command | ping_host
+Call Schema: { "func_call": "string", "url": "string", "host": "string", "options": "string" }
+Response Schema: { "status_code": number, "output": "string", "elapsed_ms": number }
+---
+Question: Test connectivity to the mail relay server mail-relay-east.corp.
+Call: { "func_call": "ping_host", "url": "", "host": "mail-relay-east.corp", "options": "-c 4" }
+Response: { "status_code": 0, "output": "PING mail-relay-east.corp (10.20.5.12): 56 data bytes\n64 bytes from 10.20.5.12: icmp_seq=0 ttl=64 time=0.55 ms\n64 bytes from 10.20.5.12: icmp_seq=1 ttl=64 time=0.52 ms\n64 bytes from 10.20.5.12: icmp_seq=2 ttl=64 time=0.58 ms\n64 bytes from 10.20.5.12: icmp_seq=3 ttl=64 time=0.54 ms\n\n--- mail-relay-east.corp ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3ms", "elapsed_ms": 4 }
+---
+Question: Restart the postgresql service on the database replica db-replica-03.
+Call: { "func_call": "ssh_command", "url": "", "host": "db-replica-03", "options": "sudo systemctl restart postgresql" }
+Response: { "status_code": 0, "output": "", "elapsed_ms": 1450 }
+---
+Question: Verify network path to the load balancer at 192.168.50.10.
+Call: { "func_call": "ping_host", "url": "", "host": "192.168.50.10", "options": "-c 3 -W 1" }
+Response: { "status_code": 0, "output": "PING 192.168.50.10 (192.168.50.10): 56 data bytes\n64 bytes from 192.168.50.10: icmp_seq=0 ttl=62 time=0.9 ms\n64 bytes from 192.168.50.10: icmp_seq=1 ttl=62 time=0.8 ms\n64 bytes from 192.168.50.10: icmp_seq=2 ttl=62 time=0.9 ms\n\n--- 192.168.50.10 ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2ms", "elapsed_ms": 3 }
+---
+Question: Check available space on the data volume of storage-node-north.
+Call: { "func_call": "ssh_command", "url": "", "host": "storage-node-north", "options": "df -h /mnt/data" }
+Response: { "status_code": 0, "output": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/nvme0n1    200G   45G  145G  24% /mnt/data", "elapsed_ms": 290 }
+---
+Question: Ping the external API gateway api-gw.global.net with increased packet size.
+Call: { "func_call": "ping_host", "url": "", "host": "api-gw.global.net", "options": "-c 2 -s 1200" }
+Response: { "status_code": 0, "output": "PING api-gw.global.net (203.0.113.88): 1200 data bytes\n1208 bytes from 203.0.113.88: icmp_seq=0 ttl=58 time=22.4 ms\n1208 bytes from 203.0.113.88: icmp_seq=1 ttl=58 time=21.9 ms\n\n--- api-gw.global.net ping statistics ---\n2 packets transmitted, 2 received, 0% packet loss, time 1ms", "elapsed_ms": 45 }
+---
+Question: Display the last 15 entries of the system log on audit-server-02.
+Call: { "func_call": "ssh_command", "url": "", "host": "audit-server-02", "options": "tail -n 15 /var/log/syslog" }
+Response: { "status_code": 0, "output": "Nov 12 08:30:01 audit-server-02 CRON[9876]: (root) CMD (/usr/local/bin/backup.sh)\nNov 12 08:30:05 audit-server-02 backup.sh[9877]: Starting incremental backup...\nNov 12 08:31:10 audit-server-02 sshd[4321]: Accepted publickey for ops from 10.10.10.5 port 49221 ssh2\nNov 12 08:32:00 audit-server-02 kernel: [UFW BLOCK] IN=eth0 OUT= MAC=... SRC=198.51.100.5 DST=10.10.10.20", "elapsed_ms": 165 }
+---
+Question: Measure latency to the cache cluster node cache-cluster-eu-central.
+Call: { "func_call": "ping_host", "url": "", "host": "cache-cluster-eu-central", "options": "-c 5" }
+Response: { "status_code": 0, "output": "PING cache-cluster-eu-central (198.51.100.99): 56 data bytes\n64 bytes from 198.51.100.99: icmp_seq=0 ttl=54 time=18.5 ms\n64 bytes from 198.51.100.99: icmp_seq=1 ttl=54 time=18.2 ms\n64 bytes from 198.51.100.99: icmp_seq=2 ttl=54 time=18.8 ms\n64 bytes from 198.51.100.99: icmp_seq=3 ttl=54 time=18.4 ms\n64 bytes from 198.51.100.99: icmp_seq=4 ttl=54 time=18.6 ms\n\n--- cache-cluster-eu-central ping statistics ---\n5 packets transmitted, 5 received, 0% packet loss, time 4ms", "elapsed_ms": 6 }
+---
+Question: Show active Kubernetes pods on the worker node k8s-worker-beta-01.
+Call: { "func_call": "ssh_command", "url": "", "host": "k8s-worker-beta-01", "options": "kubectl get pods --no-headers" }
+Response: { "status_code": 0, "output": "frontend-deploy-7f8d9c   1/1     Running   0          3d\nbackend-api-5c6b7a     1/1     Running   0          3d\nredis-master-0         1/1     Running   0          5d\nlog-collector-daemon   1/1     Running   0          12d", "elapsed_ms": 380 }
+---
+Question: Ping the secondary DNS server at 10.0.0.54 to check redundancy.
+Call: { "func_call": "ping_host", "url": "", "host": "10.0.0.54", "options": "-c 3" }
+Response: { "status_code": 0, "output": "PING 10.0.0.54 (10.0.0.54): 56 data bytes\n64 bytes from 10.0.0.54: icmp_seq=0 ttl=64 time=0.18 ms\n64 bytes from 10.0.0.54: icmp_seq=1 ttl=64 time=0.16 ms\n64 bytes from 10.0.0.54: icmp_seq=2 ttl=64 time=0.17 ms\n\n--- 10.0.0.54 ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2ms", "elapsed_ms": 3 }
+---
+Question: Inspect swap usage on the analytics engine analytics-proc-07.
+Call: { "func_call": "ssh_command", "url": "", "host": "analytics-proc-07", "options": "free -m" }
+Response: { "status_code": 0, "output": "              total        used        free      shared  buff/cache   available\nMem:         128400       98200        5400        1024       24800       29100\nSwap:         16384        2048       14336", "elapsed_ms": 230 }
+---
+Question: Confirm reachability of the log aggregator at log-aggregator.internal.
+Call: { "func_call": "ping_host", "url": "", "host": "log-aggregator.internal", "options": "-c 2 -q" }
+Response: { "status_code": 0, "output": "PING log-aggregator.internal (172.16.8.25) 56(84) bytes of data.\n\n--- log-aggregator.internal ping statistics ---\n2 packets transmitted, 2 received, 0% packet loss, time 1ms\nrtt min/avg/max/mdev = 0.310/0.325/0.340/0.015 ms", "elapsed_ms": 2 }
+---
+Question: Upgrade security patches on the bastion host bastion-secure-01 interactively.
+Call: { "func_call": "ssh_command", "url": "", "host": "bastion-secure-01", "options": "sudo apt-get update && sudo apt-get upgrade" }
+Response: { "status_code": 0, "output": "Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease\nHit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease\nReading package lists... Done\nBuilding dependency tree       \nReading state information... Done\nCalculating upgrade... Done\nThe following packages will be upgraded:\n  openssh-server openssh-client\n2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.\nNeed to get 850 kB of archives.\nAfter this operation, 1,024 B of additional disk space will be used.\nGet:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-server amd64 8.9p1-3ubuntu0.4 [450 kB]\nGet:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-client amd64 8.9p1-3ubuntu0.4 [400 kB]\nFetched 850 kB in 1s (850 kB/s)\n(Reading database ... 112045 files and directories currently installed.)\nPreparing to unpack .../openssh-server_8.9p1-3ubuntu0.4_amd64.deb ...\nUnpacking openssh-server (8.9p1-3ubuntu0.4) over (8.9p1-3ubuntu0.3) ...\nPreparing to unpack .../openssh-client_8.9p1-3ubuntu0.4_amd64.deb ...\nUnpacking openssh-client (8.9p1-3ubuntu0.4) over (8.9p1-3ubuntu0.3) ...\nSetting up openssh-client (8.9p1-3ubuntu0.4) ...\nSetting up openssh-server (8.9p1-3ubuntu0.4) ...\nProcessing triggers for man-db (2.10.2-1) ...\nProcessing triggers for libc-bin (2.35-0ubuntu3.1) ...", "elapsed_ms": 12300 }

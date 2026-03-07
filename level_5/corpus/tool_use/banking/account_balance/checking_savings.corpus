@@ -1,0 +1,51 @@
+Available Tools: get_balance | get_account_summary | get_available_credit | get_account_details
+Call Schema: { "func_call": "string", "account_id": "string", "account_type": "checking|savings|credit" }
+Response Schema: { "account_id": "string", "balance": number, "currency": "string", "available": number }
+---
+Question: What is the current balance for my primary checking account ending in 4921?
+Call: { "func_call": "get_balance", "account_id": "CHK-8821-4921", "account_type": "checking" }
+Response: { "account_id": "CHK-8821-4921", "balance": 3450.75, "currency": "USD", "available": 3450.75 }
+
+Question: Check how much money is in my high-yield savings account SAV-9902.
+Call: { "func_call": "get_balance", "account_id": "SAV-9902-1134", "account_type": "savings" }
+Response: { "account_id": "SAV-9902-1134", "balance": 12500.00, "currency": "USD", "available": 12500.00 }
+
+Question: I need to know my available credit limit on card number 5500.
+Call: { "func_call": "get_balance", "account_id": "CRD-5500-8899", "account_type": "credit" }
+Response: { "account_id": "CRD-5500-8899", "balance": -1240.50, "currency": "USD", "available": 8759.50 }
+
+Question: Show me the balance for the joint checking account shared with my spouse.
+Call: { "func_call": "get_balance", "account_id": "CHK-2210-7743", "account_type": "checking" }
+Response: { "account_id": "CHK-2210-7743", "balance": 892.14, "currency": "USD", "available": 892.14 }
+
+Question: How much is currently in my emergency fund savings?
+Call: { "func_call": "get_balance", "account_id": "SAV-3341-0092", "account_type": "savings" }
+Response: { "account_id": "SAV-3341-0092", "balance": 45000.00, "currency": "USD", "available": 45000.00 }
+
+Question: What do I owe on my platinum rewards credit card this month?
+Call: { "func_call": "get_balance", "account_id": "CRD-7788-2231", "account_type": "credit" }
+Response: { "account_id": "CRD-7788-2231", "balance": -3205.89, "currency": "USD", "available": 1794.11 }
+
+Question: Retrieve the balance for my student checking account.
+Call: { "func_call": "get_balance", "account_id": "CHK-1102-5567", "account_type": "checking" }
+Response: { "account_id": "CHK-1102-5567", "balance": 156.32, "currency": "USD", "available": 156.32 }
+
+Question: Check the funds in my vacation savings pot.
+Call: { "func_call": "get_balance", "account_id": "SAV-6654-3321", "account_type": "savings" }
+Response: { "account_id": "SAV-6654-3321", "balance": 2750.50, "currency": "USD", "available": 2750.50 }
+
+Question: What is the outstanding balance on my business credit line?
+Call: { "func_call": "get_balance", "account_id": "CRD-9981-4452", "account_type": "credit" }
+Response: { "account_id": "CRD-9981-4452", "balance": -5430.00, "currency": "USD", "available": 4570.00 }
+
+Question: Please tell me the balance of my payroll direct deposit checking account.
+Call: { "func_call": "get_balance", "account_id": "CHK-4432-9981", "account_type": "checking" }
+Response: { "account_id": "CHK-4432-9981", "balance": 2105.67, "currency": "USD", "available": 2105.67 }
+
+Question: How much have I saved in my money market account so far?
+Call: { "func_call": "get_balance", "account_id": "SAV-7721-8834", "account_type": "savings" }
+Response: { "account_id": "SAV-7721-8834", "balance": 18900.25, "currency": "USD", "available": 18900.25 }
+
+Question: What is my current utilization and balance on the travel rewards card?
+Call: { "func_call": "get_balance", "account_id": "CRD-3321-1198", "account_type": "credit" }
+Response: { "account_id": "CRD-3321-1198", "balance": -890.12, "currency": "USD", "available": 9109.88 }

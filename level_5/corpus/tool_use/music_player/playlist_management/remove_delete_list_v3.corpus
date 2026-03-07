@@ -1,0 +1,95 @@
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Please remove track trk_8844 from my "Late Night Jazz" playlist, ID pl_229.
+Call: { "func_call": "remove_from_playlist", "playlist_id": "pl_229", "name": "Late Night Jazz", "track_id": "trk_8844" }
+Response: { "playlist_id": "pl_229", "name": "Late Night Jazz", "track_count": 12, "duration_seconds": 2880 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: I need to delete the "Holiday Classics" playlist which has ID pl_303.
+Call: { "func_call": "delete_playlist", "playlist_id": "pl_303", "name": "Holiday Classics", "track_id": "" }
+Response: { "playlist_id": "pl_303", "name": "Holiday Classics", "track_count": 0, "duration_seconds": 0 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Display every playlist currently stored in my library.
+Call: { "func_call": "list_playlists", "playlist_id": "", "name": "", "track_id": "" }
+Response: { "playlist_id": "all", "name": "All Playlists", "track_count": 7, "duration_seconds": 21450 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Take out song trk_6655 from the "Indie Rock" list, ID pl_418.
+Call: { "func_call": "remove_from_playlist", "playlist_id": "pl_418", "name": "Indie Rock", "track_id": "trk_6655" }
+Response: { "playlist_id": "pl_418", "name": "Indie Rock", "track_count": 25, "duration_seconds": 6000 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Remove the track with ID trk_2211 from my "Cooking Tunes" playlist (pl_592).
+Call: { "func_call": "remove_from_playlist", "playlist_id": "pl_592", "name": "Cooking Tunes", "track_id": "trk_2211" }
+Response: { "playlist_id": "pl_592", "name": "Cooking Tunes", "track_count": 9, "duration_seconds": 2160 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Delete the entire playlist named "Rainy Day" with identifier pl_741.
+Call: { "func_call": "delete_playlist", "playlist_id": "pl_741", "name": "Rainy Day", "track_id": "" }
+Response: { "playlist_id": "pl_741", "name": "Rainy Day", "track_count": 0, "duration_seconds": 0 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Show me all the music collections I have saved.
+Call: { "func_call": "list_playlists", "playlist_id": "", "name": "", "track_id": "" }
+Response: { "playlist_id": "all", "name": "All Playlists", "track_count": 6, "duration_seconds": 15600 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Please remove track trk_9900 from the "Electronic Beats" playlist, ID pl_853.
+Call: { "func_call": "remove_from_playlist", "playlist_id": "pl_853", "name": "Electronic Beats", "track_id": "trk_9900" }
+Response: { "playlist_id": "pl_853", "name": "Electronic Beats", "track_count": 18, "duration_seconds": 4320 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Get rid of the "Country Roads" playlist, ID pl_164.
+Call: { "func_call": "delete_playlist", "playlist_id": "pl_164", "name": "Country Roads", "track_id": "" }
+Response: { "playlist_id": "pl_164", "name": "Country Roads", "track_count": 0, "duration_seconds": 0 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Remove the song trk_4477 from my "Classical Focus" list (pl_275).
+Call: { "func_call": "remove_from_playlist", "playlist_id": "pl_275", "name": "Classical Focus", "track_id": "trk_4477" }
+Response: { "playlist_id": "pl_275", "name": "Classical Focus", "track_count": 15, "duration_seconds": 3600 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: List all playlists currently available in my account.
+Call: { "func_call": "list_playlists", "playlist_id": "", "name": "", "track_id": "" }
+Response: { "playlist_id": "all", "name": "All Playlists", "track_count": 8, "duration_seconds": 24300 }
+
+Available Tools: create_playlist | add_to_playlist | remove_from_playlist | delete_playlist | list_playlists
+Call Schema: { "func_call": "string", "playlist_id": "string", "name": "string", "track_id": "string" }
+Response Schema: { "playlist_id": "string", "name": "string", "track_count": number, "duration_seconds": number }
+---
+Question: Delete the playlist called "Podcast Favorites" with ID pl_386.
+Call: { "func_call": "delete_playlist", "playlist_id": "pl_386", "name": "Podcast Favorites", "track_id": "" }
+Response: { "playlist_id": "pl_386", "name": "Podcast Favorites", "track_count": 0, "duration_seconds": 0 }

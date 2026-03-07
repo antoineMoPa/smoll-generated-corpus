@@ -1,0 +1,51 @@
+Available Tools: ls | ls_la | ls_lh | ls_R
+Call Schema: { "func_call": "string", "path": "string", "flags": "string" }
+Response Schema: { "entries": ["string"], "count": number }
+---
+Question: List all files in the home directory.
+Call: { "func_call": "ls", "path": "/home/user", "flags": "" }
+Response: { "entries": ["documents", "downloads", "music", "pictures", ".bashrc", ".profile"], "count": 6 }
+
+Question: Show detailed listing of /var/log including hidden files.
+Call: { "func_call": "ls_la", "path": "/var/log", "flags": "-a" }
+Response: { "entries": [".", "..", "syslog", "auth.log", "kern.log", "dpkg.log", ".old_logs"], "count": 7 }
+
+Question: What files are in /etc with human-readable sizes?
+Call: { "func_call": "ls_lh", "path": "/etc", "flags": "-lh" }
+Response: { "entries": ["passwd", "group", "hosts", "resolv.conf", "fstab", "ssh"], "count": 6 }
+
+Question: Recursively list everything in /tmp.
+Call: { "func_call": "ls_R", "path": "/tmp", "flags": "-R" }
+Response: { "entries": ["screen-0", "tmux-1000", "systemd-private-abc", "cache", ".X11-unix"], "count": 5 }
+
+Question: List contents of my projects folder.
+Call: { "func_call": "ls", "path": "~/projects", "flags": "" }
+Response: { "entries": ["web-app", "data-pipeline", "mobile-ios", "readme.md"], "count": 4 }
+
+Question: Show me what binaries are in /usr/bin.
+Call: { "func_call": "ls", "path": "/usr/bin", "flags": "" }
+Response: { "entries": ["bash", "grep", "sed", "awk", "python3", "node", "npm"], "count": 7 }
+
+Question: List optional software packages in /opt.
+Call: { "func_call": "ls", "path": "/opt", "flags": "" }
+Response: { "entries": ["google", "zoom", "slack", "jetbrains"], "count": 4 }
+
+Question: Give me a long listing of hidden files in /home/user.
+Call: { "func_call": "ls_la", "path": "/home/user", "flags": "-la" }
+Response: { "entries": [".gitconfig", ".ssh", ".vimrc", ".cache", ".local"], "count": 5 }
+
+Question: Check /var/log with human readable file sizes.
+Call: { "func_call": "ls_lh", "path": "/var/log", "flags": "-lh" }
+Response: { "entries": ["syslog (24M)", "auth.log (1.2M)", "kern.log (500K)", "dpkg.log (15M)"], "count": 4 }
+
+Question: Deep scan the /etc directory for all nested files.
+Call: { "func_call": "ls_R", "path": "/etc", "flags": "-R" }
+Response: { "entries": ["passwd", "shadow", "ssh/sshd_config", "nginx/nginx.conf", "apache2/ports.conf"], "count": 5 }
+
+Question: List files in ~/projects recursively.
+Call: { "func_call": "ls_R", "path": "~/projects", "flags": "-R" }
+Response: { "entries": ["web-app/src", "web-app/package.json", "data-pipeline/main.py", "mobile-ios/Info.plist"], "count": 4 }
+
+Question: Show all files including hidden ones in /usr/bin.
+Call: { "func_call": "ls_la", "path": "/usr/bin", "flags": "-a" }
+Response: { "entries": [".", "..", "bash", "sh", "zsh", "env", "printenv"], "count": 7 }

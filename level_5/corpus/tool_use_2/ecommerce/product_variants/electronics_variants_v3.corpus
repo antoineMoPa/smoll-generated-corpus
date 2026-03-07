@@ -1,0 +1,20 @@
+{"func_call": "check_stock_levels", "product_id": "HOME-CHR-088", "options": {"color": "Charcoal", "size": "Queen", "material": "Cotton Blend"}}
+{"func_call": "fetch_item_details", "product_id": "HOME-LMP-102", "options": {"color": "Brass", "size": "Adjustable", "material": "Glass Shade"}}
+{"func_call": "customize_order", "product_id": "HOME-RUG-055", "options": {"color": "Indigo", "size": "8x10", "material": "Wool"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-SOF-019", "options": {"color": "Emerald", "size": "3-Seater", "material": "Velvet"}}
+{"func_call": "fetch_item_details", "product_id": "HOME-TBL-073", "options": {"color": "Oak", "size": "Round", "material": "Solid Wood"}}
+{"func_call": "customize_order", "product_id": "HOME-DRP-034", "options": {"color": "Beige", "size": "Floor Length", "material": "Linen"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-MIR-061", "options": {"color": "Gold Frame", "size": "Large", "material": "Glass"}}
+{"func_call": "fetch_item_details", "product_id": "HOME-VSE-092", "options": {"color": "Cobalt", "size": "Tall", "material": "Ceramic"}}
+{"func_call": "customize_order", "product_id": "HOME-PTH-047", "options": {"color": "Slate", "size": "Runner", "material": "Jute"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-DSK-026", "options": {"color": "Walnut", "size": "Executive", "material": "Leather Top"}}
+{"func_call": "fetch_item_details", "product_id": "HOME-ART-083", "options": {"color": "Multi", "size": "Canvas", "material": "Acrylic"}}
+{"func_call": "customize_order", "product_id": "HOME-BED-015", "options": {"color": "Cream", "size": "King", "material": "Silk"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-SHL-059", "options": {"color": "White", "size": "Floating", "material": "MDF"}}
+{"func_call": "fetch_item_details", "product_id": "HOME-CLK-071", "options": {"color": "Black", "size": "Wall Mount", "material": "Metal"}}
+{"func_call": "customize_order", "product_id": "HOME-PIL-038", "options": {"color": "Rust", "size": "Standard", "material": "Down Fill"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-OTM-094", "options": {"color": "Teal", "size": "Outdoor", "material": "Weather Resistant"}}
+{"func_call": "fetch_item_details", "product_id": "HOME-BSK-052", "options": {"color": "Natural", "size": "Large", "material": "Wicker"}}
+{"func_call": "customize_order", "product_id": "HOME-CND-066", "options": {"color": "Vanilla", "size": "3-Wick", "material": "Soy Wax"}}
+{"func_call": "check_stock_levels", "product_id": "HOME-FAN-029", "options": {"color": "Silver", "size": "Ceiling", "material": "Steel Blades"}}
+{"func_call": "fetch_item_details", "product_id": "HOME-TRY-081", "options": {"color": "Rose", "size": "Serving", "material": "Marble"}}

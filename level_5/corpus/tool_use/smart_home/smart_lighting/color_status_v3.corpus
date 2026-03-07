@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": "number", "color": "string" }
+Response Schema: { "light_id": "string", "state": "string", "brightness": "number", "color": "string" }
+---
+Question: Turn the library reading lamp to a cool blue shade.
+Call: { "func_call": "set_color", "light_id": "read_lib_13", "brightness": null, "color": "cool blue" }
+Response: { "light_id": "read_lib_13", "state": "on", "brightness": 175, "color": "cool blue" }
+
+Question: Modify the attic storage bulb to hex code #800080 for purple.
+Call: { "func_call": "set_color", "light_id": "store_att_14", "brightness": null, "color": "#800080" }
+Response: { "light_id": "store_att_14", "state": "on", "brightness": 100, "color": "#800080" }
+
+Question: Is the laundry room overhead light currently active?
+Call: { "func_call": "get_light_status", "light_id": "over_laun_15", "brightness": null, "color": null }
+Response: { "light_id": "over_laun_15", "state": "off", "brightness": 0, "color": "neutral white" }
+
+Question: Adjust the balcony floodlights to a bright yellow tone.
+Call: { "func_call": "set_color", "light_id": "flood_balc_16", "brightness": null, "color": "bright yellow" }
+Response: { "light_id": "flood_balc_16", "state": "on", "brightness": 255, "color": "bright yellow" }
+
+Question: Set the entryway pendant to hex value #008000.
+Call: { "func_call": "set_color", "light_id": "pend_entry_17", "brightness": null, "color": "#008000" }
+Response: { "light_id": "pend_entry_17", "state": "on", "brightness": 140, "color": "#008000" }
+
+Question: Verify the state and hue of the closet track lighting.
+Call: { "func_call": "get_light_status", "light_id": "track_clo_18", "brightness": null, "color": null }
+Response: { "light_id": "track_clo_18", "state": "on", "brightness": 210, "color": "soft white" }
+
+Question: Change the playroom ceiling strip to a vibrant green using #00FF00.
+Call: { "func_call": "set_color", "light_id": "strip_play_19", "brightness": null, "color": "#00FF00" }
+Response: { "light_id": "strip_play_19", "state": "on", "brightness": 190, "color": "#00FF00" }
+
+Question: Set the wine cellar spotlight to warm amber.
+Call: { "func_call": "set_color", "light_id": "spot_wine_20", "brightness": null, "color": "warm amber" }
+Response: { "light_id": "spot_wine_20", "state": "on", "brightness": 85, "color": "warm amber" }
+
+Question: What is the current color setting of the gym mirror lights?
+Call: { "func_call": "get_light_status", "light_id": "mirror_gym_21", "brightness": null, "color": null }
+Response: { "light_id": "mirror_gym_21", "state": "on", "brightness": 230, "color": "daylight white" }
+
+Question: Switch the sunroom lantern to a deep red hex #8B0000.
+Call: { "func_call": "set_color", "light_id": "lant_sun_22", "brightness": null, "color": "#8B0000" }
+Response: { "light_id": "lant_sun_22", "state": "on", "brightness": 110, "color": "#8B0000" }
+
+Question: Set the workshop bench light to a crisp white hue.
+Call: { "func_call": "set_color", "light_id": "bench_work_23", "brightness": null, "color": "crisp white" }
+Response: { "light_id": "bench_work_23", "state": "on", "brightness": 250, "color": "crisp white" }
+
+Question: Retrieve the operational status and color of the backyard path lights.
+Call: { "func_call": "get_light_status", "light_id": "path_back_24", "brightness": null, "color": null }
+Response: { "light_id": "path_back_24", "state": "off", "brightness": 0, "color": "warm white" }

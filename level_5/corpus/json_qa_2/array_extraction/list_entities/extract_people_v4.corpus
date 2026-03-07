@@ -1,0 +1,39 @@
+| Context: The annual strategy summit included Thomas Anderson, Rachel Green, and Marcus Johnson. They outlined the expansion plans for the Asian market. Linda Carter joined the session remotely to share the Q3 sales data. | Input: {"question": "Who attended the annual strategy summit?"} | Output: {"answer": ["Thomas Anderson", "Rachel Green", "Marcus Johnson", "Linda Carter"]}
+
+| Context: At the nonprofit fundraiser, Alice Wong and Benjamin Clark signed the partnership deed for their organizations. Catherine Lee observed the signing as the notary public. Later, Daniel Kim expressed gratitude for their support. | Input: {"question": "Who signed the partnership deed?"} | Output: {"answer": ["Alice Wong", "Benjamin Clark"]}
+
+| Context: The cybersecurity task force comprises Oliver Smith, Penny Jones, and Quincy Brown. They are currently upgrading the firewall protocols. Rosa Diaz will join the unit tomorrow as a threat analyst. | Input: {"question": "Who are the current members of the cybersecurity task force?"} | Output: {"answer": ["Oliver Smith", "Penny Jones", "Quincy Brown"]}
+
+| Context: During the city council meeting, Mayor Steven White spoke alongside Councilor Angela Davis and Councilor Brian Miller. They presented the revised zoning laws for the downtown district. Police Chief Cynthia Moore also addressed crime statistics. | Input: {"question": "Which officials addressed the city council?"} | Output: {"answer": ["Steven White", "Angela Davis", "Brian Miller", "Cynthia Moore"]}
+
+| Context: The poetry workshop gathered at the community center to review new drafts. Participants included Edward Harris, Fiona Clark, and George Lewis. Helen Walker entered the room just as the reading began. | Input: {"question": "Who participated in the poetry workshop?"} | Output: {"answer": ["Edward Harris", "Fiona Clark", "George Lewis", "Helen Walker"]}
+
+| Context: For the robotics competition, Ivy Martin, Jack Robinson, and Kelly Turner created a team. They planned to construct an autonomous drone for the finals. Liam Scott volunteered to design their team logo. | Input: {"question": "Who created the robotics team?"} | Output: {"answer": ["Ivy Martin", "Jack Robinson", "Kelly Turner"]}
+
+| Context: The graduation ceremony included valedictorians Megan Adams, Nathan Baker, and Olivia Cooper. The salutatorians were Patrick Evans, Quinn Foster, and Rebecca Gill. Principal Samuel Hall delivered the commencement address. | Input: {"question": "Who were the valedictorians and salutatorians?"} | Output: {"answer": ["Megan Adams", "Nathan Baker", "Olivia Cooper", "Patrick Evans", "Quinn Foster", "Rebecca Gill"]}
+
+| Context: In the executive suite, VP Sarah Irving, Director Tony Jenkins, and Manager Uma Khan analyzed the quarterly reports. Consultant Victor Lang provided insights on market trends. They collectively approved the new budget. | Input: {"question": "Who analyzed the quarterly reports?"} | Output: {"answer": ["Sarah Irving", "Tony Jenkins", "Uma Khan", "Victor Lang"]}
+
+| Context: The sailing regatta was skippered by Captain William Moore and first mate Xena Yates. Crew members included York Allen, Zoe Bennett, and Adam Cole. They finished the race in first place despite strong winds. | Input: {"question": "Who was part of the sailing crew?"} | Output: {"answer": ["William Moore", "Xena Yates", "York Allen", "Zoe Bennett", "Adam Cole"]}
+
+| Context: During the town forum, Supervisor Betty Drum, Commissioner Carl Epps, and Mayor Diane Ford responded to resident concerns. They discussed the proposed park renovation. Reporter Ethan Gray filmed the proceedings for the local news. | Input: {"question": "Which officials spoke at the town forum?"} | Output: {"answer": ["Betty Drum", "Carl Epps", "Diane Ford"]}
+
+| Context: The photography exhibit displayed images by artists Felix Hunt, Grace Ives, and Howard Judd. Curator Irene Kline guided visitors through the gallery. Critic Julian Lope published an article praising the collection. | Input: {"question": "Whose images were displayed in the photography exhibit?"} | Output: {"answer": ["Felix Hunt", "Grace Ives", "Howard Judd"]}
+
+| Context: The emergency response unit consisted of Commander Karen Miles, Officer Leo Nash, and Paramedic Mia Owen. They operated continuously during the storm emergency. Volunteer Noah Pierce distributed supplies to the shelter. | Input: {"question": "Who was on the emergency response unit?"} | Output: {"answer": ["Karen Miles", "Leo Nash", "Mia Owen"]}
+
+| Context: At the class reunion, friends Oscar Quinn, Patty Ross, and Quentin Shaw caught up after fifteen years. Teacher Rita Tate organized the venue for the event. Principal Sam Upton gave a brief welcome speech. | Input: {"question": "Which friends caught up at the reunion?"} | Output: {"answer": ["Oscar Quinn", "Patty Ross", "Quentin Shaw"]}
+
+| Context: The theater production stars actors Victoria West, Walter Young, and Xander Zane. Director Yolanda Bell complimented their acting skills in the press release. Producer Zachary Cole confirmed a national tour is planned. | Input: {"question": "Who are the lead actors in the theater production?"} | Output: {"answer": ["Victoria West", "Walter Young", "Xander Zane"]}
+
+| Context: The soccer squad from Riverdale Academy included players Amber Dean, Brock Flint, and Crystal Gold. Their coach, Mr. Derek Hart, trained them for the championship match. They defeated the team from Lakeside Prep. | Input: {"question": "Who were the players from Riverdale Academy?"} | Output: {"answer": ["Amber Dean", "Brock Flint", "Crystal Gold"]}
+
+| Context: The tech entrepreneurs, Ian Cross, Julia Drew, and Keith Elder, demonstrated their prototype to backers. Backer Laura Fox inquired about their patent status. She agreed to invest alongside partner Mike Grant. | Input: {"question": "Who are the tech entrepreneurs?"} | Output: {"answer": ["Ian Cross", "Julia Drew", "Keith Elder"]}
+
+| Context: The ballet performance highlighted dancers Nancy Hale, Oscar Ice, and Penny Jade. Choreographer Quinn King directed the routine with precision. The crowd applauded enthusiastically after the final act. | Input: {"question": "Who were the featured dancers in the ballet?"} | Output: {"answer": ["Nancy Hale", "Oscar Ice", "Penny Jade"]}
+
+| Context: The clinical study was led by Dr. Roger Lamb, Dr. Susan Mint, and Dr. Todd Nash. They gathered data over four years at the medical center. Auditor Vera Ore inspected their records for accuracy. | Input: {"question": "Who led the clinical study?"} | Output: {"answer": ["Roger Lamb", "Susan Mint", "Todd Nash"]}
+
+| Context: The neighborhood watch team comprised Paul Quest, Ruby Stone, and Sean Tate. They patrolled the streets every evening last month. Coordinator Vera Ure commended their dedication to safety. | Input: {"question": "Who served on the neighborhood watch?"} | Output: {"answer": ["Paul Quest", "Ruby Stone", "Sean Tate"]}
+
+| Context: The baking contest finalists were bakers Victor Vale, Wendy Xiu, and Xavier York. Judge Yasmin Zook evaluated every entry thoroughly. Host Zack Abel declared Wendy the champion. | Input: {"question": "Who were the finalists in the baking contest?"} | Output: {"answer": ["Victor Vale", "Wendy Xiu", "Xavier York"]}

@@ -1,0 +1,51 @@
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a verification code to a new user in London.
+Call: { "func_call": "send_sms", "to": "+442079460123", "message": "Your VerifyNow code is 849201. Valid for 10 mins.", "from": "VerifyNow" }
+Response: { "message_id": "msg_uk_9928374", "to": "+442079460123", "status": "sent", "cost": 0.045, "timestamp": "2023-10-27T14:02:11Z" }
+
+Question: Dispatch appointment reminders to a list of patients in Chicago.
+Call: { "func_call": "send_bulk_sms", "to": "+13125550199,+13125550145,+13125550188", "message": "Reminder: Dr. Smith appt tomorrow at 2 PM. Reply C to confirm.", "from": "ChiHealth" }
+Response: { "message_id": "bulk_us_7729102", "to": "+13125550199,+13125550145,+13125550188", "status": "processing", "cost": 0.022, "timestamp": "2023-10-27T14:05:33Z" }
+
+Question: Check the delivery status of a critical OTP sent to Berlin.
+Call: { "func_call": "get_sms_status", "to": "+493012345678", "message": "STATUS_CHECK", "from": "SecureBank" }
+Response: { "message_id": "msg_de_3341209", "to": "+493012345678", "status": "delivered", "cost": 0.051, "timestamp": "2023-10-27T14:06:45Z" }
+
+Question: Retrieve the last 50 marketing messages sent from our Tokyo campaign.
+Call: { "func_call": "get_sms_history", "to": "campaign_tokyo_fall", "message": "HISTORY_REQUEST", "from": "FashionJP" }
+Response: { "message_id": "hist_jp_8821003", "to": "campaign_tokyo_fall", "status": "retrieved", "cost": 0.00, "timestamp": "2023-10-27T14:08:12Z" }
+
+Question: Send a flash sale alert to subscribers in Sydney.
+Call: { "func_call": "send_bulk_sms", "to": "+61412345678,+61412345679,+61412345680", "message": "FLASH SALE: 50% off all surf gear! Ends midnight. Shop now: bit.ly/surf50", "from": "OzSurf" }
+Response: { "message_id": "bulk_au_5512093", "to": "+61412345678,+61412345679,+61412345680", "status": "sent", "cost": 0.038, "timestamp": "2023-10-27T14:10:05Z" }
+
+Question: Notify a single customer in New York about their package delivery.
+Call: { "func_call": "send_sms", "to": "+12125550134", "message": "Your package #TRK99283 will arrive between 2-4 PM today.", "from": "FastShip" }
+Response: { "message_id": "msg_us_1129384", "to": "+12125550134", "status": "sent", "cost": 0.0075, "timestamp": "2023-10-27T14:12:22Z" }
+
+Question: Get the status of a bulk reminder sent to clients in Paris yesterday.
+Call: { "func_call": "get_sms_status", "to": "+33612345678", "message": "STATUS_CHECK_BULK_PARIS", "from": "LegalFR" }
+Response: { "message_id": "msg_fr_6671234", "to": "+33612345678", "status": "read", "cost": 0.048, "timestamp": "2023-10-27T14:14:50Z" }
+
+Question: Send a two-factor authentication code to a user in Mumbai.
+Call: { "func_call": "send_sms", "to": "+919876543210", "message": "Your LoginOne OTP is 552910. Do not share this code.", "from": "LoginOne" }
+Response: { "message_id": "msg_in_4420192", "to": "+919876543210", "status": "sent", "cost": 0.012, "timestamp": "2023-10-27T14:16:33Z" }
+
+Question: Broadcast a holiday schedule update to all staff in Toronto.
+Call: { "func_call": "send_bulk_sms", "to": "+14165550101,+14165550102,+14165550103", "message": "Office closed Nov 23-24 for holidays. Emergency line: 416-555-9999.", "from": "CorpCA" }
+Response: { "message_id": "bulk_ca_3391028", "to": "+14165550101,+14165550102,+14165550103", "status": "sent", "cost": 0.015, "timestamp": "2023-10-27T14:18:41Z" }
+
+Question: Retrieve message history for failed verifications in Singapore.
+Call: { "func_call": "get_sms_history", "to": "filter:status=failed,loc=SG", "message": "HISTORY_REQUEST", "from": "FinTechSG" }
+Response: { "message_id": "hist_sg_2210933", "to": "filter:status=failed,loc=SG", "status": "retrieved", "cost": 0.00, "timestamp": "2023-10-27T14:20:15Z" }
+
+Question: Send a webinar start notification to registered attendees in Dublin.
+Call: { "func_call": "send_bulk_sms", "to": "+353871234567,+353871234568", "message": "Webinar starts in 15 mins! Join here: zoom.us/j/9928374. Pass: Tech2023", "from": "TechIE" }
+Response: { "message_id": "bulk_ie_8829102", "to": "+353871234567,+353871234568", "status": "sent", "cost": 0.042, "timestamp": "2023-10-27T14:22:09Z" }
+
+Question: Confirm the delivery of a password reset link sent to a user in Sao Paulo.
+Call: { "func_call": "get_sms_status", "to": "+5511987654321", "message": "STATUS_CHECK", "from": "SecureBR" }
+Response: { "message_id": "msg_br_5510293", "to": "+5511987654321", "status": "delivered", "cost": 0.029, "timestamp": "2023-10-27T14:24:55Z" }

@@ -1,0 +1,51 @@
+Available Tools: get_exchange_rate | convert_currency | buy_foreign_currency | get_supported_currencies
+Call Schema: { "func_call": "string", "from_currency": "string", "to_currency": "string", "amount": number }
+Response Schema: { "from": "string", "to": "string", "rate": number, "converted_amount": number, "fee": number }
+---
+Question: What is the current exchange rate for converting 850 US Dollars to Mexican Pesos?
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "MXN", "amount": 850 }
+Response: { "from": "USD", "to": "MXN", "rate": 17.25, "converted_amount": 14662.50, "fee": 4.25 }
+
+Question: I need to know how many South Korean Won I get for 2000 Euros.
+Call: { "func_call": "get_exchange_rate", "from_currency": "EUR", "to_currency": "KRW", "amount": 2000 }
+Response: { "from": "EUR", "to": "KRW", "rate": 1450.30, "converted_amount": 2900600.00, "fee": 10.00 }
+
+Question: Can you check the rate for exchanging 450 British Pounds into US Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "GBP", "to_currency": "USD", "amount": 450 }
+Response: { "from": "GBP", "to": "USD", "rate": 1.27, "converted_amount": 571.50, "fee": 2.85 }
+
+Question: How much Singapore Dollar will I receive if I convert 3000 Australian Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "AUD", "to_currency": "SGD", "amount": 3000 }
+Response: { "from": "AUD", "to": "SGD", "rate": 0.89, "converted_amount": 2670.00, "fee": 5.50 }
+
+Question: What is the conversion value for 15000 Japanese Yen to Canadian Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "JPY", "to_currency": "CAD", "amount": 15000 }
+Response: { "from": "JPY", "to": "CAD", "rate": 0.0091, "converted_amount": 136.50, "fee": 0.75 }
+
+Question: I want to see the rate for turning 600 Swiss Francs into British Pounds.
+Call: { "func_call": "get_exchange_rate", "from_currency": "CHF", "to_currency": "GBP", "amount": 600 }
+Response: { "from": "CHF", "to": "GBP", "rate": 0.89, "converted_amount": 534.00, "fee": 2.60 }
+
+Question: Calculate the exchange for 1200 Mexican Pesos to US Dollars.
+Call: { "func_call": "get_exchange_rate", "from_currency": "MXN", "to_currency": "USD", "amount": 1200 }
+Response: { "from": "MXN", "to": "USD", "rate": 0.058, "converted_amount": 69.60, "fee": 1.20 }
+
+Question: How many Euros do I get for 5000 South Korean Won today?
+Call: { "func_call": "get_exchange_rate", "from_currency": "KRW", "to_currency": "EUR", "amount": 5000 }
+Response: { "from": "KRW", "to": "EUR", "rate": 0.00069, "converted_amount": 3.45, "fee": 0.50 }
+
+Question: Check the rate for converting 900 Canadian Dollars to Swiss Francs.
+Call: { "func_call": "get_exchange_rate", "from_currency": "CAD", "to_currency": "CHF", "amount": 900 }
+Response: { "from": "CAD", "to": "CHF", "rate": 0.65, "converted_amount": 585.00, "fee": 3.10 }
+
+Question: What is the result of exchanging 2500 US Dollars to Singapore Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "SGD", "amount": 2500 }
+Response: { "from": "USD", "to": "SGD", "rate": 1.34, "converted_amount": 3350.00, "fee": 7.00 }
+
+Question: I need the exchange rate for 8000 Australian Dollars to Japanese Yen.
+Call: { "func_call": "get_exchange_rate", "from_currency": "AUD", "to_currency": "JPY", "amount": 8000 }
+Response: { "from": "AUD", "to": "JPY", "rate": 97.50, "converted_amount": 780000.00, "fee": 15.00 }
+
+Question: How much is 3500 British Pounds in Euros right now?
+Call: { "func_call": "get_exchange_rate", "from_currency": "GBP", "to_currency": "EUR", "amount": 3500 }
+Response: { "from": "GBP", "to": "EUR", "rate": 1.16, "converted_amount": 4060.00, "fee": 8.50 }

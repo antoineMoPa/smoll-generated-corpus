@@ -1,0 +1,51 @@
+Available Tools: book_appointment | cancel_appointment | reschedule_appointment | get_upcoming_appointments | get_available_slots
+Call Schema: { "func_call": "string", "patient_id": "string", "doctor_id": "string", "specialty": "string", "date": "string", "reason": "string" }
+Response Schema: { "appointment_id": "string", "doctor": "string", "date": "string", "time": "string", "location": "string", "status": "string" }
+---
+Question: I need to schedule an orthopedic consultation with Dr. Michael Stone for knee pain next Thursday. My patient ID is P1029.
+Call: { "func_call": "book_appointment", "patient_id": "P1029", "doctor_id": "D501", "specialty": "orthopedics", "date": "2023-12-07", "reason": "Knee pain consultation" }
+Response: { "appointment_id": "APT-8801", "doctor": "Dr. Michael Stone", "date": "2023-12-07", "time": "10:00", "location": "Ortho Wing Room 5", "status": "confirmed" }
+
+Question: Please cancel my neurology appointment with Dr. Alice Wong scheduled for December 10th. Patient ID is P3344.
+Call: { "func_call": "cancel_appointment", "patient_id": "P3344", "doctor_id": "D602", "specialty": "neurology", "date": "2023-12-10", "reason": "Personal emergency" }
+Response: { "appointment_id": "APT-9912", "doctor": "Dr. Alice Wong", "date": "2023-12-10", "time": "13:30", "location": "Neurology Dept B", "status": "cancelled" }
+
+Question: Book a dental cleaning with Dr. Brian Lee for next Friday morning. My patient ID is P7766.
+Call: { "func_call": "book_appointment", "patient_id": "P7766", "doctor_id": "D703", "specialty": "dentistry", "date": "2023-12-15", "reason": "Routine cleaning" }
+Response: { "appointment_id": "APT-1123", "doctor": "Dr. Brian Lee", "date": "2023-12-15", "time": "09:15", "location": "Dental Suite 2", "status": "confirmed" }
+
+Question: I need to reschedule my ophthalmology check-up with Dr. Clara Davis from Tuesday to Friday. Patient ID P4455.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P4455", "doctor_id": "D804", "specialty": "ophthalmology", "date": "2023-12-08", "reason": "Transportation issue" }
+Response: { "appointment_id": "APT-2234", "doctor": "Dr. Clara Davis", "date": "2023-12-08", "time": "14:45", "location": "Eye Care Center 3", "status": "rescheduled" }
+
+Question: Schedule an urgent ENT visit with Dr. David Kim for ear infection symptoms tomorrow. Patient ID is P9988.
+Call: { "func_call": "book_appointment", "patient_id": "P9988", "doctor_id": "D905", "specialty": "ENT", "date": "2023-12-05", "reason": "Ear infection symptoms" }
+Response: { "appointment_id": "APT-3345", "doctor": "Dr. David Kim", "date": "2023-12-05", "time": "11:30", "location": "ENT Clinic Room 1", "status": "confirmed" }
+
+Question: Cancel my physiotherapy session with Dr. Elena Rodriguez set for next Wednesday. Patient ID P2277.
+Call: { "func_call": "cancel_appointment", "patient_id": "P2277", "doctor_id": "D106", "specialty": "physiotherapy", "date": "2023-12-13", "reason": "Feeling better" }
+Response: { "appointment_id": "APT-4456", "doctor": "Dr. Elena Rodriguez", "date": "2023-12-13", "time": "16:00", "location": "Rehab Center Hall A", "status": "cancelled" }
+
+Question: Book a gynecology annual exam with Dr. Fiona Green on December 20th. Patient ID is P5588.
+Call: { "func_call": "book_appointment", "patient_id": "P5588", "doctor_id": "D207", "specialty": "gynecology", "date": "2023-12-20", "reason": "Annual exam" }
+Response: { "appointment_id": "APT-5567", "doctor": "Dr. Fiona Green", "date": "2023-12-20", "time": "10:45", "location": "Women's Health Wing", "status": "confirmed" }
+
+Question: Reschedule my endocrinology appointment with Dr. George Hall to January 5th due to travel. Patient ID P6699.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P6699", "doctor_id": "D308", "specialty": "endocrinology", "date": "2024-01-05", "reason": "Travel plans" }
+Response: { "appointment_id": "APT-6678", "doctor": "Dr. George Hall", "date": "2024-01-05", "time": "09:00", "location": "Endocrine Lab 4", "status": "rescheduled" }
+
+Question: Book a psychiatry consultation with Dr. Hannah Iris for anxiety management next Monday. Patient ID P1122.
+Call: { "func_call": "book_appointment", "patient_id": "P1122", "doctor_id": "D409", "specialty": "psychiatry", "date": "2023-12-11", "reason": "Anxiety management" }
+Response: { "appointment_id": "APT-7789", "doctor": "Dr. Hannah Iris", "date": "2023-12-11", "time": "15:15", "location": "Mental Health Suite 2", "status": "confirmed" }
+
+Question: Cancel my allergy testing appointment with Dr. Ian Jones scheduled for December 18th. Patient ID P3366.
+Call: { "func_call": "cancel_appointment", "patient_id": "P3366", "doctor_id": "D510", "specialty": "allergy", "date": "2023-12-18", "reason": "Schedule conflict" }
+Response: { "appointment_id": "APT-8890", "doctor": "Dr. Ian Jones", "date": "2023-12-18", "time": "11:00", "location": "Allergy Clinic Room B", "status": "cancelled" }
+
+Question: Book a urology follow-up with Dr. Julia King for kidney stone check on December 22nd. Patient ID P7744.
+Call: { "func_call": "book_appointment", "patient_id": "P7744", "doctor_id": "D611", "specialty": "urology", "date": "2023-12-22", "reason": "Kidney stone follow-up" }
+Response: { "appointment_id": "APT-9901", "doctor": "Dr. Julia King", "date": "2023-12-22", "time": "13:45", "location": "Urology Dept 1", "status": "confirmed" }
+
+Question: Reschedule my pulmonology appointment with Dr. Kevin Lane to December 28th afternoon. Patient ID P8855.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P8855", "doctor_id": "D712", "specialty": "pulmonology", "date": "2023-12-28", "reason": "Work meeting conflict" }
+Response: { "appointment_id": "APT-1012", "doctor": "Dr. Kevin Lane", "date": "2023-12-28", "time": "16:30", "location": "Lung Care Unit 3", "status": "rescheduled" }

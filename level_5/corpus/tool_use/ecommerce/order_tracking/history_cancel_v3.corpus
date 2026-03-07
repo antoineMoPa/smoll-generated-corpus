@@ -1,0 +1,51 @@
+Available Tools: get_order_status | track_shipment | get_order_history | cancel_order
+Call Schema: { "func_call": "string", "order_id": "string", "tracking_number": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_delivery": "string", "tracking_events": [{ "date": "string", "location": "string", "status": "string" }] }
+---
+Question: Could you retrieve my order history and then cancel order #ORD-1234 because the shipping cost was too high?
+Call: { "func_call": "get_order_history", "order_id": "ORD-1234", "tracking_number": "" }
+Response: { "order_id": "ORD-1234", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I need to cancel order #ORD-5678 immediately as I selected the wrong color by accident.
+Call: { "func_call": "cancel_order", "order_id": "ORD-5678", "tracking_number": "" }
+Response: { "order_id": "ORD-5678", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Please show me my recent purchases and cancel #ORD-9012 because the estimated arrival is after my vacation.
+Call: { "func_call": "get_order_history", "order_id": "ORD-9012", "tracking_number": "" }
+Response: { "order_id": "ORD-9012", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Cancel order #ORD-3456 right now; I found a cheaper alternative at another store.
+Call: { "func_call": "cancel_order", "order_id": "ORD-3456", "tracking_number": "" }
+Response: { "order_id": "ORD-3456", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Display my order list and then cancel #ORD-7890 because the item specifications do not match my needs.
+Call: { "func_call": "get_order_history", "order_id": "ORD-7890", "tracking_number": "" }
+Response: { "order_id": "ORD-7890", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I want to cancel order #ORD-2345 due to an accidental double charge on my credit card.
+Call: { "func_call": "cancel_order", "order_id": "ORD-2345", "tracking_number": "" }
+Response: { "order_id": "ORD-2345", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Retrieve my past orders and cancel #ORD-6789 because I decided to upgrade to a newer model instead.
+Call: { "func_call": "get_order_history", "order_id": "ORD-6789", "tracking_number": "" }
+Response: { "order_id": "ORD-6789", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Please cancel order #ORD-0123 as the payment method expired and I need to update my details first.
+Call: { "func_call": "cancel_order", "order_id": "ORD-0123", "tracking_number": "" }
+Response: { "order_id": "ORD-0123", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Look at my order history and cancel #ORD-4567 because the warranty terms were unclear.
+Call: { "func_call": "get_order_history", "order_id": "ORD-4567", "tracking_number": "" }
+Response: { "order_id": "ORD-4567", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: I need to cancel order #ORD-8901 due to a change in my project requirements.
+Call: { "func_call": "cancel_order", "order_id": "ORD-8901", "tracking_number": "" }
+Response: { "order_id": "ORD-8901", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Show me my previous orders and cancel #ORD-2468 because the return policy is too restrictive.
+Call: { "func_call": "get_order_history", "order_id": "ORD-2468", "tracking_number": "" }
+Response: { "order_id": "ORD-2468", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }
+---
+Question: Cancel order #ORD-1357 immediately since the delivery address is currently under renovation.
+Call: { "func_call": "cancel_order", "order_id": "ORD-1357", "tracking_number": "" }
+Response: { "order_id": "ORD-1357", "status": "cancelled", "estimated_delivery": "N/A", "tracking_events": [] }

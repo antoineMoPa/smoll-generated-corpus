@@ -1,0 +1,51 @@
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Show me the last 5 emails in my inbox.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 5 }
+Response: { "messages": [{ "id": "msg_9921", "from": "hr@techcorp.com", "subject": "Open Enrollment Period Starts Monday", "date": "2023-10-27T09:15:00Z", "read": false }, { "id": "msg_9920", "from": "newsletter@designweekly.io", "subject": "Top 10 UI Trends for 2024", "date": "2023-10-27T08:30:00Z", "read": true }, { "id": "msg_9919", "from": "support@cloudhost.net", "subject": "Your monthly invoice is ready", "date": "2023-10-26T14:22:00Z", "read": false }, { "id": "msg_9918", "from": "alice.jenkins@partner.org", "subject": "Re: Project Timeline Update", "date": "2023-10-26T11:05:00Z", "read": true }, { "id": "msg_9917", "from": "security@banksecure.com", "subject": "Login attempt from new device", "date": "2023-10-26T09:45:00Z", "read": false }], "total": 5 }
+
+Question: Fetch the full content of the email with ID msg_9921.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_9921", "limit": 1 }
+Response: { "messages": [{ "id": "msg_9921", "from": "hr@techcorp.com", "subject": "Open Enrollment Period Starts Monday", "date": "2023-10-27T09:15:00Z", "read": false }], "total": 1 }
+
+Question: How many unread messages do I have? (Simulated via inbox check).
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 100 }
+Response: { "messages": [{ "id": "msg_9921", "from": "hr@techcorp.com", "subject": "Open Enrollment Period Starts Monday", "date": "2023-10-27T09:15:00Z", "read": false }, { "id": "msg_9919", "from": "support@cloudhost.net", "subject": "Your monthly invoice is ready", "date": "2023-10-26T14:22:00Z", "read": false }, { "id": "msg_9917", "from": "security@banksecure.com", "subject": "Login attempt from new device", "date": "2023-10-26T09:45:00Z", "read": false }], "total": 3 }
+
+Question: Get the latest email from alice.jenkins@partner.org.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_9918", "from": "alice.jenkins@partner.org", "subject": "Re: Project Timeline Update", "date": "2023-10-26T11:05:00Z", "read": true }], "total": 1 }
+
+Question: Retrieve the details for message msg_9919 regarding the invoice.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_9919", "limit": 1 }
+Response: { "messages": [{ "id": "msg_9919", "from": "support@cloudhost.net", "subject": "Your monthly invoice is ready", "date": "2023-10-26T14:22:00Z", "read": false }], "total": 1 }
+
+Question: List the 3 most recent emails regardless of read status.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 3 }
+Response: { "messages": [{ "id": "msg_9921", "from": "hr@techcorp.com", "subject": "Open Enrollment Period Starts Monday", "date": "2023-10-27T09:15:00Z", "read": false }, { "id": "msg_9920", "from": "newsletter@designweekly.io", "subject": "Top 10 UI Trends for 2024", "date": "2023-10-27T08:30:00Z", "read": true }, { "id": "msg_9919", "from": "support@cloudhost.net", "subject": "Your monthly invoice is ready", "date": "2023-10-26T14:22:00Z", "read": false }], "total": 3 }
+
+Question: I need to see the security alert email msg_9917.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_9917", "limit": 1 }
+Response: { "messages": [{ "id": "msg_9917", "from": "security@banksecure.com", "subject": "Login attempt from new device", "date": "2023-10-26T09:45:00Z", "read": false }], "total": 1 }
+
+Question: Show me the last 10 emails to check for anything from marketing.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 10 }
+Response: { "messages": [{ "id": "msg_9921", "from": "hr@techcorp.com", "subject": "Open Enrollment Period Starts Monday", "date": "2023-10-27T09:15:00Z", "read": false }, { "id": "msg_9920", "from": "newsletter@designweekly.io", "subject": "Top 10 UI Trends for 2024", "date": "2023-10-27T08:30:00Z", "read": true }, { "id": "msg_9919", "from": "support@cloudhost.net", "subject": "Your monthly invoice is ready", "date": "2023-10-26T14:22:00Z", "read": false }, { "id": "msg_9918", "from": "alice.jenkins@partner.org", "subject": "Re: Project Timeline Update", "date": "2023-10-26T11:05:00Z", "read": true }, { "id": "msg_9917", "from": "security@banksecure.com", "subject": "Login attempt from new device", "date": "2023-10-26T09:45:00Z", "read": false }, { "id": "msg_9916", "from": "marketing@retailgiant.com", "subject": "Flash Sale: 50% Off Everything", "date": "2023-10-25T16:00:00Z", "read": true }, { "id": "msg_9915", "from": "noreply@github.com", "subject": "[DevOps] Build #402 failed", "date": "2023-10-25T14:30:00Z", "read": false }, { "id": "msg_9914", "from": "team@slack.com", "subject": "New login from Chrome on Windows", "date": "2023-10-25T10:12:00Z", "read": true }, { "id": "msg_9913", "from": "billing@aws.amazon.com", "subject": "AWS Bill Available for October", "date": "2023-10-24T08:00:00Z", "read": true }, { "id": "msg_9912", "from": "events@meetup.com", "subject": "Reminder: Python User Group Tonight", "date": "2023-10-24T07:45:00Z", "read": false }], "total": 10 }
+
+Question: Pull up the newsletter from designweekly.io.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_9920", "limit": 1 }
+Response: { "messages": [{ "id": "msg_9920", "from": "newsletter@designweekly.io", "subject": "Top 10 UI Trends for 2024", "date": "2023-10-27T08:30:00Z", "read": true }], "total": 1 }
+
+Question: Get the single most recent message in the inbox.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_9921", "from": "hr@techcorp.com", "subject": "Open Enrollment Period Starts Monday", "date": "2023-10-27T09:15:00Z", "read": false }], "total": 1 }
+
+Question: Fetch email msg_9915 about the failed build.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_9915", "limit": 1 }
+Response: { "messages": [{ "id": "msg_9915", "from": "noreply@github.com", "subject": "[DevOps] Build #402 failed", "date": "2023-10-25T14:30:00Z", "read": false }], "total": 1 }
+
+Question: List the last 4 emails to review recent activity.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 4 }
+Response: { "messages": [{ "id": "msg_9921", "from": "hr@techcorp.com", "subject": "Open Enrollment Period Starts Monday", "date": "2023-10-27T09:15:00Z", "read": false }, { "id": "msg_9920", "from": "newsletter@designweekly.io", "subject": "Top 10 UI Trends for 2024", "date": "2023-10-27T08:30:00Z", "read": true }, { "id": "msg_9919", "from": "support@cloudhost.net", "subject": "Your monthly invoice is ready", "date": "2023-10-26T14:22:00Z", "read": false }, { "id": "msg_9918", "from": "alice.jenkins@partner.org", "subject": "Re: Project Timeline Update", "date": "2023-10-26T11:05:00Z", "read": true }], "total": 4 }

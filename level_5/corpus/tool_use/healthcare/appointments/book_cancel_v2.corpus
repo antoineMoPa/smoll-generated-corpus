@@ -1,0 +1,51 @@
+Available Tools: book_appointment | cancel_appointment | reschedule_appointment | get_upcoming_appointments | get_available_slots
+Call Schema: { "func_call": "string", "patient_id": "string", "doctor_id": "string", "specialty": "string", "date": "string", "reason": "string" }
+Response Schema: { "appointment_id": "string", "doctor": "string", "date": "string", "time": "string", "location": "string", "status": "string" }
+---
+Question: Schedule a neurology consultation with Dr. Arthur Vance for migraine treatment on December 5th. My patient ID is P1029.
+Call: { "func_call": "book_appointment", "patient_id": "P1029", "doctor_id": "D501", "specialty": "neurology", "date": "2023-12-05", "reason": "Migraine treatment" }
+Response: { "appointment_id": "APT-8832", "doctor": "Dr. Arthur Vance", "date": "2023-12-05", "time": "10:00", "location": "Neurology Dept Room 5", "status": "confirmed" }
+
+Question: I need to cancel my orthopedic check-up with Dr. Lisa Morgan planned for next Wednesday. Patient ID is P3344.
+Call: { "func_call": "cancel_appointment", "patient_id": "P3344", "doctor_id": "D602", "specialty": "orthopedics", "date": "2023-12-06", "reason": "Travel conflict" }
+Response: { "appointment_id": "APT-9941", "doctor": "Dr. Lisa Morgan", "date": "2023-12-06", "time": "13:15", "location": "Ortho Clinic Bay 2", "status": "cancelled" }
+
+Question: Reschedule my ophthalmology eye exam with Dr. Kevin Park from Friday to the following Monday. Patient ID P7722.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P7722", "doctor_id": "D703", "specialty": "ophthalmology", "date": "2023-12-11", "reason": "Family emergency" }
+Response: { "appointment_id": "APT-1156", "doctor": "Dr. Kevin Park", "date": "2023-12-11", "time": "09:45", "location": "Eye Care Center 3", "status": "rescheduled" }
+
+Question: Book a psychiatry session with Dr. Helen Brooks for anxiety management next Thursday. Patient ID is P5566.
+Call: { "func_call": "book_appointment", "patient_id": "P5566", "doctor_id": "D804", "specialty": "psychiatry", "date": "2023-12-07", "reason": "Anxiety management" }
+Response: { "appointment_id": "APT-2278", "doctor": "Dr. Helen Brooks", "date": "2023-12-07", "time": "15:30", "location": "Mental Health Wing 1", "status": "confirmed" }
+
+Question: Please cancel my endocrinology appointment with Dr. Omar Hassan scheduled for December 10th. Patient ID P9988.
+Call: { "func_call": "cancel_appointment", "patient_id": "P9988", "doctor_id": "D905", "specialty": "endocrinology", "date": "2023-12-10", "reason": "Doctor recommendation to wait" }
+Response: { "appointment_id": "APT-3365", "doctor": "Dr. Omar Hassan", "date": "2023-12-10", "time": "11:20", "location": "Endocrine Lab 4", "status": "cancelled" }
+
+Question: Book an urgent orthopedic visit with Dr. Lisa Morgan for a sprained ankle tomorrow afternoon. Patient ID is P4411.
+Call: { "func_call": "book_appointment", "patient_id": "P4411", "doctor_id": "D602", "specialty": "orthopedics", "date": "2023-12-04", "reason": "Sprained ankle" }
+Response: { "appointment_id": "APT-4490", "doctor": "Dr. Lisa Morgan", "date": "2023-12-04", "time": "14:00", "location": "Ortho Clinic Bay 1", "status": "confirmed" }
+
+Question: Reschedule my neurology follow-up with Dr. Arthur Vance to December 12th due to medication delay. Patient ID P2255.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P2255", "doctor_id": "D501", "specialty": "neurology", "date": "2023-12-12", "reason": "Medication delay" }
+Response: { "appointment_id": "APT-5503", "doctor": "Dr. Arthur Vance", "date": "2023-12-12", "time": "16:45", "location": "Neurology Dept Room 5", "status": "rescheduled" }
+
+Question: Schedule a routine blood pressure check with Dr. George Miller in general practice for next Tuesday. Patient ID P6633.
+Call: { "func_call": "book_appointment", "patient_id": "P6633", "doctor_id": "D112", "specialty": "GP", "date": "2023-12-05", "reason": "Blood pressure check" }
+Response: { "appointment_id": "APT-6614", "doctor": "Dr. George Miller", "date": "2023-12-05", "time": "08:30", "location": "Clinic Room 7", "status": "confirmed" }
+
+Question: Cancel my ophthalmology cataract consultation with Dr. Kevin Park set for December 8th. Patient ID is P8877.
+Call: { "func_call": "cancel_appointment", "patient_id": "P8877", "doctor_id": "D703", "specialty": "ophthalmology", "date": "2023-12-08", "reason": "Postponing surgery" }
+Response: { "appointment_id": "APT-7729", "doctor": "Dr. Kevin Park", "date": "2023-12-08", "time": "10:50", "location": "Eye Care Center 2", "status": "cancelled" }
+
+Question: Book a psychiatry intake appointment with Dr. Helen Brooks for depression screening on December 14th. Patient ID P1199.
+Call: { "func_call": "book_appointment", "patient_id": "P1199", "doctor_id": "D804", "specialty": "psychiatry", "date": "2023-12-14", "reason": "Depression screening" }
+Response: { "appointment_id": "APT-8847", "doctor": "Dr. Helen Brooks", "date": "2023-12-14", "time": "12:00", "location": "Mental Health Wing 3", "status": "confirmed" }
+
+Question: Reschedule my endocrinology diabetes review with Dr. Omar Hassan to next Friday morning. Patient ID P3377.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P3377", "doctor_id": "D905", "specialty": "endocrinology", "date": "2023-12-15", "reason": "Work meeting conflict" }
+Response: { "appointment_id": "APT-9958", "doctor": "Dr. Omar Hassan", "date": "2023-12-15", "time": "09:15", "location": "Endocrine Lab 2", "status": "rescheduled" }
+
+Question: Book a pediatric ear infection check with Dr. James Miller for this coming Saturday. Patient ID P5588.
+Call: { "func_call": "book_appointment", "patient_id": "P5588", "doctor_id": "D305", "specialty": "pediatrics", "date": "2023-12-09", "reason": "Ear infection" }
+Response: { "appointment_id": "APT-1067", "doctor": "Dr. James Miller", "date": "2023-12-09", "time": "11:30", "location": "Pediatrics Unit 3", "status": "confirmed" }

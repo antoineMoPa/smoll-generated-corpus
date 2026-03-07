@@ -1,0 +1,51 @@
+Available Tools: get_weather_alerts | get_storm_warnings | get_air_quality_index
+Call Schema: { "func_call": "string", "location": "string", "severity": "string" }
+Response Schema: { "alerts": [{ "type": "string", "severity": "string", "message": "string", "expires": "string" }] }
+---
+Question: What is the current air quality status in New Delhi?
+Call: { "func_call": "get_air_quality_index", "location": "New Delhi", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Hazardous", "message": "AQI is 312. PM2.5 levels are extremely high. Everyone should avoid all outdoor exertion.", "expires": "2024-05-21T18:00:00Z" }] }
+
+Question: Check the air pollution levels for Lahore right now.
+Call: { "func_call": "get_air_quality_index", "location": "Lahore", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 245. Health warnings of emergency conditions. The entire population is more likely to be affected.", "expires": "2024-05-21T20:00:00Z" }] }
+
+Question: Is the air safe to breathe in Beijing today?
+Call: { "func_call": "get_air_quality_index", "location": "Beijing", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy for Sensitive Groups", "message": "AQI is 158. People with respiratory or heart disease, the elderly and children should limit prolonged outdoor exertion.", "expires": "2024-05-21T16:30:00Z" }] }
+
+Question: Get the latest smog alert for Cairo.
+Call: { "func_call": "get_air_quality_index", "location": "Cairo", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 189. Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.", "expires": "2024-05-21T19:00:00Z" }] }
+
+Question: How bad is the pollution in Dhaka at the moment?
+Call: { "func_call": "get_air_quality_index", "location": "Dhaka", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Hazardous", "message": "AQI is 298. Serious health effects expected for the entire population. Stay indoors and keep activity levels low.", "expires": "2024-05-21T22:00:00Z" }] }
+
+Question: Report the air quality index for Ulaanbaatar.
+Call: { "func_call": "get_air_quality_index", "location": "Ulaanbaatar", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 215. Significant aggravation of heart or lung disease and premature mortality in people with cardiopulmonary disease.", "expires": "2024-05-21T17:45:00Z" }] }
+
+Question: What are the particulate matter levels in Jakarta?
+Call: { "func_call": "get_air_quality_index", "location": "Jakarta", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 172. Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion.", "expires": "2024-05-21T21:15:00Z" }] }
+
+Question: Check if there are any air quality warnings for Karachi.
+Call: { "func_call": "get_air_quality_index", "location": "Karachi", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 230. Health alert: everyone may experience more serious health effects.", "expires": "2024-05-21T23:00:00Z" }] }
+
+Question: Provide the current smog reading for Mexico City.
+Call: { "func_call": "get_air_quality_index", "location": "Mexico City", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy for Sensitive Groups", "message": "AQI is 145. Members of sensitive groups may experience health effects. The general public is less likely to be affected.", "expires": "2024-05-21T15:00:00Z" }] }
+
+Question: What is the AQI status in Riyadh due to dust?
+Call: { "func_call": "get_air_quality_index", "location": "Riyadh", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 165. Increased likelihood of respiratory symptoms in sensitive individuals. Reduce time spent outdoors.", "expires": "2024-05-21T18:30:00Z" }] }
+
+Question: Assess the air quality danger level in Santiago.
+Call: { "func_call": "get_air_quality_index", "location": "Santiago", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy for Sensitive Groups", "message": "AQI is 138. People with lung disease, older adults and children should reduce prolonged or heavy exertion.", "expires": "2024-05-21T14:00:00Z" }] }
+
+Question: Is there a health advisory for air pollution in Tehran?
+Call: { "func_call": "get_air_quality_index", "location": "Tehran", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 205. Trigger heart attacks in people with heart disease. Significant increase in respiratory effects.", "expires": "2024-05-21T20:45:00Z" }] }

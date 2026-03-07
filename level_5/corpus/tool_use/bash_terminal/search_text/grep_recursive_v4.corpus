@@ -1,0 +1,47 @@
+Question: Locate all instances of "critical" in /var/log recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "critical", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/syslog", "line": 3055, "text": "Oct 13 12:00:05 server kernel: [critical] temperature threshold exceeded" }, { "file": "/var/log/app.log", "line": 89, "text": "2023-10-13 12:01:00 CRITICAL database connection lost" }], "count": 2 }
+
+Question: Search for "FIXME" in ~/codebase ignoring case and showing line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "FIXME", "path": "~/codebase", "flags": "-i -n" }
+Response: { "matches": [{ "file": "~/codebase/lib/utils.js", "line": 112, "text": "// FIXME: Handle null pointer exception here" }, { "file": "~/codebase/src/controller.ts", "line": 45, "text": "/* FIXME: Optimize query performance */" }], "count": 2 }
+
+Question: Count how many times "secret" appears in /home/user/config recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "secret", "path": "/home/user/config", "flags": "-i -r" }
+Response: { "matches": [], "count": 8 }
+
+Question: Recursively find "disk full" in /var/log with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "disk full", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/messages", "line": 4022, "text": "Oct 13 09:30:00 server kernel: No space left on device: disk full" }], "count": 1 }
+
+Question: Search for "import json" in ~/dev-scripts recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "import json", "path": "~/dev-scripts", "flags": "-n" }
+Response: { "matches": [{ "file": "~/dev-scripts/parser.py", "line": 2, "text": "import json" }, { "file": "~/dev-scripts/exporter.py", "line": 4, "text": "import json" }, { "file": "~/dev-scripts/backup.py", "line": 1, "text": "import json" }], "count": 3 }
+
+Question: Find "notice" in /var/log recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "notice", "path": "/var/log", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/mail.log", "line": 1500, "text": "Oct 13 14:00:00 server postfix: notice: queue flush started" }, { "file": "/var/log/syslog", "line": 99, "text": "Oct 13 14:05:00 server cron: NOTICE job completed" }], "count": 2 }
+
+Question: Count occurrences of "admin" in /etc recursively.
+Call: { "func_call": "grep_count", "pattern": "admin", "path": "/etc", "flags": "-r" }
+Response: { "matches": [], "count": 19 }
+
+Question: Search for "class Main" in ~/workspace recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "class Main", "path": "~/workspace", "flags": "-n" }
+Response: { "matches": [{ "file": "~/workspace/src/App.java", "line": 15, "text": "public class Main {" }, { "file": "~/workspace/tests/Runner.java", "line": 8, "text": "class MainTest {" }], "count": 2 }
+
+Question: Find "denied" in /var/log recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "denied", "path": "/var/log", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/secure", "line": 204, "text": "Oct 13 10:00:00 server sshd: Access denied for user guest" }, { "file": "/var/log/httpd/access_log", "line": 880, "text": "10.0.0.5 - - [13/Oct/2023:10:05:00] \"GET /admin\" 403 Forbidden denied" }], "count": 2 }
+
+Question: Recursively search for "192.168" in /etc with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "192.168", "path": "/etc", "flags": "-n" }
+Response: { "matches": [{ "file": "/etc/hosts", "line": 5, "text": "192.168.1.10    gateway.local" }, { "file": "/etc/network/interfaces", "line": 12, "text": "address 192.168.1.50" }], "count": 2 }
+
+Question: Count "yaml" in ~/configs recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "yaml", "path": "~/configs", "flags": "-i -r" }
+Response: { "matches": [], "count": 15 }
+
+Question: Find "500" in /var/log recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "500", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/nginx/error.log", "line": 6002, "text": "2023/10/13 16:00:00 [error] upstream returned 500 Internal Server Error" }, { "file": "/var/log/tomcat/catalina.out", "line": 44, "text": "SEVERE: Servlet.service() threw exception [500]" }], "count": 2 }

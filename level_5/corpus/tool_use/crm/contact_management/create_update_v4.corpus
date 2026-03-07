@@ -1,0 +1,51 @@
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Create a new contact for Marcus Thorne who works as a Chief Architect at Nebula Dynamics. His email is m.thorne@nebuladyn.com.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Marcus Thorne", "email": "m.thorne@nebuladyn.com", "company": "Nebula Dynamics", "note": "Chief Architect" }
+Response: { "contact_id": "cnt_45109", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the company for contact cnt_78234 to "Redwood Consulting" and change their name to "Angela Brooks".
+Call: { "func_call": "update_contact", "contact_id": "cnt_78234", "name": "Angela Brooks", "email": "", "company": "Redwood Consulting", "note": "" }
+Response: { "contact_id": "cnt_78234", "status": "updated", "updated_fields": ["name", "company"] }
+
+Question: Add a note to contact cnt_92105 indicating they requested a demo of the analytics dashboard.
+Call: { "func_call": "add_note", "contact_id": "cnt_92105", "name": "", "email": "", "company": "", "note": "Requested analytics dashboard demo" }
+Response: { "contact_id": "cnt_92105", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Jordan Lee, a Lead Designer at Pixel Forge, with email j.lee@pixelforge.studio.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Jordan Lee", "email": "j.lee@pixelforge.studio", "company": "Pixel Forge", "note": "Lead Designer" }
+Response: { "contact_id": "cnt_33892", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the email address for contact cnt_11567 to s.miller@quantumlogistics.org and add a note about the delayed shipment.
+Call: { "func_call": "update_contact", "contact_id": "cnt_11567", "name": "", "email": "s.miller@quantumlogistics.org", "company": "", "note": "Shipment delayed due to weather" }
+Response: { "contact_id": "cnt_11567", "status": "updated", "updated_fields": ["email", "note"] }
+
+Question: Create a new entry for Fatima Al-Fayed, VP of Sales at Horizon Energy, email f.alfayed@horizonen.co.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Fatima Al-Fayed", "email": "f.alfayed@horizonen.co", "company": "Horizon Energy", "note": "VP of Sales" }
+Response: { "contact_id": "cnt_67443", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Change the company name for contact cnt_59023 to "Alpine Security" and update the note to reflect their compliance audit status.
+Call: { "func_call": "update_contact", "contact_id": "cnt_59023", "name": "", "email": "", "company": "Alpine Security", "note": "Compliance audit passed on Dec 5" }
+Response: { "contact_id": "cnt_59023", "status": "updated", "updated_fields": ["company", "note"] }
+
+Question: Add a note to contact cnt_81290 stating that the renewal invoice was sent via email.
+Call: { "func_call": "add_note", "contact_id": "cnt_81290", "name": "", "email": "", "company": "", "note": "Renewal invoice emailed on Jan 15" }
+Response: { "contact_id": "cnt_81290", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Oliver Grant, Director of Ops at Swift Transport, email o.grant@swifttrans.net.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Oliver Grant", "email": "o.grant@swifttrans.net", "company": "Swift Transport", "note": "Director of Ops" }
+Response: { "contact_id": "cnt_24776", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the name and email for contact cnt_39812 to "Nina Patel" and "n.patel@fusionbio.io" respectively.
+Call: { "func_call": "update_contact", "contact_id": "cnt_39812", "name": "Nina Patel", "email": "n.patel@fusionbio.io", "company": "", "note": "" }
+Response: { "contact_id": "cnt_39812", "status": "updated", "updated_fields": ["name", "email"] }
+
+Question: Create a new contact for Thomas Wright, Data Scientist at Cipher AI, with email t.wright@cipherai.tech.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Thomas Wright", "email": "t.wright@cipherai.tech", "company": "Cipher AI", "note": "Data Scientist" }
+Response: { "contact_id": "cnt_90331", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the note for contact cnt_44098 to mention the budget approval expected by end of month.
+Call: { "func_call": "update_contact", "contact_id": "cnt_44098", "name": "", "email": "", "company": "", "note": "Budget approval expected by Jan 31" }
+Response: { "contact_id": "cnt_44098", "status": "updated", "updated_fields": ["note"] }

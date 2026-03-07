@@ -1,0 +1,62 @@
+Available Tools: create_deal | update_deal_stage | get_deal | list_deals_by_stage | close_deal
+Call Schema: { "func_call": "string", "deal_id": "string", "contact_id": "string", "stage": "string", "value": number }
+Response Schema: { "deal_id": "string", "name": "string", "stage": "string", "value": number, "probability": number }
+---
+Question: Retrieve all opportunities currently stuck in the needs analysis phase.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Needs Analysis", "value": 0 }
+Response: { "deal_id": "DL-4021", "name": "BlueSky Analytics Dashboard", "stage": "Needs Analysis", "value": 67500, "probability": 35 }
+
+---
+Question: What is the full list of deals waiting for executive sponsorship?
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Executive Sponsorship", "value": 0 }
+Response: { "deal_id": "DL-7392", "name": "IronClad Security Audit", "stage": "Executive Sponsorship", "value": 220000, "probability": 55 }
+
+---
+Question: Show me the pipeline for any deal marked as contract drafted.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Contract Drafted", "value": 0 }
+Response: { "deal_id": "DL-1588", "name": "SwiftShip Logistics API", "stage": "Contract Drafted", "value": 98000, "probability": 80 }
+
+---
+Question: List every potential client currently in the initial contact stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Initial Contact", "value": 0 }
+Response: { "deal_id": "DL-6204", "name": "GreenField Solar Monitoring", "stage": "Initial Contact", "value": 12000, "probability": 10 }
+
+---
+Question: Pull up all deals that have moved to the technical validation step.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Technical Validation", "value": 0 }
+Response: { "deal_id": "DL-8833", "name": "DataFlow ETL Migration", "stage": "Technical Validation", "value": 145000, "probability": 50 }
+
+---
+Question: Mark deal DL-3309 as won; the final payment has been received.
+Call: { "func_call": "close_deal", "deal_id": "DL-3309", "contact_id": "CT-512", "stage": "Closed Won", "value": 330000 }
+Response: { "deal_id": "DL-3309", "name": "Vertex AI Training Platform", "stage": "Closed Won", "value": 330000, "probability": 100 }
+
+---
+Question: Close deal DL-7741 as lost because the stakeholder left the company.
+Call: { "func_call": "close_deal", "deal_id": "DL-7741", "contact_id": "CT-663", "stage": "Closed Lost", "value": 54000 }
+Response: { "deal_id": "DL-7741", "name": "UrbanPlan CRM Implementation", "stage": "Closed Lost", "value": 54000, "probability": 0 }
+
+---
+Question: Finalize deal DL-9922 as won following the board meeting approval.
+Call: { "func_call": "close_deal", "deal_id": "DL-9922", "contact_id": "CT-881", "stage": "Closed Won", "value": 610000 }
+Response: { "deal_id": "DL-9922", "name": "OmniChannel Retail Suite", "stage": "Closed Won", "value": 610000, "probability": 100 }
+
+---
+Question: Update deal DL-1156 to closed lost status due to pricing objections.
+Call: { "func_call": "close_deal", "deal_id": "DL-1156", "contact_id": "CT-229", "stage": "Closed Lost", "value": 28500 }
+Response: { "deal_id": "DL-1156", "name": "SmallBiz Inventory Tracker", "stage": "Closed Lost", "value": 28500, "probability": 0 }
+
+---
+Question: Close deal DL-5588 as won; the signed agreement is now on file.
+Call: { "func_call": "close_deal", "deal_id": "DL-5588", "contact_id": "CT-447", "stage": "Closed Won", "value": 175000 }
+Response: { "deal_id": "DL-5588", "name": "MediCare Patient Portal", "stage": "Closed Won", "value": 175000, "probability": 100 }
+
+---
+Question: Show me all deals currently in the proof of concept stage.
+Call: { "func_call": "list_deals_by_stage", "deal_id": "", "contact_id": "", "stage": "Proof of Concept", "value": 0 }
+Response: { "deal_id": "DL-2276", "name": "Robotics Warehouse Automation", "stage": "Proof of Concept", "value": 420000, "probability": 45 }
+
+---
+Question: Mark deal DL-8014 as lost; the client decided to build in-house.
+Call: { "func_call": "close_deal", "deal_id": "DL-8014", "contact_id": "CT-995", "stage": "Closed Lost", "value": 195000 }
+Response: { "deal_id": "DL-8014", "name": "FinTech Fraud Detection", "stage": "Closed Lost", "value": 195000, "probability": 0 }

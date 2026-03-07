@@ -1,0 +1,20 @@
+{"incident_type": "Firmware Mismatch", "date": "2024-06-22", "location": "IoT Gateway Hub, Mumbai", "cause": "Incompatible update batch pushed to devices", "severity": "High", "resolved": "Yes"}
+{"incident_type": "SSL Expiration", "date": "2023-05-11", "location": "Customer Portal, Sydney", "cause": "Automated renewal script failure", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Container Crash", "date": "2024-07-09", "location": "Kubernetes Cluster West", "cause": "OOMKilled pod due to memory spike", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Data Loss", "date": "2023-03-14", "location": "Archive Storage, Dublin", "cause": "Accidental bucket deletion by admin", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Logic Bomb", "date": "2024-08-02", "location": "Legacy Payroll System", "cause": "Dormant code triggered by date change", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Bandwidth Saturation", "date": "2023-04-20", "location": "Branch Office, Tokyo", "cause": "Unrestricted video conferencing traffic", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "Certificate Revocation", "date": "2024-09-15", "location": "Internal PKI Server", "cause": "Compromised intermediate CA key", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Schema Drift", "date": "2023-02-28", "location": "Data Warehouse ETL", "cause": "Upstream source column type change", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Zero-Day Exploit", "date": "2024-10-05", "location": "Web Application Firewall", "cause": "Unknown vulnerability in web server", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Time Sync Failure", "date": "2023-01-17", "location": "Authentication Cluster", "cause": "NTP server unreachable causing token errors", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Spam Flood", "date": "2024-11-12", "location": "Corporate Email Gateway", "cause": "Directory harvest attack from botnet", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "Patch Failure", "date": "2023-08-30", "location": "Endpoint Management Server", "cause": "Corrupted update package distribution", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Session Hijacking", "date": "2024-12-01", "location": "Mobile Banking App", "cause": "Predictable session token generation", "severity": "Critical", "resolved": "No"}
+{"incident_type": "Print Queue Overflow", "date": "2023-07-05", "location": "Admin Wing, Paris", "cause": "Stuck job consuming all spooler resources", "severity": "Low", "resolved": "Yes"}
+{"incident_type": "LDAP Injection", "date": "2024-01-22", "location": "Directory Services", "cause": "Unsanitized user input in login form", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Cold Site Activation", "date": "2023-12-10", "location": "Disaster Recovery Center, Phoenix", "cause": "Primary site uninhabitable due to flood", "severity": "Critical", "resolved": "Yes"}
+{"incident_type": "Rate Limiting Breach", "date": "2024-02-14", "location": "Public API Gateway", "cause": "Aggressive scraping tool bypassing rules", "severity": "Medium", "resolved": "Yes"}
+{"incident_type": "Supply Chain Attack", "date": "2023-09-19", "location": "Build Pipeline Server", "cause": "Compromised third-party library dependency", "severity": "Critical", "resolved": "No"}
+{"incident_type": "VLAN Misconfiguration", "date": "2024-03-08", "location": "Network Switch Stack", "cause": "Incorrect port assignment isolating servers", "severity": "High", "resolved": "Yes"}
+{"incident_type": "Data Integrity Error", "date": "2023-06-25", "location": "Blockchain Ledger Node", "cause": "Consensus algorithm divergence", "severity": "Critical", "resolved": "Yes"}

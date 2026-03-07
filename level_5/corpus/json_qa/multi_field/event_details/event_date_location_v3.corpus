@@ -1,0 +1,29 @@
+Context: The Winter Food Festival kicks off on December 5, 2024, at the Riverfront Plaza in Chicago. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Winter Food Festival", "date": "December 5, 2024", "location": "Riverfront Plaza in Chicago"}
+
+Context: Celebrate Tom's Retirement Party on Friday, November 8th, at the Seaside Resort Ballroom. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Tom's Retirement Party", "date": "Friday, November 8th", "location": "Seaside Resort Ballroom"}
+
+Context: The finals of the National Spelling Bee are set for May 28, 2024, at the Gaylord National Resort. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "finals of the National Spelling Bee", "date": "May 28, 2024", "location": "Gaylord National Resort"}
+
+Context: The town mayor invites everyone to the Summer Solstice Fair on June 21st at the Community Green. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Summer Solstice Fair", "date": "June 21st", "location": "Community Green"}
+
+Context: Do not miss the International Robotics Showcase occurring from September 3 to September 6, 2024, in Tokyo, Japan. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "International Robotics Showcase", "date": "September 3 to September 6, 2024", "location": "Tokyo, Japan"}
+
+Context: Alex and Pat's Anniversary Dinner will be held on October 12, 2024, at the Vintage Vineyard Estate. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Alex and Pat's Anniversary Dinner", "date": "October 12, 2024", "location": "Vintage Vineyard Estate"}
+
+Context: The local soccer club hosts their season opener on March 15th at Riverside Park Field. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "season opener", "date": "March 15th", "location": "Riverside Park Field"}
+
+Context: Join the Renewable Energy Summit on April 22, 2024, located at the Convention Center in Berlin. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Renewable Energy Summit", "date": "April 22, 2024", "location": "Convention Center in Berlin"}
+
+Context: The annual street fair is planned for August 10th on Main Street from 1st to 3rd Block. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "annual street fair", "date": "August 10th", "location": "Main Street from 1st to 3rd Block"}
+
+Context: The Golden Globe Awards ceremony is scheduled for January 7, 2024, at the Beverly Hilton Hotel. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Golden Globe Awards ceremony", "date": "January 7, 2024", "location": "Beverly Hilton Hotel"}
+
+Context: Sign up for the Creative Writing Seminar on March 3, 2024, hosted at the Public Library in Seattle. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Creative Writing Seminar", "date": "March 3, 2024", "location": "Public Library in Seattle"}
+
+Context: The fundraising walk named "Steps for Success" takes place on Saturday, October 20th, beginning at the City Square. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Steps for Success", "date": "Saturday, October 20th", "location": "City Square"}
+
+Context: The quarterly board review is arranged for February 28, 2024, in the executive suite of the Tower Building. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "quarterly board review", "date": "February 28, 2024", "location": "executive suite of the Tower Building"}
+
+Context: Enjoy the Blues Music Festival on September 14, 2024, at the Mississippi Riverfront Stage. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Blues Music Festival", "date": "September 14, 2024", "location": "Mississippi Riverfront Stage"}
+
+Context: The college homecoming parade will proceed on November 2, 2024, down University Avenue. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "college homecoming parade", "date": "November 2, 2024", "location": "University Avenue"}

@@ -1,0 +1,51 @@
+Available Tools: share_file | set_permissions | get_shared_link | revoke_access | list_collaborators
+Call Schema: { "func_call": "string", "file_id": "string", "user_email": "string", "permission": "view|comment|edit", "expires_at": "string" }
+Response Schema: { "file_id": "string", "shared_link": "string", "collaborators": [{ "email": "string", "permission": "string" }] }
+---
+Question: Share the Q3 financial report with sarah.jenkins@corp.com and give her edit access until the end of the month.
+Call: { "func_call": "share_file", "file_id": "fin_q3_2023_v4.xlsx", "user_email": "sarah.jenkins@corp.com", "permission": "edit", "expires_at": "2023-10-31T23:59:59Z" }
+Response: { "file_id": "fin_q3_2023_v4.xlsx", "shared_link": "https://storage.corp.com/s/x9k2m-plq", "collaborators": [{ "email": "sarah.jenkins@corp.com", "permission": "edit" }] }
+
+Question: I need to let the design team view the new logo assets without making changes; send access to mike@design.co valid for one week.
+Call: { "func_call": "set_permissions", "file_id": "brand_assets_logo_v2.zip", "user_email": "mike@design.co", "permission": "view", "expires_at": "2023-11-15T12:00:00Z" }
+Response: { "file_id": "brand_assets_logo_v2.zip", "shared_link": "https://storage.corp.com/s/b7n4x-zzt", "collaborators": [{ "email": "mike@design.co", "permission": "view" }] }
+
+Question: Allow the intern to comment on the draft blog post but not edit it directly, expiring tomorrow.
+Call: { "func_call": "share_file", "file_id": "blog_draft_technology_trends.docx", "user_email": "intern_2024@corp.com", "permission": "comment", "expires_at": "2023-11-09T18:00:00Z" }
+Response: { "file_id": "blog_draft_technology_trends.docx", "shared_link": "https://storage.corp.com/s/q2w3e-rty", "collaborators": [{ "email": "intern_2024@corp.com", "permission": "comment" }] }
+
+Question: Generate a persistent edit link for the project roadmap and assign it to the product manager.
+Call: { "func_call": "get_shared_link", "file_id": "proj_roadmap_2024.pdf", "user_email": "pm_lead@corp.com", "permission": "edit", "expires_at": "2099-12-31T23:59:59Z" }
+Response: { "file_id": "proj_roadmap_2024.pdf", "shared_link": "https://storage.corp.com/s/m9k1j-hgf", "collaborators": [{ "email": "pm_lead@corp.com", "permission": "edit" }] }
+
+Question: Revoke access for the external contractor john.doe@freelance.net from the confidential salary sheet immediately.
+Call: { "func_call": "revoke_access", "file_id": "conf_salary_data_2023.csv", "user_email": "john.doe@freelance.net", "permission": "view", "expires_at": "2023-11-08T00:00:00Z" }
+Response: { "file_id": "conf_salary_data_2023.csv", "shared_link": "https://storage.corp.com/s/revoked-link", "collaborators": [] }
+
+Question: List all current collaborators on the marketing strategy deck and ensure the VP has edit rights.
+Call: { "func_call": "list_collaborators", "file_id": "mktg_strategy_deck_v9.pptx", "user_email": "vp_marketing@corp.com", "permission": "edit", "expires_at": "2024-01-01T00:00:00Z" }
+Response: { "file_id": "mktg_strategy_deck_v9.pptx", "shared_link": "https://storage.corp.com/s/p8o7i-ytr", "collaborators": [{ "email": "vp_marketing@corp.com", "permission": "edit" }, { "email": "content_mgr@corp.com", "permission": "comment" }] }
+
+Question: Give the legal team view-only access to the merger agreement document expiring in 48 hours.
+Call: { "func_call": "set_permissions", "file_id": "legal_merger_agreement_final.pdf", "user_email": "legal_counsel@corp.com", "permission": "view", "expires_at": "2023-11-10T14:30:00Z" }
+Response: { "file_id": "legal_merger_agreement_final.pdf", "shared_link": "https://storage.corp.com/s/l5k4j-mnb", "collaborators": [{ "email": "legal_counsel@corp.com", "permission": "view" }] }
+
+Question: Share the engineering specs with the vendor for comments, valid until the project kickoff next Monday.
+Call: { "func_call": "share_file", "file_id": "eng_specs_module_A.dwg", "user_email": "vendor_support@techsolutions.com", "permission": "comment", "expires_at": "2023-11-13T09:00:00Z" }
+Response: { "file_id": "eng_specs_module_A.dwg", "shared_link": "https://storage.corp.com/s/v3c2x-zas", "collaborators": [{ "email": "vendor_support@techsolutions.com", "permission": "comment" }] }
+
+Question: Update permissions for the shared budget tracker so the finance director has full edit control indefinitely.
+Call: { "func_call": "set_permissions", "file_id": "budget_tracker_fy24.xlsx", "user_email": "fin_director@corp.com", "permission": "edit", "expires_at": "2099-12-31T23:59:59Z" }
+Response: { "file_id": "budget_tracker_fy24.xlsx", "shared_link": "https://storage.corp.com/s/f9d8s-aqw", "collaborators": [{ "email": "fin_director@corp.com", "permission": "edit" }] }
+
+Question: Provide a temporary view link to the customer survey results for the data analyst, expiring tonight.
+Call: { "func_call": "get_shared_link", "file_id": "survey_results_q4.json", "user_email": "data_analyst@corp.com", "permission": "view", "expires_at": "2023-11-08T23:59:59Z" }
+Response: { "file_id": "survey_results_q4.json", "shared_link": "https://storage.corp.com/s/d7f6g-hjk", "collaborators": [{ "email": "data_analyst@corp.com", "permission": "view" }] }
+
+Question: Grant the HR manager comment access to the employee handbook draft, valid for two weeks.
+Call: { "func_call": "share_file", "file_id": "hr_handbook_draft_v3.docx", "user_email": "hr_manager@corp.com", "permission": "comment", "expires_at": "2023-11-22T17:00:00Z" }
+Response: { "file_id": "hr_handbook_draft_v3.docx", "shared_link": "https://storage.corp.com/s/h2j3k-lzx", "collaborators": [{ "email": "hr_manager@corp.com", "permission": "comment" }] }
+
+Question: Remove edit privileges from the old contractor and switch their access to view-only for the archive folder.
+Call: { "func_call": "revoke_access", "file_id": "archive_project_alpha.zip", "user_email": "old_contractor@gmail.com", "permission": "view", "expires_at": "2023-11-08T10:00:00Z" }
+Response: { "file_id": "archive_project_alpha.zip", "shared_link": "https://storage.corp.com/s/a1s2d-fgh", "collaborators": [{ "email": "old_contractor@gmail.com", "permission": "view" }] }

@@ -1,0 +1,51 @@
+Available Tools: search_employee | get_employee_by_id | get_org_chart | list_employees_by_department
+Call Schema: { "func_call": "string", "query": "string", "department": "string", "employee_id": "string" }
+Response Schema: { "employees": [{ "id": "string", "name": "string", "title": "string", "department": "string", "email": "string", "manager": "string" }] }
+---
+Question: Show me the full organizational chart for the Engineering department.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Engineering", "employee_id": "" }
+Response: { "employees": [{ "id": "ENG-001", "name": "Sarah Chen", "title": "VP of Engineering", "department": "Engineering", "email": "s.chen@company.com", "manager": "" }, { "id": "ENG-002", "name": "Marcus Johnson", "title": "Senior Backend Engineer", "department": "Engineering", "email": "m.johnson@company.com", "manager": "ENG-001" }, { "id": "ENG-003", "name": "Priya Patel", "title": "Frontend Lead", "department": "Engineering", "email": "p.patel@company.com", "manager": "ENG-001" }] }
+
+Question: I need a list of everyone working in the Sales team.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Sales", "employee_id": "" }
+Response: { "employees": [{ "id": "SAL-010", "name": "David Ross", "title": "Director of Sales", "department": "Sales", "email": "d.ross@company.com", "manager": "" }, { "id": "SAL-011", "name": "Emily Blunt", "title": "Account Executive", "department": "Sales", "email": "e.blunt@company.com", "manager": "SAL-010" }, { "id": "SAL-012", "name": "James Wilson", "title": "Sales Development Rep", "department": "Sales", "email": "j.wilson@company.com", "manager": "SAL-010" }] }
+
+Question: Who are the current employees in the HR department?
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "HR", "employee_id": "" }
+Response: { "employees": [{ "id": "HR-020", "name": "Linda Martinez", "title": "CHRO", "department": "HR", "email": "l.martinez@company.com", "manager": "" }, { "id": "HR-021", "name": "Robert Taylor", "title": "Recruiting Manager", "department": "HR", "email": "r.taylor@company.com", "manager": "HR-020" }, { "id": "HR-022", "name": "Susan Lee", "title": "Benefits Coordinator", "department": "HR", "email": "s.lee@company.com", "manager": "HR-020" }] }
+
+Question: Pull up the roster for the Finance department.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Finance", "employee_id": "" }
+Response: { "employees": [{ "id": "FIN-030", "name": "Michael Chang", "title": "CFO", "department": "Finance", "email": "m.chang@company.com", "manager": "" }, { "id": "FIN-031", "name": "Jessica Albright", "title": "Senior Accountant", "department": "Finance", "email": "j.albright@company.com", "manager": "FIN-030" }, { "id": "FIN-032", "name": "Tom Hiddleston", "title": "Financial Analyst", "department": "Finance", "email": "t.hiddleston@company.com", "manager": "FIN-030" }] }
+
+Question: Get me the org chart for Marketing to see the reporting structure.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Marketing", "employee_id": "" }
+Response: { "employees": [{ "id": "MKT-040", "name": "Alice Cooper", "title": "CMO", "department": "Marketing", "email": "a.cooper@company.com", "manager": "" }, { "id": "MKT-041", "name": "Brian May", "title": "Content Director", "department": "Marketing", "email": "b.may@company.com", "manager": "MKT-040" }, { "id": "MKT-042", "name": "Clara Oswald", "title": "Social Media Manager", "department": "Marketing", "email": "c.oswald@company.com", "manager": "MKT-041" }] }
+
+Question: List all engineers currently employed.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Engineering", "employee_id": "" }
+Response: { "employees": [{ "id": "ENG-001", "name": "Sarah Chen", "title": "VP of Engineering", "department": "Engineering", "email": "s.chen@company.com", "manager": "" }, { "id": "ENG-004", "name": "Devon Lewis", "title": "DevOps Engineer", "department": "Engineering", "email": "d.lewis@company.com", "manager": "ENG-001" }, { "id": "ENG-005", "name": "Fatima Al-Jamil", "title": "QA Engineer", "department": "Engineering", "email": "f.aljamil@company.com", "manager": "ENG-001" }] }
+
+Question: Show me the hierarchy for the Sales organization.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Sales", "employee_id": "" }
+Response: { "employees": [{ "id": "SAL-010", "name": "David Ross", "title": "Director of Sales", "department": "Sales", "email": "d.ross@company.com", "manager": "" }, { "id": "SAL-013", "name": "Gregory House", "title": "Regional Sales Manager", "department": "Sales", "email": "g.house@company.com", "manager": "SAL-010" }, { "id": "SAL-014", "name": "Hannah Montana", "title": "Inside Sales Rep", "department": "Sales", "email": "h.montana@company.com", "manager": "SAL-013" }] }
+
+Question: I need to see the team structure for HR.
+Call: { "func_call": "get_org_chart", "query": "", "department": "HR", "employee_id": "" }
+Response: { "employees": [{ "id": "HR-020", "name": "Linda Martinez", "title": "CHRO", "department": "HR", "email": "l.martinez@company.com", "manager": "" }, { "id": "HR-023", "name": "Ian Somerhalder", "title": "HR Business Partner", "department": "HR", "email": "i.somerhalder@company.com", "manager": "HR-020" }, { "id": "HR-024", "name": "Julia Roberts", "title": "Talent Acquisition Specialist", "department": "HR", "email": "j.roberts@company.com", "manager": "HR-020" }] }
+
+Question: Retrieve the full list of employees in Finance.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Finance", "employee_id": "" }
+Response: { "employees": [{ "id": "FIN-030", "name": "Michael Chang", "title": "CFO", "department": "Finance", "email": "m.chang@company.com", "manager": "" }, { "id": "FIN-033", "name": "Kevin Hart", "title": "Payroll Specialist", "department": "Finance", "email": "k.hart@company.com", "manager": "FIN-030" }, { "id": "FIN-034", "name": "Laura Palmer", "title": "Tax Consultant", "department": "Finance", "email": "l.palmer@company.com", "manager": "FIN-030" }] }
+
+Question: Display the marketing team roster.
+Call: { "func_call": "list_employees_by_department", "query": "", "department": "Marketing", "employee_id": "" }
+Response: { "employees": [{ "id": "MKT-040", "name": "Alice Cooper", "title": "CMO", "department": "Marketing", "email": "a.cooper@company.com", "manager": "" }, { "id": "MKT-043", "name": "Mike Ross", "title": "Brand Manager", "department": "Marketing", "email": "m.ross@company.com", "manager": "MKT-040" }, { "id": "MKT-044", "name": "Nancy Drew", "title": "SEO Specialist", "department": "Marketing", "email": "n.drew@company.com", "manager": "MKT-040" }] }
+
+Question: What does the Engineering department structure look like?
+Call: { "func_call": "get_org_chart", "query": "", "department": "Engineering", "employee_id": "" }
+Response: { "employees": [{ "id": "ENG-001", "name": "Sarah Chen", "title": "VP of Engineering", "department": "Engineering", "email": "s.chen@company.com", "manager": "" }, { "id": "ENG-006", "name": "Oscar Wilde", "title": "Staff Engineer", "department": "Engineering", "email": "o.wilde@company.com", "manager": "ENG-001" }, { "id": "ENG-007", "name": "Penny Lane", "title": "Junior Developer", "department": "Engineering", "email": "p.lane@company.com", "manager": "ENG-006" }] }
+
+Question: Give me the organizational breakdown for the Finance team.
+Call: { "func_call": "get_org_chart", "query": "", "department": "Finance", "employee_id": "" }
+Response: { "employees": [{ "id": "FIN-030", "name": "Michael Chang", "title": "CFO", "department": "Finance", "email": "m.chang@company.com", "manager": "" }, { "id": "FIN-035", "name": "Quinn Fabray", "title": "Controller", "department": "Finance", "email": "q.fabray@company.com", "manager": "FIN-030" }, { "id": "FIN-036", "name": "Rachel Green", "title": "Accounts Payable Clerk", "department": "Finance", "email": "r.green@company.com", "manager": "FIN-035" }] }

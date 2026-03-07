@@ -1,0 +1,51 @@
+Available Tools: transfer_funds | schedule_transfer | cancel_transfer | get_transfer_status
+Call Schema: { "func_call": "string", "from_account": "string", "to_account": "string", "amount": number, "currency": "string", "scheduled_date": "string" }
+Response Schema: { "transfer_id": "string", "status": "string", "amount": number, "estimated_arrival": "string" }
+---
+Question: Wire $875.25 from checking account 3344556677 to mortgage account 8899001122 for monthly payment.
+Call: { "func_call": "transfer_funds", "from_account": "3344556677", "to_account": "8899001122", "amount": 875.25, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-1029384", "status": "completed", "amount": 875.25, "estimated_arrival": "2023-10-28T09:15:00Z" }
+
+Question: Send 950.00 CAD from account CA12345678901234567890 to beneficiary account CA98765432109876543210 for tuition fees.
+Call: { "func_call": "transfer_funds", "from_account": "CA12345678901234567890", "to_account": "CA98765432109876543210", "amount": 950.00, "currency": "CAD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-5647382", "status": "completed", "amount": 950.00, "estimated_arrival": "2023-10-28T10:20:00Z" }
+
+Question: Move 120.75 AUD from savings AU112233445566778899 to travel card AU998877665544332211 for holiday spending.
+Call: { "func_call": "transfer_funds", "from_account": "AU112233445566778899", "to_account": "AU998877665544332211", "amount": 120.75, "currency": "AUD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-9182736", "status": "completed", "amount": 120.75, "estimated_arrival": "2023-10-28T09:45:00Z" }
+
+Question: Please transfer $5,000.00 from business account 2233445566 to contractor account 7788990011 for consulting services.
+Call: { "func_call": "transfer_funds", "from_account": "2233445566", "to_account": "7788990011", "amount": 5000.00, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-3456789", "status": "completed", "amount": 5000.00, "estimated_arrival": "2023-10-28T11:00:00Z" }
+
+Question: Transfer 680.40 CHF from account CH9300762011623852957 to landlord account CH5604835012345678009 for rent.
+Call: { "func_call": "transfer_funds", "from_account": "CH9300762011623852957", "to_account": "CH5604835012345678009", "amount": 680.40, "currency": "CHF", "scheduled_date": null }
+Response: { "transfer_id": "TXN-7890123", "status": "completed", "amount": 680.40, "estimated_arrival": "2023-10-28T12:30:00Z" }
+
+Question: Send $29.99 from my wallet 5544332211 to charity account 9988776655 for donation.
+Call: { "func_call": "transfer_funds", "from_account": "5544332211", "to_account": "9988776655", "amount": 29.99, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-2345678", "status": "completed", "amount": 29.99, "estimated_arrival": "2023-10-28T09:20:00Z" }
+
+Question: Transfer 1500 JPY from personal account JP1234567890123456789012 to family account JP9876543210987654321098 for gift.
+Call: { "func_call": "transfer_funds", "from_account": "JP1234567890123456789012", "to_account": "JP9876543210987654321098", "amount": 1500.00, "currency": "JPY", "scheduled_date": null }
+Response: { "transfer_id": "TXN-8901234", "status": "completed", "amount": 1500.00, "estimated_arrival": "2023-10-28T13:15:00Z" }
+
+Question: Move $4,250.00 from investment portfolio 1122334455 to retirement fund 6677889900 for annual contribution.
+Call: { "func_call": "transfer_funds", "from_account": "1122334455", "to_account": "6677889900", "amount": 4250.00, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-4567890", "status": "completed", "amount": 4250.00, "estimated_arrival": "2023-10-28T10:45:00Z" }
+
+Question: Transfer 330.00 SEK from account SE4550000000058398257466 to vendor account SE3550000000058398257477 for supplies.
+Call: { "func_call": "transfer_funds", "from_account": "SE4550000000058398257466", "to_account": "SE3550000000058398257477", "amount": 330.00, "currency": "SEK", "scheduled_date": null }
+Response: { "transfer_id": "TXN-6789012", "status": "completed", "amount": 330.00, "estimated_arrival": "2023-10-28T14:00:00Z" }
+
+Question: Send $199.50 from primary checking 9900112233 to utility provider account 4455667788 for electricity bill.
+Call: { "func_call": "transfer_funds", "from_account": "9900112233", "to_account": "4455667788", "amount": 199.50, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-0123456", "status": "completed", "amount": 199.50, "estimated_arrival": "2023-10-28T09:30:00Z" }
+
+Question: Transfer 750.00 NZD from savings NZ1234567890123456 to mortgage offset NZ9876543210987654 to reduce interest.
+Call: { "func_call": "transfer_funds", "from_account": "NZ1234567890123456", "to_account": "NZ9876543210987654", "amount": 750.00, "currency": "NZD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-3456781", "status": "completed", "amount": 750.00, "estimated_arrival": "2023-10-28T15:20:00Z" }
+
+Question: Transfer $6,789.12 from operating account 8877665544 to tax reserve account 3322110099 for quarterly estimate.
+Call: { "func_call": "transfer_funds", "from_account": "8877665544", "to_account": "3322110099", "amount": 6789.12, "currency": "USD", "scheduled_date": null }
+Response: { "transfer_id": "TXN-7890125", "status": "completed", "amount": 6789.12, "estimated_arrival": "2023-10-28T11:45:00Z" }

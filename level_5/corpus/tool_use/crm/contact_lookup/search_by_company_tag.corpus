@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Show me everyone working at Acme Corp.
+Call: { "func_call": "find_contacts_by_company", "query": "Acme Corp", "field": "company", "limit": 50 }
+Response: { "contacts": [{ "id": "c_101", "name": "Sarah Jenkins", "email": "s.jenkins@acmecorp.com", "company": "Acme Corp", "phone": "+1-555-0101" }, { "id": "c_102", "name": "Michael Chen", "email": "m.chen@acmecorp.com", "company": "Acme Corp", "phone": "+1-555-0102" }], "total": 2 }
+
+Question: Find all contacts tagged as enterprise clients.
+Call: { "func_call": "find_contacts_by_tag", "query": "enterprise", "field": "tag", "limit": 100 }
+Response: { "contacts": [{ "id": "c_205", "name": "David Ross", "email": "dross@globaltech.io", "company": "Global Tech", "phone": "+1-555-0205" }, { "id": "c_206", "name": "Elena Rodriguez", "email": "erodriguez@nebula systems.com", "company": "Nebula Systems", "phone": "+1-555-0206" }, { "id": "c_207", "name": "James Wilson", "email": "jwilson@quantum.org", "company": "Quantum Industries", "phone": "+1-555-0207" }], "total": 3 }
+
+Question: Who are the prospects at Stellar Dynamics?
+Call: { "func_call": "find_contacts_by_company", "query": "Stellar Dynamics", "field": "company", "limit": 20 }
+Response: { "contacts": [{ "id": "c_301", "name": "Amanda Lee", "email": "alee@stellardynamics.net", "company": "Stellar Dynamics", "phone": "+1-555-0301" }], "total": 1 }
+
+Question: List all contacts marked with the churned tag.
+Call: { "func_call": "find_contacts_by_tag", "query": "churned", "field": "tag", "limit": 50 }
+Response: { "contacts": [{ "id": "c_404", "name": "Robert Brown", "email": "rbrown@oldventures.com", "company": "Old Ventures", "phone": "+1-555-0404" }, { "id": "c_405", "name": "Linda Martinez", "email": "lmartinez@fadedcorp.com", "company": "Faded Corp", "phone": "+1-555-0405" }], "total": 2 }
+
+Question: I need the VIP contact list for our upcoming gala.
+Call: { "func_call": "find_contacts_by_tag", "query": "VIP", "field": "tag", "limit": 25 }
+Response: { "contacts": [{ "id": "c_501", "name": "Victoria Sterling", "email": "vsterling@eliteholdings.com", "company": "Elite Holdings", "phone": "+1-555-0501" }, { "id": "c_502", "name": "Arthur Pendelton", "email": "apendelton@royalgroup.co", "company": "Royal Group", "phone": "+1-555-0502" }, { "id": "c_503", "name": "Grace Holloway", "email": "gholloway@summitpeak.com", "company": "Summit Peak", "phone": "+1-555-0503" }], "total": 3 }
+
+Question: Find employees at Horizon Logistics.
+Call: { "func_call": "find_contacts_by_company", "query": "Horizon Logistics", "field": "company", "limit": 30 }
+Response: { "contacts": [{ "id": "c_601", "name": "Thomas Wright", "email": "twright@horizonlogistics.com", "company": "Horizon Logistics", "phone": "+1-555-0601" }, { "id": "c_602", "name": "Samantha Green", "email": "sgreen@horizonlogistics.com", "company": "Horizon Logistics", "phone": "+1-555-0602" }], "total": 2 }
+
+Question: Pull up all prospects we are currently tracking.
+Call: { "func_call": "find_contacts_by_tag", "query": "prospect", "field": "tag", "limit": 75 }
+Response: { "contacts": [{ "id": "c_701", "name": "Kevin O'Neil", "email": "koneil@startupx.io", "company": "Startup X", "phone": "+1-555-0701" }, { "id": "c_702", "name": "Priya Patel", "email": "ppatel@innovatech.com", "company": "InnovaTech", "phone": "+1-555-0702" }], "total": 2 }
+
+Question: Get me the contact list for BlueWave Solutions.
+Call: { "func_call": "find_contacts_by_company", "query": "BlueWave Solutions", "field": "company", "limit": 40 }
+Response: { "contacts": [{ "id": "c_801", "name": "Christopher Davis", "email": "cdavis@bluewavesol.com", "company": "BlueWave Solutions", "phone": "+1-555-0801" }, { "id": "c_802", "name": "Jessica Taylor", "email": "jtaylor@bluewavesol.com", "company": "BlueWave Solutions", "phone": "+1-555-0802" }, { "id": "c_803", "name": "Daniel Kim", "email": "dkim@bluewavesol.com", "company": "BlueWave Solutions", "phone": "+1-555-0803" }], "total": 3 }
+
+Question: Show me enterprise clients in the software sector.
+Call: { "func_call": "find_contacts_by_tag", "query": "enterprise", "field": "tag", "limit": 10 }
+Response: { "contacts": [{ "id": "c_901", "name": "Marcus Thorne", "email": "mthorne@softgiant.com", "company": "Soft Giant", "phone": "+1-555-0901" }], "total": 1 }
+
+Question: Identify any churned customers from Apex Industries.
+Call: { "func_call": "find_contacts_by_company", "query": "Apex Industries", "field": "company", "limit": 15 }
+Response: { "contacts": [{ "id": "c_1001", "name": "Brian Foster", "email": "bfoster@apexind.com", "company": "Apex Industries", "phone": "+1-555-1001" }], "total": 1 }
+
+Question: Retrieve all VIPs associated with Zenith Corp.
+Call: { "func_call": "find_contacts_by_company", "query": "Zenith Corp", "field": "company", "limit": 10 }
+Response: { "contacts": [{ "id": "c_1101", "name": "Olivia Bennett", "email": "obennett@zenithcorp.com", "company": "Zenith Corp", "phone": "+1-555-1101" }, { "id": "c_1102", "name": "William Clark", "email": "wclark@zenithcorp.com", "company": "Zenith Corp", "phone": "+1-555-1102" }], "total": 2 }
+
+Question: Find all contacts tagged as prospect or enterprise.
+Call: { "func_call": "find_contacts_by_tag", "query": "prospect", "field": "tag", "limit": 50 }
+Response: { "contacts": [{ "id": "c_1201", "name": "Sophia Turner", "email": "sturner@newwave.biz", "company": "NewWave Biz", "phone": "+1-555-1201" }, { "id": "c_1202", "name": "Lucas Gray", "email": "lgray@futurevision.net", "company": "Future Vision", "phone": "+1-555-1202" }], "total": 2 }

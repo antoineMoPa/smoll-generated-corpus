@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Purge the stale lock file preventing the scheduler from starting.
+Call: { "func_call": "delete_file", "source": "/var/run/scheduler_lock_7734.pid", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /var/run/scheduler_lock_7734.pid" }
+
+Question: Establish a new folder hierarchy for the legal department's contract archives.
+Call: { "func_call": "create_dir", "source": "/srv/legal/contracts/2024_archive", "destination": "" }
+Response: { "success": true, "message": "Directory /srv/legal/contracts/2024_archive created successfully" }
+
+Question: Erase the corrupted transaction log from the failed payment gateway sync.
+Call: { "func_call": "delete_file", "source": "/var/log/payments/txn_fail_20231105.log", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /var/log/payments/txn_fail_20231105.log" }
+
+Question: Provision a dedicated directory for the machine learning model training outputs.
+Call: { "func_call": "create_dir", "source": "/home/ml_engineer/models/training_v3", "destination": "" }
+Response: { "success": true, "message": "Directory /home/ml_engineer/models/training_v3 created successfully" }
+
+Question: Discard the incomplete video render file caused by a power outage.
+Call: { "func_call": "delete_file", "source": "/tmp/render_output_9982_partial.mp4", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/render_output_9982_partial.mp4" }
+
+Question: Generate a storage location for weekly server performance metrics.
+Call: { "func_call": "create_dir", "source": "/opt/metrics/weekly_reports/q1", "destination": "" }
+Response: { "success": true, "message": "Directory /opt/metrics/weekly_reports/q1 created successfully" }
+
+Question: Delete the obsolete SSL certificate file that expired last month.
+Call: { "func_call": "delete_file", "source": "/etc/ssl/certs/domain_old_2023.crt", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /etc/ssl/certs/domain_old_2023.crt" }
+
+Question: Create a workspace directory for the frontend team's prototype designs.
+Call: { "func_call": "create_dir", "source": "/dev/frontend/prototypes/mobile_app", "destination": "" }
+Response: { "success": true, "message": "Directory /dev/frontend/prototypes/mobile_app created successfully" }
+
+Question: Remove the debug trace file generated during the emergency hotfix.
+Call: { "func_call": "delete_file", "source": "/tmp/debug_trace_hotfix_5512.txt", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/debug_trace_hotfix_5512.txt" }
+
+Question: Initialize a directory to hold incoming CSV uploads from the partner API.
+Call: { "func_call": "create_dir", "source": "/var/incoming/partner_data/csv_feed", "destination": "" }
+Response: { "success": true, "message": "Directory /var/incoming/partner_data/csv_feed created successfully" }
+
+Question: Clean up the temporary compression archive left after the backup routine.
+Call: { "func_call": "delete_file", "source": "/tmp/backup_archive_temp_3309.tar.gz", "destination": "" }
+Response: { "success": true, "message": "Successfully deleted /tmp/backup_archive_temp_3309.tar.gz" }
+
+Question: Set up a new directory for storing audited financial records for 2025.
+Call: { "func_call": "create_dir", "source": "/finance/audits/records_2025", "destination": "" }
+Response: { "success": true, "message": "Directory /finance/audits/records_2025 created successfully" }

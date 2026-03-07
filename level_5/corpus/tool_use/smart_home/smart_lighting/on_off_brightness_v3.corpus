@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": number, "color": "string" }
+Response Schema: { "light_id": "string", "state": "on|off", "brightness": number, "color": "string" }
+---
+Question: Illuminate the garage light at 90% brightness.
+Call: { "func_call": "turn_on_light", "light_id": "garage", "brightness": 90, "color": "white" }
+Response: { "light_id": "garage", "state": "on", "brightness": 90, "color": "white" }
+
+Question: Deactivate the hallway light entirely.
+Call: { "func_call": "turn_off_light", "light_id": "hallway", "brightness": 0, "color": "white" }
+Response: { "light_id": "hallway", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Configure the study light brightness to 75%.
+Call: { "func_call": "set_brightness", "light_id": "study", "brightness": 75, "color": "white" }
+Response: { "light_id": "study", "state": "on", "brightness": 75, "color": "white" }
+
+Question: Lower the patio light intensity to 30%.
+Call: { "func_call": "set_brightness", "light_id": "patio", "brightness": 30, "color": "white" }
+Response: { "light_id": "patio", "state": "on", "brightness": 30, "color": "white" }
+
+Question: Switch on the hallway light but set it low at 20%.
+Call: { "func_call": "turn_on_light", "light_id": "hallway", "brightness": 20, "color": "white" }
+Response: { "light_id": "hallway", "state": "on", "brightness": 20, "color": "white" }
+
+Question: Shut down the study lights.
+Call: { "func_call": "turn_off_light", "light_id": "study", "brightness": 0, "color": "white" }
+Response: { "light_id": "study", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Modify the garage brightness to 65%.
+Call: { "func_call": "set_brightness", "light_id": "garage", "brightness": 65, "color": "white" }
+Response: { "light_id": "garage", "state": "on", "brightness": 65, "color": "white" }
+
+Question: Energize the patio light at maximum brightness.
+Call: { "func_call": "turn_on_light", "light_id": "patio", "brightness": 100, "color": "white" }
+Response: { "light_id": "patio", "state": "on", "brightness": 100, "color": "white" }
+
+Question: Cut power to the hallway light right now.
+Call: { "func_call": "turn_off_light", "light_id": "hallway", "brightness": 0, "color": "white" }
+Response: { "light_id": "hallway", "state": "off", "brightness": 0, "color": "white" }
+
+Question: Set the study light to a focused 55% brightness.
+Call: { "func_call": "set_brightness", "light_id": "study", "brightness": 55, "color": "white" }
+Response: { "light_id": "study", "state": "on", "brightness": 55, "color": "white" }
+
+Question: Turn on the garage light at 45% brightness.
+Call: { "func_call": "turn_on_light", "light_id": "garage", "brightness": 45, "color": "white" }
+Response: { "light_id": "garage", "state": "on", "brightness": 45, "color": "white" }
+
+Question: Dim the patio light to 5% for evening ambiance.
+Call: { "func_call": "set_brightness", "light_id": "patio", "brightness": 5, "color": "white" }
+Response: { "light_id": "patio", "state": "on", "brightness": 5, "color": "white" }

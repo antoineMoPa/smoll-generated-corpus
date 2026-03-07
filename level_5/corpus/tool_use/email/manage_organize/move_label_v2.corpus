@@ -1,0 +1,51 @@
+Available Tools: move_to_folder | create_label | delete_email | archive_email | unsubscribe
+Call Schema: { "func_call": "string", "message_id": "string", "folder": "string", "label": "string" }
+Response Schema: { "message_id": "string", "action": "string", "status": "string" }
+---
+Question: Transfer the receipt from OfficeDepot to the 'Supplies' folder and tag it as 'Office-Expense'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_7712aa", "folder": "Supplies", "label": "Office-Expense" }
+Response: { "message_id": "msg_7712aa", "action": "move_and_label", "status": "success" }
+
+Question: Sort the project proposal from CreativeHub by moving it to 'Proposals' and labeling it 'Client-Pitch'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_8823bb", "folder": "Proposals", "label": "Client-Pitch" }
+Response: { "message_id": "msg_8823bb", "action": "move_and_label", "status": "success" }
+
+Question: Place the warranty registration from ElectroMart into the 'Warranties' folder and apply the 'Electronics' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_9934cc", "folder": "Warranties", "label": "Electronics" }
+Response: { "message_id": "msg_9934cc", "action": "move_and_label", "status": "success" }
+
+Question: Move the payroll summary from HR-Dept to the 'Payroll' folder and label it 'Monthly-Summary'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_1045dd", "folder": "Payroll", "label": "Monthly-Summary" }
+Response: { "message_id": "msg_1045dd", "action": "move_and_label", "status": "success" }
+
+Question: File the vendor agreement from SupplyChainInc into the 'Contracts' folder and mark it with the 'Vendor' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_2156ee", "folder": "Contracts", "label": "Vendor" }
+Response: { "message_id": "msg_2156ee", "action": "move_and_label", "status": "success" }
+
+Question: Move the interview schedule from RecruitingTeam to the 'Hiring' folder and add the 'Interview' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_3267ff", "folder": "Hiring", "label": "Interview" }
+Response: { "message_id": "msg_3267ff", "action": "move_and_label", "status": "success" }
+
+Question: Organize the software license key from DevTools by moving it to 'Licenses' and labeling it 'Software-Key'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_4378gg", "folder": "Licenses", "label": "Software-Key" }
+Response: { "message_id": "msg_4378gg", "action": "move_and_label", "status": "success" }
+
+Question: Move the incident report from SafetyFirst to the 'Incidents' folder and tag it as 'Safety-Report'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_5489hh", "folder": "Incidents", "label": "Safety-Report" }
+Response: { "message_id": "msg_5489hh", "action": "move_and_label", "status": "success" }
+
+Question: File the conference badge confirmation from EventBrite into the 'Conferences' folder and apply the 'Badge' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_6590ii", "folder": "Conferences", "label": "Badge" }
+Response: { "message_id": "msg_6590ii", "action": "move_and_label", "status": "success" }
+
+Question: Move the performance review from ManagerBob to the 'Reviews' folder and label it 'Annual-Review'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_7601jj", "folder": "Reviews", "label": "Annual-Review" }
+Response: { "message_id": "msg_7601jj", "action": "move_and_label", "status": "success" }
+
+Question: Organize the insurance claim from SafeGuard by moving it to 'Claims' and labeling it 'Health-Claim'.
+Call: { "func_call": "move_to_folder", "message_id": "msg_8712kk", "folder": "Claims", "label": "Health-Claim" }
+Response: { "message_id": "msg_8712kk", "action": "move_and_label", "status": "success" }
+
+Question: Move the donation receipt from CharityOrg to the 'Donations' folder and add the 'Tax-Deductible' label.
+Call: { "func_call": "move_to_folder", "message_id": "msg_9823ll", "folder": "Donations", "label": "Tax-Deductible" }
+Response: { "message_id": "msg_9823ll", "action": "move_and_label", "status": "success" }

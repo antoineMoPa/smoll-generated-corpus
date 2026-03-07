@@ -1,0 +1,29 @@
+Context: At the international robotics summit, engineers from Japan and South Korea showcased their prototypes, with the Japanese team earning the innovation award. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "engineers from Japan and South Korea", "outcome": "the Japanese team earning the innovation award"}
+
+Context: The climate summit delegation included ministers from Canada and Australia, resulting in a pledged commitment to reduce carbon emissions by 2030. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "ministers from Canada and Australia", "outcome": "a pledged commitment to reduce carbon emissions by 2030"}
+
+Context: During the culinary competition, chefs Marco Rossi and Elena Petrova presented their dishes, but only Marco Rossi received the golden spoon trophy. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "chefs Marco Rossi and Elena Petrova", "outcome": "only Marco Rossi received the golden spoon trophy"}
+
+Context: The acquisition talks involved founders of StartUp Inc and MegaCorp, concluding with a deal to integrate technologies by year-end. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "founders of StartUp Inc and MegaCorp", "outcome": "a deal to integrate technologies by year-end"}
+
+Context: In the swimming championships last weekend, swimmers from the USA and Australia competed, with the American athlete setting a new world record. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "swimmers from the USA and Australia", "outcome": "the American athlete setting a new world record"}
+
+Context: The city council session included councilors Tom Brown, Lisa White, and Raj Patel, and they agreed to fund the new park project. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Tom Brown, Lisa White, and Raj Patel", "outcome": "agreed to fund the new park project"}
+
+Context: Musicians from the Berlin Philharmonic and the London Symphony Orchestra performed together, where the joint concert was hailed as a historic success. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "musicians from the Berlin Philharmonic and the London Symphony Orchestra", "outcome": "the joint concert was hailed as a historic success"}
+
+Context: The wage dispute negotiations featured shop steward Mary Johnson and corporate executives, resulting in a finalized pay raise schedule. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "shop steward Mary Johnson and corporate executives", "outcome": "a finalized pay raise schedule"}
+
+Context: Chess grandmasters Garry Kasparov and Viswanathan Anand played a rapid match that ended in a stalemate after fifty moves. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Garry Kasparov and Viswanathan Anand", "outcome": "ended in a stalemate after fifty moves"}
+
+Context: Officials from the World Health Organization and UNICEF convened to distribute vaccines, successfully launching a global immunization campaign. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Officials from the World Health Organization and UNICEF", "outcome": "successfully launching a global immunization campaign"}
+
+Context: The design contest saw entries from Apple, Samsung, and Sony, with the Apple design winning the consumer choice award. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "entries from Apple, Samsung, and Sony", "outcome": "the Apple design winning the consumer choice award"}
+
+Context: Envoys from India and Pakistan discussed border security, which concluded with a joint patrol agreement. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Envoys from India and Pakistan", "outcome": "a joint patrol agreement"}
+
+Context: The civil lawsuit involved plaintiff John Smith and defendant Acme Corp, ending with a settlement out of court. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "plaintiff John Smith and defendant Acme Corp", "outcome": "a settlement out of court"}
+
+Context: Investors from BlueSky Ventures and RedOcean Fund attended the pitch day, deciding to withdraw their funding offers. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Investors from BlueSky Ventures and RedOcean Fund", "outcome": "deciding to withdraw their funding offers"}
+
+Context: Dancers from the National Ballet and the City Dance Troupe competed in the showcase, with the National Ballet receiving the standing ovation. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Dancers from the National Ballet and the City Dance Troupe", "outcome": "the National Ballet receiving the standing ovation"}

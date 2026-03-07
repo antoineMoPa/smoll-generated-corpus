@@ -1,0 +1,51 @@
+Available Tools: scale_out | scale_in | set_auto_scaling | get_scaling_policy
+Call Schema: { "func_call": "string", "group_id": "string", "min_size": "number", "max_size": "number", "desired": "number" }
+Response Schema: { "group_id": "string", "current_capacity": "number", "status": "string" }
+---
+Question: Configure the image-rendering-farm to scale between 8 and 60 instances with a target of 12, triggering on CPU usage above 68% with a 400-second cooldown.
+Call: { "func_call": "set_auto_scaling", "group_id": "image-rendering-farm", "min_size": 8, "max_size": 60, "desired": 12 }
+Response: { "group_id": "image-rendering-farm", "current_capacity": 12, "status": "policy_updated_cpu_threshold_68_cooldown_400s" }
+
+Question: Retrieve the current scaling policy for the auth-service-cluster to verify the CPU trigger settings.
+Call: { "func_call": "get_scaling_policy", "group_id": "auth-service-cluster", "min_size": 3, "max_size": 15, "desired": 3 }
+Response: { "group_id": "auth-service-cluster", "current_capacity": 5, "status": "active_cpu_threshold_82_cooldown_500s" }
+
+Question: Scale out the log-aggregation-workers immediately to handle a spike, setting the desired count to 22 within a range of 10 to 80, using a 55% CPU trigger.
+Call: { "func_call": "scale_out", "group_id": "log-aggregation-workers", "min_size": 10, "max_size": 80, "desired": 22 }
+Response: { "group_id": "log-aggregation-workers", "current_capacity": 22, "status": "scaling_out_cpu_threshold_55_cooldown_90s" }
+
+Question: Reduce the notification-dispatcher fleet to 4 instances as traffic drops, maintaining a minimum of 2 and maximum of 18, with an aggressive 45% CPU scale-in trigger.
+Call: { "func_call": "scale_in", "group_id": "notification-dispatcher", "min_size": 2, "max_size": 18, "desired": 4 }
+Response: { "group_id": "notification-dispatcher", "current_capacity": 4, "status": "scaling_in_cpu_threshold_45_cooldown_210s" }
+
+Question: Set up auto-scaling for the data-pipeline-nodes with a min of 5, max of 40, and desired 8, configured to trigger at 77% CPU with a long 800-second cooldown.
+Call: { "func_call": "set_auto_scaling", "group_id": "data-pipeline-nodes", "min_size": 5, "max_size": 40, "desired": 8 }
+Response: { "group_id": "data-pipeline-nodes", "current_capacity": 8, "status": "policy_updated_cpu_threshold_77_cooldown_800s" }
+
+Question: Check the scaling rules for the static-content-servers to ensure the CPU threshold hasn't drifted from the standard 60%.
+Call: { "func_call": "get_scaling_policy", "group_id": "static-content-servers", "min_size": 2, "max_size": 12, "desired": 2 }
+Response: { "group_id": "static-content-servers", "current_capacity": 3, "status": "active_cpu_threshold_60_cooldown_350s" }
+
+Question: Emergency scale out for the order-fulfillment-engine to 16 instances, bounded by 6 and 35, reacting to a CPU spike threshold of 88%.
+Call: { "func_call": "scale_out", "group_id": "order-fulfillment-engine", "min_size": 6, "max_size": 35, "desired": 16 }
+Response: { "group_id": "order-fulfillment-engine", "current_capacity": 16, "status": "scaling_out_cpu_threshold_88_cooldown_75s" }
+
+Question: Scale in the staging-microservices to 3 instances to save costs, keeping limits between 1 and 14, with a low 38% CPU trigger for future scaling.
+Call: { "func_call": "scale_in", "group_id": "staging-microservices", "min_size": 1, "max_size": 14, "desired": 3 }
+Response: { "group_id": "staging-microservices", "current_capacity": 3, "status": "scaling_in_cpu_threshold_38_cooldown_280s" }
+
+Question: Update the speech-recognition-workers to auto-scale between 12 and 90 instances, targeting 25, with a CPU trigger at 70% and a 200-second cooldown.
+Call: { "func_call": "set_auto_scaling", "group_id": "speech-recognition-workers", "min_size": 12, "max_size": 90, "desired": 25 }
+Response: { "group_id": "speech-recognition-workers", "current_capacity": 25, "status": "policy_updated_cpu_threshold_70_cooldown_200s" }
+
+Question: Verify the policy for the session-store-nodes, specifically checking if the cooldown period is set to 180 seconds for the 84% CPU trigger.
+Call: { "func_call": "get_scaling_policy", "group_id": "session-store-nodes", "min_size": 4, "max_size": 20, "desired": 4 }
+Response: { "group_id": "session-store-nodes", "current_capacity": 6, "status": "active_cpu_threshold_84_cooldown_180s" }
+
+Question: Perform a scale out on the event-stream-processors to 14 instances, with bounds of 5 to 50, triggered by CPU usage exceeding 62%.
+Call: { "func_call": "scale_out", "group_id": "event-stream-processors", "min_size": 5, "max_size": 50, "desired": 14 }
+Response: { "group_id": "event-stream-processors", "current_capacity": 14, "status": "scaling_out_cpu_threshold_62_cooldown_160s" }
+
+Question: Adjust the user-profile-services to scale in to 7 instances, maintaining a range of 2 to 22, with a CPU scale-in trigger at 52% and 420-second cooldown.
+Call: { "func_call": "scale_in", "group_id": "user-profile-services", "min_size": 2, "max_size": 22, "desired": 7 }
+Response: { "group_id": "user-profile-services", "current_capacity": 7, "status": "scaling_in_cpu_threshold_52_cooldown_420s" }

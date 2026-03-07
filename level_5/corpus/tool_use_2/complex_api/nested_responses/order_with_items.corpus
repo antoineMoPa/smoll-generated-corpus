@@ -1,0 +1,53 @@
+{"func_call": "get_order_with_items", "id": "ord_8821x", "include": ["line_items", "totals"]}
+{"id": "ord_8821x", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_8821x", "customer": "Elena Rodriguez", "date": "2023-11-14", "status": "shipped", "items": [{"product_id": "prod_992", "name": "Ergonomic Office Chair", "qty": 1, "unit_price": 249.99}, {"product_id": "prod_104", "name": "USB-C Hub", "qty": 2, "unit_price": 45.50}], "totals": {"subtotal": 340.99, "tax": 27.28, "shipping": 12.00, "total": 380.27}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_7732b", "include": ["line_items"]}
+{"id": "ord_7732b", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_7732b", "customer": "Marcus Chen", "date": "2023-11-15", "status": "processing", "items": [{"product_id": "prod_551", "name": "Mechanical Keyboard", "qty": 1, "unit_price": 129.00}, {"product_id": "prod_552", "name": "Wrist Rest", "qty": 1, "unit_price": 24.99}, {"product_id": "prod_883", "name": "Keycap Set", "qty": 3, "unit_price": 15.00}], "totals": {"subtotal": 198.99, "tax": 15.92, "shipping": 0.00, "total": 214.91}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_9941c", "include": ["totals", "line_items"]}
+{"id": "ord_9941c", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_9941c", "customer": "Sarah Johnson", "date": "2023-11-13", "status": "delivered", "items": [{"product_id": "prod_221", "name": "Noise Cancelling Headphones", "qty": 1, "unit_price": 299.99}, {"product_id": "prod_222", "name": "Carrying Case", "qty": 1, "unit_price": 39.99}], "totals": {"subtotal": 339.98, "tax": 27.20, "shipping": 8.50, "total": 375.68}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_1120d", "include": ["line_items"]}
+{"id": "ord_1120d", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_1120d", "customer": "David Kim", "date": "2023-11-16", "status": "pending", "items": [{"product_id": "prod_334", "name": "4K Monitor 27\"", "qty": 2, "unit_price": 349.00}, {"product_id": "prod_335", "name": "HDMI Cable 6ft", "qty": 2, "unit_price": 12.99}], "totals": {"subtotal": 723.98, "tax": 57.92, "shipping": 25.00, "total": 806.90}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_5567e", "include": ["totals"]}
+{"id": "ord_5567e", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_5567e", "customer": "Jessica Williams", "date": "2023-11-12", "status": "shipped", "items": [{"product_id": "prod_778", "name": "Coffee Maker", "qty": 1, "unit_price": 89.95}, {"product_id": "prod_779", "name": "Coffee Beans 1kg", "qty": 4, "unit_price": 22.50}, {"product_id": "prod_780", "name": "Ceramic Mug Set", "qty": 1, "unit_price": 34.00}], "totals": {"subtotal": 213.95, "tax": 17.12, "shipping": 9.99, "total": 241.06}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_3398f", "include": ["line_items", "totals"]}
+{"id": "ord_3398f", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_3398f", "customer": "Robert Taylor", "date": "2023-11-15", "status": "processing", "items": [{"product_id": "prod_445", "name": "Running Shoes", "qty": 1, "unit_price": 110.00}, {"product_id": "prod_446", "name": "Athletic Socks 3-Pack", "qty": 2, "unit_price": 18.00}], "totals": {"subtotal": 146.00, "tax": 11.68, "shipping": 0.00, "total": 157.68}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_6612g", "include": ["line_items"]}
+{"id": "ord_6612g", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_6612g", "customer": "Emily Davis", "date": "2023-11-14", "status": "delivered", "items": [{"product_id": "prod_990", "name": "Yoga Mat", "qty": 1, "unit_price": 45.00}, {"product_id": "prod_991", "name": "Yoga Blocks", "qty": 2, "unit_price": 12.50}, {"product_id": "prod_992", "name": "Resistance Bands", "qty": 1, "unit_price": 25.00}], "totals": {"subtotal": 95.00, "tax": 7.60, "shipping": 6.50, "total": 109.10}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_2245h", "include": ["totals", "line_items"]}
+{"id": "ord_2245h", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_2245h", "customer": "Michael Brown", "date": "2023-11-13", "status": "shipped", "items": [{"product_id": "prod_112", "name": "Smart Watch", "qty": 1, "unit_price": 199.99}, {"product_id": "prod_113", "name": "Watch Band", "qty": 2, "unit_price": 29.99}], "totals": {"subtotal": 259.97, "tax": 20.80, "shipping": 0.00, "total": 280.77}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_8873i", "include": ["line_items"]}
+{"id": "ord_8873i", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_8873i", "customer": "Amanda Wilson", "date": "2023-11-16", "status": "pending", "items": [{"product_id": "prod_667", "name": "Blender", "qty": 1, "unit_price": 79.99}, {"product_id": "prod_668", "name": "Smoothie Cup Set", "qty": 1, "unit_price": 19.99}], "totals": {"subtotal": 99.98, "tax": 8.00, "shipping": 14.95, "total": 122.93}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_4456j", "include": ["totals"]}
+{"id": "ord_4456j", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_4456j", "customer": "Christopher Martinez", "date": "2023-11-12", "status": "delivered", "items": [{"product_id": "prod_331", "name": "Gaming Mouse", "qty": 1, "unit_price": 59.99}, {"product_id": "prod_332", "name": "Mouse Pad XL", "qty": 1, "unit_price": 29.99}, {"product_id": "prod_333", "name": "Bungee Cord", "qty": 1, "unit_price": 14.99}], "totals": {"subtotal": 104.97, "tax": 8.40, "shipping": 5.99, "total": 119.36}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_9901k", "include": ["line_items", "totals"]}
+{"id": "ord_9901k", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_9901k", "customer": "Jennifer Garcia", "date": "2023-11-15", "status": "processing", "items": [{"product_id": "prod_554", "name": "Desk Lamp LED", "qty": 2, "unit_price": 35.00}, {"product_id": "prod_555", "name": "Power Strip", "qty": 1, "unit_price": 22.00}], "totals": {"subtotal": 92.00, "tax": 7.36, "shipping": 8.00, "total": 107.36}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_1234l", "include": ["line_items"]}
+{"id": "ord_1234l", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_1234l", "customer": "Daniel Anderson", "date": "2023-11-14", "status": "shipped", "items": [{"product_id": "prod_771", "name": "Backpack", "qty": 1, "unit_price": 65.00}, {"product_id": "prod_772", "name": "Laptop Sleeve", "qty": 1, "unit_price": 25.00}, {"product_id": "prod_773", "name": "Water Bottle", "qty": 1, "unit_price": 18.00}], "totals": {"subtotal": 108.00, "tax": 8.64, "shipping": 0.00, "total": 116.64}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_5678m", "include": ["totals", "line_items"]}
+{"id": "ord_5678m", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_5678m", "customer": "Laura Thomas", "date": "2023-11-13", "status": "delivered", "items": [{"product_id": "prod_889", "name": "Wireless Earbuds", "qty": 1, "unit_price": 89.00}, {"product_id": "prod_890", "name": "Charging Case", "qty": 1, "unit_price": 29.00}], "totals": {"subtotal": 118.00, "tax": 9.44, "shipping": 4.99, "total": 132.43}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_9012n", "include": ["line_items"]}
+{"id": "ord_9012n", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_9012n", "customer": "James Jackson", "date": "2023-11-16", "status": "pending", "items": [{"product_id": "prod_223", "name": "External SSD 1TB", "qty": 1, "unit_price": 109.99}, {"product_id": "prod_224", "name": "USB-C Cable", "qty": 2, "unit_price": 9.99}], "totals": {"subtotal": 129.97, "tax": 10.40, "shipping": 0.00, "total": 140.37}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_3456o", "include": ["totals"]}
+{"id": "ord_3456o", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_3456o", "customer": "Patricia White", "date": "2023-11-12", "status": "shipped", "items": [{"product_id": "prod_441", "name": "Air Fryer", "qty": 1, "unit_price": 119.00}, {"product_id": "prod_442", "name": "Silicone Liners", "qty": 2, "unit_price": 14.50}], "totals": {"subtotal": 148.00, "tax": 11.84, "shipping": 15.00, "total": 174.84}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_7890p", "include": ["line_items", "totals"]}
+{"id": "ord_7890p", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_7890p", "customer": "Richard Harris", "date": "2023-11-15", "status": "processing", "items": [{"product_id": "prod_661", "name": "Tablet Stand", "qty": 1, "unit_price": 39.99}, {"product_id": "prod_662", "name": "Stylus Pen", "qty": 1, "unit_price": 59.99}], "totals": {"subtotal": 99.98, "tax": 8.00, "shipping": 6.99, "total": 114.97}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_2345q", "include": ["line_items"]}
+{"id": "ord_2345q", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_2345q", "customer": "Linda Clark", "date": "2023-11-14", "status": "delivered", "items": [{"product_id": "prod_995", "name": "Book: Python Basics", "qty": 2, "unit_price": 29.99}, {"product_id": "prod_996", "name": "Notebook", "qty": 3, "unit_price": 8.50}], "totals": {"subtotal": 85.48, "tax": 6.84, "shipping": 3.99, "total": 96.31}}]}}
+
+{"func_call": "get_order_with_items", "id": "ord_6789r", "include": ["totals", "line_items"]}
+{"id": "ord_6789r", "data": {"profile": {}, "stats": {}, "recent": [{"order_id": "ord_6789r", "customer": "William Lewis", "date": "2023-11-13", "status": "shipped", "items": [{"product_id": "prod_118", "name": "Webcam 1080p", "qty": 1, "unit_price": 69.99}, {"product_id":

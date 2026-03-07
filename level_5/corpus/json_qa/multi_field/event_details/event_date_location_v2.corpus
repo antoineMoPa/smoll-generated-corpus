@@ -1,0 +1,29 @@
+Context: The Summer Music Fest will kick off on June 5, 2024, at Riverside Park in Portland. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Summer Music Fest", "date": "June 5, 2024", "location": "Riverside Park in Portland"}
+
+Context: Celebrate Tom's Retirement Party on Friday, November 8th, at the Oakwood Country Club. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Tom's Retirement Party", "date": "Friday, November 8th", "location": "Oakwood Country Club"}
+
+Context: The finals of the Regional Soccer League are set for April 20, 2024, at Greenway Stadium. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "finals of the Regional Soccer League", "date": "April 20, 2024", "location": "Greenway Stadium"}
+
+Context: The mayor invites citizens to the Winter Solstice Celebration on December 21st at the Town Square Plaza. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Winter Solstice Celebration", "date": "December 21st", "location": "Town Square Plaza"}
+
+Context: Do not miss the International Book Fair occurring from September 3 to September 6, 2024, in London, UK. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "International Book Fair", "date": "September 3 to September 6, 2024", "location": "London, UK"}
+
+Context: Alex and Priya's Engagement Dinner is planned for October 12, 2024, at the Seaside Bistro. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Alex and Priya's Engagement Dinner", "date": "October 12, 2024", "location": "Seaside Bistro"}
+
+Context: The community basketball team hosts their first game of the season on March 15th at Eastside Gym. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "first game of the season", "date": "March 15th", "location": "Eastside Gym"}
+
+Context: Visit the Renewable Energy Summit on August 22, 2024, held at the Convention Center in Denver. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Renewable Energy Summit", "date": "August 22, 2024", "location": "Convention Center in Denver"}
+
+Context: The annual street fair takes place on May 1st on Main Street from 3rd to 4th Boulevard. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "annual street fair", "date": "May 1st", "location": "Main Street from 3rd to 4th Boulevard"}
+
+Context: The Golden Globe Awards ceremony is scheduled for January 7, 2024, at the Beverly Hilton Hotel. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Golden Globe Awards ceremony", "date": "January 7, 2024", "location": "Beverly Hilton Hotel"}
+
+Context: Sign up for the Coding Bootcamp Showcase on March 30, 2024, located at the Tech Hub in Seattle. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Coding Bootcamp Showcase", "date": "March 30, 2024", "location": "Tech Hub in Seattle"}
+
+Context: The fun run named "Steps for Success" occurs on Saturday, October 14th, beginning at Riverfront Park. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Steps for Success", "date": "Saturday, October 14th", "location": "Riverfront Park"}
+
+Context: The quarterly board review is arranged for July 18, 2024, in the executive suite of the North Tower. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "quarterly board review", "date": "July 18, 2024", "location": "executive suite of the North Tower"}
+
+Context: Enjoy the Food Truck Festival on September 9, 2024, at the Waterfront District in Chicago. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Food Truck Festival", "date": "September 9, 2024", "location": "Waterfront District in Chicago"}
+
+Context: The college orientation session will happen on August 28, 2024, at the Student Union Building. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "college orientation session", "date": "August 28, 2024", "location": "Student Union Building"}

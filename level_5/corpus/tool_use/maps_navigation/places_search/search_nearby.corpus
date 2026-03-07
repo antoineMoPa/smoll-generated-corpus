@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Find me some Italian restaurants near downtown Chicago within a 2 kilometer radius.
+Call: { "func_call": "search_places", "query": "Italian restaurants", "location": "Chicago, IL", "radius_km": 2, "type": "restaurant" }
+Response: { "places": [ { "id": "pl_chi_001", "name": "Luigi's Trattoria", "address": "123 W Madison St, Chicago, IL 60602", "rating": 4.6, "open_now": true }, { "id": "pl_chi_002", "name": "Pasta Bella", "address": "456 N State St, Chicago, IL 60654", "rating": 4.3, "open_now": false }, { "id": "pl_chi_003", "name": "Roma Corner", "address": "789 S Michigan Ave, Chicago, IL 60605", "rating": 4.8, "open_now": true } ], "total": 3 }
+
+Question: I need to locate the nearest hospital to Times Square in New York City.
+Call: { "func_call": "find_nearby", "query": "hospital", "location": "Times Square, New York, NY", "radius_km": 5, "type": "hospital" }
+Response: { "places": [ { "id": "pl_nyc_101", "name": "Mount Sinai West", "address": "1000 10th Ave, New York, NY 10019", "rating": 4.1, "open_now": true }, { "id": "pl_nyc_102", "name": "NYU Langone Health", "address": "550 1st Ave, New York, NY 10016", "rating": 4.5, "open_now": true } ], "total": 2 }
+
+Question: Are there any ATMs available near the Santa Monica Pier?
+Call: { "func_call": "search_places", "query": "ATM", "location": "Santa Monica Pier, CA", "radius_km": 1, "type": "atm" }
+Response: { "places": [ { "id": "pl_sm_201", "name": "Chase ATM", "address": "200 Santa Monica Pier, Santa Monica, CA 90401", "rating": 3.9, "open_now": true }, { "id": "pl_sm_202", "name": "Bank of America ATM", "address": "1356 3rd Street Promenade, Santa Monica, CA 90401", "rating": 4.0, "open_now": true }, { "id": "pl_sm_203", "name": "Wells Fargo ATM", "address": "1415 3rd St, Santa Monica, CA 90401", "rating": 3.7, "open_now": false } ], "total": 3 }
+
+Question: Search for gas stations within 3 kilometers of Austin-Bergstrom International Airport.
+Call: { "func_call": "search_places", "query": "gas station", "location": "Austin-Bergstrom International Airport, TX", "radius_km": 3, "type": "gas_station" }
+Response: { "places": [ { "id": "pl_aus_301", "name": "Shell", "address": "4800 Presidential Blvd, Austin, TX 78719", "rating": 4.2, "open_now": true }, { "id": "pl_aus_302", "name": "Exxon", "address": "5000 Burleson Rd, Austin, TX 78744", "rating": 3.8, "open_now": true } ], "total": 2 }
+
+Question: Find luxury hotels near the French Quarter in New Orleans.
+Call: { "func_call": "find_nearby", "query": "luxury hotels", "location": "French Quarter, New Orleans, LA", "radius_km": 2, "type": "hotel" }
+Response: { "places": [ { "id": "pl_no_401", "name": "The Roosevelt New Orleans", "address": "123 Baronne St, New Orleans, LA 70112", "rating": 4.7, "open_now": true }, { "id": "pl_no_402", "name": "Hotel Monteleone", "address": "214 Royal St, New Orleans, LA 70130", "rating": 4.6, "open_now": true }, { "id": "pl_no_403", "name": "Ace Hotel New Orleans", "address": "600 Carondelet St, New Orleans, LA 70130", "rating": 4.4, "open_now": true } ], "total": 3 }
+
+Question: Locate 24-hour pharmacies near downtown Seattle.
+Call: { "func_call": "search_places", "query": "24 hour pharmacy", "location": "Downtown Seattle, WA", "radius_km": 4, "type": "pharmacy" }
+Response: { "places": [ { "id": "pl_sea_501", "name": "Walgreens", "address": "1625 Broadway, Seattle, WA 98122", "rating": 3.5, "open_now": true }, { "id": "pl_sea_502", "name": "Rite Aid", "address": "400 Pine St, Seattle, WA 98101", "rating": 3.2, "open_now": true } ], "total": 2 }
+
+Question: Show me coffee shops near Fenway Park in Boston.
+Call: { "func_call": "find_nearby", "query": "coffee shops", "location": "Fenway Park, Boston, MA", "radius_km": 1.5, "type": "cafe" }
+Response: { "places": [ { "id": "pl_bos_601", "name": "Starbucks", "address": "1282 Boylston St, Boston, MA 02215", "rating": 4.1, "open_now": true }, { "id": "pl_bos_602", "name": "Thinking Cup", "address": "165 Newbury St, Boston, MA 02116", "rating": 4.5, "open_now": true }, { "id": "pl_bos_603", "name": "Pavement Coffeehouse", "address": "979 Boylston St, Boston, MA 02215", "rating": 4.3, "open_now": false } ], "total": 3 }
+
+Question: I need a mechanic shop near Denver Union Station.
+Call: { "func_call": "search_places", "query": "auto repair", "location": "Denver Union Station, CO", "radius_km": 5, "type": "car_repair" }
+Response: { "places": [ { "id": "pl_den_701", "name": "Mile High Auto Repair", "address": "1901 Wynkoop St, Denver, CO 80202", "rating": 4.8, "open_now": true }, { "id": "pl_den_702", "name": "LoDo Motors", "address": "2200 15th St, Denver, CO 80202", "rating": 4.4, "open_now": false } ], "total": 2 }
+
+Question: Find vegan restaurants in the Mission District of San Francisco.
+Call: { "func_call": "search_places", "query": "vegan restaurants", "location": "Mission District, San Francisco, CA", "radius_km": 2, "type": "restaurant" }
+Response: { "places": [ { "id": "pl_sf_801", "name": "Gracias Madre", "address": "2211 Mission St, San Francisco, CA 94110", "rating": 4.5, "open_now": true }, { "id": "pl_sf_802", "name": "The Plant Cafe Organic", "address": "3251 20th Ave, San Francisco, CA 94132", "rating": 4.2, "open_now": true }, { "id": "pl_sf_803", "name": "Vegan Girl", "address": "2300 Mission St, San Francisco, CA 94110", "rating": 4.7, "open_now": true } ], "total": 3 }
+
+Question: Search for public libraries near the University of Texas at Austin campus.
+Call: { "func_call": "find_nearby", "query": "public library", "location": "University of Texas, Austin, TX", "radius_km": 3, "type": "library" }
+Response: { "places": [ { "id": "pl_atx_901", "name": "Perry-Castañeda Library", "address": "101 E 21st St, Austin, TX 78712", "rating": 4.6, "open_now": true }, { "id": "pl_atx_902", "name": "Austin Public Library - Central", "address": "710 W Cesar Chavez St, Austin, TX 78701", "rating": 4.8, "open_now": true } ], "total": 2 }
+
+Question: Are there any pet stores near Balboa Park in San Diego?
+Call: { "func_call": "search_places", "query": "pet store", "location": "Balboa Park, San Diego, CA", "radius_km": 4, "type": "pet_store" }
+Response: { "places": [ { "id": "pl_sd_1001", "name": "Petco Park Store", "address": "100 Park Blvd, San Diego, CA 92101", "rating": 4.3, "open_now": true }, { "id": "pl_sd_1002", "name": "Unleashed by Petco", "address": "2707 5th Ave, San Diego, CA 92103", "rating": 4.5, "open_now": false } ], "total": 2 }
+
+Question: Find sushi restaurants close to Pike Place Market in Seattle.
+Call: { "func_call": "search_places", "query": "sushi", "location": "Pike Place Market, Seattle, WA", "radius_km": 1, "type": "restaurant" }
+Response: { "places": [ { "id": "pl_sea_1101", "name": "Umi Sake House", "address": "1401 2nd Ave, Seattle, WA 98101", "rating": 4.4, "open_now": true }, { "id": "pl_sea_1102", "name": "Japonessa Sushi Cocina", "address": "1400 1st Ave, Seattle, WA 98101", "rating": 4.6, "open_now": true }, { "id": "pl_sea_1103", "name": "Sushi Kashiba", "address": "86 Pine St, Seattle, WA 98101", "rating": 4.9, "open_now": false } ], "total": 3 }

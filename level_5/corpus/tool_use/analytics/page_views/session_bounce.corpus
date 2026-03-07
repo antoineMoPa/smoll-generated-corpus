@@ -1,0 +1,51 @@
+Available Tools: get_page_views | get_unique_visitors | get_session_duration | get_bounce_rate
+Call Schema: { "func_call": "string", "url": "string", "from_date": "string", "to_date": "string", "granularity": "hourly|daily|weekly|monthly" }
+Response Schema: { "url": "string", "period": "string", "views": number, "unique_visitors": number, "avg_session_seconds": number, "bounce_rate": number }
+---
+Question: What were the session metrics for the summer clothing landing page last week?
+Call: { "func_call": "get_session_duration", "url": "https://shop.example.com/collections/summer-2024", "from_date": "2023-06-01", "to_date": "2023-06-07", "granularity": "daily" }
+Response: { "url": "https://shop.example.com/collections/summer-2024", "period": "2023-06-01 to 2023-06-07", "views": 14250, "unique_visitors": 9830, "avg_session_seconds": 145, "bounce_rate": 0.32 }
+
+Question: Can you pull the bounce rate data for our main blog homepage over the last month?
+Call: { "func_call": "get_bounce_rate", "url": "https://blog.techinsights.io/", "from_date": "2023-05-01", "to_date": "2023-05-31", "granularity": "weekly" }
+Response: { "url": "https://blog.techinsights.io/", "period": "2023-05-01 to 2023-05-31", "views": 45200, "unique_visitors": 31500, "avg_session_seconds": 210, "bounce_rate": 0.58 }
+
+Question: I need the engagement stats for the SaaS pricing page during the Q1 campaign.
+Call: { "func_call": "get_session_duration", "url": "https://app.cloudflow.com/pricing", "from_date": "2023-01-15", "to_date": "2023-03-15", "granularity": "monthly" }
+Response: { "url": "https://app.cloudflow.com/pricing", "period": "2023-01-15 to 2023-03-15", "views": 8900, "unique_visitors": 6200, "avg_session_seconds": 320, "bounce_rate": 0.24 }
+
+Question: How did users interact with the new product launch article yesterday?
+Call: { "func_call": "get_bounce_rate", "url": "https://blog.gadgetzone.com/new-launch-ai-phone", "from_date": "2023-06-10", "to_date": "2023-06-10", "granularity": "hourly" }
+Response: { "url": "https://blog.gadgetzone.com/new-launch-ai-phone", "period": "2023-06-10", "views": 3200, "unique_visitors": 2850, "avg_session_seconds": 95, "bounce_rate": 0.65 }
+
+Question: Show me the average session duration for the checkout confirmation page last weekend.
+Call: { "func_call": "get_session_duration", "url": "https://shop.example.com/checkout/confirmation", "from_date": "2023-06-03", "to_date": "2023-06-04", "granularity": "daily" }
+Response: { "url": "https://shop.example.com/checkout/confirmation", "period": "2023-06-03 to 2023-06-04", "views": 1250, "unique_visitors": 1240, "avg_session_seconds": 45, "bounce_rate": 0.12 }
+
+Question: What is the bounce rate trend for the enterprise features page over the last two weeks?
+Call: { "func_call": "get_bounce_rate", "url": "https://app.cloudflow.com/features/enterprise", "from_date": "2023-05-20", "to_date": "2023-06-03", "granularity": "weekly" }
+Response: { "url": "https://app.cloudflow.com/features/enterprise", "period": "2023-05-20 to 2023-06-03", "views": 5400, "unique_visitors": 3100, "avg_session_seconds": 285, "bounce_rate": 0.29 }
+
+Question: Retrieve the view counts and session times for the winter sale archive page last December.
+Call: { "func_call": "get_session_duration", "url": "https://shop.example.com/archives/winter-sale-2022", "from_date": "2022-12-01", "to_date": "2022-12-31", "granularity": "monthly" }
+Response: { "url": "https://shop.example.com/archives/winter-sale-2022", "period": "2022-12-01 to 2022-12-31", "views": 2100, "unique_visitors": 1850, "avg_session_seconds": 110, "bounce_rate": 0.48 }
+
+Question: Analyze the user retention on the tutorial guide page for the past 48 hours.
+Call: { "func_call": "get_bounce_rate", "url": "https://docs.cloudflow.com/guides/getting-started", "from_date": "2023-06-08", "to_date": "2023-06-10", "granularity": "daily" }
+Response: { "url": "https://docs.cloudflow.com/guides/getting-started", "period": "2023-06-08 to 2023-06-10", "views": 980, "unique_visitors": 750, "avg_session_seconds": 410, "bounce_rate": 0.15 }
+
+Question: How long did visitors stay on the customer success stories page last quarter?
+Call: { "func_call": "get_session_duration", "url": "https://app.cloudflow.com/case-studies", "from_date": "2023-01-01", "to_date": "2023-03-31", "granularity": "monthly" }
+Response: { "url": "https://app.cloudflow.com/case-studies", "period": "2023-01-01 to 2023-03-31", "views": 12400, "unique_visitors": 8900, "avg_session_seconds": 365, "bounce_rate": 0.21 }
+
+Question: Get the bounce rate for the mobile app download landing page during the ad campaign.
+Call: { "func_call": "get_bounce_rate", "url": "https://shop.example.com/app-download", "from_date": "2023-04-10", "to_date": "2023-04-24", "granularity": "weekly" }
+Response: { "url": "https://shop.example.com/app-download", "period": "2023-04-10 to 2023-04-24", "views": 18500, "unique_visitors": 14200, "avg_session_seconds": 85, "bounce_rate": 0.42 }
+
+Question: What were the session duration stats for the contact us page last Tuesday?
+Call: { "func_call": "get_session_duration", "url": "https://blog.techinsights.io/contact", "from_date": "2023-06-06", "to_date": "2023-06-06", "granularity": "hourly" }
+Response: { "url": "https://blog.techinsights.io/contact", "period": "2023-06-06", "views": 450, "unique_visitors": 380, "avg_session_seconds": 190, "bounce_rate": 0.35 }
+
+Question: Pull the full analytics report for the API documentation root page over the last month.
+Call: { "func_call": "get_bounce_rate", "url": "https://docs.cloudflow.com/api/v1", "from_date": "2023-05-01", "to_date": "2023-05-31", "granularity": "weekly" }
+Response: { "url": "https://docs.cloudflow.com/api/v1", "period": "2023-05-01 to 2023-05-31", "views": 22100, "unique_visitors": 15600, "avg_session_seconds": 520, "bounce_rate": 0.18 }

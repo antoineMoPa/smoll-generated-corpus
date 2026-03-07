@@ -1,0 +1,59 @@
+Context: The red car can reach 150 miles per hour, while the blue truck tops out at 90 miles per hour.
+Input: {"question": "Which vehicle is faster?"}
+Output: {"answer": "red car"}
+
+Context: Maria saved $450 last month, but John only managed to save $210.
+Input: {"question": "Who saved more money?"}
+Output: {"answer": "Maria"}
+
+Context: The Eiffel Tower stands 330 meters tall, whereas the Statue of Liberty is 93 meters high.
+Input: {"question": "Which structure is taller?"}
+Output: {"answer": "Eiffel Tower"}
+
+Context: My old laptop has 8 gigabytes of RAM, but the new model comes with 32 gigabytes.
+Input: {"question": "Which computer has more memory?"}
+Output: {"answer": "new model"}
+
+Context: The library holds 50,000 books, while the small bookstore downstairs has only 2,000 titles.
+Input: {"question": "Which location has more books?"}
+Output: {"answer": "library"}
+
+Context: During the race, Sarah completed 12 laps before stopping, but Mike finished 15 laps.
+Input: {"question": "Who ran more laps?"}
+Output: {"answer": "Mike"}
+
+Context: This bag of rice weighs 5 kilograms, and that bag of flour weighs 2 kilograms.
+Input: {"question": "Which bag is heavier?"}
+Output: {"answer": "bag of rice"}
+
+Context: The downtown apartment rents for $2,200 a month, while the suburban house costs $1,500 monthly.
+Input: {"question": "Which property is more expensive?"}
+Output: {"answer": "downtown apartment"}
+
+Context: Lake Superior contains 12,100 cubic kilometers of water, while Lake Tahoe holds just 150 cubic kilometers.
+Input: {"question": "Which lake has more water?"}
+Output: {"answer": "Lake Superior"}
+
+Context: The chef used 3 cups of sugar in the cake recipe, but only 1 cup of salt in the soup.
+Input: {"question": "Which ingredient was used in a larger quantity?"}
+Output: {"answer": "sugar"}
+
+Context: In 2022, Tokyo had a population of 13.9 million, whereas Osaka had 2.7 million residents.
+Input: {"question": "Which city had more people?"}
+Output: {"answer": "Tokyo"}
+
+Context: The solar panel array generates 500 watts of power, while the wind turbine produces 300 watts.
+Input: {"question": "Which source generates more energy?"}
+Output: {"answer": "solar panel array"}
+
+Context: Emma read 45 pages of her book today, but Liam only read 20 pages.
+Input: {"question": "Who read more pages?"}
+Output: {"answer": "Emma"}
+
+Context: The gold bar weighs 1 kilogram, and the silver bar weighs 0.5 kilograms.
+Input: {"question": "Which bar is heavier?"}
+Output: {"answer": "gold bar"}
+
+Context: Our team scored 89 points in the final game, while the opposing team scored 76 points.
+Input: {"question": "Which team scored more points?"}
+Output: {"answer": "Our team"}

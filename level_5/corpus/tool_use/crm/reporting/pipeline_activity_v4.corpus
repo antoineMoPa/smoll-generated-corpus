@@ -1,0 +1,51 @@
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Display the sales report for H1 2025 categorized by territory, restricting to SMB accounts.
+Call: { "func_call": "get_sales_report", "period": "H1-2025", "group_by": "territory", "filters": "account_size:smb" }
+Response: { "period": "H1-2025", "total_value": 3200000, "deal_count": 156, "conversion_rate": 0.18 }
+
+Question: Provide an activity report for the past 30 days segmented by channel, looking only at webinars attended.
+Call: { "func_call": "get_activity_report", "period": "past_30_days", "group_by": "channel", "filters": "activity_type:webinar" }
+Response: { "period": "past_30_days", "total_value": 420, "deal_count": 420, "conversion_rate": 0.0 }
+
+Question: What is the pipeline summary for December 2024 broken down by vertical, including only high-priority opportunities?
+Call: { "func_call": "get_pipeline_summary", "period": "Dec-2024", "group_by": "vertical", "filters": "priority:high" }
+Response: { "period": "Dec-2024", "total_value": 1850000, "deal_count": 22, "conversion_rate": 0.31 }
+
+Question: Fetch the conversion rate data for Q4 2023 grouped by campaign, filtering for social media ads.
+Call: { "func_call": "get_conversion_rate", "period": "Q4-2023", "group_by": "campaign", "filters": "media_type:social" }
+Response: { "period": "Q4-2023", "total_value": 95000, "deal_count": 40, "conversion_rate": 0.04 }
+
+Question: Show me the activity report for today grouped by agent, focusing exclusively on cold calls.
+Call: { "func_call": "get_activity_report", "period": "today", "group_by": "agent", "filters": "call_type:cold" }
+Response: { "period": "today", "total_value": 67, "deal_count": 67, "conversion_rate": 0.0 }
+
+Question: Generate a sales report for the fiscal year grouped by district, excluding returned orders.
+Call: { "func_call": "get_sales_report", "period": "fiscal_year", "group_by": "district", "filters": "order_status:valid" }
+Response: { "period": "fiscal_year", "total_value": 12400000, "deal_count": 340, "conversion_rate": 0.92 }
+
+Question: Retrieve the pipeline summary for the next quarter categorized by solution type, filtering for new logos only.
+Call: { "func_call": "get_pipeline_summary", "period": "next_quarter", "group_by": "solution_type", "filters": "customer_type:new" }
+Response: { "period": "next_quarter", "total_value": 5600000, "deal_count": 45, "conversion_rate": 0.12 }
+
+Question: I need an activity report for the weekend grouped by shift, showing only chat support interactions.
+Call: { "func_call": "get_activity_report", "period": "weekend", "group_by": "shift", "filters": "interaction_type:chat" }
+Response: { "period": "weekend", "total_value": 890, "deal_count": 890, "conversion_rate": 0.0 }
+
+Question: Pull the conversion rate for August 2024 broken down by landing page, filtering for mobile traffic.
+Call: { "func_call": "get_conversion_rate", "period": "Aug-2024", "group_by": "landing_page", "filters": "device:mobile" }
+Response: { "period": "Aug-2024", "total_value": 15000, "deal_count": 300, "conversion_rate": 0.02 }
+
+Question: Show the pipeline summary for the last 60 days grouped by partner, including only co-sold deals.
+Call: { "func_call": "get_pipeline_summary", "period": "last_60_days", "group_by": "partner", "filters": "deal_mode:co_sell" }
+Response: { "period": "last_60_days", "total_value": 780000, "deal_count": 9, "conversion_rate": 0.25 }
+
+Question: Give me the sales report for Q2 2025 categorized by subscription tier, filtering for annual plans.
+Call: { "func_call": "get_sales_report", "period": "Q2-2025", "group_by": "subscription_tier", "filters": "billing_cycle:annual" }
+Response: { "period": "Q2-2025", "total_value": 4100000, "deal_count": 210, "conversion_rate": 0.85 }
+
+Question: Generate an activity report for the previous week grouped by department, focusing on proposal submissions.
+Call: { "func_call": "get_activity_report", "period": "previous_week", "group_by": "department", "filters": "action_type:proposal" }
+Response: { "period": "previous_week", "total_value": 56, "deal_count": 56, "conversion_rate": 0.0 }

@@ -1,0 +1,51 @@
+Available Tools: update_record | update_batch | soft_delete | restore_record
+Call Schema: { "func_call": "string", "table": "string", "id": number, "data": {}, "where": "string" }
+Response Schema: { "affected_rows": number, "status": "string", "updated_at": "string" }
+---
+Question: Update the email address for user ID 1042 to new.email@example.com.
+Call: { "func_call": "update_record", "table": "users", "id": 1042, "data": { "email": "new.email@example.com" }, "where": "id = 1042" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:32:11Z" }
+
+Question: Change the status of order ID 8891 to 'shipped'.
+Call: { "func_call": "update_record", "table": "orders", "id": 8891, "data": { "status": "shipped", "shipped_date": "2023-10-27" }, "where": "id = 8891" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:33:05Z" }
+
+Question: Increase the price of product ID 550 to 29.99.
+Call: { "func_call": "update_record", "table": "products", "id": 550, "data": { "price": 29.99, "currency": "USD" }, "where": "id = 550" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:34:22Z" }
+
+Question: Update the last name for user ID 203 to 'Rodriguez'.
+Call: { "func_call": "update_record", "table": "users", "id": 203, "data": { "last_name": "Rodriguez" }, "where": "id = 203" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:35:18Z" }
+
+Question: Mark order ID 9921 as 'refunded' with a refund note.
+Call: { "func_call": "update_record", "table": "orders", "id": 9921, "data": { "status": "refunded", "refund_note": "Customer requested cancellation" }, "where": "id = 9921" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:36:40Z" }
+
+Question: Adjust the inventory count for product ID 772 to 450 units.
+Call: { "func_call": "update_record", "table": "products", "id": 772, "data": { "stock_quantity": 450 }, "where": "id = 772" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:37:55Z" }
+
+Question: Set the phone number for user ID 3301 to +1-555-0199.
+Call: { "func_call": "update_record", "table": "users", "id": 3301, "data": { "phone": "+1-555-0199" }, "where": "id = 3301" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:38:12Z" }
+
+Question: Update the shipping address for order ID 4450 to 123 Maple Ave, Springfield.
+Call: { "func_call": "update_record", "table": "orders", "id": 4450, "data": { "shipping_address": "123 Maple Ave, Springfield", "city": "Springfield" }, "where": "id = 4450" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:39:30Z" }
+
+Question: Reduce the price of product ID 112 to 15.50 for a flash sale.
+Call: { "func_call": "update_record", "table": "products", "id": 112, "data": { "price": 15.50, "sale_active": true }, "where": "id = 112" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:40:05Z" }
+
+Question: Update the account tier for user ID 88 to 'premium'.
+Call: { "func_call": "update_record", "table": "users", "id": 88, "data": { "account_tier": "premium", "tier_start_date": "2023-10-27" }, "where": "id = 88" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:41:19Z" }
+
+Question: Change the delivery method for order ID 6732 to 'express'.
+Call: { "func_call": "update_record", "table": "orders", "id": 6732, "data": { "delivery_method": "express", "tracking_number": "EX992837465" }, "where": "id = 6732" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:42:33Z" }
+
+Question: Update the description for product ID 998 to include new features.
+Call: { "func_call": "update_record", "table": "products", "id": 998, "data": { "description": "Updated model with enhanced battery life and water resistance." }, "where": "id = 998" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-10-27T14:43:50Z" }

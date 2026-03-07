@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: Determine if the noise-canceling headphones are available in the Boston hub with a minimum requirement of 12 units.
+Call: { "func_call": "check_availability", "sku": "HP-NC-SLV", "location_id": "BOS-HUB-13", "threshold": 12 }
+Response: { "sku": "HP-NC-SLV", "product_name": "Noise Canceling Headphones Silver", "quantity": 9, "location": "BOS-HUB-13", "status": "low_stock" }
+
+Question: What is the inventory count for laser printers at the Denver distribution facility?
+Call: { "func_call": "get_stock_level", "sku": "PRN-LSR-BW", "location_id": "DEN-DIST-14", "threshold": 0 }
+Response: { "sku": "PRN-LSR-BW", "product_name": "Laser Printer B&W", "quantity": 28, "location": "DEN-DIST-14", "status": "in_stock" }
+
+Question: List all products in the Phoenix warehouse that have fallen below the safety limit of 35 units.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "PHX-WH-15", "threshold": 35 }
+Response: { "sku": "TNR-CYN-HI", "product_name": "Cyan Toner High Yield", "quantity": 14, "location": "PHX-WH-15", "status": "low_stock" }
+
+Question: Retrieve the stock numbers for Ethernet cables stored in the Atlanta regional center.
+Call: { "func_call": "get_stock_by_location", "sku": "CBL-ETH-CAT6", "location_id": "ATL-REG-16", "threshold": 0 }
+Response: { "sku": "CBL-ETH-CAT6", "product_name": "Ethernet Cable Cat6", "quantity": 450, "location": "ATL-REG-16", "status": "in_stock" }
+
+Question: Is the tablet stand completely out of stock in the Vancouver node if we need at least 5?
+Call: { "func_call": "check_availability", "sku": "STD-TAB-ADJ", "location_id": "VAN-NODE-17", "threshold": 5 }
+Response: { "sku": "STD-TAB-ADJ", "product_name": "Adjustable Tablet Stand", "quantity": 0, "location": "VAN-NODE-17", "status": "out_of_stock" }
+
+Question: Check the current levels of portable projectors in the Madrid facility against a threshold of 8.
+Call: { "func_call": "get_stock_level", "sku": "PRJ-PORT-HD", "location_id": "MAD-FAC-18", "threshold": 8 }
+Response: { "sku": "PRJ-PORT-HD", "product_name": "Portable Projector HD", "quantity": 6, "location": "MAD-FAC-18", "status": "low_stock" }
+
+Question: Find any items in the Mumbai logistics hub that are below the reorder point of 60 units.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "MUM-LOG-19", "threshold": 60 }
+Response: { "sku": "RTR-WIFI-6E", "product_name": "WiFi 6E Router", "quantity": 22, "location": "MUM-LOG-19", "status": "low_stock" }
+
+Question: How many graphing calculators are currently held in the Sydney storage unit?
+Call: { "func_call": "get_stock_by_location", "sku": "CALC-GRP-SCI", "location_id": "SYD-STO-20", "threshold": 0 }
+Response: { "sku": "CALC-GRP-SCI", "product_name": "Scientific Graphing Calculator", "quantity": 115, "location": "SYD-STO-20", "status": "in_stock" }
+
+Question: Verify stock availability for surge protectors in the Seoul depot, alerting if under 40.
+Call: { "func_call": "check_availability", "sku": "PWR-SRG-12", "location_id": "SEL-DEP-21", "threshold": 40 }
+Response: { "sku": "PWR-SRG-12", "product_name": "Surge Protector 12 Outlet", "quantity": 55, "location": "SEL-DEP-21", "status": "in_stock" }
+
+Question: Get the inventory level for conference speakers in the Dublin warehouse with a critical threshold of 3.
+Call: { "func_call": "get_stock_level", "sku": "SPK-CONF-BT", "location_id": "DUB-WH-22", "threshold": 3 }
+Response: { "sku": "SPK-CONF-BT", "product_name": "Bluetooth Conference Speaker", "quantity": 2, "location": "DUB-WH-22", "status": "low_stock" }
+
+Question: Identify all low stock electronics in the Cape Town fulfillment center where the limit is 75.
+Call: { "func_call": "get_low_stock_items", "sku": "*", "location_id": "CPT-FUL-23", "threshold": 75 }
+Response: { "sku": "TAB-AND-10", "product_name": "Android Tablet 10 inch", "quantity": 30, "location": "CPT-FUL-23", "status": "low_stock" }
+
+Question: Check the quantity of smart thermostats available in the Oslo distribution point.
+Call: { "func_call": "get_stock_by_location", "sku": "THRM-SMART-W", "location_id": "OSL-DIST-24", "threshold": 0 }
+Response: { "sku": "THRM-SMART-W", "product_name": "Smart Thermostat White", "quantity": 94, "location": "OSL-DIST-24", "status": "in_stock" }

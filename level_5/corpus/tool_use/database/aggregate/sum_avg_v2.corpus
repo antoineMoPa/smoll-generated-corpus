@@ -1,0 +1,47 @@
+Question: What is the total inventory cost for all items in the 'furniture' warehouse?
+Call: { "func_call": "sum_column", "table": "inventory", "column": "unit_cost", "group_by": "", "where": "warehouse_location = 'furniture'" }
+Response: { "result": 78230.90, "groups": [] }
+
+Question: Calculate the average delivery time in hours for shipments sent via express courier last month.
+Call: { "func_call": "avg_column", "table": "shipments", "column": "delivery_hours", "group_by": "", "where": "courier_type = 'express' AND ship_date >= '2023-11-01'" }
+Response: { "result": 18.4, "groups": [] }
+
+Question: Get the sum of employee bonuses for all staff with a performance rating above 4.5.
+Call: { "func_call": "sum_column", "table": "employees", "column": "bonus_amount", "group_by": "", "where": "performance_rating > 4.5" }
+Response: { "result": 34500.00, "groups": [] }
+
+Question: What is the average temperature recorded by sensors in the 'Server Room A'?
+Call: { "func_call": "avg_column", "table": "sensor_logs", "column": "temperature_celsius", "group_by": "", "where": "room_id = 'Server Room A'" }
+Response: { "result": 22.15, "groups": [] }
+
+Question: Sum the total energy consumption grouped by building zone for the monthly utility report.
+Call: { "func_call": "sum_column", "table": "utility_metrics", "column": "kwh_used", "group_by": "building_zone", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "Zone_A", "value": 4500 }, { "key": "Zone_B", "value": 3200 }, { "key": "Zone_C", "value": 5100 }] }
+
+Question: Calculate the average customer satisfaction score grouped by support agent ID.
+Call: { "func_call": "avg_column", "table": "support_tickets", "column": "satisfaction_score", "group_by": "agent_id", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "AGT001", "value": 4.8 }, { "key": "AGT002", "value": 4.2 }, { "key": "AGT003", "value": 4.9 }] }
+
+Question: What is the total number of clicks grouped by campaign source for the Q4 marketing analysis?
+Call: { "func_call": "sum_column", "table": "ad_clicks", "column": "click_count", "group_by": "campaign_source", "where": "quarter = 'Q4'" }
+Response: { "result": 0, "groups": [{ "key": "Google", "value": 15000 }, { "key": "Facebook", "value": 12400 }, { "key": "Twitter", "value": 8900 }, { "key": "LinkedIn", "value": 6200 }] }
+
+Question: Find the average repair cost grouped by vehicle model for the fleet maintenance log.
+Call: { "func_call": "avg_column", "table": "maintenance_records", "column": "repair_cost", "group_by": "vehicle_model", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "Model_X", "value": 350.50 }, { "key": "Model_Y", "value": 420.75 }, { "key": "Model_Z", "value": 290.20 }] }
+
+Question: Sum the subscription fees for all active premium accounts in the 'Europe' region.
+Call: { "func_call": "sum_column", "table": "subscriptions", "column": "monthly_fee", "group_by": "", "where": "account_type = 'premium' AND region = 'Europe'" }
+Response: { "result": 18950.40, "groups": [] }
+
+Question: What is the average fuel efficiency of trucks manufactured by 'Volvo'?
+Call: { "func_call": "avg_column", "table": "fleet_vehicles", "column": "mpg", "group_by": "", "where": "manufacturer = 'Volvo' AND vehicle_type = 'truck'" }
+Response: { "result": 8.75, "groups": [] }
+
+Question: Calculate the total page views grouped by device category for mobile and tablet users only.
+Call: { "func_call": "sum_column", "table": "web_traffic", "column": "view_count", "group_by": "device_category", "where": "device_category IN ('mobile', 'tablet')" }
+Response: { "result": 0, "groups": [{ "key": "mobile", "value": 890000 }, { "key": "tablet", "value": 230000 }] }
+
+Question: Get the average transaction fee grouped by currency type for international transfers.
+Call: { "func_call": "avg_column", "table": "transactions", "column": "fee_amount", "group_by": "currency_code", "where": "transfer_type = 'international'" }
+Response: { "result": 0, "groups": [{ "key": "USD", "value": 15.50 }, { "key": "EUR", "value": 12.25 }, { "key": "GBP", "value": 18.75 }] }

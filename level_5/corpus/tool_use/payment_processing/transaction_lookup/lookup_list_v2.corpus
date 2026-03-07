@@ -1,0 +1,51 @@
+Available Tools: get_transaction | list_transactions | search_transactions | get_balance
+Call Schema: { "func_call": "string", "transaction_id": "string", "customer_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "transactions": [{ "id": "string", "amount": number, "currency": "string", "status": "string", "created": "string" }], "total_count": number }
+---
+Question: Pull the record for transaction identifier TXN-44521-B.
+Call: { "func_call": "get_transaction", "transaction_id": "TXN-44521-B", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TXN-44521-B", "amount": 78.25, "currency": "USD", "status": "completed", "created": "2023-12-05T10:15:42Z" }], "total_count": 1 }
+
+Question: Display all activity for client CUST-88291 from February 1st to February 28th, 2024.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "CUST-88291", "from_date": "2024-02-01", "to_date": "2024-02-28" }
+Response: { "transactions": [{ "id": "TXN-FEB-10", "amount": 320.00, "currency": "EUR", "status": "completed", "created": "2024-02-03T14:20:11Z" }, { "id": "TXN-FEB-22", "amount": 55.99, "currency": "EUR", "status": "pending", "created": "2024-02-15T09:30:05Z" }], "total_count": 2 }
+
+Question: Identify any rejected payments for user CUST-12983 during the first week of May 2023.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-12983", "from_date": "2023-05-01", "to_date": "2023-05-07" }
+Response: { "transactions": [{ "id": "TXN-MAY-R1", "amount": 1200.50, "currency": "GBP", "status": "failed", "created": "2023-05-04T16:45:33Z" }], "total_count": 1 }
+
+Question: Check the details for invoice reference INV-2024-0055.
+Call: { "func_call": "get_transaction", "transaction_id": "INV-2024-0055", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "INV-2024-0055", "amount": 450.00, "currency": "CAD", "status": "refunded", "created": "2024-01-18T11:22:09Z" }], "total_count": 1 }
+
+Question: Show every purchase made by account CUST-77442 in the second quarter of 2024.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "CUST-77442", "from_date": "2024-04-01", "to_date": "2024-06-30" }
+Response: { "transactions": [{ "id": "TXN-Q2-A1", "amount": 89.99, "currency": "USD", "status": "completed", "created": "2024-04-12T08:00:00Z" }, { "id": "TXN-Q2-B5", "amount": 210.45, "currency": "USD", "status": "completed", "created": "2024-05-22T13:15:20Z" }, { "id": "TXN-Q2-C9", "amount": 15.00, "currency": "USD", "status": "completed", "created": "2024-06-05T17:40:55Z" }], "total_count": 3 }
+
+Question: Locate transactions for member CUST-33221 happening on September 12th, 2023.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-33221", "from_date": "2023-09-12", "to_date": "2023-09-12" }
+Response: { "transactions": [{ "id": "TXN-SEP-12A", "amount": 67.50, "currency": "AUD", "status": "completed", "created": "2023-09-12T10:05:12Z" }, { "id": "TXN-SEP-12B", "amount": 99.00, "currency": "AUD", "status": "processing", "created": "2023-09-12T14:30:45Z" }], "total_count": 2 }
+
+Question: Retrieve the current state of order ID ORD-99887-XY.
+Call: { "func_call": "get_transaction", "transaction_id": "ORD-99887-XY", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "ORD-99887-XY", "amount": 3450.75, "currency": "USD", "status": "shipped", "created": "2023-10-30T09:12:00Z" }], "total_count": 1 }
+
+Question: List all charges for customer CUST-55667 between August 10th and August 25th, 2024.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "CUST-55667", "from_date": "2024-08-10", "to_date": "2024-08-25" }
+Response: { "transactions": [{ "id": "TXN-AUG-10", "amount": 12.99, "currency": "USD", "status": "completed", "created": "2024-08-11T07:45:30Z" }, { "id": "TXN-AUG-20", "amount": 550.00, "currency": "USD", "status": "completed", "created": "2024-08-20T15:10:22Z" }], "total_count": 2 }
+
+Question: Find all awaiting approval transactions for client CUST-99112 in November 2023.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-99112", "from_date": "2023-11-01", "to_date": "2023-11-30" }
+Response: { "transactions": [{ "id": "TXN-NOV-P1", "amount": 230.00, "currency": "EUR", "status": "pending", "created": "2023-11-15T12:00:00Z" }, { "id": "TXN-NOV-P2", "amount": 45.50, "currency": "EUR", "status": "pending", "created": "2023-11-22T18:30:15Z" }], "total_count": 2 }
+
+Question: Get the specifics for the large transfer LG-2024-1122.
+Call: { "func_call": "get_transaction", "transaction_id": "LG-2024-1122", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "LG-2024-1122", "amount": 25000.00, "currency": "JPY", "status": "completed", "created": "2024-03-05T08:45:00Z" }], "total_count": 1 }
+
+Question: Provide a complete history for user CUST-44332 from July 1st to July 15th, 2024.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "CUST-44332", "from_date": "2024-07-01", "to_date": "2024-07-15" }
+Response: { "transactions": [{ "id": "TXN-JUL-01", "amount": 19.99, "currency": "GBP", "status": "completed", "created": "2024-07-02T09:15:10Z" }, { "id": "TXN-JUL-05", "amount": 120.00, "currency": "GBP", "status": "failed", "created": "2024-07-05T11:20:45Z" }, { "id": "TXN-JUL-12", "amount": 45.00, "currency": "GBP", "status": "completed", "created": "2024-07-12T16:55:30Z" }], "total_count": 3 }
+
+Question: Look up subscription payment SUB-MONTH-778 linked to CUST-88990.
+Call: { "func_call": "get_transaction", "transaction_id": "SUB-MONTH-778", "customer_id": "CUST-88990", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "SUB-MONTH-778", "amount": 29.99, "currency": "USD", "status": "completed", "created": "2024-04-01T00:05:00Z" }], "total_count": 1 }

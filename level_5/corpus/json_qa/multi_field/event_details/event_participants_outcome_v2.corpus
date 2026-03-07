@@ -1,0 +1,29 @@
+Context: The jazz festival featured performers Miles Davis and John Coltrane, concluding with Coltrane receiving the lifetime achievement award. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Miles Davis and John Coltrane", "outcome": "Coltrane receiving the lifetime achievement award"}
+
+Context: Peace talks between delegates from Japan and South Korea lasted a week, resulting in a renewed cultural exchange program. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "delegates from Japan and South Korea", "outcome": "a renewed cultural exchange program"}
+
+Context: At the robotics competition, teams led by engineers Priya Patel and Omar Hassan competed, but only Priya Patel's robot survived the final obstacle. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "engineers Priya Patel and Omar Hassan", "outcome": "only Priya Patel's robot survived the final obstacle"}
+
+Context: The acquisition talks included founders of StartUp Inc and MegaCorp, ending with a deal to merge research departments by summer. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "founders of StartUp Inc and MegaCorp", "outcome": "a deal to merge research departments by summer"}
+
+Context: During the cycling tour yesterday, riders from Belgium and Netherlands joined the race, with the Belgian cyclist claiming the yellow jersey. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "riders from Belgium and Netherlands", "outcome": "the Belgian cyclist claiming the yellow jersey"}
+
+Context: The committee session had members Dr. Alan Grant, Ellie Sattler, and Ian Malcolm, who agreed to extend the funding for another year. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Dr. Alan Grant, Ellie Sattler, and Ian Malcolm", "outcome": "agreed to extend the funding for another year"}
+
+Context: Chefs from Paris and Lyon battled in the culinary finals, where the Lyon chef was awarded the golden whisk. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Chefs from Paris and Lyon", "outcome": "the Lyon chef was awarded the golden whisk"}
+
+Context: The wage dispute mediation involved shop steward Mary Smith and corporate HR, leading to a signed three-year contract. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "shop steward Mary Smith and corporate HR", "outcome": "a signed three-year contract"}
+
+Context: Golf legends Tiger Woods and Rory McIlroy played a charity round that was canceled after six holes due to lightning. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Tiger Woods and Rory McIlroy", "outcome": "canceled after six holes due to lightning"}
+
+Context: Officials from the World Health Organization and UNICEF convened to distribute vaccines, successfully launching a global immunization drive. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Officials from the World Health Organization and UNICEF", "outcome": "successfully launching a global immunization drive"}
+
+Context: The game jam attracted studios from Sony, Nintendo, and Sega, with the Sega team winning the innovation category. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "studios from Sony, Nintendo, and Sega", "outcome": "the Sega team winning the innovation category"}
+
+Context: Envoys from Canada and Mexico discussed border security, culminating in a joint patrol agreement. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Envoys from Canada and Mexico", "outcome": "a joint patrol agreement"}
+
+Context: The civil case featured attorney Ben Matlock and plaintiff Sue Ellen Bunch, ending with a settlement out of court. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "attorney Ben Matlock and plaintiff Sue Ellen Bunch", "outcome": "a settlement out of court"}
+
+Context: Investors from Blue Ocean Fund and Red Rock Capital held an urgent call, choosing to divest from the energy sector. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Investors from Blue Ocean Fund and Red Rock Capital", "outcome": "choosing to divest from the energy sector"}
+
+Context: Swimmers from the city club and the county team raced in the freestyle event, with the city club setting a new regional record. | Input: {"extract": ["participants", "outcome"]} | Output: {"participants": "Swimmers from the city club and the county team", "outcome": "the city club setting a new regional record"}

@@ -1,0 +1,51 @@
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Display the sales report for H1 2025 categorized by territory, limiting results to retail accounts.
+Call: { "func_call": "get_sales_report", "period": "H1-2025", "group_by": "territory", "filters": "account_type:retail" }
+Response: { "period": "H1-2025", "total_value": 3250000, "deal_count": 42, "conversion_rate": 0.18 }
+
+Question: Provide an activity report for the past 30 days segmented by agent, tracking only outbound calls.
+Call: { "func_call": "get_activity_report", "period": "past_30_days", "group_by": "agent", "filters": "activity_type:outbound_call" }
+Response: { "period": "past_30_days", "total_value": 1890, "deal_count": 1890, "conversion_rate": 0.0 }
+
+Question: Fetch the pipeline summary for December 2024 grouped by priority, including only high-value opportunities.
+Call: { "func_call": "get_pipeline_summary", "period": "Dec-2024", "group_by": "priority", "filters": "value_gt:100000" }
+Response: { "period": "Dec-2024", "total_value": 5600000, "deal_count": 21, "conversion_rate": 0.33 }
+
+Question: What is the conversion rate for Q4 2023 broken down by channel, filtering for organic traffic?
+Call: { "func_call": "get_conversion_rate", "period": "Q4-2023", "group_by": "channel", "filters": "traffic_source:organic" }
+Response: { "period": "Q4-2023", "total_value": 0, "deal_count": 450, "conversion_rate": 0.04 }
+
+Question: Retrieve the activity report for today grouped by department, focusing on support tickets resolved.
+Call: { "func_call": "get_activity_report", "period": "today", "group_by": "department", "filters": "activity_type:ticket_resolved" }
+Response: { "period": "today", "total_value": 67, "deal_count": 67, "conversion_rate": 0.0 }
+
+Question: Show me the pipeline summary for the next quarter grouped by salesperson, excluding stalled deals.
+Call: { "func_call": "get_pipeline_summary", "period": "next_quarter", "group_by": "salesperson", "filters": "status:not_stalled" }
+Response: { "period": "next_quarter", "total_value": 1450000, "deal_count": 29, "conversion_rate": 0.24 }
+
+Question: Generate a sales report for FY2024 categorized by product category, showing only subscriptions.
+Call: { "func_call": "get_sales_report", "period": "FY2024", "group_by": "product_category", "filters": "license_type:subscription" }
+Response: { "period": "FY2024", "total_value": 8900000, "deal_count": 156, "conversion_rate": 0.45 }
+
+Question: Pull the activity report for the last 48 hours grouped by shift, filtering for chat interactions.
+Call: { "func_call": "get_activity_report", "period": "last_48_hours", "group_by": "shift", "filters": "activity_type:chat" }
+Response: { "period": "last_48_hours", "total_value": 320, "deal_count": 320, "conversion_rate": 0.0 }
+
+Question: I need a pipeline summary for August 2024 grouped by campaign, filtering for paid ads leads.
+Call: { "func_call": "get_pipeline_summary", "period": "Aug-2024", "group_by": "campaign", "filters": "lead_source:paid_ads" }
+Response: { "period": "Aug-2024", "total_value": 780000, "deal_count": 15, "conversion_rate": 0.12 }
+
+Question: Calculate the conversion rate for the last 7 days grouped by device type, showing mobile users only.
+Call: { "func_call": "get_conversion_rate", "period": "last_7_days", "group_by": "device_type", "filters": "platform:mobile" }
+Response: { "period": "last_7_days", "total_value": 0, "deal_count": 2100, "conversion_rate": 0.02 }
+
+Question: Display the activity report for the previous year grouped by office location, tracking site visits.
+Call: { "func_call": "get_activity_report", "period": "previous_year", "group_by": "office_location", "filters": "activity_type:site_visit" }
+Response: { "period": "previous_year", "total_value": 540, "deal_count": 540, "conversion_rate": 0.0 }
+
+Question: Give me the pipeline summary for Q2 2025 grouped by contract length, including only multi-year deals.
+Call: { "func_call": "get_pipeline_summary", "period": "Q2-2025", "group_by": "contract_length", "filters": "term:multi_year" }
+Response: { "period": "Q2-2025", "total_value": 12000000, "deal_count": 8, "conversion_rate": 0.60 }

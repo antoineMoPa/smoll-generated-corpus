@@ -1,0 +1,51 @@
+Available Tools: geocode_address | reverse_geocode | validate_address | get_timezone
+Call Schema: { "func_call": "string", "address": "string", "lat": number, "lng": number }
+Response Schema: { "lat": number, "lng": number, "formatted_address": "string", "country": "string", "timezone": "string" }
+---
+Question: What city and time zone are located at latitude 30.0444 and longitude 31.2357?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 30.0444, "lng": 31.2357 }
+Response: { "lat": 30.0444, "lng": 31.2357, "formatted_address": "Cairo, Cairo Governorate, Egypt", "country": "Egypt", "timezone": "Africa/Cairo" }
+
+Question: Please identify the address and timezone for the coordinates 34.0522, -118.2437.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 34.0522, "lng": -118.2437 }
+Response: { "lat": 34.0522, "lng": -118.2437, "formatted_address": "Los Angeles, CA 90012, USA", "country": "United States", "timezone": "America/Los_Angeles" }
+
+Question: I need the reverse geocoded location and timezone for 41.3851, 2.1734.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 41.3851, "lng": 2.1734 }
+Response: { "lat": 41.3851, "lng": 2.1734, "formatted_address": "08002 Barcelona, Spain", "country": "Spain", "timezone": "Europe/Madrid" }
+
+Question: Find the formatted address and timezone corresponding to 19.4326, -99.1332.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 19.4326, "lng": -99.1332 }
+Response: { "lat": 19.4326, "lng": -99.1332, "formatted_address": "Mexico City, CDMX, Mexico", "country": "Mexico", "timezone": "America/Mexico_City" }
+
+Question: What is the place name and timezone at coordinates -1.2921, 36.8219?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": -1.2921, "lng": 36.8219 }
+Response: { "lat": -1.2921, "lng": 36.8219, "formatted_address": "Nairobi, Kenya", "country": "Kenya", "timezone": "Africa/Nairobi" }
+
+Question: Can you reverse geocode 35.6895, 51.3890 and provide the timezone?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 35.6895, "lng": 51.3890 }
+Response: { "lat": 35.6895, "lng": 51.3890, "formatted_address": "Tehran, Tehran Province, Iran", "country": "Iran", "timezone": "Asia/Tehran" }
+
+Question: Identify the country and timezone for the location 59.9139, 10.7522.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 59.9139, "lng": 10.7522 }
+Response: { "lat": 59.9139, "lng": 10.7522, "formatted_address": "0150 Oslo, Norway", "country": "Norway", "timezone": "Europe/Oslo" }
+
+Question: What address and time zone correspond to latitude 33.4484 and longitude -112.0740?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 33.4484, "lng": -112.0740 }
+Response: { "lat": 33.4484, "lng": -112.0740, "formatted_address": "Phoenix, AZ 85003, USA", "country": "United States", "timezone": "America/Phoenix" }
+
+Question: Get the reverse geocode details and timezone for 37.5665, 126.9780.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 37.5665, "lng": 126.9780 }
+Response: { "lat": 37.5665, "lng": 126.9780, "formatted_address": "Seoul, South Korea", "country": "South Korea", "timezone": "Asia/Seoul" }
+
+Question: Reverse geocode the coordinates 31.2304, 121.4737. What is the timezone?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 31.2304, "lng": 121.4737 }
+Response: { "lat": 31.2304, "lng": 121.4737, "formatted_address": "Shanghai, China", "country": "China", "timezone": "Asia/Shanghai" }
+
+Question: Where is 64.1466, -21.9426 located and what timezone is it in?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 64.1466, "lng": -21.9426 }
+Response: { "lat": 64.1466, "lng": -21.9426, "formatted_address": "101 Reykjavík, Iceland", "country": "Iceland", "timezone": "Atlantic/Reykjavik" }
+
+Question: Determine the full address and timezone for coordinates -34.6037, -58.3816.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": -34.6037, "lng": -58.3816 }
+Response: { "lat": -34.6037, "lng": -58.3816, "formatted_address": "C1000 CABA, Argentina", "country": "Argentina", "timezone": "America/Argentina/Buenos_Aires" }

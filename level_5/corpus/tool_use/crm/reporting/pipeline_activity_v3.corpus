@@ -1,0 +1,51 @@
+Available Tools: get_sales_report | get_conversion_rate | get_pipeline_summary | get_activity_report
+Call Schema: { "func_call": "string", "period": "string", "group_by": "string", "filters": "string" }
+Response Schema: { "period": "string", "total_value": number, "deal_count": number, "conversion_rate": number }
+---
+Question: Display the sales report for Q4 2023 categorized by territory, limited to SMB accounts.
+Call: { "func_call": "get_sales_report", "period": "Q4-2023", "group_by": "territory", "filters": "account_size:smb" }
+Response: { "period": "Q4-2023", "total_value": 3200000, "deal_count": 56, "conversion_rate": 0.18 }
+
+Question: Provide an activity report for the past 30 days sorted by channel, counting only webinar attendances.
+Call: { "func_call": "get_activity_report", "period": "past_30_days", "group_by": "channel", "filters": "activity_type:webinar" }
+Response: { "period": "past_30_days", "total_value": 420, "deal_count": 420, "conversion_rate": 0.0 }
+
+Question: Summarize the pipeline for January 2024 grouped by priority level, filtering for high-value opportunities.
+Call: { "func_call": "get_pipeline_summary", "period": "Jan-2024", "group_by": "priority", "filters": "value_gt:100000" }
+Response: { "period": "Jan-2024", "total_value": 5600000, "deal_count": 22, "conversion_rate": 0.31 }
+
+Question: Fetch the conversion rate data for H1 2024 broken down by campaign, including only paid ads.
+Call: { "func_call": "get_conversion_rate", "period": "H1-2024", "group_by": "campaign", "filters": "source_type:paid_ads" }
+Response: { "period": "H1-2024", "total_value": 0, "deal_count": 1500, "conversion_rate": 0.04 }
+
+Question: What is the pipeline status for the next quarter grouped by vertical, excluding government sector?
+Call: { "func_call": "get_pipeline_summary", "period": "next_quarter", "group_by": "vertical", "filters": "sector:not_government" }
+Response: { "period": "next_quarter", "total_value": 1800000, "deal_count": 9, "conversion_rate": 0.12 }
+
+Question: Generate an activity report for today grouped by agent, tracking only outbound calls.
+Call: { "func_call": "get_activity_report", "period": "today", "group_by": "agent", "filters": "direction:outbound" }
+Response: { "period": "today", "total_value": 310, "deal_count": 310, "conversion_rate": 0.0 }
+
+Question: Show the sales report for the fiscal year grouped by district, filtering for closed-won status.
+Call: { "func_call": "get_sales_report", "period": "fiscal_year", "group_by": "district", "filters": "status:closed_won" }
+Response: { "period": "fiscal_year", "total_value": 12500000, "deal_count": 145, "conversion_rate": 1.0 }
+
+Question: Retrieve the pipeline summary for mid-year grouped by partner, showing only referral deals.
+Call: { "func_call": "get_pipeline_summary", "period": "mid_year", "group_by": "partner", "filters": "origin:referral" }
+Response: { "period": "mid_year", "total_value": 980000, "deal_count": 11, "conversion_rate": 0.25 }
+
+Question: I need an activity report for the last 7 days grouped by department, focusing on support tickets resolved.
+Call: { "func_call": "get_activity_report", "period": "last_7_days", "group_by": "department", "filters": "task_type:ticket_resolved" }
+Response: { "period": "last_7_days", "total_value": 675, "deal_count": 675, "conversion_rate": 0.0 }
+
+Question: Pull the conversion rate for December 2023 categorized by device type, filtering for mobile traffic.
+Call: { "func_call": "get_conversion_rate", "period": "Dec-2023", "group_by": "device", "filters": "platform:mobile" }
+Response: { "period": "Dec-2023", "total_value": 0, "deal_count": 8900, "conversion_rate": 0.03 }
+
+Question: Display the pipeline summary for Q2 2025 grouped by sales stage, excluding initial contact phase.
+Call: { "func_call": "get_pipeline_summary", "period": "Q2-2025", "group_by": "sales_stage", "filters": "phase:not_initial" }
+Response: { "period": "Q2-2025", "total_value": 4100000, "deal_count": 38, "conversion_rate": 0.19 }
+
+Question: Give me the activity report for the previous week grouped by location, counting only site visits.
+Call: { "func_call": "get_activity_report", "period": "previous_week", "group_by": "location", "filters": "activity_type:site_visit" }
+Response: { "period": "previous_week", "total_value": 58, "deal_count": 58, "conversion_rate": 0.0 }

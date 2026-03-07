@@ -1,0 +1,51 @@
+Available Tools: sum_column | avg_column | group_by_query | min_max_query
+Call Schema: { "func_call": "string", "table": "string", "column": "string", "group_by": "string", "where": "string" }
+Response Schema: { "result": number, "groups": [{ "key": "string", "value": number }] }
+---
+Question: What is the maximum rainfall recorded per state during the monsoon season?
+Call: { "func_call": "min_max_query", "table": "climate_records", "column": "rainfall_mm", "group_by": "state_code", "where": "season = 'Monsoon'" }
+Response: { "result": 345.2, "groups": [{ "key": "CA", "value": 120.5 }, { "key": "WA", "value": 345.2 }, { "key": "OR", "value": 210.8 }] }
+
+Question: Find the minimum wait time in minutes per hospital department for emergency cases.
+Call: { "func_call": "min_max_query", "table": "er_logs", "column": "wait_time_min", "group_by": "department", "where": "case_type = 'Emergency'" }
+Response: { "result": 4.0, "groups": [{ "key": "Trauma", "value": 4.0 }, { "key": "Pediatrics", "value": 12.5 }, { "key": "Cardiology", "value": 8.2 }] }
+
+Question: Show the highest battery level percentage per device model after the overnight charge.
+Call: { "func_call": "min_max_query", "table": "iot_diagnostics", "column": "battery_pct", "group_by": "device_model", "where": "time_window = 'Overnight'" }
+Response: { "result": 98.0, "groups": [{ "key": "Model-X", "value": 95.0 }, { "key": "Model-Y", "value": 98.0 }, { "key": "Model-Z", "value": 92.5 }] }
+
+Question: What is the lowest air quality index per district during the wildfire event?
+Call: { "func_call": "min_max_query", "table": "environmental_sensors", "column": "aqi_value", "group_by": "district_name", "where": "event = 'Wildfire'" }
+Response: { "result": 45.0, "groups": [{ "key": "North", "value": 150.0 }, { "key": "South", "value": 45.0 }, { "key": "East", "value": 88.0 }] }
+
+Question: Identify the maximum page load time in seconds per browser type for the mobile site.
+Call: { "func_call": "min_max_query", "table": "performance_metrics", "column": "load_time_sec", "group_by": "browser_type", "where": "platform = 'Mobile'" }
+Response: { "result": 4.5, "groups": [{ "key": "Chrome", "value": 2.1 }, { "key": "Safari", "value": 4.5 }, { "key": "Firefox", "value": 3.2 }] }
+
+Question: Retrieve the minimum ticket price per seat class for flights departing in July.
+Call: { "func_call": "min_max_query", "table": "flight_bookings", "column": "ticket_price", "group_by": "seat_class", "where": "month = 'July'" }
+Response: { "result": 120.0, "groups": [{ "key": "Economy", "value": 120.0 }, { "key": "Business", "value": 450.0 }, { "key": "First", "value": 890.0 }] }
+
+Question: What was the peak power consumption in kilowatts per factory zone during the shift?
+Call: { "func_call": "min_max_query", "table": "energy_usage", "column": "power_kw", "group_by": "zone_id", "where": "shift = 'Night'" }
+Response: { "result": 1250.0, "groups": [{ "key": "Zone-A", "value": 800.0 }, { "key": "Zone-B", "value": 1250.0 }, { "key": "Zone-C", "value": 950.0 }] }
+
+Question: Find the highest conversion rate per marketing channel for the spring campaign.
+Call: { "func_call": "min_max_query", "table": "campaign_analytics", "column": "conversion_rate", "group_by": "channel", "where": "campaign = 'Spring'" }
+Response: { "result": 8.5, "groups": [{ "key": "Email", "value": 5.2 }, { "key": "Social", "value": 8.5 }, { "key": "Search", "value": 6.1 }] }
+
+Question: Determine the minimum latency in milliseconds per API endpoint during the stress test.
+Call: { "func_call": "min_max_query", "table": "api_logs", "column": "latency_ms", "group_by": "endpoint", "where": "test_type = 'Stress'" }
+Response: { "result": 15.0, "groups": [{ "key": "/login", "value": 45.0 }, { "key": "/search", "value": 15.0 }, { "key": "/checkout", "value": 60.0 }] }
+
+Question: What is the maximum student attendance count per grade level for the semester?
+Call: { "func_call": "min_max_query", "table": "school_records", "column": "attendance_count", "group_by": "grade_level", "where": "term = 'Fall'" }
+Response: { "result": 145, "groups": [{ "key": "9th", "value": 130 }, { "key": "10th", "value": 145 }, { "key": "11th", "value": 128 }] }
+
+Question: Show the lowest water usage in gallons per household type during the drought warning.
+Call: { "func_call": "min_max_query", "table": "utility_bills", "column": "water_gallons", "group_by": "household_type", "where": "alert = 'Drought'" }
+Response: { "result": 1200.0, "groups": [{ "key": "Single", "value": 1200.0 }, { "key": "Family", "value": 2500.0 }, { "key": "Multi", "value": 3100.0 }] }
+
+Question: Identify the highest defect count per production line for the morning shift.
+Call: { "func_call": "min_max_query", "table": "quality_control", "column": "defect_count", "group_by": "line_id", "where": "shift = 'Morning'" }
+Response: { "result": 22, "groups": [{ "key": "Line-1", "value": 15 }, { "key": "Line-2", "value": 22 }, { "key": "Line-3", "value": 8 }] }

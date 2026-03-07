@@ -1,0 +1,87 @@
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Locate all urgent messages regarding server maintenance from early March.
+Call: { "func_call": "filter_by_date", "query": "server downtime", "from": "", "after": "2023-03-01", "before": "2023-03-10", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_301", "from": "sysadmin@datacenter.net", "subject": "Scheduled Maintenance Window", "date": "2023-03-02" }, { "id": "msg_305", "from": "ops@cloudservice.io", "subject": "Urgent: Patch Deployment", "date": "2023-03-05" }], "count": 2 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Display personal emails related to tax documents received in February 2023.
+Call: { "func_call": "filter_by_date", "query": "tax forms", "from": "", "after": "2023-02-01", "before": "2023-02-28", "label": "personal" }
+Response: { "messages": [{ "id": "msg_210", "from": "accountant@finance.com", "subject": "W-2 Form Attached", "date": "2023-02-05" }, { "id": "msg_218", "from": "bank@secure.com", "subject": "1099 Interest Statement", "date": "2023-02-14" }, { "id": "msg_225", "from": "broker@invest.com", "subject": "Annual Portfolio Summary", "date": "2023-02-22" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Retrieve all marketing newsletters sent during the first two weeks of April.
+Call: { "func_call": "filter_by_date", "query": "spring sale", "from": "", "after": "2023-04-01", "before": "2023-04-14", "label": "newsletters" }
+Response: { "messages": [{ "id": "msg_402", "from": "promo@retail.com", "subject": "Spring Collection Launch", "date": "2023-04-03" }, { "id": "msg_408", "from": "deals@shopping.com", "subject": "Weekend Flash Sale", "date": "2023-04-07" }, { "id": "msg_415", "from": "news@fashion.com", "subject": "Trend Alert: Pastels", "date": "2023-04-12" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find work correspondence concerning the annual audit between September 5 and September 20.
+Call: { "func_call": "filter_by_date", "query": "audit prep", "from": "", "after": "2023-09-05", "before": "2023-09-20", "label": "work" }
+Response: { "messages": [{ "id": "msg_910", "from": "auditor@external.com", "subject": "Document Request List", "date": "2023-09-06" }, { "id": "msg_918", "from": "cfo@corp.com", "subject": "Q3 Financials Review", "date": "2023-09-12" }, { "id": "msg_925", "from": "compliance@corp.com", "subject": "Audit Timeline Update", "date": "2023-09-18" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Show urgent security alerts generated on October 20th and 21st.
+Call: { "func_call": "filter_by_date", "query": "breach attempt", "from": "", "after": "2023-10-20", "before": "2023-10-21", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_1020", "from": "security@firewall.net", "subject": "Suspicious Login Detected", "date": "2023-10-20" }, { "id": "msg_1021", "from": "alerts@ids.com", "subject": "Potential Phishing Campaign", "date": "2023-10-20" }], "count": 2 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Get all personal emails about home renovation received in late July.
+Call: { "func_call": "filter_by_date", "query": "contractor quotes", "from": "", "after": "2023-07-20", "before": "2023-07-31", "label": "personal" }
+Response: { "messages": [{ "id": "msg_720", "from": "plumber@local.com", "subject": "Bathroom Estimate", "date": "2023-07-21" }, { "id": "msg_725", "from": "painter@pro.com", "subject": "Color Selection Guide", "date": "2023-07-24" }, { "id": "msg_730", "from": "architect@design.com", "subject": "Kitchen Layout Draft", "date": "2023-07-29" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: List newsletters covering climate change topics from May 10 to May 25.
+Call: { "func_call": "filter_by_date", "query": "green energy", "from": "", "after": "2023-05-10", "before": "2023-05-25", "label": "newsletters" }
+Response: { "messages": [{ "id": "msg_510", "from": "eco@planet.org", "subject": "Renewable Power Growth", "date": "2023-05-12" }, { "id": "msg_518", "from": "science@nature.com", "subject": "Ocean Temperature Report", "date": "2023-05-19" }, { "id": "msg_524", "from": "policy@govwatch.org", "subject": "New Carbon Regulations", "date": "2023-05-24" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Filter work emails related to hiring during the month of January 2023.
+Call: { "func_call": "filter_by_date", "query": "candidate review", "from": "", "after": "2023-01-01", "before": "2023-01-31", "label": "work" }
+Response: { "messages": [{ "id": "msg_105", "from": "recruiter@corp.com", "subject": "Engineer Interview Schedule", "date": "2023-01-09" }, { "id": "msg_112", "from": "hr@corp.com", "subject": "Offer Letter Template", "date": "2023-01-16" }, { "id": "msg_120", "from": "manager@corp.com", "subject": "Team Expansion Plan", "date": "2023-01-25" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find urgent customer support tickets escalated in the last three days of June.
+Call: { "func_call": "filter_by_date", "query": "escalation", "from": "", "after": "2023-06-28", "before": "2023-06-30", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_628", "from": "support@helpdesk.com", "subject": "Ticket #9921 Escalated", "date": "2023-06-28" }, { "id": "msg_629", "from": "vip@client.com", "subject": "Urgent: Service Outage", "date": "2023-06-29" }], "count": 2 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Retrieve personal invitations for events happening in mid-December.
+Call: { "func_call": "filter_by_date", "query": "party invite", "from": "", "after": "2023-12-10", "before": "2023-12-20", "label": "personal" }
+Response: { "messages": [{ "id": "msg_1210", "from": "host@events.com", "subject": "Holiday Gala Invitation", "date": "2023-12-11" }, { "id": "msg_1215", "from": "friend@gmail.com", "subject": "Cookies Exchange Party", "date": "2023-12-14" }, { "id": "msg_1219", "from": "club@social.org", "subject": "End of Year Mixer", "date": "2023-12-18" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: List all work project updates received between February 14 and February 28.
+Call: { "func_call": "filter_by_date", "query": "milestone report", "from": "", "after": "2023-02-14", "before": "2023-02-28", "label": "work" }
+Response: { "messages": [{ "id": "msg_214", "from": "lead@project.com", "subject": "Phase 1 Completion", "date": "2023-02-15" }, { "id": "msg_220", "from": "dev@team.com", "subject": "Bug Fix Summary", "date": "2023-02-21" }, { "id": "msg_227", "from": "pm@corp.com", "subject": "Sprint Velocity Chart", "date": "2023-02-27" }], "count": 3 }

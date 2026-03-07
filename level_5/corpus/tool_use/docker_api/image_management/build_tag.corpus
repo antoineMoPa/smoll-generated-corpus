@@ -1,0 +1,51 @@
+Available Tools: pull_image | push_image | build_image | list_images | remove_image | tag_image
+Call Schema: { "func_call": "string", "image": "string", "tag": "string", "registry": "string", "dockerfile": "string" }
+Response Schema: { "image_id": "string", "repository": "string", "tag": "string", "size_mb": number, "created": "string" }
+---
+Question: Build the auth-service image from the root Dockerfile and tag it as v1.0.0.
+Call: { "func_call": "build_image", "image": "auth-service", "tag": "v1.0.0", "registry": "docker.io", "dockerfile": "./Dockerfile" }
+Response: { "image_id": "sha256:a1b2c3d4e5f6", "repository": "docker.io/auth-service", "tag": "v1.0.0", "size_mb": 145.2, "created": "2023-10-27T10:15:30Z" }
+
+Question: Compile the payment-gateway service using the specific Dockerfile in the src directory and apply the latest tag.
+Call: { "func_call": "build_image", "image": "payment-gateway", "tag": "latest", "registry": "gcr.io/my-project", "dockerfile": "./src/Dockerfile" }
+Response: { "image_id": "sha256:b2c3d4e5f6a7", "repository": "gcr.io/my-project/payment-gateway", "tag": "latest", "size_mb": 210.5, "created": "2023-10-27T11:20:45Z" }
+
+Question: Create a staging build for the user-profile microservice using the alternative Dockerfile path.
+Call: { "func_call": "build_image", "image": "user-profile", "tag": "staging", "registry": "quay.io/org", "dockerfile": "./deploy/Dockerfile.staging" }
+Response: { "image_id": "sha256:c3d4e5f6a7b8", "repository": "quay.io/org/user-profile", "tag": "staging", "size_mb": 98.7, "created": "2023-10-27T12:05:10Z" }
+
+Question: Build the notification-worker with version v2.1.3 using the minimal Dockerfile.
+Call: { "func_call": "build_image", "image": "notification-worker", "tag": "v2.1.3", "registry": "docker.io", "dockerfile": "./Dockerfile.minimal" }
+Response: { "image_id": "sha256:d4e5f6a7b8c9", "repository": "docker.io/notification-worker", "tag": "v2.1.3", "size_mb": 65.3, "created": "2023-10-27T13:45:22Z" }
+
+Question: Generate a new image for the data-processor service tagged v0.9.0-beta from the experimental Dockerfile.
+Call: { "func_call": "build_image", "image": "data-processor", "tag": "v0.9.0-beta", "registry": "artifactory.internal", "dockerfile": "./exp/Dockerfile" }
+Response: { "image_id": "sha256:e5f6a7b8c9d0", "repository": "artifactory.internal/data-processor", "tag": "v0.9.0-beta", "size_mb": 312.8, "created": "2023-10-27T14:10:05Z" }
+
+Question: Build the frontend-app with the latest tag using the production Dockerfile configuration.
+Call: { "func_call": "build_image", "image": "frontend-app", "tag": "latest", "registry": "docker.io", "dockerfile": "./prod/Dockerfile" }
+Response: { "image_id": "sha256:f6a7b8c9d0e1", "repository": "docker.io/frontend-app", "tag": "latest", "size_mb": 189.4, "created": "2023-10-27T15:30:55Z" }
+
+Question: Construct the api-gateway image version v3.0.0 using the standard root Dockerfile.
+Call: { "func_call": "build_image", "image": "api-gateway", "tag": "v3.0.0", "registry": "gcr.io/core-services", "dockerfile": "./Dockerfile" }
+Response: { "image_id": "sha256:a7b8c9d0e1f2", "repository": "gcr.io/core-services/api-gateway", "tag": "v3.0.0", "size_mb": 125.6, "created": "2023-10-27T16:22:18Z" }
+
+Question: Build the cache-manager service with a staging tag from the docker/build context Dockerfile.
+Call: { "func_call": "build_image", "image": "cache-manager", "tag": "staging", "registry": "quay.io/infra", "dockerfile": "./docker/build/Dockerfile" }
+Response: { "image_id": "sha256:b8c9d0e1f2a3", "repository": "quay.io/infra/cache-manager", "tag": "staging", "size_mb": 78.2, "created": "2023-10-27T17:05:40Z" }
+
+Question: Compile the search-engine module with tag v1.5.2 using the optimized Dockerfile.
+Call: { "func_call": "build_image", "image": "search-engine", "tag": "v1.5.2", "registry": "docker.io", "dockerfile": "./Dockerfile.opt" }
+Response: { "image_id": "sha256:c9d0e1f2a3b4", "repository": "docker.io/search-engine", "tag": "v1.5.2", "size_mb": 245.9, "created": "2023-10-27T18:15:33Z" }
+
+Question: Create a latest build of the logging-agent using the slim Dockerfile variant.
+Call: { "func_call": "build_image", "image": "logging-agent", "tag": "latest", "registry": "gcr.io/observability", "dockerfile": "./Dockerfile.slim" }
+Response: { "image_id": "sha256:d0e1f2a3b4c5", "repository": "gcr.io/observability/logging-agent", "tag": "latest", "size_mb": 42.1, "created": "2023-10-27T19:00:12Z" }
+
+Question: Build the inventory-service with version v4.2.1 from the legacy Dockerfile path.
+Call: { "func_call": "build_image", "image": "inventory-service", "tag": "v4.2.1", "registry": "artifactory.internal", "dockerfile": "./legacy/Dockerfile" }
+Response: { "image_id": "sha256:e1f2a3b4c5d6", "repository": "artifactory.internal/inventory-service", "tag": "v4.2.1", "size_mb": 167.3, "created": "2023-10-27T20:10:50Z" }
+
+Question: Generate the reporting-tool image tagged v1.0.0-rc1 using the main Dockerfile.
+Call: { "func_call": "build_image", "image": "reporting-tool", "tag": "v1.0.0-rc1", "registry": "docker.io", "dockerfile": "./Dockerfile" }
+Response: { "image_id": "sha256:f2a3b4c5d6e7", "repository": "docker.io/reporting-tool", "tag": "v1.0.0-rc1", "size_mb": 134.8, "created": "2023-10-27T21:25:05Z" }

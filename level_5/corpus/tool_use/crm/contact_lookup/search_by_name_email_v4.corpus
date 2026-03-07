@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Locate any individual named Thomas Anderson in the records.
+Call: { "func_call": "search_contact", "query": "Thomas Anderson", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_2049", "name": "Thomas Anderson", "email": "t.anderson@matrix-sys.com", "company": "Matrix Systems", "phone": "+1-555-0771" }], "total": 1 }
+
+Question: Retrieve the profile for the user with email b.roberts@oceanic-airlines.com.
+Call: { "func_call": "search_contact", "query": "b.roberts@oceanic-airlines.com", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_6102", "name": "Brian Roberts", "email": "b.roberts@oceanic-airlines.com", "company": "Oceanic Airlines", "phone": "+1-555-0338" }], "total": 1 }
+
+Question: Find all entries for the name Jennifer Lopez.
+Call: { "func_call": "search_contact", "query": "Jennifer Lopez", "field": "name", "limit": 20 }
+Response: { "contacts": [{ "id": "c_8812", "name": "Jennifer Lopez", "email": "jlopez@starlight-music.net", "company": "Starlight Music", "phone": "+1-555-0992" }, { "id": "c_9923", "name": "Jennifer A. Lopez", "email": "j.a.lopez@urban-realty.org", "company": "Urban Realty", "phone": "+1-555-0114" }], "total": 2 }
+
+Question: Which contact corresponds to the email r.kirk@starfleet-command.gov?
+Call: { "func_call": "search_contact", "query": "r.kirk@starfleet-command.gov", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_3301", "name": "Robert Kirk", "email": "r.kirk@starfleet-command.gov", "company": "Starfleet Command", "phone": "+1-555-0665" }], "total": 1 }
+
+Question: Search for every contact named William Turner.
+Call: { "func_call": "search_contact", "query": "William Turner", "field": "name", "limit": 15 }
+Response: { "contacts": [{ "id": "c_4455", "name": "William Turner", "email": "w.turner@blackpearl-navy.com", "company": "Black Pearl Navy", "phone": "+1-555-0229" }, { "id": "c_7766", "name": "Will Turner", "email": "will.t@shipwrights-guild.org", "company": "Shipwrights Guild", "phone": "+1-555-0883" }], "total": 2 }
+
+Question: Identify the owner of p.granger@hogwarts-edu.uk.
+Call: { "func_call": "search_contact", "query": "p.granger@hogwarts-edu.uk", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_1199", "name": "Patricia Granger", "email": "p.granger@hogwarts-edu.uk", "company": "Hogwarts School", "phone": "+44-20-555-0412" }], "total": 1 }
+
+Question: Look up anyone named Christopher Nolan in the system.
+Call: { "func_call": "search_contact", "query": "Christopher Nolan", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_5588", "name": "Christopher Nolan", "email": "c.nolan@warner-bros-films.com", "company": "Warner Bros Films", "phone": "+1-555-0734" }], "total": 1 }
+
+Question: Who is associated with the address s.connor@resistance-mil.org?
+Call: { "func_call": "search_contact", "query": "s.connor@resistance-mil.org", "field": "email", "limit": 3 }
+Response: { "contacts": [{ "id": "c_9001", "name": "Sarah Connor", "email": "s.connor@resistance-mil.org", "company": "The Resistance", "phone": "+1-555-0556" }], "total": 1 }
+
+Question: Find all individuals named Elizabeth Taylor.
+Call: { "func_call": "search_contact", "query": "Elizabeth Taylor", "field": "name", "limit": 25 }
+Response: { "contacts": [{ "id": "c_2233", "name": "Elizabeth Taylor", "email": "e.taylor@classic-cinema.com", "company": "Classic Cinema", "phone": "+1-555-0145" }, { "id": "c_4477", "name": "Elizabeth J. Taylor", "email": "ejtaylor@gem-stones.biz", "company": "Gem Stones Inc", "phone": "+1-555-0267" }, { "id": "c_6699", "name": "Liz Taylor", "email": "liz.t@fashion-week.net", "company": "Fashion Week Global", "phone": "+1-555-0389" }], "total": 3 }
+
+Question: Determine the contact for m.bond@mi6-secret-service.gov.uk.
+Call: { "func_call": "search_contact", "query": "m.bond@mi6-secret-service.gov.uk", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_0070", "name": "James Bond", "email": "m.bond@mi6-secret-service.gov.uk", "company": "MI6 Secret Service", "phone": "+44-20-555-0007" }], "total": 1 }
+
+Question: Search for a person named Angela Merkel.
+Call: { "func_call": "search_contact", "query": "Angela Merkel", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_8844", "name": "Angela Merkel", "email": "a.merkel@bundestag-de.gov", "company": "German Bundestag", "phone": "+49-30-555-0921" }], "total": 1 }
+
+Question: Who holds the email address t.stark@stark-industries.com?
+Call: { "func_call": "search_contact", "query": "t.stark@stark-industries.com", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_1024", "name": "Tony Stark", "email": "t.stark@stark-industries.com", "company": "Stark Industries", "phone": "+1-555-0108" }], "total": 1 }

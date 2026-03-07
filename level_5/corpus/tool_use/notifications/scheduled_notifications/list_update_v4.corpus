@@ -1,0 +1,62 @@
+Available Tools: schedule_notification | cancel_scheduled | list_scheduled | update_schedule
+Call Schema: { "func_call": "string", "notification_id": "string", "scheduled_at": "string", "recurrence": "string", "channel": "push|sms|email" }
+Response Schema: { "notification_id": "string", "scheduled_at": "string", "status": "scheduled|cancelled", "recurrence": "string" }
+---
+Question: Display all scheduled alerts for the Berlin warehouse using the SMS channel.
+Call: { "func_call": "list_scheduled", "notification_id": "", "scheduled_at": "", "recurrence": "", "channel": "sms" }
+Response: { "notification_id": "ntf_berlin_sms_03", "scheduled_at": "2023-12-01T10:30:00+01:00", "status": "scheduled", "recurrence": "daily" }
+
+---
+Question: I want to view the monthly inventory report configured for email delivery.
+Call: { "func_call": "list_scheduled", "notification_id": "", "scheduled_at": "", "recurrence": "monthly", "channel": "email" }
+Response: { "notification_id": "ntf_inv_dec", "scheduled_at": "2023-12-01T07:00:00-06:00", "status": "scheduled", "recurrence": "monthly" }
+
+---
+Question: Modify the evening backup reminder to use push notifications instead of email.
+Call: { "func_call": "update_schedule", "notification_id": "ntf_backup_pm", "scheduled_at": "2023-12-02T20:00:00+02:00", "recurrence": "daily", "channel": "push" }
+Response: { "notification_id": "ntf_backup_pm", "scheduled_at": "2023-12-02T20:00:00+02:00", "status": "scheduled", "recurrence": "daily" }
+
+---
+Question: Adjust the quarterly tax reminder to occur bi-weekly and send via SMS.
+Call: { "func_call": "update_schedule", "notification_id": "ntf_tax_q4", "scheduled_at": "2023-12-05T12:00:00Z", "recurrence": "bi-weekly", "channel": "sms" }
+Response: { "notification_id": "ntf_tax_q4", "scheduled_at": "2023-12-05T12:00:00Z", "status": "scheduled", "recurrence": "bi-weekly" }
+
+---
+Question: Find all email notifications planned for the Paris branch in CET time.
+Call: { "func_call": "list_scheduled", "notification_id": "", "scheduled_at": "", "recurrence": "", "channel": "email" }
+Response: { "notification_id": "ntf_paris_alert", "scheduled_at": "2023-12-03T15:45:00+01:00", "status": "scheduled", "recurrence": "once" }
+
+---
+Question: Update the database health check to run every 30 minutes via push.
+Call: { "func_call": "update_schedule", "notification_id": "ntf_db_health", "scheduled_at": "2023-12-04T08:00:00-05:00", "recurrence": "every_30_mins", "channel": "push" }
+Response: { "notification_id": "ntf_db_health", "scheduled_at": "2023-12-04T08:00:00-05:00", "status": "scheduled", "recurrence": "every_30_mins" }
+
+---
+Question: List pending SMS reminders set for next Friday in Mumbai time.
+Call: { "func_call": "list_scheduled", "notification_id": "", "scheduled_at": "2023-12-08T11:00:00+05:30", "recurrence": "", "channel": "sms" }
+Response: { "notification_id": "ntf_mumbai_fri", "scheduled_at": "2023-12-08T11:00:00+05:30", "status": "scheduled", "recurrence": "once" }
+
+---
+Question: Switch the morning briefing from push to email and keep the 7 AM JST schedule.
+Call: { "func_call": "update_schedule", "notification_id": "ntf_morning_brief", "scheduled_at": "2023-12-06T07:00:00+09:00", "recurrence": "daily", "channel": "email" }
+Response: { "notification_id": "ntf_morning_brief", "scheduled_at": "2023-12-06T07:00:00+09:00", "status": "scheduled", "recurrence": "daily" }
+
+---
+Question: Retrieve all SMS alerts scheduled for the Toronto office during EST.
+Call: { "func_call": "list_scheduled", "notification_id": "", "scheduled_at": "", "recurrence": "", "channel": "sms" }
+Response: { "notification_id": "ntf_to_sms_02", "scheduled_at": "2023-12-04T13:15:00-05:00", "status": "scheduled", "recurrence": "weekly" }
+
+---
+Question: Update the firewall log summary to send every 4 hours via email.
+Call: { "func_call": "update_schedule", "notification_id": "ntf_fw_logs", "scheduled_at": "2023-12-04T04:00:00Z", "recurrence": "every_4_hours", "channel": "email" }
+Response: { "notification_id": "ntf_fw_logs", "scheduled_at": "2023-12-04T04:00:00Z", "status": "scheduled", "recurrence": "every_4_hours" }
+
+---
+Question: List any daily notifications set for noon GMT across all channels.
+Call: { "func_call": "list_scheduled", "notification_id": "", "scheduled_at": "2023-12-05T12:00:00Z", "recurrence": "daily", "channel": "push" }
+Response: { "notification_id": "ntf_noon_sync", "scheduled_at": "2023-12-05T12:00:00Z", "status": "scheduled", "recurrence": "daily" }
+
+---
+Question: Change the Monday status update from SMS to push and set time to 9 AM PST.
+Call: { "func_call": "update_schedule", "notification_id": "ntf_mon_status", "scheduled_at": "2023-12-11T09:00:00-08:00", "recurrence": "weekly", "channel": "push" }
+Response: { "notification_id": "ntf_mon_status", "scheduled_at": "2023-12-11T09:00:00-08:00", "status": "scheduled", "recurrence": "weekly" }

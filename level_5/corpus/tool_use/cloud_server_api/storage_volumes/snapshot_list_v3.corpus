@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: Enumerate all storage blocks in the eu-west-2 zone to find unused capacity for new deployments.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-eu2-unused-01", "size_gb": 500, "state": "available", "attached_to": "" }
+
+Question: Generate a recovery point for the payment processing volume vol-pay-gateway before the security update.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-pay-gateway", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-pay-gateway", "size_gb": 300, "state": "snapshotting", "attached_to": "i-fin-service-04" }
+
+Question: Inspect the properties of volume vol-media-stream to verify its throughput tier and attachment target.
+Call: { "func_call": "list_volumes", "volume_id": "vol-media-stream", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-media-stream", "size_gb": 1500, "state": "in-use", "attached_to": "i-cdn-edge-node-07" }
+
+Question: Capture an image of the application binary volume vol-app-binaries immediately following the CI/CD pipeline success.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-app-binaries", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-app-binaries", "size_gb": 80, "state": "snapshotting", "attached_to": "i-build-agent-02" }
+
+Question: Display all disks connected to instance i-db-replica-05 to ensure the WAL logs volume is present.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "i-db-replica-05", "size_gb": 0 }
+Response: { "volume_id": "vol-wal-replica-05", "size_gb": 100, "state": "in-use", "attached_to": "i-db-replica-05" }
+
+Question: Secure a backup copy of the audit trail volume vol-audit-logs before the monthly rotation cycle begins.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-audit-logs", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-audit-logs", "size_gb": 450, "state": "snapshotting", "attached_to": "i-compliance-server-01" }
+
+Question: Verify the detachment status of volume vol-legacy-migrate to confirm it is ready for termination.
+Call: { "func_call": "list_volumes", "volume_id": "vol-legacy-migrate", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-legacy-migrate", "size_gb": 250, "state": "available", "attached_to": "" }
+
+Question: Execute a snapshot operation on the certificate store volume vol-cert-vault as part of the monthly compliance audit.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-cert-vault", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-cert-vault", "size_gb": 10, "state": "snapshotting", "attached_to": "i-pki-master-03" }
+
+Question: Query all volumes exceeding 2TB in size to evaluate potential costs for cold storage migration.
+Call: { "func_call": "list_volumes", "volume_id": "", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-raw-telemetry", "size_gb": 8000, "state": "in-use", "attached_to": "i-ingest-cluster-09" }
+
+Question: Trigger a point-in-time copy of the session store volume vol-sessions-db right before the planned reboot.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-sessions-db", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-sessions-db", "size_gb": 128, "state": "snapshotting", "attached_to": "i-session-manager-06" }
+
+Question: Fetch the current metadata for volume vol-temp-scratch to decide if it should be wiped or retained.
+Call: { "func_call": "list_volumes", "volume_id": "vol-temp-scratch", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-temp-scratch", "size_gb": 60, "state": "available", "attached_to": "" }
+
+Question: Produce a backup snapshot of the container registry volume vol-docker-registry prior to the version upgrade.
+Call: { "func_call": "snapshot_volume", "volume_id": "vol-docker-registry", "instance_id": "", "size_gb": 0 }
+Response: { "volume_id": "vol-docker-registry", "size_gb": 950, "state": "snapshotting", "attached_to": "i-registry-primary-08" }

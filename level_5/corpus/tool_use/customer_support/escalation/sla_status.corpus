@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: Set a critical 2-hour SLA for ticket TKT-9921 regarding the payment gateway outage and assign it to the Level 3 Infrastructure team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-9921", "reason": "Critical payment gateway outage affecting all transactions", "target_team": "Level 3 Infrastructure" }
+Response: { "ticket_id": "TKT-9921", "escalated_to": "Level 3 Infrastructure", "reason": "Critical payment gateway outage affecting all transactions", "sla_hours": 2, "status": "SLA_ACTIVE_BREACH_WARNING" }
+
+Question: Check the current escalation status for ticket TKT-8842 which was transferred to the Billing Disputes team yesterday.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-8842", "reason": "Routine status check on billing dispute resolution", "target_team": "Billing Disputes" }
+Response: { "ticket_id": "TKT-8842", "escalated_to": "Billing Disputes", "reason": "Routine status check on billing dispute resolution", "sla_hours": 24, "status": "RESOLVED_WITHIN_SLA" }
+
+Question: Escalate ticket TKT-7733 immediately to the Security Ops team due to a suspected data breach and set a 1-hour response window.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7733", "reason": "Suspected data breach requiring immediate forensic analysis", "target_team": "Security Ops" }
+Response: { "ticket_id": "TKT-7733", "escalated_to": "Security Ops", "reason": "Suspected data breach requiring immediate forensic analysis", "sla_hours": 1, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Transfer ticket TKT-6654 to the Enterprise Account Specialists and apply a 4-hour SLA for the VIP client login failure.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-6654", "reason": "VIP client unable to access enterprise dashboard", "target_team": "Enterprise Account Specialists" }
+Response: { "ticket_id": "TKT-6654", "escalated_to": "Enterprise Account Specialists", "reason": "VIP client unable to access enterprise dashboard", "sla_hours": 4, "status": "SLA_ACTIVE" }
+
+Question: Retrieve the escalation details for TKT-5512 to verify if the 48-hour deadline for the API rate limit issue has been breached.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-5512", "reason": "Verification of API rate limit resolution deadline", "target_team": "API Support" }
+Response: { "ticket_id": "TKT-5512", "escalated_to": "API Support", "reason": "Verification of API rate limit resolution deadline", "sla_hours": 48, "status": "SLA_BREACHED" }
+
+Question: Set a 6-hour SLA on ticket TKT-4498 regarding the mobile app crash on iOS and route it to the Mobile Engineering team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-4498", "reason": "Persistent iOS app crash on launch for version 4.2", "target_team": "Mobile Engineering" }
+Response: { "ticket_id": "TKT-4498", "escalated_to": "Mobile Engineering", "reason": "Persistent iOS app crash on launch for version 4.2", "sla_hours": 6, "status": "SLA_ACTIVE" }
+
+Question: Escalate ticket TKT-3321 to the Database Administrators because the query latency exceeds 5 seconds and threatens the 3-hour SLA.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-3321", "reason": "Database query latency exceeding 5 seconds", "target_team": "Database Administrators" }
+Response: { "ticket_id": "TKT-3321", "escalated_to": "Database Administrators", "reason": "Database query latency exceeding 5 seconds", "sla_hours": 3, "status": "BREACH_WARNING_ISSUED" }
+
+Question: Check the status of ticket TKT-2219 assigned to the Network Operations center to see if the fiber cut repair is within the 12-hour window.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-2219", "reason": "Status check on fiber cut repair progress", "target_team": "Network Operations" }
+Response: { "ticket_id": "TKT-2219", "escalated_to": "Network Operations", "reason": "Status check on fiber cut repair progress", "sla_hours": 12, "status": "ON_TRACK" }
+
+Question: Transfer ticket TKT-1105 to the Compliance Team for a GDPR data deletion request and enforce a strict 24-hour SLA.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-1105", "reason": "GDPR data deletion request from EU customer", "target_team": "Compliance Team" }
+Response: { "ticket_id": "TKT-1105", "escalated_to": "Compliance Team", "reason": "GDPR data deletion request from EU customer", "sla_hours": 24, "status": "SLA_ACTIVE" }
+
+Question: Apply an urgent 30-minute SLA to ticket TKT-9988 for the production server downtime and assign it to the Site Reliability Engineering team.
+Call: { "func_call": "set_sla", "ticket_id": "TKT-9988", "reason": "Production server completely unresponsive", "target_team": "Site Reliability Engineering" }
+Response: { "ticket_id": "TKT-9988", "escalated_to": "Site Reliability Engineering", "reason": "Production server completely unresponsive", "sla_hours": 0.5, "status": "CRITICAL_BREACH_IMMINENT" }
+
+Question: Get the escalation status for TKT-8877 to confirm if the email delivery delay issue was resolved before the 8-hour deadline.
+Call: { "func_call": "get_escalation_status", "ticket_id": "TKT-8877", "reason": "Confirmation of email delivery delay resolution time", "target_team": "Email Services" }
+Response: { "ticket_id": "TKT-8877", "escalated_to": "Email Services", "reason": "Confirmation of email delivery delay resolution time", "sla_hours": 8, "status": "RESOLVED_WITHIN_SLA" }
+
+Question: Escalate ticket TKT-7766 to the Third-Party Integration team due to a failed webhook connection and set a 5-hour resolution target.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7766", "reason": "Failed webhook connection with external CRM provider", "target_team": "Third-Party Integration" }
+Response: { "ticket_id": "TKT-7766", "escalated_to": "Third-Party Integration", "reason": "Failed webhook connection with external CRM provider", "sla_hours": 5, "status": "SLA_ACTIVE" }

@@ -1,0 +1,51 @@
+Available Tools: get_temperature | get_humidity | get_wind_speed | get_uv_index
+Call Schema: { "func_call": "string", "location": "string", "unit": "celsius|fahrenheit" }
+Response Schema: { "value": number, "unit": "string", "timestamp": "string" }
+---
+Question: What is the UV index currently in Austin?
+Call: { "func_call": "get_uv_index", "location": "Austin", "unit": "celsius" }
+Response: { "value": 9.2, "unit": "index", "timestamp": "2023-10-28T09:15:00Z" }
+
+Question: Check the temperature in Boston right now.
+Call: { "func_call": "get_temperature", "location": "Boston", "unit": "fahrenheit" }
+Response: { "value": 54.3, "unit": "°F", "timestamp": "2023-10-28T09:16:00Z" }
+
+Question: How strong is the UV radiation in Las Vegas today?
+Call: { "func_call": "get_uv_index", "location": "Las Vegas", "unit": "fahrenheit" }
+Response: { "value": 7.8, "unit": "index", "timestamp": "2023-10-28T09:17:00Z" }
+
+Question: Get the current temperature for Atlanta.
+Call: { "func_call": "get_temperature", "location": "Atlanta", "unit": "celsius" }
+Response: { "value": 22.1, "unit": "°C", "timestamp": "2023-10-28T09:18:00Z" }
+
+Question: What is the UV level in Orlando?
+Call: { "func_call": "get_uv_index", "location": "Orlando", "unit": "celsius" }
+Response: { "value": 8.5, "unit": "index", "timestamp": "2023-10-28T09:19:00Z" }
+
+Question: Tell me the temperature in Minneapolis.
+Call: { "func_call": "get_temperature", "location": "Minneapolis", "unit": "celsius" }
+Response: { "value": 12.4, "unit": "°C", "timestamp": "2023-10-28T09:20:00Z" }
+
+Question: Current UV index in San Diego?
+Call: { "func_call": "get_uv_index", "location": "San Diego", "unit": "fahrenheit" }
+Response: { "value": 6.9, "unit": "index", "timestamp": "2023-10-28T09:21:00Z" }
+
+Question: How warm is it in Philadelphia?
+Call: { "func_call": "get_temperature", "location": "Philadelphia", "unit": "fahrenheit" }
+Response: { "value": 61.7, "unit": "°F", "timestamp": "2023-10-28T09:22:00Z" }
+
+Question: What is the UV index in Anchorage?
+Call: { "func_call": "get_uv_index", "location": "Anchorage", "unit": "celsius" }
+Response: { "value": 2.1, "unit": "index", "timestamp": "2023-10-28T09:23:00Z" }
+
+Question: Check the temperature in Nashville.
+Call: { "func_call": "get_temperature", "location": "Nashville", "unit": "celsius" }
+Response: { "value": 19.8, "unit": "°C", "timestamp": "2023-10-28T09:24:00Z" }
+
+Question: Get the UV index for Salt Lake City.
+Call: { "func_call": "get_uv_index", "location": "Salt Lake City", "unit": "fahrenheit" }
+Response: { "value": 5.4, "unit": "index", "timestamp": "2023-10-28T09:25:00Z" }
+
+Question: What is the current temperature in Detroit?
+Call: { "func_call": "get_temperature", "location": "Detroit", "unit": "fahrenheit" }
+Response: { "value": 48.9, "unit": "°F", "timestamp": "2023-10-28T09:26:00Z" }

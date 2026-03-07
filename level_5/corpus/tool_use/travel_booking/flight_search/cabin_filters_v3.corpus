@@ -1,0 +1,51 @@
+Available Tools: search_flights | get_flight_details | filter_flights | get_seat_map
+Call Schema: { "func_call": "string", "origin": "string", "destination": "string", "departure_date": "string", "return_date": "string", "passengers": number, "cabin": "economy|business|first" }
+Response Schema: { "flights": [{ "flight_number": "string", "airline": "string", "departure": "string", "arrival": "string", "price": number, "duration_minutes": number }], "total": number }
+
+Question: Locate direct business class seats from Houston to London for three passengers on November 28th.
+Call: { "func_call": "filter_flights", "origin": "IAH", "destination": "LHR", "departure_date": "2024-11-28", "return_date": null, "passengers": 3, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "BA212", "airline": "British Airways", "departure": "2024-11-28T16:40:00Z", "arrival": "2024-11-29T06:15:00Z", "price": 5200, "duration_minutes": 575 }, { "flight_number": "UA14", "airline": "United Airlines", "departure": "2024-11-28T18:20:00Z", "arrival": "2024-11-29T08:00:00Z", "price": 4950, "duration_minutes": 580 }], "total": 2 }
+
+Question: Display economy flights with a connection from Vancouver to Mexico City for two travelers on December 12th.
+Call: { "func_call": "filter_flights", "origin": "YVR", "destination": "MEX", "departure_date": "2024-12-12", "return_date": null, "passengers": 2, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AM691", "airline": "Aeromexico", "departure": "2024-12-12T09:15:00Z", "arrival": "2024-12-12T19:45:00Z", "price": 780, "duration_minutes": 630 }, { "flight_number": "DL1882", "airline": "Delta", "departure": "2024-12-12T11:30:00Z", "arrival": "2024-12-12T22:10:00Z", "price": 820, "duration_minutes": 640 }], "total": 2 }
+
+Question: I require first class non-stop service from New York to Paris for one individual on January 25th.
+Call: { "func_call": "filter_flights", "origin": "JFK", "destination": "CDG", "departure_date": "2025-01-25", "return_date": null, "passengers": 1, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "AF007", "airline": "Air France", "departure": "2025-01-25T19:30:00Z", "arrival": "2025-01-26T08:45:00Z", "price": 14200, "duration_minutes": 435 }, { "flight_number": "DL264", "airline": "Delta", "departure": "2025-01-25T21:00:00Z", "arrival": "2025-01-26T10:15:00Z", "price": 13800, "duration_minutes": 435 }], "total": 2 }
+
+Question: Retrieve all economy options with a layover from Phoenix to Orlando for six people on February 9th.
+Call: { "func_call": "filter_flights", "origin": "PHX", "destination": "MCO", "departure_date": "2025-02-09", "return_date": null, "passengers": 6, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "WN2245", "airline": "Southwest", "departure": "2025-02-09T06:00:00Z", "arrival": "2025-02-09T14:30:00Z", "price": 1560, "duration_minutes": 510 }, { "flight_number": "AA1908", "airline": "American Airlines", "departure": "2025-02-09T08:45:00Z", "arrival": "2025-02-09T17:20:00Z", "price": 1490, "duration_minutes": 515 }], "total": 2 }
+
+Question: Find business class direct paths from Toronto to Frankfurt for four passengers on March 15th.
+Call: { "func_call": "filter_flights", "origin": "YYZ", "destination": "FRA", "departure_date": "2025-03-15", "return_date": null, "passengers": 4, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "LH471", "airline": "Lufthansa", "departure": "2025-03-15T17:15:00Z", "arrival": "2025-03-16T06:30:00Z", "price": 8100, "duration_minutes": 495 }, { "flight_number": "AC873", "airline": "Air Canada", "departure": "2025-03-15T19:45:00Z", "arrival": "2025-03-16T09:00:00Z", "price": 7850, "duration_minutes": 495 }], "total": 2 }
+
+Question: Show me economy flights with a stop from Bangkok to Sydney for two travelers on April 22nd.
+Call: { "func_call": "filter_flights", "origin": "BKK", "destination": "SYD", "departure_date": "2025-04-22", "return_date": null, "passengers": 2, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "TG475", "airline": "Thai Airways", "departure": "2025-04-22T00:30:00Z", "arrival": "2025-04-22T13:45:00Z", "price": 1120, "duration_minutes": 795 }, { "flight_number": "QF24", "airline": "Qantas", "departure": "2025-04-22T09:15:00Z", "arrival": "2025-04-22T22:30:00Z", "price": 1080, "duration_minutes": 795 }], "total": 2 }
+
+Question: Get direct first class availability from San Francisco to Seoul for one person on May 30th.
+Call: { "func_call": "filter_flights", "origin": "SFO", "destination": "ICN", "departure_date": "2025-05-30", "return_date": null, "passengers": 1, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "OZ212", "airline": "Asiana Airlines", "departure": "2025-05-30T13:40:00Z", "arrival": "2025-05-31T17:15:00Z", "price": 16500, "duration_minutes": 755 }, { "flight_number": "KE024", "airline": "Korean Air", "departure": "2025-05-30T15:10:00Z", "arrival": "2025-05-31T18:45:00Z", "price": 16200, "duration_minutes": 755 }], "total": 2 }
+
+Question: List economy routes with a layover from Detroit to Las Vegas for three people on June 18th.
+Call: { "func_call": "filter_flights", "origin": "DTW", "destination": "LAS", "departure_date": "2025-06-18", "return_date": null, "passengers": 3, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "DL1556", "airline": "Delta", "departure": "2025-06-18T07:25:00Z", "arrival": "2025-06-18T12:50:00Z", "price": 890, "duration_minutes": 325 }, { "flight_number": "WN3301", "airline": "Southwest", "departure": "2025-06-18T10:15:00Z", "arrival": "2025-06-18T15:45:00Z", "price": 840, "duration_minutes": 330 }], "total": 2 }
+
+Question: Search for business class direct flights from Munich to New York for five passengers on July 25th.
+Call: { "func_call": "filter_flights", "origin": "MUC", "destination": "JFK", "departure_date": "2025-07-25", "return_date": null, "passengers": 5, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "LH410", "airline": "Lufthansa", "departure": "2025-07-25T11:20:00Z", "arrival": "2025-07-25T14:35:00Z", "price": 6800, "duration_minutes": 555 }, { "flight_number": "UA960", "airline": "United Airlines", "departure": "2025-07-25T13:45:00Z", "arrival": "2025-07-25T17:00:00Z", "price": 6550, "duration_minutes": 555 }], "total": 2 }
+
+Question: Find economy flights with a connection from Charlotte to San Diego for two travelers on August 8th.
+Call: { "func_call": "filter_flights", "origin": "CLT", "destination": "SAN", "departure_date": "2025-08-08", "return_date": null, "passengers": 2, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AA2890", "airline": "American Airlines", "departure": "2025-08-08T06:50:00Z", "arrival": "2025-08-08T13:20:00Z", "price": 720, "duration_minutes": 390 }, { "flight_number": "DL4421", "airline": "Delta", "departure": "2025-08-08T09:30:00Z", "arrival": "2025-08-08T16:05:00Z", "price": 680, "duration_minutes": 395 }], "total": 2 }
+
+Question: Show direct first class options from Istanbul to Los Angeles for one passenger on September 14th.
+Call: { "func_call": "filter_flights", "origin": "IST", "destination": "LAX", "departure_date": "2025-09-14", "return_date": null, "passengers": 1, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "TK011", "airline": "Turkish Airlines", "departure": "2025-09-14T01:45:00Z", "arrival": "2025-09-14T06:20:00Z", "price": 15400, "duration_minutes": 815 }, { "flight_number": "AA155", "airline": "American Airlines", "departure": "2025-09-14T10:30:00Z", "arrival": "2025-09-14T15:05:00Z", "price": 14900, "duration_minutes": 815 }], "total": 2 }
+
+Question: Locate economy flights with a stopover from Minneapolis to Honolulu for four people on October 5th.
+Call: { "func_call": "filter_flights", "origin": "MSP", "destination": "HNL", "departure_date": "2025-10-05", "return_date": null, "passengers": 4, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "DL1420", "airline": "Delta", "departure": "2025-10-05T08:10:00Z", "arrival": "2025-10-05T18:45:00Z", "price": 1340, "duration_minutes": 635 }, { "flight_number": "HA22", "airline": "Hawaiian Airlines", "departure": "2025-10-05T11:25:00Z", "arrival": "2025-10-05T22:00:00Z", "price": 1290, "duration_minutes": 635 }], "total": 2 }

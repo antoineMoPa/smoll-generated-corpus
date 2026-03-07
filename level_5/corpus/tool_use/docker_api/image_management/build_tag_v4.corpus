@@ -1,0 +1,51 @@
+Available Tools: pull_image | push_image | build_image | list_images | remove_image | tag_image
+Call Schema: { "func_call": "string", "image": "string", "tag": "string", "registry": "string", "dockerfile": "string" }
+Response Schema: { "image_id": "string", "repository": "string", "tag": "string", "size_mb": number, "created": "string" }
+---
+Question: Assemble the order-processor image with tag v2.5.0 using the standard Dockerfile.
+Call: { "func_call": "build_image", "image": "order-processor", "tag": "v2.5.0", "registry": "docker.io", "dockerfile": "./Dockerfile" }
+Response: { "image_id": "sha256:1a2b3c4d5e6f", "repository": "docker.io/order-processor", "tag": "v2.5.0", "size_mb": 156.4, "created": "2023-11-01T08:30:15Z" }
+
+Question: Construct the email-sender service labeled stable from the mail-specific Dockerfile.
+Call: { "func_call": "build_image", "image": "email-sender", "tag": "stable", "registry": "gcr.io/messaging", "dockerfile": "./mail/Dockerfile" }
+Response: { "image_id": "sha256:2b3c4d5e6f7a", "repository": "gcr.io/messaging/email-sender", "tag": "stable", "size_mb": 88.9, "created": "2023-11-01T09:15:42Z" }
+
+Question: Build the analytics-dashboard with version v1.2.3-beta using the heavy dependencies Dockerfile.
+Call: { "func_call": "build_image", "image": "analytics-dashboard", "tag": "v1.2.3-beta", "registry": "quay.io/data-team", "dockerfile": "./heavy/Dockerfile" }
+Response: { "image_id": "sha256:3c4d5e6f7a8b", "repository": "quay.io/data-team/analytics-dashboard", "tag": "v1.2.3-beta", "size_mb": 420.1, "created": "2023-11-01T10:45:33Z" }
+
+Question: Generate the scheduler-worker image tagged latest from the cron Dockerfile configuration.
+Call: { "func_call": "build_image", "image": "scheduler-worker", "tag": "latest", "registry": "docker.io", "dockerfile": "./cron/Dockerfile" }
+Response: { "image_id": "sha256:4d5e6f7a8b9c", "repository": "docker.io/scheduler-worker", "tag": "latest", "size_mb": 55.7, "created": "2023-11-01T11:20:10Z" }
+
+Question: Compile the recommendation-engine with tag v3.1.0 using the ml-optimized Dockerfile.
+Call: { "func_call": "build_image", "image": "recommendation-engine", "tag": "v3.1.0", "registry": "artifactory.ml", "dockerfile": "./ml/Dockerfile.opt" }
+Response: { "image_id": "sha256:5e6f7a8b9c0d", "repository": "artifactory.ml/recommendation-engine", "tag": "v3.1.0", "size_mb": 890.5, "created": "2023-11-01T12:55:28Z" }
+
+Question: Create a dev build for the config-server using the minimal base Dockerfile.
+Call: { "func_call": "build_image", "image": "config-server", "tag": "dev", "registry": "gcr.io/platform", "dockerfile": "./base/Dockerfile.min" }
+Response: { "image_id": "sha256:6f7a8b9c0d1e", "repository": "gcr.io/platform/config-server", "tag": "dev", "size_mb": 34.2, "created": "2023-11-01T13:10:55Z" }
+
+Question: Build the file-storage service with version v1.0.5 from the root Dockerfile.
+Call: { "func_call": "build_image", "image": "file-storage", "tag": "v1.0.5", "registry": "docker.io", "dockerfile": "./Dockerfile" }
+Response: { "image_id": "sha256:7a8b9c0d1e2f", "repository": "docker.io/file-storage", "tag": "v1.0.5", "size_mb": 112.8, "created": "2023-11-01T14:35:40Z" }
+
+Question: Assemble the chat-bot module tagged rc2 using the node-specific Dockerfile.
+Call: { "func_call": "build_image", "image": "chat-bot", "tag": "rc2", "registry": "quay.io/support", "dockerfile": "./node/Dockerfile" }
+Response: { "image_id": "sha256:8b9c0d1e2f3a", "repository": "quay.io/support/chat-bot", "tag": "rc2", "size_mb": 178.3, "created": "2023-11-01T15:22:18Z" }
+
+Question: Generate the video-transcoder image with label v4.0.0 using the gpu-enabled Dockerfile.
+Call: { "func_call": "build_image", "image": "video-transcoder", "tag": "v4.0.0", "registry": "gcr.io/media", "dockerfile": "./gpu/Dockerfile" }
+Response: { "image_id": "sha256:9c0d1e2f3a4b", "repository": "gcr.io/media/video-transcoder", "tag": "v4.0.0", "size_mb": 1250.6, "created": "2023-11-01T16:48:05Z" }
+
+Question: Build the audit-logger service with a production tag from the secure Dockerfile path.
+Call: { "func_call": "build_image", "image": "audit-logger", "tag": "production", "registry": "artifactory.sec", "dockerfile": "./secure/Dockerfile" }
+Response: { "image_id": "sha256:0d1e2f3a4b5c", "repository": "artifactory.sec/audit-logger", "tag": "production", "size_mb": 67.4, "created": "2023-11-01T17:30:50Z" }
+
+Question: Compile the geo-mapper tool with version v2.2.2 using the maps Dockerfile.
+Call: { "func_call": "build_image", "image": "geo-mapper", "tag": "v2.2.2", "registry": "docker.io", "dockerfile": "./maps/Dockerfile" }
+Response: { "image_id": "sha256:1e2f3a4b5c6d", "repository": "docker.io/geo-mapper", "tag": "v2.2.2", "size_mb": 230.9, "created": "2023-11-01T18:15:33Z" }
+
+Question: Create a nightly build of the backup-agent using the slim utility Dockerfile.
+Call: { "func_call": "build_image", "image": "backup-agent", "tag": "nightly", "registry": "gcr.io/ops", "dockerfile": "./utils/Dockerfile.slim" }
+Response: { "image_id": "sha256:2f3a4b5c6d7e", "repository": "gcr.io/ops/backup-agent", "tag": "nightly", "size_mb": 29.8, "created": "2023-11-01T19:05:12Z" }

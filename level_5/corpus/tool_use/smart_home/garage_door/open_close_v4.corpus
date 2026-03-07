@@ -1,0 +1,51 @@
+Available Tools: open_garage | close_garage | get_garage_status | set_garage_timer
+Call Schema: { "func_call": "string", "door_id": "string", "delay_seconds": number }
+Response Schema: { "door_id": "string", "state": "open|closed|opening|closing", "timestamp": "string" }
+---
+Question: Pulling in with groceries, could you open the front garage door?
+Call: { "func_call": "open_garage", "door_id": "garage_front_a", "delay_seconds": 0 }
+Response: { "door_id": "garage_front_a", "state": "opening", "timestamp": "2023-11-01T17:22:15Z" }
+
+Question: Leaving for the gym, please shut the rear garage door tightly.
+Call: { "func_call": "close_garage", "door_id": "garage_rear_x", "delay_seconds": 0 }
+Response: { "door_id": "garage_rear_x", "state": "closing", "timestamp": "2023-11-01T18:05:40Z" }
+
+Question: Need to unload the van, open the storage bay door right now.
+Call: { "func_call": "open_garage", "door_id": "storage_bay_2", "delay_seconds": 0 }
+Response: { "door_id": "storage_bay_2", "state": "opening", "timestamp": "2023-11-02T10:15:22Z" }
+
+Question: Storm warning issued, immediately close the front garage door.
+Call: { "func_call": "close_garage", "door_id": "garage_front_a", "delay_seconds": 0 }
+Response: { "door_id": "garage_front_a", "state": "closing", "timestamp": "2023-11-02T14:30:55Z" }
+
+Question: Going on a trip, make sure the rear door is locked starting now.
+Call: { "func_call": "close_garage", "door_id": "garage_rear_x", "delay_seconds": 0 }
+Response: { "door_id": "garage_rear_x", "state": "closing", "timestamp": "2023-11-03T08:45:10Z" }
+
+Question: Furniture delivery arriving, please open the wide entrance door.
+Call: { "func_call": "open_garage", "door_id": "entrance_wide_01", "delay_seconds": 0 }
+Response: { "door_id": "entrance_wide_01", "state": "opening", "timestamp": "2023-11-03T13:20:33Z" }
+
+Question: Left the storage door open while painting, close it please.
+Call: { "func_call": "close_garage", "door_id": "storage_bay_2", "delay_seconds": 0 }
+Response: { "door_id": "storage_bay_2", "state": "closing", "timestamp": "2023-11-03T19:55:18Z" }
+
+Question: Just got back from dinner, open the side entry garage.
+Call: { "func_call": "open_garage", "door_id": "side_entry_c", "delay_seconds": 0 }
+Response: { "door_id": "side_entry_c", "state": "opening", "timestamp": "2023-11-04T20:10:05Z" }
+
+Question: Motion detected at night, secure the wide entrance door immediately.
+Call: { "func_call": "close_garage", "door_id": "entrance_wide_01", "delay_seconds": 0 }
+Response: { "door_id": "entrance_wide_01", "state": "closing", "timestamp": "2023-11-04T23:45:50Z" }
+
+Question: Taking the bikes out, please open the side entry garage door.
+Call: { "func_call": "open_garage", "door_id": "side_entry_c", "delay_seconds": 0 }
+Response: { "door_id": "side_entry_c", "state": "opening", "timestamp": "2023-11-05T09:30:12Z" }
+
+Question: End of day chores, close the front garage door before sleeping.
+Call: { "func_call": "close_garage", "door_id": "garage_front_a", "delay_seconds": 0 }
+Response: { "door_id": "garage_front_a", "state": "closing", "timestamp": "2023-11-05T22:15:45Z" }
+
+Question: Early morning run, activate the rear garage door for exit.
+Call: { "func_call": "open_garage", "door_id": "garage_rear_x", "delay_seconds": 0 }
+Response: { "door_id": "garage_rear_x", "state": "opening", "timestamp": "2023-11-06T05:50:28Z" }

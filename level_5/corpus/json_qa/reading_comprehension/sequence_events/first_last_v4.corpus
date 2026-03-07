@@ -1,0 +1,59 @@
+Context: First, David washed the carrots. Next, he chopped them into small pieces. Finally, he added them to the soup pot.
+Input: {"question": "What happened first?"}
+Output: {"answer": "David washed the carrots"}
+
+Context: The movie began with a dramatic car chase. The plot thickened when the hero met the villain. The film ended with a surprise twist.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The film ended with a surprise twist"}
+
+Context: To paint the wall, start by applying the primer. Then, roll on the first coat of blue paint. Finish by adding a second coat for even coverage.
+Input: {"question": "What happened first?"}
+Output: {"answer": "applying the primer"}
+
+Context: Sarah fed the dog, walked him around the block, and then gave him a treat.
+Input: {"question": "What happened last?"}
+Output: {"answer": "gave him a treat"}
+
+Context: The experiment began when the temperature reached boiling point. Steam rose rapidly from the beaker, and the color faded. The solution solidified after an hour.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the temperature reached boiling point"}
+
+Context: First, the writer outlined the chapter. Second, she drafted the introduction. Third, she edited the paragraphs. Lastly, she submitted the manuscript.
+Input: {"question": "What happened last?"}
+Output: {"answer": "she submitted the manuscript"}
+
+Context: He unlocked the door, stepped inside, and turned on the lights.
+Input: {"question": "What happened first?"}
+Output: {"answer": "He unlocked the door"}
+
+Context: The festival opened with a ribbon-cutting ceremony. Food trucks lined the streets throughout the afternoon. The celebration closed with a live guitar performance.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The celebration closed with a live guitar performance"}
+
+Context: Before planting the trees, dig a hole two feet deep. Place the sapling gently into the hole. Fill the space with soil and water thoroughly.
+Input: {"question": "What happened first?"}
+Output: {"answer": "dig a hole two feet deep"}
+
+Context: The mechanic inspected the engine, replaced the oil filter, and then tested the brakes.
+Input: {"question": "What happened last?"}
+Output: {"answer": "tested the brakes"}
+
+Context: First, the clay was molded into a vase shape. Days later, it was fired in the kiln. Eventually, it was painted with intricate designs.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the clay was molded into a vase shape"}
+
+Context: The document was typed on the computer, saved to the cloud, and then emailed to the manager.
+Input: {"question": "What happened last?"}
+Output: {"answer": "emailed to the manager"}
+
+Context: To fix the leak, first turn off the main water valve. Next, drain the remaining water from the pipes. Remove the broken pipe section and install a new one.
+Input: {"question": "What happened first?"}
+Output: {"answer": "turn off the main water valve"}
+
+Context: The play started with a monologue by the protagonist. The middle acts featured several comic scenes. The show concluded with a full cast bow.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The show concluded with a full cast bow"}
+
+Context: First, the students gathered in the auditorium. Then, the principal gave a speech. After the announcements, they returned to class.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the students gathered in the auditorium"}

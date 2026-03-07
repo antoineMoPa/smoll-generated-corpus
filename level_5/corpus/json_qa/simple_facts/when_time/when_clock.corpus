@@ -1,0 +1,59 @@
+Context: The morning meeting is scheduled to start at 9:00 AM in the main conference room. Please ensure you have your reports ready before then.
+Input: {"question": "When does the morning meeting start?"}
+Output: {"answer": "9:00 AM"}
+
+Context: We decided to grab dinner after midnight because the restaurant stays open late. It was the only time we could all make it.
+Input: {"question": "What time did you go for dinner?"}
+Output: {"answer": "after midnight"}
+
+Context: The train to Chicago departs promptly at 6:45 PM from platform 4. Do not be late or you will miss your connection.
+Input: {"question": "When does the train to Chicago depart?"}
+Output: {"answer": "6:45 PM"}
+
+Context: She usually wakes up early in the morning to go for a run before work. This routine helps her stay energized throughout the day.
+Input: {"question": "When does she wake up to go for a run?"}
+Output: {"answer": "early in the morning"}
+
+Context: The pharmacy closes at 8:00 PM on weekdays and 5:00 PM on weekends. Make sure to pick up your prescription before then.
+Input: {"question": "What time does the pharmacy close on weekdays?"}
+Output: {"answer": "8:00 PM"}
+
+Context: They arrived at the airport just before noon to check in for their flight. The lines were surprisingly short for that time of day.
+Input: {"question": "When did they arrive at the airport?"}
+Output: {"answer": "just before noon"}
+
+Context: The power went out at 11:30 PM during the storm, leaving the whole neighborhood in the dark. Everyone had to use flashlights until morning.
+Input: {"question": "At what time did the power go out?"}
+Output: {"answer": "11:30 PM"}
+
+Context: His shift at the factory begins at 7:00 AM sharp, so he sets multiple alarms. Being late results in a written warning.
+Input: {"question": "When does his shift begin?"}
+Output: {"answer": "7:00 AM"}
+
+Context: We plan to watch the fireworks show at dusk when the sky is dark enough. It is the best time to see the colors clearly.
+Input: {"question": "When will you watch the fireworks show?"}
+Output: {"answer": "at dusk"}
+
+Context: The package is expected to be delivered between 2:00 PM and 4:00 PM tomorrow afternoon. Someone needs to be home to sign for it.
+Input: {"question": "When is the package expected to be delivered?"}
+Output: {"answer": "between 2:00 PM and 4:00 PM"}
+
+Context: The sun set at 7:15 PM, casting a golden glow over the lake. It was a perfect evening for a boat ride.
+Input: {"question": "What time did the sun set?"}
+Output: {"answer": "7:15 PM"}
+
+Context: You should take the medication twice a day, once at breakfast and once at bedtime. Consistency is key for this treatment.
+Input: {"question": "When should you take the medication?"}
+Output: {"answer": "once at breakfast and once at bedtime"}
+
+Context: The live broadcast starts at 10:00 PM Eastern Time and lasts for two hours. Set your DVR if you cannot watch it live.
+Input: {"question": "What time does the live broadcast start?"}
+Output: {"answer": "10:00 PM"}
+
+Context: They agreed to meet for coffee at half past three in the afternoon. The café near the park is their usual spot.
+Input: {"question": "When did they agree to meet for coffee?"}
+Output: {"answer": "at half past three"}
+
+Context: The store opens at 10:00 AM on Sundays, which is later than usual. Many customers wait outside until the doors unlock.
+Input: {"question": "When does the store open on Sundays?"}
+Output: {"answer": "10:00 AM"}

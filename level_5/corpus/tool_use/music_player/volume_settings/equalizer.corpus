@@ -1,0 +1,51 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: Switch the equalizer to the rock preset.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "rock" }
+Response: { "volume": 45, "muted": false, "equalizer_preset": "rock" }
+
+Question: I want to listen to some jazz, please change the equalizer.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "jazz" }
+Response: { "volume": 38, "muted": false, "equalizer_preset": "jazz" }
+
+Question: Set the audio profile to classical for this symphony.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "classical" }
+Response: { "volume": 52, "muted": false, "equalizer_preset": "classical" }
+
+Question: Enable bass boost on the equalizer.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "bass boost" }
+Response: { "volume": 60, "muted": false, "equalizer_preset": "bass boost" }
+
+Question: Change the sound settings to the podcast preset.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "podcast" }
+Response: { "volume": 70, "muted": false, "equalizer_preset": "podcast" }
+
+Question: Can you set the equalizer to rock for this guitar solo?
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "rock" }
+Response: { "volume": 55, "muted": false, "equalizer_preset": "rock" }
+
+Question: Apply the jazz equalizer preset now.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "jazz" }
+Response: { "volume": 42, "muted": false, "equalizer_preset": "jazz" }
+
+Question: I need the classical preset active for my violin concerto.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "classical" }
+Response: { "volume": 48, "muted": false, "equalizer_preset": "classical" }
+
+Question: Turn on bass boost for the hip-hop track.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "bass boost" }
+Response: { "volume": 65, "muted": false, "equalizer_preset": "bass boost" }
+
+Question: Set the equalizer to podcast mode for this interview.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "podcast" }
+Response: { "volume": 75, "muted": false, "equalizer_preset": "podcast" }
+
+Question: Switch to the rock preset immediately.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "rock" }
+Response: { "volume": 50, "muted": false, "equalizer_preset": "rock" }
+
+Question: Please configure the equalizer for jazz music.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "jazz" }
+Response: { "volume": 40, "muted": false, "equalizer_preset": "jazz" }

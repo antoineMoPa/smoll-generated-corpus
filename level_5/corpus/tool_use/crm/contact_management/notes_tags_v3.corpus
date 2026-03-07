@@ -1,0 +1,87 @@
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Log a note for contact C-3387, James Wilson at Horizon Cloud, indicating he needs approval from the board before proceeding with the upgrade.
+Call: { "func_call": "add_note", "contact_id": "C-3387", "name": "James Wilson", "email": "jwilson@horizoncloud.net", "company": "Horizon Cloud", "note": "Upgrade discussion held. James requires board approval for the budget increase associated with the premium tier. He expects a vote by next Friday and will notify us immediately after. Pending status until then." }
+Response: { "contact_id": "C-3387", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Apply the 'Partner-Referral' tag to contact C-4512, Sofia Martinez at EcoBuild Systems, as she was introduced by our certified partner GreenTech.
+Call: { "func_call": "add_tag", "contact_id": "C-4512", "name": "Sofia Martinez", "email": "smartinez@ecobuildsys.com", "company": "EcoBuild Systems", "note": "Partner-Referral" }
+Response: { "contact_id": "C-4512", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Record a follow-up for contact C-5698, Alan Turing at DataFlow Inc, noting that the security audit passed with no critical findings.
+Call: { "func_call": "add_note", "contact_id": "C-5698", "name": "Alan Turing", "email": "aturing@dataflowinc.io", "company": "DataFlow Inc", "note": "Security audit completed successfully. No critical vulnerabilities were found in the integration layer. Alan confirmed that the compliance team has signed off on the deployment. Proceed to final contract signing phase." }
+Response: { "contact_id": "C-5698", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Tag contact C-6723, Rachel Green at FashionForward, with 'Seasonal-Buyer' because she only purchases during the spring collection launch.
+Call: { "func_call": "add_tag", "contact_id": "C-6723", "name": "Rachel Green", "email": "rgreen@fashionfwd.com", "company": "FashionForward", "note": "Seasonal-Buyer" }
+Response: { "contact_id": "C-6723", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add a note to contact C-7845, Kevin Zhang at Metro Transit, summarizing the complaint about latency issues during peak hours and our response.
+Call: { "func_call": "add_note", "contact_id": "C-7845", "name": "Kevin Zhang", "email": "kzhang@metrotransit.gov", "company": "Metro Transit", "note": "Complaint logged regarding API latency spikes between 8 AM and 9 AM. Our engineering team identified a bottleneck in the load balancer and applied a hotfix. Kevin verified the resolution this morning and confirmed performance is back to normal levels." }
+Response: { "contact_id": "C-7845", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Assign the 'VIP-Support' tag to contact C-8901, Dr. Emily Stone at BioGen Labs, due to her critical role in the ongoing clinical trial data processing.
+Call: { "func_call": "add_tag", "contact_id": "C-8901", "name": "Dr. Emily Stone", "email": "estone@biogenlabs.org", "company": "BioGen Labs", "note": "VIP-Support" }
+Response: { "contact_id": "C-8901", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Document a meeting outcome for contact C-9034, Carlos Mendez at Urban Plan, stating that the city council has delayed the project funding until Q3.
+Call: { "func_call": "add_note", "contact_id": "C-9034", "name": "Carlos Mendez", "email": "cmendez@urbanplan.city", "company": "Urban Plan", "note": "Meeting outcome: City council voted to delay project funding approval until Q3 due to budget reallocation. Carlos advised us to pause all implementation planning until further notice. Next check-in scheduled for July 1st." }
+Response: { "contact_id": "C-9034", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Tag contact C-1029, Lisa Wang at StreamLine Media, as 'Content-Creator' since she manages a network of over 50 influencers.
+Call: { "func_call": "add_tag", "contact_id": "C-1029", "name": "Lisa Wang", "email": "lwang@streamlinemedia.tv", "company": "StreamLine Media", "note": "Content-Creator" }
+Response: { "contact_id": "C-1029", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Write a note for contact C-2157, George Harris at IronClad Security, mentioning his request for a custom NDA before sharing their infrastructure diagrams.
+Call: { "func_call": "add_note", "contact_id": "C-2157", "name": "George Harris", "email": "gharris@ironcladsec.com", "company": "IronClad Security", "note": "George requested a custom Non-Disclosure Agreement specific to infrastructure sharing before providing any network diagrams. Legal team is currently drafting the document based on their template. Expected turnaround time is 48 hours." }
+Response: { "contact_id": "C-2157", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Apply the 'Renewal-Soon' tag to contact C-3284, Nina Petrov at Global Ship, as her contract expires in less than 30 days.
+Call: { "func_call": "add_tag", "contact_id": "C-3284", "name": "Nina Petrov", "email": "npetrov@globalship.com", "company": "Global Ship", "note": "Renewal-Soon" }
+Response: { "contact_id": "C-3284", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add a summary note for contact C-4396, Oliver Bennett at Craft Brew Co, detailing his feedback on the new inventory management module.
+Call: { "func_call": "add_note", "contact_id": "C-4396", "name": "Oliver Bennett", "email": "obennett@craftbrewco.biz", "company": "Craft Brew Co", "note": "Feedback session completed. Oliver loves the real-time tracking features in the new inventory module but suggested adding a bulk-edit function for seasonal SKU updates. Product team has added this to the roadmap for the next sprint." }
+Response: { "contact_id": "C-4396", "status": "success", "updated_fields": ["notes"] }

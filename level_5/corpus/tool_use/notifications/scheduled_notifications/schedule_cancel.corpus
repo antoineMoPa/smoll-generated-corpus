@@ -1,0 +1,51 @@
+Available Tools: schedule_notification | cancel_scheduled | list_scheduled | update_schedule
+Call Schema: { "func_call": "string", "notification_id": "string", "scheduled_at": "string", "recurrence": "string", "channel": "push|sms|email" }
+Response Schema: { "notification_id": "string", "scheduled_at": "string", "status": "scheduled|cancelled", "recurrence": "string" }
+---
+Question: Schedule a daily push notification for user ID usr_8821 to remind them to drink water at 8 AM starting tomorrow.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_daily_water_01", "scheduled_at": "2023-10-25T08:00:00Z", "recurrence": "daily", "channel": "push" }
+Response: { "notification_id": "ntf_daily_water_01", "scheduled_at": "2023-10-25T08:00:00Z", "status": "scheduled", "recurrence": "daily" }
+
+Question: Cancel the weekly email summary scheduled for next Monday with ID ntf_weekly_report_99.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_weekly_report_99", "scheduled_at": "2023-10-30T09:00:00Z", "recurrence": "weekly", "channel": "email" }
+Response: { "notification_id": "ntf_weekly_report_99", "scheduled_at": "2023-10-30T09:00:00Z", "status": "cancelled", "recurrence": "weekly" }
+
+Question: Set up a weekly SMS reminder for appointment confirmation every Friday at 2 PM starting this week.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_appt_reminder_fri", "scheduled_at": "2023-10-27T14:00:00Z", "recurrence": "weekly", "channel": "sms" }
+Response: { "notification_id": "ntf_appt_reminder_fri", "scheduled_at": "2023-10-27T14:00:00Z", "status": "scheduled", "recurrence": "weekly" }
+
+Question: I need to stop the daily promotional push notification with ID ntf_promo_daily_x2 immediately.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_promo_daily_x2", "scheduled_at": "2023-10-25T12:00:00Z", "recurrence": "daily", "channel": "push" }
+Response: { "notification_id": "ntf_promo_daily_x2", "scheduled_at": "2023-10-25T12:00:00Z", "status": "cancelled", "recurrence": "daily" }
+
+Question: Schedule a daily email digest for user alice@example.com to be sent at midnight starting tonight.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_digest_alice_01", "scheduled_at": "2023-10-25T00:00:00Z", "recurrence": "daily", "channel": "email" }
+Response: { "notification_id": "ntf_digest_alice_01", "scheduled_at": "2023-10-25T00:00:00Z", "status": "scheduled", "recurrence": "daily" }
+
+Question: Remove the weekly system maintenance alert scheduled for Sunday mornings, ID ntf_maint_sun_04.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_maint_sun_04", "scheduled_at": "2023-10-29T06:00:00Z", "recurrence": "weekly", "channel": "sms" }
+Response: { "notification_id": "ntf_maint_sun_04", "scheduled_at": "2023-10-29T06:00:00Z", "status": "cancelled", "recurrence": "weekly" }
+
+Question: Create a recurring weekly push notification for team standups every Wednesday at 10 AM starting next week.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_standup_wed_team", "scheduled_at": "2023-11-01T10:00:00Z", "recurrence": "weekly", "channel": "push" }
+Response: { "notification_id": "ntf_standup_wed_team", "scheduled_at": "2023-11-01T10:00:00Z", "status": "scheduled", "recurrence": "weekly" }
+
+Question: Cancel the daily weather update SMS scheduled for 7 AM with identifier ntf_weather_daily_77.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_weather_daily_77", "scheduled_at": "2023-10-25T07:00:00Z", "recurrence": "daily", "channel": "sms" }
+Response: { "notification_id": "ntf_weather_daily_77", "scheduled_at": "2023-10-25T07:00:00Z", "status": "cancelled", "recurrence": "daily" }
+
+Question: Schedule a weekly newsletter email to go out every Tuesday at 4 PM starting tomorrow.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_newsletter_tue_pm", "scheduled_at": "2023-10-24T16:00:00Z", "recurrence": "weekly", "channel": "email" }
+Response: { "notification_id": "ntf_newsletter_tue_pm", "scheduled_at": "2023-10-24T16:00:00Z", "status": "scheduled", "recurrence": "weekly" }
+
+Question: Please cancel the daily fitness tip push notification, ID ntf_fit_tip_daily_05, effective immediately.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_fit_tip_daily_05", "scheduled_at": "2023-10-25T18:00:00Z", "recurrence": "daily", "channel": "push" }
+Response: { "notification_id": "ntf_fit_tip_daily_05", "scheduled_at": "2023-10-25T18:00:00Z", "status": "cancelled", "recurrence": "daily" }
+
+Question: Set a weekly backup completion alert via email for every Saturday at 3 AM starting this weekend.
+Call: { "func_call": "schedule_notification", "notification_id": "ntf_backup_sat_alert", "scheduled_at": "2023-10-28T03:00:00Z", "recurrence": "weekly", "channel": "email" }
+Response: { "notification_id": "ntf_backup_sat_alert", "scheduled_at": "2023-10-28T03:00:00Z", "status": "scheduled", "recurrence": "weekly" }
+
+Question: Stop the daily server load report SMS scheduled for noon, reference ID ntf_load_report_noon.
+Call: { "func_call": "cancel_scheduled", "notification_id": "ntf_load_report_noon", "scheduled_at": "2023-10-25T12:00:00Z", "recurrence": "daily", "channel": "sms" }
+Response: { "notification_id": "ntf_load_report_noon", "scheduled_at": "2023-10-25T12:00:00Z", "status": "cancelled", "recurrence": "daily" }

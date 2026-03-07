@@ -1,0 +1,51 @@
+Available Tools: request_leave | get_leave_balance | approve_leave | reject_leave | get_leave_history
+Call Schema: { "func_call": "string", "employee_id": "string", "leave_type": "vacation|sick|personal|parental", "from_date": "string", "to_date": "string" }
+Response Schema: { "request_id": "string", "status": "pending|approved|rejected", "days_requested": number, "balance_remaining": number }
+---
+Question: What is the current parental leave balance for Michael Torres?
+Call: { "func_call": "get_leave_balance", "employee_id": "EMP-2241", "leave_type": "parental", "from_date": "", "to_date": "" }
+Response: { "request_id": "BAL-5512", "status": "approved", "days_requested": 0, "balance_remaining": 40.0 }
+---
+Question: I need to log a sick day for Angela Moore on September 3rd.
+Call: { "func_call": "request_leave", "employee_id": "EMP-3352", "leave_type": "sick", "from_date": "2024-09-03", "to_date": "2024-09-03" }
+Response: { "request_id": "REQ-7723", "status": "pending", "days_requested": 1, "balance_remaining": 5.5 }
+---
+Question: Can you tell me how many vacation days Christopher Lewis has remaining?
+Call: { "func_call": "get_leave_balance", "employee_id": "EMP-4463", "leave_type": "vacation", "from_date": "", "to_date": "" }
+Response: { "request_id": "BAL-8834", "status": "approved", "days_requested": 0, "balance_remaining": 18.0 }
+---
+Question: Please submit a parental leave request for Nancy Hall from October 1st to December 31st.
+Call: { "func_call": "request_leave", "employee_id": "EMP-5574", "leave_type": "parental", "from_date": "2024-10-01", "to_date": "2024-12-31" }
+Response: { "request_id": "REQ-9945", "status": "pending", "days_requested": 92, "balance_remaining": 0.0 }
+---
+Question: How many personal days are available for Kevin Young?
+Call: { "func_call": "get_leave_balance", "employee_id": "EMP-6685", "leave_type": "personal", "from_date": "", "to_date": "" }
+Response: { "request_id": "BAL-1156", "status": "approved", "days_requested": 0, "balance_remaining": 2.5 }
+---
+Question: Request vacation time for Betty King from November 20th through November 27th.
+Call: { "func_call": "request_leave", "employee_id": "EMP-7796", "leave_type": "vacation", "from_date": "2024-11-20", "to_date": "2024-11-27" }
+Response: { "request_id": "REQ-2267", "status": "pending", "days_requested": 8, "balance_remaining": 11.0 }
+---
+Question: Check the sick leave status for Donald Wright.
+Call: { "func_call": "get_leave_balance", "employee_id": "EMP-8807", "leave_type": "sick", "from_date": "", "to_date": "" }
+Response: { "request_id": "BAL-3378", "status": "approved", "days_requested": 0, "balance_remaining": 10.0 }
+---
+Question: I'd like to book a personal day for Helen Scott on December 15th.
+Call: { "func_call": "request_leave", "employee_id": "EMP-9918", "leave_type": "personal", "from_date": "2024-12-15", "to_date": "2024-12-15" }
+Response: { "request_id": "REQ-4489", "status": "pending", "days_requested": 1, "balance_remaining": 3.5 }
+---
+Question: What is the vacation balance for George Adams?
+Call: { "func_call": "get_leave_balance", "employee_id": "EMP-1029", "leave_type": "vacation", "from_date": "", "to_date": "" }
+Response: { "request_id": "BAL-5590", "status": "approved", "days_requested": 0, "balance_remaining": 25.5 }
+---
+Question: Submit a sick leave request for Sandra Nelson covering January 8th to January 10th.
+Call: { "func_call": "request_leave", "employee_id": "EMP-2130", "leave_type": "sick", "from_date": "2025-01-08", "to_date": "2025-01-10" }
+Response: { "request_id": "REQ-6601", "status": "pending", "days_requested": 3, "balance_remaining": 4.0 }
+---
+Question: How much parental leave does Brian Carter have left?
+Call: { "func_call": "get_leave_balance", "employee_id": "EMP-3241", "leave_type": "parental", "from_date": "", "to_date": "" }
+Response: { "request_id": "BAL-7712", "status": "approved", "days_requested": 0, "balance_remaining": 56.0 }
+---
+Question: Please request vacation for Dorothy Mitchell from February 14th to February 21st.
+Call: { "func_call": "request_leave", "employee_id": "EMP-4352", "leave_type": "vacation", "from_date": "2025-02-14", "to_date": "2025-02-21" }
+Response: { "request_id": "REQ-8823", "status": "pending", "days_requested": 8, "balance_remaining": 14.0 }

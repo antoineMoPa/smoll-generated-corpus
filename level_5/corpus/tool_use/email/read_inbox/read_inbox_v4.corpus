@@ -1,0 +1,51 @@
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Display the 8 most recent emails in my inbox.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 8 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_5000", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }, { "id": "msg_4999", "from": "legal@firm.net", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_4998", "from": "travel@booking.com", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T16:30:00Z", "read": true }, { "id": "msg_4997", "from": "it@office.local", "subject": "Scheduled Maintenance Tonight", "date": "2023-10-31T14:15:00Z", "read": false }, { "id": "msg_4996", "from": "hr@company.com", "subject": "Holiday Schedule Updated", "date": "2023-10-31T11:00:00Z", "read": true }, { "id": "msg_4995", "from": "news@techdaily.com", "subject": "AI Breakthroughs This Week", "date": "2023-10-30T18:45:00Z", "read": false }, { "id": "msg_4994", "from": "support@saas.product", "subject": "Your ticket #8821 has been resolved", "date": "2023-10-30T15:20:00Z", "read": true }], "total": 8 }
+
+Question: Retrieve the full content of message msg_5001 regarding the meeting.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_5001", "limit": 1 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }], "total": 1 }
+
+Question: What is the count of unread items currently in my inbox?
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 50 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_4999", "from": "legal@firm.net", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_4997", "from": "it@office.local", "subject": "Scheduled Maintenance Tonight", "date": "2023-10-31T14:15:00Z", "read": false }, { "id": "msg_4995", "from": "news@techdaily.com", "subject": "AI Breakthroughs This Week", "date": "2023-10-30T18:45:00Z", "read": false }], "total": 4 }
+
+Question: Find the latest communication from travel@booking.com.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }], "total": 1 }
+
+Question: Open the email with ID msg_4999 about the contract.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_4999", "limit": 1 }
+Response: { "messages": [{ "id": "msg_4999", "from": "legal@firm.net", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }], "total": 1 }
+
+Question: Show me the top 6 emails to catch up on morning updates.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 6 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_5000", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }, { "id": "msg_4999", "from": "legal@firm.net", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_4998", "from": "travel@booking.com", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T16:30:00Z", "read": true }, { "id": "msg_4997", "from": "it@office.local", "subject": "Scheduled Maintenance Tonight", "date": "2023-10-31T14:15:00Z", "read": false }, { "id": "msg_4996", "from": "hr@company.com", "subject": "Holiday Schedule Updated", "date": "2023-10-31T11:00:00Z", "read": true }], "total": 6 }
+
+Question: I need to read the server alert message msg_5000 immediately.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_5000", "limit": 1 }
+Response: { "messages": [{ "id": "msg_5000", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }], "total": 1 }
+
+Question: List the last 12 emails to search for vendor invoices.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 12 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_5000", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }, { "id": "msg_4999", "from": "legal@firm.net", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_4998", "from": "travel@booking.com", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T16:30:00Z", "read": true }, { "id": "msg_4997", "from": "it@office.local", "subject": "Scheduled Maintenance Tonight", "date": "2023-10-31T14:15:00Z", "read": false }, { "id": "msg_4996", "from": "hr@company.com", "subject": "Holiday Schedule Updated", "date": "2023-10-31T11:00:00Z", "read": true }, { "id": "msg_4995", "from": "news@techdaily.com", "subject": "AI Breakthroughs This Week", "date": "2023-10-30T18:45:00Z", "read": false }, { "id": "msg_4994", "from": "support@saas.product", "subject": "Your ticket #8821 has been resolved", "date": "2023-10-30T15:20:00Z", "read": true }, { "id": "msg_4993", "from": "billing@electric.co", "subject": "November Utility Bill Enclosed", "date": "2023-10-30T09:00:00Z", "read": false }, { "id": "msg_4992", "from": "recruiter@jobs.net", "subject": "Interview Invitation: Senior Dev Role", "date": "2023-10-29T14:30:00Z", "read": true }, { "id": "msg_4991", "from": "noreply@linkedin.com", "subject": "You appeared in 5 searches this week", "date": "2023-10-29T12:15:00Z", "read": false }, { "id": "msg_4990", "from": "admin@building.mgmt", "subject": "Lobby Renovation Notice", "date": "2023-10-29T08:45:00Z", "read": true }], "total": 12 }
+
+Question: Pull up the flight details from msg_4998.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_4998", "limit": 1 }
+Response: { "messages": [{ "id": "msg_4998", "from": "travel@booking.com", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T16:30:00Z", "read": true }], "total": 1 }
+
+Question: Get the single newest message received today.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }], "total": 1 }
+
+Question: Fetch message msg_4993 concerning the utility bill.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_4993", "limit": 1 }
+Response: { "messages": [{ "id": "msg_4993", "from": "billing@electric.co", "subject": "November Utility Bill Enclosed", "date": "2023-10-30T09:00:00Z", "read": false }], "total": 1 }
+
+Question: List the last 5 emails to verify recent HR notifications.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 5 }
+Response: { "messages": [{ "id": "msg_5001", "from": "ceo@startup.io", "subject": "Q4 All Hands Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_5000", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }, { "id": "msg_4999", "from": "legal@firm.net", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_4998", "from": "travel@booking.com", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T16:30:00Z", "read": true }, { "id": "msg_4997", "from": "it@office.local", "subject": "Scheduled Maintenance Tonight", "date": "2023-10-31T14:15:00Z", "read": false }], "total": 5 }

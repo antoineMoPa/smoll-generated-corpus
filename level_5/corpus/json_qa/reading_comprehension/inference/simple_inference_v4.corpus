@@ -1,0 +1,59 @@
+Context: Marcus adjusted his silk tie and checked his reflection before entering the conference room.
+Input: {"question": "What accessory did Marcus adjust?"}
+Output: {"answer": "silk tie"}
+
+Context: The mechanic wiped grease from his hands and closed the hood after fixing the engine.
+Input: {"question": "What part of the car was fixed?"}
+Output: {"answer": "engine"}
+
+Context: Sophia hummed a tune and stirred the pot while the sauce simmered on the stove.
+Input: {"question": "What was Sophia cooking?"}
+Output: {"answer": "sauce"}
+
+Context: The audience applauded enthusiastically when the magician made the elephant disappear.
+Input: {"question": "What animal vanished?"}
+Output: {"answer": "elephant"}
+
+Context: David stared at the broken screen and groaned before calling the repair shop.
+Input: {"question": "Why did David call the shop?"}
+Output: {"answer": "broken screen"}
+
+Context: The grass in the park turned yellow and crunchy after months of intense heat.
+Input: {"question": "What caused the grass to change color?"}
+Output: {"answer": "intense heat"}
+
+Context: Rafael grabbed his hiking boots and map for the excursion to the mountains.
+Input: {"question": "What destination is Rafael visiting?"}
+Output: {"answer": "mountains"}
+
+Context: The cyclist swerved sharply to miss the pothole that appeared in the bike lane.
+Input: {"question": "What obstacle was in the lane?"}
+Output: {"answer": "pothole"}
+
+Context: The kitten meowed softly until its sibling joined it on the windowsill.
+Input: {"question": "Who joined the kitten?"}
+Output: {"answer": "sibling"}
+
+Context: Maria rummaged through the drawer but could not find any stamps, so she emailed the letter.
+Input: {"question": "What item was missing from the drawer?"}
+Output: {"answer": "stamps"}
+
+Context: The air grew humid and the birds fell silent just before the thunderstorm began.
+Input: {"question": "What weather event was coming?"}
+Output: {"answer": "thunderstorm"}
+
+Context: Ben left his glasses on the bus and struggled to read the menu at the restaurant.
+Input: {"question": "What item did Ben leave behind?"}
+Output: {"answer": "glasses"}
+
+Context: The baker checked the bread and lowered the temperature to prevent burning the crust.
+Input: {"question": "What part of the bread was at risk?"}
+Output: {"answer": "crust"}
+
+Context: The cat purred loudly and stretched when its favorite person sat on the sofa.
+Input: {"question": "Who sat down?"}
+Output: {"answer": "favorite person"}
+
+Context: The intern opened her laptop to review the notes from the morning meeting.
+Input: {"question": "What did the intern intend to review?"}
+Output: {"answer": "notes"}

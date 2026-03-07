@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "string", "head": "string", "base": "string" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Create a new pull request in the acme-corp/web-portal repository owned by jdoe to merge the feature/user-auth-update branch into main with the title "Implement OAuth2 Login Flow".
+Call: { "func_call": "create_pr", "owner": "jdoe", "repo": "web-portal", "pr_number": 0, "title": "Implement OAuth2 Login Flow", "head": "feature/user-auth-update", "base": "main" }
+Response: { "pr_number": 104, "title": "Implement OAuth2 Login Flow", "state": "open", "author": "jdoe", "changed_files": 12, "mergeable": true }
+
+Question: List all open pull requests for the data-pipeline repo under the organization analytics-hub.
+Call: { "func_call": "list_prs", "owner": "analytics-hub", "repo": "data-pipeline", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 89, "title": "Optimize Spark Job Memory Usage", "state": "open", "author": "sarah_dev", "changed_files": 5, "mergeable": true }
+
+Question: Open a PR in the mobile-app-ios repo owned by tech-giants to merge hotfix/crash-on-launch into develop titled "Fix Nil Pointer Exception on Launch".
+Call: { "func_call": "create_pr", "owner": "tech-giants", "repo": "mobile-app-ios", "pr_number": 0, "title": "Fix Nil Pointer Exception on Launch", "head": "hotfix/crash-on-launch", "base": "develop" }
+Response: { "pr_number": 231, "title": "Fix Nil Pointer Exception on Launch", "state": "open", "author": "tech-giants", "changed_files": 3, "mergeable": true }
+
+Question: Show me the current pull requests for the inventory-service repository managed by logi-chain.
+Call: { "func_call": "list_prs", "owner": "logi-chain", "repo": "inventory-service", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 45, "title": "Add Redis Caching Layer", "state": "open", "author": "mike_ops", "changed_files": 8, "mergeable": false }
+
+Question: Create a pull request for the frontend-dashboard repo owned by ui-team merging feature/dark-mode-toggle into main with the title "Add User Toggle for Dark Mode".
+Call: { "func_call": "create_pr", "owner": "ui-team", "repo": "frontend-dashboard", "pr_number": 0, "title": "Add User Toggle for Dark Mode", "head": "feature/dark-mode-toggle", "base": "main" }
+Response: { "pr_number": 78, "title": "Add User Toggle for Dark Mode", "state": "open", "author": "ui-team", "changed_files": 15, "mergeable": true }
+
+Question: List pending pull requests for the payment-gateway project under the finance-io organization.
+Call: { "func_call": "list_prs", "owner": "finance-io", "repo": "payment-gateway", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 112, "title": "Update Stripe API Version", "state": "open", "author": "alex_sec", "changed_files": 6, "mergeable": true }
+
+Question: Submit a new PR to the docs-site repo owned by open-source-org to merge content/api-v2-update into main titled "Update API Documentation for V2".
+Call: { "func_call": "create_pr", "owner": "open-source-org", "repo": "docs-site", "pr_number": 0, "title": "Update API Documentation for V2", "head": "content/api-v2-update", "base": "main" }
+Response: { "pr_number": 305, "title": "Update API Documentation for V2", "state": "open", "author": "open-source-org", "changed_files": 22, "mergeable": true }
+
+Question: What pull requests are currently active in the notification-engine repo belonging to cloud-systems?
+Call: { "func_call": "list_prs", "owner": "cloud-systems", "repo": "notification-engine", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 67, "title": "Integrate Twilio SMS Provider", "state": "open", "author": "jen_cloud", "changed_files": 9, "mergeable": true }
+
+Question: Create a pull request in the auth-service repo owned by security-first to merge refactor/jwt-validation into master with the title "Refactor JWT Validation Logic".
+Call: { "func_call": "create_pr", "owner": "security-first", "repo": "auth-service", "pr_number": 0, "title": "Refactor JWT Validation Logic", "head": "refactor/jwt-validation", "base": "master" }
+Response: { "pr_number": 19, "title": "Refactor JWT Validation Logic", "state": "open", "author": "security-first", "changed_files": 7, "mergeable": false }
+
+Question: Retrieve the list of open PRs for the recommendation-algo repository under the ai-labs organization.
+Call: { "func_call": "list_prs", "owner": "ai-labs", "repo": "recommendation-algo", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 142, "title": "Switch to Collaborative Filtering Model", "state": "open", "author": "dr_data", "changed_files": 18, "mergeable": true }
+
+Question: Open a PR for the billing-microservice repo owned by fin-tech merging feature/invoice-pdf-gen into main titled "Generate PDF Invoices Automatically".
+Call: { "func_call": "create_pr", "owner": "fin-tech", "repo": "billing-microservice", "pr_number": 0, "title": "Generate PDF Invoices Automatically", "head": "feature/invoice-pdf-gen", "base": "main" }
+Response: { "pr_number": 88, "title": "Generate PDF Invoices Automatically", "state": "open", "author": "fin-tech", "changed_files": 11, "mergeable": true }
+
+Question: List all pull requests for the user-profile-api repo managed by social-net.
+Call: { "func_call": "list_prs", "owner": "social-net", "repo": "user-profile-api", "pr_number": 0, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 53, "title": "Add Avatar Upload Endpoint", "state": "open", "author": "dev_sam", "changed_files": 4, "mergeable": true }

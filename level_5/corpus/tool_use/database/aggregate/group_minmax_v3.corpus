@@ -1,0 +1,51 @@
+Available Tools: sum_column | avg_column | group_by_query | min_max_query
+Call Schema: { "func_call": "string", "table": "string", "column": "string", "group_by": "string", "where": "string" }
+Response Schema: { "result": number, "groups": [{ "key": "string", "value": number }] }
+---
+Question: What is the maximum rainfall recorded per state during the monsoon season?
+Call: { "func_call": "min_max_query", "table": "climate_records", "column": "rainfall_mm", "group_by": "state_name", "where": "season = 'Monsoon'" }
+Response: { "result": 450.5, "groups": [{ "key": "Kerala", "value": 450.5 }, { "key": "Karnataka", "value": 320.0 }, { "key": "Goa", "value": 380.2 }] }
+
+Question: Find the minimum response time in milliseconds per API endpoint for the staging environment.
+Call: { "func_call": "min_max_query", "table": "api_logs", "column": "response_time_ms", "group_by": "endpoint_path", "where": "environment = 'Staging'" }
+Response: { "result": 45, "groups": [{ "key": "/users", "value": 120 }, { "key": "/orders", "value": 45 }, { "key": "/products", "value": 89 }] }
+
+Question: Show the highest energy consumption per factory zone during the night shift.
+Call: { "func_call": "min_max_query", "table": "power_usage", "column": "kwh_consumed", "group_by": "zone_id", "where": "shift = 'Night'" }
+Response: { "result": 1250.0, "groups": [{ "key": "Zone-A", "value": 980.0 }, { "key": "Zone-B", "value": 1250.0 }, { "key": "Zone-C", "value": 760.5 }] }
+
+Question: What is the lowest air quality index per district during the wildfire event?
+Call: { "func_call": "min_max_query", "table": "air_monitoring", "column": "aqi_value", "group_by": "district", "where": "event = 'Wildfire'" }
+Response: { "result": 28, "groups": [{ "key": "Downtown", "value": 150 }, { "key": "Suburbs", "value": 95 }, { "key": "Industrial", "value": 28 }] }
+
+Question: Identify the maximum wait time per service desk for calls received on weekends.
+Call: { "func_call": "min_max_query", "table": "call_center_logs", "column": "wait_time_sec", "group_by": "desk_id", "where": "day_type = 'Weekend'" }
+Response: { "result": 300, "groups": [{ "key": "Desk-1", "value": 120 }, { "key": "Desk-2", "value": 300 }, { "key": "Desk-3", "value": 210 }] }
+
+Question: Retrieve the minimum battery level per device model after 24 hours of usage.
+Call: { "func_call": "min_max_query", "table": "device_telemetry", "column": "battery_percent", "group_by": "model_name", "where": "duration_hours = 24" }
+Response: { "result": 15, "groups": [{ "key": "Model-X", "value": 45 }, { "key": "Model-Y", "value": 15 }, { "key": "Model-Z", "value": 30 }] }
+
+Question: What was the peak humidity level per greenhouse during the summer heatwave?
+Call: { "func_call": "min_max_query", "table": "greenhouse_sensors", "column": "humidity_percent", "group_by": "greenhouse_id", "where": "condition = 'Heatwave'" }
+Response: { "result": 92, "groups": [{ "key": "GH-01", "value": 85 }, { "key": "GH-02", "value": 92 }, { "key": "GH-03", "value": 78 }] }
+
+Question: Find the highest defect count per production line for the morning batch.
+Call: { "func_call": "min_max_query", "table": "quality_control", "column": "defect_count", "group_by": "line_number", "where": "batch_time = 'Morning'" }
+Response: { "result": 18, "groups": [{ "key": "Line-1", "value": 5 }, { "key": "Line-2", "value": 18 }, { "key": "Line-3", "value": 12 }] }
+
+Question: Determine the minimum latency per network node during the peak traffic hour.
+Call: { "func_call": "min_max_query", "table": "network_stats", "column": "latency_ms", "group_by": "node_id", "where": "traffic_level = 'Peak'" }
+Response: { "result": 12.5, "groups": [{ "key": "Node-North", "value": 45.0 }, { "key": "Node-South", "value": 12.5 }, { "key": "Node-East", "value": 33.2 }] }
+
+Question: What is the maximum occupancy rate per hotel floor during the conference week?
+Call: { "func_call": "min_max_query", "table": "hotel_bookings", "column": "occupancy_rate", "group_by": "floor_number", "where": "event = 'Conference'" }
+Response: { "result": 100, "groups": [{ "key": "Floor-2", "value": 85 }, { "key": "Floor-3", "value": 100 }, { "key": "Floor-4", "value": 92 }] }
+
+Question: Show the lowest water pressure per pipeline section during the drought period.
+Call: { "func_call": "min_max_query", "table": "utility_metrics", "column": "pressure_psi", "group_by": "section_id", "where": "period = 'Drought'" }
+Response: { "result": 22.0, "groups": [{ "key": "Sec-A", "value": 45.0 }, { "key": "Sec-B", "value": 22.0 }, { "key": "Sec-C", "value": 38.5 }] }
+
+Question: Identify the highest return rate per product line for items sold in the spring collection.
+Call: { "func_call": "min_max_query", "table": "returns_data", "column": "return_rate", "group_by": "product_line", "where": "collection = 'Spring'" }
+Response: { "result": 15.5, "groups": [{ "key": "Footwear", "value": 12.0 }, { "key": "Accessories", "value": 15.5 }, { "key": "Apparel", "value": 10.2 }] }

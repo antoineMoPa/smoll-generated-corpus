@@ -1,0 +1,51 @@
+Available Tools: share_file | set_permissions | get_shared_link | revoke_access | list_collaborators
+Call Schema: { "func_call": "string", "file_id": "string", "user_email": "string", "permission": "view|comment|edit", "expires_at": "string" }
+Response Schema: { "file_id": "string", "shared_link": "string", "collaborators": [{ "email": "string", "permission": "string" }] }
+---
+Question: Send the Q4 sales forecast to alex.rivera@sales.net with comment permissions lasting until next Friday.
+Call: { "func_call": "share_file", "file_id": "sales_forecast_q4_2024.xlsx", "user_email": "alex.rivera@sales.net", "permission": "comment", "expires_at": "2024-12-20T18:00:00Z" }
+Response: { "file_id": "sales_forecast_q4_2024.xlsx", "shared_link": "https://storage.corp.com/s/p9o8i-uuy", "collaborators": [{ "email": "alex.rivera@sales.net", "permission": "comment" }] }
+
+Question: Restrict the external auditor to view-only access on the tax documents, expiring in three days.
+Call: { "func_call": "set_permissions", "file_id": "tax_docs_2023_final.pdf", "user_email": "auditor@externalfirm.com", "permission": "view", "expires_at": "2024-12-15T09:00:00Z" }
+Response: { "file_id": "tax_docs_2023_final.pdf", "shared_link": "https://storage.corp.com/s/t4r5e-wqx", "collaborators": [{ "email": "auditor@externalfirm.com", "permission": "view" }] }
+
+Question: Let the copywriter edit the press release draft, with access ending at midnight tomorrow.
+Call: { "func_call": "share_file", "file_id": "press_release_launch_v2.docx", "user_email": "copywriter@agency.com", "permission": "edit", "expires_at": "2024-12-13T23:59:59Z" }
+Response: { "file_id": "press_release_launch_v2.docx", "shared_link": "https://storage.corp.com/s/c7v8b-nmk", "collaborators": [{ "email": "copywriter@agency.com", "permission": "edit" }] }
+
+Question: Create a permanent shared link for the company handbook and assign it to the onboarding specialist.
+Call: { "func_call": "get_shared_link", "file_id": "company_handbook_2025.pdf", "user_email": "onboarding_spec@corp.com", "permission": "view", "expires_at": "2099-12-31T23:59:59Z" }
+Response: { "file_id": "company_handbook_2025.pdf", "shared_link": "https://storage.corp.com/s/h6j7k-lpo", "collaborators": [{ "email": "onboarding_spec@corp.com", "permission": "view" }] }
+
+Question: Immediately cut off access for the former intern regarding the summer campaign assets.
+Call: { "func_call": "revoke_access", "file_id": "summer_campaign_assets.zip", "user_email": "ex_intern_summer@university.edu", "permission": "view", "expires_at": "2024-12-12T08:00:00Z" }
+Response: { "file_id": "summer_campaign_assets.zip", "shared_link": "https://storage.corp.com/s/revoked-link", "collaborators": [] }
+
+Question: Show me everyone who has access to the client pitch deck and verify the CEO has edit rights.
+Call: { "func_call": "list_collaborators", "file_id": "client_pitch_deck_acme.pptx", "user_email": "ceo@corp.com", "permission": "edit", "expires_at": "2025-06-30T00:00:00Z" }
+Response: { "file_id": "client_pitch_deck_acme.pptx", "shared_link": "https://storage.corp.com/s/z1x2c-vbn", "collaborators": [{ "email": "ceo@corp.com", "permission": "edit" }, { "email": "sales_lead@corp.com", "permission": "comment" }] }
+
+Question: Provide the compliance officer with view access to the security audit report, valid for one month.
+Call: { "func_call": "set_permissions", "file_id": "security_audit_report_nov.pdf", "user_email": "compliance_officer@corp.com", "permission": "view", "expires_at": "2025-01-12T12:00:00Z" }
+Response: { "file_id": "security_audit_report_nov.pdf", "shared_link": "https://storage.corp.com/s/q3w4e-rty", "collaborators": [{ "email": "compliance_officer@corp.com", "permission": "view" }] }
+
+Question: Share the architectural blueprints with the construction firm for commenting, expiring on the build start date.
+Call: { "func_call": "share_file", "file_id": "arch_blueprints_phase1.dwg", "user_email": "site_manager@buildco.com", "permission": "comment", "expires_at": "2025-02-01T07:00:00Z" }
+Response: { "file_id": "arch_blueprints_phase1.dwg", "shared_link": "https://storage.corp.com/s/a5s6d-fgh", "collaborators": [{ "email": "site_manager@buildco.com", "permission": "comment" }] }
+
+Question: Upgrade the consultant's permissions on the risk assessment file to full edit access indefinitely.
+Call: { "func_call": "set_permissions", "file_id": "risk_assessment_2025.xlsx", "user_email": "consultant@advisorygroup.com", "permission": "edit", "expires_at": "2099-12-31T23:59:59Z" }
+Response: { "file_id": "risk_assessment_2025.xlsx", "shared_link": "https://storage.corp.com/s/j8k9l-mnb", "collaborators": [{ "email": "consultant@advisorygroup.com", "permission": "edit" }] }
+
+Question: Generate a temporary view-only link for the user feedback logs for the UX researcher, expiring in 6 hours.
+Call: { "func_call": "get_shared_link", "file_id": "ux_feedback_logs_raw.csv", "user_email": "ux_researcher@corp.com", "permission": "view", "expires_at": "2024-12-12T18:00:00Z" }
+Response: { "file_id": "ux_feedback_logs_raw.csv", "shared_link": "https://storage.corp.com/s/u7i8o-pas", "collaborators": [{ "email": "ux_researcher@corp.com", "permission": "view" }] }
+
+Question: Allow the PR director to comment on the crisis communication plan, valid for 5 days.
+Call: { "func_call": "share_file", "file_id": "crisis_comm_plan_v1.docx", "user_email": "pr_director@corp.com", "permission": "comment", "expires_at": "2024-12-17T16:00:00Z" }
+Response: { "file_id": "crisis_comm_plan_v1.docx", "shared_link": "https://storage.corp.com/s/d4f5g-hjk", "collaborators": [{ "email": "pr_director@corp.com", "permission": "comment" }] }
+
+Question: Downgrade the vendor's access from edit to view-only for the supply chain database effective immediately.
+Call: { "func_call": "revoke_access", "file_id": "supply_chain_db_export.sql", "user_email": "vendor_logistics@supplychain.io", "permission": "view", "expires_at": "2024-12-12T10:30:00Z" }
+Response: { "file_id": "supply_chain_db_export.sql", "shared_link": "https://storage.corp.com/s/s2d3f-ghj", "collaborators": [{ "email": "vendor_logistics@supplychain.io", "permission": "view" }] }

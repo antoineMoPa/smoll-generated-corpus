@@ -1,0 +1,51 @@
+Available Tools: get_page_views | get_unique_visitors | get_session_duration | get_bounce_rate
+Call Schema: { "func_call": "string", "url": "string", "from_date": "string", "to_date": "string", "granularity": "hourly|daily|weekly|monthly" }
+Response Schema: { "url": "string", "period": "string", "views": number, "unique_visitors": number, "avg_session_seconds": number, "bounce_rate": number }
+---
+Question: What were the page view statistics for the autumn footwear collection page two weeks ago?
+Call: { "func_call": "get_page_views", "url": "https://shop.example.com/collections/autumn-boots", "from_date": "2023-09-15", "to_date": "2023-09-29", "granularity": "daily" }
+Response: { "url": "https://shop.example.com/collections/autumn-boots", "period": "2023-09-15 to 2023-09-29", "views": 18900, "unique_visitors": 12400, "avg_session_seconds": 165, "bounce_rate": 0.28 }
+
+Question: Can you retrieve the unique visitor count for the finance news section last quarter?
+Call: { "func_call": "get_unique_visitors", "url": "https://news.financeworld.com/markets", "from_date": "2023-07-01", "to_date": "2023-09-30", "granularity": "monthly" }
+Response: { "url": "https://news.financeworld.com/markets", "period": "2023-07-01 to 2023-09-30", "views": 67500, "unique_visitors": 42100, "avg_session_seconds": 245, "bounce_rate": 0.51 }
+
+Question: I need the bounce rate data for the subscription signup modal during the holiday promo.
+Call: { "func_call": "get_bounce_rate", "url": "https://app.streamline.io/signup/holiday", "from_date": "2023-11-20", "to_date": "2023-12-05", "granularity": "weekly" }
+Response: { "url": "https://app.streamline.io/signup/holiday", "period": "2023-11-20 to 2023-12-05", "views": 9200, "unique_visitors": 7800, "avg_session_seconds": 290, "bounce_rate": 0.19 }
+
+Question: How did traffic look for the robotics review article yesterday afternoon?
+Call: { "func_call": "get_page_views", "url": "https://blog.techsphere.net/reviews/robot-dog", "from_date": "2023-10-12", "to_date": "2023-10-12", "granularity": "hourly" }
+Response: { "url": "https://blog.techsphere.net/reviews/robot-dog", "period": "2023-10-12", "views": 4100, "unique_visitors": 3600, "avg_session_seconds": 105, "bounce_rate": 0.62 }
+
+Question: Show me the session duration metrics for the payment failure page last Friday.
+Call: { "func_call": "get_session_duration", "url": "https://shop.example.com/payment/error", "from_date": "2023-10-06", "to_date": "2023-10-06", "granularity": "hourly" }
+Response: { "url": "https://shop.example.com/payment/error", "period": "2023-10-06", "views": 890, "unique_visitors": 885, "avg_session_seconds": 35, "bounce_rate": 0.08 }
+
+Question: What is the unique visitor trend for the developer tools page over the last three months?
+Call: { "func_call": "get_unique_visitors", "url": "https://dev.streamline.io/tools", "from_date": "2023-07-01", "to_date": "2023-09-30", "granularity": "monthly" }
+Response: { "url": "https://dev.streamline.io/tools", "period": "2023-07-01 to 2023-09-30", "views": 14200, "unique_visitors": 9500, "avg_session_seconds": 410, "bounce_rate": 0.22 }
+
+Question: Retrieve the bounce rate and views for the spring clearance archive from last year.
+Call: { "func_call": "get_bounce_rate", "url": "https://shop.example.com/archives/spring-clearance-2022", "from_date": "2022-03-01", "to_date": "2022-03-31", "granularity": "daily" }
+Response: { "url": "https://shop.example.com/archives/spring-clearance-2022", "period": "2022-03-01 to 2022-03-31", "views": 3400, "unique_visitors": 2900, "avg_session_seconds": 125, "bounce_rate": 0.55 }
+
+Question: Analyze the user engagement on the installation manual page for the past week.
+Call: { "func_call": "get_session_duration", "url": "https://docs.streamline.io/manuals/install", "from_date": "2023-10-02", "to_date": "2023-10-08", "granularity": "daily" }
+Response: { "url": "https://docs.streamline.io/manuals/install", "period": "2023-10-02 to 2023-10-08", "views": 1560, "unique_visitors": 1100, "avg_session_seconds": 380, "bounce_rate": 0.14 }
+
+Question: How long did users spend on the investor relations page last fiscal year?
+Call: { "func_call": "get_session_duration", "url": "https://corp.streamline.io/investors", "from_date": "2022-01-01", "to_date": "2022-12-31", "granularity": "monthly" }
+Response: { "url": "https://corp.streamline.io/investors", "period": "2022-01-01 to 2022-12-31", "views": 28500, "unique_visitors": 19200, "avg_session_seconds": 450, "bounce_rate": 0.16 }
+
+Question: Get the page view counts for the webinar registration page during the marketing blitz.
+Call: { "func_call": "get_page_views", "url": "https://events.techsphere.net/webinar-ai", "from_date": "2023-08-01", "to_date": "2023-08-14", "granularity": "daily" }
+Response: { "url": "https://events.techsphere.net/webinar-ai", "period": "2023-08-01 to 2023-08-14", "views": 25600, "unique_visitors": 18900, "avg_session_seconds": 95, "bounce_rate": 0.38 }
+
+Question: What were the unique visitor stats for the support ticket portal last Monday?
+Call: { "func_call": "get_unique_visitors", "url": "https://support.financeworld.com/tickets", "from_date": "2023-10-09", "to_date": "2023-10-09", "granularity": "hourly" }
+Response: { "url": "https://support.financeworld.com/tickets", "period": "2023-10-09", "views": 620, "unique_visitors": 510, "avg_session_seconds": 220, "bounce_rate": 0.25 }
+
+Question: Pull the full engagement report for the SDK reference page over the last six weeks.
+Call: { "func_call": "get_session_duration", "url": "https://docs.streamline.io/sdk/ref", "from_date": "2023-08-20", "to_date": "2023-10-01", "granularity": "weekly" }
+Response: { "url": "https://docs.streamline.io/sdk/ref", "period": "2023-08-20 to 2023-10-01", "views": 31200, "unique_visitors": 22400, "avg_session_seconds": 580, "bounce_rate": 0.11 }

@@ -1,0 +1,51 @@
+Available Tools: set_alert_threshold | get_alerts | acknowledge_alert | disable_alert
+Call Schema: { "func_call": "string", "sensor_id": "string", "metric": "string", "threshold": number, "condition": "above|below" }
+Response Schema: { "alert_id": "string", "sensor_id": "string", "status": "string", "threshold": number }
+---
+Question: Acknowledge the false positive on light sensor LUX-501 in the gallery; it triggered when a cleaning robot passed by.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "LUX-501", "metric": "illuminance", "threshold": 150, "condition": "below" }
+Response: { "alert_id": "ALT-7701", "sensor_id": "LUX-501", "status": "acknowledged", "threshold": 150 }
+
+Question: Disable the smoke detection alert for sensor SMK-303 in the kitchen during the scheduled deep-cleaning of the exhaust hood.
+Call: { "func_call": "disable_alert", "sensor_id": "SMK-303", "metric": "particulate_matter", "threshold": 25, "condition": "above" }
+Response: { "alert_id": "ALT-6602", "sensor_id": "SMK-303", "status": "disabled", "threshold": 25 }
+
+Question: The motion detector MOT-118 in the hallway registered a false alarm due to a drifting curtain; please acknowledge this event.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "MOT-118", "metric": "motion_index", "threshold": 0.8, "condition": "above" }
+Response: { "alert_id": "ALT-5503", "sensor_id": "MOT-118", "status": "acknowledged", "threshold": 0.8 }
+
+Question: Turn off the low battery voltage alert for beacon sensor BCN-44 while we replace the power cells during the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "BCN-44", "metric": "battery_voltage", "threshold": 3.2, "condition": "below" }
+Response: { "alert_id": "ALT-4404", "sensor_id": "BCN-44", "status": "disabled", "threshold": 3.2 }
+
+Question: Acknowledge the radiation spike on sensor RAD-09 in the lab; it was a false alarm caused by a nearby medical isotope delivery.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "RAD-09", "metric": "radiation dose", "threshold": 0.5, "condition": "above" }
+Response: { "alert_id": "ALT-3305", "sensor_id": "RAD-09", "status": "acknowledged", "threshold": 0.5 }
+
+Question: Disable the soil moisture alert for garden sensor SOL-22 during the scheduled irrigation system repair.
+Call: { "func_call": "disable_alert", "sensor_id": "SOL-22", "metric": "soil_moisture", "threshold": 15, "condition": "below" }
+Response: { "alert_id": "ALT-2206", "sensor_id": "SOL-22", "status": "disabled", "threshold": 15 }
+
+Question: Please acknowledge the gas leak false alarm on sensor GAS-77; the sensor was exposed to high concentrations of cooking spices.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "GAS-77", "metric": "methane_level", "threshold": 500, "condition": "above" }
+Response: { "alert_id": "ALT-1107", "sensor_id": "GAS-77", "status": "acknowledged", "threshold": 500 }
+
+Question: Disable the rotational speed alert for turbine sensor TRB-60 while we balance the blades in the scheduled maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "TRB-60", "metric": "rpm", "threshold": 3000, "condition": "below" }
+Response: { "alert_id": "ALT-0008", "sensor_id": "TRB-60", "status": "disabled", "threshold": 3000 }
+
+Question: Acknowledge the pH anomaly on pool sensor PH-15; it was a false alarm caused by a temporary chemical dosing error that is now fixed.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "PH-15", "metric": "ph_level", "threshold": 6.8, "condition": "below" }
+Response: { "alert_id": "ALT-9909", "sensor_id": "PH-15", "status": "acknowledged", "threshold": 6.8 }
+
+Question: Turn off the proximity alert for sensor PROX-88 in the loading dock during the forklift calibration maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "PROX-88", "metric": "distance_cm", "threshold": 50, "condition": "below" }
+Response: { "alert_id": "ALT-8810", "sensor_id": "PROX-88", "status": "disabled", "threshold": 50 }
+
+Question: Acknowledge the frequency deviation alert on radio sensor RF-03; the reading was a false alarm due to atmospheric interference.
+Call: { "func_call": "acknowledge_alert", "sensor_id": "RF-03", "metric": "frequency_hz", "threshold": 2400000000, "condition": "below" }
+Response: { "alert_id": "ALT-7711", "sensor_id": "RF-03", "status": "acknowledged", "threshold": 2400000000 }
+
+Question: Disable the weight load alert for platform sensor WGT-50 while we perform a structural stress test during the maintenance window.
+Call: { "func_call": "disable_alert", "sensor_id": "WGT-50", "metric": "load_kg", "threshold": 1000, "condition": "above" }
+Response: { "alert_id": "ALT-6612", "sensor_id": "WGT-50", "status": "disabled", "threshold": 1000 }

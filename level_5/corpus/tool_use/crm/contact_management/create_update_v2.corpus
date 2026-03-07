@@ -1,0 +1,51 @@
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+
+Question: Create a new contact for Marcus Thorne who works as a Chief Architect at Zenith Dynamics. His email is m.thorne@zenithdyn.com.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Marcus Thorne", "email": "m.thorne@zenithdyn.com", "company": "Zenith Dynamics", "note": "Chief Architect" }
+Response: { "contact_id": "cnt_45129", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the company for contact cnt_78234 to "Horizon Retail Group" and change their name to "Angela Moss".
+Call: { "func_call": "update_contact", "contact_id": "cnt_78234", "name": "Angela Moss", "email": "", "company": "Horizon Retail Group", "note": "" }
+Response: { "contact_id": "cnt_78234", "status": "updated", "updated_fields": ["name", "company"] }
+
+Question: Add a note to contact cnt_91023 indicating they requested a quote for the annual subscription plan.
+Call: { "func_call": "add_note", "contact_id": "cnt_91023", "name": "", "email": "", "company": "", "note": "Requested quote for annual subscription" }
+Response: { "contact_id": "cnt_91023", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Sofia Gomez, a Lead Designer at Pixel Craft Studios, with email sofia.g@pixelcraft.design.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Sofia Gomez", "email": "sofia.g@pixelcraft.design", "company": "Pixel Craft Studios", "note": "Lead Designer" }
+Response: { "contact_id": "cnt_33892", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the email address for contact cnt_56712 to arthur.p@quantumleap.org and add a note about the workshop attendance.
+Call: { "func_call": "update_contact", "contact_id": "cnt_56712", "name": "", "email": "arthur.p@quantumleap.org", "company": "", "note": "Attended AI workshop on Dec 5" }
+Response: { "contact_id": "cnt_56712", "status": "updated", "updated_fields": ["email", "note"] }
+
+Question: Create a new entry for Oliver Hayes, VP of Sales at Summit Ventures, email o.hayes@summitventures.net.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Oliver Hayes", "email": "o.hayes@summitventures.net", "company": "Summit Ventures", "note": "VP of Sales" }
+Response: { "contact_id": "cnt_62451", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Change the company name for contact cnt_19283 to "EcoGreen Solutions" and update the note to reflect their sustainability goals.
+Call: { "func_call": "update_contact", "contact_id": "cnt_19283", "name": "", "email": "", "company": "EcoGreen Solutions", "note": "Focused on carbon-neutral initiatives" }
+Response: { "contact_id": "cnt_19283", "status": "updated", "updated_fields": ["company", "note"] }
+
+Question: Add a note to contact cnt_84567 stating that the renewal agreement was finalized today.
+Call: { "func_call": "add_note", "contact_id": "cnt_84567", "name": "", "email": "", "company": "", "note": "Renewal agreement finalized on Jan 15" }
+Response: { "contact_id": "cnt_84567", "status": "updated", "updated_fields": ["note"] }
+
+Question: Create a contact for Raj Mehta, Director of Operations at Flux Logistics, email raj.m@fluxlog.io.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Raj Mehta", "email": "raj.m@fluxlog.io", "company": "Flux Logistics", "note": "Director of Operations" }
+Response: { "contact_id": "cnt_73920", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the name and email for contact cnt_40192 to "Diana Prince" and "d.prince@themyscira.tech" respectively.
+Call: { "func_call": "update_contact", "contact_id": "cnt_40192", "name": "Diana Prince", "email": "d.prince@themyscira.tech", "company": "", "note": "" }
+Response: { "contact_id": "cnt_40192", "status": "updated", "updated_fields": ["name", "email"] }
+
+Question: Create a new contact for Kevin O'Malley, Senior Analyst at DataMined Corp, with email kevin.o@datamined.co.
+Call: { "func_call": "create_contact", "contact_id": "", "name": "Kevin O'Malley", "email": "kevin.o@datamined.co", "company": "DataMined Corp", "note": "Senior Analyst" }
+Response: { "contact_id": "cnt_28475", "status": "created", "updated_fields": ["name", "email", "company", "note"] }
+
+Question: Update the note for contact cnt_95301 to mention the budget review meeting scheduled for next Friday.
+Call: { "func_call": "update_contact", "contact_id": "cnt_95301", "name": "", "email": "", "company": "", "note": "Budget review meeting scheduled for next Friday" }
+Response: { "contact_id": "cnt_95301", "status": "updated", "updated_fields": ["note"] }

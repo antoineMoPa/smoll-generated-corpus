@@ -1,0 +1,59 @@
+Context: The bakery sold twelve croissants and eight muffins this morning.
+Input: {"question": "How many croissants did the bakery sell?"}
+Output: {"answer": "twelve"}
+
+Context: There are five players on a basketball team on the court at one time.
+Input: {"question": "How many players are on a basketball team on the court?"}
+Output: {"answer": "five"}
+
+Context: Sarah bought three apples, two bananas, and one watermelon at the market.
+Input: {"question": "How many bananas did Sarah buy?"}
+Output: {"answer": "two"}
+
+Context: The old library contains forty thousand books in its main hall.
+Input: {"question": "How many books are in the main hall of the old library?"}
+Output: {"answer": "forty thousand"}
+
+Context: During the meeting, seven employees from marketing and three from sales were present.
+Input: {"question": "How many employees from sales attended the meeting?"}
+Output: {"answer": "three"}
+
+Context: A standard deck of cards has fifty-two cards excluding jokers.
+Input: {"question": "How many cards are in a standard deck without jokers?"}
+Output: {"answer": "fifty-two"}
+
+Context: The recipe calls for two cups of flour and one teaspoon of salt.
+Input: {"question": "How many cups of flour does the recipe require?"}
+Output: {"answer": "two"}
+
+Context: Ten students raised their hands to answer the teacher's question.
+Input: {"question": "How many students raised their hands?"}
+Output: {"answer": "Ten"}
+
+Context: The parking lot has capacity for two hundred vehicles but currently holds only fifty.
+Input: {"question": "How many vehicles are currently in the parking lot?"}
+Output: {"answer": "fifty"}
+
+Context: My grandfather lived in that house for sixty years before moving.
+Input: {"question": "How many years did my grandfather live in that house?"}
+Output: {"answer": "sixty"}
+
+Context: The box contains twenty-four chocolates arranged in four rows.
+Input: {"question": "How many chocolates are in the box?"}
+Output: {"answer": "twenty-four"}
+
+Context: Six birds were sitting on the fence before the cat arrived.
+Input: {"question": "How many birds were sitting on the fence?"}
+Output: {"answer": "Six"}
+
+Context: The marathon runner completed the race in three hours and fifteen minutes.
+Input: {"question": "How many hours did it take the runner to finish?"}
+Output: {"answer": "three"}
+
+Context: We need nine slices of pizza to feed everyone at the table.
+Input: {"question": "How many slices of pizza are needed?"}
+Output: {"answer": "nine"}
+
+Context: The jar was filled with one hundred marbles of various colors.
+Input: {"question": "How many marbles were in the jar?"}
+Output: {"answer": "one hundred"}

@@ -1,0 +1,51 @@
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Find me some highly rated hotels in Paris for a weekend trip next month, checking in on November 10th and out on the 12th for two people. I need at least a 4-star rating.
+Call: { "func_call": "search_hotels", "location": "Paris", "check_in": "2023-11-10", "check_out": "2023-11-12", "guests": 2, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "PAR-001", "name": "Le Grand Hotel", "rating": 4.8, "price_per_night": 320, "amenities": ["WiFi", "Spa", "Breakfast"] }, { "id": "PAR-002", "name": "Hotel Eiffel View", "rating": 4.5, "price_per_night": 285, "amenities": ["WiFi", "Gym", "Bar"] }], "total": 2 }
+
+Question: I need a budget-friendly option in Tokyo for solo travel from December 1st to December 5th. Any hotel with at least 3 stars will do.
+Call: { "func_call": "search_hotels", "location": "Tokyo", "check_in": "2023-12-01", "check_out": "2023-12-05", "guests": 1, "min_rating": 3.0 }
+Response: { "hotels": [{ "id": "TYO-104", "name": "Shinjuku Stay", "rating": 3.2, "price_per_night": 95, "amenities": ["WiFi", "Laundry"] }, { "id": "TYO-209", "name": "Asakusa Inn", "rating": 3.8, "price_per_night": 110, "amenities": ["WiFi", "Breakfast", "AC"] }], "total": 2 }
+
+Question: Search for luxury accommodations in New York City for a family of four. We are arriving January 15th and leaving January 20th. Minimum 5 stars required.
+Call: { "func_call": "search_hotels", "location": "New York City", "check_in": "2024-01-15", "check_out": "2024-01-20", "guests": 4, "min_rating": 5.0 }
+Response: { "hotels": [{ "id": "NYC-500", "name": "The Plaza Elite", "rating": 5.0, "price_per_night": 850, "amenities": ["Concierge", "Pool", "Spa", "Dining"] }, { "id": "NYC-501", "name": "Manhattan Skyline Suites", "rating": 4.9, "price_per_night": 720, "amenities": ["Gym", "WiFi", "Room Service"] }], "total": 2 }
+
+Question: Looking for hotels in Barcelona near the beach for a couple. Check-in is March 5th, check-out March 10th. Must be at least 4 stars.
+Call: { "func_call": "search_hotels", "location": "Barcelona", "check_in": "2024-03-05", "check_out": "2024-03-10", "guests": 2, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "BCN-303", "name": "Costa Brava Resort", "rating": 4.6, "price_per_night": 210, "amenities": ["Beach Access", "Pool", "WiFi"] }, { "id": "BCN-305", "name": "Gothic Quarter Boutique", "rating": 4.4, "price_per_night": 195, "amenities": ["WiFi", "Breakfast", "Terrace"] }], "total": 2 }
+
+Question: Find available rooms in London for a business trip. One guest, checking in February 10th and out February 12th. I need a minimum rating of 4 stars.
+Call: { "func_call": "search_hotels", "location": "London", "check_in": "2024-02-10", "check_out": "2024-02-12", "guests": 1, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "LON-404", "name": "Thames Business Hotel", "rating": 4.3, "price_per_night": 240, "amenities": ["WiFi", "Meeting Rooms", "Gym"] }, { "id": "LON-405", "name": "Westminster Lodge", "rating": 4.7, "price_per_night": 310, "amenities": ["WiFi", "Breakfast", "Concierge"] }], "total": 2 }
+
+Question: Can you search for hotels in Rome for a honeymoon? Two guests, April 20th to April 27th. We want something special, so at least 4.5 stars.
+Call: { "func_call": "search_hotels", "location": "Rome", "check_in": "2024-04-20", "check_out": "2024-04-27", "guests": 2, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "ROM-601", "name": "Colosseum Romance", "rating": 4.9, "price_per_night": 450, "amenities": ["Spa", "Private Balcony", "Dining"] }, { "id": "ROM-602", "name": "Vatican View Suites", "rating": 4.6, "price_per_night": 380, "amenities": ["WiFi", "Breakfast", "Tour Desk"] }], "total": 2 }
+
+Question: I need a place to stay in Sydney for a week starting May 1st. Three guests, and we prefer at least 3.5 stars.
+Call: { "func_call": "search_hotels", "location": "Sydney", "check_in": "2024-05-01", "check_out": "2024-05-08", "guests": 3, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "SYD-701", "name": "Harbor Bridge Inn", "rating": 4.1, "price_per_night": 180, "amenities": ["WiFi", "Pool", "Parking"] }, { "id": "SYD-702", "name": "Bondi Backpackers Plus", "rating": 3.6, "price_per_night": 120, "amenities": ["WiFi", "Kitchen", "Common Area"] }], "total": 2 }
+
+Question: Search for hotels in Dubai for a luxury vacation. Two adults, checking in June 10th and leaving June 17th. Minimum 5 stars only.
+Call: { "func_call": "search_hotels", "location": "Dubai", "check_in": "2024-06-10", "check_out": "2024-06-17", "guests": 2, "min_rating": 5.0 }
+Response: { "hotels": [{ "id": "DXB-800", "name": "Burj Al Arab Junior", "rating": 5.0, "price_per_night": 1200, "amenities": ["Butler", "Private Beach", "Helipad"] }, { "id": "DXB-801", "name": "Palm Jumeirah Resort", "rating": 4.9, "price_per_night": 950, "amenities": ["Water Park", "Spa", "Multiple Pools"] }], "total": 2 }
+
+Question: Find me a hotel in Berlin for a music festival. One person, August 15th to August 18th. At least 3 stars is fine.
+Call: { "func_call": "search_hotels", "location": "Berlin", "check_in": "2024-08-15", "check_out": "2024-08-18", "guests": 1, "min_rating": 3.0 }
+Response: { "hotels": [{ "id": "BER-901", "name": "Kreuzberg Loft Hotel", "rating": 3.9, "price_per_night": 130, "amenities": ["WiFi", "Bar", "Bike Rental"] }, { "id": "BER-902", "name": "Mitte Central Stay", "rating": 3.4, "price_per_night": 105, "amenities": ["WiFi", "AC"] }], "total": 2 }
+
+Question: Looking for family-friendly hotels in Orlando near the parks. Four guests, checking in July 4th and out July 11th. Needs to be at least 4 stars.
+Call: { "func_call": "search_hotels", "location": "Orlando", "check_in": "2024-07-04", "check_out": "2024-07-11", "guests": 4, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "ORL-101", "name": "Magic Kingdom Gateway", "rating": 4.5, "price_per_night": 290, "amenities": ["Shuttle", "Pool", "Kids Club"] }, { "id": "ORL-102", "name": "Universal Explorer Hotel", "rating": 4.3, "price_per_night": 260, "amenities": ["Shuttle", "Breakfast", "Game Room"] }], "total": 2 }
+
+Question: I need a quiet retreat in Kyoto for two people. Dates are October 10th to October 15th. Prefer traditional style with at least 4.5 stars.
+Call: { "func_call": "search_hotels", "location": "Kyoto", "check_in": "2023-10-10", "check_out": "2023-10-15", "guests": 2, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "KYO-201", "name": "Gion Ryokan Heritage", "rating": 4.9, "price_per_night": 550, "amenities": ["Onsen", "Kaiseki Dining", "Garden"] }, { "id": "KYO-202", "name": "Arashiyama Bamboo Stay", "rating": 4.7, "price_per_night": 480, "amenities": ["Onsen", "Tea Ceremony", "WiFi"] }], "total": 2 }
+
+Question: Search for hotels in Miami for a spring break trip. Three friends, checking in March 20th and out March 25th. Minimum 3.5 stars.
+Call: { "func_call": "search_hotels", "location": "Miami", "check_in": "2024-03-20", "check_out": "2024-03-25", "guests": 3, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "MIA-301", "name": "South Beach Party Inn", "rating": 3.8, "price_per_night": 190, "amenities": ["Pool", "Beach Access", "Nightclub"] }, { "id": "MIA-302", "name": "Ocean Drive Suites", "rating": 4.2, "price_per_night": 240, "amenities": ["Balcony", "WiFi", "Gym"] }], "total": 2 }

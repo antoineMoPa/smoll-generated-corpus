@@ -1,0 +1,51 @@
+Available Tools: create_folder | move_file | copy_file | rename_file | delete_file | list_folder
+Call Schema: { "func_call": "string", "path": "string", "destination": "string", "new_name": "string" }
+Response Schema: { "path": "string", "entries": [{ "name": "string", "type": "file|folder", "size_bytes": number }], "status": "string" }
+
+Question: Show all items in the downloads directory to identify large files for archival.
+Call: { "func_call": "list_folder", "path": "/downloads", "destination": "", "new_name": "" }
+Response: { "path": "/downloads", "entries": [{ "name": "setup_installer.exe", "type": "file", "size_bytes": 150000 }, { "name": "report_q2.pdf", "type": "file", "size_bytes": 32000 }, { "name": "images", "type": "folder", "size_bytes": 0 }, { "name": "temp_log.txt", "type": "file", "size_bytes": 850 }], "status": "success" }
+
+Question: Rename the temporary log file to archive_log_2024.txt for long-term storage.
+Call: { "func_call": "rename_file", "path": "/downloads/temp_log.txt", "destination": "", "new_name": "archive_log_2024.txt" }
+Response: { "path": "/downloads", "entries": [{ "name": "setup_installer.exe", "type": "file", "size_bytes": 150000 }, { "name": "report_q2.pdf", "type": "file", "size_bytes": 32000 }, { "name": "images", "type": "folder", "size_bytes": 0 }, { "name": "archive_log_2024.txt", "type": "file", "size_bytes": 850 }], "status": "renamed" }
+
+Question: Remove the old setup installer executable as the software is already installed.
+Call: { "func_call": "delete_file", "path": "/downloads/setup_installer.exe", "destination": "", "new_name": "" }
+Response: { "path": "/downloads", "entries": [{ "name": "report_q2.pdf", "type": "file", "size_bytes": 32000 }, { "name": "images", "type": "folder", "size_bytes": 0 }, { "name": "archive_log_2024.txt", "type": "file", "size_bytes": 850 }], "status": "deleted" }
+
+Question: Inspect the images folder to find any corrupted or duplicate photo files.
+Call: { "func_call": "list_folder", "path": "/downloads/images", "destination": "", "new_name": "" }
+Response: { "path": "/downloads/images", "entries": [{ "name": "photo_01.jpg", "type": "file", "size_bytes": 2400000 }, { "name": "photo_02.jpg", "type": "file", "size_bytes": 2100000 }, { "name": "photo_01_copy.jpg", "type": "file", "size_bytes": 2400000 }, { "name": "thumbnails", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Delete the duplicate image file named photo_01_copy.jpg from the images directory.
+Call: { "func_call": "delete_file", "path": "/downloads/images/photo_01_copy.jpg", "destination": "", "new_name": "" }
+Response: { "path": "/downloads/images", "entries": [{ "name": "photo_01.jpg", "type": "file", "size_bytes": 2400000 }, { "name": "photo_02.jpg", "type": "file", "size_bytes": 2100000 }, { "name": "thumbnails", "type": "folder", "size_bytes": 0 }], "status": "deleted" }
+
+Question: Rename the quarterly report to include the department name, changing report_q2.pdf to sales_report_q2.pdf.
+Call: { "func_call": "rename_file", "path": "/downloads/report_q2.pdf", "destination": "", "new_name": "sales_report_q2.pdf" }
+Response: { "path": "/downloads", "entries": [{ "name": "sales_report_q2.pdf", "type": "file", "size_bytes": 32000 }, { "name": "images", "type": "folder", "size_bytes": 0 }, { "name": "archive_log_2024.txt", "type": "file", "size_bytes": 850 }], "status": "renamed" }
+
+Question: List the downloads folder again to ensure the installer removal and renaming were applied correctly.
+Call: { "func_call": "list_folder", "path": "/downloads", "destination": "", "new_name": "" }
+Response: { "path": "/downloads", "entries": [{ "name": "sales_report_q2.pdf", "type": "file", "size_bytes": 32000 }, { "name": "images", "type": "folder", "size_bytes": 0 }, { "name": "archive_log_2024.txt", "type": "file", "size_bytes": 850 }], "status": "success" }
+
+Question: Remove the empty thumbnails subfolder within images since it contains no data.
+Call: { "func_call": "delete_file", "path": "/downloads/images/thumbnails", "destination": "", "new_name": "" }
+Response: { "path": "/downloads/images", "entries": [{ "name": "photo_01.jpg", "type": "file", "size_bytes": 2400000 }, { "name": "photo_02.jpg", "type": "file", "size_bytes": 2100000 }], "status": "deleted" }
+
+Question: Rename the second photo to indicate the event location, changing photo_02.jpg to paris_trip_photo_02.jpg.
+Call: { "func_call": "rename_file", "path": "/downloads/images/photo_02.jpg", "destination": "", "new_name": "paris_trip_photo_02.jpg" }
+Response: { "path": "/downloads/images", "entries": [{ "name": "photo_01.jpg", "type": "file", "size_bytes": 2400000 }, { "name": "paris_trip_photo_02.jpg", "type": "file", "size_bytes": 2100000 }], "status": "renamed" }
+
+Question: Display the contents of the images folder one final time to verify the file organization.
+Call: { "func_call": "list_folder", "path": "/downloads/images", "destination": "", "new_name": "" }
+Response: { "path": "/downloads/images", "entries": [{ "name": "photo_01.jpg", "type": "file", "size_bytes": 2400000 }, { "name": "paris_trip_photo_02.jpg", "type": "file", "size_bytes": 2100000 }], "status": "success" }
+
+Question: Delete the archive log file because the data has been imported into the central database.
+Call: { "func_call": "delete_file", "path": "/downloads/archive_log_2024.txt", "destination": "", "new_name": "" }
+Response: { "path": "/downloads", "entries": [{ "name": "sales_report_q2.pdf", "type": "file", "size_bytes": 32000 }, { "name": "images", "type": "folder", "size_bytes": 0 }], "status": "deleted" }
+
+Question: Rename the main images folder to "media_assets_2024" to align with the new naming convention.
+Call: { "func_call": "rename_file", "path": "/downloads/images", "destination": "", "new_name": "media_assets_2024" }
+Response: { "path": "/downloads", "entries": [{ "name": "sales_report_q2.pdf", "type": "file", "size_bytes": 32000 }, { "name": "media_assets_2024", "type": "folder", "size_bytes": 0 }], "status": "renamed" }

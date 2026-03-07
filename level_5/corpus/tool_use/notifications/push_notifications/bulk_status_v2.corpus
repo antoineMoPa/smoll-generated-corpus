@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Distribute a mass notification to winter coat buyers about the end-of-season clearance.
+Call: { "func_call": "send_bulk_push", "user_id": "retail_automation", "title": "Winter Clearance Final Days", "body": "Up to 70% off all winter apparel. Sale ends midnight tonight.", "data": { "season": "winter_2024", "category": "outerwear", "discount_percent": 70 }, "device_token": "*" }
+Response: { "notification_id": "blk_win_88776655", "status": "sent", "timestamp": "2024-01-20T11:00:00Z" }
+
+Question: Audit the delivery success of the password reset request sent to the finance team.
+Call: { "func_call": "get_push_status", "user_id": "security_audit_bot", "title": "Password Reset Requested", "body": "A request to reset your password was detected. Ignore if this wasn't you.", "data": { "request_id": "REQ-8821", "department": "finance" }, "device_token": "tok_fin_secure" }
+Response: { "notification_id": "msg_sec_44332211", "status": "delivered", "timestamp": "2024-01-20T09:15:30Z" }
+
+Question: Push a bulk update to all beta testers regarding the new dashboard interface.
+Call: { "func_call": "send_bulk_push", "user_id": "qa_lead_alpha", "title": "Beta Build 2.5 Available", "body": "Test the new analytics dashboard and report bugs via the feedback form.", "data": { "build_version": "2.5.0-beta", "group": "qa_testers" }, "device_token": "*" }
+Response: { "notification_id": "blk_beta_99887766", "status": "sent", "timestamp": "2024-01-20T14:20:00Z" }
+
+Question: Verify if the flight delay alert reached passengers on flight UA492.
+Call: { "func_call": "get_push_status", "user_id": "airline_ops_center", "title": "Flight UA492 Delayed", "body": "Your flight is delayed by 45 minutes due to weather conditions.", "data": { "flight_number": "UA492", "delay_minutes": 45, "gate": "B12" }, "device_token": "tok_pax_ua492" }
+Response: { "notification_id": "msg_flight_11223344", "status": "delivered", "timestamp": "2024-01-20T16:45:10Z" }
+
+Question: Issue an immediate bulk alert to all drivers about heavy snow warnings in the Midwest.
+Call: { "func_call": "send_bulk_push", "user_id": "logistics_dispatch", "title": "Severe Weather Alert: Snow", "body": "Heavy snowfall expected in Midwest regions. Drive safely and expect delays.", "data": { "region": "midwest", "severity": "high", "alert_type": "weather" }, "device_token": "*" }
+Response: { "notification_id": "blk_weather_55667788", "status": "sent", "timestamp": "2024-01-20T05:30:00Z" }
+
+Question: Check the status of the subscription renewal reminder sent to annual plan users.
+Call: { "func_call": "get_push_status", "user_id": "billing_renewals", "title": "Subscription Renewing Soon", "body": "Your annual plan renews in 3 days. Ensure your payment method is valid.", "data": { "plan_type": "annual", "days_until_renewal": 3, "user_segment": "legacy" }, "device_token": "tok_annual_subs" }
+Response: { "notification_id": "msg_sub_99001122", "status": "failed", "timestamp": "2024-01-20T10:00:00Z" }
+
+Question: Broadcast a bulk message to gym members about the extended holiday hours.
+Call: { "func_call": "send_bulk_push", "user_id": "gym_front_desk", "title": "Holiday Hours Update", "body": "We will be open until 10 PM this weekend for all members.", "data": { "location_id": "GYM-NYC-01", "hours": "06:00-22:00", "valid_dates": "Jan 20-21" }, "device_token": "*" }
+Response: { "notification_id": "blk_gym_33445566", "status": "sent", "timestamp": "2024-01-19T18:00:00Z" }
+
+Question: Retrieve the delivery report for the two-factor authentication code sent to admin accounts.
+Call: { "func_call": "get_push_status", "user_id": "auth_service_v2", "title": "Your 2FA Code", "body": "Your verification code is 849201. Do not share this with anyone.", "data": { "code_length": 6, "expiry_seconds": 300, "role": "admin" }, "device_token": "tok_admin_2fa" }
+Response: { "notification_id": "msg_2fa_77889900", "status": "delivered", "timestamp": "2024-01-20T12:33:45Z" }
+
+Question: Send a bulk notification to food delivery users about a $5 credit promotion.
+Call: { "func_call": "send_bulk_push", "user_id": "marketing_food", "title": "$5 Credit Inside!", "body": "Order dinner tonight and get $5 off your next meal with code TASTE5.", "data": { "promo_code": "TASTE5", "credit_amount": 5.00, "cuisine": "all" }, "device_token": "*" }
+Response: { "notification_id": "blk_food_22334455", "status": "sent", "timestamp": "2024-01-20T17:15:00Z" }
+
+Question: Investigate the status of the package delivery confirmation sent to residents in Seattle.
+Call: { "func_call": "get_push_status", "user_id": "courier_tracking", "title": "Package Delivered", "body": "Your package has been left at the front porch. Enjoy your purchase!", "data": { "tracking_id": "TRK-SEA-9988", "city": "Seattle", "status_code": "delivered_porch" }, "device_token": "tok_sea_residents" }
+Response: { "notification_id": "msg_pkg_66554433", "status": "delivered", "timestamp": "2024-01-20T13:10:20Z" }
+
+Question: Launch a bulk re-engagement campaign for users who abandoned their shopping carts.
+Call: { "func_call": "send_bulk_push", "user_id": "ecommerce_bot", "title": "Forgot Something?", "body": "Your cart items are waiting! Complete your purchase now for free shipping.", "data": { "campaign_name": "cart_abandon_v3", "incentive": "free_shipping", "hours_since_abandon": 24 }, "device_token": "*" }
+Response: { "notification_id": "blk_cart_11009988", "status": "sent", "timestamp": "2024-01-20T19:45:00Z" }
+
+Question: Confirm the delivery status of the emergency water boil advisory for district 4.
+Call: { "func_call": "get_push_status", "user_id": "city_emergency_svc", "title": "Boil Water Advisory", "body": "Residents in District 4 must boil tap water until further notice.", "data": { "district": "4", "alert_level": "critical", "issued_by": "health_dept" }, "device_token": "tok_dist4_users" }
+Response: { "notification_id": "msg_emerg_55443322", "status": "delivered", "timestamp": "2024-01-20T08:05:15Z" }

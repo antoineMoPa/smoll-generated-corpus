@@ -1,0 +1,51 @@
+Available Tools: get_weather_alerts | get_storm_warnings | get_air_quality_index
+Call Schema: { "func_call": "string", "location": "string", "severity": "string" }
+Response Schema: { "alerts": [{ "type": "string", "severity": "string", "message": "string", "expires": "string" }] }
+---
+Question: What is the air quality forecast for Bangkok today?
+Call: { "func_call": "get_air_quality_index", "location": "Bangkok", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 168. Sensitive groups should avoid outdoor activities. General public may experience minor irritation.", "expires": "2024-05-22T09:00:00Z" }] }
+
+Question: Are there any pollution alerts for Ho Chi Minh City?
+Call: { "func_call": "get_air_quality_index", "location": "Ho Chi Minh City", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 222. Emergency conditions declared. Everyone should reduce prolonged outdoor exertion.", "expires": "2024-05-22T11:30:00Z" }] }
+
+Question: How is the breathing air in Manila right now?
+Call: { "func_call": "get_air_quality_index", "location": "Manila", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy for Sensitive Groups", "message": "AQI is 152. Children and elderly should limit time outside. Asthma sufferers may experience symptoms.", "expires": "2024-05-22T08:15:00Z" }] }
+
+Question: Get the smog warning status for Hanoi.
+Call: { "func_call": "get_air_quality_index", "location": "Hanoi", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Hazardous", "message": "AQI is 305. Health warning of emergency conditions. The entire population is at risk.", "expires": "2024-05-22T13:45:00Z" }] }
+
+Question: Check the particulate levels in Osaka.
+Call: { "func_call": "get_air_quality_index", "location": "Osaka", "severity": "low" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Moderate", "message": "AQI is 88. Air quality is acceptable. However, unusually sensitive people should consider reducing prolonged outdoor exertion.", "expires": "2024-05-22T07:00:00Z" }] }
+
+Question: What is the current AQI reading for Seoul?
+Call: { "func_call": "get_air_quality_index", "location": "Seoul", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 175. Everyone may begin to experience health effects. Sensitive groups should stay indoors.", "expires": "2024-05-22T10:20:00Z" }] }
+
+Question: Is the air safe in Istanbul due to recent fires?
+Call: { "func_call": "get_air_quality_index", "location": "Istanbul", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 240. Significant health impacts expected. Avoid all outdoor physical activity.", "expires": "2024-05-22T14:00:00Z" }] }
+
+Question: Report the air pollution index for Lagos.
+Call: { "func_call": "get_air_quality_index", "location": "Lagos", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 182. Members of sensitive groups may experience serious health effects. General public less likely to be affected.", "expires": "2024-05-22T12:30:00Z" }] }
+
+Question: How bad is the smog in Lima currently?
+Call: { "func_call": "get_air_quality_index", "location": "Lima", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy for Sensitive Groups", "message": "AQI is 142. People with respiratory issues should limit prolonged outdoor exertion.", "expires": "2024-05-22T06:45:00Z" }] }
+
+Question: Provide the air quality alert for Bogota.
+Call: { "func_call": "get_air_quality_index", "location": "Bogota", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Moderate", "message": "AQI is 95. Air quality is acceptable for most. Unusually sensitive individuals should consider limiting prolonged outdoor exertion.", "expires": "2024-05-22T05:30:00Z" }] }
+
+Question: What is the pollution level in Nairobi today?
+Call: { "func_call": "get_air_quality_index", "location": "Nairobi", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 210. Health alert: everyone may experience more serious health effects. Stay inside if possible.", "expires": "2024-05-22T15:15:00Z" }] }
+
+Question: Assess the air safety in Copenhagen.
+Call: { "func_call": "get_air_quality_index", "location": "Copenhagen", "severity": "low" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Good", "message": "AQI is 45. Air quality is satisfactory, and air pollution poses little or no risk.", "expires": "2024-05-22T04:00:00Z" }] }

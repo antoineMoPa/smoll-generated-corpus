@@ -1,0 +1,59 @@
+Context: If the warehouse humidity rises above 70 percent, the dehumidifiers will start running instantly. Sensors check levels every five minutes.
+Input: {"question": "What happens if the warehouse humidity rises above 70 percent?"}
+Output: {"answer": "the dehumidifiers will start running instantly"}
+
+Context: Unless the invoice is paid by Tuesday, the delivery service will be paused. Clients cannot receive new shipments until balance is cleared.
+Input: {"question": "What will happen to the delivery service if the invoice is not paid by Tuesday?"}
+Output: {"answer": "the delivery service will be paused"}
+
+Context: When the smoke detector beeps, all residents must leave the building via the stairwell. Elevators are prohibited during fire alerts.
+Input: {"question": "What must residents do if the smoke detector beeps?"}
+Output: {"answer": "leave the building via the stairwell"}
+
+Context: If the internet connection drops, the router will reconnect to the secondary network automatically. This transition usually takes three seconds.
+Input: {"question": "What will the router do if the internet connection drops?"}
+Output: {"answer": "reconnect to the secondary network automatically"}
+
+Context: The guarantee is cancelled if the vehicle is modified by anyone without official authorization. Unauthorized alterations breach the contract.
+Input: {"question": "What happens to the guarantee if the vehicle is modified by unauthorized parties?"}
+Output: {"answer": "The guarantee is cancelled"}
+
+Context: If snow falls during the festival, the ceremony will be relocated to the indoor arena. The update will be posted at 6 AM.
+Input: {"question": "Where will the ceremony be relocated if it snows during the festival?"}
+Output: {"answer": "the indoor arena"}
+
+Context: Unless you register the device before noon, your warranty claim will be denied immediately. Late registrations are not accepted.
+Input: {"question": "What will happen to your warranty claim if you do not register the device before noon?"}
+Output: {"answer": "your warranty claim will be denied immediately"}
+
+Context: When the fuel gauge reaches empty, the engine will switch to reserve mode. Performance will be limited significantly.
+Input: {"question": "What will the engine do if the fuel gauge reaches empty?"}
+Output: {"answer": "switch to reserve mode"}
+
+Context: If the luggage size exceeds 62 inches, an oversized baggage charge will be added at the counter. Domestic fees vary.
+Input: {"question": "What happens if the luggage size exceeds 62 inches?"}
+Output: {"answer": "an oversized baggage charge will be added at the counter"}
+
+Context: The pool filtration system will activate if the chlorine sensor detects low levels. This keeps the water safe only when required.
+Input: {"question": "What will the pool filtration system do if the chlorine sensor detects low levels?"}
+Output: {"answer": "activate"}
+
+Context: If the operator presses the green switch, the maintenance cycle will begin. All robots will pause within ten seconds.
+Input: {"question": "What happens if the operator presses the green switch?"}
+Output: {"answer": "the maintenance cycle will begin"}
+
+Context: Unless the window is closed tightly, the rain sensor will trigger the indoor blinds. Verify the seal before storms.
+Input: {"question": "What will happen if the window is not closed tightly?"}
+Output: {"answer": "the rain sensor will trigger the indoor blinds"}
+
+Context: When the stop sign appears, all drivers must halt completely. Cyclists may then proceed through the intersection.
+Input: {"question": "What must drivers do if the stop sign appears?"}
+Output: {"answer": "halt completely"}
+
+Context: If the guest checks in after midnight, the reservation will be moved to the following day. Early arrival is not guaranteed.
+Input: {"question": "What will happen to the reservation if the guest checks in after midnight?"}
+Output: {"answer": "the reservation will be moved to the following day"}
+
+Context: The antivirus scan will run automatically if the laptop is unused for more than forty-five minutes. Close open files first.
+Input: {"question": "What will the antivirus scan do if the laptop is unused for more than forty-five minutes?"}
+Output: {"answer": "run automatically"}

@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+
+Question: Establish a new public repository titled "crypto-wallet" for user "blockchain-bob" with the description "Secure multi-chain wallet interface".
+Call: { "func_call": "create_repo", "owner": "blockchain-bob", "repo": "crypto-wallet", "description": "Secure multi-chain wallet interface", "private": false }
+Response: { "repo": "crypto-wallet", "owner": "blockchain-bob", "url": "https://github.com/blockchain-bob/crypto-wallet", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Duplicate the repository "image-processor" owned by "vision-labs" into my personal namespace.
+Call: { "func_call": "fork_repo", "owner": "vision-labs", "repo": "image-processor", "description": "", "private": false }
+Response: { "repo": "image-processor", "owner": "current-user", "url": "https://github.com/current-user/image-processor", "stars": 782, "forks": 145, "default_branch": "main" }
+
+Question: Please generate a private repository called "hr-portal" for user "corp-admin" described as "Internal employee management dashboard".
+Call: { "func_call": "create_repo", "owner": "corp-admin", "repo": "hr-portal", "description": "Internal employee management dashboard", "private": true }
+Response: { "repo": "hr-portal", "owner": "corp-admin", "url": "https://github.com/corp-admin/hr-portal", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I want to fork the library "logging-utils" from owner "backend-ninjas" to my workspace for debugging.
+Call: { "func_call": "fork_repo", "owner": "backend-ninjas", "repo": "logging-utils", "description": "", "private": false }
+Response: { "repo": "logging-utils", "owner": "current-user", "url": "https://github.com/current-user/logging-utils", "stars": 412, "forks": 67, "default_branch": "master" }
+
+Question: Set up a new public repo "drone-control" for user "aero-engineer" with the description "Flight path planning algorithm for UAVs".
+Call: { "func_call": "create_repo", "owner": "aero-engineer", "repo": "drone-control", "description": "Flight path planning algorithm for UAVs", "private": false }
+Response: { "repo": "drone-control", "owner": "aero-engineer", "url": "https://github.com/aero-engineer/drone-control", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "k8s-manifests" owned by "cloud-architect" so I can test new configurations.
+Call: { "func_call": "fork_repo", "owner": "cloud-architect", "repo": "k8s-manifests", "description": "", "private": false }
+Response: { "repo": "k8s-manifests", "owner": "current-user", "url": "https://github.com/current-user/k8s-manifests", "stars": 1520, "forks": 330, "default_branch": "main" }
+
+Question: Create a private repository named "payment-gateway" for user "fintech-startup" described as "Stripe integration wrapper for Node.js".
+Call: { "func_call": "create_repo", "owner": "fintech-startup", "repo": "payment-gateway", "description": "Stripe integration wrapper for Node.js", "private": true }
+Response: { "repo": "payment-gateway", "owner": "fintech-startup", "url": "https://github.com/fintech-startup/payment-gateway", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Make a fork of "nlp-datasets" from the user "ai-researchers" for my thesis project.
+Call: { "func_call": "fork_repo", "owner": "ai-researchers", "repo": "nlp-datasets", "description": "", "private": false }
+Response: { "repo": "nlp-datasets", "owner": "current-user", "url": "https://github.com/current-user/nlp-datasets", "stars": 98, "forks": 21, "default_branch": "main" }
+
+Question: Initialize a new public project "vr-showcase" for user "meta-dev" with the description "Unity scenes for VR training simulations".
+Call: { "func_call": "create_repo", "owner": "meta-dev", "repo": "vr-showcase", "description": "Unity scenes for VR training simulations", "private": false }
+Response: { "repo": "vr-showcase", "owner": "meta-dev", "url": "https://github.com/meta-dev/vr-showcase", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "physics-solver" owned by "science-dept" to implement a new algorithm.
+Call: { "func_call": "fork_repo", "owner": "science-dept", "repo": "physics-solver", "description": "", "private": false }
+Response: { "repo": "physics-solver", "owner": "current-user", "url": "https://github.com/current-user/physics-solver", "stars": 654, "forks": 112, "default_branch": "develop" }
+
+Question: Create a private repo "audit-logs" for user "security-ops" described as "Encrypted storage system for compliance records".
+Call: { "func_call": "create_repo", "owner": "security-ops", "repo": "audit-logs", "description": "Encrypted storage system for compliance records", "private": true }
+Response: { "repo": "audit-logs", "owner": "security-ops", "url": "https://github.com/security-ops/audit-logs", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I need to fork "go-templates" from user "golang-fans" to customize the layout.
+Call: { "func_call": "fork_repo", "owner": "golang-fans", "repo": "go-templates", "description": "", "private": false }
+Response: { "repo": "go-templates", "owner": "current-user", "url": "https://github.com/current-user/go-templates", "stars": 230, "forks": 55, "default_branch": "main" }

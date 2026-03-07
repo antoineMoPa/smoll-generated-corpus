@@ -1,0 +1,51 @@
+Available Tools: create_network | list_networks | create_volume | list_volumes | mount_volume
+Call Schema: { "func_call": "string", "name": "string", "driver": "string", "container_id": "string", "mount_path": "string" }
+Response Schema: { "id": "string", "name": "string", "driver": "string", "scope": "string", "containers": ["string"] }
+---
+Question: Provision a volume for the Kafka broker to retain message logs and mount it to the data path.
+Call: { "func_call": "mount_volume", "name": "kafka_log_store", "driver": "local", "container_id": "d1e2f3g4h5i6", "mount_path": "/var/lib/kafka/data" }
+Response: { "id": "vol_m9n8o7p6q5", "name": "kafka_log_store", "driver": "local", "scope": "local", "containers": ["d1e2f3g4h5i6"] }
+
+Question: Attach a persistent drive to the Jenkins controller to save build artifacts and workspace data.
+Call: { "func_call": "mount_volume", "name": "jenkins_home_vol", "driver": "local", "container_id": "j7k8l9m0n1o2", "mount_path": "/var/jenkins_home" }
+Response: { "id": "vol_r4s3t2u1v0", "name": "jenkins_home_vol", "driver": "local", "scope": "local", "containers": ["j7k8l9m0n1o2"] }
+
+Question: Mount a dedicated storage volume for the Grafana instance to preserve dashboards and alerts.
+Call: { "func_call": "mount_volume", "name": "grafana_config_data", "driver": "local", "container_id": "p3q4r5s6t7u8", "mount_path": "/var/lib/grafana" }
+Response: { "id": "vol_w9x8y7z6a5", "name": "grafana_config_data", "driver": "local", "scope": "local", "containers": ["p3q4r5s6t7u8"] }
+
+Question: Ensure the Prometheus server has a mounted volume for long-term metric storage.
+Call: { "func_call": "mount_volume", "name": "prometheus_tsdb", "driver": "local", "container_id": "v9w0x1y2z3a4", "mount_path": "/prometheus/data" }
+Response: { "id": "vol_b4c3d2e1f0", "name": "prometheus_tsdb", "driver": "local", "scope": "local", "containers": ["v9w0x1y2z3a4"] }
+
+Question: Create a volume for the MinIO object storage service and bind it to the data directory.
+Call: { "func_call": "mount_volume", "name": "minio_bucket_data", "driver": "local", "container_id": "b5c6d7e8f9g0", "mount_path": "/data" }
+Response: { "id": "vol_g5h4i3j2k1", "name": "minio_bucket_data", "driver": "local", "scope": "local", "containers": ["b5c6d7e8f9g0"] }
+
+Question: Mount a volume to the Traefik reverse proxy to persist ACME certificates and dynamic config.
+Call: { "func_call": "mount_volume", "name": "traefik_ssl_certs", "driver": "local", "container_id": "h1i2j3k4l5m6", "mount_path": "/letsencrypt" }
+Response: { "id": "vol_l0m9n8o7p6", "name": "traefik_ssl_certs", "driver": "local", "scope": "local", "containers": ["h1i2j3k4l5m6"] }
+
+Question: The Vault server needs a secure volume mounted for storing encryption keys and audit logs.
+Call: { "func_call": "mount_volume", "name": "vault_secure_store", "driver": "local", "container_id": "n7o8p9q0r1s2", "mount_path": "/vault/data" }
+Response: { "id": "vol_q5r4s3t2u1", "name": "vault_secure_store", "driver": "local", "scope": "local", "containers": ["n7o8p9q0r1s2"] }
+
+Question: Attach a volume to the Consul agent container to maintain state and service catalog data.
+Call: { "func_call": "mount_volume", "name": "consul_state_data", "driver": "local", "container_id": "t3u4v5w6x7y8", "mount_path": "/consul/data" }
+Response: { "id": "vol_v0w9x8y7z6", "name": "consul_state_data", "driver": "local", "scope": "local", "containers": ["t3u4v5w6x7y8"] }
+
+Question: Mount a persistent volume for the SonarQube scanner to keep project analysis history.
+Call: { "func_call": "mount_volume", "name": "sonarqube_extensions", "driver": "local", "container_id": "z9a0b1c2d3e4", "mount_path": "/opt/sonarqube/data" }
+Response: { "id": "vol_a5b4c3d2e1", "name": "sonarqube_extensions", "driver": "local", "scope": "local", "containers": ["z9a0b1c2d3e4"] }
+
+Question: Provide the GitLab runner with a mounted volume for caching Docker layers during builds.
+Call: { "func_call": "mount_volume", "name": "gitlab_runner_cache", "driver": "local", "container_id": "f5g6h7i8j9k0", "mount_path": "/home/gitlab-runner/cache" }
+Response: { "id": "vol_f0g9h8i7j6", "name": "gitlab_runner_cache", "driver": "local", "scope": "local", "containers": ["f5g6h7i8j9k0"] }
+
+Question: Mount a volume to the Harbor registry container to store container image blobs securely.
+Call: { "func_call": "mount_volume", "name": "harbor_image_blobs", "driver": "local", "container_id": "l1m2n3o4p5q6", "mount_path": "/storage" }
+Response: { "id": "vol_k5l4m3n2o1", "name": "harbor_image_blobs", "driver": "local", "scope": "local", "containers": ["l1m2n3o4p5q6"] }
+
+Question: Ensure the Keycloak identity provider has a volume mounted for realm configuration and user sessions.
+Call: { "func_call": "mount_volume", "name": "keycloak_realm_data", "driver": "local", "container_id": "r7s8t9u0v1w2", "mount_path": "/opt/keycloak/data" }
+Response: { "id": "vol_p0q9r8s7t6", "name": "keycloak_realm_data", "driver": "local", "scope": "local", "containers": ["r7s8t9u0v1w2"] }

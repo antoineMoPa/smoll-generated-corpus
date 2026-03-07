@@ -1,0 +1,51 @@
+Available Tools: book_appointment | cancel_appointment | reschedule_appointment | get_upcoming_appointments | get_available_slots
+Call Schema: { "func_call": "string", "patient_id": "string", "doctor_id": "string", "specialty": "string", "date": "string", "reason": "string" }
+Response Schema: { "appointment_id": "string", "doctor": "string", "date": "string", "time": "string", "location": "string", "status": "string" }
+---
+Question: I need to book a check-up with Dr. Sarah Jenkins in general practice for next Tuesday due to a persistent cough. My patient ID is P8821.
+Call: { "func_call": "book_appointment", "patient_id": "P8821", "doctor_id": "D104", "specialty": "GP", "date": "2023-11-14", "reason": "Persistent cough" }
+Response: { "appointment_id": "APT-9921", "doctor": "Dr. Sarah Jenkins", "date": "2023-11-14", "time": "09:30", "location": "Clinic Room 3", "status": "confirmed" }
+
+Question: Please cancel my upcoming dermatology appointment with Dr. Alan Ross. My patient ID is P4402 and the appointment ID to cancel is APT-7732.
+Call: { "func_call": "cancel_appointment", "patient_id": "P4402", "doctor_id": "D205", "specialty": "dermatology", "date": "2023-11-15", "reason": "Patient request cancellation" }
+Response: { "appointment_id": "APT-7732", "doctor": "Dr. Alan Ross", "date": "2023-11-15", "time": "14:00", "location": "Dermatology Wing B", "status": "cancelled" }
+
+Question: Book a pediatric visit for my child with Dr. Emily Chen next Friday for a routine vaccination. Patient ID is P9910.
+Call: { "func_call": "book_appointment", "patient_id": "P9910", "doctor_id": "D301", "specialty": "pediatrics", "date": "2023-11-17", "reason": "Routine vaccination" }
+Response: { "appointment_id": "APT-1102", "doctor": "Dr. Emily Chen", "date": "2023-11-17", "time": "10:15", "location": "Pediatrics Unit 2", "status": "confirmed" }
+
+Question: I need to reschedule my cardiology appointment with Dr. Marcus Thorne from Monday to Wednesday due to a work conflict. Patient ID P5531.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P5531", "doctor_id": "D402", "specialty": "cardiology", "date": "2023-11-22", "reason": "Work conflict reschedule" }
+Response: { "appointment_id": "APT-8845", "doctor": "Dr. Marcus Thorne", "date": "2023-11-22", "time": "11:45", "location": "Heart Center Suite 4", "status": "rescheduled" }
+
+Question: Book an urgent GP appointment with Dr. Robert Hayes for tomorrow morning because of a high fever. Patient ID is P2219.
+Call: { "func_call": "book_appointment", "patient_id": "P2219", "doctor_id": "D108", "specialty": "GP", "date": "2023-11-13", "reason": "High fever" }
+Response: { "appointment_id": "APT-3391", "doctor": "Dr. Robert Hayes", "date": "2023-11-13", "time": "08:00", "location": "Clinic Room 1", "status": "confirmed" }
+
+Question: Cancel my dermatology follow-up with Dr. Linda Wu scheduled for next week. Patient ID P6674.
+Call: { "func_call": "cancel_appointment", "patient_id": "P6674", "doctor_id": "D209", "specialty": "dermatology", "date": "2023-11-20", "reason": "No longer needed" }
+Response: { "appointment_id": "APT-5562", "doctor": "Dr. Linda Wu", "date": "2023-11-20", "time": "15:30", "location": "Dermatology Wing A", "status": "cancelled" }
+
+Question: Please book a cardiology consultation with Dr. Marcus Thorne for chest pain evaluation on November 25th. Patient ID P7788.
+Call: { "func_call": "book_appointment", "patient_id": "P7788", "doctor_id": "D402", "specialty": "cardiology", "date": "2023-11-25", "reason": "Chest pain evaluation" }
+Response: { "appointment_id": "APT-6612", "doctor": "Dr. Marcus Thorne", "date": "2023-11-25", "time": "13:20", "location": "Heart Center Suite 4", "status": "confirmed" }
+
+Question: Reschedule my pediatric appointment with Dr. Emily Chen to next Thursday afternoon. Patient ID P3321.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P3321", "doctor_id": "D301", "specialty": "pediatrics", "date": "2023-11-23", "reason": "Parent availability change" }
+Response: { "appointment_id": "APT-4459", "doctor": "Dr. Emily Chen", "date": "2023-11-23", "time": "16:00", "location": "Pediatrics Unit 2", "status": "rescheduled" }
+
+Question: Book a dermatology screening for skin rash with Dr. Alan Ross on November 18th. Patient ID P1123.
+Call: { "func_call": "book_appointment", "patient_id": "P1123", "doctor_id": "D205", "specialty": "dermatology", "date": "2023-11-18", "reason": "Skin rash screening" }
+Response: { "appointment_id": "APT-2287", "doctor": "Dr. Alan Ross", "date": "2023-11-18", "time": "09:00", "location": "Dermatology Wing B", "status": "confirmed" }
+
+Question: Cancel my GP appointment with Dr. Sarah Jenkins due to recovery. Patient ID P5544.
+Call: { "func_call": "cancel_appointment", "patient_id": "P5544", "doctor_id": "D104", "specialty": "GP", "date": "2023-11-16", "reason": "Recovered from illness" }
+Response: { "appointment_id": "APT-9001", "doctor": "Dr. Sarah Jenkins", "date": "2023-11-16", "time": "10:30", "location": "Clinic Room 3", "status": "cancelled" }
+
+Question: Book a pediatric flu shot appointment with Dr. James Miller for next Monday. Patient ID P8899.
+Call: { "func_call": "book_appointment", "patient_id": "P8899", "doctor_id": "D305", "specialty": "pediatrics", "date": "2023-11-20", "reason": "Flu shot" }
+Response: { "appointment_id": "APT-7723", "doctor": "Dr. James Miller", "date": "2023-11-20", "time": "14:45", "location": "Pediatrics Unit 1", "status": "confirmed" }
+
+Question: Reschedule my cardiology follow-up with Dr. Priya Patel to December 1st. Patient ID P2233.
+Call: { "func_call": "reschedule_appointment", "patient_id": "P2233", "doctor_id": "D410", "specialty": "cardiology", "date": "2023-12-01", "reason": "Schedule conflict" }
+Response: { "appointment_id": "APT-5511", "doctor": "Dr. Priya Patel", "date": "2023-12-01", "time": "11:00", "location": "Heart Center Suite 2", "status": "rescheduled" }

@@ -1,0 +1,87 @@
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Program a visitor code 4029 for the contractor at the rear gate RG-10.
+Call: { "func_call": "set_access_code", "lock_id": "RG-10", "user_id": "contractor_bob", "code": "4029" }
+Response: { "lock_id": "RG-10", "state": "locked", "last_action_by": "contractor_bob", "timestamp": "2023-10-30T07:45:12Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Inspect the current lock state of the studio apartment door SA-11.
+Call: { "func_call": "get_lock_status", "lock_id": "SA-11", "user_id": "landlord_sys", "code": "" }
+Response: { "lock_id": "SA-11", "state": "locked", "last_action_by": "tenant_04", "timestamp": "2023-10-30T08:15:30Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Create a short-term pass 6712 for the nanny using the side gate SG-12.
+Call: { "func_call": "set_access_code", "lock_id": "SG-12", "user_id": "nanny_lisa", "code": "6712" }
+Response: { "lock_id": "SG-12", "state": "locked", "last_action_by": "nanny_lisa", "timestamp": "2023-10-30T09:00:45Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Verify if the pool house entrance PH-13 is currently secured.
+Call: { "func_call": "get_lock_status", "lock_id": "PH-13", "user_id": "pool_maint", "code": "" }
+Response: { "lock_id": "PH-13", "state": "unlocked", "last_action_by": "guest_party", "timestamp": "2023-10-30T14:22:18Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Assign access code 8834 to the electrician for the utility room UR-14.
+Call: { "func_call": "set_access_code", "lock_id": "UR-14", "user_id": "electrician_pro", "code": "8834" }
+Response: { "lock_id": "UR-14", "state": "locked", "last_action_by": "electrician_pro", "timestamp": "2023-10-30T10:30:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Check the activity log for the office door OF-15 to see who entered last.
+Call: { "func_call": "get_lock_status", "lock_id": "OF-15", "user_id": "office_mgr", "code": "" }
+Response: { "lock_id": "OF-15", "state": "locked", "last_action_by": "intern_sam", "timestamp": "2023-10-30T17:55:40Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Generate a one-time key 2045 for the caterer at the banquet hall BH-16.
+Call: { "func_call": "set_access_code", "lock_id": "BH-16", "user_id": "caterer_chef", "code": "2045" }
+Response: { "lock_id": "BH-16", "state": "locked", "last_action_by": "caterer_chef", "timestamp": "2023-10-30T11:15:22Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Confirm the status of the warehouse loading dock WD-17 before closing.
+Call: { "func_call": "get_lock_status", "lock_id": "WD-17", "user_id": "shift_lead", "code": "" }
+Response: { "lock_id": "WD-17", "state": "locked", "last_action_by": "shift_lead", "timestamp": "2023-10-30T19:00:05Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Set up a recurring code 9182 for the cleaning crew on the lobby lock LB-18.
+Call: { "func_call": "set_access_code", "lock_id": "LB-18", "user_id": "cleaning_team", "code": "9182" }
+Response: { "lock_id": "LB-18", "state": "locked", "last_action_by": "cleaning_team", "timestamp": "2023-10-30T06:00:00Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Retrieve the current state of the server room door SR-19 to ensure it is closed.
+Call: { "func_call": "get_lock_status", "lock_id": "SR-19", "user_id": "it_admin", "code": "" }
+Response: { "lock_id": "SR-19", "state": "locked", "last_action_by": "it_admin", "timestamp": "2023-10-30T12:45:33Z" }
+
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Issue a temporary pass 5501 for the real estate agent at the model home MH-20.
+Call: { "func_call": "set_access_code", "lock_id": "MH-20", "user_id": "agent_kelly", "code": "5501" }
+Response: { "lock_id": "MH-20", "state": "locked", "last_action_by": "agent_kelly", "timestamp": "2023-10-30T13:30:15Z" }

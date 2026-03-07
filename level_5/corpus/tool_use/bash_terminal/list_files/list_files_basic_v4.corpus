@@ -1,0 +1,51 @@
+Available Tools: ls | ls_la | ls_lh | ls_R
+Call Schema: { "func_call": "string", "path": "string", "flags": "string" }
+Response Schema: { "entries": ["string"], "count": number }
+---
+Question: Display items located in the backups folder.
+Call: { "func_call": "ls", "path": "/mnt/backups", "flags": "" }
+Response: { "entries": ["daily", "weekly", "monthly", "archive.tar.gz"], "count": 4 }
+
+Question: Provide a detailed view of /root including dotfiles.
+Call: { "func_call": "ls_la", "path": "/root", "flags": "-a" }
+Response: { "entries": [".", "..", ".bash_history", ".profile", "scripts", "keys"], "count": 6 }
+
+Question: What is in /dev with sizes formatted for humans?
+Call: { "func_call": "ls_lh", "path": "/dev", "flags": "-lh" }
+Response: { "entries": ["null", "zero", "random", "urandom", "tty", "sda"], "count": 6 }
+
+Question: Traverse the entire /srv directory structure.
+Call: { "func_call": "ls_R", "path": "/srv", "flags": "-R" }
+Response: { "entries": ["www/html/index.html", "www/html/style.css", "ftp/uploads", "ftp/downloads"], "count": 4 }
+
+Question: List what is inside my documents directory.
+Call: { "func_call": "ls", "path": "~/documents", "flags": "" }
+Response: { "entries": ["resume.pdf", "budget.xlsx", "notes.txt", "photos"], "count": 4 }
+
+Question: Show available devices in /dev.
+Call: { "func_call": "ls", "path": "/dev", "flags": "" }
+Response: { "entries": ["sdcard", "usb1", "bluetooth", "wifi0", "loop0"], "count": 5 }
+
+Question: List third-party applications installed in /opt.
+Call: { "func_call": "ls", "path": "/opt", "flags": "" }
+Response: { "entries": ["docker", "kubernetes", "prometheus", "grafana"], "count": 4 }
+
+Question: Give me a full listing of hidden config files in /etc.
+Call: { "func_call": "ls_la", "path": "/etc", "flags": "-la" }
+Response: { "entries": [".pwd.lock", ".java", ".python-version", "ssl", "cron.d"], "count": 5 }
+
+Question: Inspect /var/log using human-readable byte counts.
+Call: { "func_call": "ls_lh", "path": "/var/log", "flags": "-lh" }
+Response: { "entries": ["messages (120M)", "secure (45M)", "maillog (8M)", "boot.log (2M)"], "count": 4 }
+
+Question: Recursively explore the /home/admin directory.
+Call: { "func_call": "ls_R", "path": "/home/admin", "flags": "-R" }
+Response: { "entries": ["admin/logs/error.log", "admin/logs/access.log", "admin/bin/cleanup.sh"], "count": 3 }
+
+Question: List all nested files within ~/code recursively.
+Call: { "func_call": "ls_R", "path": "~/code", "flags": "-R" }
+Response: { "entries": ["code/backend/api.py", "code/frontend/app.js", "code/tests/test_api.py"], "count": 3 }
+
+Question: Reveal every file including hidden ones in /tmp.
+Call: { "func_call": "ls_la", "path": "/tmp", "flags": "-a" }
+Response: { "entries": [".", "..", ".font-unix", ".ICE-unix", "mock_socket", "vmware-root"], "count": 6 }

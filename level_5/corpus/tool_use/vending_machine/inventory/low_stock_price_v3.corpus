@@ -1,0 +1,51 @@
+Available Tools: list_inventory | restock_item | get_low_stock | update_price
+Call Schema: { "func_call": "string", "slot_id": "string", "quantity": number, "price": number }
+Response Schema: { "inventory": [{ "slot_id": "string", "name": "string", "quantity": number, "price": number }] }
+---
+Question: Identify which products are critically low in the library breakroom dispenser.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "J1", "name": "Green Tea", "quantity": 1, "price": 1.30 }, { "slot_id": "J2", "name": "Rice Cake", "quantity": 2, "price": 0.95 }] }
+
+Question: Modify the cost of the Espresso Shot in slot K5 to $4.00 following a vendor rate hike.
+Call: { "func_call": "update_price", "slot_id": "K5", "quantity": 0, "price": 4.00 }
+Response: { "inventory": [{ "slot_id": "K5", "name": "Espresso Shot", "quantity": 11, "price": 4.00 }] }
+
+Question: Display the full inventory list for the subway station kiosk.
+Call: { "func_call": "list_inventory", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "L1", "name": "Subway Map", "quantity": 50, "price": 0.50 }, { "slot_id": "L2", "name": "Bottled Water", "quantity": 35, "price": 2.00 }, { "slot_id": "L3", "name": "Chips", "quantity": 28, "price": 1.50 }] }
+
+Question: The potato chips in slot M4 are popular; raise the price to $2.49.
+Call: { "func_call": "update_price", "slot_id": "M4", "quantity": 0, "price": 2.49 }
+Response: { "inventory": [{ "slot_id": "M4", "name": "Potato Chips", "quantity": 14, "price": 2.49 }] }
+
+Question: Notify me if any beverages fall below 4 units in the university student center machine.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "N2", "name": "Orange Juice", "quantity": 3, "price": 2.10 }, { "slot_id": "N3", "name": "Sports Drink", "quantity": 0, "price": 2.75 }] }
+
+Question: Set the new price for the Hot Chocolate in slot P6 to $3.25 starting today.
+Call: { "func_call": "update_price", "slot_id": "P6", "quantity": 0, "price": 3.25 }
+Response: { "inventory": [{ "slot_id": "P6", "name": "Hot Chocolate", "quantity": 25, "price": 3.25 }] }
+
+Question: Generate a low stock report for all items in the mall food court vending unit.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "Q1", "name": "Pretzels", "quantity": 2, "price": 1.80 }, { "slot_id": "Q2", "name": "Soda Can", "quantity": 1, "price": 1.65 }] }
+
+Question: Update the pricing of the Mixed Nuts in slot R3 to $2.50 to align with market rates.
+Call: { "func_call": "update_price", "slot_id": "R3", "quantity": 0, "price": 2.50 }
+Response: { "inventory": [{ "slot_id": "R3", "name": "Mixed Nuts", "quantity": 6, "price": 2.50 }] }
+
+Question: What items in the fire station pantry machine require urgent replenishment?
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "S4", "name": "Beef Jerky", "quantity": 1, "price": 3.50 }, { "slot_id": "S5", "name": "Coffee Packet", "quantity": 0, "price": 0.75 }] }
+
+Question: Revise the selling price of the Apple Cider in slot T2 to $3.99.
+Call: { "func_call": "update_price", "slot_id": "T2", "quantity": 0, "price": 3.99 }
+Response: { "inventory": [{ "slot_id": "T2", "name": "Apple Cider", "quantity": 9, "price": 3.99 }] }
+
+Question: Audit the stock at the train depot and flag any slots holding fewer than 6 units.
+Call: { "func_call": "get_low_stock", "slot_id": "", "quantity": 0, "price": 0 }
+Response: { "inventory": [{ "slot_id": "U1", "name": "Headphones", "quantity": 4, "price": 12.99 }, { "slot_id": "U2", "name": "Protein Bar", "quantity": 5, "price": 2.25 }] }
+
+Question: Adjust the cost of the Lime Sparkler in slot V4 to $1.90 as part of a seasonal sale.
+Call: { "func_call": "update_price", "slot_id": "V4", "quantity": 0, "price": 1.90 }
+Response: { "inventory": [{ "slot_id": "V4", "name": "Lime Sparkler", "quantity": 19, "price": 1.90 }] }

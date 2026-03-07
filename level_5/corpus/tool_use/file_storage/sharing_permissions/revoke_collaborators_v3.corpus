@@ -1,0 +1,51 @@
+Available Tools: share_file | set_permissions | get_shared_link | revoke_access | list_collaborators
+Call Schema: { "func_call": "string", "file_id": "string", "user_email": "string", "permission": "view|comment|edit", "expires_at": "string" }
+Response Schema: { "file_id": "string", "shared_link": "https://storage.example.com/s/[a-z0-9]{6}", "collaborators": [{ "email": "string", "permission": "string" }] }
+---
+Question: Terminate editing privileges for samantha.brooks@external.net on the Q4 sales forecast and report who retains access.
+Call: { "func_call": "revoke_access", "file_id": "file_4412_q4_sales", "user_email": "samantha.brooks@external.net", "permission": "edit", "expires_at": "" }
+Response: { "file_id": "file_4412_q4_sales", "shared_link": "https://storage.example.com/s/q2w3e4", "collaborators": [{ "email": "vp_sales@techcorp.com", "permission": "edit" }, { "email": "data_analyst@techcorp.com", "permission": "view" }] }
+
+Question: Show me everyone with access to the product launch timeline, then strip permissions for intern_summer@apple.com.
+Call: { "func_call": "list_collaborators", "file_id": "file_7734_launch_plan", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_7734_launch_plan", "shared_link": "https://storage.example.com/s/r5t6y7", "collaborators": [{ "email": "product_mgr@techcorp.com", "permission": "edit" }, { "email": "intern_summer@apple.com", "permission": "comment" }, { "email": "engineer_lead@techcorp.com", "permission": "edit" }] }
+
+Question: The security audit file was leaked; revoke view rights for auditor_ext@bigfour.com and list the remaining internal team.
+Call: { "func_call": "revoke_access", "file_id": "file_9988_sec_audit", "user_email": "auditor_ext@bigfour.com", "permission": "view", "expires_at": "" }
+Response: { "file_id": "file_9988_sec_audit", "shared_link": "https://storage.example.com/s/u8i9o0", "collaborators": [{ "email": "ciso@techcorp.com", "permission": "edit" }, { "email": "compliance_officer@techcorp.com", "permission": "comment" }] }
+
+Question: Remove comment permissions for freelance_writer@mediahouse.org from the press release draft and display current collaborators.
+Call: { "func_call": "revoke_access", "file_id": "file_2211_press_rel", "user_email": "freelance_writer@mediahouse.org", "permission": "comment", "expires_at": "" }
+Response: { "file_id": "file_2211_press_rel", "shared_link": "https://storage.example.com/s/p1a2s3", "collaborators": [{ "email": "pr_director@techcorp.com", "permission": "edit" }, { "email": "ceo@techcorp.com", "permission": "edit" }] }
+
+Question: Revoke access for the temp agency user temp_worker_05@staffing.co on the payroll spreadsheet and show who is left.
+Call: { "func_call": "revoke_access", "file_id": "file_6655_payroll", "user_email": "temp_worker_05@staffing.co", "permission": "view", "expires_at": "" }
+Response: { "file_id": "file_6655_payroll", "shared_link": "https://storage.example.com/s/d4f5g6", "collaborators": [{ "email": "hr_director@techcorp.com", "permission": "edit" }, { "email": "accountant@techcorp.com", "permission": "edit" }] }
+
+Question: List all users with access to the board meeting minutes, then revoke edit rights for board_observer@investors.llc.
+Call: { "func_call": "list_collaborators", "file_id": "file_3344_board_mins", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_3344_board_mins", "shared_link": "https://storage.example.com/s/h7j8k9", "collaborators": [{ "email": "corporate_sec@techcorp.com", "permission": "edit" }, { "email": "board_observer@investors.llc", "permission": "edit" }, { "email": "legal_counsel@techcorp.com", "permission": "view" }] }
+
+Question: Disable view access for supplier_portal@logistics.inc on the shipping manifest and display the updated list.
+Call: { "func_call": "revoke_access", "file_id": "file_5577_ship_manifest", "user_email": "supplier_portal@logistics.inc", "permission": "view", "expires_at": "" }
+Response: { "file_id": "file_5577_ship_manifest", "shared_link": "https://storage.example.com/s/l0m1n2", "collaborators": [{ "email": "supply_chain_mgr@techcorp.com", "permission": "edit" }, { "email": "warehouse_lead@techcorp.com", "permission": "comment" }] }
+
+Question: Revoke permissions for guest_speaker@university.edu on the training slides and list all remaining staff members.
+Call: { "func_call": "revoke_access", "file_id": "file_8866_training", "user_email": "guest_speaker@university.edu", "permission": "comment", "expires_at": "" }
+Response: { "file_id": "file_8866_training", "shared_link": "https://storage.example.com/s/t3r4a5", "collaborators": [{ "email": "training_mgr@techcorp.com", "permission": "edit" }, { "email": "hr_specialist@techcorp.com", "permission": "edit" }] }
+
+Question: List who can view the API documentation file, then revoke access for third_party_dev@agency.io.
+Call: { "func_call": "list_collaborators", "file_id": "file_1199_api_docs", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_1199_api_docs", "shared_link": "https://storage.example.com/s/v6b7n8", "collaborators": [{ "email": "tech_writer@techcorp.com", "permission": "edit" }, { "email": "third_party_dev@agency.io", "permission": "view" }] }
+
+Question: Remove edit access for consultant_group@advisors.net from the strategic plan and show the current collaborator list.
+Call: { "func_call": "revoke_access", "file_id": "file_4433_strat_plan", "user_email": "consultant_group@advisors.net", "permission": "edit", "expires_at": "" }
+Response: { "file_id": "file_4433_strat_plan", "shared_link": "https://storage.example.com/s/m9k0l1", "collaborators": [{ "email": "strategy_lead@techcorp.com", "permission": "edit" }, { "email": "coo@techcorp.com", "permission": "comment" }] }
+
+Question: Revoke access for backup_bot@scripts.local on the system logs file and list only human administrators.
+Call: { "func_call": "revoke_access", "file_id": "file_7722_sys_logs", "user_email": "backup_bot@scripts.local", "permission": "view", "expires_at": "" }
+Response: { "file_id": "file_7722_sys_logs", "shared_link": "https://storage.example.com/s/z2x3c4", "collaborators": [{ "email": "net_admin@techcorp.com", "permission": "edit" }, { "email": "security_analyst@techcorp.com", "permission": "view" }] }
+
+Question: List collaborators on the merger agreement, then immediately revoke access for external_lawyer@lawfirm.com.
+Call: { "func_call": "list_collaborators", "file_id": "file_9955_merger_agr", "user_email": "", "permission": "", "expires_at": "" }
+Response: { "file_id": "file_9955_merger_agr", "shared_link": "https://storage.example.com/s/q5w6e7", "collaborators": [{ "email": "general_counsel@techcorp.com", "permission": "edit" }, { "email": "external_lawyer@lawfirm.com", "permission": "comment" }] }

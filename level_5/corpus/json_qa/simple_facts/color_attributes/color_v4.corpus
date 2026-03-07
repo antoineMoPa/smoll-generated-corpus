@@ -1,0 +1,59 @@
+Context: The vintage bicycle leaning against the wall is painted a glossy teal.
+Input: {"question": "What color is the vintage bicycle?"}
+Output: {"answer": "teal"}
+
+Context: He ordered a leather jacket in a classic camel tone for the winter season.
+Input: {"question": "What color is his leather jacket?"}
+Output: {"answer": "camel"}
+
+Context: The stoplight at the intersection flashed a bright amber before turning red.
+Input: {"question": "What color did the stoplight flash?"}
+Output: {"answer": "amber"}
+
+Context: Her new sneakers feature a sole that is a vivid lime green.
+Input: {"question": "What color is the sole of her sneakers?"}
+Output: {"answer": "lime green"}
+
+Context: The antique vase on the shelf has a glaze that is a deep cobalt.
+Input: {"question": "What color is the glaze on the antique vase?"}
+Output: {"answer": "cobalt"}
+
+Context: They painted the nursery walls a soothing lavender to help the baby sleep.
+Input: {"question": "What color are the nursery walls?"}
+Output: {"answer": "lavender"}
+
+Context: The ripe strawberries in the basket are a striking crimson red.
+Input: {"question": "What color are the ripe strawberries?"}
+Output: {"answer": "crimson"}
+
+Context: His old truck has a hood that is rusted to a burnt orange shade.
+Input: {"question": "What color is the hood of his old truck?"}
+Output: {"answer": "burnt orange"}
+
+Context: The tennis ball bounced across the court, appearing as a fluorescent yellow.
+Input: {"question": "What color is the tennis ball?"}
+Output: {"answer": "fluorescent yellow"}
+
+Context: She wrapped the gift in paper that was a metallic gold.
+Input: {"question": "What color is the wrapping paper?"}
+Output: {"answer": "gold"}
+
+Context: The peacock spread its tail, revealing eyespots of iridescent blue.
+Input: {"question": "What color are the eyespots on the peacock's tail?"}
+Output: {"answer": "blue"}
+
+Context: The door to the secret room is hidden behind a panel of charcoal gray.
+Input: {"question": "What color is the hidden panel?"}
+Output: {"answer": "charcoal"}
+
+Context: He spilled ink on the rug, leaving a permanent stain of indigo.
+Input: {"question": "What color is the ink stain on the rug?"}
+Output: {"answer": "indigo"}
+
+Context: The tulips blooming in the garden are a pure, snowy white.
+Input: {"question": "What color are the tulips in the garden?"}
+Output: {"answer": "white"}
+
+Context: The firefighter's helmet shines with a reflective silver stripe.
+Input: {"question": "What color is the stripe on the firefighter's helmet?"}
+Output: {"answer": "silver"}

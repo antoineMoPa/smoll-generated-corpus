@@ -1,0 +1,51 @@
+Available Tools: list_commits | get_commit | create_branch | delete_branch | list_branches | compare_branches
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "branch": "string", "sha": "string" }
+Response Schema: { "commits": [{ "sha": "string", "message": "string", "author": "string", "date": "string" }], "branch": "string" }
+---
+Question: Display all branches for the stark-industries/arc-reactor repository.
+Call: { "func_call": "list_branches", "owner": "stark-industries", "repo": "arc-reactor", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "main" }
+
+Question: Generate a new hotfix branch named hotfix/energy-leak in the stark-industries/arc-reactor repo based on commit f00dface.
+Call: { "func_call": "create_branch", "owner": "stark-industries", "repo": "arc-reactor", "branch": "hotfix/energy-leak", "sha": "f00dface" }
+Response: { "commits": [], "branch": "hotfix/energy-leak" }
+
+Question: Remove the outdated experiment branch experiment/jarvis-v1 from the stark-industries/arc-reactor project.
+Call: { "func_call": "delete_branch", "owner": "stark-industries", "repo": "arc-reactor", "branch": "experiment/jarvis-v1", "sha": "" }
+Response: { "commits": [], "branch": "experiment/jarvis-v1" }
+
+Question: List every active branch in the wayne-ent/batcomputer system.
+Call: { "func_call": "list_branches", "owner": "wayne-ent", "repo": "batcomputer", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "develop" }
+
+Question: Create a release candidate branch called release/v3.0.1 for the wayne-ent/batcomputer repo starting from sha 99887766.
+Call: { "func_call": "create_branch", "owner": "wayne-ent", "repo": "batcomputer", "branch": "release/v3.0.1", "sha": "99887766" }
+Response: { "commits": [], "branch": "release/v3.0.1" }
+
+Question: Delete the abandoned feature branch feature/nightwing-ui from the wayne-ent/batcomputer repository.
+Call: { "func_call": "delete_branch", "owner": "wayne-ent", "repo": "batcomputer", "branch": "feature/nightwing-ui", "sha": "" }
+Response: { "commits": [], "branch": "feature/nightwing-ui" }
+
+Question: Show me the branch list for the cybertek/ghost-protocol codebase.
+Call: { "func_call": "list_branches", "owner": "cybertek", "repo": "ghost-protocol", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "master" }
+
+Question: Initialize a new feature branch named feature/cloaking-device in the cybertek/ghost-protocol repo using commit aabbccdd.
+Call: { "func_call": "create_branch", "owner": "cybertek", "repo": "ghost-protocol", "branch": "feature/cloaking-device", "sha": "aabbccdd" }
+Response: { "commits": [], "branch": "feature/cloaking-device" }
+
+Question: Clean up the merged bugfix branch bugfix/sonar-glitch from the cybertek/ghost-protocol project.
+Call: { "func_call": "delete_branch", "owner": "cybertek", "repo": "ghost-protocol", "branch": "bugfix/sonar-glitch", "sha": "" }
+Response: { "commits": [], "branch": "bugfix/sonar-glitch" }
+
+Question: Retrieve all branches associated with the oscorp/spider-tracker repository.
+Call: { "func_call": "list_branches", "owner": "oscorp", "repo": "spider-tracker", "branch": "", "sha": "" }
+Response: { "commits": [], "branch": "main" }
+
+Question: Spin up a testing branch called test/web-slinger-v2 for the oscorp/spider-tracker repo based on sha 12345678.
+Call: { "func_call": "create_branch", "owner": "oscorp", "repo": "spider-tracker", "branch": "test/web-slinger-v2", "sha": "12345678" }
+Response: { "commits": [], "branch": "test/web-slinger-v2" }
+
+Question: Purge the temporary branch temp/goblin-scan from the oscorp/spider-tracker repository.
+Call: { "func_call": "delete_branch", "owner": "oscorp", "repo": "spider-tracker", "branch": "temp/goblin-scan", "sha": "" }
+Response: { "commits": [], "branch": "temp/goblin-scan" }

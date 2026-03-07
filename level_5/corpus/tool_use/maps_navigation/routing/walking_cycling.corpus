@@ -1,0 +1,51 @@
+Available Tools: get_directions | get_route_alternatives | get_travel_time | get_traffic_conditions
+Call Schema: { "func_call": "string", "origin": "string", "destination": "string", "mode": "driving|walking|cycling|transit" }
+Response Schema: { "distance_km": number, "duration_minutes": number, "steps": [{ "instruction": "string", "distance_km": number }] }
+---
+Question: How do I walk from the main entrance of Central Park to the Bethesda Fountain?
+Call: { "func_call": "get_directions", "origin": "Central Park Main Entrance, 59th St, New York", "destination": "Bethesda Fountain, Central Park, New York", "mode": "walking" }
+Response: { "distance_km": 1.2, "duration_minutes": 15, "steps": [ { "instruction": "Enter Central Park at 59th Street and proceed north on the main path.", "distance_km": 0.4 }, { "instruction": "Continue straight past the Great Lawn on your left.", "distance_km": 0.5 }, { "instruction": "Turn right at the fork to approach Bethesda Terrace.", "distance_km": 0.3 } ] }
+
+Question: What is the best cycling route from Golden Gate Park to Fisherman's Wharf?
+Call: { "func_call": "get_directions", "origin": "Golden Gate Park, San Francisco", "destination": "Fisherman's Wharf, San Francisco", "mode": "cycling" }
+Response: { "distance_km": 8.5, "duration_minutes": 35, "steps": [ { "instruction": "Head east on JFK Drive exiting the park.", "distance_km": 1.2 }, { "instruction": "Turn left onto Arguello Boulevard and continue north.", "distance_km": 2.1 }, { "instruction": "Merge onto the Bay Trail heading east along the waterfront.", "distance_km": 4.5 }, { "instruction": "Arrive at Fisherman's Wharf.", "distance_km": 0.7 } ] }
+
+Question: I need walking directions from the Louvre Museum to the Tuileries Garden exit near Concorde.
+Call: { "func_call": "get_directions", "origin": "Louvre Museum, Paris", "destination": "Place de la Concorde, Paris", "mode": "walking" }
+Response: { "distance_km": 0.9, "duration_minutes": 12, "steps": [ { "instruction": "Exit the Louvre via the Cour Napoléon.", "distance_km": 0.2 }, { "instruction": "Walk west through the Tuileries Garden along the central alley.", "distance_km": 0.6 }, { "instruction": "Exit the garden at Place de la Concorde.", "distance_km": 0.1 } ] }
+
+Question: Can you map a cycling path from Hyde Park Corner to Buckingham Palace?
+Call: { "func_call": "get_directions", "origin": "Hyde Park Corner, London", "destination": "Buckingham Palace, London", "mode": "cycling" }
+Response: { "distance_km": 1.8, "duration_minutes": 10, "steps": [ { "instruction": "Cycle north on Park Lane.", "distance_km": 0.5 }, { "instruction": "Turn right onto Constitution Hill.", "distance_km": 0.8 }, { "instruction": "Continue straight to the palace gates.", "distance_km": 0.5 } ] }
+
+Question: How do I walk from Shibuya Crossing to Yoyogi Park?
+Call: { "func_call": "get_directions", "origin": "Shibuya Crossing, Tokyo", "destination": "Yoyogi Park, Tokyo", "mode": "walking" }
+Response: { "distance_km": 1.5, "duration_minutes": 18, "steps": [ { "instruction": "Cross Shibuya Scramble and head west on Koen-dori.", "distance_km": 0.6 }, { "instruction": "Turn left onto Meiji-dori Avenue.", "distance_km": 0.4 }, { "instruction": "Enter Yoyogi Park through the Harajuku entrance.", "distance_km": 0.5 } ] }
+
+Question: Find a cycling route from Millennium Park to Navy Pier in Chicago.
+Call: { "func_call": "get_directions", "origin": "Millennium Park, Chicago", "destination": "Navy Pier, Chicago", "mode": "cycling" }
+Response: { "distance_km": 3.2, "duration_minutes": 16, "steps": [ { "instruction": "Head east on Monroe Street towards the lakefront.", "distance_km": 0.8 }, { "instruction": "Turn left onto the Lakefront Trail heading north.", "distance_km": 2.0 }, { "instruction": "Exit the trail at Grand Avenue and turn right to Navy Pier.", "distance_km": 0.4 } ] }
+
+Question: Walking directions from the Colosseum to the Roman Forum entrance.
+Call: { "func_call": "get_directions", "origin": "Colosseum, Rome", "destination": "Roman Forum, Rome", "mode": "walking" }
+Response: { "distance_km": 0.4, "duration_minutes": 6, "steps": [ { "instruction": "Walk northwest along Via dei Fori Imperiali.", "distance_km": 0.3 }, { "instruction": "Enter the Roman Forum archaeological site on the left.", "distance_km": 0.1 } ] }
+
+Question: What is the cycling route from Stanley Park Seawall to Granville Island?
+Call: { "func_call": "get_directions", "origin": "Stanley Park Seawall, Vancouver", "destination": "Granville Island, Vancouver", "mode": "cycling" }
+Response: { "distance_km": 5.6, "duration_minutes": 25, "steps": [ { "instruction": "Follow the Seawall path south towards Coal Harbour.", "distance_km": 2.1 }, { "instruction": "Continue on the bike lane along Burrard Street Bridge.", "distance_km": 1.5 }, { "instruction": "Turn right onto 1st Avenue and follow signs to Granville Island.", "distance_km": 2.0 } ] }
+
+Question: How can I walk from Times Square to Central Park South?
+Call: { "func_call": "get_directions", "origin": "Times Square, New York", "destination": "Central Park South, New York", "mode": "walking" }
+Response: { "distance_km": 1.1, "duration_minutes": 14, "steps": [ { "instruction": "Head north on 7th Avenue.", "distance_km": 0.8 }, { "instruction": "Turn right onto West 59th Street.", "distance_km": 0.3 } ] }
+
+Question: Cycling directions from Golden Gate Bridge viewpoint to Sausalito ferry terminal.
+Call: { "func_call": "get_directions", "origin": "Golden Gate Bridge Vista Point, Sausalito", "destination": "Sausalito Ferry Terminal, Sausalito", "mode": "cycling" }
+Response: { "distance_km": 4.8, "duration_minutes": 20, "steps": [ { "instruction": "Descend from the vista point onto Conzelman Road.", "distance_km": 1.2 }, { "instruction": "Merge onto Alexander Avenue heading into town.", "distance_km": 2.5 }, { "instruction": "Turn left onto Bridgeway to reach the ferry terminal.", "distance_km": 1.1 } ] }
+
+Question: Walk from the Eiffel Tower to the Seine River cruise dock at Port de la Bourdonnais.
+Call: { "func_call": "get_directions", "origin": "Eiffel Tower, Paris", "destination": "Port de la Bourdonnais, Paris", "mode": "walking" }
+Response: { "distance_km": 0.6, "duration_minutes": 8, "steps": [ { "instruction": "Walk south from the tower towards Quai Branly.", "distance_km": 0.3 }, { "instruction": "Turn right along the riverbank.", "distance_km": 0.3 } ] }
+
+Question: Cycling path from Regent's Park to Camden Lock Market.
+Call: { "func_call": "get_directions", "origin": "Regent's Park, London", "destination": "Camden Lock Market, London", "mode": "cycling" }
+Response: { "distance_km": 2.4, "duration_minutes": 12, "steps": [ { "instruction": "Exit the park via Prince Albert Road.", "distance_km": 0.4 }, { "instruction": "Turn left onto Albany Street.", "distance_km": 0.9 }, { "instruction": "Continue onto Chalk Farm Road until the market entrance.", "distance_km": 1.1 } ] }

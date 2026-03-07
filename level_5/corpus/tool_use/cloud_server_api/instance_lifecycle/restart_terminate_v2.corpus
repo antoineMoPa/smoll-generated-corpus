@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Boot up the storage gateway i-store-gw-01 in us-east-2 to begin the nightly backup cycle.
+Call: { "func_call": "start_instance", "instance_id": "i-store-gw-01", "region": "us-east-2" }
+Response: { "instance_id": "i-store-gw-01", "state": "starting", "message": "Storage gateway powering on for backup operations." }
+
+Question: Shut down the staging API server i-api-stage-04 in eu-west-1 to save costs overnight.
+Call: { "func_call": "stop_instance", "instance_id": "i-api-stage-04", "region": "eu-west-1" }
+Response: { "instance_id": "i-api-stage-04", "state": "stopping", "message": "Staging API server halted for overnight cost reduction." }
+
+Question: Reboot the analytics worker i-analytics-99 in ap-northeast-2 to apply security patches.
+Call: { "func_call": "restart_instance", "instance_id": "i-analytics-99", "region": "ap-northeast-2" }
+Response: { "instance_id": "i-analytics-99", "state": "rebooting", "message": "Analytics worker rebooting to install security updates." }
+
+Question: Permanently delete the deprecated logging node i-log-old-22 in sa-east-1 as retention period expired.
+Call: { "func_call": "terminate_instance", "instance_id": "i-log-old-22", "region": "sa-east-1" }
+Response: { "instance_id": "i-log-old-22", "state": "shutting-down", "message": "Deprecated logging node terminated due to expired retention." }
+
+Question: Start the inference engine i-ml-infer-05 in us-west-1 to handle the morning traffic spike.
+Call: { "func_call": "start_instance", "instance_id": "i-ml-infer-05", "region": "us-west-1" }
+Response: { "instance_id": "i-ml-infer-05", "state": "starting", "message": "Inference engine starting to process morning traffic." }
+
+Question: Stop the development database i-dev-db-03 in eu-central-1 while the team is on holiday.
+Call: { "func_call": "stop_instance", "instance_id": "i-dev-db-03", "region": "eu-central-1" }
+Response: { "instance_id": "i-dev-db-03", "state": "stopping", "message": "Development database stopped during team holiday." }
+
+Question: Cycle the load balancer controller i-lb-ctrl-11 in ap-southeast-2 to clear stuck connections.
+Call: { "func_call": "restart_instance", "instance_id": "i-lb-ctrl-11", "region": "ap-southeast-2" }
+Response: { "instance_id": "i-lb-ctrl-11", "state": "rebooting", "message": "Load balancer controller restarting to clear stuck connections." }
+
+Question: Destroy the transient build agent i-build-tmp-88 in us-east-1 now that the pipeline has failed.
+Call: { "func_call": "terminate_instance", "instance_id": "i-build-tmp-88", "region": "us-east-1" }
+Response: { "instance_id": "i-build-tmp-88", "state": "shutting-down", "message": "Transient build agent terminated after pipeline failure." }
+
+Question: Power on the backup domain controller i-bdc-02 in ca-central-1 for failover testing.
+Call: { "func_call": "start_instance", "instance_id": "i-bdc-02", "region": "ca-central-1" }
+Response: { "instance_id": "i-bdc-02", "state": "starting", "message": "Backup domain controller powering on for failover test." }
+
+Question: Halt the rendering farm node i-render-14 in eu-north-1 due to hardware overheating warnings.
+Call: { "func_call": "stop_instance", "instance_id": "i-render-14", "region": "eu-north-1" }
+Response: { "instance_id": "i-render-14", "state": "stopping", "message": "Rendering node halted due to overheating alerts." }
+
+Question: Refresh the session manager i-sess-mgr-06 in ap-south-1 to reset user tokens.
+Call: { "func_call": "restart_instance", "instance_id": "i-sess-mgr-06", "region": "ap-south-1" }
+Response: { "instance_id": "i-sess-mgr-06", "state": "rebooting", "message": "Session manager restarting to reset user tokens." }
+
+Question: Decommission the legacy firewall instance i-fw-legacy-01 in me-south-1 following the cloud migration.
+Call: { "func_call": "terminate_instance", "instance_id": "i-fw-legacy-01", "region": "me-south-1" }
+Response: { "instance_id": "i-fw-legacy-01", "state": "shutting-down", "message": "Legacy firewall terminated post-cloud migration." }

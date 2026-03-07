@@ -1,0 +1,51 @@
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Please lock the side gate for user marco_88.
+Call: { "func_call": "lock_door", "lock_id": "side_gate", "user_id": "marco_88", "code": "" }
+Response: { "lock_id": "side_gate", "state": "locked", "last_action_by": "marco_88", "timestamp": "2023-11-01T09:15:00Z" }
+
+Question: Unlock the studio entrance so nina_v can enter.
+Call: { "func_call": "unlock_door", "lock_id": "studio_entrance", "user_id": "nina_v", "code": "" }
+Response: { "lock_id": "studio_entrance", "state": "unlocked", "last_action_by": "nina_v", "timestamp": "2023-11-01T10:22:45Z" }
+
+Question: I need to secure the basement, please lock it for user oscar_q.
+Call: { "func_call": "lock_door", "lock_id": "basement", "user_id": "oscar_q", "code": "" }
+Response: { "lock_id": "basement", "state": "locked", "last_action_by": "oscar_q", "timestamp": "2023-11-01T11:05:30Z" }
+
+Question: Let user peter_z into the warehouse by unlocking the loading dock.
+Call: { "func_call": "unlock_door", "lock_id": "loading_dock", "user_id": "peter_z", "code": "" }
+Response: { "lock_id": "loading_dock", "state": "unlocked", "last_action_by": "peter_z", "timestamp": "2023-11-01T12:40:15Z" }
+
+Question: Set a new access code 3921 for the studio entrance for user quinn_b.
+Call: { "func_call": "set_access_code", "lock_id": "studio_entrance", "user_id": "quinn_b", "code": "3921" }
+Response: { "lock_id": "studio_entrance", "state": "locked", "last_action_by": "quinn_b", "timestamp": "2023-11-01T13:55:20Z" }
+
+Question: Lock the side gate immediately for user rachel_d to ensure safety.
+Call: { "func_call": "lock_door", "lock_id": "side_gate", "user_id": "rachel_d", "code": "" }
+Response: { "lock_id": "side_gate", "state": "locked", "last_action_by": "rachel_d", "timestamp": "2023-11-01T14:30:00Z" }
+
+Question: Unlock the basement for the maintenance crew using user sam_h credentials.
+Call: { "func_call": "unlock_door", "lock_id": "basement", "user_id": "sam_h", "code": "" }
+Response: { "lock_id": "basement", "state": "unlocked", "last_action_by": "sam_h", "timestamp": "2023-11-01T15:10:55Z" }
+
+Question: Update the code on the loading dock to 7743 for user tina_f.
+Call: { "func_call": "set_access_code", "lock_id": "loading_dock", "user_id": "tina_f", "code": "7743" }
+Response: { "lock_id": "loading_dock", "state": "locked", "last_action_by": "tina_f", "timestamp": "2023-11-01T16:25:40Z" }
+
+Question: Please unlock the side gate for user uma_g so she can get in.
+Call: { "func_call": "unlock_door", "lock_id": "side_gate", "user_id": "uma_g", "code": "" }
+Response: { "lock_id": "side_gate", "state": "unlocked", "last_action_by": "uma_g", "timestamp": "2023-11-01T17:00:12Z" }
+
+Question: Secure the studio entrance by locking it for user victor_n.
+Call: { "func_call": "lock_door", "lock_id": "studio_entrance", "user_id": "victor_n", "code": "" }
+Response: { "lock_id": "studio_entrance", "state": "locked", "last_action_by": "victor_n", "timestamp": "2023-11-01T18:45:33Z" }
+
+Question: Change the access code for the basement to 6082 for user wendy_k.
+Call: { "func_call": "set_access_code", "lock_id": "basement", "user_id": "wendy_k", "code": "6082" }
+Response: { "lock_id": "basement", "state": "locked", "last_action_by": "wendy_k", "timestamp": "2023-11-01T19:30:05Z" }
+
+Question: Unlock the loading dock for user xander_p to let the truck in.
+Call: { "func_call": "unlock_door", "lock_id": "loading_dock", "user_id": "xander_p", "code": "" }
+Response: { "lock_id": "loading_dock", "state": "unlocked", "last_action_by": "xander_p", "timestamp": "2023-11-01T20:15:50Z" }

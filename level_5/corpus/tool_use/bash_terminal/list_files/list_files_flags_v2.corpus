@@ -1,0 +1,51 @@
+Available Tools: ls | ls_la | ls_lh | ls_R
+Call Schema: { "func_call": "string", "path": "string", "flags": "string" }
+Response Schema: { "entries": ["string"], "count": number }
+---
+Question: Display detailed file information including hidden items in the docker config folder.
+Call: { "func_call": "ls_la", "path": "/etc/docker", "flags": "-la" }
+Response: { "entries": ["drwxr-xr-x 3 root root 4096 Nov 05 16:45 .", "drwxr-xr-x 12 root root 4096 Oct 20 09:10 ..", "-rw------- 1 root root  342 Nov 05 16:45 daemon.json", "-rw-r--r-- 1 root root  128 Nov 01 11:20 cert.pem"], "count": 4 }
+
+Question: Show human-readable file sizes for the media storage volume.
+Call: { "func_call": "ls_lh", "path": "/mnt/media/videos", "flags": "-lh" }
+Response: { "entries": ["total 850G", "-rw-r--r-- 1 media media 120G Nov 10 14:20 movie_4k.mkv", "-rw-r--r-- 1 media media  45G Nov 11 09:00 documentary.mp4", "-rw-r--r-- 1 media media 2.3G Nov 12 18:30 clip_short.mov"], "count": 4 }
+
+Question: Recursively list all components in the frontend assets directory.
+Call: { "func_call": "ls_R", "path": "/var/www/frontend/assets", "flags": "-R" }
+Response: { "entries": [".:", "img", "fonts", "./img:", "logo.png", "banner.jpg", "./fonts:", "roboto.woff2", "open-sans.ttf"], "count": 7 }
+
+Question: List configuration files in /etc/nginx sorted by size.
+Call: { "func_call": "ls", "path": "/etc/nginx", "flags": "--sort=size" }
+Response: { "entries": ["mime.types", "nginx.conf", "sites-available", "sites-enabled", "modules-enabled"], "count": 5 }
+
+Question: Show hidden files only in the root user home directory.
+Call: { "func_call": "ls", "path": "/root", "flags": "-a" }
+Response: { "entries": [".", "..", ".bash_history", ".profile", ".pki", ".ssh"], "count": 6 }
+
+Question: List package cache files in /var/cache/apt sorted by modification time.
+Call: { "func_call": "ls", "path": "/var/cache/apt", "flags": "-lt" }
+Response: { "entries": ["pkgcache.bin", "srcpkgcache.bin", "archives", "partial"], "count": 4 }
+
+Question: Get a long listing of the swap directory with all entries.
+Call: { "func_call": "ls_la", "path": "/swap", "flags": "-la" }
+Response: { "entries": ["drwx------ 2 root root 4096 Nov 15 08:00 .", "drwxr-xr-x 20 root root 4096 Nov 01 00:00 ..", "-rw------- 1 root root 8.0G Nov 15 08:00 swapfile", "-rw-r--r-- 1 root root   12 Nov 15 08:00 .version"], "count": 4 }
+
+Question: Display human-readable sizes for the database dump folder.
+Call: { "func_call": "ls_lh", "path": "/opt/db/dumps", "flags": "-lh" }
+Response: { "entries": ["total 1.5T", "drwxr-xr-x 2 dbadmin dbadmin 4.0K Feb 01 00:00 daily", "drwxr-xr-x 2 dbadmin dbadmin 4.0K Mar 01 00:00 weekly", "-rw-r--r-- 1 dbadmin dbadmin 980G Dec 31 23:59 full_backup.sql.gz"], "count": 4 }
+
+Question: Recursive list of the python site-packages depth.
+Call: { "func_call": "ls_R", "path": "/usr/lib/python3/dist-packages", "flags": "-R" }
+Response: { "entries": [".:", "requests", "numpy", "./requests:", "api.py", "auth.py", "./numpy:", "core.py", "linalg.py"], "count": 8 }
+
+Question: List executables in /sbin sorted by file size descending.
+Call: { "func_call": "ls", "path": "/sbin", "flags": "--sort=size" }
+Response: { "entries": ["init", "shutdown", "reboot", "fdisk", "mkfs.ext4"], "count": 5 }
+
+Question: Show all entries including dotfiles in the git hooks directory.
+Call: { "func_call": "ls", "path": "/opt/repo/.git/hooks", "flags": "-a" }
+Response: { "entries": [".", "..", "pre-commit", "commit-msg", "post-receive", "applypatch-msg.sample"], "count": 6 }
+
+Question: List container logs in /var/lib/docker/containers sorted by time.
+Call: { "func_call": "ls", "path": "/var/lib/docker/containers", "flags": "-lt" }
+Response: { "entries": ["f9e8d7c6b5a4", "a1b2c3d4e5f6", "web-server-json.log", "db-cluster-json.log"], "count": 4 }

@@ -1,0 +1,51 @@
+Available Tools: get_current_weather | get_feels_like | get_pressure | get_visibility
+Call Schema: { "func_call": "string", "location": "string", "metrics": ["string"] }
+Response Schema: { "location": "string", "metrics": { "temperature": number, "humidity": number, "pressure": number } }
+---
+Question: What is the feels-like temperature and barometric pressure in Tokyo right now?
+Call: { "func_call": "get_feels_like", "location": "Tokyo, Japan", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Tokyo, Japan", "metrics": { "temperature": 28.5, "humidity": 72, "pressure": 1013.2 } }
+
+Question: I need the apparent temperature and air pressure for London.
+Call: { "func_call": "get_feels_like", "location": "London, UK", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "London, UK", "metrics": { "temperature": 12.1, "humidity": 65, "pressure": 1008.5 } }
+
+Question: Can you check the feels-like temp and pressure in Mumbai?
+Call: { "func_call": "get_feels_like", "location": "Mumbai, India", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Mumbai, India", "metrics": { "temperature": 31.8, "humidity": 88, "pressure": 1005.9 } }
+
+Question: Give me the feels-like reading and barometric pressure for New York City.
+Call: { "func_call": "get_feels_like", "location": "New York, USA", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "New York, USA", "metrics": { "temperature": 19.4, "humidity": 55, "pressure": 1018.7 } }
+
+Question: What are the feels-like temperature and pressure values in Sydney?
+Call: { "func_call": "get_feels_like", "location": "Sydney, Australia", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Sydney, Australia", "metrics": { "temperature": 22.3, "humidity": 60, "pressure": 1021.4 } }
+
+Question: Please retrieve the apparent temperature and atmospheric pressure for Cairo.
+Call: { "func_call": "get_feels_like", "location": "Cairo, Egypt", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Cairo, Egypt", "metrics": { "temperature": 35.2, "humidity": 30, "pressure": 1009.1 } }
+
+Question: How does it feel in Buenos Aires and what is the pressure?
+Call: { "func_call": "get_feels_like", "location": "Buenos Aires, Argentina", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Buenos Aires, Argentina", "metrics": { "temperature": 16.7, "humidity": 78, "pressure": 1015.3 } }
+
+Question: Get the feels-like metric and barometric pressure for Moscow.
+Call: { "func_call": "get_feels_like", "location": "Moscow, Russia", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Moscow, Russia", "metrics": { "temperature": -4.2, "humidity": 82, "pressure": 1025.6 } }
+
+Question: What is the feels-like temperature and current pressure in Singapore?
+Call: { "func_call": "get_feels_like", "location": "Singapore", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Singapore", "metrics": { "temperature": 33.1, "humidity": 90, "pressure": 1007.8 } }
+
+Question: I need to know the feels-like temp and pressure in Toronto.
+Call: { "func_call": "get_feels_like", "location": "Toronto, Canada", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Toronto, Canada", "metrics": { "temperature": 8.9, "humidity": 45, "pressure": 1012.0 } }
+
+Question: Check the apparent temperature and air pressure for Cape Town.
+Call: { "func_call": "get_feels_like", "location": "Cape Town, South Africa", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Cape Town, South Africa", "metrics": { "temperature": 24.6, "humidity": 58, "pressure": 1019.2 } }
+
+Question: What are the feels-like conditions and barometric pressure in Bangkok?
+Call: { "func_call": "get_feels_like", "location": "Bangkok, Thailand", "metrics": ["feels_like", "pressure"] }
+Response: { "location": "Bangkok, Thailand", "metrics": { "temperature": 36.4, "humidity": 75, "pressure": 1004.5 } }

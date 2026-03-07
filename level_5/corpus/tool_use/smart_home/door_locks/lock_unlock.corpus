@@ -1,0 +1,51 @@
+Available Tools: lock_door | unlock_door | get_lock_status | set_access_code
+Call Schema: { "func_call": "string", "lock_id": "string", "user_id": "string", "code": "string" }
+Response Schema: { "lock_id": "string", "state": "locked|unlocked", "last_action_by": "string", "timestamp": "string" }
+---
+Question: Please lock the front door for user alice_123.
+Call: { "func_call": "lock_door", "lock_id": "front_door", "user_id": "alice_123", "code": "" }
+Response: { "lock_id": "front_door", "state": "locked", "last_action_by": "alice_123", "timestamp": "2023-10-27T14:30:00Z" }
+
+Question: Unlock the back door so bob_smith can enter.
+Call: { "func_call": "unlock_door", "lock_id": "back_door", "user_id": "bob_smith", "code": "" }
+Response: { "lock_id": "back_door", "state": "unlocked", "last_action_by": "bob_smith", "timestamp": "2023-10-27T15:45:12Z" }
+
+Question: I need to secure the garage, please lock it for user charlie_99.
+Call: { "func_call": "lock_door", "lock_id": "garage", "user_id": "charlie_99", "code": "" }
+Response: { "lock_id": "garage", "state": "locked", "last_action_by": "charlie_99", "timestamp": "2023-10-27T16:20:05Z" }
+
+Question: Let user diana_k into the house by unlocking the front door.
+Call: { "func_call": "unlock_door", "lock_id": "front_door", "user_id": "diana_k", "code": "" }
+Response: { "lock_id": "front_door", "state": "unlocked", "last_action_by": "diana_k", "timestamp": "2023-10-27T17:05:33Z" }
+
+Question: Set a new access code 8472 for the back door for user evan_r.
+Call: { "func_call": "set_access_code", "lock_id": "back_door", "user_id": "evan_r", "code": "8472" }
+Response: { "lock_id": "back_door", "state": "locked", "last_action_by": "evan_r", "timestamp": "2023-10-27T18:10:45Z" }
+
+Question: Lock the garage immediately for user fiona_p to ensure safety.
+Call: { "func_call": "lock_door", "lock_id": "garage", "user_id": "fiona_p", "code": "" }
+Response: { "lock_id": "garage", "state": "locked", "last_action_by": "fiona_p", "timestamp": "2023-10-27T19:00:00Z" }
+
+Question: Unlock the front door for the delivery person using user george_t credentials.
+Call: { "func_call": "unlock_door", "lock_id": "front_door", "user_id": "george_t", "code": "" }
+Response: { "lock_id": "front_door", "state": "unlocked", "last_action_by": "george_t", "timestamp": "2023-10-27T19:30:22Z" }
+
+Question: Update the code on the garage door to 1199 for user hannah_m.
+Call: { "func_call": "set_access_code", "lock_id": "garage", "user_id": "hannah_m", "code": "1199" }
+Response: { "lock_id": "garage", "state": "locked", "last_action_by": "hannah_m", "timestamp": "2023-10-27T20:15:10Z" }
+
+Question: Please unlock the back door for user ian_j so he can get in.
+Call: { "func_call": "unlock_door", "lock_id": "back_door", "user_id": "ian_j", "code": "" }
+Response: { "lock_id": "back_door", "state": "unlocked", "last_action_by": "ian_j", "timestamp": "2023-10-27T21:00:55Z" }
+
+Question: Secure the front door by locking it for user julia_s.
+Call: { "func_call": "lock_door", "lock_id": "front_door", "user_id": "julia_s", "code": "" }
+Response: { "lock_id": "front_door", "state": "locked", "last_action_by": "julia_s", "timestamp": "2023-10-27T21:45:30Z" }
+
+Question: Change the access code for the back door to 5501 for user kevin_l.
+Call: { "func_call": "set_access_code", "lock_id": "back_door", "user_id": "kevin_l", "code": "5501" }
+Response: { "lock_id": "back_door", "state": "locked", "last_action_by": "kevin_l", "timestamp": "2023-10-27T22:10:18Z" }
+
+Question: Unlock the garage for user lisa_w to let her car in.
+Call: { "func_call": "unlock_door", "lock_id": "garage", "user_id": "lisa_w", "code": "" }
+Response: { "lock_id": "garage", "state": "unlocked", "last_action_by": "lisa_w", "timestamp": "2023-10-27T22:55:42Z" }

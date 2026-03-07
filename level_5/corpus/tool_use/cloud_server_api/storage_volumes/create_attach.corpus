@@ -1,0 +1,51 @@
+Available Tools: create_volume | attach_volume | detach_volume | snapshot_volume | list_volumes
+Call Schema: { "func_call": "string", "volume_id": "string", "instance_id": "string", "size_gb": number }
+Response Schema: { "volume_id": "string", "size_gb": number, "state": "string", "attached_to": "string" }
+---
+Question: Create a new 50GB storage volume for the web server cluster.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 50 }
+Response: { "volume_id": "vol-8a2f9c1d", "size_gb": 50, "state": "available", "attached_to": null }
+
+Question: Attach the newly created volume vol-8a2f9c1d to instance i-0987654321abcdef.
+Call: { "func_call": "attach_volume", "volume_id": "vol-8a2f9c1d", "instance_id": "i-0987654321abcdef", "size_gb": 0 }
+Response: { "volume_id": "vol-8a2f9c1d", "size_gb": 50, "state": "in-use", "attached_to": "i-0987654321abcdef" }
+
+Question: Provision a large 1TB data archive volume.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 1024 }
+Response: { "volume_id": "vol-3b7e2a9f", "size_gb": 1024, "state": "available", "attached_to": null }
+
+Question: Link the 1TB archive volume vol-3b7e2a9f to the backup server i-backup-prod-01.
+Call: { "func_call": "attach_volume", "volume_id": "vol-3b7e2a9f", "instance_id": "i-backup-prod-01", "size_gb": 0 }
+Response: { "volume_id": "vol-3b7e2a9f", "size_gb": 1024, "state": "in-use", "attached_to": "i-backup-prod-01" }
+
+Question: I need a 200GB volume for the database application logs.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 200 }
+Response: { "volume_id": "vol-db-logs-55", "size_gb": 200, "state": "available", "attached_to": null }
+
+Question: Attach the log volume vol-db-logs-55 to the primary database instance i-db-master-001.
+Call: { "func_call": "attach_volume", "volume_id": "vol-db-logs-55", "instance_id": "i-db-master-001", "size_gb": 0 }
+Response: { "volume_id": "vol-db-logs-55", "size_gb": 200, "state": "in-use", "attached_to": "i-db-master-001" }
+
+Question: Spin up a small 50GB volume for temporary cache storage.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 50 }
+Response: { "volume_id": "vol-cache-tmp-02", "size_gb": 50, "state": "available", "attached_to": null }
+
+Question: Connect the cache volume vol-cache-tmp-02 to the redis node i-redis-node-04.
+Call: { "func_call": "attach_volume", "volume_id": "vol-cache-tmp-02", "instance_id": "i-redis-node-04", "size_gb": 0 }
+Response: { "volume_id": "vol-cache-tmp-02", "size_gb": 50, "state": "in-use", "attached_to": "i-redis-node-04" }
+
+Question: Create a 1TB volume for the media processing pipeline.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 1024 }
+Response: { "volume_id": "vol-media-pipe-99", "size_gb": 1024, "state": "available", "attached_to": null }
+
+Question: Attach the media processing volume vol-media-pipe-99 to instance i-render-worker-07.
+Call: { "func_call": "attach_volume", "volume_id": "vol-media-pipe-99", "instance_id": "i-render-worker-07", "size_gb": 0 }
+Response: { "volume_id": "vol-media-pipe-99", "size_gb": 1024, "state": "in-use", "attached_to": "i-render-worker-07" }
+
+Question: Generate a 200GB persistent disk for the analytics engine.
+Call: { "func_call": "create_volume", "volume_id": "", "instance_id": "", "size_gb": 200 }
+Response: { "volume_id": "vol-analytics-88", "size_gb": 200, "state": "available", "attached_to": null }
+
+Question: Mount the analytics volume vol-analytics-88 onto the compute node i-comp-node-12.
+Call: { "func_call": "attach_volume", "volume_id": "vol-analytics-88", "instance_id": "i-comp-node-12", "size_gb": 0 }
+Response: { "volume_id": "vol-analytics-88", "size_gb": 200, "state": "in-use", "attached_to": "i-comp-node-12" }

@@ -1,0 +1,51 @@
+Available Tools: get_page_views | get_unique_visitors | get_session_duration | get_bounce_rate
+Call Schema: { "func_call": "string", "url": "string", "from_date": "string", "to_date": "string", "granularity": "hourly|daily|weekly|monthly" }
+Response Schema: { "url": "string", "period": "string", "views": number, "unique_visitors": number, "avg_session_seconds": number, "bounce_rate": number }
+---
+Question: How many page views and unique visitors did the homepage get last week?
+Call: { "func_call": "get_page_views", "url": "https://www.techcrunch.com", "from_date": "2023-10-01", "to_date": "2023-10-07", "granularity": "daily" }
+Response: { "url": "https://www.techcrunch.com", "period": "2023-10-01 to 2023-10-07", "views": 452300, "unique_visitors": 189400, "avg_session_seconds": 245, "bounce_rate": 0.42 }
+
+Question: Pull the traffic stats for our pricing page for the entire month of September.
+Call: { "func_call": "get_page_views", "url": "https://shopify.com/pricing", "from_date": "2023-09-01", "to_date": "2023-09-30", "granularity": "weekly" }
+Response: { "url": "https://shopify.com/pricing", "period": "2023-09-01 to 2023-09-30", "views": 89200, "unique_visitors": 67500, "avg_session_seconds": 310, "bounce_rate": 0.28 }
+
+Question: I need the hourly breakdown of views for the blog post about AI trends yesterday.
+Call: { "func_call": "get_page_views", "url": "https://medium.com/story/ai-trends-2023", "from_date": "2023-10-10", "to_date": "2023-10-10", "granularity": "hourly" }
+Response: { "url": "https://medium.com/story/ai-trends-2023", "period": "2023-10-10 to 2023-10-10", "views": 12450, "unique_visitors": 9800, "avg_session_seconds": 420, "bounce_rate": 0.35 }
+
+Question: What were the visitor numbers for the contact us page during the holiday sale?
+Call: { "func_call": "get_page_views", "url": "https://nike.com/contact-us", "from_date": "2023-11-24", "to_date": "2023-11-27", "granularity": "daily" }
+Response: { "url": "https://nike.com/contact-us", "period": "2023-11-24 to 2023-11-27", "views": 3420, "unique_visitors": 2890, "avg_session_seconds": 180, "bounce_rate": 0.55 }
+
+Question: Get me the monthly traffic report for the documentation landing page.
+Call: { "func_call": "get_page_views", "url": "https://docs.python.org/3/", "from_date": "2023-08-01", "to_date": "2023-08-31", "granularity": "monthly" }
+Response: { "url": "https://docs.python.org/3/", "period": "2023-08-01 to 2023-08-31", "views": 1250000, "unique_visitors": 890000, "avg_session_seconds": 560, "bounce_rate": 0.22 }
+
+Question: Check the performance of the new product launch page over the last 48 hours.
+Call: { "func_call": "get_page_views", "url": "https://apple.com/iphone-15-pro", "from_date": "2023-09-22", "to_date": "2023-09-24", "granularity": "hourly" }
+Response: { "url": "https://apple.com/iphone-15-pro", "period": "2023-09-22 to 2023-09-24", "views": 678900, "unique_visitors": 450200, "avg_session_seconds": 390, "bounce_rate": 0.31 }
+
+Question: How many people visited the careers page last quarter?
+Call: { "func_call": "get_page_views", "url": "https://google.com/about/careers", "from_date": "2023-07-01", "to_date": "2023-09-30", "granularity": "weekly" }
+Response: { "url": "https://google.com/about/careers", "period": "2023-07-01 to 2023-09-30", "views": 234500, "unique_visitors": 198700, "avg_session_seconds": 275, "bounce_rate": 0.48 }
+
+Question: Retrieve the daily view counts for the FAQ section during the outage last Tuesday.
+Call: { "func_call": "get_page_views", "url": "https://status.aws.amazon.com/faq", "from_date": "2023-10-03", "to_date": "2023-10-03", "granularity": "daily" }
+Response: { "url": "https://status.aws.amazon.com/faq", "period": "2023-10-03 to 2023-10-03", "views": 56700, "unique_visitors": 48200, "avg_session_seconds": 120, "bounce_rate": 0.65 }
+
+Question: Show me the weekly unique visitors for the forum homepage in August.
+Call: { "func_call": "get_unique_visitors", "url": "https://reddit.com/r/technology", "from_date": "2023-08-01", "to_date": "2023-08-31", "granularity": "weekly" }
+Response: { "url": "https://reddit.com/r/technology", "period": "2023-08-01 to 2023-08-31", "views": 3400000, "unique_visitors": 1200000, "avg_session_seconds": 600, "bounce_rate": 0.19 }
+
+Question: What is the traffic look like for the login page over the weekend?
+Call: { "func_call": "get_page_views", "url": "https://github.com/login", "from_date": "2023-10-07", "to_date": "2023-10-08", "granularity": "hourly" }
+Response: { "url": "https://github.com/login", "period": "2023-10-07 to 2023-10-08", "views": 98500, "unique_visitors": 82000, "avg_session_seconds": 90, "bounce_rate": 0.72 }
+
+Question: Get the monthly stats for the about us page for the first half of the year.
+Call: { "func_call": "get_page_views", "url": "https://tesla.com/about", "from_date": "2023-01-01", "to_date": "2023-06-30", "granularity": "monthly" }
+Response: { "url": "https://tesla.com/about", "period": "2023-01-01 to 2023-06-30", "views": 450000, "unique_visitors": 320000, "avg_session_seconds": 210, "bounce_rate": 0.38 }
+
+Question: Analyze the hourly traffic spike on the checkout page during the flash sale.
+Call: { "func_call": "get_page_views", "url": "https://amazon.com/checkout", "from_date": "2023-07-11", "to_date": "2023-07-11", "granularity": "hourly" }
+Response: { "url": "https://amazon.com/checkout", "period": "2023-07-11 to 2023-07-11", "views": 2100000, "unique_visitors": 1850000, "avg_session_seconds": 150, "bounce_rate": 0.25 }

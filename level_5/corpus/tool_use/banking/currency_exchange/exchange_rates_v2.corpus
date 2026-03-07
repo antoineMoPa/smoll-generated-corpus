@@ -1,0 +1,51 @@
+Available Tools: get_exchange_rate | convert_currency | buy_foreign_currency | get_supported_currencies
+Call Schema: { "func_call": "string", "from_currency": "string", "to_currency": "string", "amount": number }
+Response Schema: { "from": "string", "to": "string", "rate": number, "converted_amount": number, "fee": number }
+---
+Question: What rate applies when swapping 450 Mexican Pesos for US Dollars?
+Call: { "func_call": "get_exchange_rate", "from_currency": "MXN", "to_currency": "USD", "amount": 450 }
+Response: { "from": "MXN", "to": "USD", "rate": 0.058, "converted_amount": 26.10, "fee": 0.50 }
+
+Question: How many Singapore Dollars will I get for 2000 UAE Dirhams?
+Call: { "func_call": "get_exchange_rate", "from_currency": "AED", "to_currency": "SGD", "amount": 2000 }
+Response: { "from": "AED", "to": "SGD", "rate": 0.37, "converted_amount": 740.00, "fee": 3.25 }
+
+Question: Can you find the conversion value for 600 Brazilian Reals into Euros?
+Call: { "func_call": "get_exchange_rate", "from_currency": "BRL", "to_currency": "EUR", "amount": 600 }
+Response: { "from": "BRL", "to": "EUR", "rate": 0.18, "converted_amount": 108.00, "fee": 1.75 }
+
+Question: What is the current rate for turning 15000 Indian Rupees into British Pounds?
+Call: { "func_call": "get_exchange_rate", "from_currency": "INR", "to_currency": "GBP", "amount": 15000 }
+Response: { "from": "INR", "to": "GBP", "rate": 0.0096, "converted_amount": 144.00, "fee": 2.10 }
+
+Question: I need to know how many South Korean Won equal 800 US Dollars.
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "KRW", "amount": 800 }
+Response: { "from": "USD", "to": "KRW", "rate": 1345.50, "converted_amount": 1076400.00, "fee": 6.00 }
+
+Question: Check the exchange details for converting 3200 New Zealand Dollars to Australian Dollars.
+Call: { "func_call": "get_exchange_rate", "from_currency": "NZD", "to_currency": "AUD", "amount": 3200 }
+Response: { "from": "NZD", "to": "AUD", "rate": 0.93, "converted_amount": 2976.00, "fee": 4.50 }
+
+Question: How much is 950 Thai Baht in Japanese Yen today?
+Call: { "func_call": "get_exchange_rate", "from_currency": "THB", "to_currency": "JPY", "amount": 950 }
+Response: { "from": "THB", "to": "JPY", "rate": 4.12, "converted_amount": 3914.00, "fee": 1.90 }
+
+Question: Calculate the result of exchanging 4000 Swedish Krona to US Dollars.
+Call: { "func_call": "get_exchange_rate", "from_currency": "SEK", "to_currency": "USD", "amount": 4000 }
+Response: { "from": "SEK", "to": "USD", "rate": 0.094, "converted_amount": 376.00, "fee": 2.80 }
+
+Question: What rate do I get for 12000 South African Rand into Euros?
+Call: { "func_call": "get_exchange_rate", "from_currency": "ZAR", "to_currency": "EUR", "amount": 12000 }
+Response: { "from": "ZAR", "to": "EUR", "rate": 0.051, "converted_amount": 612.00, "fee": 3.00 }
+
+Question: I want to see the conversion for 750 Norwegian Krone to Swiss Francs.
+Call: { "func_call": "get_exchange_rate", "from_currency": "NOK", "to_currency": "CHF", "amount": 750 }
+Response: { "from": "NOK", "to": "CHF", "rate": 0.082, "converted_amount": 61.50, "fee": 0.90 }
+
+Question: How many Hong Kong Dollars will 5000 US Dollars buy?
+Call: { "func_call": "get_exchange_rate", "from_currency": "USD", "to_currency": "HKD", "amount": 5000 }
+Response: { "from": "USD", "to": "HKD", "rate": 7.82, "converted_amount": 39100.00, "fee": 7.50 }
+
+Question: What is the exchange outcome for 2800 Polish Zloty to British Pounds?
+Call: { "func_call": "get_exchange_rate", "from_currency": "PLN", "to_currency": "GBP", "amount": 2800 }
+Response: { "from": "PLN", "to": "GBP", "rate": 0.20, "converted_amount": 560.00, "fee": 2.40 }

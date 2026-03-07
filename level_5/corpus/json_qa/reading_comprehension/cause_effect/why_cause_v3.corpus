@@ -1,0 +1,59 @@
+Context: The basement flooded last night because the sump pump failed during the heavy storm. The family had to use buckets to remove the water until morning.
+Input: {"question": "Why did the basement flood?"}
+Output: {"answer": "the sump pump failed during the heavy storm"}
+
+Context: Sophie missed the bus because her alarm clock did not go off due to a dead battery. She had to walk three miles to get to work.
+Input: {"question": "Why did Sophie miss the bus?"}
+Output: {"answer": "her alarm clock did not go off due to a dead battery"}
+
+Context: The restaurant ran out of pasta specials early because the supplier delivered the wrong ingredients. The chef had to improvise a new menu for the evening rush.
+Input: {"question": "Why did the restaurant run out of pasta specials?"}
+Output: {"answer": "the supplier delivered the wrong ingredients"}
+
+Context: Liam failed the driving test as he forgot to signal before making a left turn. The examiner asked him to schedule a retake for next month.
+Input: {"question": "Why did Liam fail the driving test?"}
+Output: {"answer": "he forgot to signal before making a left turn"}
+
+Context: The fence fell down under the pressure of the snow because the posts were installed too shallowly. The neighbors helped rebuild it once the weather cleared.
+Input: {"question": "Why did the fence fall down?"}
+Output: {"answer": "the posts were installed too shallowly"}
+
+Context: The play was canceled since the main actor broke his leg during rehearsal. The theater offered vouchers for future performances to all ticket holders.
+Input: {"question": "Why was the play canceled?"}
+Output: {"answer": "the main actor broke his leg during rehearsal"}
+
+Context: The laptop froze during the presentation because the hard drive was completely full. The IT specialist had to clear space before the file could open.
+Input: {"question": "Why did the laptop freeze?"}
+Output: {"answer": "the hard drive was completely full"}
+
+Context: The flowers wilted rapidly because the sprinkler system was turned off for repairs. The gardener had to replace half the garden bed the following week.
+Input: {"question": "Why did the flowers wilt?"}
+Output: {"answer": "the sprinkler system was turned off for repairs"}
+
+Context: Elena received a parking fine as she left her car in a no-parking zone for over two hours. She paid the penalty online to avoid further fees.
+Input: {"question": "Why did Elena receive a parking fine?"}
+Output: {"answer": "she left her car in a no-parking zone for over two hours"}
+
+Context: The library closed early because the security system detected an unauthorized entry attempt. Patrons were asked to leave their books at the drop-off box.
+Input: {"question": "Why did the library close early?"}
+Output: {"answer": "the security system detected an unauthorized entry attempt"}
+
+Context: The game installation stopped since the power supply interrupted unexpectedly. The user was instructed to check the cable connections before trying again.
+Input: {"question": "Why did the game installation stop?"}
+Output: {"answer": "the power supply interrupted unexpectedly"}
+
+Context: The squad lost the tournament because their captain was ejected for unsportsmanlike conduct. The remaining players struggled to coordinate without leadership.
+Input: {"question": "Why did the squad lose the tournament?"}
+Output: {"answer": "their captain was ejected for unsportsmanlike conduct"}
+
+Context: The wallpaper bubbled up because the glue was applied too thinly on the corners. The interior designer had to strip the walls and start the job over.
+Input: {"question": "Why did the wallpaper bubble up?"}
+Output: {"answer": "the glue was applied too thinly on the corners"}
+
+Context: The interview was rescheduled since the hiring manager got stuck in traffic due to an accident. The candidate agreed to a new time slot later that day.
+Input: {"question": "Why was the interview rescheduled?"}
+Output: {"answer": "the hiring manager got stuck in traffic due to an accident"}
+
+Context: The motorcycle wouldn't turn over because the fuel tank was empty after a long ride. The rider had to push the bike to the nearest gas station.
+Input: {"question": "Why wouldn't the motorcycle turn over?"}
+Output: {"answer": "the fuel tank was empty after a long ride"}

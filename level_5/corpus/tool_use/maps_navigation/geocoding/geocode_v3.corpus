@@ -1,0 +1,51 @@
+Available Tools: geocode_address | reverse_geocode | validate_address | get_timezone
+Call Schema: { "func_call": "string", "address": "string", "lat": number, "lng": number }
+Response Schema: { "lat": number, "lng": number, "formatted_address": "string", "country": "string", "timezone": "string" }
+
+Question: What are the coordinates for the Great Pyramid of Giza?
+Call: { "func_call": "geocode_address", "address": "Al Haram, Nazlet El-Semman, Al Giza Desert, Giza Governorate, Egypt", "lat": 0, "lng": 0 }
+Response: { "lat": 29.9792, "lng": 31.1342, "formatted_address": "Al Haram, Nazlet El-Semman, Giza Governorate, Egypt", "country": "Egypt", "timezone": "Africa/Cairo" }
+
+Question: Find the location of Machu Picchu in Peru.
+Call: { "func_call": "geocode_address", "address": "Aguas Calientes, Cusco Region, Peru", "lat": 0, "lng": 0 }
+Response: { "lat": -13.1631, "lng": -72.5450, "formatted_address": "Machu Picchu, Aguas Calientes, Cusco Region, Peru", "country": "Peru", "timezone": "America/Lima" }
+
+Question: Where is the Statue of Liberty situated?
+Call: { "func_call": "geocode_address", "address": "Liberty Island, New York, NY 10004, USA", "lat": 0, "lng": 0 }
+Response: { "lat": 40.6892, "lng": -74.0445, "formatted_address": "Liberty Island, New York, NY 10004, USA", "country": "United States", "timezone": "America/New_York" }
+
+Question: Get coordinates for the Sagrada Familia in Barcelona.
+Call: { "func_call": "geocode_address", "address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain", "lat": 0, "lng": 0 }
+Response: { "lat": 41.4036, "lng": 2.1744, "formatted_address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain", "country": "Spain", "timezone": "Europe/Madrid" }
+
+Question: Locate the Acropolis of Athens in Greece.
+Call: { "func_call": "geocode_address", "address": "Dionysiou Areopagitou, Athens 105 58, Greece", "lat": 0, "lng": 0 }
+Response: { "lat": 37.9715, "lng": 23.7257, "formatted_address": "Acropolis, Dionysiou Areopagitou, Athens 105 58, Greece", "country": "Greece", "timezone": "Europe/Athens" }
+
+Question: What are the GPS coordinates for Petra in Jordan?
+Call: { "func_call": "geocode_address", "address": "Wadi Musa, Ma'an Governorate, Jordan", "lat": 0, "lng": 0 }
+Response: { "lat": 30.3285, "lng": 35.4444, "formatted_address": "Petra, Wadi Musa, Ma'an Governorate, Jordan", "country": "Jordan", "timezone": "Asia/Amman" }
+
+Question: Find the address details for Angkor Wat in Cambodia.
+Call: { "func_call": "geocode_address", "address": "Angkor Archaeological Park, Krong Siem Reap, Cambodia", "lat": 0, "lng": 0 }
+Response: { "lat": 13.4125, "lng": 103.8670, "formatted_address": "Angkor Archaeological Park, Krong Siem Reap, Cambodia", "country": "Cambodia", "timezone": "Asia/Phnom_Penh" }
+
+Question: Geocode the Empire State Building in New York.
+Call: { "func_call": "geocode_address", "address": "20 W 34th St, New York, NY 10001, USA", "lat": 0, "lng": 0 }
+Response: { "lat": 40.7484, "lng": -73.9857, "formatted_address": "20 W 34th St, New York, NY 10001, USA", "country": "United States", "timezone": "America/New_York" }
+
+Question: Where is the Forbidden City in Beijing?
+Call: { "func_call": "geocode_address", "address": "4 Jingshan Front St, Dongcheng District, Beijing, China", "lat": 0, "lng": 0 }
+Response: { "lat": 39.9163, "lng": 116.3972, "formatted_address": "4 Jingshan Front St, Dongcheng District, Beijing, China", "country": "China", "timezone": "Asia/Shanghai" }
+
+Question: Get the location of the Leaning Tower of Pisa.
+Call: { "func_call": "geocode_address", "address": "Piazza del Duomo, 56126 Pisa PI, Italy", "lat": 0, "lng": 0 }
+Response: { "lat": 43.7230, "lng": 10.3966, "formatted_address": "Piazza del Duomo, 56126 Pisa PI, Italy", "country": "Italy", "timezone": "Europe/Rome" }
+
+Question: Locate the Chichen Itza archaeological site in Mexico.
+Call: { "func_call": "geocode_address", "address": "Chichén-Itzá, Yucatán, Mexico", "lat": 0, "lng": 0 }
+Response: { "lat": 20.6843, "lng": -88.5678, "formatted_address": "Chichén-Itzá, Yucatán, Mexico", "country": "Mexico", "timezone": "America/Merida" }
+
+Question: Find the coordinates for the Kremlin in Moscow.
+Call: { "func_call": "geocode_address", "address": "Moscow, Russia, 103073", "lat": 0, "lng": 0 }
+Response: { "lat": 55.7520, "lng": 37.6175, "formatted_address": "Moscow Kremlin, Moscow, Russia, 103073", "country": "Russia", "timezone": "Europe/Moscow" }

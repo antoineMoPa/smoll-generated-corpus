@@ -1,0 +1,51 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: Adjust the sound profile to electronic for the dance party.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "electronic" }
+Response: { "volume": 82, "muted": false, "equalizer_preset": "electronic" }
+
+Question: I need the vocal boost preset for this audiobook.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "vocal boost" }
+Response: { "volume": 35, "muted": false, "equalizer_preset": "vocal boost" }
+
+Question: Change the equalizer settings to flat for mixing.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "flat" }
+Response: { "volume": 60, "muted": false, "equalizer_preset": "flat" }
+
+Question: Switch to the cinema preset for the movie night.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "cinema" }
+Response: { "volume": 78, "muted": false, "equalizer_preset": "cinema" }
+
+Question: Set the audio to the acoustic preset for the unplugged session.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "acoustic" }
+Response: { "volume": 44, "muted": false, "equalizer_preset": "acoustic" }
+
+Question: Can you enable the treble boost preset?
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "treble boost" }
+Response: { "volume": 58, "muted": false, "equalizer_preset": "treble boost" }
+
+Question: Apply the live concert preset to the speakers.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "live concert" }
+Response: { "volume": 88, "muted": false, "equalizer_preset": "live concert" }
+
+Question: I want the smooth jazz preset active please.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "smooth jazz" }
+Response: { "volume": 32, "muted": false, "equalizer_preset": "smooth jazz" }
+
+Question: Turn on the gaming preset for low latency audio.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "gaming" }
+Response: { "volume": 67, "muted": false, "equalizer_preset": "gaming" }
+
+Question: Configure the equalizer to the news preset for the broadcast.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "news" }
+Response: { "volume": 55, "muted": false, "equalizer_preset": "news" }
+
+Question: Switch immediately to the heavy metal preset.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "heavy metal" }
+Response: { "volume": 90, "muted": false, "equalizer_preset": "heavy metal" }
+
+Question: Please set the equalizer to the ambient preset for relaxation.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "ambient" }
+Response: { "volume": 25, "muted": false, "equalizer_preset": "ambient" }

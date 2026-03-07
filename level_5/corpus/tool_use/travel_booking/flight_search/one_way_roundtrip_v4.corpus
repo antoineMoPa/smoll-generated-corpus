@@ -1,0 +1,51 @@
+Available Tools: search_flights | get_flight_details | filter_flights | get_seat_map
+Call Schema: { "func_call": "string", "origin": "string", "destination": "string", "departure_date": "string", "return_date": "string", "passengers": number, "cabin": "economy|business|first" }
+Response Schema: { "flights": [{ "flight_number": "string", "airline": "string", "departure": "string", "arrival": "string", "price": number, "duration_minutes": number }], "total": number }
+
+Question: Locate one-way economy flights from SFO to FRA for three passengers on March 22nd.
+Call: { "func_call": "search_flights", "origin": "SFO", "destination": "FRA", "departure_date": "2024-03-22", "return_date": "", "passengers": 3, "cabin": "economy" }
+Response: { "flights": [ { "flight_number": "LH455", "airline": "Lufthansa", "departure": "2024-03-22T14:20:00", "arrival": "2024-03-23T09:45:00", "price": 620, "duration_minutes": 625 }, { "flight_number": "UA902", "airline": "United Airlines", "departure": "2024-03-22T16:45:00", "arrival": "2024-03-23T12:10:00", "price": 655, "duration_minutes": 625 } ], "total": 2 }
+
+Question: Search for round-trip business class tickets from DXB to SYD for two travelers, leaving May 10th and returning May 24th.
+Call: { "func_call": "search_flights", "origin": "DXB", "destination": "SYD", "departure_date": "2024-05-10", "return_date": "2024-05-24", "passengers": 2, "cabin": "business" }
+Response: { "flights": [ { "flight_number": "EK412", "airline": "Emirates", "departure": "2024-05-10T02:30:00", "arrival": "2024-05-10T22:15:00", "price": 4100, "duration_minutes": 825 }, { "flight_number": "QF002", "airline": "Qantas", "departure": "2024-05-10T08:45:00", "arrival": "2024-05-11T06:30:00", "price": 4250, "duration_minutes": 825 } ], "total": 2 }
+
+Question: Show me first-class one-way options from LAX to ICN for a single passenger on June 15th.
+Call: { "func_call": "search_flights", "origin": "LAX", "destination": "ICN", "departure_date": "2024-06-15", "return_date": "", "passengers": 1, "cabin": "first" }
+Response: { "flights": [ { "flight_number": "KE012", "airline": "Korean Air", "departure": "2024-06-15T13:00:00", "arrival": "2024-06-16T17:30:00", "price": 6800, "duration_minutes": 750 }, { "flight_number": "OZ202", "airline": "Asiana Airlines", "departure": "2024-06-15T15:30:00", "arrival": "2024-06-16T20:00:00", "price": 6950, "duration_minutes": 750 } ], "total": 2 }
+
+Question: Find economy round-trip flights from BOS to MIA for four people, departing July 4th and returning July 11th.
+Call: { "func_call": "search_flights", "origin": "BOS", "destination": "MIA", "departure_date": "2024-07-04", "return_date": "2024-07-11", "passengers": 4, "cabin": "economy" }
+Response: { "flights": [ { "flight_number": "AA1450", "airline": "American Airlines", "departure": "2024-07-04T07:15:00", "arrival": "2024-07-04T10:30:00", "price": 320, "duration_minutes": 195 }, { "flight_number": "DL1122", "airline": "Delta Air Lines", "departure": "2024-07-04T09:45:00", "arrival": "2024-07-04T13:00:00", "price": 345, "duration_minutes": 195 } ], "total": 2 }
+
+Question: Get one-way business flights from ORD to FCO for two travelers on August 18th.
+Call: { "func_call": "search_flights", "origin": "ORD", "destination": "FCO", "departure_date": "2024-08-18", "return_date": "", "passengers": 2, "cabin": "business" }
+Response: { "flights": [ { "flight_number": "AZ621", "airline": "ITA Airways", "departure": "2024-08-18T17:20:00", "arrival": "2024-08-19T09:45:00", "price": 3100, "duration_minutes": 565 }, { "flight_number": "UA960", "airline": "United Airlines", "departure": "2024-08-18T19:50:00", "arrival": "2024-08-19T12:15:00", "price": 3250, "duration_minutes": 565 } ], "total": 2 }
+
+Question: Search for round-trip economy tickets from SEA to MEX for one passenger, leaving September 5th and returning September 12th.
+Call: { "func_call": "search_flights", "origin": "SEA", "destination": "MEX", "departure_date": "2024-09-05", "return_date": "2024-09-12", "passengers": 1, "cabin": "economy" }
+Response: { "flights": [ { "flight_number": "AM685", "airline": "Aeromexico", "departure": "2024-09-05T08:30:00", "arrival": "2024-09-05T14:45:00", "price": 480, "duration_minutes": 315 }, { "flight_number": "DL1580", "airline": "Delta Air Lines", "departure": "2024-09-05T11:00:00", "arrival": "2024-09-05T17:15:00", "price": 510, "duration_minutes": 315 } ], "total": 2 }
+
+Question: Locate one-way first-class flights from EWR to SIN for three people on October 20th.
+Call: { "func_call": "search_flights", "origin": "EWR", "destination": "SIN", "departure_date": "2024-10-20", "return_date": "", "passengers": 3, "cabin": "first" }
+Response: { "flights": [ { "flight_number": "SQ22", "airline": "Singapore Airlines", "departure": "2024-10-20T23:55:00", "arrival": "2024-10-22T06:30:00", "price": 8500, "duration_minutes": 1115 }, { "flight_number": "UA37", "airline": "United Airlines", "departure": "2024-10-20T22:30:00", "arrival": "2024-10-22T05:05:00", "price": 8750, "duration_minutes": 1115 } ], "total": 2 }
+
+Question: Find round-trip business class flights from ATL to GRU for two travelers, departing November 15th and returning November 29th.
+Call: { "func_call": "search_flights", "origin": "ATL", "destination": "GRU", "departure_date": "2024-11-15", "return_date": "2024-11-29", "passengers": 2, "cabin": "business" }
+Response: { "flights": [ { "flight_number": "DL105", "airline": "Delta Air Lines", "departure": "2024-11-15T21:40:00", "arrival": "2024-11-16T09:15:00", "price": 3900, "duration_minutes": 575 }, { "flight_number": "LA8084", "airline": "LATAM", "departure": "2024-11-15T23:10:00", "arrival": "2024-11-16T10:45:00", "price": 4050, "duration_minutes": 575 } ], "total": 2 }
+
+Question: Show me one-way economy flights from DEN to PHX for five passengers on December 5th.
+Call: { "func_call": "search_flights", "origin": "DEN", "destination": "PHX", "departure_date": "2024-12-05", "return_date": "", "passengers": 5, "cabin": "economy" }
+Response: { "flights": [ { "flight_number": "WN1234", "airline": "Southwest Airlines", "departure": "2024-12-05T06:00:00", "arrival": "2024-12-05T07:45:00", "price": 120, "duration_minutes": 105 }, { "flight_number": "AA2560", "airline": "American Airlines", "departure": "2024-12-05T08:30:00", "arrival": "2024-12-05T10:15:00", "price": 135, "duration_minutes": 105 } ], "total": 2 }
+
+Question: Search for round-trip first-class tickets from IAD to HND for one person, leaving January 12th and returning January 26th.
+Call: { "func_call": "search_flights", "origin": "IAD", "destination": "HND", "departure_date": "2025-01-12", "return_date": "2025-01-26", "passengers": 1, "cabin": "first" }
+Response: { "flights": [ { "flight_number": "NH10", "airline": "All Nippon Airways", "departure": "2025-01-12T11:05:00", "arrival": "2025-01-13T14:50:00", "price": 9200, "duration_minutes": 765 }, { "flight_number": "JL016", "airline": "Japan Airlines", "departure": "2025-01-12T13:45:00", "arrival": "2025-01-13T17:30:00", "price": 9450, "duration_minutes": 765 } ], "total": 2 }
+
+Question: Get one-way business flights from DFW to LIS for four travelers on February 8th.
+Call: { "func_call": "search_flights", "origin": "DFW", "destination": "LIS", "departure_date": "2025-02-08", "return_date": "", "passengers": 4, "cabin": "business" }
+Response: { "flights": [ { "flight_number": "TP216", "airline": "TAP Air Portugal", "departure": "2025-02-08T18:20:00", "arrival": "2025-02-09T08:45:00", "price": 2900, "duration_minutes": 505 }, { "flight_number": "AA234", "airline": "American Airlines", "departure": "2025-02-08T20:50:00", "arrival": "2025-02-09T11:15:00", "price": 3050, "duration_minutes": 505 } ], "total": 2 }
+
+Question: Find round-trip economy flights from MSP to LAS for two people, departing March 1st and returning March 8th.
+Call: { "func_call": "search_flights", "origin": "MSP", "destination": "LAS", "departure_date": "2025-03-01", "return_date": "2025-03-08", "passengers": 2, "cabin": "economy" }
+Response: { "flights": [ { "flight_number": "DL1890", "airline": "Delta Air Lines", "departure": "2025-03-01T09:15:00", "arrival": "2025-03-01T11:30:00", "price": 210, "duration_minutes": 195 }, { "flight_number": "WN3456", "airline": "Southwest Airlines", "departure": "2025-03-01T12:40:00", "arrival": "2025-03-01T14:55:00", "price": 235, "duration_minutes": 195 } ], "total": 2 }

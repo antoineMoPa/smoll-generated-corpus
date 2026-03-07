@@ -1,0 +1,51 @@
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Find me some jazz tracks by Miles Davis.
+Call: { "func_call": "search_tracks", "query": "Miles Davis", "limit": 5, "genre": "jazz" }
+Response: { "results": [ { "id": "trk_8821", "title": "So What", "artist": "Miles Davis", "duration_seconds": 562 }, { "id": "trk_8822", "title": "Freddie Freeloader", "artist": "Miles Davis", "duration_seconds": 578 }, { "id": "trk_8823", "title": "Blue in Green", "artist": "Miles Davis", "duration_seconds": 327 }, { "id": "trk_8824", "title": "All Blues", "artist": "Miles Davis", "duration_seconds": 691 }, { "id": "trk_8825", "title": "Flamenco Sketches", "artist": "Miles Davis", "duration_seconds": 563 } ], "total": 42 }
+
+Question: Search for artists named Taylor.
+Call: { "func_call": "search_artist", "query": "Taylor", "limit": 3, "genre": "pop" }
+Response: { "results": [ { "id": "art_101", "title": "Taylor Swift", "artist": "Taylor Swift", "duration_seconds": 0 }, { "id": "art_102", "title": "James Taylor", "artist": "James Taylor", "duration_seconds": 0 }, { "id": "art_103", "title": "Tayla Parx", "artist": "Tayla Parx", "duration_seconds": 0 } ], "total": 15 }
+
+Question: Look up rock songs by Queen.
+Call: { "func_call": "search_tracks", "query": "Queen", "limit": 4, "genre": "rock" }
+Response: { "results": [ { "id": "trk_5501", "title": "Bohemian Rhapsody", "artist": "Queen", "duration_seconds": 354 }, { "id": "trk_5502", "title": "Don't Stop Me Now", "artist": "Queen", "duration_seconds": 211 }, { "id": "trk_5503", "title": "We Will Rock You", "artist": "Queen", "duration_seconds": 122 }, { "id": "trk_5504", "title": "Somebody to Love", "artist": "Queen", "duration_seconds": 296 } ], "total": 87 }
+
+Question: Find hip hop tracks by Kendrick Lamar.
+Call: { "func_call": "search_tracks", "query": "Kendrick Lamar", "limit": 5, "genre": "hip hop" }
+Response: { "results": [ { "id": "trk_9901", "title": "HUMBLE.", "artist": "Kendrick Lamar", "duration_seconds": 177 }, { "id": "trk_9902", "title": "DNA.", "artist": "Kendrick Lamar", "duration_seconds": 185 }, { "id": "trk_9903", "title": "LOYALTY.", "artist": "Kendrick Lamar", "duration_seconds": 227 }, { "id": "trk_9904", "title": "ELEMENT.", "artist": "Kendrick Lamar", "duration_seconds": 208 }, { "id": "trk_9905", "title": "FEAR.", "artist": "Kendrick Lamar", "duration_seconds": 460 } ], "total": 63 }
+
+Question: Search for electronic artists like Daft Punk.
+Call: { "func_call": "search_artist", "query": "Daft Punk", "limit": 2, "genre": "electronic" }
+Response: { "results": [ { "id": "art_305", "title": "Daft Punk", "artist": "Daft Punk", "duration_seconds": 0 }, { "id": "art_306", "title": "Daft Punk Tribute Band", "artist": "The Robots", "duration_seconds": 0 } ], "total": 2 }
+
+Question: Get country tracks by Johnny Cash.
+Call: { "func_call": "search_tracks", "query": "Johnny Cash", "limit": 4, "genre": "country" }
+Response: { "results": [ { "id": "trk_7701", "title": "Ring of Fire", "artist": "Johnny Cash", "duration_seconds": 156 }, { "id": "trk_7702", "title": "Folsom Prison Blues", "artist": "Johnny Cash", "duration_seconds": 168 }, { "id": "trk_7703", "title": "I Walk the Line", "artist": "Johnny Cash", "duration_seconds": 164 }, { "id": "trk_7704", "title": "Hurt", "artist": "Johnny Cash", "duration_seconds": 218 } ], "total": 54 }
+
+Question: Find classical tracks by Beethoven.
+Call: { "func_call": "search_tracks", "query": "Beethoven", "limit": 3, "genre": "classical" }
+Response: { "results": [ { "id": "trk_4401", "title": "Symphony No. 9", "artist": "Ludwig van Beethoven", "duration_seconds": 4200 }, { "id": "trk_4402", "title": "Moonlight Sonata", "artist": "Ludwig van Beethoven", "duration_seconds": 900 }, { "id": "trk_4403", "title": "Für Elise", "artist": "Ludwig van Beethoven", "duration_seconds": 180 } ], "total": 120 }
+
+Question: Search for R&B artists like The Weeknd.
+Call: { "func_call": "search_artist", "query": "The Weeknd", "limit": 2, "genre": "r&b" }
+Response: { "results": [ { "id": "art_501", "title": "The Weeknd", "artist": "The Weeknd", "duration_seconds": 0 }, { "id": "art_502", "title": "Weekend Warriors", "artist": "Weekend Warriors", "duration_seconds": 0 } ], "total": 5 }
+
+Question: Look for indie tracks by Arctic Monkeys.
+Call: { "func_call": "search_tracks", "query": "Arctic Monkeys", "limit": 4, "genre": "indie" }
+Response: { "results": [ { "id": "trk_6601", "title": "Do I Wanna Know?", "artist": "Arctic Monkeys", "duration_seconds": 272 }, { "id": "trk_6602", "title": "R U Mine?", "artist": "Arctic Monkeys", "duration_seconds": 201 }, { "id": "trk_6603", "title": "505", "artist": "Arctic Monkeys", "duration_seconds": 253 }, { "id": "trk_6604", "title": "Fluorescent Adolescent", "artist": "Arctic Monkeys", "duration_seconds": 173 } ], "total": 38 }
+
+Question: Find reggae tracks by Bob Marley.
+Call: { "func_call": "search_tracks", "query": "Bob Marley", "limit": 3, "genre": "reggae" }
+Response: { "results": [ { "id": "trk_3301", "title": "No Woman, No Cry", "artist": "Bob Marley", "duration_seconds": 227 }, { "id": "trk_3302", "title": "Three Little Birds", "artist": "Bob Marley", "duration_seconds": 180 }, { "id": "trk_3303", "title": "Redemption Song", "artist": "Bob Marley", "duration_seconds": 237 } ], "total": 45 }
+
+Question: Search for metal artists like Metallica.
+Call: { "func_call": "search_artist", "query": "Metallica", "limit": 2, "genre": "metal" }
+Response: { "results": [ { "id": "art_701", "title": "Metallica", "artist": "Metallica", "duration_seconds": 0 }, { "id": "art_702", "title": "Metallica Cover Band", "artist": "Iron Maidens", "duration_seconds": 0 } ], "total": 8 }
+
+Question: Get soul tracks by Aretha Franklin.
+Call: { "func_call": "search_tracks", "query": "Aretha Franklin", "limit": 3, "genre": "soul" }
+Response: { "results": [ { "id": "trk_2201", "title": "Respect", "artist": "Aretha Franklin", "duration_seconds": 147 }, { "id": "trk_2202", "title": "(You Make Me Feel Like) A Natural Woman", "artist": "Aretha Franklin", "duration_seconds": 165 }, { "id": "trk_2203", "title": "Think", "artist": "Aretha Franklin", "duration_seconds": 138 } ], "total": 31 }

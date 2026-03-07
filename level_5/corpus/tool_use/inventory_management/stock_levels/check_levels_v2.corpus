@@ -1,0 +1,51 @@
+Available Tools: get_stock_level | check_availability | get_low_stock_items | get_stock_by_location
+Call Schema: { "func_call": "string", "sku": "string", "location_id": "string", "threshold": number }
+Response Schema: { "sku": "string", "product_name": "string", "quantity": number, "location": "string", "status": "in_stock|low_stock|out_of_stock" }
+---
+Question: What is the current quantity of the ergonomic office chair in the Houston fulfillment center?
+Call: { "func_call": "get_stock_level", "sku": "CHR-ERG-01", "location_id": "HOU-FC-03", "threshold": 30 }
+Response: { "sku": "CHR-ERG-01", "product_name": "Ergonomic Mesh Office Chair", "quantity": 125, "location": "HOU-FC-03", "status": "in_stock" }
+
+Question: Is the smart thermostat model TH-800 available in the Minneapolis warehouse with a threshold of 10?
+Call: { "func_call": "check_availability", "sku": "TH-SM-800", "location_id": "MSP-WH-02", "threshold": 10 }
+Response: { "sku": "TH-SM-800", "product_name": "Smart Learning Thermostat", "quantity": 8, "location": "MSP-WH-02", "status": "low_stock" }
+
+Question: Retrieve the inventory count for the LED desk lamp in the Philadelphia distribution hub.
+Call: { "func_call": "get_stock_level", "sku": "LMP-LED-DESK", "location_id": "PHL-DIST-05", "threshold": 50 }
+Response: { "sku": "LMP-LED-DESK", "product_name": "Adjustable LED Desk Lamp", "quantity": 0, "location": "PHL-DIST-05", "status": "out_of_stock" }
+
+Question: How many units of the external hard drive 2TB are stored in the Las Vegas logistics center?
+Call: { "func_call": "get_stock_by_location", "sku": "HDD-EXT-2TB", "location_id": "LAS-LOG-04", "threshold": 20 }
+Response: { "sku": "HDD-EXT-2TB", "product_name": "Portable External Hard Drive 2TB", "quantity": 43, "location": "LAS-LOG-04", "status": "in_stock" }
+
+Question: Check if the wireless printer is running low in the Detroit depot given an alert limit of 15.
+Call: { "func_call": "check_availability", "sku": "PRT-WRL-AIO", "location_id": "DET-DEP-06", "threshold": 15 }
+Response: { "sku": "PRT-WRL-AIO", "product_name": "All-in-One Wireless Printer", "quantity": 11, "location": "DET-DEP-06", "status": "low_stock" }
+
+Question: What is the stock status for the gaming headset in the Nashville regional facility?
+Call: { "func_call": "get_stock_level", "sku": "HS-GM-7.1", "location_id": "NSH-REG-07", "threshold": 25 }
+Response: { "sku": "HS-GM-7.1", "product_name": "Surround Sound Gaming Headset", "quantity": 205, "location": "NSH-REG-07", "status": "in_stock" }
+
+Question: Verify the availability of the USB flash drive 64GB in the Charlotte storage unit against a threshold of 100.
+Call: { "func_call": "check_availability", "sku": "USB-64G-BLK", "location_id": "CLT-ST-09", "threshold": 100 }
+Response: { "sku": "USB-64G-BLK", "product_name": "High-Speed USB Flash Drive 64GB", "quantity": 0, "location": "CLT-ST-09", "status": "out_of_stock" }
+
+Question: I need the current stock level for the mechanical keyboard switches in the Columbus warehouse.
+Call: { "func_call": "get_stock_level", "sku": "SW-MECH-BLU", "location_id": "CMH-WH-08", "threshold": 500 }
+Response: { "sku": "SW-MECH-BLU", "product_name": "Blue Mechanical Switch Pack", "quantity": 1200, "location": "CMH-WH-08", "status": "in_stock" }
+
+Question: Is the 4K webcam model WC-ULTRA available in the Salt Lake City facility with a minimum of 5 units?
+Call: { "func_call": "check_availability", "sku": "WC-ULTRA-4K", "location_id": "SLC-FAC-10", "threshold": 5 }
+Response: { "sku": "WC-ULTRA-4K", "product_name": "Ultra HD 4K Webcam", "quantity": 3, "location": "SLC-FAC-10", "status": "low_stock" }
+
+Question: Get the inventory details for the standing desk converter in the Indianapolis distribution point.
+Call: { "func_call": "get_stock_by_location", "sku": "DSK-STD-CNVRT", "location_id": "IND-DIST-11", "threshold": 12 }
+Response: { "sku": "DSK-STD-CNVRT", "product_name": "Electric Standing Desk Converter", "quantity": 28, "location": "IND-DIST-11", "status": "in_stock" }
+
+Question: How many bluetooth mice do we have in stock at the Raleigh warehouse?
+Call: { "func_call": "get_stock_level", "sku": "MS-BT-SLIM", "location_id": "RAL-WH-12", "threshold": 40 }
+Response: { "sku": "MS-BT-SLIM", "product_name": "Slim Bluetooth Mouse", "quantity": 0, "location": "RAL-WH-12", "status": "out_of_stock" }
+
+Question: Check the stock level of the monitor arm mount in the Kansas City logistics hub relative to a threshold of 20.
+Call: { "func_call": "check_availability", "sku": "ARM-MON-DUAL", "location_id": "KC-LOG-13", "threshold": 20 }
+Response: { "sku": "ARM-MON-DUAL", "product_name": "Dual Monitor Arm Mount", "quantity": 19, "location": "KC-LOG-13", "status": "low_stock" }

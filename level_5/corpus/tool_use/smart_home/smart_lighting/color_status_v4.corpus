@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": "number", "color": "string" }
+Response Schema: { "light_id": "string", "state": "string", "brightness": "number", "color": "string" }
+---
+Question: Turn the study reading lamp to a cool daylight shade.
+Call: { "func_call": "set_color", "light_id": "read_stu_13", "brightness": null, "color": "cool daylight" }
+Response: { "light_id": "read_stu_13", "state": "on", "brightness": 230, "color": "cool daylight" }
+
+Question: Modify the library wall sconce to hex code #800080 for purple ambiance.
+Call: { "func_call": "set_color", "light_id": "wall_lib_14", "brightness": null, "color": "#800080" }
+Response: { "light_id": "wall_lib_14", "state": "on", "brightness": 140, "color": "#800080" }
+
+Question: Is the laundry room overhead light currently active?
+Call: { "func_call": "get_light_status", "light_id": "over_laun_15", "brightness": null, "color": null }
+Response: { "light_id": "over_laun_15", "state": "off", "brightness": 0, "color": "neutral white" }
+
+Question: Adjust the balcony floodlights to a stormy gray tone.
+Call: { "func_call": "set_color", "light_id": "flood_balc_16", "brightness": null, "color": "stormy gray" }
+Response: { "light_id": "flood_balc_16", "state": "on", "brightness": 190, "color": "stormy gray" }
+
+Question: Set the pantry shelf light to hex value #00FF00.
+Call: { "func_call": "set_color", "light_id": "shelf_pan_17", "brightness": null, "color": "#00FF00" }
+Response: { "light_id": "shelf_pan_17", "state": "on", "brightness": 110, "color": "#00FF00" }
+
+Question: Verify the state and hue of the attic storage bulb.
+Call: { "func_call": "get_light_status", "light_id": "stor_att_18", "brightness": null, "color": null }
+Response: { "light_id": "stor_att_18", "state": "on", "brightness": 255, "color": "soft yellow" }
+
+Question: Change the guest room bedside lamp to a lavender hex #E6E6FA.
+Call: { "func_call": "set_color", "light_id": "bed_guest_19", "brightness": null, "color": "#E6E6FA" }
+Response: { "light_id": "bed_guest_19", "state": "on", "brightness": 60, "color": "#E6E6FA" }
+
+Question: Make the foyer pendant light emit a golden glow.
+Call: { "func_call": "set_color", "light_id": "pend_foy_20", "brightness": null, "color": "golden glow" }
+Response: { "light_id": "pend_foy_20", "state": "on", "brightness": 210, "color": "golden glow" }
+
+Question: What is the current color setting for the closet mirror lights?
+Call: { "func_call": "get_light_status", "light_id": "mirr_clos_21", "brightness": null, "color": null }
+Response: { "light_id": "mirr_clos_21", "state": "on", "brightness": 245, "color": "pure white" }
+
+Question: Switch the gaming room LED strip to a neon green hex #39FF14.
+Call: { "func_call": "set_color", "light_id": "led_game_22", "brightness": null, "color": "#39FF14" }
+Response: { "light_id": "led_game_22", "state": "on", "brightness": 175, "color": "#39FF14" }
+
+Question: Set the wine cellar accent lights to a deep red hue.
+Call: { "func_call": "set_color", "light_id": "acc_wine_23", "brightness": null, "color": "deep red" }
+Response: { "light_id": "acc_wine_23", "state": "on", "brightness": 85, "color": "deep red" }
+
+Question: Retrieve the operational status of the driveway security light.
+Call: { "func_call": "get_light_status", "light_id": "sec_driv_24", "brightness": null, "color": null }
+Response: { "light_id": "sec_driv_24", "state": "off", "brightness": 0, "color": "ice blue" }

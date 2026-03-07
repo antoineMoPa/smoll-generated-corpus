@@ -1,0 +1,51 @@
+Available Tools: get_instance_status | list_instances | get_instance_metrics
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string", "filter": "string" }
+Response Schema: { "instances": [{ "id": "string", "type": "string", "state": "string", "ip": "string" }] }
+---
+Question: What are the disk I/O and CPU stats for instance i-1f2e3d4c5b6a in us-west-1?
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-1f2e3d4c5b6a", "region": "us-west-1", "filter": "disk,cpu" }
+Response: { "instances": [{ "id": "i-1f2e3d4c5b6a", "type": "m5.2xlarge", "state": "running", "ip": "172.31.55.23" }] }
+
+Question: Show me memory pressure and network errors for app-server-dev-02 in eu-west-3.
+Call: { "func_call": "get_instance_metrics", "instance_id": "app-server-dev-02", "region": "eu-west-3", "filter": "memory,network" }
+Response: { "instances": [{ "id": "app-server-dev-02", "type": "t3.large", "state": "running", "ip": "10.0.15.99" }] }
+
+Question: Retrieve CPU temperature and fan speed for cooling-node-alpha in ap-south-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "cooling-node-alpha", "region": "ap-south-1", "filter": "cpu,thermal" }
+Response: { "instances": [{ "id": "cooling-node-alpha", "type": "c5.4xlarge", "state": "running", "ip": "192.168.8.101" }] }
+
+Question: Get full system health (CPU, memory, disk) for instance i-8h7g6f5e4d in ca-west-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "i-8h7g6f5e4d", "region": "ca-west-1", "filter": "cpu,memory,disk" }
+Response: { "instances": [{ "id": "i-8h7g6f5e4d", "type": "r5.xlarge", "state": "running", "ip": "54.202.44.20" }] }
+
+Question: Check swap usage and CPU idle time for batch-job-runner-09 in af-south-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "batch-job-runner-09", "region": "af-south-1", "filter": "swap,cpu" }
+Response: { "instances": [{ "id": "batch-job-runner-09", "type": "m6g.medium", "state": "running", "ip": "172.16.90.55" }] }
+
+Question: What is the packet loss rate and CPU steal time for virtual-miner-01 in eu-south-2?
+Call: { "func_call": "get_instance_metrics", "instance_id": "virtual-miner-01", "region": "eu-south-2", "filter": "network,cpu" }
+Response: { "instances": [{ "id": "virtual-miner-01", "type": "c5n.4xlarge", "state": "running", "ip": "10.255.18.8" }] }
+
+Question: Display buffer cache stats and network retransmits for db-replica-05 in il-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "db-replica-05", "region": "il-central-1", "filter": "memory,network" }
+Response: { "instances": [{ "id": "db-replica-05", "type": "r6i.2xlarge", "state": "running", "ip": "172.30.5.112" }] }
+
+Question: Fetch GPU utilization, memory, and thermal data for ai-inference-cluster in mx-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "ai-inference-cluster", "region": "mx-central-1", "filter": "gpu,memory,thermal" }
+Response: { "instances": [{ "id": "ai-inference-cluster", "type": "p4d.24xlarge", "state": "running", "ip": "10.40.60.130" }] }
+
+Question: Monitor context switches and network connections for auth-service-primary in ap-east-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "auth-service-primary", "region": "ap-east-1", "filter": "cpu,network" }
+Response: { "instances": [{ "id": "auth-service-primary", "type": "m5zn.large", "state": "running", "ip": "172.20.19.14" }] }
+
+Question: Get detailed page faults and CPU system time for scheduler-daemon in eu-central-2.
+Call: { "func_call": "get_instance_metrics", "instance_id": "scheduler-daemon", "region": "eu-central-2", "filter": "memory,cpu" }
+Response: { "instances": [{ "id": "scheduler-daemon", "type": "t4g.micro", "state": "running", "ip": "10.11.25.40" }] }
+
+Question: Report disk queue depth, CPU, and free RAM for storage-gateway-x in us-gov-east-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "storage-gateway-x", "region": "us-gov-east-1", "filter": "disk,cpu,memory" }
+Response: { "instances": [{ "id": "storage-gateway-x", "type": "m5.8xlarge", "state": "running", "ip": "172.31.95.210" }] }
+
+Question: Check current interrupt count and network drop rate for edge-router-07 in me-central-1.
+Call: { "func_call": "get_instance_metrics", "instance_id": "edge-router-07", "region": "me-central-1", "filter": "cpu,network" }
+Response: { "instances": [{ "id": "edge-router-07", "type": "c6gn.xlarge", "state": "running", "ip": "192.168.110.66" }] }

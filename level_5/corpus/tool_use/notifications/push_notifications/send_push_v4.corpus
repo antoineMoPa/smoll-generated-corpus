@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Send a push notification to user usr_10293 about their package delivery attempt.
+Call: { "func_call": "send_push", "user_id": "usr_10293", "title": "Delivery Attempt Failed", "body": "We missed you! Your parcel #8821 will be redelivered tomorrow or held at the local depot.", "data": { "tracking_id": "8821", "reason": "no_answer", "next_attempt": "tomorrow" }, "device_token": "fcm_tok_a1b2c3d4e5f6g7h8i9" }
+Response: { "notification_id": "notif_z9y8x7w6", "status": "sent", "timestamp": "2023-11-01T09:15:22Z" }
+
+Question: Notify user usr_56789 that their subscription renewal is pending.
+Call: { "func_call": "send_push", "user_id": "usr_56789", "title": "Renewal Pending", "body": "Your Premium plan renews in 3 days. Please update your payment method to avoid interruption.", "data": { "plan_name": "Premium", "days_left": 3, "amount_due": "12.99" }, "device_token": "apns_tok_998877665544332211" }
+Response: { "notification_id": "notif_v5u4t3s2", "status": "delivered", "timestamp": "2023-11-01T10:30:45Z" }
+
+Question: Alert user usr_34567 about unusual activity on their banking app.
+Call: { "func_call": "send_push", "user_id": "usr_34567", "title": "Suspicious Activity Detected", "body": "A login attempt was made from an unrecognized device in Miami, FL. Please verify if this was you.", "data": { "location": "Miami, FL", "ip_address": "192.168.1.55", "verified": false }, "device_token": "fcm_tok_m1n2o3p4q5r6s7t8u9" }
+Response: { "notification_id": "notif_r1q2p3o4", "status": "sent", "timestamp": "2023-11-01T11:45:10Z" }
+
+Question: Remind user usr_98765 about their medication schedule for this evening.
+Call: { "func_call": "send_push", "user_id": "usr_98765", "title": "Medication Reminder", "body": "Time to take your evening dose of Vitamin D. Stay healthy!", "data": { "medication": "Vitamin D", "dosage": "1000IU", "time": "20:00" }, "device_token": "apns_tok_112233445566778899" }
+Response: { "notification_id": "notif_n5m6l7k8", "status": "delivered", "timestamp": "2023-11-01T20:00:00Z" }
+
+Question: Inform user usr_24680 that their ride share driver has arrived.
+Call: { "func_call": "send_push", "user_id": "usr_24680", "title": "Driver Arrived", "body": "Your Uber driver, James, is waiting in a blue Toyota Camry. License plate: ABC-123.", "data": { "driver_name": "James", "car_model": "Toyota Camry", "license_plate": "ABC-123" }, "device_token": "fcm_tok_j9k8l7m6n5o4p3q2r1" }
+Response: { "notification_id": "notif_j9i8h7g6", "status": "sent", "timestamp": "2023-11-02T08:12:33Z" }
+
+Question: Send a loyalty reward notification to user usr_13579 for reaching Gold status.
+Call: { "func_call": "send_push", "user_id": "usr_13579", "title": "You Reached Gold Status!", "body": "Congratulations! You've earned Gold status. Enjoy free shipping on all orders for the next year.", "data": { "tier": "Gold", "benefit": "free_shipping", "valid_until": "2024-11-02" }, "device_token": "apns_tok_aabbccddeeff112233" }
+Response: { "notification_id": "notif_f5e4d3c2", "status": "delivered", "timestamp": "2023-11-02T12:00:00Z" }
+
+Question: Notify user usr_86420 that their video processing is complete.
+Call: { "func_call": "send_push", "user_id": "usr_86420", "title": "Video Ready", "body": "Your uploaded video 'Summer Vacation' has finished processing and is now ready to view.", "data": { "video_id": "vid_554433", "title": "Summer Vacation", "duration": "04:20" }, "device_token": "fcm_tok_s1t2u3v4w5x6y7z8a9" }
+Response: { "notification_id": "notif_b1a2z3y4", "status": "sent", "timestamp": "2023-11-02T14:25:18Z" }
+
+Question: Alert user usr_75319 about a temperature spike in their server room.
+Call: { "func_call": "send_push", "user_id": "usr_75319", "title": "Critical Temperature Alert", "body": "Server Room B temperature has reached 85°F. Immediate cooling action required.", "data": { "room_id": "Room_B", "current_temp": 85, "threshold": 75 }, "device_token": "apns_tok_gghhiijjkkllmmnnoo" }
+Response: { "notification_id": "notif_x5w6v7u8", "status": "delivered", "timestamp": "2023-11-02T15:40:55Z" }
+
+Question: Inform user usr_95175 that their table reservation is confirmed.
+Call: { "func_call": "send_push", "user_id": "usr_95175", "title": "Reservation Confirmed", "body": "Your table for 4 at Luigi's Italian Kitchen is confirmed for tonight at 7:30 PM.", "data": { "restaurant": "Luigi's Italian Kitchen", "party_size": 4, "time": "19:30" }, "device_token": "fcm_tok_p9o8n7m6l5k4j3i2h1" }
+Response: { "notification_id": "notif_t9s8r7q6", "status": "sent", "timestamp": "2023-11-02T16:10:00Z" }
+
+Question: Notify user usr_35791 about a new message in their project channel.
+Call: { "func_call": "send_push", "user_id": "usr_35791", "title": "New Project Message", "body": "Maria posted in #design-review: 'Can we finalize the logo colors by EOD?'", "data": { "channel": "design-review", "sender": "Maria", "preview": "Can we finalize..." }, "device_token": "apns_tok_ppqqrrssttuuvvwwxx" }
+Response: { "notification_id": "notif_p5o4n3m2", "status": "delivered", "timestamp": "2023-11-02T17:55:12Z" }
+
+Question: Send a traffic update to user usr_15935 regarding an accident on their route.
+Call: { "func_call": "send_push", "user_id": "usr_15935", "title": "Traffic Alert", "body": "Heavy congestion detected on I-95 North due to an accident. Expect 20 minute delays.", "data": { "route": "I-95 North", "delay_minutes": 20, "cause": "accident" }, "device_token": "fcm_tok_y1z2a3b4c5d6e7f8g9" }
+Response: { "notification_id": "notif_l1k2j3i4", "status": "sent", "timestamp": "2023-11-03T07:30:45Z" }
+
+Question: Confirm to user usr_75391 that their account deletion request is scheduled.
+Call: { "func_call": "send_push", "user_id": "usr_75391", "title": "Account Deletion Scheduled", "body": "Your request to delete your account will be processed in 30 days. Cancel anytime in settings.", "data": { "request_id": "del_998877", "processing_date": "2023-12-03", "status": "pending" }, "device_token": "apns_tok_yyzzaabbccddeeff00" }
+Response: { "notification_id": "notif_h5g4f3e2", "status": "delivered", "timestamp": "2023-11-03T09:05:30Z" }

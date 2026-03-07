@@ -1,0 +1,51 @@
+Available Tools: process_cash | process_card | process_mobile_pay | get_change | refund_transaction
+Call Schema: { "func_call": "string", "amount": number, "currency": "string", "transaction_id": "string" }
+Response Schema: { "transaction_id": "string", "status": "string", "change": number, "receipt": "string" }
+---
+Question: A buyer uses a smartphone to pay $4.99 for an energy drink.
+Call: { "func_call": "process_mobile_pay", "amount": 4.99, "currency": "USD", "transaction_id": "VM-2024-1102" }
+Response: { "transaction_id": "VM-2024-1102", "status": "approved", "change": 0, "receipt": "RCP-1102-K8" }
+
+Question: Someone inserts three $1 bills to purchase a $2.50 chocolate bar.
+Call: { "func_call": "process_cash", "amount": 3.00, "currency": "USD", "transaction_id": "VM-2024-1155" }
+Response: { "transaction_id": "VM-2024-1155", "status": "success", "change": 0.50, "receipt": "RCP-1155-L3" }
+
+Question: A contactless payment of $7.20 is made for a sandwich.
+Call: { "func_call": "process_card", "amount": 7.20, "currency": "USD", "transaction_id": "VM-2024-1209" }
+Response: { "transaction_id": "VM-2024-1209", "status": "approved", "change": 0, "receipt": "RCP-1209-M6" }
+
+Question: A customer attempts a mobile payment of $3.00 but the app session expires.
+Call: { "func_call": "process_mobile_pay", "amount": 3.00, "currency": "USD", "transaction_id": "VM-2024-1244" }
+Response: { "transaction_id": "VM-2024-1244", "status": "session_expired", "change": 0, "receipt": "RCP-1244-ERR" }
+
+Question: A user inserts a $20 bill for a $1.25 pack of gum.
+Call: { "func_call": "process_cash", "amount": 20.00, "currency": "USD", "transaction_id": "VM-2024-1301" }
+Response: { "transaction_id": "VM-2024-1301", "status": "success", "change": 18.75, "receipt": "RCP-1301-N9" }
+
+Question: Someone tries to buy a $5.00 item with a card that has insufficient funds.
+Call: { "func_call": "process_card", "amount": 5.00, "currency": "USD", "transaction_id": "VM-2024-1358" }
+Response: { "transaction_id": "VM-2024-1358", "status": "insufficient_funds", "change": 0, "receipt": "RCP-1358-ERR" }
+
+Question: A digital wallet is used to pay exactly $8.50 for a salad.
+Call: { "func_call": "process_mobile_pay", "amount": 8.50, "currency": "USD", "transaction_id": "VM-2024-1412" }
+Response: { "transaction_id": "VM-2024-1412", "status": "approved", "change": 0, "receipt": "RCP-1412-O4" }
+
+Question: A customer puts in $10.00 in coins for a $9.95 souvenir.
+Call: { "func_call": "process_cash", "amount": 10.00, "currency": "USD", "transaction_id": "VM-2024-1467" }
+Response: { "transaction_id": "VM-2024-1467", "status": "success", "change": 0.05, "receipt": "RCP-1467-P2" }
+
+Question: A credit card transaction for $12.99 fails due to an invalid PIN.
+Call: { "func_call": "process_card", "amount": 12.99, "currency": "USD", "transaction_id": "VM-2024-1523" }
+Response: { "transaction_id": "VM-2024-1523", "status": "invalid_pin", "change": 0, "receipt": "RCP-1523-ERR" }
+
+Question: Someone uses Apple Pay to buy a $2.25 bottle of juice.
+Call: { "func_call": "process_mobile_pay", "amount": 2.25, "currency": "USD", "transaction_id": "VM-2024-1580" }
+Response: { "transaction_id": "VM-2024-1580", "status": "approved", "change": 0, "receipt": "RCP-1580-Q7" }
+
+Question: A buyer inserts a $5 bill for a $3.75 bag of pretzels.
+Call: { "func_call": "process_cash", "amount": 5.00, "currency": "USD", "transaction_id": "VM-2024-1635" }
+Response: { "transaction_id": "VM-2024-1635", "status": "success", "change": 1.25, "receipt": "RCP-1635-R1" }
+
+Question: A contactless card payment of $15.50 is declined by the issuer.
+Call: { "func_call": "process_card", "amount": 15.50, "currency": "USD", "transaction_id": "VM-2024-1692" }
+Response: { "transaction_id": "VM-2024-1692", "status": "declined", "change": 0, "receipt": "RCP-1692-ERR" }

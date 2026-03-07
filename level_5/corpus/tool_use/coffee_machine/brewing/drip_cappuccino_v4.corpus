@@ -1,0 +1,95 @@
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Prepare a large mild latte with almond milk for the design team.
+Call: { "func_call": "brew_latte", "size": "large", "strength": "mild", "milk": "almond" }
+Response: { "order_id": "CM-8933", "status": "steaming_milk", "estimated_seconds": 55 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: I need a quick small espresso, strong and black, before my call.
+Call: { "func_call": "brew_espresso", "size": "small", "strength": "strong", "milk": "none" }
+Response: { "order_id": "CM-8934", "status": "extracting", "estimated_seconds": 15 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Can you brew a medium strong cappuccino with coconut milk for guest reception?
+Call: { "func_call": "brew_cappuccino", "size": "medium", "strength": "strong", "milk": "coconut" }
+Response: { "order_id": "CM-8935", "status": "frothing_milk", "estimated_seconds": 48 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Make a large mild coffee with heavy cream for the late night shift.
+Call: { "func_call": "brew_coffee", "size": "large", "strength": "mild", "milk": "cream" }
+Response: { "order_id": "CM-8936", "status": "brewing", "estimated_seconds": 35 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Small latte with oat milk and medium strength for the yoga instructor.
+Call: { "func_call": "brew_latte", "size": "small", "strength": "medium", "milk": "oat" }
+Response: { "order_id": "CM-8937", "status": "pouring_milk", "estimated_seconds": 42 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Urgent: double shot espresso, large size, strong kick, no additives.
+Call: { "func_call": "brew_espresso", "size": "large", "strength": "strong", "milk": "none" }
+Response: { "order_id": "CM-8938", "status": "grinding_beans", "estimated_seconds": 18 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Could I get a medium cappuccino with soy milk and mild flavor?
+Call: { "func_call": "brew_cappuccino", "size": "medium", "strength": "mild", "milk": "soy" }
+Response: { "order_id": "CM-8939", "status": "heating_water", "estimated_seconds": 52 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Large strong latte with whole milk for the board meeting prep.
+Call: { "func_call": "brew_latte", "size": "large", "strength": "strong", "milk": "whole" }
+Response: { "order_id": "CM-8940", "status": "steaming_milk", "estimated_seconds": 62 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Just a small medium coffee with a splash of skim milk, please.
+Call: { "func_call": "brew_coffee", "size": "small", "strength": "medium", "milk": "skim" }
+Response: { "order_id": "CM-8941", "status": "dispensing", "estimated_seconds": 28 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Brew an espresso, small size, mild profile, with lactose-free milk.
+Call: { "func_call": "brew_espresso", "size": "small", "strength": "mild", "milk": "lactose-free" }
+Response: { "order_id": "CM-8942", "status": "extracting", "estimated_seconds": 22 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Need a large cappuccino, strong espresso, oat milk for the morning huddle.
+Call: { "func_call": "brew_cappuccino", "size": "large", "strength": "strong", "milk": "oat" }
+Response: { "order_id": "CM-8943", "status": "frothing_milk", "estimated_seconds": 58 }
+
+Available Tools: brew_coffee | brew_espresso | brew_latte | brew_cappuccino
+Call Schema: { "func_call": "string", "size": "small|medium|large", "strength": "mild|medium|strong", "milk": "string" }
+Response Schema: { "order_id": "string", "status": "string", "estimated_seconds": number }
+---
+Question: Medium mild latte with almond milk for the new intern's welcome.
+Call: { "func_call": "brew_latte", "size": "medium", "strength": "mild", "milk": "almond" }
+Response: { "order_id": "CM-8944", "status": "ready", "estimated_seconds": 0 }

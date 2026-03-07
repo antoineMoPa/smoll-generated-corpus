@@ -1,0 +1,62 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: Lower the sound to 20 so I can focus on my studies.
+Call: { "func_call": "set_volume", "level": 20, "preset": "study_mode" }
+Response: { "volume": 20, "muted": false, "equalizer_preset": "study_mode" }
+
+---
+Question: Crank the volume up to 95 for the stadium anthem.
+Call: { "func_call": "set_volume", "level": 95, "preset": "stadium" }
+Response: { "volume": 95, "muted": false, "equalizer_preset": "stadium" }
+
+---
+Question: Silence the output right now, I am in a meeting.
+Call: { "func_call": "mute", "level": 55, "preset": "conference" }
+Response: { "volume": 55, "muted": true, "equalizer_preset": "conference" }
+
+---
+Question: Restore audio and maintain the previous level of 55.
+Call: { "func_call": "unmute", "level": 55, "preset": "conference" }
+Response: { "volume": 55, "muted": false, "equalizer_preset": "conference" }
+
+---
+Question: Adjust volume to 42 and select the electronic music profile.
+Call: { "func_call": "set_volume", "level": 42, "preset": "electronic" }
+Response: { "volume": 42, "muted": false, "equalizer_preset": "electronic" }
+
+---
+Question: Mute the TV while I answer the doorbell.
+Call: { "func_call": "mute", "level": 70, "preset": "movie" }
+Response: { "volume": 70, "muted": true, "equalizer_preset": "movie" }
+
+---
+Question: Drop the volume to 25 and enable the lo-fi beat setting.
+Call: { "func_call": "set_volume", "level": 25, "preset": "lofi" }
+Response: { "volume": 25, "muted": false, "equalizer_preset": "lofi" }
+
+---
+Question: Unmute the system and push volume to 88 for the workout playlist.
+Call: { "func_call": "unmute", "level": 88, "preset": "high_energy" }
+Response: { "volume": 88, "muted": false, "equalizer_preset": "high_energy" }
+
+---
+Question: Set volume to 5 but do not trigger the mute flag yet.
+Call: { "func_call": "set_volume", "level": 5, "preset": "whisper" }
+Response: { "volume": 5, "muted": false, "equalizer_preset": "whisper" }
+
+---
+Question: Engage mute function keeping the level at 80 for later.
+Call: { "func_call": "mute", "level": 80, "preset": "orchestra" }
+Response: { "volume": 80, "muted": true, "equalizer_preset": "orchestra" }
+
+---
+Question: Increase volume to 65 and load the podcast optimization preset.
+Call: { "func_call": "set_volume", "level": 65, "preset": "podcast" }
+Response: { "volume": 65, "muted": false, "equalizer_preset": "podcast" }
+
+---
+Question: Unmute the stream and set volume to 38 for the morning briefing.
+Call: { "func_call": "unmute", "level": 38, "preset": "news_digest" }
+Response: { "volume": 38, "muted": false, "equalizer_preset": "news_digest" }

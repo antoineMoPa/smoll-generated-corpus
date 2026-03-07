@@ -1,0 +1,47 @@
+Question: Deploy a traefik reverse proxy named edge-router on port 8080 mapped to 80.
+Call: { "func_call": "run_container", "container_id": "", "image": "traefik:v2.10", "name": "edge-router", "ports": "8080:80", "env": ["TRAEFIK_API=true"] }
+Response: { "container_id": "h1i2j3k4l5m6", "name": "edge-router", "image": "traefik:v2.10", "state": "running", "ports": "8080:80" }
+
+Question: Initialize a mysql database called inventory-db with port 3306 exposed and root password set.
+Call: { "func_call": "run_container", "container_id": "", "image": "mysql:8.0", "name": "inventory-db", "ports": "3306:3306", "env": ["MYSQL_ROOT_PASSWORD=rootpass789", "MYSQL_DATABASE=inventory"] }
+Response: { "container_id": "n7o8p9q0r1s2", "name": "inventory-db", "image": "mysql:8.0", "state": "running", "ports": "3306:3306" }
+
+Question: Halt the running traefik container named edge-router.
+Call: { "func_call": "stop_container", "container_id": "h1i2j3k4l5m6", "image": "", "name": "edge-router", "ports": "", "env": [] }
+Response: { "container_id": "h1i2j3k4l5m6", "name": "edge-router", "image": "traefik:v2.10", "state": "stopped", "ports": "8080:80" }
+
+Question: Spin up a memcached session store named session-cache mapping host port 11211 to container port 11211.
+Call: { "func_call": "run_container", "container_id": "", "image": "memcached:1.6", "name": "session-cache", "ports": "11211:11211", "env": [] }
+Response: { "container_id": "t3u4v5w6x7y8", "name": "session-cache", "image": "memcached:1.6", "state": "running", "ports": "11211:11211" }
+
+Question: Launch a go microservice named auth-service on port 9000 with LOG_LEVEL set to debug.
+Call: { "func_call": "run_container", "container_id": "", "image": "golang:1.21", "name": "auth-service", "ports": "9000:9000", "env": ["LOG_LEVEL=debug", "SERVICE_NAME=auth"] }
+Response: { "container_id": "z9a8b7c6d5e4", "name": "auth-service", "image": "golang:1.21", "state": "running", "ports": "9000:9000" }
+
+Question: Terminate the mysql inventory-db container gracefully.
+Call: { "func_call": "stop_container", "container_id": "n7o8p9q0r1s2", "image": "", "name": "inventory-db", "ports": "", "env": [] }
+Response: { "container_id": "n7o8p9q0r1s2", "name": "inventory-db", "image": "mysql:8.0", "state": "stopped", "ports": "3306:3306" }
+
+Question: Run a ruby background job processor named queue-worker exposing port 8085.
+Call: { "func_call": "run_container", "container_id": "", "image": "ruby:3.2", "name": "queue-worker", "ports": "8085:8085", "env": ["RAILS_ENV=production"] }
+Response: { "container_id": "f3g2h1i0j9k8", "name": "queue-worker", "image": "ruby:3.2", "state": "running", "ports": "8085:8085" }
+
+Question: Stop the memcached session-cache container immediately.
+Call: { "func_call": "stop_container", "container_id": "t3u4v5w6x7y8", "image": "", "name": "session-cache", "ports": "", "env": [] }
+Response: { "container_id": "t3u4v5w6x7y8", "name": "session-cache", "image": "memcached:1.6", "state": "stopped", "ports": "11211:11211" }
+
+Question: Deploy a secondary caddy web server named static-site on port 8082 mapped to internal port 80.
+Call: { "func_call": "run_container", "container_id": "", "image": "caddy:2.7", "name": "static-site", "ports": "8082:80", "env": ["CADDY_ENV=prod"] }
+Response: { "container_id": "l7m6n5o4p3q2", "name": "static-site", "image": "caddy:2.7", "state": "running", "ports": "8082:80" }
+
+Question: Halt the go auth-service application.
+Call: { "func_call": "stop_container", "container_id": "z9a8b7c6d5e4", "image": "", "name": "auth-service", "ports": "", "env": [] }
+Response: { "container_id": "z9a8b7c6d5e4", "name": "auth-service", "image": "golang:1.21", "state": "stopped", "ports": "9000:9000" }
+
+Question: Start a couchdb document store named user-profiles with port 5984 exposed and admin user configured.
+Call: { "func_call": "run_container", "container_id": "", "image": "couchdb:3.3", "name": "user-profiles", "ports": "5984:5984", "env": ["COUCHDB_USER=admin", "COUCHDB_PASSWORD=securepass"] }
+Response: { "container_id": "r1s2t3u4v5w6", "name": "user-profiles", "image": "couchdb:3.3", "state": "running", "ports": "5984:5984" }
+
+Question: Stop the ruby queue-worker container.
+Call: { "func_call": "stop_container", "container_id": "f3g2h1i0j9k8", "image": "", "name": "queue-worker", "ports": "", "env": [] }
+Response: { "container_id": "f3g2h1i0j9k8", "name": "queue-worker", "image": "ruby:3.2", "state": "stopped", "ports": "8085:8085" }

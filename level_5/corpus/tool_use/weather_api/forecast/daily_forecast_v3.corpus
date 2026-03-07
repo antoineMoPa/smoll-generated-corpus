@@ -1,0 +1,51 @@
+Available Tools: get_forecast_daily | get_forecast_hourly | get_forecast_weekly
+Call Schema: { "func_call": "string", "location": "string", "days": number, "unit": "string" }
+Response Schema: { "location": "string", "forecast": [{ "date": "string", "high": number, "low": number, "condition": "string" }] }
+---
+Question: What will the weather be like in Seattle over the next 4 days?
+Call: { "func_call": "get_forecast_daily", "location": "Seattle", "days": 4, "unit": "fahrenheit" }
+Response: { "location": "Seattle", "forecast": [{ "date": "2023-11-01", "high": 55, "low": 48, "condition": "Rain" }, { "date": "2023-11-02", "high": 53, "low": 46, "condition": "Cloudy" }, { "date": "2023-11-03", "high": 56, "low": 49, "condition": "Partly Cloudy" }, { "date": "2023-11-04", "high": 58, "low": 50, "condition": "Sunny" }] }
+
+Question: Give me the 7-day forecast for Dubai in Celsius.
+Call: { "func_call": "get_forecast_daily", "location": "Dubai", "days": 7, "unit": "celsius" }
+Response: { "location": "Dubai", "forecast": [{ "date": "2023-11-01", "high": 34, "low": 24, "condition": "Sunny" }, { "date": "2023-11-02", "high": 35, "low": 25, "condition": "Clear" }, { "date": "2023-11-03", "high": 33, "low": 23, "condition": "Sunny" }, { "date": "2023-11-04", "high": 32, "low": 22, "condition": "Partly Cloudy" }, { "date": "2023-11-05", "high": 34, "low": 24, "condition": "Sunny" }, { "date": "2023-11-06", "high": 36, "low": 26, "condition": "Clear" }, { "date": "2023-11-07", "high": 35, "low": 25, "condition": "Sunny" }] }
+
+Question: Can you show me the 3-day outlook for Rome?
+Call: { "func_call": "get_forecast_daily", "location": "Rome", "days": 3, "unit": "celsius" }
+Response: { "location": "Rome", "forecast": [{ "date": "2023-11-01", "high": 18, "low": 12, "condition": "Partly Cloudy" }, { "date": "2023-11-02", "high": 19, "low": 13, "condition": "Sunny" }, { "date": "2023-11-03", "high": 17, "low": 11, "condition": "Rain" }] }
+
+Question: I need a 5-day forecast for Bangkok in Fahrenheit.
+Call: { "func_call": "get_forecast_daily", "location": "Bangkok", "days": 5, "unit": "fahrenheit" }
+Response: { "location": "Bangkok", "forecast": [{ "date": "2023-11-01", "high": 91, "low": 79, "condition": "Thunderstorms" }, { "date": "2023-11-02", "high": 89, "low": 77, "condition": "Rain" }, { "date": "2023-11-03", "high": 90, "low": 78, "condition": "Cloudy" }, { "date": "2023-11-04", "high": 92, "low": 80, "condition": "Partly Cloudy" }, { "date": "2023-11-05", "high": 93, "low": 81, "condition": "Sunny" }] }
+
+Question: What is the weather forecast for the next 6 days in Vancouver?
+Call: { "func_call": "get_forecast_daily", "location": "Vancouver", "days": 6, "unit": "celsius" }
+Response: { "location": "Vancouver", "forecast": [{ "date": "2023-11-01", "high": 11, "low": 6, "condition": "Rain" }, { "date": "2023-11-02", "high": 10, "low": 5, "condition": "Cloudy" }, { "date": "2023-11-03", "high": 12, "low": 7, "condition": "Light Rain" }, { "date": "2023-11-04", "high": 13, "low": 8, "condition": "Partly Cloudy" }, { "date": "2023-11-05", "high": 11, "low": 6, "condition": "Rain" }, { "date": "2023-11-06", "high": 10, "low": 5, "condition": "Cloudy" }] }
+
+Question: Show me the 4-day forecast for Cape Town.
+Call: { "func_call": "get_forecast_daily", "location": "Cape Town", "days": 4, "unit": "celsius" }
+Response: { "location": "Cape Town", "forecast": [{ "date": "2023-11-01", "high": 22, "low": 15, "condition": "Windy" }, { "date": "2023-11-02", "high": 24, "low": 16, "condition": "Sunny" }, { "date": "2023-11-03", "high": 25, "low": 17, "condition": "Clear" }, { "date": "2023-11-04", "high": 23, "low": 16, "condition": "Partly Cloudy" }] }
+
+Question: Can I get a 7-day forecast for Chicago in Fahrenheit?
+Call: { "func_call": "get_forecast_daily", "location": "Chicago", "days": 7, "unit": "fahrenheit" }
+Response: { "location": "Chicago", "forecast": [{ "date": "2023-11-01", "high": 45, "low": 38, "condition": "Cloudy" }, { "date": "2023-11-02", "high": 42, "low": 35, "condition": "Rain" }, { "date": "2023-11-03", "high": 40, "low": 33, "condition": "Windy" }, { "date": "2023-11-04", "high": 44, "low": 36, "condition": "Partly Cloudy" }, { "date": "2023-11-05", "high": 48, "low": 39, "condition": "Sunny" }, { "date": "2023-11-06", "high": 50, "low": 41, "condition": "Clear" }, { "date": "2023-11-07", "high": 46, "low": 37, "condition": "Cloudy" }] }
+
+Question: What's the 3-day forecast for Singapore?
+Call: { "func_call": "get_forecast_daily", "location": "Singapore", "days": 3, "unit": "celsius" }
+Response: { "location": "Singapore", "forecast": [{ "date": "2023-11-01", "high": 31, "low": 26, "condition": "Thunderstorms" }, { "date": "2023-11-02", "high": 30, "low": 25, "condition": "Rain" }, { "date": "2023-11-03", "high": 32, "low": 27, "condition": "Cloudy" }] }
+
+Question: Give me the daily forecast for Madrid for the next 5 days.
+Call: { "func_call": "get_forecast_daily", "location": "Madrid", "days": 5, "unit": "celsius" }
+Response: { "location": "Madrid", "forecast": [{ "date": "2023-11-01", "high": 15, "low": 8, "condition": "Sunny" }, { "date": "2023-11-02", "high": 16, "low": 9, "condition": "Clear" }, { "date": "2023-11-03", "high": 14, "low": 7, "condition": "Partly Cloudy" }, { "date": "2023-11-04", "high": 13, "low": 6, "condition": "Cloudy" }, { "date": "2023-11-05", "high": 15, "low": 8, "condition": "Sunny" }] }
+
+Question: I need a 6-day forecast for Honolulu in Fahrenheit.
+Call: { "func_call": "get_forecast_daily", "location": "Honolulu", "days": 6, "unit": "fahrenheit" }
+Response: { "location": "Honolulu", "forecast": [{ "date": "2023-11-01", "high": 82, "low": 74, "condition": "Partly Cloudy" }, { "date": "2023-11-02", "high": 83, "low": 75, "condition": "Sunny" }, { "date": "2023-11-03", "high": 81, "low": 73, "condition": "Showers" }, { "date": "2023-11-04", "high": 82, "low": 74, "condition": "Partly Cloudy" }, { "date": "2023-11-05", "high": 84, "low": 76, "condition": "Sunny" }, { "date": "2023-11-06", "high": 83, "low": 75, "condition": "Clear" }] }
+
+Question: What is the 4-day outlook for Stockholm?
+Call: { "func_call": "get_forecast_daily", "location": "Stockholm", "days": 4, "unit": "celsius" }
+Response: { "location": "Stockholm", "forecast": [{ "date": "2023-11-01", "high": 4, "low": -2, "condition": "Snow" }, { "date": "2023-11-02", "high": 3, "low": -3, "condition": "Cloudy" }, { "date": "2023-11-03", "high": 5, "low": -1, "condition": "Partly Cloudy" }, { "date": "2023-11-04", "high": 2, "low": -4, "condition": "Snow" }] }
+
+Question: Show me the next 7 days of weather for Buenos Aires.
+Call: { "func_call": "get_forecast_daily", "location": "Buenos Aires", "days": 7, "unit": "celsius" }
+Response: { "location": "Buenos Aires", "forecast": [{ "date": "2023-11-01", "high": 26, "low": 18, "condition": "Sunny" }, { "date": "2023-11-02", "high": 28, "low": 19, "condition": "Clear" }, { "date": "2023-11-03", "high": 29, "low": 20, "condition": "Partly Cloudy" }, { "date": "2023-11-04", "high": 27, "low": 19, "condition": "Thunderstorms" }, { "date": "2023-11-05", "high": 25, "low": 17, "condition": "Rain" }, { "date": "2023-11-06", "high": 24, "low": 16, "condition": "Cloudy" }, { "date": "2023-11-07", "high": 26, "low": 18, "condition": "Sunny" }] }

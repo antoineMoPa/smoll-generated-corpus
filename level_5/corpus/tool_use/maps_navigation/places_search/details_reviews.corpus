@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Find me some highly rated Italian restaurants near the Colosseum in Rome within 2 kilometers.
+Call: { "func_call": "search_places", "query": "Italian restaurants", "location": "Colosseum, Rome, Italy", "radius_km": 2, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_rome_001", "name": "Trattoria Luzzi", "address": "Via di San Giovanni in Laterano, 88, 00184 Roma RM, Italy", "rating": 4.5, "open_now": true }, { "id": "pl_rome_002", "name": "La Taverna dei Fori Imperiali", "address": "Via della Madonna dei Monti, 9, 00184 Roma RM, Italy", "rating": 4.7, "open_now": false }, { "id": "pl_rome_003", "name": "Pizzeria Ai Marmi", "address": "Viale di Trastevere, 53, 00153 Roma RM, Italy", "rating": 4.3, "open_now": true }], "total": 3 }
+
+Question: I need coffee shops near Central Park West in New York that are open right now.
+Call: { "func_call": "search_places", "query": "coffee shops", "location": "Central Park West, New York, NY", "radius_km": 1.5, "type": "cafe" }
+Response: { "places": [{ "id": "pl_nyc_004", "name": "Birch Coffee", "address": "134 W 72nd St, New York, NY 10023", "rating": 4.6, "open_now": true }, { "id": "pl_nyc_005", "name": "Starbucks Reserve", "address": "61 9th Ave, New York, NY 10011", "rating": 4.2, "open_now": true }, { "id": "pl_nyc_006", "name": "Cafe Grumpy", "address": "224 W 20th St, New York, NY 10011", "rating": 4.4, "open_now": false }], "total": 3 }
+
+Question: Locate pet-friendly parks within 5 kilometers of Shibuya Station in Tokyo.
+Call: { "func_call": "search_places", "query": "parks", "location": "Shibuya Station, Tokyo, Japan", "radius_km": 5, "type": "park" }
+Response: { "places": [{ "id": "pl_tky_007", "name": "Yoyogi Park", "address": "2-1 Yoyogikamizonocho, Shibuya City, Tokyo 151-0052, Japan", "rating": 4.8, "open_now": true }, { "id": "pl_tky_008", "name": "Inokashira Park", "address": "1-18-31 Gotenyama, Musashino, Tokyo 180-0005, Japan", "rating": 4.7, "open_now": true }, { "id": "pl_tky_009", "name": "Meiji Jingu Inner Garden", "address": "1-1 Yoyogikamizonocho, Shibuya City, Tokyo 151-0052, Japan", "rating": 4.9, "open_now": false }], "total": 3 }
+
+Question: Search for 24-hour pharmacies near Downtown Toronto within a 3km radius.
+Call: { "func_call": "search_places", "query": "pharmacies", "location": "Downtown Toronto, ON, Canada", "radius_km": 3, "type": "pharmacy" }
+Response: { "places": [{ "id": "pl_tor_010", "name": "Shoppers Drug Mart", "address": "485 Queen St W, Toronto, ON M5V 2B2, Canada", "rating": 4.1, "open_now": true }, { "id": "pl_tor_011", "name": "Rexall Pharmacy", "address": "10 Dundas St E, Toronto, ON M5B 2G9, Canada", "rating": 3.9, "open_now": true }, { "id": "pl_tor_012", "name": "Guardians Pharmacy", "address": "200 Bay St, Toronto, ON M5J 2J2, Canada", "rating": 4.3, "open_now": false }], "total": 3 }
+
+Question: Find historical museums close to the Louvre in Paris, France.
+Call: { "func_call": "search_places", "query": "historical museums", "location": "Louvre Museum, Paris, France", "radius_km": 2, "type": "museum" }
+Response: { "places": [{ "id": "pl_par_013", "name": "Musée d'Orsay", "address": "1 Rue de la Légion d'Honneur, 75007 Paris, France", "rating": 4.8, "open_now": true }, { "id": "pl_par_014", "name": "Sainte-Chapelle", "address": "8 Boulevard du Palais, 75001 Paris, France", "rating": 4.7, "open_now": true }, { "id": "pl_par_015", "name": "Conciergerie", "address": "2 Boulevard du Palais, 75001 Paris, France", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Look for sushi restaurants near Ginza Station in Tokyo with high ratings.
+Call: { "func_call": "search_places", "query": "sushi restaurants", "location": "Ginza Station, Tokyo, Japan", "radius_km": 1, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_tky_016", "name": "Sukiyabashi Jiro", "address": "Tsukamoto Sogyo Building, 4-2-15 Ginza, Chuo City, Tokyo, Japan", "rating": 4.9, "open_now": false }, { "id": "pl_tky_017", "name": "Kyubei Ginza", "address": "8-7-6 Ginza, Chuo City, Tokyo 104-0061, Japan", "rating": 4.6, "open_now": true }, { "id": "pl_tky_018", "name": "Sushi Zanmai Honten", "address": "4-11-9 Tsukiji, Chuo City, Tokyo 104-0045, Japan", "rating": 4.4, "open_now": true }], "total": 3 }
+
+Question: Identify gyms near Bondi Beach in Sydney that offer day passes.
+Call: { "func_call": "search_places", "query": "gyms", "location": "Bondi Beach, Sydney, NSW, Australia", "radius_km": 2, "type": "gym" }
+Response: { "places": [{ "id": "pl_syd_019", "name": "Fitness First Bondi Beach", "address": "158 Campbell Parade, Bondi Beach NSW 2026, Australia", "rating": 4.2, "open_now": true }, { "id": "pl_syd_020", "name": "Anytime Fitness Bondi", "address": "126 Curlewis St, Bondi Beach NSW 2026, Australia", "rating": 4.5, "open_now": true }, { "id": "pl_syd_021", "name": "F45 Training Bondi Beach", "address": "Shop 2/108 Campbell Parade, Bondi Beach NSW 2026, Australia", "rating": 4.8, "open_now": false }], "total": 3 }
+
+Question: Search for bookstores near the British Museum in London.
+Call: { "func_call": "search_places", "query": "bookstores", "location": "British Museum, London, UK", "radius_km": 1.5, "type": "book_store" }
+Response: { "places": [{ "id": "pl_lon_022", "name": "Heywood Hill", "address": "10 Curzon St, Mayfair, London W1J 5DR, UK", "rating": 4.7, "open_now": true }, { "id": "pl_lon_023", "name": "Daunt Books", "address": "83-84 Marylebone High St, London W1U 4QW, UK", "rating": 4.8, "open_now": true }, { "id": "pl_lon_024", "name": "Foyles Charing Cross Road", "address": "107 Charing Cross Rd, London WC2H 0DT, UK", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Find vegan-friendly cafes near Pike Place Market in Seattle.
+Call: { "func_call": "search_places", "query": "vegan cafes", "location": "Pike Place Market, Seattle, WA", "radius_km": 1, "type": "cafe" }
+Response: { "places": [{ "id": "pl_sea_025", "name": "Plum Bistro", "address": "1429 12th Ave, Seattle, WA 98122", "rating": 4.5, "open_now": true }, { "id": "pl_sea_026", "name": "Cafe Flora", "address": "2901 E Madison St, Seattle, WA 98112", "rating": 4.6, "open_now": true }, { "id": "pl_sea_027", "name": "Veggie Grill", "address": "409 Pine St, Seattle, WA 98101", "rating": 4.3, "open_now": false }], "total": 3 }
+
+Question: Locate art galleries within 3km of the Mission District in San Francisco.
+Call: { "func_call": "search_places", "query": "art galleries", "location": "Mission District, San Francisco, CA", "radius_km": 3, "type": "art_gallery" }
+Response: { "places": [{ "id": "pl_sf_028", "name": "SFMOMA", "address": "151 3rd St, San Francisco, CA 94103", "rating": 4.7, "open_now": true }, { "id": "pl_sf_029", "name": "Gallery Wendi Norris", "address": "560 Sutter St, San Francisco, CA 94102", "rating": 4.4, "open_now": false }, { "id": "pl_sf_030", "name": "Pier 24 Photography", "address": "Pier 24, The Embarcadero, San Francisco, CA 94111", "rating": 4.8, "open_now": true }], "total": 3 }
+
+Question: Search for hotels near the Burj Khalifa in Dubai with availability tonight.
+Call: { "func_call": "search_places", "query": "hotels", "location": "Burj Khalifa, Dubai, UAE", "radius_km": 2, "type": "lodging" }
+Response: { "places": [{ "id": "pl_dub_031", "name": "Armani Hotel Dubai", "address": "1 Sheikh Mohammed bin Rashid Blvd, Dubai, UAE", "rating": 4.8, "open_now": true }, { "id": "pl_dub_032", "name": "The Address Downtown", "address": "Emaar Blvd, Downtown Dubai, Dubai, UAE", "rating": 4.6, "open_now": true }, { "id": "pl_dub_033", "name": "Rove Downtown", "address": "Hadaikat Al Wasl, Dubai, UAE", "rating": 4.4, "open_now": true }], "total": 3 }
+
+Question: Find bicycle repair shops near Vondelpark in Amsterdam.
+Call: { "func_call": "search_places", "query": "bicycle repair", "location": "Vondelpark, Amsterdam, Netherlands", "radius_km": 1.5, "type": "bicycle_store" }
+Response: { "places": [{ "id": "pl_ams_034", "name": "Mike's Bike Repair", "address": "Eerste Constantijn Huygensstraat 27, 1054 BS Amsterdam, Netherlands", "rating": 4.9, "open_now": true }, { "id": "pl_ams_035", "name": "Amsterdam Bicycle Company", "address": "Westerstraat 187, 1015 MA Amsterdam, Netherlands", "rating": 4.7, "open_now": false }, { "id": "pl_ams_036", "name": "De Fietsenmaker", "address": "Van Ostadestraat 15, 1072 SB Amsterdam, Netherlands", "rating": 4.5, "open_now": true }], "total": 3 }

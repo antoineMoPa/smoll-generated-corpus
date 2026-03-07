@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "string", "head": "string", "base": "string" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Add an approving review to pull request 42 in the acme-corp/web-dashboard repository owned by jdoe.
+Call: { "func_call": "add_pr_review", "owner": "jdoe", "repo": "acme-corp/web-dashboard", "pr_number": 42, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 42, "title": "Fix navigation bug on mobile", "state": "open", "author": "sarah_dev", "changed_files": 3, "mergeable": true }
+
+Question: Merge pull request 105 for the backend-api project under the org tech-solutions.
+Call: { "func_call": "merge_pr", "owner": "tech-solutions", "repo": "backend-api", "pr_number": 105, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 105, "title": "Implement user authentication flow", "state": "merged", "author": "mike_backend", "changed_files": 12, "mergeable": true }
+
+Question: Request changes on PR 88 in the data-pipeline repo owned by analytics-team because the SQL query is inefficient.
+Call: { "func_call": "add_pr_review", "owner": "analytics-team", "repo": "data-pipeline", "pr_number": 88, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 88, "title": "Optimize ETL job for daily reports", "state": "open", "author": "lena_data", "changed_files": 5, "mergeable": true }
+
+Question: Attempt to merge PR 203 in the mobile-app repository owned by product-inc, but it has conflicts.
+Call: { "func_call": "merge_pr", "owner": "product-inc", "repo": "mobile-app", "pr_number": 203, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 203, "title": "Update iOS splash screen assets", "state": "open", "author": "alex_mobile", "changed_files": 4, "mergeable": false }
+
+Question: Submit an approval review for PR 15 in the devops-scripts repo maintained by infra-ops.
+Call: { "func_call": "add_pr_review", "owner": "infra-ops", "repo": "devops-scripts", "pr_number": 15, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 15, "title": "Add automated backup cron job", "state": "open", "author": "chris_sysadmin", "changed_files": 2, "mergeable": true }
+
+Question: Merge the hotfix PR 301 in the payment-gateway repo owned by finance-tech.
+Call: { "func_call": "merge_pr", "owner": "finance-tech", "repo": "payment-gateway", "pr_number": 301, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 301, "title": "Patch currency conversion rounding error", "state": "merged", "author": "priya_finance", "changed_files": 1, "mergeable": true }
+
+Question: Leave a review requesting changes on PR 77 in the frontend-lib repo under the owner ui-designers due to accessibility issues.
+Call: { "func_call": "add_pr_review", "owner": "ui-designers", "repo": "frontend-lib", "pr_number": 77, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 77, "title": "Refactor button component styles", "state": "open", "author": "tom_ui", "changed_files": 6, "mergeable": true }
+
+Question: Try to merge PR 59 in the logging-service repo owned by platform-eng, but the branch is behind.
+Call: { "func_call": "merge_pr", "owner": "platform-eng", "repo": "logging-service", "pr_number": 59, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 59, "title": "Integrate new Elasticsearch cluster", "state": "open", "author": "david_platform", "changed_files": 8, "mergeable": false }
+
+Question: Add a positive review to PR 124 in the auth-service repository owned by security-first.
+Call: { "func_call": "add_pr_review", "owner": "security-first", "repo": "auth-service", "pr_number": 124, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 124, "title": "Enforce stronger password policies", "state": "open", "author": "emma_sec", "changed_files": 4, "mergeable": true }
+
+Question: Merge pull request 902 for the documentation-site project under the owner docs-team.
+Call: { "func_call": "merge_pr", "owner": "docs-team", "repo": "documentation-site", "pr_number": 902, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 902, "title": "Update API reference for v2.0", "state": "merged", "author": "lucas_writer", "changed_files": 15, "mergeable": true }
+
+Question: Request changes on PR 33 in the inventory-manager repo owned by retail-soft because the database schema migration is missing.
+Call: { "func_call": "add_pr_review", "owner": "retail-soft", "repo": "inventory-manager", "pr_number": 33, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 33, "title": "Add stock level tracking feature", "state": "open", "author": "nina_retail", "changed_files": 7, "mergeable": true }
+
+Question: Attempt to merge PR 410 in the notification-hub repo owned by comms-team, but there are unresolved conflicts.
+Call: { "func_call": "merge_pr", "owner": "comms-team", "repo": "notification-hub", "pr_number": 410, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 410, "title": "Support SMS delivery providers", "state": "open", "author": "omar_comms", "changed_files": 9, "mergeable": false }

@@ -1,0 +1,51 @@
+Available Tools: update_record | update_batch | soft_delete | restore_record
+Call Schema: { "func_call": "string", "table": "string", "id": number, "data": {}, "where": "string" }
+Response Schema: { "affected_rows": number, "status": "string", "updated_at": "string" }
+---
+Question: Modify the first name for user ID 5012 to 'Elena'.
+Call: { "func_call": "update_record", "table": "users", "id": 5012, "data": { "first_name": "Elena" }, "where": "id = 5012" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:12:44Z" }
+
+Question: Set the order status for ID 3345 to 'processing'.
+Call: { "func_call": "update_record", "table": "orders", "id": 3345, "data": { "status": "processing", "processed_by": "warehouse_b" }, "where": "id = 3345" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:14:22Z" }
+
+Question: Update the stock level for product ID 883 to 1200 units.
+Call: { "func_call": "update_record", "table": "products", "id": 883, "data": { "stock_quantity": 1200, "warehouse_location": "A-12" }, "where": "id = 883" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:15:50Z" }
+
+Question: Change the email address for user ID 7721 to contact@domain.net.
+Call: { "func_call": "update_record", "table": "users", "id": 7721, "data": { "email": "contact@domain.net" }, "where": "id = 7721" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:17:03Z" }
+
+Question: Mark order ID 1109 as 'cancelled' due to inventory shortage.
+Call: { "func_call": "update_record", "table": "orders", "id": 1109, "data": { "status": "cancelled", "cancellation_reason": "Out of stock" }, "where": "id = 1109" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:18:45Z" }
+
+Question: Increase the price of product ID 442 to 89.95.
+Call: { "func_call": "update_record", "table": "products", "id": 442, "data": { "price": 89.95, "currency": "EUR" }, "where": "id = 442" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:20:11Z" }
+
+Question: Update the mobile number for user ID 990 to +44-20-7946-0000.
+Call: { "func_call": "update_record", "table": "users", "id": 990, "data": { "mobile": "+44-20-7946-0000" }, "where": "id = 990" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:21:38Z" }
+
+Question: Revise the billing address for order ID 5566 to 42 Oak Lane, Dublin.
+Call: { "func_call": "update_record", "table": "orders", "id": 5566, "data": { "billing_address": "42 Oak Lane, Dublin", "postal_code": "D02 XY34" }, "where": "id = 5566" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:23:05Z" }
+
+Question: Apply a discount flag to product ID 221 for the holiday season.
+Call: { "func_call": "update_record", "table": "products", "id": 221, "data": { "discount_percent": 20, "promotion_active": true }, "where": "id = 221" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:24:42Z" }
+
+Question: Upgrade the subscription plan for user ID 405 to 'enterprise'.
+Call: { "func_call": "update_record", "table": "users", "id": 405, "data": { "subscription_plan": "enterprise", "renewal_date": "2024-11-05" }, "where": "id = 405" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:26:19Z" }
+
+Question: Switch the carrier for order ID 8823 to 'FedEx'.
+Call: { "func_call": "update_record", "table": "orders", "id": 8823, "data": { "carrier": "FedEx", "estimated_delivery": "2023-11-08" }, "where": "id = 8823" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:27:55Z" }
+
+Question: Update the category for product ID 667 to 'Electronics - Wearables'.
+Call: { "func_call": "update_record", "table": "products", "id": 667, "data": { "category": "Electronics - Wearables", "tags": ["smartwatch", "fitness"] }, "where": "id = 667" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-05T09:29:30Z" }

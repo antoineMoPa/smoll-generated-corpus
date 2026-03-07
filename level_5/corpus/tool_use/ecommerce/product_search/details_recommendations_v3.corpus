@@ -1,0 +1,79 @@
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: What are the full specifications for the Dyson V15 Detect vacuum?
+Call: { "func_call": "get_product_details", "query": "Dyson V15 Detect", "category": "Home Appliances", "min_price": 500, "max_price": 900, "sort_by": "relevance" }
+Response: { "products": [{ "id": "DYS-V15-DET", "name": "Dyson V15 Detect Absolute Vacuum", "price": 749.99, "rating": 4.7, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Show me alternatives to the Canon EOS R6 camera body.
+Call: { "func_call": "get_recommendations", "query": "Canon EOS R6", "category": "Cameras", "min_price": 1500, "max_price": 3000, "sort_by": "rating" }
+Response: { "products": [{ "id": "NIK-Z6II", "name": "Nikon Z6 II Mirrorless Camera", "price": 1996.95, "rating": 4.8, "in_stock": true }, { "id": "SON-A7IV", "name": "Sony Alpha a7 IV Body", "price": 2498.00, "rating": 4.9, "in_stock": false }, { "id": "PAN-S5II", "name": "Panasonic Lumix S5 II", "price": 1697.99, "rating": 4.6, "in_stock": true }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Retrieve pricing and availability for the Herman Miller Aeron Chair, size B.
+Call: { "func_call": "get_product_details", "query": "Herman Miller Aeron B", "category": "Furniture", "min_price": 800, "max_price": 2000, "sort_by": "price_asc" }
+Response: { "products": [{ "id": "HM-AER-B-GRP", "name": "Herman Miller Aeron Chair Graphite Size B", "price": 1445.00, "rating": 4.9, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Suggest some running watches similar to the Garmin Forerunner 955.
+Call: { "func_call": "get_recommendations", "query": "Garmin Forerunner 955", "category": "Wearables", "min_price": 400, "max_price": 800, "sort_by": "popularity" }
+Response: { "products": [{ "id": "COR-VERTIX-2", "name": "Coros Vertix 2 GPS Watch", "price": 699.00, "rating": 4.7, "in_stock": true }, { "id": "POL-GRIT-X2", "name": "Polar Grit X2 Pro", "price": 549.95, "rating": 4.5, "in_stock": true }, { "id": "SUN-9X-Pro", "name": "Suunto 9 Peak Pro", "price": 569.00, "rating": 4.4, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Get me the details for the KitchenAid Artisan Stand Mixer in Empire Red.
+Call: { "func_call": "get_product_details", "query": "KitchenAid Artisan Red", "category": "Kitchen Appliances", "min_price": 300, "max_price": 600, "sort_by": "relevance" }
+Response: { "products": [{ "id": "KA-ART-5QT-RED", "name": "KitchenAid Artisan Series 5-Qt Tilt-Head Stand Mixer", "price": 449.99, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Find me keyboards comparable to the Keychron K2 Pro.
+Call: { "func_call": "get_recommendations", "query": "Keychron K2 Pro", "category": "Computer Accessories", "min_price": 80, "max_price": 200, "sort_by": "rating" }
+Response: { "products": [{ "id": "NUX-AIR-75", "name": "NuPhy Air75 V2 Mechanical Keyboard", "price": 129.95, "rating": 4.7, "in_stock": true }, { "id": "AKP-84Pro", "name": "Akko 84 Pro Wireless", "price": 89.99, "rating": 4.5, "in_stock": true }, { "id": "ROY-GLP-75", "name": "Royal Kludge RK84", "price": 79.99, "rating": 4.3, "in_stock": false }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Look up the current stock status for the Lego Star Wars Millennium Falcon set.
+Call: { "func_call": "get_product_details", "query": "Lego Millennium Falcon", "category": "Toys & Games", "min_price": 100, "max_price": 1000, "sort_by": "relevance" }
+Response: { "products": [{ "id": "LEGO-75375", "name": "LEGO Star Wars Millennium Falcon", "price": 849.99, "rating": 4.9, "in_stock": false }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: Recommend some noise-blocking earplugs similar to Loop Quiet.
+Call: { "func_call": "get_recommendations", "query": "Loop Quiet earplugs", "category": "Health & Wellness", "min_price": 20, "max_price": 60, "sort_by": "popularity" }
+Response: { "products": [{ "id": "FLARE-Audio", "name": "Flare Audio Calmer", "price": 29.99, "rating": 4.4, "in_stock": true }, { "id": "ALPINE-Sleep", "name": "Alpine SleepSoft Earplugs", "price": 24.95, "rating": 4.5, "in_stock": true }, { "id": "MOLD-Max-1", "name": "Moldex Max-1 Reusable", "price": 18.50, "rating": 4.2, "in_stock": true }], "total": 3 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: I need the product details for the Vitamix Professional Series 750 blender.
+Call: { "func_call": "get_product_details", "query": "Vitamix Pro 750", "category": "Kitchen Appliances", "min_price": 400, "max_price": 700, "sort_by": "relevance" }
+Response: { "products": [{ "id": "VTX-PRO-750", "name": "Vitamix Professional Series 750 Blender", "price": 599.95, "rating": 4.8, "in_stock": true }], "total": 1 }
+
+Available Tools: search_products | filter_products | get_product_details | get_recommendations
+Call Schema: { "func_call": "string", "query": "string", "category": "string", "min_price": number, "max_price": number, "sort_by": "string" }
+Response Schema: { "products": [{ "id": "string", "name": "string", "price": number, "rating": number, "in_stock": boolean }], "total": number }
+---
+Question: What tablets are recommended if I am considering the iPad Air 5th Gen?
+Call: { "func_call": "get_recommendations", "query": "iPad Air 5th Gen", "category": "Tablets", "min_price": 400, "max_price": 900, "sort_by": "rating" }
+Response: { "products": [{ "id": "SAM-Tab-S9", "name": "Samsung Galaxy Tab S9", "price": 799.99, "rating": 4.7, "in_stock": true }, { "id": "MS-Surf-Pro9", "name": "Microsoft Surface Pro 9", "price": 999.00, "rating": 4.5, "in_stock": false }, { "id": "LEN-P11-Pro", "name": "Lenovo Tab P11 Pro Gen 2", "price": 499.99, "rating": 4.4, "in_stock": true }], "total": 3 }

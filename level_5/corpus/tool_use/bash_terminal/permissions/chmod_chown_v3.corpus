@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Grant execute permissions to the group for the container startup script.
+Call: { "func_call": "chmod", "path": "/opt/docker/startup.sh", "mode": "750", "owner": "" }
+Response: { "success": true, "previous_mode": "700", "new_mode": "750" }
+
+Question: Transfer ownership of the metrics log to the monitoring user and the ops group.
+Call: { "func_call": "chown", "path": "/var/log/metrics/current.log", "mode": "", "owner": "monitor:ops" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "644" }
+
+Question: Remove all permissions from the temporary debug file for non-root users.
+Call: { "func_call": "chmod", "path": "/tmp/debug_dump_9921.tmp", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "666", "new_mode": "600" }
+
+Question: Assign the cache directory to the redis user and the redis group.
+Call: { "func_call": "chown", "path": "/var/lib/redis/data", "mode": "", "owner": "redis:redis" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "755" }
+
+Question: Make the installation binary readable and executable by everyone.
+Call: { "func_call": "chmod", "path": "/usr/local/bin/installer_v2", "mode": "755", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "755" }
+
+Question: Change the owner of the message queue socket to the rabbitmq user and the plugins group.
+Call: { "func_call": "chown", "path": "/run/rabbitmq/ctrl.sock", "mode": "", "owner": "rabbitmq:plugins" }
+Response: { "success": true, "previous_mode": "770", "new_mode": "770" }
+
+Question: Restrict the secrets vault file so only the owner can read or write it.
+Call: { "func_call": "chmod", "path": "/etc/vault/secrets.json", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "640", "new_mode": "600" }
+
+Question: Update ownership of the media upload folder to the nginx user and the content group.
+Call: { "func_call": "chown", "path": "/var/www/uploads", "mode": "", "owner": "nginx:content" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "755" }
+
+Question: Allow the group to write to the shared development branch directory.
+Call: { "func_call": "chmod", "path": "/srv/dev/branch_main", "mode": "775", "owner": "" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "775" }
+
+Question: Reassign the printer spool folder to the lp user and the lpadmin group.
+Call: { "func_call": "chown", "path": "/var/spool/cups", "mode": "", "owner": "lp:lpadmin" }
+Response: { "success": true, "previous_mode": "700", "new_mode": "700" }
+
+Question: Set the audit script to be executable only by the root user.
+Call: { "func_call": "chmod", "path": "/usr/sbin/run_audit.sh", "mode": "700", "owner": "" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "700" }
+
+Question: Change the owner of the container volume mount to the app user and the storage group.
+Call: { "func_call": "chown", "path": "/mnt/volumes/app_data", "mode": "", "owner": "app:storage" }
+Response: { "success": true, "previous_mode": "750", "new_mode": "750" }

@@ -1,0 +1,87 @@
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Start a cleaning cycle for the espresso machine in the main lobby.
+Call: { "func_call": "clean_machine", "machine_id": "LOBBY-ESP-01" }
+Response: { "machine_id": "LOBBY-ESP-01", "status": "cleaning_started", "water_level_pct": 85, "bean_level_pct": 60 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: The kitchen unit is showing a scale warning; please run the descaling protocol.
+Call: { "func_call": "descale", "machine_id": "KITCHEN-AUTO-04" }
+Response: { "machine_id": "KITCHEN-AUTO-04", "status": "descaling_in_progress", "water_level_pct": 40, "bean_level_pct": 75 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Perform routine maintenance cleaning on the breakroom brewer.
+Call: { "func_call": "clean_machine", "machine_id": "BREAK-BREW-02" }
+Response: { "machine_id": "BREAK-BREW-02", "status": "cleaning_complete", "water_level_pct": 92, "bean_level_pct": 45 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Initiate descaling for the executive office coffee station due to hard water alerts.
+Call: { "func_call": "descale", "machine_id": "EXEC-OFF-09" }
+Response: { "machine_id": "EXEC-OFF-09", "status": "descaling_complete", "water_level_pct": 15, "bean_level_pct": 80 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Run a quick clean cycle on the cafe counter machine before the morning rush.
+Call: { "func_call": "clean_machine", "machine_id": "CAFE-CNT-05" }
+Response: { "machine_id": "CAFE-CNT-05", "status": "cleaning_started", "water_level_pct": 65, "bean_level_pct": 30 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: The sensor indicates heavy limescale; trigger the deep descale function for unit 7.
+Call: { "func_call": "descale", "machine_id": "LOBBY-ESP-07" }
+Response: { "machine_id": "LOBBY-ESP-07", "status": "descaling_in_progress", "water_level_pct": 55, "bean_level_pct": 90 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Confirm the cleaning status after the nightly cycle for the staff room machine.
+Call: { "func_call": "clean_machine", "machine_id": "STAFF-RM-03" }
+Response: { "machine_id": "STAFF-RM-03", "status": "cleaning_complete", "water_level_pct": 100, "bean_level_pct": 50 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Execute the descaling routine on the warehouse floor unit immediately.
+Call: { "func_call": "descale", "machine_id": "WH-FLOOR-11" }
+Response: { "machine_id": "WH-FLOOR-11", "status": "descaling_complete", "water_level_pct": 20, "bean_level_pct": 10 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Start the standard cleaning procedure for the reception area brewer.
+Call: { "func_call": "clean_machine", "machine_id": "RECEPT-BRW-06" }
+Response: { "machine_id": "RECEPT-BRW-06", "status": "cleaning_in_progress", "water_level_pct": 78, "bean_level_pct": 65 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Run a descale cycle on the conference room machine due to low flow detection.
+Call: { "func_call": "descale", "machine_id": "CONF-RM-08" }
+Response: { "machine_id": "CONF-RM-08", "status": "descaling_started", "water_level_pct": 45, "bean_level_pct": 55 }
+
+Available Tools: clean_machine | descale | check_water_level | check_bean_level | empty_grounds
+Call Schema: { "func_call": "string", "machine_id": "string" }
+Response Schema: { "machine_id": "string", "status": "string", "water_level_pct": number, "bean_level_pct": "number" }
+---
+Question: Finalize maintenance by running a clean cycle on the IT department's coffee maker.
+Call: { "func_call": "clean_machine", "machine_id": "IT-DEPT-10" }
+Response: { "machine_id": "IT-DEPT-10", "status": "cleaning_complete", "water_level_pct": 88, "bean_level_pct": 40 }

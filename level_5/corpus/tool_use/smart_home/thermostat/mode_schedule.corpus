@@ -1,0 +1,51 @@
+Available Tools: set_temperature | get_temperature | set_mode | get_schedule
+Call Schema: { "func_call": "string", "device_id": "string", "temperature": "number|null", "mode": "string|null" }
+Response Schema: { "device_id": "string", "current_temp": "number", "target_temp": "number", "mode": "string" }
+---
+Question: Set the living room thermostat to heat mode for the cold morning.
+Call: { "func_call": "set_mode", "device_id": "therm_living_01", "temperature": null, "mode": "heat" }
+Response: { "device_id": "therm_living_01", "current_temp": 18.2, "target_temp": 21.0, "mode": "heat" }
+
+Question: Switch the bedroom unit to cool mode before noon.
+Call: { "func_call": "set_mode", "device_id": "therm_bed_02", "temperature": null, "mode": "cool" }
+Response: { "device_id": "therm_bed_02", "current_temp": 24.5, "target_temp": 20.0, "mode": "cool" }
+
+Question: Put the hallway thermostat into auto mode for the afternoon.
+Call: { "func_call": "set_mode", "device_id": "therm_hall_03", "temperature": null, "mode": "auto" }
+Response: { "device_id": "therm_hall_03", "current_temp": 21.8, "target_temp": 22.0, "mode": "auto" }
+
+Question: Turn off the guest room heater late at night.
+Call: { "func_call": "set_mode", "device_id": "therm_guest_04", "temperature": null, "mode": "off" }
+Response: { "device_id": "therm_guest_04", "current_temp": 19.0, "target_temp": 19.0, "mode": "off" }
+
+Question: Change the basement thermostat to heat mode for the evening.
+Call: { "func_call": "set_mode", "device_id": "therm_base_05", "temperature": null, "mode": "heat" }
+Response: { "device_id": "therm_base_05", "current_temp": 16.5, "target_temp": 19.5, "mode": "heat" }
+
+Question: Set the office unit to cool mode during the midday work hours.
+Call: { "func_call": "set_mode", "device_id": "therm_off_06", "temperature": null, "mode": "cool" }
+Response: { "device_id": "therm_off_06", "current_temp": 25.1, "target_temp": 21.5, "mode": "cool" }
+
+Question: Retrieve the heating schedule for the living room device.
+Call: { "func_call": "get_schedule", "device_id": "therm_living_01", "temperature": null, "mode": null }
+Response: { "device_id": "therm_living_01", "current_temp": 20.5, "target_temp": 21.0, "mode": "heat" }
+
+Question: Check the cooling schedule configured for the master bedroom.
+Call: { "func_call": "get_schedule", "device_id": "therm_bed_02", "temperature": null, "mode": null }
+Response: { "device_id": "therm_bed_02", "current_temp": 21.2, "target_temp": 20.0, "mode": "cool" }
+
+Question: Get the automated schedule details for the hallway system.
+Call: { "func_call": "get_schedule", "device_id": "therm_hall_03", "temperature": null, "mode": null }
+Response: { "device_id": "therm_hall_03", "current_temp": 22.0, "target_temp": 22.0, "mode": "auto" }
+
+Question: Verify if the guest room has any active schedule while turned off.
+Call: { "func_call": "get_schedule", "device_id": "therm_guest_04", "temperature": null, "mode": null }
+Response: { "device_id": "therm_guest_04", "current_temp": 18.8, "target_temp": 18.8, "mode": "off" }
+
+Question: Set the nursery thermostat to auto mode for overnight stability.
+Call: { "func_call": "set_mode", "device_id": "therm_nurs_07", "temperature": null, "mode": "auto" }
+Response: { "device_id": "therm_nurs_07", "current_temp": 20.9, "target_temp": 21.0, "mode": "auto" }
+
+Question: Switch the garage heater to off mode before leaving in the morning.
+Call: { "func_call": "set_mode", "device_id": "therm_gar_08", "temperature": null, "mode": "off" }
+Response: { "device_id": "therm_gar_08", "current_temp": 14.2, "target_temp": 14.2, "mode": "off" }

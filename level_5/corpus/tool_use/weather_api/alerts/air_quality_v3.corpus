@@ -1,0 +1,51 @@
+Available Tools: get_weather_alerts | get_storm_warnings | get_air_quality_index
+Call Schema: { "func_call": "string", "location": "string", "severity": "string" }
+Response Schema: { "alerts": [{ "type": "string", "severity": "string", "message": "string", "expires": "string" }] }
+
+Question: What is the air quality forecast for Ho Chi Minh City?
+Call: { "func_call": "get_air_quality_index", "location": "Ho Chi Minh City", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 168. Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.", "expires": "2024-05-22T09:00:00Z" }] }
+
+Question: Check the pollution index for Istanbul immediately.
+Call: { "func_call": "get_air_quality_index", "location": "Istanbul", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 222. Health warnings of emergency conditions. The entire population is more likely to be affected.", "expires": "2024-05-22T11:30:00Z" }] }
+
+Question: Is the air safe for outdoor activities in Bangkok?
+Call: { "func_call": "get_air_quality_index", "location": "Bangkok", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy for Sensitive Groups", "message": "AQI is 152. People with respiratory or heart disease, the elderly and children should limit prolonged outdoor exertion.", "expires": "2024-05-22T08:15:00Z" }] }
+
+Question: Get the latest haze warning for Kuala Lumpur.
+Call: { "func_call": "get_air_quality_index", "location": "Kuala Lumpur", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 178. Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.", "expires": "2024-05-22T13:45:00Z" }] }
+
+Question: How severe is the smog in Lagos today?
+Call: { "func_call": "get_air_quality_index", "location": "Lagos", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Hazardous", "message": "AQI is 305. Serious health effects expected for the entire population. Stay indoors and keep activity levels low.", "expires": "2024-05-22T16:00:00Z" }] }
+
+Question: Report the current AQI reading for Lima.
+Call: { "func_call": "get_air_quality_index", "location": "Lima", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Moderate", "message": "AQI is 95. Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people.", "expires": "2024-05-22T10:30:00Z" }] }
+
+Question: What are the particulate levels in Manila right now?
+Call: { "func_call": "get_air_quality_index", "location": "Manila", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 238. Health alert: everyone may experience more serious health effects.", "expires": "2024-05-22T14:20:00Z" }] }
+
+Question: Check for any air quality alerts in Bogota.
+Call: { "func_call": "get_air_quality_index", "location": "Bogota", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy for Sensitive Groups", "message": "AQI is 142. Members of sensitive groups may experience health effects. The general public is less likely to be affected.", "expires": "2024-05-22T12:00:00Z" }] }
+
+Question: Provide the smog status for London due to traffic.
+Call: { "func_call": "get_air_quality_index", "location": "London", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 160. Increased likelihood of respiratory symptoms in sensitive individuals. Reduce time spent outdoors.", "expires": "2024-05-22T17:45:00Z" }] }
+
+Question: What is the air pollution danger level in Los Angeles?
+Call: { "func_call": "get_air_quality_index", "location": "Los Angeles", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Very Unhealthy", "message": "AQI is 210. Significant aggravation of heart or lung disease and premature mortality in people with cardiopulmonary disease.", "expires": "2024-05-22T19:30:00Z" }] }
+
+Question: Is there a health advisory for dust storms in Phoenix?
+Call: { "func_call": "get_air_quality_index", "location": "Phoenix", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Unhealthy", "message": "AQI is 185. Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.", "expires": "2024-05-22T21:00:00Z" }] }
+
+Question: Assess the air quality risk in Mumbai this evening.
+Call: { "func_call": "get_air_quality_index", "location": "Mumbai", "severity": "high" }
+Response: { "alerts": [{ "type": "Air Quality", "severity": "Hazardous", "message": "AQI is 290. Health warnings of emergency conditions. The entire population is more likely to be affected.", "expires": "2024-05-22T23:15:00Z" }] }

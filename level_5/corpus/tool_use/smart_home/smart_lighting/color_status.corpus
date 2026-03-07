@@ -1,0 +1,51 @@
+Available Tools: turn_on_light | turn_off_light | set_brightness | set_color | get_light_status
+Call Schema: { "func_call": "string", "light_id": "string", "brightness": "number", "color": "string" }
+Response Schema: { "light_id": "string", "state": "string", "brightness": "number", "color": "string" }
+---
+Question: Set the living room lamp to a warm white color.
+Call: { "func_call": "set_color", "light_id": "lamp_living_01", "brightness": null, "color": "warm white" }
+Response: { "light_id": "lamp_living_01", "state": "on", "brightness": 200, "color": "warm white" }
+
+Question: Change the bedroom accent light to hex code #0000FF for a blue effect.
+Call: { "func_call": "set_color", "light_id": "accent_bed_02", "brightness": null, "color": "#0000FF" }
+Response: { "light_id": "accent_bed_02", "state": "on", "brightness": 150, "color": "#0000FF" }
+
+Question: What is the current status of the kitchen ceiling light?
+Call: { "func_call": "get_light_status", "light_id": "ceil_kit_03", "brightness": null, "color": null }
+Response: { "light_id": "ceil_kit_03", "state": "on", "brightness": 255, "color": "daylight" }
+
+Question: Adjust the patio string lights to a sunset orange hue.
+Call: { "func_call": "set_color", "light_id": "string_pat_04", "brightness": null, "color": "sunset orange" }
+Response: { "light_id": "string_pat_04", "state": "on", "brightness": 180, "color": "sunset orange" }
+
+Question: Set the hallway sconce to hex value #FFA500.
+Call: { "func_call": "set_color", "light_id": "sconce_hal_05", "brightness": null, "color": "#FFA500" }
+Response: { "light_id": "sconce_hal_05", "state": "on", "brightness": 120, "color": "#FFA500" }
+
+Question: Check if the garage work light is on and what color it is.
+Call: { "func_call": "get_light_status", "light_id": "work_gar_06", "brightness": null, "color": null }
+Response: { "light_id": "work_gar_06", "state": "off", "brightness": 0, "color": "cool white" }
+
+Question: Change the nursery nightlight to a soft pink using hex #FFC0CB.
+Call: { "func_call": "set_color", "light_id": "night_nur_07", "brightness": null, "color": "#FFC0CB" }
+Response: { "light_id": "night_nur_07", "state": "on", "brightness": 50, "color": "#FFC0CB" }
+
+Question: Set the dining room chandelier to warm white.
+Call: { "func_call": "set_color", "light_id": "chand_din_08", "brightness": null, "color": "warm white" }
+Response: { "light_id": "chand_din_08", "state": "on", "brightness": 220, "color": "warm white" }
+
+Question: What color is the bathroom vanity light currently set to?
+Call: { "func_call": "get_light_status", "light_id": "van_bath_09", "brightness": null, "color": null }
+Response: { "light_id": "van_bath_09", "state": "on", "brightness": 240, "color": "bright white" }
+
+Question: Switch the office desk lamp to a deep blue hex #00008B.
+Call: { "func_call": "set_color", "light_id": "desk_off_10", "brightness": null, "color": "#00008B" }
+Response: { "light_id": "desk_off_10", "state": "on", "brightness": 160, "color": "#00008B" }
+
+Question: Set the basement mood lighting to sunset orange.
+Call: { "func_call": "set_color", "light_id": "mood_base_11", "brightness": null, "color": "sunset orange" }
+Response: { "light_id": "mood_base_11", "state": "on", "brightness": 90, "color": "sunset orange" }
+
+Question: Retrieve the status and color of the front porch light.
+Call: { "func_call": "get_light_status", "light_id": "porch_front_12", "brightness": null, "color": null }
+Response: { "light_id": "porch_front_12", "state": "on", "brightness": 200, "color": "warm white" }

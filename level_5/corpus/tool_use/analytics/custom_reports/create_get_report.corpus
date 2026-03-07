@@ -1,0 +1,51 @@
+Available Tools: create_report | get_report | list_reports | schedule_report | export_report
+Call Schema: { "func_call": "string", "report_id": "string", "name": "string", "metrics": ["string"], "dimensions": ["string"], "from_date": "string", "to_date": "string" }
+Response Schema: { "report_id": "string", "name": "string", "rows": [{}], "total_rows": number, "generated_at": "string" }
+---
+Question: Create a new report named "Q3 Global Revenue" tracking revenue and sessions by country from July 1st to September 30th.
+Call: { "func_call": "create_report", "report_id": "", "name": "Q3 Global Revenue", "metrics": ["revenue", "sessions"], "dimensions": ["country"], "from_date": "2023-07-01", "to_date": "2023-09-30" }
+Response: { "report_id": "rpt_8923a", "name": "Q3 Global Revenue", "rows": [{"country": "USA", "revenue": 12500.50, "sessions": 4500}, {"country": "UK", "revenue": 8900.20, "sessions": 3200}], "total_rows": 2, "generated_at": "2023-10-01T14:22:10Z" }
+
+Question: Fetch the data for the report with ID rpt_7721b which tracks CTR by device.
+Call: { "func_call": "get_report", "report_id": "rpt_7721b", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_7721b", "name": "Mobile vs Desktop CTR", "rows": [{"device": "mobile", "ctr": 2.4}, {"device": "desktop", "ctr": 3.1}], "total_rows": 2, "generated_at": "2023-10-02T09:15:00Z" }
+
+Question: Generate a report called "Source Performance October" analyzing sessions and revenue broken down by source for the first week of October.
+Call: { "func_call": "create_report", "report_id": "", "name": "Source Performance October", "metrics": ["sessions", "revenue"], "dimensions": ["source"], "from_date": "2023-10-01", "to_date": "2023-10-07" }
+Response: { "report_id": "rpt_9912c", "name": "Source Performance October", "rows": [{"source": "organic", "sessions": 1500, "revenue": 4500.00}, {"source": "paid", "sessions": 800, "revenue": 3200.00}], "total_rows": 2, "generated_at": "2023-10-08T11:30:45Z" }
+
+Question: Retrieve the latest results for report rpt_5544d named "Weekly CTR Analysis".
+Call: { "func_call": "get_report", "report_id": "rpt_5544d", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_5544d", "name": "Weekly CTR Analysis", "rows": [{"country": "Canada", "ctr": 1.8}, {"country": "Australia", "ctr": 2.2}], "total_rows": 2, "generated_at": "2023-10-05T16:45:22Z" }
+
+Question: I need a new report "Device Revenue Split" comparing revenue across devices from August 15 to August 22.
+Call: { "func_call": "create_report", "report_id": "", "name": "Device Revenue Split", "metrics": ["revenue"], "dimensions": ["device"], "from_date": "2023-08-15", "to_date": "2023-08-22" }
+Response: { "report_id": "rpt_3321e", "name": "Device Revenue Split", "rows": [{"device": "tablet", "revenue": 1200.00}, {"device": "mobile", "revenue": 5600.00}, {"device": "desktop", "revenue": 8900.00}], "total_rows": 3, "generated_at": "2023-08-23T08:10:05Z" }
+
+Question: Get the data for report rpt_1122f which measures sessions by country and source.
+Call: { "func_call": "get_report", "report_id": "rpt_1122f", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_1122f", "name": "Geo Source Sessions", "rows": [{"country": "Germany", "source": "direct", "sessions": 450}, {"country": "France", "source": "social", "sessions": 320}], "total_rows": 2, "generated_at": "2023-09-12T13:20:30Z" }
+
+Question: Create a report named "High CTR Campaigns" focusing on CTR and sessions by source for September.
+Call: { "func_call": "create_report", "report_id": "", "name": "High CTR Campaigns", "metrics": ["ctr", "sessions"], "dimensions": ["source"], "from_date": "2023-09-01", "to_date": "2023-09-30" }
+Response: { "report_id": "rpt_6677g", "name": "High CTR Campaigns", "rows": [{"source": "email", "ctr": 4.5, "sessions": 2100}, {"source": "referral", "ctr": 3.8, "sessions": 1800}], "total_rows": 2, "generated_at": "2023-10-01T10:05:15Z" }
+
+Question: Pull the current data for report rpt_8899h regarding revenue by device type.
+Call: { "func_call": "get_report", "report_id": "rpt_8899h", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_8899h", "name": "Revenue by Device Type", "rows": [{"device": "wearable", "revenue": 150.00}, {"device": "desktop", "revenue": 4500.00}], "total_rows": 2, "generated_at": "2023-10-03T17:55:40Z" }
+
+Question: Build a report "Country CTR Q2" to analyze click-through rates by country from April 1 to June 30.
+Call: { "func_call": "create_report", "report_id": "", "name": "Country CTR Q2", "metrics": ["ctr"], "dimensions": ["country"], "from_date": "2023-04-01", "to_date": "2023-06-30" }
+Response: { "report_id": "rpt_4455i", "name": "Country CTR Q2", "rows": [{"country": "Japan", "ctr": 1.2}, {"country": "Brazil", "ctr": 2.9}, {"country": "India", "ctr": 1.5}], "total_rows": 3, "generated_at": "2023-07-02T09:30:00Z" }
+
+Question: Fetch report rpt_2233j which tracks revenue and sessions by source for the holiday season.
+Call: { "func_call": "get_report", "report_id": "rpt_2233j", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_2233j", "name": "Holiday Season Performance", "rows": [{"source": "paid_search", "revenue": 25000.00, "sessions": 8000}, {"source": "organic", "revenue": 18000.00, "sessions": 12000}], "total_rows": 2, "generated_at": "2023-12-26T14:15:20Z" }
+
+Question: Create "Mobile Session Trends" to view sessions by device from November 1 to November 15.
+Call: { "func_call": "create_report", "report_id": "", "name": "Mobile Session Trends", "metrics": ["sessions"], "dimensions": ["device"], "from_date": "2023-11-01", "to_date": "2023-11-15" }
+Response: { "report_id": "rpt_7788k", "name": "Mobile Session Trends", "rows": [{"device": "mobile", "sessions": 45000}, {"device": "tablet", "sessions": 12000}], "total_rows": 2, "generated_at": "2023-11-16T08:45:33Z" }
+
+Question: Retrieve the data for report rpt_9900l analyzing CTR and revenue by country and source.
+Call: { "func_call": "get_report", "report_id": "rpt_9900l", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_9900l", "name": "Detailed Geo Source Metrics", "rows": [{"country": "USA", "source": "social", "ctr": 3.2, "revenue": 500.00}, {"country": "UK", "source": "email", "ctr": 4.1, "revenue": 750.00}], "total_rows": 2, "generated_at": "2023-10-10T11:22:18Z" }

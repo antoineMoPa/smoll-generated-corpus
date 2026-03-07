@@ -1,0 +1,87 @@
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Locate all urgent maintenance alerts from early April 2024.
+Call: { "func_call": "filter_by_date", "query": "server downtime", "from": "", "after": "2024-04-01", "before": "2024-04-10", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_1001", "from": "ops@cloudhost.com", "subject": "Critical: Database Failover", "date": "2024-04-02" }, { "id": "msg_1005", "from": "netadmin@corp.com", "subject": "Urgent: Firewall Update Required", "date": "2024-04-08" }], "count": 2 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Show me personal invites received during February 2024.
+Call: { "func_call": "filter_by_date", "query": "wedding RSVP", "from": "", "after": "2024-02-01", "before": "2024-02-29", "label": "personal" }
+Response: { "messages": [{ "id": "msg_2010", "from": "alice@gmail.com", "subject": "Save the Date!", "date": "2024-02-05" }, { "id": "msg_2015", "from": "bob@yahoo.com", "subject": "Graduation Party", "date": "2024-02-14" }, { "id": "msg_2022", "from": "carol@hotmail.com", "subject": "Baby Shower Details", "date": "2024-02-25" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Retrieve all marketing newsletters from the first half of March 2024.
+Call: { "func_call": "filter_by_date", "query": "spring sale", "from": "", "after": "2024-03-01", "before": "2024-03-15", "label": "newsletters" }
+Response: { "messages": [{ "id": "msg_3005", "from": "deals@retail.com", "subject": "Spring Clearance Event", "date": "2024-03-03" }, { "id": "msg_3012", "from": "info@fashion.com", "subject": "New Collection Launch", "date": "2024-03-10" }, { "id": "msg_3018", "from": "updates@gadgets.com", "subject": "Tech Deals Inside", "date": "2024-03-14" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: List work correspondence regarding the beta launch between May 5 and May 12, 2024.
+Call: { "func_call": "filter_by_date", "query": "beta testing", "from": "", "after": "2024-05-05", "before": "2024-05-12", "label": "work" }
+Response: { "messages": [{ "id": "msg_4050", "from": "product@startup.io", "subject": "Beta Access Codes", "date": "2024-05-06" }, { "id": "msg_4055", "from": "qa@startup.io", "subject": "Bug Report Summary", "date": "2024-05-09" }, { "id": "msg_4061", "from": "lead@startup.io", "subject": "Launch Timeline Adjustment", "date": "2024-05-11" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find urgent security warnings issued on June 20, 2024.
+Call: { "func_call": "filter_by_date", "query": "phishing attempt", "from": "", "after": "2024-06-20", "before": "2024-06-20", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_5099", "from": "security@bank.com", "subject": "Urgent: Suspicious Login Detected", "date": "2024-06-20" }], "count": 1 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Get all personal messages from the last week of July 2024.
+Call: { "func_call": "filter_by_date", "query": "summer recap", "from": "", "after": "2024-07-24", "before": "2024-07-31", "label": "personal" }
+Response: { "messages": [{ "id": "msg_6120", "from": "roommate@gmail.com", "subject": "Rent Payment", "date": "2024-07-25" }, { "id": "msg_6128", "from": "mom@gmail.com", "subject": "Family Reunion Photos", "date": "2024-07-28" }, { "id": "msg_6135", "from": "friend@outlook.com", "subject": "Concert Tickets", "date": "2024-07-30" }, { "id": "msg_6140", "from": "coach@sports.com", "subject": "Practice Schedule", "date": "2024-07-31" }], "count": 4 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Show newsletters received throughout September 2024.
+Call: { "func_call": "filter_by_date", "query": "fall trends", "from": "", "after": "2024-09-01", "before": "2024-09-30", "label": "newsletters" }
+Response: { "messages": [{ "id": "msg_7005", "from": "style@magazine.com", "subject": "Autumn Fashion Guide", "date": "2024-09-02" }, { "id": "msg_7015", "from": "food@blog.com", "subject": "Pumpkin Spice Recipes", "date": "2024-09-12" }, { "id": "msg_7025", "from": "travel@guides.com", "subject": "Best Fall Foliage Spots", "date": "2024-09-22" }, { "id": "msg_7035", "from": "finance@advisor.com", "subject": "Q3 Investment Review", "date": "2024-09-29" }], "count": 4 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Filter work emails related to the annual audit from October 1 to October 10, 2024.
+Call: { "func_call": "filter_by_date", "query": "audit docs", "from": "", "after": "2024-10-01", "before": "2024-10-10", "label": "work" }
+Response: { "messages": [{ "id": "msg_8002", "from": "auditor@firm.com", "subject": "Document Request List", "date": "2024-10-01" }, { "id": "msg_8008", "from": "cfo@corp.com", "subject": "Financial Statements Draft", "date": "2024-10-05" }, { "id": "msg_8010", "from": "legal@corp.com", "subject": "Compliance Checklist", "date": "2024-10-09" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find any urgent system outages reported in November 2024.
+Call: { "func_call": "filter_by_date", "query": "service interruption", "from": "", "after": "2024-11-01", "before": "2024-11-30", "label": "urgent" }
+Response: { "messages": [{ "id": "msg_9010", "from": "status@saas.com", "subject": "Urgent: API Latency High", "date": "2024-11-05" }, { "id": "msg_9022", "from": "ops@datacenter.com", "subject": "Power Failure Alert", "date": "2024-11-18" }, { "id": "msg_9029", "from": "support@isp.com", "subject": "Network Outage Notice", "date": "2024-11-25" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Retrieve personal holiday greetings from December 20 to December 31, 2024.
+Call: { "func_call": "filter_by_date", "query": "happy holidays", "from": "", "after": "2024-12-20", "before": "2024-12-31", "label": "personal" }
+Response: { "messages": [{ "id": "msg_10200", "from": "grandma@gmail.com", "subject": "Merry Christmas!", "date": "2024-12-21" }, { "id": "msg_10215", "from": "uncle@yahoo.com", "subject": "New Year Wishes", "date": "2024-12-26" }, { "id": "msg_10228", "from": "teacher@school.edu", "subject": "Seasons Greetings", "date": "2024-12-30" }], "count": 3 }
+
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: List all work project updates received in the first three days of January 2025.
+Call: { "func_call": "filter_by_date", "query": "project kickoff", "from": "", "after": "2025-01-01", "before": "2025-01-03", "label": "work" }
+Response: { "messages": [{ "id": "msg_11001", "from": "director@corp.com", "subject": "2025 Strategy Overview", "date": "2025-01-02" }, { "id": "msg_11003", "from": "team@corp.com", "subject": "Initial Sprint Backlog", "date": "2025-01-03" }], "count": 2 }

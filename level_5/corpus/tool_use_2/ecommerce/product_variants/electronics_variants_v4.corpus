@@ -1,0 +1,10 @@
+{"func_call": "check_stock_levels", "product_id": "HOME-LMP-088", "options": {"finish": "Matte White", "wattage": "9W", "base": "E26"}}
+{"func_call": "customize_furniture", "product_id": "OFF-DSK-102", "options": {"finish": "Walnut", "dimensions": "60x30", "material": "Solid Oak"}}
+{"func_call": "list_available_colors", "product_id": "GDN-POT-055", "options": {"finish": "Glazed Blue", "capacity": "5 Gallon", "material": "Ceramic"}}
+{"func_call": "check_stock_levels", "product_id": "KIT-MIX-019", "options": {"finish": "Stainless Steel", "power": "500W", "material": "Metal"}}
+{"func_call": "customize_furniture", "product_id": "LIV-SOF-204", "options": {"finish": "Charcoal", "dimensions": "3-Seater", "material": "Velvet"}}
+{"func_call": "list_available_colors", "product_id": "BED-LMP-033", "options": {"finish": "Brushed Nickel", "wattage": "60W Equivalent", "material": "Glass"}}
+{"func_call": "check_stock_levels", "product_id": "OFF-CHR-117", "options": {"finish": "Black Mesh", "dimensions": "High Back", "material": "Fabric"}}
+{"func_call": "customize_furniture", "product_id": "DIN-TBL-091", "options": {"finish": "Espresso", "dimensions": "72 Inch", "material": "Reclaimed Wood"}}
+{"func_call": "list_available_colors", "product_id": "BAT-MIR-044", "options": {"finish": "Antique Gold", "dimensions": "24x36", "material": "Beveled Glass"}}
+{"func_call": "check_stock_levels", "product_id": "GDN-HSE-062", "options": {"finish": "Forest Green", "capacity": "2 Gallon", "material": "Galvanized Steel"}}

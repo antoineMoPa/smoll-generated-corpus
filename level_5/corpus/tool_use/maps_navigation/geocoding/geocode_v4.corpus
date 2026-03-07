@@ -1,0 +1,51 @@
+Available Tools: geocode_address | reverse_geocode | validate_address | get_timezone
+Call Schema: { "func_call": "string", "address": "string", "lat": number, "lng": number }
+Response Schema: { "lat": number, "lng": number, "formatted_address": "string", "country": "string", "timezone": "string" }
+
+Question: What are the coordinates for the Statue of Liberty in New York?
+Call: { "func_call": "geocode_address", "address": "Liberty Island, New York, NY 10004, USA", "lat": 0, "lng": 0 }
+Response: { "lat": 40.6892, "lng": -74.0445, "formatted_address": "Liberty Island, New York, NY 10004, USA", "country": "United States", "timezone": "America/New_York" }
+
+Question: Find the location of the Great Pyramid of Giza.
+Call: { "func_call": "geocode_address", "address": "Al Haram, Nazlet El-Semman, Al Giza Desert, Giza Governorate, Egypt", "lat": 0, "lng": 0 }
+Response: { "lat": 29.9792, "lng": 31.1342, "formatted_address": "Al Haram, Nazlet El-Semman, Giza Governorate, Egypt", "country": "Egypt", "timezone": "Africa/Cairo" }
+
+Question: Where is the Angkor Wat temple complex located?
+Call: { "func_call": "geocode_address", "address": "Angkor Wat, Krong Siem Reap, Cambodia", "lat": 0, "lng": 0 }
+Response: { "lat": 13.4125, "lng": 103.8670, "formatted_address": "Angkor Wat, Krong Siem Reap, Cambodia", "country": "Cambodia", "timezone": "Asia/Phnom_Penh" }
+
+Question: Get coordinates for the Machu Picchu historical site.
+Call: { "func_call": "geocode_address", "address": "Aguas Calientes, Cusco Region, Peru", "lat": 0, "lng": 0 }
+Response: { "lat": -13.1631, "lng": -72.5450, "formatted_address": "Machu Picchu, Aguas Calientes, Cusco Region, Peru", "country": "Peru", "timezone": "America/Lima" }
+
+Question: Locate the Sagrada Familia in Barcelona.
+Call: { "func_call": "geocode_address", "address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain", "lat": 0, "lng": 0 }
+Response: { "lat": 41.4036, "lng": 2.1744, "formatted_address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain", "country": "Spain", "timezone": "Europe/Madrid" }
+
+Question: What are the GPS coordinates for the Petronas Twin Towers?
+Call: { "func_call": "geocode_address", "address": "Kuala Lumpur City Centre, 50088 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia", "lat": 0, "lng": 0 }
+Response: { "lat": 3.1576, "lng": 101.7117, "formatted_address": "Petronas Twin Towers, Kuala Lumpur City Centre, 50088 Kuala Lumpur, Malaysia", "country": "Malaysia", "timezone": "Asia/Kuala_Lumpur" }
+
+Question: Find the address details for the Leaning Tower of Pisa.
+Call: { "func_call": "geocode_address", "address": "Piazza del Duomo, 56126 Pisa PI, Italy", "lat": 0, "lng": 0 }
+Response: { "lat": 43.7230, "lng": 10.3966, "formatted_address": "Piazza del Duomo, 56126 Pisa PI, Italy", "country": "Italy", "timezone": "Europe/Rome" }
+
+Question: Geocode the Acropolis of Athens in Greece.
+Call: { "func_call": "geocode_address", "address": "Athens 105 58, Greece", "lat": 0, "lng": 0 }
+Response: { "lat": 37.9715, "lng": 23.7267, "formatted_address": "Acropolis, Athens 105 58, Greece", "country": "Greece", "timezone": "Europe/Athens" }
+
+Question: Where is the Alhambra Palace in Granada?
+Call: { "func_call": "geocode_address", "address": "Calle Real de la Alhambra, s/n, 18009 Granada, Spain", "lat": 0, "lng": 0 }
+Response: { "lat": 37.1760, "lng": -3.5881, "formatted_address": "Calle Real de la Alhambra, s/n, 18009 Granada, Spain", "country": "Spain", "timezone": "Europe/Madrid" }
+
+Question: Get the location of the Forbidden City in Beijing.
+Call: { "func_call": "geocode_address", "address": "4 Jingshan Front St, Dongcheng District, Beijing, China", "lat": 0, "lng": 0 }
+Response: { "lat": 39.9163, "lng": 116.3972, "formatted_address": "4 Jingshan Front St, Dongcheng District, Beijing, China", "country": "China", "timezone": "Asia/Shanghai" }
+
+Question: Locate the Tower Bridge in London.
+Call: { "func_call": "geocode_address", "address": "Tower Bridge Rd, London SE1 2UP, United Kingdom", "lat": 0, "lng": 0 }
+Response: { "lat": 51.5055, "lng": -0.0754, "formatted_address": "Tower Bridge Rd, London SE1 2UP, United Kingdom", "country": "United Kingdom", "timezone": "Europe/London" }
+
+Question: Find the coordinates for the Gateway of India in Mumbai.
+Call: { "func_call": "geocode_address", "address": "Apollo Bandar, Colaba, Mumbai, Maharashtra 400001, India", "lat": 0, "lng": 0 }
+Response: { "lat": 18.9220, "lng": 72.8347, "formatted_address": "Apollo Bandar, Colaba, Mumbai, Maharashtra 400001, India", "country": "India", "timezone": "Asia/Kolkata" }

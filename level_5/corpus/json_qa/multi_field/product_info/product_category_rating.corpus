@@ -1,0 +1,29 @@
+Context: The new wireless headphones fall under the electronics category and have a solid 4.5-star rating, but they are currently out of stock. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "electronics", "rating": "4.5", "in_stock": "false"}
+
+Context: I found this organic cotton t-shirt in the clothing section with a perfect 5-star rating, and it is available for immediate purchase. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "clothing", "rating": "5", "in_stock": "true"}
+
+Context: This stainless steel blender is listed in the kitchen appliances category, holds a 3.8 rating from users, and is backordered until next month. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "kitchen appliances", "rating": "3.8", "in_stock": "false"}
+
+Context: The mystery novel I wanted is in the books category, has an average 4.2 rating, and there are plenty of copies in stock at the local store. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "books", "rating": "4.2", "in_stock": "true"}
+
+Context: These running shoes belong to the footwear category, boast a high 4.9 rating, but the size 10 is currently unavailable. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "footwear", "rating": "4.9", "in_stock": "false"}
+
+Context: The smart thermostat is part of the home automation category, received a 4.0 rating in recent tests, and is ready to ship today. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "home automation", "rating": "4.0", "in_stock": "true"}
+
+Context: This wooden desk chair is categorized as furniture, has a disappointing 2.5 rating due to comfort issues, and is temporarily out of stock. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "furniture", "rating": "2.5", "in_stock": "false"}
+
+Context: The vitamin C serum is in the skincare category, enjoys a 4.7 rating from beauty bloggers, and is fully stocked on the shelf. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "skincare", "rating": "4.7", "in_stock": "true"}
+
+Context: This board game fits into the toys and games category, has a 4.3 rating from families, but the warehouse reports it is out of stock. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "toys and games", "rating": "4.3", "in_stock": "false"}
+
+Context: The portable power bank is an electronics accessory with a 3.5 rating, and it is currently available for same-day delivery. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "electronics", "rating": "3.5", "in_stock": "true"}
+
+Context: This ceramic coffee mug is listed under home goods, has a flawless 5.0 rating, and is in stock at all regional branches. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "home goods", "rating": "5.0", "in_stock": "true"}
+
+Context: The gardening shovel is in the outdoor tools category, holds a mediocre 3.2 rating, and is out of stock due to high demand. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "outdoor tools", "rating": "3.2", "in_stock": "false"}
+
+Context: This leather wallet belongs to the accessories category, has a strong 4.6 rating, and is available for pickup tomorrow. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "accessories", "rating": "4.6", "in_stock": "true"}
+
+Context: The baby stroller is categorized under nursery gear, received a 4.4 rating for safety, but is currently backordered. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "nursery gear", "rating": "4.4", "in_stock": "false"}
+
+Context: This acoustic guitar is in the musical instruments category, has a 4.8 rating from professionals, and is in stock for immediate sale. | Input: {"extract": ["category", "rating", "in_stock"]} | Output: {"category": "musical instruments", "rating": "4.8", "in_stock": "true"}

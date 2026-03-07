@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: I can't log into my account even after resetting my password twice.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-8921", "subject": "Unable to login after password reset", "description": "Customer reports being locked out despite two successful password resets. Error message 'Invalid credentials' persists.", "priority": "medium", "category": "account_access" }
+Response: { "ticket_id": "TKT-440192", "status": "open", "priority": "medium", "assigned_to": "support_agent_04", "created_at": "2023-10-27T09:15:32Z" }
+
+Question: The latest shipment arrived with a crushed box and the monitor inside is cracked.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-3302", "subject": "Damaged item received - Monitor cracked", "description": "Order #9921 arrived with visible shipping damage. The 27-inch OLED monitor screen is shattered. Customer requests immediate replacement.", "priority": "urgent", "category": "shipping_damage" }
+Response: { "ticket_id": "TKT-440193", "status": "open", "priority": "urgent", "assigned_to": "logistics_lead_02", "created_at": "2023-10-27T09:18:45Z" }
+
+Question: I was charged twice for my subscription renewal this month.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-7712", "subject": "Duplicate charge on credit card", "description": "Customer noticed two transactions of $49.99 on Oct 25th for the Premium Plan. Needs refund for one transaction.", "priority": "high", "category": "billing" }
+Response: { "ticket_id": "TKT-440194", "status": "open", "priority": "high", "assigned_to": "billing_specialist_01", "created_at": "2023-10-27T09:22:10Z" }
+
+Question: The app crashes every time I try to upload a profile picture.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-5543", "subject": "App crash on image upload", "description": "iOS app version 4.2.1 crashes immediately when selecting an image from the gallery for profile update.", "priority": "medium", "category": "technical_bug" }
+Response: { "ticket_id": "TKT-440195", "status": "open", "priority": "medium", "assigned_to": "dev_support_03", "created_at": "2023-10-27T09:30:05Z" }
+
+Question: My order status has been 'Processing' for 5 days with no tracking info.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-9981", "subject": "Order stuck in processing", "description": "Order #8832 placed on Oct 20th still shows 'Processing'. Customer needs expedited shipping or cancellation.", "priority": "high", "category": "order_status" }
+Response: { "ticket_id": "TKT-440196", "status": "open", "priority": "high", "assigned_to": "fulfillment_team_05", "created_at": "2023-10-27T09:35:22Z" }
+
+Question: The coffee maker I bought last week stopped heating water completely.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-1129", "subject": "Product defect - Coffee maker not heating", "description": "Model CM-200 purchased 7 days ago powers on but does not heat water. Requesting warranty replacement.", "priority": "medium", "category": "product_defect" }
+Response: { "ticket_id": "TKT-440197", "status": "open", "priority": "medium", "assigned_to": "returns_dept_02", "created_at": "2023-10-27T09:40:11Z" }
+
+Question: I need to update my billing address but the website form gives an error.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-6654", "subject": "Error updating billing address", "description": "Website returns 'Server Error 500' when submitting new billing address form. Customer needs manual update.", "priority": "low", "category": "account_settings" }
+Response: { "ticket_id": "TKT-440198", "status": "open", "priority": "low", "assigned_to": "support_agent_07", "created_at": "2023-10-27T09:45:33Z" }
+
+Question: Critical security issue: I see unauthorized transactions from an IP in another country.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-2298", "subject": "Unauthorized access and transactions", "description": "Customer detected login from Russia and three unauthorized purchases totaling $450. Account needs immediate freeze.", "priority": "urgent", "category": "security_fraud" }
+Response: { "ticket_id": "TKT-440199", "status": "open", "priority": "urgent", "assigned_to": "security_team_lead", "created_at": "2023-10-27T09:48:02Z" }
+
+Question: The promotional code 'FALL20' is not applying to my cart total.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-4432", "subject": "Promo code not applying", "description": "Code FALL20 returns 'Invalid or Expired' message although marketing emails state it is valid until Oct 31st.", "priority": "low", "category": "promotions" }
+Response: { "ticket_id": "TKT-440200", "status": "open", "priority": "low", "assigned_to": "marketing_support_01", "created_at": "2023-10-27T09:52:19Z" }
+
+Question: I received the wrong color laptop; I ordered Silver but got Black.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-7788", "subject": "Wrong item color received", "description": "Order #7721 delivered in Black instead of requested Silver. Customer wants to exchange for correct color.", "priority": "medium", "category": "wrong_item" }
+Response: { "ticket_id": "TKT-440201", "status": "open", "priority": "medium", "assigned_to": "returns_dept_04", "created_at": "2023-10-27T09:55:47Z" }
+
+Question: My enterprise account dashboard is loading extremely slowly today.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-ENT-001", "subject": "Performance issues on enterprise dashboard", "description": "Latency over 10 seconds when loading analytics tab. Affecting multiple users in the organization.", "priority": "high", "category": "performance" }
+Response: { "ticket_id": "TKT-440202", "status": "open", "priority": "high", "assigned_to": "enterprise_support_02", "created_at": "2023-10-27T10:01:15Z" }
+
+Question: I cannot download my invoice PDF; the link is broken.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-3391", "subject": "Broken invoice download link", "description": "Clicking 'Download Invoice' for September billing cycle results in a 404 error page.", "priority": "low", "category": "billing_documents" }
+Response: { "ticket_id": "TKT-440203", "status": "open", "priority": "low", "assigned_to": "billing_specialist_03", "created_at": "2023-10-27T10:05:28Z" }

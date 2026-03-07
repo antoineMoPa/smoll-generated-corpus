@@ -1,0 +1,59 @@
+Context: The ancient oak tree in the park is massive and provides shade for hundreds of visitors. Its trunk is thick and rough to the touch.
+Input: {"question": "How big is the ancient oak tree?"}
+Output: {"answer": "massive"}
+
+Context: She found a tiny seashell buried deep in the wet sand near the waterline. It was no bigger than her fingernail.
+Input: {"question": "What size is the seashell she found?"}
+Output: {"answer": "tiny"}
+
+Context: The new basketball in the gym locker room is perfectly round and ready for the game tonight.
+Input: {"question": "What shape is the new basketball?"}
+Output: {"answer": "round"}
+
+Context: After sitting in the freezer overnight, the ice cream container became freezing cold to the handle.
+Input: {"question": "How cold is the ice cream container?"}
+Output: {"answer": "freezing"}
+
+Context: The architect designed a rectangular window that spans the entire length of the living room wall.
+Input: {"question": "What shape is the window designed by the architect?"}
+Output: {"answer": "rectangular"}
+
+Context: Despite the summer heat, the mountain spring water remained chilly and refreshing for the hikers.
+Input: {"question": "How hot is the mountain spring water?"}
+Output: {"answer": "chilly"}
+
+Context: They discovered a colossal statue hidden beneath the jungle vines, towering over the ancient temple ruins.
+Input: {"question": "How big is the statue hidden in the jungle?"}
+Output: {"answer": "colossal"}
+
+Context: The baker rolled the dough into a flat circle before adding the tomato sauce and cheese.
+Input: {"question": "What shape did the baker roll the dough into?"}
+Output: {"answer": "circle"}
+
+Context: The coffee served at the roadside diner was scalding, so the customer had to wait ten minutes before taking a sip.
+Input: {"question": "How hot was the coffee at the diner?"}
+Output: {"answer": "scalding"}
+
+Context: In the corner of the attic sat a miniature toy car that fit easily into the palm of a child's hand.
+Input: {"question": "What size is the toy car in the attic?"}
+Output: {"answer": "miniature"}
+
+Context: The stop sign at the intersection is an octagon, clearly visible to drivers approaching from all directions.
+Input: {"question": "What shape is the stop sign?"}
+Output: {"answer": "octagon"}
+
+Context: During the heatwave, the asphalt on the highway became blistering, causing tires to soften slightly.
+Input: {"question": "How hot did the asphalt become?"}
+Output: {"answer": "blistering"}
+
+Context: He picked up a slender branch from the ground to use as a walking stick during his hike.
+Input: {"question": "What shape is the branch he picked up?"}
+Output: {"answer": "slender"}
+
+Context: The warehouse stored gigantic crates that required a forklift to move even a single one.
+Input: {"question": "How big are the crates in the warehouse?"}
+Output: {"answer": "gigantic"}
+
+Context: As the sun set, the breeze coming off the lake turned brisk, prompting everyone to put on their jackets.
+Input: {"question": "How cold was the breeze from the lake?"}
+Output: {"answer": "brisk"}

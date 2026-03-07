@@ -1,0 +1,62 @@
+Available Tools: book_appointment | cancel_appointment | reschedule_appointment | get_upcoming_appointments | get_available_slots
+Call Schema: { "func_call": "string", "patient_id": "string", "doctor_id": "string", "specialty": "string", "date": "string", "reason": "string" }
+Response Schema: { "appointment_id": "string", "doctor": "string", "date": "string", "time": "string", "location": "location", "status": "string" }
+---
+Question: I need to move my routine check-up with Dr. Evans to next Tuesday because I have a conflict.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-9921", "doctor_id": "DOC-402", "specialty": "General Practice", "date": "2023-11-14", "reason": "Reschedule routine check-up" }
+Response: { "appointment_id": "APT-7721", "doctor": "Dr. Sarah Evans", "date": "2023-11-14", "time": "10:30 AM", "location": "Clinic A, Room 3", "status": "proposed" }
+
+---
+Question: Can you find an urgent slot for Dr. Chen tomorrow? I'm experiencing severe migraines.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-1102", "doctor_id": "DOC-885", "specialty": "Neurology", "date": "2023-11-09", "reason": "Urgent migraine consultation" }
+Response: { "appointment_id": "APT-9932", "doctor": "Dr. Wei Chen", "date": "2023-11-09", "time": "02:15 PM", "location": "Neurology Wing, Suite 12", "status": "available" }
+
+---
+Question: Please reschedule my cardiology follow-up from Monday to the first available slot on Wednesday.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-5543", "doctor_id": "DOC-221", "specialty": "Cardiology", "date": "2023-11-15", "reason": "Reschedule follow-up to Wednesday" }
+Response: { "appointment_id": "APT-3321", "doctor": "Dr. James Miller", "date": "2023-11-15", "time": "09:00 AM", "location": "Heart Center, Floor 2", "status": "confirmed" }
+
+---
+Question: I need to see a dermatologist ASAP for a rash; check Dr. Patel's availability for today.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-6671", "doctor_id": "DOC-339", "specialty": "Dermatology", "date": "2023-11-08", "reason": "Urgent rash evaluation" }
+Response: { "appointment_id": "APT-1129", "doctor": "Dr. Priya Patel", "date": "2023-11-08", "time": "04:45 PM", "location": "Dermatology Clinic, Room 5", "status": "available" }
+
+---
+Question: Move my physical therapy session with Dr. Ross to next Friday afternoon.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-8821", "doctor_id": "DOC-556", "specialty": "Physical Therapy", "date": "2023-11-17", "reason": "Reschedule PT session" }
+Response: { "appointment_id": "APT-4452", "doctor": "Dr. Alan Ross", "date": "2023-11-17", "time": "03:30 PM", "location": "Rehab Center, Gym B", "status": "confirmed" }
+
+---
+Question: Find the earliest available appointment with Dr. Liu for a pediatric fever check tomorrow morning.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-2231", "doctor_id": "DOC-774", "specialty": "Pediatrics", "date": "2023-11-09", "reason": "Urgent pediatric fever check" }
+Response: { "appointment_id": "APT-8871", "doctor": "Dr. Emily Liu", "date": "2023-11-09", "time": "08:15 AM", "location": "Pediatrics Ward, Room 2", "status": "available" }
+
+---
+Question: I can't make my dental cleaning on Thursday; please reschedule to the next available slot next week.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-3342", "doctor_id": "DOC-991", "specialty": "Dentistry", "date": "2023-11-20", "reason": "Reschedule dental cleaning" }
+Response: { "appointment_id": "APT-5563", "doctor": "Dr. Robert Stone", "date": "2023-11-20", "time": "11:00 AM", "location": "Dental Suite, Chair 4", "status": "confirmed" }
+
+---
+Question: Check if Dr. Gupta has any open slots this afternoon for an urgent allergy reaction.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-7754", "doctor_id": "DOC-112", "specialty": "Allergy & Immunology", "date": "2023-11-08", "reason": "Urgent allergy reaction" }
+Response: { "appointment_id": "APT-2298", "doctor": "Dr. Anjali Gupta", "date": "2023-11-08", "time": "05:30 PM", "location": "Allergy Clinic, Room 8", "status": "available" }
+
+---
+Question: Reschedule my endocrinology appointment with Dr. Kim to next Monday morning due to travel.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-4465", "doctor_id": "DOC-663", "specialty": "Endocrinology", "date": "2023-11-13", "reason": "Reschedule due to travel" }
+Response: { "appointment_id": "APT-6674", "doctor": "Dr. Susan Kim", "date": "2023-11-13", "time": "09:45 AM", "location": "Endocrine Center, Suite 4", "status": "confirmed" }
+
+---
+Question: I need a routine eye exam with Dr. Brooks; what slots are open next Wednesday?
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-9987", "doctor_id": "DOC-447", "specialty": "Ophthalmology", "date": "2023-11-15", "reason": "Routine eye exam" }
+Response: { "appointment_id": "APT-3345", "doctor": "Dr. Mark Brooks", "date": "2023-11-15", "time": "01:20 PM", "location": "Vision Center, Exam Room 1", "status": "available" }
+
+---
+Question: Urgent need to see Dr. Diaz for back pain; check availability for tomorrow afternoon.
+Call: { "func_call": "get_available_slots", "patient_id": "PAT-1234", "doctor_id": "DOC-558", "specialty": "Orthopedics", "date": "2023-11-09", "reason": "Urgent back pain consultation" }
+Response: { "appointment_id": "APT-7788", "doctor": "Dr. Carlos Diaz", "date": "2023-11-09", "time": "03:00 PM", "location": "Orthopedic Clinic, Room 6", "status": "available" }
+
+---
+Question: Please move my gastroenterology consult with Dr. Lee from Friday to the first available slot on Monday.
+Call: { "func_call": "reschedule_appointment", "patient_id": "PAT-5678", "doctor_id": "DOC-229", "specialty": "Gastroenterology", "date": "2023-11-13", "reason": "Reschedule GI consult" }
+Response: { "appointment_id": "APT-9912", "doctor": "Dr. Jennifer Lee", "date": "2023-11-13", "time": "10:15 AM", "location": "GI Lab, Procedure Room 2", "status": "confirmed" }

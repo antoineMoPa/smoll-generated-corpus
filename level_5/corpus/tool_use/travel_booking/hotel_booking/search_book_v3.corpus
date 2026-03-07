@@ -1,0 +1,51 @@
+Available Tools: search_hotels | get_hotel_details | book_hotel | cancel_hotel | get_amenities
+Call Schema: { "func_call": "string", "location": "string", "check_in": "string", "check_out": "string", "guests": number, "min_rating": number }
+Response Schema: { "hotels": [{ "id": "string", "name": "string", "rating": number, "price_per_night": number, "amenities": ["string"] }], "total": number }
+---
+Question: Locate affordable lodging in Amsterdam for a solo backpacker. Checking in September 5th and out September 9th. A minimum of 3 stars is acceptable.
+Call: { "func_call": "search_hotels", "location": "Amsterdam", "check_in": "2024-09-05", "check_out": "2024-09-09", "guests": 1, "min_rating": 3.0 }
+Response: { "hotels": [{ "id": "AMS-112", "name": "Canal Side Hostel Plus", "rating": 3.5, "price_per_night": 85, "amenities": ["WiFi", "Bike Rental", "Lockers"] }, { "id": "AMS-115", "name": "Jordaan Budget Inn", "rating": 3.2, "price_per_night": 95, "amenities": ["WiFi", "Breakfast"] }], "total": 2 }
+
+Question: Find luxury suites in Las Vegas for a group of six friends. We arrive November 22nd and leave November 26th. Must be 5 stars.
+Call: { "func_call": "search_hotels", "location": "Las Vegas", "check_in": "2024-11-22", "check_out": "2024-11-26", "guests": 6, "min_rating": 5.0 }
+Response: { "hotels": [{ "id": "LAS-550", "name": "Strip Royal Towers", "rating": 5.0, "price_per_night": 600, "amenities": ["Casino", "Pool", "Nightclub", "Spa"] }, { "id": "LAS-552", "name": "Bellagio Grand Suite", "rating": 4.9, "price_per_night": 550, "amenities": ["Fountain View", "Dining", "Concierge"] }], "total": 2 }
+
+Question: I need a pet-friendly hotel in Seattle for two people and a dog. Stay dates are May 12th to May 15th. At least 4 stars required.
+Call: { "func_call": "search_hotels", "location": "Seattle", "check_in": "2024-05-12", "check_out": "2024-05-15", "guests": 2, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "SEA-220", "name": "Pike Place Paws Hotel", "rating": 4.4, "price_per_night": 275, "amenities": ["Pet Friendly", "WiFi", "Breakfast"] }, { "id": "SEA-224", "name": "Emerald City Lodge", "rating": 4.6, "price_per_night": 310, "amenities": ["Pet Friendly", "Gym", "View"] }], "total": 2 }
+
+Question: Search for historic hotels in Prague for a romantic getaway. Two guests, checking in December 20th and out December 24th. Minimum 4.5 stars.
+Call: { "func_call": "search_hotels", "location": "Prague", "check_in": "2023-12-20", "check_out": "2023-12-24", "guests": 2, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "PRG-330", "name": "Old Town Castle View", "rating": 4.8, "price_per_night": 340, "amenities": ["Historic Building", "Bar", "WiFi"] }, { "id": "PRG-335", "name": "Charles Bridge Suites", "rating": 4.7, "price_per_night": 320, "amenities": ["River View", "Breakfast", "Spa"] }], "total": 2 }
+
+Question: Find accommodations in Cape Town for a family of five. Arriving January 10th, departing January 17th. We need at least 4 stars.
+Call: { "func_call": "search_hotels", "location": "Cape Town", "check_in": "2024-01-10", "check_out": "2024-01-17", "guests": 5, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "CPT-440", "name": "Table Mountain Resort", "rating": 4.5, "price_per_night": 220, "amenities": ["Pool", "Kids Club", "WiFi", "Parking"] }, { "id": "CPT-442", "name": "Waterfront Family Inn", "rating": 4.3, "price_per_night": 195, "amenities": ["Beach Access", "Breakfast", "Playground"] }], "total": 2 }
+
+Question: Looking for a ski-in ski-out hotel in Aspen for two skiers. Dates are February 1st to February 8th. Minimum 5 stars preferred.
+Call: { "func_call": "search_hotels", "location": "Aspen", "check_in": "2024-02-01", "check_out": "2024-02-08", "guests": 2, "min_rating": 5.0 }
+Response: { "hotels": [{ "id": "ASP-660", "name": "Snowmass Elite Lodge", "rating": 5.0, "price_per_night": 950, "amenities": ["Ski Access", "Fireplace", "Spa", "Dining"] }, { "id": "ASP-665", "name": "Highland Peak Suites", "rating": 4.9, "price_per_night": 880, "amenities": ["Ski Access", "Hot Tub", "Concierge"] }], "total": 2 }
+
+Question: I need a central hotel in Mumbai for a business conference. One guest, checking in October 5th and out October 8th. At least 4 stars.
+Call: { "func_call": "search_hotels", "location": "Mumbai", "check_in": "2024-10-05", "check_out": "2024-10-08", "guests": 1, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "BOM-770", "name": "Gateway Business Center", "rating": 4.6, "price_per_night": 180, "amenities": ["Meeting Rooms", "WiFi", "Gym", "Airport Shuttle"] }, { "id": "BOM-772", "name": "Marine Drive Corporate Stay", "rating": 4.4, "price_per_night": 160, "amenities": ["WiFi", "Breakfast", "Work Desk"] }], "total": 2 }
+
+Question: Find beachfront villas in Bali for a group of four. Staying from July 15th to July 22nd. We require a minimum of 4.5 stars.
+Call: { "func_call": "search_hotels", "location": "Bali", "check_in": "2024-07-15", "check_out": "2024-07-22", "guests": 4, "min_rating": 4.5 }
+Response: { "hotels": [{ "id": "BAL-880", "name": "Kuta Ocean Villa", "rating": 4.8, "price_per_night": 400, "amenities": ["Private Pool", "Beach Access", "Chef Service"] }, { "id": "BAL-885", "name": "Ubud Jungle Retreat", "rating": 4.7, "price_per_night": 350, "amenities": ["Spa", "Yoga Studio", "Breakfast"] }], "total": 2 }
+
+Question: Search for eco-friendly hotels in Portland for two travelers. Check-in is August 20th, check-out August 23rd. Minimum 3.5 stars.
+Call: { "func_call": "search_hotels", "location": "Portland", "check_in": "2024-08-20", "check_out": "2024-08-23", "guests": 2, "min_rating": 3.5 }
+Response: { "hotels": [{ "id": "PDX-990", "name": "Green Leaf Inn", "rating": 4.0, "price_per_night": 145, "amenities": ["Solar Power", "Bike Rental", "Organic Breakfast"] }, { "id": "PDX-992", "name": "Riverfront Eco Lodge", "rating": 3.8, "price_per_night": 130, "amenities": ["Recycling Program", "WiFi", "Garden"] }], "total": 2 }
+
+Question: I need a hotel in Toronto for a hockey game weekend. Three friends, arriving November 15th and leaving November 17th. At least 3 stars.
+Call: { "func_call": "search_hotels", "location": "Toronto", "check_in": "2024-11-15", "check_out": "2024-11-17", "guests": 3, "min_rating": 3.0 }
+Response: { "hotels": [{ "id": "TOR-105", "name": "Maple Leaf Sports Hotel", "rating": 3.6, "price_per_night": 170, "amenities": ["Sports Bar", "WiFi", "Parking"] }, { "id": "TOR-108", "name": "Downtown Arena Stay", "rating": 3.4, "price_per_night": 155, "amenities": ["WiFi", "Breakfast", "Gym"] }], "total": 2 }
+
+Question: Find boutique hotels in Lisbon for a cultural tour. Two guests, checking in April 10th and out April 14th. Minimum 4 stars.
+Call: { "func_call": "search_hotels", "location": "Lisbon", "check_in": "2024-04-10", "check_out": "2024-04-14", "guests": 2, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "LIS-210", "name": "Alfama Heritage House", "rating": 4.5, "price_per_night": 210, "amenities": ["Rooftop Terrace", "WiFi", "Breakfast"] }, { "id": "LIS-215", "name": "Baixa Design Hotel", "rating": 4.3, "price_per_night": 190, "amenities": ["Art Gallery", "Bar", "Concierge"] }], "total": 2 }
+
+Question: Looking for an airport hotel in Singapore for a layover. One person, checking in June 5th and out June 6th. Needs to be at least 4 stars.
+Call: { "func_call": "search_hotels", "location": "Singapore", "check_in": "2024-06-05", "check_out": "2024-06-06", "guests": 1, "min_rating": 4.0 }
+Response: { "hotels": [{ "id": "SIN-320", "name": "Changi Transit Lounge", "rating": 4.7, "price_per_night": 250, "amenities": ["Airport Shuttle", "Pool", "WiFi", "Gym"] }, { "id": "SIN-325", "name": "Terminal Connect Hotel", "rating": 4.4, "price_per_night": 220, "amenities": ["Soundproof Rooms", "Breakfast", "24h Reception"] }], "total": 2 }

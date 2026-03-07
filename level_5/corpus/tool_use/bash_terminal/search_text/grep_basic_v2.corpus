@@ -1,0 +1,51 @@
+Available Tools: grep_file | grep_recursive | grep_case_insensitive | grep_count
+Call Schema: { "func_call": "string", "pattern": "string", "path": "string", "flags": "string" }
+Response Schema: { "matches": [{ "file": "string", "line": number, "text": "string" }], "count": number }
+---
+Question: Locate all lines mentioning 'timeout' in the database connection log.
+Call: { "func_call": "grep_file", "pattern": "timeout", "path": "/var/log/db/connect.log", "flags": "" }
+Response: { "matches": [{ "file": "/var/log/db/connect.log", "line": 15, "text": "2023-11-01 08:30:00 Connection timeout after 30s" }, { "file": "/var/log/db/connect.log", "line": 28, "text": "2023-11-01 08:31:15 Query timeout exceeded limit" }], "count": 2 }
+
+Question: Recursively search for 'FIXME' tags in the legacy codebase.
+Call: { "func_call": "grep_recursive", "pattern": "FIXME", "path": "./legacy/code", "flags": "" }
+Response: { "matches": [{ "file": "./legacy/code/payment.go", "line": 88, "text": "// FIXME: Resolve currency conversion race condition" }, { "file": "./legacy/code/auth.rb", "line": 102, "text": "# FIXME: Remove hardcoded salt value" }], "count": 2 }
+
+Question: Count case-insensitive occurrences of 'debug' in the compiler output.
+Call: { "func_call": "grep_count", "pattern": "debug", "path": "/tmp/build/output.txt", "flags": "-i" }
+Response: { "matches": [], "count": 12 }
+
+Question: Find all references to 'lodash' in the JavaScript dependency files.
+Call: { "func_call": "grep_recursive", "pattern": "require\\('lodash'\\)", "path": "./js/modules", "flags": "" }
+Response: { "matches": [{ "file": "./js/modules/utils.js", "line": 4, "text": "const _ = require('lodash');" }, { "file": "./js/modules/helpers.js", "line": 2, "text": "var lodash = require('lodash');" }], "count": 2 }
+
+Question: Search for 'gateway' in the routing configuration without case sensitivity.
+Call: { "func_call": "grep_case_insensitive", "pattern": "gateway", "path": "/etc/nginx/sites-enabled/default", "flags": "-i" }
+Response: { "matches": [{ "file": "/etc/nginx/sites-enabled/default", "line": 25, "text": "# Upstream Gateway Configuration" }, { "file": "/etc/nginx/sites-enabled/default", "line": 27, "text": "proxy_pass http://api-gateway:8080;" }], "count": 2 }
+
+Question: Identify all 'FATAL' entries in the application crash reports.
+Call: { "func_call": "grep_recursive", "pattern": "FATAL", "path": "/var/log/crash", "flags": "" }
+Response: { "matches": [{ "file": "/var/log/crash/report_001.txt", "line": 5, "text": "FATAL: Null pointer exception in module core" }], "count": 1 }
+
+Question: Extract lines containing 'secret_token' from the secrets vault file.
+Call: { "func_call": "grep_file", "pattern": "secret_token", "path": "./vault/secrets.yaml", "flags": "" }
+Response: { "matches": [{ "file": "./vault/secrets.yaml", "line": 14, "text": "secret_token: enc[AES256_GCM,data:...,iv:...]" }, { "file": "./vault/secrets.yaml", "line": 19, "text": "# Rotate secret_token every 90 days" }], "count": 2 }
+
+Question: Recursively find 'print(' statements in the Python testing suite.
+Call: { "func_call": "grep_recursive", "pattern": "print\\(", "path": "./tests/py", "flags": "" }
+Response: { "matches": [{ "file": "./tests/py/test_login.py", "line": 33, "text": "print(\"User logged in successfully\")" }, { "file": "./tests/py/test_db.py", "line": 12, "text": "print(db_connection.status)" }], "count": 2 }
+
+Question: Tally the number of 'RETRY' events in the message queue log.
+Call: { "func_call": "grep_count", "pattern": "RETRY", "path": "/var/log/mq/events.log", "flags": "" }
+Response: { "matches": [], "count": 5 }
+
+Question: Search for all 'DROP TABLE' commands in the migration scripts.
+Call: { "func_call": "grep_recursive", "pattern": "DROP TABLE", "path": "./db/migrations", "flags": "" }
+Response: { "matches": [{ "file": "./db/migrations/004_cleanup.sql", "line": 8, "text": "DROP TABLE IF EXISTS temp_users;" }, { "file": "./db/migrations/009_reset.sql", "line": 15, "text": "DROP TABLE logs_archive;" }], "count": 2 }
+
+Question: Find 'access denied' messages in the firewall log, ignoring case.
+Call: { "func_call": "grep_case_insensitive", "pattern": "access denied", "path": "/var/log/firewall.log", "flags": "-i" }
+Response: { "matches": [{ "file": "/var/log/firewall.log", "line": 304, "text": "Nov 02 14:20:01 kernel: Access denied for IP 203.0.113.5" }, { "file": "/var/log/firewall.log", "line": 310, "text": "Nov 02 14:22:33 kernel: ACCESS DENIED port 22 from 198.51.100.10" }], "count": 2 }
+
+Question: Locate all 'author' fields in the project metadata files.
+Call: { "func_call": "grep_recursive", "pattern": "\"author\"", "path": "./project/meta", "flags": "" }
+Response: { "matches": [{ "file": "./project/meta/app.toml", "line": 6, "text": "author = \"Jane Doe\"" }, { "file": "./project/meta/lib.json", "line": 4, "text": "  \"author\": \"John Smith\"," }], "count": 2 }

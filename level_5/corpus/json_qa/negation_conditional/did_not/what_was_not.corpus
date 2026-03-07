@@ -1,0 +1,59 @@
+Context: The recipe called for butter, sugar, and eggs, but we realized we did not have any vanilla extract in the pantry.
+Input: {"question": "What was not available in the pantry?"}
+Output: {"answer": "vanilla extract"}
+
+Context: During the meeting, Sarah presented the sales figures and the marketing plan, yet she did not mention the quarterly budget adjustments.
+Input: {"question": "What did Sarah not mention during the meeting?"}
+Output: {"answer": "the quarterly budget adjustments"}
+
+Context: The hotel room included a king-sized bed, a flat-screen TV, and a mini-fridge, but it did not feature a balcony as advertised.
+Input: {"question": "What was not featured in the hotel room?"}
+Output: {"answer": "a balcony"}
+
+Context: For the science project, Tom gathered beakers, test tubes, and safety goggles, but he forgot that he did not bring the Bunsen burner.
+Input: {"question": "What did Tom not bring for the science project?"}
+Output: {"answer": "the Bunsen burner"}
+
+Context: The software update fixed the login bug and improved loading speeds, but it did not resolve the issue with the dark mode display.
+Input: {"question": "What did the software update not resolve?"}
+Output: {"answer": "the issue with the dark mode display"}
+
+Context: Jane packed her swimsuit, sunscreen, and a beach towel for the trip, but she noticed she did not pack her sunglasses before leaving.
+Input: {"question": "What did Jane not pack before leaving?"}
+Output: {"answer": "her sunglasses"}
+
+Context: The construction team installed new windows and reinforced the roof, but they did not replace the old front door as planned.
+Input: {"question": "What did the construction team not replace?"}
+Output: {"answer": "the old front door"}
+
+Context: The concert lineup included three rock bands and a jazz ensemble, but the organizer confirmed that a hip-hop artist was not scheduled to perform.
+Input: {"question": "Who was not scheduled to perform at the concert?"}
+Output: {"answer": "a hip-hop artist"}
+
+Context: The email attachment contained the resume and the cover letter, but the reference list was not included in the file.
+Input: {"question": "What was not included in the email attachment?"}
+Output: {"answer": "the reference list"}
+
+Context: They bought flour, yeast, and salt to make bread, but they discovered they did not have enough water to mix the dough.
+Input: {"question": "What did they not have enough of to mix the dough?"}
+Output: {"answer": "water"}
+
+Context: The museum exhibit displayed ancient pottery and bronze tools, yet no gold artifacts were found in the recent excavation site.
+Input: {"question": "What were not found in the recent excavation site?"}
+Output: {"answer": "gold artifacts"}
+
+Context: The car rental came with GPS navigation and a child seat, but it did not include a full tank of gas upon pickup.
+Input: {"question": "What did the car rental not include upon pickup?"}
+Output: {"answer": "a full tank of gas"}
+
+Context: The committee approved the new hiring policy and the remote work guidelines, but they did not accept the proposal for increased vacation days.
+Input: {"question": "What did the committee not accept?"}
+Output: {"answer": "the proposal for increased vacation days"}
+
+Context: He cleaned the living room, vacuumed the hallway, and mopped the kitchen, but he did not dust the bookshelves in the study.
+Input: {"question": "What did he not dust?"}
+Output: {"answer": "the bookshelves in the study"}
+
+Context: The garden bloomed with roses, tulips, and daffodils this spring, but there were no sunflowers planted in the back corner.
+Input: {"question": "What were not planted in the back corner of the garden?"}
+Output: {"answer": "sunflowers"}

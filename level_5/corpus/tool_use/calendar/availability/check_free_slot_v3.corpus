@@ -1,0 +1,87 @@
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Can you check if Liam Thompson has any free time for a 45-minute briefing on September 3rd, 2024?
+Call: { "func_call": "check_availability", "user_id": "liam.thompson", "date": "2024-09-03", "duration_minutes": 45 }
+Response: { "available": true, "free_slots": [{ "start": "08:15", "end": "09:00" }, { "start": "11:30", "end": "12:15" }, { "start": "15:45", "end": "16:30" }] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: I need to schedule a 3-hour planning session with Mia White on October 10th. Is she available?
+Call: { "func_call": "find_free_slot", "user_id": "mia.white", "date": "2024-10-10", "duration_minutes": 180 }
+Response: { "available": false, "free_slots": [] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Find a 90-minute slot for Noah Harris on November 20th, 2024, ideally before noon.
+Call: { "func_call": "find_free_slot", "user_id": "noah.harris", "date": "2024-11-20", "duration_minutes": 90 }
+Response: { "available": true, "free_slots": [{ "start": "09:00", "end": "10:30" }, { "start": "10:45", "end": "12:15" }] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Check Olivia Martin's calendar for a 60-minute interview on December 5th, 2024.
+Call: { "func_call": "check_availability", "user_id": "olivia.martin", "date": "2024-12-05", "duration_minutes": 60 }
+Response: { "available": true, "free_slots": [{ "start": "13:00", "end": "14:00" }, { "start": "16:00", "end": "17:00" }] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Is Ethan Garcia free for a 15-minute standup on January 8th, 2025?
+Call: { "func_call": "check_availability", "user_id": "ethan.garcia", "date": "2025-01-08", "duration_minutes": 15 }
+Response: { "available": false, "free_slots": [] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Look for a 2.5-hour block for Ava Rodriguez on February 14th, 2025, for a hackathon.
+Call: { "func_call": "find_free_slot", "user_id": "ava.rodriguez", "date": "2025-02-14", "duration_minutes": 150 }
+Response: { "available": true, "free_slots": [{ "start": "09:00", "end": "11:30" }] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Can Mason Lewis fit in a 40-minute code review on March 25th, 2025?
+Call: { "func_call": "check_availability", "user_id": "mason.lewis", "date": "2025-03-25", "duration_minutes": 40 }
+Response: { "available": true, "free_slots": [{ "start": "10:20", "end": "11:00" }, { "start": "14:00", "end": "14:40" }, { "start": "17:10", "end": "17:50" }] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Find any 20-minute opening for Sophia Walker on April 12th, 2025.
+Call: { "func_call": "find_free_slot", "user_id": "sophia.walker", "date": "2025-04-12", "duration_minutes": 20 }
+Response: { "available": true, "free_slots": [{ "start": "08:00", "end": "08:20" }, { "start": "12:40", "end": "13:00" }] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Check availability for James Hall for a 120-minute workshop on May 30th, 2025.
+Call: { "func_call": "check_availability", "user_id": "james.hall", "date": "2025-05-30", "duration_minutes": 120 }
+Response: { "available": false, "free_slots": [] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Does Charlotte Allen have a free 30-minute slot on June 17th, 2025, for a team update?
+Call: { "func_call": "find_free_slot", "user_id": "charlotte.allen", "date": "2025-06-17", "duration_minutes": 30 }
+Response: { "available": true, "free_slots": [{ "start": "09:30", "end": "10:00" }, { "start": "11:15", "end": "11:45" }] }
+
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Verify if Benjamin Young is available for a 50-minute sync on July 22nd, 2025.
+Call: { "func_call": "check_availability", "user_id": "benjamin.young", "date": "2025-07-22", "duration_minutes": 50 }
+Response: { "available": true, "free_slots": [{ "start": "08:10", "end": "09:00" }, { "start": "13:20", "end": "14:10" }, { "start": "16:00", "end": "16:50" }] }

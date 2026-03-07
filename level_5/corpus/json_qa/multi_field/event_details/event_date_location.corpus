@@ -1,0 +1,29 @@
+Context: The annual Tech Innovators Summit will be held on March 15, 2024, at the Moscone Center in San Francisco. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Tech Innovators Summit", "date": "March 15, 2024", "location": "Moscone Center in San Francisco"}
+
+Context: Join us for Sarah's Birthday Bash on Saturday, June 22nd, at the rooftop garden of The Grand Hotel. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Sarah's Birthday Bash", "date": "Saturday, June 22nd", "location": "rooftop garden of The Grand Hotel"}
+
+Context: The championship game between the Tigers and the Lions is scheduled for October 5, 2024, at Soldier Field. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "championship game between the Tigers and the Lions", "date": "October 5, 2024", "location": "Soldier Field"}
+
+Context: The city council invites residents to the Spring Gala ceremony on April 10th at the City Hall Auditorium. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Spring Gala ceremony", "date": "April 10th", "location": "City Hall Auditorium"}
+
+Context: Don't miss the Global Climate Conference taking place from November 12 to November 14, 2024, in Geneva, Switzerland. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Global Climate Conference", "date": "November 12 to November 14, 2024", "location": "Geneva, Switzerland"}
+
+Context: Mike and Jenny's Wedding Reception will occur on August 30, 2024, at the Lakeside Pavilion. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Mike and Jenny's Wedding Reception", "date": "August 30, 2024", "location": "Lakeside Pavilion"}
+
+Context: The local high school football team plays their home opener on September 2nd at Memorial Stadium. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "home opener", "date": "September 2nd", "location": "Memorial Stadium"}
+
+Context: Attend the Artificial Intelligence Expo on May 5, 2024, located at the Jacob K. Javits Convention Center in New York. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Artificial Intelligence Expo", "date": "May 5, 2024", "location": "Jacob K. Javits Convention Center in New York"}
+
+Context: The neighborhood block party is set for July 4th on Elm Street between 5th and 6th Avenue. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "neighborhood block party", "date": "July 4th", "location": "Elm Street between 5th and 6th Avenue"}
+
+Context: The Academy Awards ceremony will take place on March 10, 2024, at the Dolby Theatre in Hollywood. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Academy Awards ceremony", "date": "March 10, 2024", "location": "Dolby Theatre in Hollywood"}
+
+Context: Register now for the Digital Marketing Workshop on February 14, 2024, hosted at the WeWork Space in Austin. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Digital Marketing Workshop", "date": "February 14, 2024", "location": "WeWork Space in Austin"}
+
+Context: The charity run titled "Miles for Smiles" happens on Sunday, May 19th, starting at Central Park. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Miles for Smiles", "date": "Sunday, May 19th", "location": "Central Park"}
+
+Context: The corporate annual meeting is scheduled for January 25, 2024, in the main conference room of the HQ building. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "corporate annual meeting", "date": "January 25, 2024", "location": "main conference room of the HQ building"}
+
+Context: Experience the Jazz Festival on July 12, 2024, at the New Orleans Jazz National Historical Park. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "Jazz Festival", "date": "July 12, 2024", "location": "New Orleans Jazz National Historical Park"}
+
+Context: The university graduation ceremony will be held on December 15, 2024, at the Alumni Arena. | Input: {"extract": ["event", "date", "location"]} | Output: {"event": "university graduation ceremony", "date": "December 15, 2024", "location": "Alumni Arena"}

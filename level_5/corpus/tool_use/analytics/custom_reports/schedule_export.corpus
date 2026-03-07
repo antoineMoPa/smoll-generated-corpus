@@ -1,0 +1,51 @@
+Available Tools: create_report | get_report | list_reports | schedule_report | export_report
+Call Schema: { "func_call": "string", "report_id": "string", "name": "string", "metrics": ["string"], "dimensions": ["string"], "from_date": "string", "to_date": "string" }
+Response Schema: { "report_id": "string", "name": "string", "rows": [{}], "total_rows": number, "generated_at": "string" }
+---
+Question: Schedule a daily email report for yesterday's sales performance by region.
+Call: { "func_call": "schedule_report", "report_id": "rpt_daily_sales_001", "name": "Daily Sales by Region", "metrics": ["total_revenue", "units_sold"], "dimensions": ["region", "date"], "from_date": "2023-10-01", "to_date": "2023-10-01" }
+Response: { "report_id": "rpt_daily_sales_001", "name": "Daily Sales by Region", "rows": [], "total_rows": 0, "generated_at": "2023-10-02T08:00:00Z" }
+
+Question: Export the Q3 marketing campaign results to a CSV file.
+Call: { "func_call": "export_report", "report_id": "rpt_q3_marketing", "name": "Q3 Marketing Campaign Results", "metrics": ["clicks", "conversions", "cost_per_acquisition"], "dimensions": ["campaign_name", "channel"], "from_date": "2023-07-01", "to_date": "2023-09-30" }
+Response: { "report_id": "rpt_q3_marketing", "name": "Q3 Marketing Campaign Results", "rows": [{"campaign_name": "Summer Promo", "channel": "Email", "clicks": 15420, "conversions": 342, "cost_per_acquisition": 12.50}], "total_rows": 1, "generated_at": "2023-10-05T14:22:15Z" }
+
+Question: Create a snapshot of the current dashboard metrics for the executive team.
+Call: { "func_call": "create_report", "report_id": "rpt_exec_snapshot_oct", "name": "Executive Dashboard Snapshot", "metrics": ["active_users", "session_duration", "bounce_rate"], "dimensions": ["device_type"], "from_date": "2023-10-05", "to_date": "2023-10-05" }
+Response: { "report_id": "rpt_exec_snapshot_oct", "name": "Executive Dashboard Snapshot", "rows": [{"device_type": "Mobile", "active_users": 45000, "session_duration": 180, "bounce_rate": 0.35}, {"device_type": "Desktop", "active_users": 32000, "session_duration": 420, "bounce_rate": 0.22}], "total_rows": 2, "generated_at": "2023-10-05T16:45:00Z" }
+
+Question: Schedule a weekly recurring report for inventory levels every Monday morning.
+Call: { "func_call": "schedule_report", "report_id": "rpt_weekly_inventory", "name": "Weekly Inventory Levels", "metrics": ["stock_count", "reorder_point_status"], "dimensions": ["warehouse_id", "sku"], "from_date": "2023-09-25", "to_date": "2023-10-01" }
+Response: { "report_id": "rpt_weekly_inventory", "name": "Weekly Inventory Levels", "rows": [], "total_rows": 0, "generated_at": "2023-10-02T07:00:00Z" }
+
+Question: Export user retention data for the last 30 days to CSV for the data science team.
+Call: { "func_call": "export_report", "report_id": "rpt_retention_30d", "name": "30-Day User Retention", "metrics": ["retained_users", "churn_rate"], "dimensions": ["cohort_month"], "from_date": "2023-09-05", "to_date": "2023-10-05" }
+Response: { "report_id": "rpt_retention_30d", "name": "30-Day User Retention", "rows": [{"cohort_month": "2023-08", "retained_users": 1200, "churn_rate": 0.15}, {"cohort_month": "2023-09", "retained_users": 1450, "churn_rate": 0.12}], "total_rows": 2, "generated_at": "2023-10-06T09:15:30Z" }
+
+Question: Generate a daily email summary of customer support ticket volume by priority.
+Call: { "func_call": "schedule_report", "report_id": "rpt_support_daily", "name": "Daily Support Ticket Volume", "metrics": ["ticket_count", "avg_resolution_time"], "dimensions": ["priority", "agent_id"], "from_date": "2023-10-04", "to_date": "2023-10-04" }
+Response: { "report_id": "rpt_support_daily", "name": "Daily Support Ticket Volume", "rows": [], "total_rows": 0, "generated_at": "2023-10-05T08:30:00Z" }
+
+Question: Export financial transaction logs for September to a CSV file for auditing.
+Call: { "func_call": "export_report", "report_id": "rpt_finance_sep", "name": "September Transaction Log", "metrics": ["transaction_amount", "fee"], "dimensions": ["transaction_type", "currency"], "from_date": "2023-09-01", "to_date": "2023-09-30" }
+Response: { "report_id": "rpt_finance_sep", "name": "September Transaction Log", "rows": [{"transaction_type": "Refund", "currency": "USD", "transaction_amount": -50.00, "fee": 0.00}, {"transaction_type": "Sale", "currency": "EUR", "transaction_amount": 120.50, "fee": 2.40}], "total_rows": 2, "generated_at": "2023-10-01T11:00:00Z" }
+
+Question: Schedule a monthly PDF export of website traffic sources for the marketing director.
+Call: { "func_call": "schedule_report", "report_id": "rpt_traffic_monthly", "name": "Monthly Traffic Sources", "metrics": ["sessions", "new_users"], "dimensions": ["source", "medium"], "from_date": "2023-09-01", "to_date": "2023-09-30" }
+Response: { "report_id": "rpt_traffic_monthly", "name": "Monthly Traffic Sources", "rows": [], "total_rows": 0, "generated_at": "2023-10-01T09:00:00Z" }
+
+Question: Create an immediate snapshot of real-time server load metrics.
+Call: { "func_call": "create_report", "report_id": "rpt_server_load_now", "name": "Real-time Server Load", "metrics": ["cpu_usage", "memory_usage", "request_latency"], "dimensions": ["server_region"], "from_date": "2023-10-06", "to_date": "2023-10-06" }
+Response: { "report_id": "rpt_server_load_now", "name": "Real-time Server Load", "rows": [{"server_region": "us-east-1", "cpu_usage": 45.2, "memory_usage": 62.1, "request_latency": 120}, {"server_region": "eu-west-1", "cpu_usage": 38.5, "memory_usage": 55.4, "request_latency": 95}], "total_rows": 2, "generated_at": "2023-10-06T12:05:45Z" }
+
+Question: Export the employee performance review scores for Q3 to CSV.
+Call: { "func_call": "export_report", "report_id": "rpt_hr_q3_perf", "name": "Q3 Employee Performance", "metrics": ["review_score", "goals_met_percentage"], "dimensions": ["department", "employee_id"], "from_date": "2023-07-01", "to_date": "2023-09-30" }
+Response: { "report_id": "rpt_hr_q3_perf", "name": "Q3 Employee Performance", "rows": [{"department": "Engineering", "employee_id": "EMP-1024", "review_score": 4.8, "goals_met_percentage": 95}, {"department": "Sales", "employee_id": "EMP-2048", "review_score": 4.2, "goals_met_percentage": 88}], "total_rows": 2, "generated_at": "2023-10-03T10:30:00Z" }
+
+Question: Schedule a daily email alert for any region with zero sales yesterday.
+Call: { "func_call": "schedule_report", "report_id": "rpt_zero_sales_alert", "name": "Zero Sales Alert", "metrics": ["total_revenue"], "dimensions": ["region"], "from_date": "2023-10-05", "to_date": "2023-10-05" }
+Response: { "report_id": "rpt_zero_sales_alert", "name": "Zero Sales Alert", "rows": [], "total_rows": 0, "generated_at": "2023-10-06T07:15:00Z" }
+
+Question: Export the supply chain delivery times for October so far to a CSV file.
+Call: { "func_call": "export_report", "report_id": "rpt_supply_chain_oct", "name": "October Delivery Times", "metrics": ["avg_delivery_days", "on_time_percentage"], "dimensions": ["supplier_name", "product_category"], "from_date": "2023-10-01", "to_date": "2023-10-06" }
+Response: { "report_id": "rpt_supply_chain_oct", "name": "October Delivery Times", "rows": [{"supplier_name": "Global Parts Inc", "product_category": "Electronics", "avg_delivery_days": 4.5, "on_time_percentage": 92}, {"supplier_name": "Fast Logistics", "product_category": "Apparel", "avg_delivery_days": 2.1, "on_time_percentage": 98}], "total_rows": 2, "generated_at": "2023-10-06T13:45:20Z" }

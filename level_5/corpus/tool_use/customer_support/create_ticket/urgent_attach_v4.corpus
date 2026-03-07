@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: The London backup cluster is failing to sync; we are losing transaction history every hour. This requires immediate escalation.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-3341", "subject": "Critical Failure: London Backup Cluster Sync Loss", "description": "Replication jobs to the London DR site are failing with connection reset errors. Last successful sync was 4 hours ago.", "priority": "urgent", "category": "infrastructure" }
+Response: { "ticket_id": "TKT-100101", "status": "open", "priority": "urgent", "assigned_to": "Disaster Recovery Team", "created_at": "2023-11-15T09:12:05Z" }
+
+Question: Please open an urgent ticket for a brute force attack targeting the admin portal and include the firewall block log screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-5589", "subject": "Security Alert: Brute Force Attack on Admin Portal", "description": "Over 5,000 failed login attempts detected from subnet 203.0.113.0/24 in the last 10 minutes. Firewall rules triggered automatically.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-100102", "status": "open", "priority": "urgent", "assigned_to": "SOC Level 2", "created_at": "2023-11-15T09:15:33Z" }
+
+Question: The subscription billing engine is calculating taxes incorrectly for EU customers. Uploading the failed calculation report now.
+Call: { "func_call": "attach_file", "customer_id": "CUST-9922", "subject": "Billing Error: Incorrect EU Tax Calculation", "description": "VAT rates are being applied as 0% for German and French accounts. Attached CSV of affected invoices from today.", "priority": "urgent", "category": "billing" }
+Response: { "ticket_id": "TKT-100103", "status": "open", "priority": "urgent", "assigned_to": "Revenue Operations", "created_at": "2023-11-15T09:18:47Z" }
+
+Question: Critical: Customer credit card numbers found in plain text application logs. Creating ticket and attaching the log snippet screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-7714", "subject": "Data Compliance Violation: PCI-DSS Log Exposure", "description": "Debug logging enabled in production captured full PANs in the error stack traces. Immediate log rotation and scrubbing required.", "priority": "urgent", "category": "compliance" }
+Response: { "ticket_id": "TKT-100104", "status": "open", "priority": "urgent", "assigned_to": "Data Privacy Office", "created_at": "2023-11-15T09:22:10Z" }
+
+Question: The recommendation engine is returning null values for all users. Attaching the microservice health check screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-4456", "subject": "Recommendation Engine Returning Null Results", "description": "The 'suggest-items' microservice is healthy but returning empty arrays. Attached dashboard showing zero throughput.", "priority": "urgent", "category": "machine-learning" }
+Response: { "ticket_id": "TKT-100105", "status": "open", "priority": "urgent", "assigned_to": "AI Platform Team", "created_at": "2023-11-15T09:25:39Z" }
+
+Question: Severe latency in the video streaming CDN for APAC regions. Creating urgent ticket and attaching the traceroute screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-2287", "subject": "High Latency: APAC Video Streaming CDN", "description": "Users in Tokyo and Singapore are experiencing 15-second buffer times. Traceroute shows packet loss at the edge node.", "priority": "urgent", "category": "networking" }
+Response: { "ticket_id": "TKT-100106", "status": "open", "priority": "urgent", "assigned_to": "CDN Engineering", "created_at": "2023-11-15T09:29:02Z" }
+
+Question: Ransomware encryption detected on the HR file share HR-SHARE-02. Urgent ticket needed with attached process tree screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-8833", "subject": "Ransomware Incident: HR File Share Compromise", "description": "Files on HR-SHARE-02 are being renamed with .locked extension. Suspicious process 'crypton.exe' identified.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-100107", "status": "open", "priority": "urgent", "assigned_to": "Incident Command", "created_at": "2023-11-15T09:32:25Z" }
+
+Question: SMS notification gateway is failing with 'Invalid Credentials' error. Attaching the provider API response screenshot immediately.
+Call: { "func_call": "attach_file", "customer_id": "CUST-1190", "subject": "SMS Gateway Authentication Failure", "description": "All outgoing OTP messages are failing. Provider API returns 401 Unauthorized. Attached JSON response from Twilio.", "priority": "urgent", "category": "communications" }
+Response: { "ticket_id": "TKT-100108", "status": "open", "priority": "urgent", "assigned_to": "Notification Services", "created_at": "2023-11-15T09:35:48Z" }
+
+Question: Android app freezing on the checkout screen for version 5.2.1. Creating urgent ticket and attaching the ANR trace screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-6601", "subject": "Android App Freeze: Checkout Screen ANR", "description": "Users on Android 13 cannot complete purchases. Application Not Responding (ANR) logs show UI thread blockage.", "priority": "urgent", "category": "mobile" }
+Response: { "ticket_id": "TKT-100109", "status": "open", "priority": "urgent", "assigned_to": "Android Squad", "created_at": "2023-11-15T09:39:11Z" }
+
+Question: Elasticsearch cluster status is red; two primary shards are unassigned. Attaching the cluster health snapshot screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-3378", "subject": "Elasticsearch Cluster Status Red: Shard Loss", "description": "Two nodes in the search cluster are unreachable. Primary shards for 'logs-2023' index are unassigned. Data loss risk.", "priority": "urgent", "category": "search" }
+Response: { "ticket_id": "TKT-100110", "status": "open", "priority": "urgent", "assigned_to": "Search Infrastructure", "created_at": "2023-11-15T09:42:34Z" }
+
+Question: DKIM signature invalid for all outgoing marketing emails. Urgent ticket with attached email header analysis screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-9955", "subject": "Email Deliverability: Invalid DKIM Signatures", "description": "Marketing campaigns are landing in spam due to missing DKIM signatures. DNS records appear correct but signing fails.", "priority": "urgent", "category": "email-ops" }
+Response: { "ticket_id": "TKT-100111", "status": "open", "priority": "urgent", "assigned_to": "Mail Systems Admin", "created_at": "2023-11-15T09:45:57Z" }
+
+Question: GraphQL endpoint is timing out for complex queries. Attaching the slow query log screenshot showing 30s+ execution times.
+Call: { "func_call": "attach_file", "customer_id": "CUST-5524", "subject": "Performance Degradation: GraphQL Timeout", "description": "Queries involving nested user relationships are exceeding the 30s timeout limit. Attached slow query log from Apollo Server.", "priority": "urgent", "category": "backend" }
+Response: { "ticket_id": "TKT-100112", "status": "open", "priority": "urgent", "assigned_to": "Backend Architecture", "created_at": "2023-11-15T09:49:20Z" }

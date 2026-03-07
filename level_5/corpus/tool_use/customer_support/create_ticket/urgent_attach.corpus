@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: We are experiencing a complete service outage in the Chicago data center; all API requests are timing out. This needs immediate attention.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-8921", "subject": "Critical Outage: Chicago Data Center API Timeouts", "description": "All API requests to the Chicago region are returning 504 Gateway Timeout errors. Impacting 100% of East Coast users.", "priority": "urgent", "category": "infrastructure" }
+Response: { "ticket_id": "TKT-99281", "status": "open", "priority": "urgent", "assigned_to": "Incident Response Team", "created_at": "2023-10-27T14:32:11Z" }
+
+Question: Please create an urgent ticket for a suspected SQL injection attempt detected on our login page and attach the server log screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-4402", "subject": "Security Alert: Suspected SQL Injection on Login", "description": "WAF flagged multiple malformed POST requests to /login endpoint originating from IP 192.168.4.22. Potential data breach risk.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-99282", "status": "open", "priority": "urgent", "assigned_to": "Security Operations", "created_at": "2023-10-27T14:35:44Z" }
+
+Question: The payment gateway is returning error code 500 for all credit card transactions. Uploading the transaction failure log now.
+Call: { "func_call": "attach_file", "customer_id": "CUST-7731", "subject": "Payment Gateway 500 Errors", "description": "Attaching full stack trace and transaction IDs for failed payments in the last 15 minutes.", "priority": "urgent", "category": "billing" }
+Response: { "ticket_id": "TKT-99283", "status": "open", "priority": "urgent", "assigned_to": "Payments Engineering", "created_at": "2023-10-27T14:38:02Z" }
+
+Question: Urgent: User data exposure detected in public S3 bucket. Creating ticket and attaching the compliance audit report screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-1105", "subject": "Data Leak: Publicly Accessible S3 Bucket", "description": "Automated scan detected PII in bucket 'customer-backups-dev' with public read permissions enabled.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-99284", "status": "open", "priority": "urgent", "assigned_to": "Cloud Security Team", "created_at": "2023-10-27T14:41:19Z" }
+
+Question: Our dashboard is showing incorrect inventory levels causing overselling. Attaching the database sync error screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-5590", "subject": "Inventory Sync Failure Causing Overselling", "description": "Real-time inventory updates are failing between warehouse DB and frontend. Attached screenshot of the replication lag monitor.", "priority": "urgent", "category": "operations" }
+Response: { "ticket_id": "TKT-99285", "status": "open", "priority": "urgent", "assigned_to": "Database Reliability", "created_at": "2023-10-27T14:45:33Z" }
+
+Question: Critical authentication failure: Users cannot log in via SSO. Creating urgent ticket and attaching the IdP error log snapshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-3321", "subject": "SSO Authentication Failure Across All Tenants", "description": "SAML response validation is failing for all identity providers. Users are stuck on the loading screen.", "priority": "urgent", "category": "identity" }
+Response: { "ticket_id": "TKT-99286", "status": "open", "priority": "urgent", "assigned_to": "Identity Platform Team", "created_at": "2023-10-27T14:48:55Z" }
+
+Question: Ransomware attack suspected on file server FS-04. Urgent ticket needed with attached network traffic anomaly screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-6674", "subject": "Potential Ransomware Activity on FS-04", "description": "Unusual encryption patterns detected on file server FS-04. Network traffic shows high outbound volume to unknown IPs.", "priority": "urgent", "category": "security" }
+Response: { "ticket_id": "TKT-99287", "status": "open", "priority": "urgent", "assigned_to": "Threat Intelligence", "created_at": "2023-10-27T14:52:10Z" }
+
+Question: Email delivery service is down; bounce rate is at 95%. Attaching the SMTP server error log screenshot immediately.
+Call: { "func_call": "attach_file", "customer_id": "CUST-8812", "subject": "Email Service Outage: 95% Bounce Rate", "description": "SMTP relay is rejecting all outgoing mail with 'Relay Access Denied'. Attached screenshot of the mail queue status.", "priority": "urgent", "category": "communications" }
+Response: { "ticket_id": "TKT-99288", "status": "open", "priority": "urgent", "assigned_to": "Messaging Infrastructure", "created_at": "2023-10-27T14:55:27Z" }
+
+Question: Mobile app crashing on launch for iOS 17 users. Creating urgent ticket and attaching the crash report screenshot from Firebase.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-2298", "subject": "Critical Crash: iOS 17 App Launch Failure", "description": "100% crash rate reported for users on iOS 17 immediately upon app launch. Null pointer exception in initialization module.", "priority": "urgent", "category": "mobile" }
+Response: { "ticket_id": "TKT-99289", "status": "open", "priority": "urgent", "assigned_to": "Mobile Engineering", "created_at": "2023-10-27T14:58:41Z" }
+
+Question: Database CPU usage spiked to 100% causing read replicas to lag. Attaching the CloudWatch metric screenshot.
+Call: { "func_call": "attach_file", "customer_id": "CUST-9943", "subject": "Database CPU Saturation and Replica Lag", "description": "Primary DB instance cpu_utilization hit 100% for 20 minutes. Read replicas are 4 hours behind. Attached metric graph.", "priority": "urgent", "category": "database" }
+Response: { "ticket_id": "TKT-99290", "status": "open", "priority": "urgent", "assigned_to": "Database Administration", "created_at": "2023-10-27T15:01:59Z" }
+
+Question: SSL certificate expired on main domain causing browser security warnings. Urgent ticket with attached certificate status screenshot.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-1029", "subject": "SSL Certificate Expiration on Primary Domain", "description": "The SSL certificate for www.example.com expired 10 minutes ago. All HTTPS traffic is being blocked by browsers.", "priority": "urgent", "category": "infrastructure" }
+Response: { "ticket_id": "TKT-99291", "status": "open", "priority": "urgent", "assigned_to": "DevOps Security", "created_at": "2023-10-27T15:05:14Z" }
+
+Question: API rate limiting is falsely blocking legitimate enterprise clients. Attaching the access log screenshot showing false positives.
+Call: { "func_call": "attach_file", "customer_id": "CUST-7765", "subject": "False Positive Rate Limiting on Enterprise Accounts", "description": "Valid API keys from top 5 enterprise clients are receiving 429 Too Many Requests despite low usage. Attached log snippet.", "priority": "urgent", "category": "api" }
+Response: { "ticket_id": "TKT-99292", "status": "open", "priority": "urgent", "assigned_to": "API Gateway Team", "created_at": "2023-10-27T15:08:30Z" }

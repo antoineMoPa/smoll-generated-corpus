@@ -1,0 +1,47 @@
+Question: What was the conversion rate for the iOS app purchase flow during the Q4 holiday season?
+Call: { "func_call": "get_conversion_rate", "event_name": "ios_purchase_done", "funnel_id": "funnel_ios_checkout_q4", "from_date": "2023-12-01", "to_date": "2023-12-25" }
+Response: { "event": "ios_purchase_done", "total_events": 3200, "unique_users": 3100, "conversion_rate": 0.041, "funnel_steps": [{ "name": "app_store_launch", "completions": 78000 }, { "name": "item_selected", "completions": 24000 }, { "name": "apple_pay_confirm", "completions": 8500 }, { "name": "ios_purchase_done", "completions": 3200 }] }
+
+Question: Show me the drop-off data for the B2B demo request process in November.
+Call: { "func_call": "get_funnel_data", "event_name": "demo_requested", "funnel_id": "funnel_b2b_demo_nov", "from_date": "2023-11-01", "to_date": "2023-11-30" }
+Response: { "event": "demo_requested", "total_events": 450, "unique_users": 445, "conversion_rate": 0.09, "funnel_steps": [{ "name": "enterprise_landing", "completions": 5000 }, { "name": "case_study_download", "completions": 1200 }, { "name": "contact_form_start", "completions": 800 }, { "name": "demo_requested", "completions": 450 }] }
+
+Question: How did the password reset completion look for mobile users last week?
+Call: { "func_call": "get_funnel_data", "event_name": "password_reset_success", "funnel_id": "funnel_reset_mobile", "from_date": "2023-10-15", "to_date": "2023-10-21" }
+Response: { "event": "password_reset_success", "total_events": 1800, "unique_users": 1790, "conversion_rate": 0.72, "funnel_steps": [{ "name": "login_fail", "completions": 2500 }, { "name": "forgot_link_click", "completions": 2400 }, { "name": "email_sent", "completions": 2350 }, { "name": "password_reset_success", "completions": 1800 }] }
+
+Question: I need the conversion metrics for the flash sale apparel funnel from Friday morning to Sunday night.
+Call: { "func_call": "get_conversion_rate", "event_name": "flash_sale_buy", "funnel_id": "funnel_flash_apparel", "from_date": "2023-11-10", "to_date": "2023-11-12" }
+Response: { "event": "flash_sale_buy", "total_events": 8900, "unique_users": 8600, "conversion_rate": 0.065, "funnel_steps": [{ "name": "banner_click", "completions": 137000 }, { "name": "size_select", "completions": 42000 }, { "name": "bag_add", "completions": 18000 }, { "name": "flash_sale_buy", "completions": 8900 }] }
+
+Question: Analyze the premium subscription renewal funnel performance for the last 30 days.
+Call: { "func_call": "get_funnel_data", "event_name": "sub_renewed", "funnel_id": "funnel_renew_premium", "from_date": "2023-09-20", "to_date": "2023-10-20" }
+Response: { "event": "sub_renewed", "total_events": 5600, "unique_users": 5600, "conversion_rate": 0.88, "funnel_steps": [{ "name": "expiry_email_open", "completions": 6400 }, { "name": "account_login", "completions": 6100 }, { "name": "payment_confirm", "completions": 5800 }, { "name": "sub_renewed", "completions": 5600 }] }
+
+Question: What are the completion numbers for the desktop software installation steps this month?
+Call: { "func_call": "get_goal_completions", "event_name": "install_finished", "funnel_id": "funnel_desktop_install", "from_date": "2023-10-01", "to_date": "2023-10-31" }
+Response: { "event": "install_finished", "total_events": 12400, "unique_users": 12300, "conversion_rate": 0.61, "funnel_steps": [{ "name": "download_start", "completions": 20300 }, { "name": "installer_launch", "completions": 19500 }, { "name": "license_accept", "completions": 15000 }, { "name": "install_finished", "completions": 12400 }] }
+
+Question: Retrieve the conversion rate for the express shipping option compared to standard delivery yesterday.
+Call: { "func_call": "get_conversion_rate", "event_name": "express_ship_selected", "funnel_id": "funnel_shipping_express", "from_date": "2023-11-05", "to_date": "2023-11-05" }
+Response: { "event": "express_ship_selected", "total_events": 2100, "unique_users": 2100, "conversion_rate": 0.19, "funnel_steps": [{ "name": "cart_review", "completions": 11000 }, { "name": "shipping_options_view", "completions": 10800 }, { "name": "express_click", "completions": 4500 }, { "name": "express_ship_selected", "completions": 2100 }] }
+
+Question: Show the full funnel breakdown for the podcast subscription event last quarter.
+Call: { "func_call": "get_funnel_data", "event_name": "podcast_subscribed", "funnel_id": "funnel_podcast_q3", "from_date": "2023-07-01", "to_date": "2023-09-30" }
+Response: { "event": "podcast_subscribed", "total_events": 3300, "unique_users": 3250, "conversion_rate": 0.22, "funnel_steps": [{ "name": "episode_play", "completions": 15000 }, { "name": "show_notes_view", "completions": 6000 }, { "name": "subscribe_button_click", "completions": 4200 }, { "name": "podcast_subscribed", "completions": 3300 }] }
+
+Question: Get the conversion stats for the referral program signup funnel during the summer campaign.
+Call: { "func_call": "get_conversion_rate", "event_name": "referral_joined", "funnel_id": "funnel_referral_summer", "from_date": "2023-06-01", "to_date": "2023-08-31" }
+Response: { "event": "referral_joined", "total_events": 980, "unique_users": 970, "conversion_rate": 0.11, "funnel_steps": [{ "name": "referral_email_open", "completions": 8900 }, { "name": "landing_page_visit", "completions": 4500 }, { "name": "terms_accept", "completions": 1200 }, { "name": "referral_joined", "completions": 980 }] }
+
+Question: How many users completed the two-factor authentication setup in the security funnel this week?
+Call: { "func_call": "get_goal_completions", "event_name": "2fa_enabled", "funnel_id": "funnel_security_2fa", "from_date": "2023-10-23", "to_date": "2023-10-29" }
+Response: { "event": "2fa_enabled", "total_events": 4200, "unique_users": 4180, "conversion_rate": 0.68, "funnel_steps": [{ "name": "security_settings_open", "completions": 6200 }, { "name": "2fa_select_method", "completions": 5800 }, { "name": "code_verify", "completions": 4900 }, { "name": "2fa_enabled", "completions": 4200 }] }
+
+Question: What is the drop-off rate between viewing the menu and placing an order for the lunch special?
+Call: { "func_call": "get_funnel_data", "event_name": "lunch_order_placed", "funnel_id": "funnel_lunch_special", "from_date": "2023-11-01", "to_date": "2023-11-07" }
+Response: { "event": "lunch_order_placed", "total_events": 1500, "unique_users": 1480, "conversion_rate": 0.25, "funnel_steps": [{ "name": "menu_browse", "completions": 12000 }, { "name": "item_customization", "completions": 4800 }, { "name": "cart_review", "completions": 3200 }, { "name": "lunch_order_placed", "completions": 1500 }] }
+
+Question: Provide the conversion rate and step completions for the loyalty points redemption funnel over the weekend.
+Call: { "func_call": "get_conversion_rate", "event_name": "points_redeemed", "funnel_id": "funnel_loyalty_weekend", "from_date": "2023-11-18", "to_date": "2023-11-19" }
+Response: { "event": "points_redeemed", "total_events": 2200, "unique_users": 2150, "conversion_rate": 0.35, "funnel_steps": [{ "name": "rewards_page_visit", "completions": 18000 }, { "name": "reward_select", "completions": 6500 }, { "name": "confirmation_modal", "completions": 3100 }, { "name": "points_redeemed", "completions": 2200 }] }

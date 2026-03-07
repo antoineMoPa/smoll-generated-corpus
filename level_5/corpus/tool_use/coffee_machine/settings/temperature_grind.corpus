@@ -1,0 +1,95 @@
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Set the brewing temperature to 92 degrees.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "92" }
+Response: { "parameter": "temperature", "previous_value": "88", "new_value": "92" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: I need a finer grind, please change it to level 3.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "3" }
+Response: { "parameter": "grind_level", "previous_value": "5", "new_value": "3" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Adjust the temperature up to 95 degrees for a darker roast.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "95" }
+Response: { "parameter": "temperature", "previous_value": "90", "new_value": "95" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Change the grind setting to 7 for a coarser brew.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "7" }
+Response: { "parameter": "grind_level", "previous_value": "4", "new_value": "7" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Please set the water temperature to exactly 89 degrees.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "89" }
+Response: { "parameter": "temperature", "previous_value": "93", "new_value": "89" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Make the grind finer by setting it to level 2.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "2" }
+Response: { "parameter": "grind_level", "previous_value": "6", "new_value": "2" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Increase the heat to 96 degrees Celsius.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "96" }
+Response: { "parameter": "temperature", "previous_value": "91", "new_value": "96" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Set the grinder to the coarsest setting, level 10.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "10" }
+Response: { "parameter": "grind_level", "previous_value": "5", "new_value": "10" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Lower the brewing temperature to 88 degrees.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "88" }
+Response: { "parameter": "temperature", "previous_value": "94", "new_value": "88" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Adjust the grind level to 5 for a medium brew.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "5" }
+Response: { "parameter": "grind_level", "previous_value": "8", "new_value": "5" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Set the temperature to 93.5 degrees.
+Call: { "func_call": "set_temperature", "parameter": "temperature", "value": "93.5" }
+Response: { "parameter": "temperature", "previous_value": "90", "new_value": "93.5" }
+
+Available Tools: set_temperature | set_grind_level | set_brew_time | get_current_settings
+Call Schema: { "func_call": "string", "parameter": "string", "value": "string" }
+Response Schema: { "parameter": "string", "previous_value": "string", "new_value": "string" }
+---
+Question: Change the grind setting to level 4 immediately.
+Call: { "func_call": "set_grind_level", "parameter": "grind_level", "value": "4" }
+Response: { "parameter": "grind_level", "previous_value": "9", "new_value": "4" }

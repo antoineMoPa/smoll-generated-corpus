@@ -1,0 +1,51 @@
+Available Tools: find_by_name | find_by_extension | find_by_size | find_by_date
+Call Schema: { "func_call": "string", "path": "string", "pattern": "string", "type": "string" }
+Response Schema: { "matches": ["string"], "count": number }
+---
+Question: Retrieve all Python scripts located in the dev workspace.
+Call: { "func_call": "find_by_extension", "path": "/home/dev/workspace", "pattern": ".py", "type": "file" }
+Response: { "matches": ["/home/dev/workspace/main.py", "/home/dev/workspace/utils.py", "/home/dev/workspace/test_runner.py"], "count": 3 }
+
+Question: Discover all image assets within the public images folder.
+Call: { "func_call": "find_by_extension", "path": "/var/www/public/images", "pattern": ".png", "type": "file" }
+Response: { "matches": ["/var/www/public/images/logo.png", "/var/www/public/images/banner.png"], "count": 2 }
+
+Question: Scan for CSV exports in the reports quarterly directory.
+Call: { "func_call": "find_by_extension", "path": "/data/reports/q4", "pattern": ".csv", "type": "file" }
+Response: { "matches": ["/data/reports/q4/sales.csv", "/data/reports/q4/inventory.csv", "/data/reports/q4/returns.csv"], "count": 3 }
+
+Question: List all markdown documentation files in the project docs.
+Call: { "func_call": "find_by_extension", "path": "/srv/project/docs", "pattern": ".md", "type": "file" }
+Response: { "matches": ["/srv/project/docs/readme.md", "/srv/project/docs/contributing.md"], "count": 2 }
+
+Question: Identify any log archives ending in .gz under the syslog path.
+Call: { "func_call": "find_by_extension", "path": "/var/log/syslog", "pattern": ".gz", "type": "file" }
+Response: { "matches": ["/var/log/syslog/auth.log.gz", "/var/log/syslog/kern.log.gz", "/var/log/syslog/mail.log.gz"], "count": 3 }
+
+Question: Find all temporary swap files in the root temp area.
+Call: { "func_call": "find_by_extension", "path": "/root/temp", "pattern": ".swp", "type": "file" }
+Response: { "matches": ["/root/temp/.index.swp", "/root/temp/.config.swp"], "count": 2 }
+
+Question: Search for YAML configuration files in the kubernetes manifests.
+Call: { "func_call": "find_by_extension", "path": "/opt/k8s/manifests", "pattern": ".yaml", "type": "file" }
+Response: { "matches": ["/opt/k8s/manifests/deployment.yaml", "/opt/k8s/manifests/service.yaml", "/opt/k8s/manifests/ingress.yaml"], "count": 3 }
+
+Question: Locate all compiled Java classes in the build output.
+Call: { "func_call": "find_by_extension", "path": "/home/java/project/build", "pattern": ".class", "type": "file" }
+Response: { "matches": ["/home/java/project/build/Main.class", "/home/java/project/build/Helper.class"], "count": 2 }
+
+Question: Find all SQL dump files stored in the database backups.
+Call: { "func_call": "find_by_extension", "path": "/mnt/backups/sql", "pattern": ".sql", "type": "file" }
+Response: { "matches": ["/mnt/backups/sql/users_2023.sql", "/mnt/backups/sql/orders_2023.sql", "/mnt/backups/sql/products_2023.sql"], "count": 3 }
+
+Question: Detect any snapshot directories with the .snap suffix in /vol.
+Call: { "func_call": "find_by_extension", "path": "/vol/data", "pattern": ".snap", "type": "dir" }
+Response: { "matches": ["/vol/data/morning.snap", "/vol/data/evening.snap"], "count": 2 }
+
+Question: Search for HTML template files in the web server views.
+Call: { "func_call": "find_by_extension", "path": "/srv/web/views", "pattern": ".html", "type": "file" }
+Response: { "matches": ["/srv/web/views/index.html", "/srv/web/views/about.html", "/srv/web/views/contact.html"], "count": 3 }
+
+Question: Find all binary executable files in the system sbin.
+Call: { "func_call": "find_by_extension", "path": "/usr/sbin", "pattern": ".bin", "type": "file" }
+Response: { "matches": ["/usr/sbin/network.bin", "/usr/sbin/storage.bin"], "count": 2 }

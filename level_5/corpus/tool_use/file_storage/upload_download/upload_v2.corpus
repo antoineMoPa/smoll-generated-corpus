@@ -1,0 +1,51 @@
+Available Tools: upload_file | download_file | get_upload_url | get_download_url
+Call Schema: { "func_call": "string", "path": "string", "file_name": "string", "size_bytes": number, "content_type": "string" }
+Response Schema: { "file_id": "string", "path": "string", "size_bytes": number, "url": "string", "expires_at": "string" }
+---
+Question: Upload the monthly sales spreadsheet to the reports folder.
+Call: { "func_call": "upload_file", "path": "reports/", "file_name": "sales_summary_nov.xlsx", "size_bytes": 3456789, "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }
+Response: { "file_id": "file_a1b2c3d4e5f6", "path": "reports/sales_summary_nov.xlsx", "size_bytes": 3456789, "url": "https://storage.cloud.com/v1/files/file_a1b2c3d4e5f6", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: I need to upload the team profile picture to the avatars directory.
+Call: { "func_call": "upload_file", "path": "avatars/", "file_name": "team_lead_profile.webp", "size_bytes": 245000, "content_type": "image/webp" }
+Response: { "file_id": "file_g7h8i9j0k1l2", "path": "avatars/team_lead_profile.webp", "size_bytes": 245000, "url": "https://storage.cloud.com/v1/files/file_g7h8i9j0k1l2", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Please upload the system audit log text file to the logs archive.
+Call: { "func_call": "upload_file", "path": "logs/", "file_name": "system_audit_20231105.log", "size_bytes": 128000, "content_type": "text/plain" }
+Response: { "file_id": "file_m3n4o5p6q7r8", "path": "logs/system_audit_20231105.log", "size_bytes": 128000, "url": "https://storage.cloud.com/v1/files/file_m3n4o5p6q7r8", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Upload the contract agreement PDF to the legal documents folder.
+Call: { "func_call": "upload_file", "path": "legal/", "file_name": "vendor_contract_alpha.pdf", "size_bytes": 980500, "content_type": "application/pdf" }
+Response: { "file_id": "file_s9t0u1v2w3x4", "path": "legal/vendor_contract_alpha.pdf", "size_bytes": 980500, "url": "https://storage.cloud.com/v1/files/file_s9t0u1v2w3x4", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Store the podcast episode audio file in the media podcasts directory.
+Call: { "func_call": "upload_file", "path": "media/", "file_name": "episode_42_interview.mp3", "size_bytes": 45678900, "content_type": "audio/mpeg" }
+Response: { "file_id": "file_y5z6a7b8c9d0", "path": "media/episode_42_interview.mp3", "size_bytes": 45678900, "url": "https://storage.cloud.com/v1/files/file_y5z6a7b8c9d0", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Upload the API schema definition YAML file to the configs dev folder.
+Call: { "func_call": "upload_file", "path": "configs/", "file_name": "api_schema_v3.yaml", "size_bytes": 15360, "content_type": "application/x-yaml" }
+Response: { "file_id": "file_e1f2g3h4i5j6", "path": "configs/api_schema_v3.yaml", "size_bytes": 15360, "url": "https://storage.cloud.com/v1/files/file_e1f2g3h4i5j6", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: I have a webinar recording to upload to the training videos folder.
+Call: { "func_call": "upload_file", "path": "training/", "file_name": "onboarding_webinar_q4.mov", "size_bytes": 2147483648, "content_type": "video/quicktime" }
+Response: { "file_id": "file_k7l8m9n0o1p2", "path": "training/onboarding_webinar_q4.mov", "size_bytes": 2147483648, "url": "https://storage.cloud.com/v1/files/file_k7l8m9n0o1p2", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Upload the vector map illustration to the graphics assets directory.
+Call: { "func_call": "upload_file", "path": "graphics/", "file_name": "world_map_vector.eps", "size_bytes": 512000, "content_type": "application/postscript" }
+Response: { "file_id": "file_q3r4s5t6u7v8", "path": "graphics/world_map_vector.eps", "size_bytes": 512000, "url": "https://storage.cloud.com/v1/files/file_q3r4s5t6u7v8", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Please upload the compressed project source code to the backups dev folder.
+Call: { "func_call": "upload_file", "path": "backups/", "file_name": "project_source_v2.tar.gz", "size_bytes": 156789012, "content_type": "application/gzip" }
+Response: { "file_id": "file_w9x0y1z2a3b4", "path": "backups/project_source_v2.tar.gz", "size_bytes": 156789012, "url": "https://storage.cloud.com/v1/files/file_w9x0y1z2a3b4", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Upload the quarterly budget presentation to the finance slides folder.
+Call: { "func_call": "upload_file", "path": "finance/", "file_name": "q4_budget_presentation.pptx", "size_bytes": 8900000, "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation" }
+Response: { "file_id": "file_c5d6e7f8g9h0", "path": "finance/q4_budget_presentation.pptx", "size_bytes": 8900000, "url": "https://storage.cloud.com/v1/files/file_c5d6e7f8g9h0", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Store the customer feedback dataset JSON file in the analytics data directory.
+Call: { "func_call": "upload_file", "path": "analytics/", "file_name": "customer_feedback_dump.json", "size_bytes": 2345678, "content_type": "application/json" }
+Response: { "file_id": "file_i1j2k3l4m5n6", "path": "analytics/customer_feedback_dump.json", "size_bytes": 2345678, "url": "https://storage.cloud.com/v1/files/file_i1j2k3l4m5n6", "expires_at": "2025-01-15T12:00:00Z" }
+
+Question: Upload the animated loader graphic to the ui components folder.
+Call: { "func_call": "upload_file", "path": "ui/", "file_name": "loading_spinner.apng", "size_bytes": 89000, "content_type": "image/apng" }
+Response: { "file_id": "file_o7p8q9r0s1t2", "path": "ui/loading_spinner.apng", "size_bytes": 89000, "url": "https://storage.cloud.com/v1/files/file_o7p8q9r0s1t2", "expires_at": "2025-01-15T12:00:00Z" }

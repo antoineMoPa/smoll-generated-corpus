@@ -1,0 +1,51 @@
+Available Tools: get_balance | get_account_summary | get_available_credit | get_account_details
+Call Schema: { "func_call": "string", "account_id": "string", "account_type": "checking|savings|credit" }
+Response Schema: { "account_id": "string", "balance": number, "currency": "string", "available": number }
+
+Question: What is the remaining balance on my auto-loan linked checking account?
+Call: { "func_call": "get_balance", "account_id": "CHK-5512-8834", "account_type": "checking" }
+Response: { "account_id": "CHK-5512-8834", "balance": 4210.90, "currency": "USD", "available": 4210.90 }
+
+Question: Show me the total funds in my college tuition savings plan.
+Call: { "func_call": "get_balance", "account_id": "SAV-1129-4456", "account_type": "savings" }
+Response: { "account_id": "SAV-1129-4456", "balance": 32150.00, "currency": "USD", "available": 32150.00 }
+
+Question: How much do I currently owe on my secure credit card ending in 7712?
+Call: { "func_call": "get_balance", "account_id": "CRD-6643-7712", "account_type": "credit" }
+Response: { "account_id": "CRD-6643-7712", "balance": -450.25, "currency": "USD", "available": 549.75 }
+
+Question: Retrieve the current balance for my freelance income checking account.
+Call: { "func_call": "get_balance", "account_id": "CHK-9987-2214", "account_type": "checking" }
+Response: { "account_id": "CHK-9987-2214", "balance": 6789.45, "currency": "USD", "available": 6789.45 }
+
+Question: What is the available amount in my holiday gift fund savings?
+Call: { "func_call": "get_balance", "account_id": "SAV-3378-9901", "account_type": "savings" }
+Response: { "account_id": "SAV-3378-9901", "balance": 1205.80, "currency": "USD", "available": 1205.80 }
+
+Question: Check the outstanding balance on my corporate expense credit card.
+Call: { "func_call": "get_balance", "account_id": "CRD-2245-6678", "account_type": "credit" }
+Response: { "account_id": "CRD-2245-6678", "balance": -2340.60, "currency": "USD", "available": 7659.40 }
+
+Question: How much money is left in my rental property checking account?
+Call: { "func_call": "get_balance", "account_id": "CHK-7734-1123", "account_type": "checking" }
+Response: { "account_id": "CHK-7734-1123", "balance": 9876.54, "currency": "USD", "available": 9876.54 }
+
+Question: Display the balance of my retirement match savings account.
+Call: { "func_call": "get_balance", "account_id": "SAV-8821-5543", "account_type": "savings" }
+Response: { "account_id": "SAV-8821-5543", "balance": 54320.15, "currency": "USD", "available": 54320.15 }
+
+Question: What is the current debt on my gas rewards credit card?
+Call: { "func_call": "get_balance", "account_id": "CRD-4456-9982", "account_type": "credit" }
+Response: { "account_id": "CRD-4456-9982", "balance": -675.30, "currency": "USD", "available": 4324.70 }
+
+Question: Tell me the balance for my side-hustle checking account.
+Call: { "func_call": "get_balance", "account_id": "CHK-1198-3345", "account_type": "checking" }
+Response: { "account_id": "CHK-1198-3345", "balance": 345.20, "currency": "USD", "available": 345.20 }
+
+Question: How much have I accumulated in my home renovation savings?
+Call: { "func_call": "get_balance", "account_id": "SAV-5567-2289", "account_type": "savings" }
+Response: { "account_id": "SAV-5567-2289", "balance": 15670.90, "currency": "USD", "available": 15670.90 }
+
+Question: What is the balance and available credit on my online shopping card?
+Call: { "func_call": "get_balance", "account_id": "CRD-8890-1122", "account_type": "credit" }
+Response: { "account_id": "CRD-8890-1122", "balance": -1520.45, "currency": "USD", "available": 3479.55 }

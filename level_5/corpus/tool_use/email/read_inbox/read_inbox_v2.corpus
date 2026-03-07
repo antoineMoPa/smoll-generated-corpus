@@ -1,0 +1,51 @@
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Display the 7 most recent emails in my main folder.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 7 }
+Response: { "messages": [{ "id": "msg_8801", "from": "ceo@startup.io", "subject": "Q4 Strategy Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_8800", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }, { "id": "msg_8799", "from": "legal@firm.com", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_8798", "from": "team@jira.cloud", "subject": "Sprint 24 Closed", "date": "2023-10-31T17:30:00Z", "read": true }, { "id": "msg_8797", "from": "travel@agency.net", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T15:10:00Z", "read": false }, { "id": "msg_8796", "from": "nutrition@healthapp.com", "subject": "Your Weekly Meal Plan", "date": "2023-10-31T12:00:00Z", "read": true }, { "id": "msg_8795", "from": "updates@linux.org", "subject": "Kernel Security Patch Available", "date": "2023-10-31T09:00:00Z", "read": false }], "total": 7 }
+
+Question: Retrieve the full details for message msg_8799 regarding the contract.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8799", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8799", "from": "legal@firm.com", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }], "total": 1 }
+
+Question: How many unread items are currently in my inbox? (Simulated via fetch).
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 50 }
+Response: { "messages": [{ "id": "msg_8801", "from": "ceo@startup.io", "subject": "Q4 Strategy Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_8799", "from": "legal@firm.com", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_8797", "from": "travel@agency.net", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T15:10:00Z", "read": false }, { "id": "msg_8795", "from": "updates@linux.org", "subject": "Kernel Security Patch Available", "date": "2023-10-31T09:00:00Z", "read": false }], "total": 4 }
+
+Question: Show me the latest notification from the monitoring system.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8801", "from": "ceo@startup.io", "subject": "Q4 Strategy Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }], "total": 1 }
+
+Question: I need to read the flight confirmation with ID msg_8797.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8797", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8797", "from": "travel@agency.net", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T15:10:00Z", "read": false }], "total": 1 }
+
+Question: List the top 2 emails to see what's urgent.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 2 }
+Response: { "messages": [{ "id": "msg_8801", "from": "ceo@startup.io", "subject": "Q4 Strategy Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_8800", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }], "total": 2 }
+
+Question: Pull up the alert about server CPU usage, message msg_8800.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8800", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8800", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }], "total": 1 }
+
+Question: Get the last 6 emails to check for any travel updates.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 6 }
+Response: { "messages": [{ "id": "msg_8801", "from": "ceo@startup.io", "subject": "Q4 Strategy Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_8800", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }, { "id": "msg_8799", "from": "legal@firm.com", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_8798", "from": "team@jira.cloud", "subject": "Sprint 24 Closed", "date": "2023-10-31T17:30:00Z", "read": true }, { "id": "msg_8797", "from": "travel@agency.net", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T15:10:00Z", "read": false }, { "id": "msg_8796", "from": "nutrition@healthapp.com", "subject": "Your Weekly Meal Plan", "date": "2023-10-31T12:00:00Z", "read": true }], "total": 6 }
+
+Question: Fetch the email from nutrition@healthapp.com with ID msg_8796.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8796", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8796", "from": "nutrition@healthapp.com", "subject": "Your Weekly Meal Plan", "date": "2023-10-31T12:00:00Z", "read": true }], "total": 1 }
+
+Question: Show me the single most recent message received today.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8801", "from": "ceo@startup.io", "subject": "Q4 Strategy Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }], "total": 1 }
+
+Question: Retrieve details for msg_8795 about the Linux kernel patch.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8795", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8795", "from": "updates@linux.org", "subject": "Kernel Security Patch Available", "date": "2023-10-31T09:00:00Z", "read": false }], "total": 1 }
+
+Question: List the last 5 emails to review morning correspondence.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 5 }
+Response: { "messages": [{ "id": "msg_8801", "from": "ceo@startup.io", "subject": "Q4 Strategy Meeting Agenda", "date": "2023-11-01T10:00:00Z", "read": false }, { "id": "msg_8800", "from": "alerts@monitoring.com", "subject": "Server CPU Usage Spike Detected", "date": "2023-11-01T09:45:00Z", "read": true }, { "id": "msg_8799", "from": "legal@firm.com", "subject": "Contract Review Required", "date": "2023-11-01T08:20:00Z", "read": false }, { "id": "msg_8798", "from": "team@jira.cloud", "subject": "Sprint 24 Closed", "date": "2023-10-31T17:30:00Z", "read": true }, { "id": "msg_8797", "from": "travel@agency.net", "subject": "Flight Confirmation for Tokyo", "date": "2023-10-31T15:10:00Z", "read": false }], "total": 5 }

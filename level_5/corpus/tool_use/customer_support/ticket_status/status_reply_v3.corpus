@@ -1,0 +1,51 @@
+Available Tools: get_ticket_status | list_open_tickets | add_reply | close_ticket | reopen_ticket
+Call Schema: { "func_call": "string", "ticket_id": "string", "customer_id": "string", "reply": "string" }
+Response Schema: { "ticket_id": "string", "status": "open|in_progress|resolved|closed", "replies": [{ "author": "string", "message": "string", "timestamp": "string" }] }
+---
+Question: Could you verify the current status of ticket T-1129 for customer C-501 to see if the database migration is complete?
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-1129", "customer_id": "C-501", "reply": "" }
+Response: { "ticket_id": "T-1129", "status": "in_progress", "replies": [{ "author": "Support Agent Ben", "message": "Database migration is currently at 85% completion.", "timestamp": "2023-10-25T08:00:00Z" }] }
+
+Question: Please add a response to ticket T-3390 for customer C-772 informing them that their subscription renewal failed due to an expired card.
+Call: { "func_call": "add_reply", "ticket_id": "T-3390", "customer_id": "C-772", "reply": "Your subscription renewal failed because the credit card on file has expired. Please update your payment method in the billing portal." }
+Response: { "ticket_id": "T-3390", "status": "open", "replies": [{ "author": "System Bot", "message": "Automatic renewal attempt failed.", "timestamp": "2023-10-25T09:00:00Z" }, { "author": "Support Agent Priya", "message": "Your subscription renewal failed because the credit card on file has expired. Please update your payment method in the billing portal.", "timestamp": "2023-10-25T09:15:00Z" }] }
+
+Question: What is the latest update on ticket T-6601 for customer C-223 regarding the mobile app crash?
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-6601", "customer_id": "C-223", "reply": "" }
+Response: { "ticket_id": "T-6601", "status": "resolved", "replies": [{ "author": "Customer C-223", "message": "App crashes when uploading photos.", "timestamp": "2023-10-24T15:30:00Z" }, { "author": "Support Agent Dave", "message": "A fix was deployed in version 2.1.4. Please update your app.", "timestamp": "2023-10-24T16:00:00Z" }, { "author": "Customer C-223", "message": "Updated and working now, thanks.", "timestamp": "2023-10-24T16:45:00Z" }] }
+
+Question: Send a message to customer C-884 on ticket T-9944 confirming that their data export file is ready for download.
+Call: { "func_call": "add_reply", "ticket_id": "T-9944", "customer_id": "C-884", "reply": "Your data export file has been generated and is available for download in the 'Files' section of your dashboard." }
+Response: { "ticket_id": "T-9944", "status": "resolved", "replies": [{ "author": "Customer C-884", "message": "I need a full export of my historical data.", "timestamp": "2023-10-25T10:00:00Z" }, { "author": "Support Agent Elena", "message": "Your data export file has been generated and is available for download in the 'Files' section of your dashboard.", "timestamp": "2023-10-25T10:30:00Z" }] }
+
+Question: Check ticket T-4456 for customer C-339 to see if the security patch has been applied.
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-4456", "customer_id": "C-339", "reply": "" }
+Response: { "ticket_id": "T-4456", "status": "in_progress", "replies": [{ "author": "Support Agent Marcus", "message": "Security patch is being tested in the staging environment.", "timestamp": "2023-10-25T11:00:00Z" }] }
+
+Question: Reply to ticket T-7723 for customer C-665 stating that we have upgraded their storage limit to 500GB.
+Call: { "func_call": "add_reply", "ticket_id": "T-7723", "customer_id": "C-665", "reply": "We have successfully increased your storage quota to 500GB effective immediately." }
+Response: { "ticket_id": "T-7723", "status": "resolved", "replies": [{ "author": "Customer C-665", "message": "I am running out of storage space.", "timestamp": "2023-10-24T13:00:00Z" }, { "author": "Support Agent Sophia", "message": "We have successfully increased your storage quota to 500GB effective immediately.", "timestamp": "2023-10-24T13:20:00Z" }] }
+
+Question: Can you look up the status of ticket T-2288 for customer C-114? They are asking about the downtime incident.
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-2288", "customer_id": "C-114", "reply": "" }
+Response: { "ticket_id": "T-2288", "status": "closed", "replies": [{ "author": "Customer C-114", "message": "Was the service down earlier today?", "timestamp": "2023-10-25T07:00:00Z" }, { "author": "Support Agent Omar", "message": "Yes, there was a brief outage from 6:00 to 6:15 AM which has been resolved.", "timestamp": "2023-10-25T07:10:00Z" }] }
+
+Question: Please notify customer C-992 on ticket T-5511 that their custom domain configuration is now active.
+Call: { "func_call": "add_reply", "ticket_id": "T-5511", "customer_id": "C-992", "reply": "Your custom domain DNS records have propagated and the site is now live on your new domain." }
+Response: { "ticket_id": "T-5511", "status": "resolved", "replies": [{ "author": "Support Agent Grace", "message": "DNS records updated, waiting for propagation.", "timestamp": "2023-10-25T12:00:00Z" }, { "author": "Support Agent Grace", "message": "Your custom domain DNS records have propagated and the site is now live on your new domain.", "timestamp": "2023-10-25T14:00:00Z" }] }
+
+Question: I need to know if there are any new replies on ticket T-8832 for customer C-447 concerning the invoice discrepancy.
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-8832", "customer_id": "C-447", "reply": "" }
+Response: { "ticket_id": "T-8832", "status": "open", "replies": [{ "author": "Customer C-447", "message": "Invoice #9981 shows an incorrect amount.", "timestamp": "2023-10-25T09:30:00Z" }, { "author": "Support Agent Liam", "message": "We are reviewing the billing logs for invoice #9981.", "timestamp": "2023-10-25T09:45:00Z" }] }
+
+Question: Add a note to ticket T-1155 for customer C-229 explaining that the feature request has been added to the product roadmap.
+Call: { "func_call": "add_reply", "ticket_id": "T-1155", "customer_id": "C-229", "reply": "Thank you for the suggestion. This feature request has been logged and added to our Q4 product roadmap." }
+Response: { "ticket_id": "T-1155", "status": "open", "replies": [{ "author": "Customer C-229", "message": "Could you add a dark mode option?", "timestamp": "2023-10-25T10:15:00Z" }, { "author": "Support Agent Zoe", "message": "Thank you for the suggestion. This feature request has been logged and added to our Q4 product roadmap.", "timestamp": "2023-10-25T10:30:00Z" }] }
+
+Question: What is the current state of ticket T-6678 for customer C-558? They reported a phishing attempt.
+Call: { "func_call": "get_ticket_status", "ticket_id": "T-6678", "customer_id": "C-558", "reply": "" }
+Response: { "ticket_id": "T-6678", "status": "in_progress", "replies": [{ "author": "Customer C-558", "message": "I received a suspicious email claiming to be from support.", "timestamp": "2023-10-25T11:20:00Z" }, { "author": "Security Team Lead", "message": "We are analyzing the email headers and have blocked the sender domain.", "timestamp": "2023-10-25T11:35:00Z" }] }
+
+Question: Send a reply to customer C-331 on ticket T-9966 letting them know their password reset link has been resent.
+Call: { "func_call": "add_reply", "ticket_id": "T-9966", "customer_id": "C-331", "reply": "We have resent the password reset link to your registered email address. Please check your spam folder if you do not see it." }
+Response: { "ticket_id": "T-9966", "status": "open", "replies": [{ "author": "Customer C-331", "message": "I never received the reset email.", "timestamp": "2023-10-25T13:00:00Z" }, { "author": "Support Agent Noah", "message": "We have resent the password reset link to your registered email address. Please check your spam folder if you do not see it.", "timestamp": "2023-10-25T13:05:00Z" }] }

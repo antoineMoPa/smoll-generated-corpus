@@ -1,0 +1,40 @@
+{"func_call": "create_resource", "id": "req_9z8y7x", "data": {"username": "xy", "email": "badformat"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'username' is too short", "field": "username", "details": {"reason": "too_short", "min_length": 3}}}
+{"func_call": "update_resource", "id": "req_8w7v6u", "data": {"status": "pending", "age": -10}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'age' must be a positive integer", "field": "age", "details": {"reason": "invalid_format", "expected": "integer > 0"}}}
+{"func_call": "get_resource", "id": "req_7t6s5r", "data": {}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "Too many requests per minute", "field": null, "details": {"retry_after": 90, "limit": 50, "window": "60s"}}}
+{"func_call": "delete_resource", "id": "req_6q5p4o", "data": {"confirm": false}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'confirm' is required for deletion", "field": "confirm", "details": {"reason": "required"}}}
+{"func_call": "create_resource", "id": "req_5n4m3l", "data": {"email": "user@domain", "phone": "999"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'email' has invalid format", "field": "email", "details": {"reason": "invalid_format", "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"}}}
+{"func_call": "update_resource", "id": "req_4k3j2i", "data": {"title": ""}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'title' is required", "field": "title", "details": {"reason": "required"}}}
+{"func_call": "get_resource", "id": "req_3h2g1f", "data": {"filter": "archived"}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "Global rate limit exceeded", "field": null, "details": {"retry_after": 180, "scope": "global"}}}
+{"func_call": "create_resource", "id": "req_2e1d0c", "data": {"password": "abc", "role": "editor"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'password' is too short", "field": "password", "details": {"reason": "too_short", "min_length": 8}}}
+{"func_call": "update_resource", "id": "req_1b0a9z", "data": {"birthdate": "2024-15-20"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'birthdate' has invalid format", "field": "birthdate", "details": {"reason": "invalid_format", "expected": "YYYY-MM-DD"}}}
+{"func_call": "delete_resource", "id": "req_0y9x8w", "data": {}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "Delete operation rate limit hit", "field": null, "details": {"retry_after": 45, "operation": "delete"}}}
+{"func_call": "create_resource", "id": "req_9v8u7t", "data": {"country_code": "United States"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'country_code' has invalid format", "field": "country_code", "details": {"reason": "invalid_format", "expected": "ISO 3166-1 alpha-2"}}}
+{"func_call": "get_resource", "id": "req_8s7r6q", "data": {"page": 0}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'page' must be positive", "field": "page", "details": {"reason": "invalid_format", "min_value": 1}}}
+{"func_call": "update_resource", "id": "req_7p6o5n", "data": {"description": "Hello"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'description' is too short", "field": "description", "details": {"reason": "too_short", "min_length": 10}}}
+{"func_call": "create_resource", "id": "req_6m5l4k", "data": {}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'name' is required", "field": "name", "details": {"reason": "required"}}}
+{"func_call": "get_resource", "id": "req_5j4i3h", "data": {"query": "search"}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "IP-based rate limit exceeded", "field": null, "details": {"retry_after": 75, "ip": "10.0.0.55"}}}
+{"func_call": "update_resource", "id": "req_4g3f2e", "data": {"url": "ftp://invalid.net"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'url' has invalid format", "field": "url", "details": {"reason": "invalid_format", "protocol": "http/https required"}}}
+{"func_call": "delete_resource", "id": "req_3d2c1b", "data": {"id": "   "}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'id' is required", "field": "id", "details": {"reason": "required"}}}
+{"func_call": "create_resource", "id": "req_2a1z0y", "data": {"amount": "fifty"}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'amount' has invalid format", "field": "amount", "details": {"reason": "invalid_format", "type": "number"}}}
+{"func_call": "get_resource", "id": "req_1x0w9v", "data": {"sort": "name"}}
+{"success": false, "error": {"code": "RATE_LIMIT_EXCEEDED", "message": "User quota exceeded", "field": null, "details": {"retry_after": 7200, "quota_reset": "2024-05-15T12:00:00Z"}}}
+{"func_call": "update_resource", "id": "req_0u9t8s", "data": {"tags": ["x"]}}
+{"success": false, "error": {"code": "VALIDATION_ERROR", "message": "Field 'tags' contains items that are too short", "field": "tags", "details": {"reason": "too_short", "min_item_length": 2}}}

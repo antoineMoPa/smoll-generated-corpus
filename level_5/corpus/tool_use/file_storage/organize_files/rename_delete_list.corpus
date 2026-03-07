@@ -1,0 +1,51 @@
+Available Tools: create_folder | move_file | copy_file | rename_file | delete_file | list_folder
+Call Schema: { "func_call": "string", "path": "string", "destination": "string", "new_name": "string" }
+Response Schema: { "path": "string", "entries": [{ "name": "string", "type": "file|folder", "size_bytes": number }], "status": "string" }
+---
+Question: List all files and folders in the root documents directory to see what needs organizing.
+Call: { "func_call": "list_folder", "path": "/documents", "destination": "", "new_name": "" }
+Response: { "path": "/documents", "entries": [{ "name": "invoices_2023", "type": "folder", "size_bytes": 0 }, { "name": "project_alpha.docx", "type": "file", "size_bytes": 24500 }, { "name": "budget_draft.xlsx", "type": "file", "size_bytes": 18900 }, { "name": "temp_notes.txt", "type": "file", "size_bytes": 1200 }], "status": "success" }
+
+Question: Rename the temporary notes file to something more descriptive like meeting_minutes_q1.txt.
+Call: { "func_call": "rename_file", "path": "/documents/temp_notes.txt", "destination": "", "new_name": "meeting_minutes_q1.txt" }
+Response: { "path": "/documents", "entries": [{ "name": "invoices_2023", "type": "folder", "size_bytes": 0 }, { "name": "project_alpha.docx", "type": "file", "size_bytes": 24500 }, { "name": "budget_draft.xlsx", "type": "file", "size_bytes": 18900 }, { "name": "meeting_minutes_q1.txt", "type": "file", "size_bytes": 1200 }], "status": "renamed" }
+
+Question: Delete the old budget draft file since it has been superseded by the final version.
+Call: { "func_call": "delete_file", "path": "/documents/budget_draft.xlsx", "destination": "", "new_name": "" }
+Response: { "path": "/documents", "entries": [{ "name": "invoices_2023", "type": "folder", "size_bytes": 0 }, { "name": "project_alpha.docx", "type": "file", "size_bytes": 24500 }, { "name": "meeting_minutes_q1.txt", "type": "file", "size_bytes": 1200 }], "status": "deleted" }
+
+Question: List the contents of the invoices_2023 folder to check for duplicates before cleanup.
+Call: { "func_call": "list_folder", "path": "/documents/invoices_2023", "destination": "", "new_name": "" }
+Response: { "path": "/documents/invoices_2023", "entries": [{ "name": "inv_001.pdf", "type": "file", "size_bytes": 45000 }, { "name": "inv_002.pdf", "type": "file", "size_bytes": 42000 }, { "name": "inv_001_copy.pdf", "type": "file", "size_bytes": 45000 }, { "name": "archive", "type": "folder", "size_bytes": 0 }], "status": "success" }
+
+Question: Remove the duplicate invoice file named inv_001_copy.pdf from the invoices folder.
+Call: { "func_call": "delete_file", "path": "/documents/invoices_2023/inv_001_copy.pdf", "destination": "", "new_name": "" }
+Response: { "path": "/documents/invoices_2023", "entries": [{ "name": "inv_001.pdf", "type": "file", "size_bytes": 45000 }, { "name": "inv_002.pdf", "type": "file", "size_bytes": 42000 }, { "name": "archive", "type": "folder", "size_bytes": 0 }], "status": "deleted" }
+
+Question: Rename the project_alpha document to reflect its final status as project_alpha_final.docx.
+Call: { "func_call": "rename_file", "path": "/documents/project_alpha.docx", "destination": "", "new_name": "project_alpha_final.docx" }
+Response: { "path": "/documents", "entries": [{ "name": "invoices_2023", "type": "folder", "size_bytes": 0 }, { "name": "project_alpha_final.docx", "type": "file", "size_bytes": 24500 }, { "name": "meeting_minutes_q1.txt", "type": "file", "size_bytes": 1200 }], "status": "renamed" }
+
+Question: List the root directory again to verify the cleanup and renaming operations were successful.
+Call: { "func_call": "list_folder", "path": "/documents", "destination": "", "new_name": "" }
+Response: { "path": "/documents", "entries": [{ "name": "invoices_2023", "type": "folder", "size_bytes": 0 }, { "name": "project_alpha_final.docx", "type": "file", "size_bytes": 24500 }, { "name": "meeting_minutes_q1.txt", "type": "file", "size_bytes": 1200 }], "status": "success" }
+
+Question: Delete the empty archive folder inside invoices_2023 as it is no longer needed.
+Call: { "func_call": "delete_file", "path": "/documents/invoices_2023/archive", "destination": "", "new_name": "" }
+Response: { "path": "/documents/invoices_2023", "entries": [{ "name": "inv_001.pdf", "type": "file", "size_bytes": 45000 }, { "name": "inv_002.pdf", "type": "file", "size_bytes": 42000 }], "status": "deleted" }
+
+Question: Rename the second invoice file to include the vendor name, changing inv_002.pdf to vendor_acme_inv_002.pdf.
+Call: { "func_call": "rename_file", "path": "/documents/invoices_2023/inv_002.pdf", "destination": "", "new_name": "vendor_acme_inv_002.pdf" }
+Response: { "path": "/documents/invoices_2023", "entries": [{ "name": "inv_001.pdf", "type": "file", "size_bytes": 45000 }, { "name": "vendor_acme_inv_002.pdf", "type": "file", "size_bytes": 42000 }], "status": "renamed" }
+
+Question: List the contents of the invoices folder one last time to confirm the final file structure.
+Call: { "func_call": "list_folder", "path": "/documents/invoices_2023", "destination": "", "new_name": "" }
+Response: { "path": "/documents/invoices_2023", "entries": [{ "name": "inv_001.pdf", "type": "file", "size_bytes": 45000 }, { "name": "vendor_acme_inv_002.pdf", "type": "file", "size_bytes": 42000 }], "status": "success" }
+
+Question: Delete the meeting minutes file because the content has been migrated to the company wiki.
+Call: { "func_call": "delete_file", "path": "/documents/meeting_minutes_q1.txt", "destination": "", "new_name": "" }
+Response: { "path": "/documents", "entries": [{ "name": "invoices_2023", "type": "folder", "size_bytes": 0 }, { "name": "project_alpha_final.docx", "type": "file", "size_bytes": 24500 }], "status": "deleted" }
+
+Question: Rename the main invoices folder to "financial_records_2023" for better categorization.
+Call: { "func_call": "rename_file", "path": "/documents/invoices_2023", "destination": "", "new_name": "financial_records_2023" }
+Response: { "path": "/documents", "entries": [{ "name": "financial_records_2023", "type": "folder", "size_bytes": 0 }, { "name": "project_alpha_final.docx", "type": "file", "size_bytes": 24500 }], "status": "renamed" }

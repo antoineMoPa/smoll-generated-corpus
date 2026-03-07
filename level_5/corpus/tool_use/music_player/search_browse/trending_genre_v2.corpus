@@ -1,0 +1,63 @@
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Find me some upbeat rock anthems for a workout.
+Call: { "func_call": "get_genre_playlist", "query": "high energy rock", "limit": 7, "genre": "rock" }
+Response: { "results": [{ "id": "rk_001", "title": "Eye of the Tiger", "artist": "Survivor", "duration_seconds": 246 }, { "id": "rk_002", "title": "We Will Rock You", "artist": "Queen", "duration_seconds": 122 }, { "id": "rk_003", "title": "Thunderstruck", "artist": "AC/DC", "duration_seconds": 292 }, { "id": "rk_004", "title": "Mr. Brightside", "artist": "The Killers", "duration_seconds": 222 }, { "id": "rk_005", "title": "Seven Nation Army", "artist": "The White Stripes", "duration_seconds": 231 }, { "id": "rk_006", "title": "Smells Like Teen Spirit", "artist": "Nirvana", "duration_seconds": 301 }, { "id": "rk_007", "title": "Don't Stop Me Now", "artist": "Queen", "duration_seconds": 209 }], "total": 65 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: What country songs are trending in Nashville right now?
+Call: { "func_call": "get_trending", "query": "Nashville country hits", "limit": 6, "genre": "country" }
+Response: { "results": [{ "id": "ct_001", "title": "Fast Car", "artist": "Luke Combs", "duration_seconds": 257 }, { "id": "ct_002", "title": "Last Night", "artist": "Morgan Wallen", "duration_seconds": 173 }, { "id": "ct_003", "title": "I Had Some Help", "artist": "Post Malone", "duration_seconds": 179 }, { "id": "ct_004", "title": "Need a Favor", "artist": "Jelly Roll", "duration_seconds": 218 }, { "id": "ct_005", "title": "Cowgirls", "artist": "Morgan Wallen", "duration_seconds": 194 }, { "id": "ct_006", "title": "White Horse", "artist": "Chris Stapleton", "duration_seconds": 235 }], "total": 30 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: I want a playlist of sad indie songs for raining days.
+Call: { "func_call": "get_genre_playlist", "query": "melancholy indie", "limit": 9, "genre": "indie" }
+Response: { "results": [{ "id": "in_001", "title": "Skinny Love", "artist": "Bon Iver", "duration_seconds": 239 }, { "id": "in_002", "title": "The Night We Met", "artist": "Lord Huron", "duration_seconds": 208 }, { "id": "in_003", "title": "Holocene", "artist": "Bon Iver", "duration_seconds": 337 }, { "id": "in_004", "title": "Fake Plastic Trees", "artist": "Radiohead", "duration_seconds": 290 }, { "id": "in_005", "title": "Motion Sickness", "artist": "Phoebe Bridgers", "duration_seconds": 224 }, { "id": "in_006", "title": "Re: Stacks", "artist": "Bon Iver", "duration_seconds": 396 }, { "id": "in_007", "title": "Fourth of July", "artist": "Sufjan Stevens", "duration_seconds": 284 }, { "id": "in_008", "title": "Not Strong Enough", "artist": "boygenius", "duration_seconds": 245 }, { "id": "in_009", "title": "Sweater Weather", "artist": "The Neighbourhood", "duration_seconds": 240 }], "total": 110 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Show me the top R&B tracks globally this week.
+Call: { "func_call": "get_trending", "query": "global R&B top 10", "limit": 10, "genre": "R&B" }
+Response: { "results": [{ "id": "rb_001", "title": "Snooze", "artist": "SZA", "duration_seconds": 201 }, { "id": "rb_002", "title": "Rich Baby Daddy", "artist": "Drake", "duration_seconds": 223 }, { "id": "rb_003", "title": "Boy's a liar Pt. 2", "artist": "PinkPantheress", "duration_seconds": 131 }, { "id": "rb_004", "title": "Creepin'", "artist": "Metro Boomin", "duration_seconds": 221 }, { "id": "rb_005", "title": "Shirt", "artist": "SZA", "duration_seconds": 195 }, { "id": "rb_006", "title": "Spin Bout U", "artist": "Drake", "duration_seconds": 186 }, { "id": "rb_007", "title": "Ghost in the Machine", "artist": "SZA", "duration_seconds": 264 }, { "id": "rb_008", "title": "Kill Bill", "artist": "SZA", "duration_seconds": 153 }, { "id": "rb_009", "title": "Thinkin' Bout Me", "artist": "Morgan Wallen", "duration_seconds": 175 }, { "id": "rb_010", "title": "On My Mama", "artist": "Victoria Monét", "duration_seconds": 143 }], "total": 45 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Give me a list of Latin pop hits for a party.
+Call: { "func_call": "get_genre_playlist", "query": "fiesta latin pop", "limit": 8, "genre": "latin" }
+Response: { "results": [{ "id": "lt_001", "title": "Despechá", "artist": "Rosalía", "duration_seconds": 168 }, { "id": "lt_002", "title": "Tití Me Preguntó", "artist": "Bad Bunny", "duration_seconds": 244 }, { "id": "lt_003", "title": "Provenza", "artist": "Karol G", "duration_seconds": 213 }, { "id": "lt_004", "title": "La Bachata", "artist": "Manuel Turizo", "duration_seconds": 162 }, { "id": "lt_005", "title": "Ella Baila Sola", "artist": "Eslabon Armado", "duration_seconds": 175 }, { "id": "lt_006", "title": "Shakira: Bzrp Music Sessions", "artist": "Shakira", "duration_seconds": 217 }, { "id": "lt_007", "title": "Ojitos Lindos", "artist": "Bad Bunny", "duration_seconds": 258 }, { "id": "lt_008", "title": "Punto G", "artist": "Karol G", "duration_seconds": 189 }], "total": 75 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: Find trending metal tracks in Europe.
+Call: { "func_call": "get_trending", "query": "European metal charts", "limit": 6, "genre": "metal" }
+Response: { "results": [{ "id": "mt_001", "title": "The Emptiness Machine", "artist": "Linkin Park", "duration_seconds": 189 }, { "id": "mt_002", "title": "Meet Your Maker", "artist": "Bring Me The Horizon", "duration_seconds": 205 }, { "id": "mt_003", "title": "Phantom of the Opera", "artist": "Iron Maiden", "duration_seconds": 425 }, { "id": "mt_004", "title": "Enter Sandman", "artist": "Metallica", "duration_seconds": 331 }, { "id": "mt_005", "title": "Paranoid", "artist": "Black Sabbath", "duration_seconds": 170 }, { "id": "mt_006", "title": "Ace of Spades", "artist": "Motörhead", "duration_seconds": 169 }], "total": 28 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: I need a lo-fi beat playlist for coding.
+Call: { "func_call": "get_genre_playlist", "query": "lo-fi study beats", "limit": 10, "genre": "lo-fi" }
+Response: { "results": [{ "id": "lf_001", "title": "Lofi Fruits Music", "artist": "Lofi Girl", "duration_seconds": 145 }, { "id": "lf_002", "title": "Coffee Shop Vibes", "artist": "Chillhop Music", "duration_seconds": 162 }, { "id": "lf_003", "title": "Rainy Day Jazz", "artist": "Idealism", "duration_seconds": 188 }, { "id": "lf_004", "title": "Midnight City", "artist": "Jinsang", "duration_seconds": 134 }, { "id": "lf_005", "title": "Snowfall", "artist": "Øneheart", "duration_seconds": 156 }, { "id": "lf_006", "title": "Affection", "artist": "Jinsang", "duration_seconds": 129 }, { "id": "lf_007", "title": "Dreaming Of You", "artist": "Idealism", "duration_seconds": 173 }, { "id": "lf_008", "title": "Bliss", "artist": "Jinsang", "duration_seconds": 141 }, { "id": "lf_009", "title": "Controlla", "artist": "Idealism", "duration_seconds": 159 }, { "id": "lf_010", "title": "Moonlight", "artist": "Keshiro", "duration_seconds": 167 }], "total": 90 }
+
+Available Tools: search_tracks | search_artist | search_album | get_trending | get_genre_playlist
+Call Schema: { "func_call": "string", "query": "string", "limit": number, "genre": "string" }
+Response Schema: { "results": [{ "id": "string", "title": "string", "artist": "string", "duration_seconds": number }], "total": number }
+---
+Question: What are the top soul classics of all time?
+Call: { "func_call": "get_genre_playlist", "query": "greatest soul hits", "limit": 7, "genre": "soul" }
+Response: { "results": [{ "id": "sl_001", "title": "Respect", "artist": "Aretha Franklin", "duration_seconds": 147 }, { "id": "sl_002", "title": "What's Going On", "artist": "Marvin Gaye", "duration_seconds": 232 }, { "id": "sl_003", "title": "I Heard It Through the Grapevine", "artist": "Marvin Gaye", "duration_seconds": 193 }, { "id": "sl_004", "title": "A Change Is Gonna Come", "artist": "Sam Cooke", "duration_seconds": 189 }, { "id": "sl_005", "title": "Stand by Me", "artist": "Ben E. King", "duration_seconds": 179 }, { "id": "sl_006", "title": "Let's Stay Together", "artist": "Al Green", "duration_seconds": 200 }, { "id": "sl_007", "title": "Try a Little Tenderness", "artist": "Otis Redding", "duration_seconds": 234 }], "total": 55 }

@@ -1,0 +1,29 @@
+Context: On April 5, Robert Davis wired $1,250.75 to Clara White for the vintage furniture purchase. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$1,250.75", "sender": "Robert Davis", "recipient": "Clara White"}
+
+Context: The receipt confirms that Nova Energy Ltd transferred €9,800 to Green Grid Systems for the solar panel installation. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "€9,800", "sender": "Nova Energy Ltd", "recipient": "Green Grid Systems"}
+
+Context: Sofia Rossi sent £150.00 to her cousin Marco Rossi via mobile banking this morning. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "£150.00", "sender": "Sofia Rossi", "recipient": "Marco Rossi"}
+
+Context: A transaction of ¥2,500,000 was executed by Sakura Motors to obtain parts from Precision Gear Co. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "¥2,500,000", "sender": "Sakura Motors", "recipient": "Precision Gear Co"}
+
+Context: Liam O'Connor purchased a tablet for $499.00 from TechHub Online, finalizing the order yesterday. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$499.00", "sender": "Liam O'Connor", "recipient": "TechHub Online"}
+
+Context: The shelter accepted a contribution of $2,500 from the Greenwood Foundation earlier this month. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$2,500", "sender": "the Greenwood Foundation", "recipient": "The shelter"}
+
+Context: Jessica Taylor repaid Kevin Brown $55.80 for the movie tickets they bought on Friday. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$55.80", "sender": "Jessica Taylor", "recipient": "Kevin Brown"}
+
+Context: Rapid Freight Inc paid $6,300.50 to Metro Warehousing for the storage fees incurred in November. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$6,300.50", "sender": "Rapid Freight Inc", "recipient": "Metro Warehousing"}
+
+Context: Hiroshi Yamada transferred ¥120,000 to Aiko Suzuki to settle the utility bills for the office. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "¥120,000", "sender": "Hiroshi Yamada", "recipient": "Aiko Suzuki"}
+
+Context: The college received $8,000 in lab fees from attendee Susan Clark last quarter. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$8,000", "sender": "attendee Susan Clark", "recipient": "The college"}
+
+Context: Daniel Kim donated $350 to the City Animal Rescue during the winter drive. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$350", "sender": "Daniel Kim", "recipient": "the City Animal Rescue"}
+
+Context: Silver Peak Hotels paid $22,000 to Alpine Contractors for the roof replacement project. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$22,000", "sender": "Silver Peak Hotels", "recipient": "Alpine Contractors"}
+
+Context: Patricia Evans acquired a motorcycle for $4,100 from Ridgeside Motors last Sunday. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$4,100", "sender": "Patricia Evans", "recipient": "Ridgeside Motors"}
+
+Context: The billing statement shows that DataFlow Systems owes $1,800 to Marcus Thorne for the consulting hours. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "$1,800", "sender": "DataFlow Systems", "recipient": "Marcus Thorne"}
+
+Context: Layla Ahmed transferred 3,000 AED to Samir Ahmed for the holiday travel expenses. | Input: {"extract": ["amount", "sender", "recipient"]} | Output: {"amount": "3,000 AED", "sender": "Layla Ahmed", "recipient": "Samir Ahmed"}

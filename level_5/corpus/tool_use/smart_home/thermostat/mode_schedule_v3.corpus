@@ -1,0 +1,51 @@
+Available Tools: set_temperature | get_temperature | set_mode | get_schedule
+Call Schema: { "func_call": "string", "device_id": "string", "temperature": "number|null", "mode": "string|null" }
+Response Schema: { "device_id": "string", "current_temp": "number", "target_temp": "number", "mode": "string" }
+---
+Question: Adjust the kitchen thermostat to 22 degrees for cooking dinner.
+Call: { "func_call": "set_temperature", "device_id": "therm_kit_09", "temperature": 22.0, "mode": null }
+Response: { "device_id": "therm_kit_09", "current_temp": 19.5, "target_temp": 22.0, "mode": "heat" }
+
+Question: Lower the study room temperature to 18 degrees while working.
+Call: { "func_call": "set_temperature", "device_id": "therm_std_10", "temperature": 18.0, "mode": null }
+Response: { "device_id": "therm_std_10", "current_temp": 21.3, "target_temp": 18.0, "mode": "cool" }
+
+Question: Raise the attic unit to 24 degrees before bed.
+Call: { "func_call": "set_temperature", "device_id": "therm_att_11", "temperature": 24.0, "mode": null }
+Response: { "device_id": "therm_att_11", "current_temp": 17.8, "target_temp": 24.0, "mode": "heat" }
+
+Question: Set the sunroom thermostat to 20 degrees for the afternoon sun.
+Call: { "func_call": "set_temperature", "device_id": "therm_sun_12", "temperature": 20.0, "mode": null }
+Response: { "device_id": "therm_sun_12", "current_temp": 23.4, "target_temp": 20.0, "mode": "cool" }
+
+Question: What is the current temperature reading in the kitchen?
+Call: { "func_call": "get_temperature", "device_id": "therm_kit_09", "temperature": null, "mode": null }
+Response: { "device_id": "therm_kit_09", "current_temp": 21.8, "target_temp": 22.0, "mode": "heat" }
+
+Question: Check the temperature status of the study room device.
+Call: { "func_call": "get_temperature", "device_id": "therm_std_10", "temperature": null, "mode": null }
+Response: { "device_id": "therm_std_10", "current_temp": 18.5, "target_temp": 18.0, "mode": "cool" }
+
+Question: Retrieve the current temperature from the attic sensor.
+Call: { "func_call": "get_temperature", "device_id": "therm_att_11", "temperature": null, "mode": null }
+Response: { "device_id": "therm_att_11", "current_temp": 19.2, "target_temp": 24.0, "mode": "heat" }
+
+Question: Get the temperature data for the sunroom unit.
+Call: { "func_call": "get_temperature", "device_id": "therm_sun_12", "temperature": null, "mode": null }
+Response: { "device_id": "therm_sun_12", "current_temp": 22.1, "target_temp": 20.0, "mode": "cool" }
+
+Question: Fetch the weekly schedule for the kitchen heating system.
+Call: { "func_call": "get_schedule", "device_id": "therm_kit_09", "temperature": null, "mode": null }
+Response: { "device_id": "therm_kit_09", "current_temp": 22.0, "target_temp": 22.0, "mode": "heat" }
+
+Question: Review the programmed schedule for the study room cooler.
+Call: { "func_call": "get_schedule", "device_id": "therm_std_10", "temperature": null, "mode": null }
+Response: { "device_id": "therm_std_10", "current_temp": 18.0, "target_temp": 18.0, "mode": "cool" }
+
+Question: Put the laundry room thermostat into heat mode for drying clothes.
+Call: { "func_call": "set_mode", "device_id": "therm_lau_13", "temperature": null, "mode": "heat" }
+Response: { "device_id": "therm_lau_13", "current_temp": 15.5, "target_temp": 23.0, "mode": "heat" }
+
+Question: Switch the porch unit to off mode during the rainstorm.
+Call: { "func_call": "set_mode", "device_id": "therm_por_14", "temperature": null, "mode": "off" }
+Response: { "device_id": "therm_por_14", "current_temp": 16.0, "target_temp": 16.0, "mode": "off" }

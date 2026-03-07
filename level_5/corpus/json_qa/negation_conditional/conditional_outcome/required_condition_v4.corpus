@@ -1,0 +1,59 @@
+Context: Users cannot export reports unless they hold a premium subscription tier. The system validates account status before generating files.
+Input: {"question": "What is required to export reports?"}
+Output: {"answer": "a premium subscription tier"}
+
+Context: The visa application will be dismissed if the applicant fails to include a certified translation of their birth certificate. Missing documents result in immediate denial.
+Input: {"question": "What is required to prevent dismissal of the visa application?"}
+Output: {"answer": "a certified translation of their birth certificate"}
+
+Context: Deployment of the mobile app fails without a valid code signing certificate attached to the build pipeline. Engineers must renew certificates before expiration.
+Input: {"question": "What is required to successfully deploy the mobile app?"}
+Output: {"answer": "a valid code signing certificate"}
+
+Context: Admission to the data center is refused unless the contractor wears an anti-static wristband and logs their entry time. Security guards enforce this policy strictly.
+Input: {"question": "What is required to gain admission to the data center?"}
+Output: {"answer": "wears an anti-static wristband and logs their entry time"}
+
+Context: The service agreement becomes null if the client modifies the hardware configuration without written approval. Unauthorized changes void all support clauses.
+Input: {"question": "What is required to keep the service agreement valid?"}
+Output: {"answer": "written approval before modifying the hardware configuration"}
+
+Context: Enrollment in the advanced workshop closes unless the participant provides proof of completing the introductory course. Prerequisites are verified automatically.
+Input: {"question": "What is required to finalize enrollment in the advanced workshop?"}
+Output: {"answer": "proof of completing the introductory course"}
+
+Context: The server update script will not run if the available disk space is less than 20 gigabytes. Sysadmins must clear temporary files before initiating updates.
+Input: {"question": "What is required for the server update script to run?"}
+Output: {"answer": "at least 20 gigabytes of available disk space"}
+
+Context: Travelers cannot enter the restricted zone without a security clearance badge issued within the last thirty days. Guards verify badge dates at the checkpoint.
+Input: {"question": "What is required to enter the restricted zone?"}
+Output: {"answer": "a security clearance badge issued within the last thirty days"}
+
+Context: The irrigation system will not trigger watering unless the soil moisture sensor reads below 15 percent. Gardeners can manually override this threshold.
+Input: {"question": "What is required for the irrigation system to trigger watering?"}
+Output: {"answer": "the soil moisture sensor reads below 15 percent"}
+
+Context: Viewing the confidential financial statements is forbidden unless the auditor presents a non-disclosure agreement signed by the CFO. Digital signatures are required for verification.
+Input: {"question": "What is required to view the confidential financial statements?"}
+Output: {"answer": "a non-disclosure agreement signed by the CFO"}
+
+Context: The enzymatic process stops if the ambient temperature exceeds 40 degrees Celsius. Lab assistants must activate the cooling unit to maintain optimal conditions.
+Input: {"question": "What is required for the enzymatic process to continue?"}
+Output: {"answer": "the ambient temperature remains at or below 40 degrees Celsius"}
+
+Context: Staff are disqualified from the bonus scheme unless they have achieved a customer satisfaction score of 4.5 or higher this quarter. Managers review scores monthly.
+Input: {"question": "What is required to qualify for the bonus scheme?"}
+Output: {"answer": "achieved a customer satisfaction score of 4.5 or higher this quarter"}
+
+Context: The payment gateway rejects transactions if the CVV code entered does not match the one on the back of the card. Users should double-check the numbers before submitting.
+Input: {"question": "What is required to process the transaction successfully?"}
+Output: {"answer": "the CVV code matches the one on the back of the card"}
+
+Context: Award ceremonies exclude nominees who have not submitted their acceptance speech draft by Friday noon. Scripts are reviewed by the communications team.
+Input: {"question": "What is required to attend the award ceremonies as a nominee?"}
+Output: {"answer": "submitted their acceptance speech draft by Friday noon"}
+
+Context: The elevator remains stationary unless the weight sensor confirms the load is under 2000 pounds. Maintenance teams calibrate sensors every six months.
+Input: {"question": "What is required for the elevator to move?"}
+Output: {"answer": "the weight sensor confirms the load is under 2000 pounds"}

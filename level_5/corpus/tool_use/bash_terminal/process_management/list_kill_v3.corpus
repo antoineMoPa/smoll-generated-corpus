@@ -1,0 +1,51 @@
+Available Tools: list_processes | kill_process | get_process_info | top_processes
+Call Schema: { "func_call": "string", "pid": number, "name": "string", "signal": "string" }
+Response Schema: { "processes": [{ "pid": number, "name": "string", "cpu": number, "mem": number }] }
+---
+Question: Display the full list of active processes on this machine.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 2048, "name": "apache2", "cpu": 1.2, "mem": 3.4 }, { "pid": 2049, "name": "postgres", "cpu": 4.5, "mem": 12.1 }, { "pid": 2050, "name": "redis", "cpu": 0.8, "mem": 2.2 }] }
+
+Question: Forcefully terminate the stuck redis server running under PID 8812.
+Call: { "func_call": "kill_process", "pid": 8812, "name": "redis", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 8812, "name": "redis", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Which processes are currently utilizing the highest amount of memory?
+Call: { "func_call": "top_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 5500, "name": "java", "cpu": 22.1, "mem": 45.6 }, { "pid": 5501, "name": "docker", "cpu": 18.3, "mem": 30.2 }, { "pid": 5502, "name": "mongo", "cpu": 10.5, "mem": 25.8 }] }
+
+Question: Send a hangup signal to the apache2 worker with process ID 3301.
+Call: { "func_call": "kill_process", "pid": 3301, "name": "apache2", "signal": "SIGHUP" }
+Response: { "processes": [{ "pid": 3301, "name": "apache2", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Retrieve all running instances of the docker daemon.
+Call: { "func_call": "list_processes", "pid": 0, "name": "docker", "signal": "" }
+Response: { "processes": [{ "pid": 7701, "name": "docker", "cpu": 2.1, "mem": 6.7 }, { "pid": 7702, "name": "docker", "cpu": 0.5, "mem": 1.9 }] }
+
+Question: The postgres database process 4421 has frozen; kill it immediately.
+Call: { "func_call": "kill_process", "pid": 4421, "name": "postgres", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 4421, "name": "postgres", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Fetch the detailed statistics for the java application running as PID 9001.
+Call: { "func_call": "get_process_info", "pid": 9001, "name": "java", "signal": "" }
+Response: { "processes": [{ "pid": 9001, "name": "java", "cpu": 15.4, "mem": 28.9 }] }
+
+Question: Show me every active mongo process and their current CPU load.
+Call: { "func_call": "list_processes", "pid": 0, "name": "mongo", "signal": "" }
+Response: { "processes": [{ "pid": 6100, "name": "mongo", "cpu": 8.2, "mem": 14.5 }, { "pid": 6101, "name": "mongo", "cpu": 0.3, "mem": 3.1 }, { "pid": 6102, "name": "mongo", "cpu": 5.6, "mem": 9.8 }] }
+
+Question: Gracefully stop the redis instance on PID 5544 using the standard termination flag.
+Call: { "func_call": "kill_process", "pid": 5544, "name": "redis", "signal": "SIGTERM" }
+Response: { "processes": [{ "pid": 5544, "name": "redis", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: What is the current resource usage for the systemd process with ID 1?
+Call: { "func_call": "get_process_info", "pid": 1, "name": "systemd", "signal": "" }
+Response: { "processes": [{ "pid": 1, "name": "systemd", "cpu": 0.2, "mem": 0.6 }] }
+
+Question: There is a defunct java process 8888 that needs to be removed; kill it now.
+Call: { "func_call": "kill_process", "pid": 8888, "name": "java", "signal": "SIGKILL" }
+Response: { "processes": [{ "pid": 8888, "name": "java", "cpu": 0.0, "mem": 0.0 }] }
+
+Question: Output a complete list of all processes currently executing on the host.
+Call: { "func_call": "list_processes", "pid": 0, "name": "", "signal": "" }
+Response: { "processes": [{ "pid": 100, "name": "init", "cpu": 0.0, "mem": 0.1 }, { "pid": 300, "name": "udev", "cpu": 0.1, "mem": 0.4 }, { "pid": 500, "name": "rsyslog", "cpu": 0.0, "mem": 0.3 }] }

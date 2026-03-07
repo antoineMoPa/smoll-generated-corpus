@@ -1,0 +1,59 @@
+Context: The green crate weighs 68 kg, while the yellow crate weighs 41 kg.
+Input: {"question": "How much heavier is the green crate than the yellow crate?"}
+Output: {"answer": "27 kg"}
+
+Context: In 2019, the bakery sold 3,400 loaves, but in 2020 sales fell to 2,150 loaves.
+Input: {"question": "What was the decrease in loaf sales from 2019 to 2020?"}
+Output: {"answer": "1,250 loaves"}
+
+Context: Marcus cycled 22.4 kilometers on Friday and 18.9 kilometers on Saturday.
+Input: {"question": "How many more kilometers did Marcus cycle on Friday than on Saturday?"}
+Output: {"answer": "3.5 kilometers"}
+
+Context: The legacy database handles 300 queries per minute, while the updated system manages 750 queries per minute.
+Input: {"question": "By how many queries per minute does the updated system surpass the legacy database?"}
+Output: {"answer": "450 queries per minute"}
+
+Context: Studio Unit C rents for $1,400 monthly, and Studio Unit D rents for $1,625 monthly.
+Input: {"question": "What is the price difference between Studio Unit D and Studio Unit C?"}
+Output: {"answer": "$225"}
+
+Context: The primary reservoir contains 8,000 gallons, whereas the secondary reservoir holds 5,500 gallons.
+Input: {"question": "How much greater is the volume of the primary reservoir compared to the secondary one?"}
+Output: {"answer": "2,500 gallons"}
+
+Context: The home team finished with 102 points, and the visiting team ended with 94 points.
+Input: {"question": "By how many points did the home team win?"}
+Output: {"answer": "8 points"}
+
+Context: The train ride to Chicago lasts 5 hours, but the journey to Denver takes 14 hours.
+Input: {"question": "How many hours longer is the trip to Denver than the trip to Chicago?"}
+Output: {"answer": "9 hours"}
+
+Context: Shop A moved 5,200 units this month, while Shop B moved 4,875 units.
+Input: {"question": "How many more units did Shop A sell than Shop B?"}
+Output: {"answer": "325 units"}
+
+Context: Model X operates for 30 hours on a single charge, while Model Y runs for 42 hours.
+Input: {"question": "By how many hours does Model Y exceed Model X in battery life?"}
+Output: {"answer": "12 hours"}
+
+Context: Tower North stands at 450 meters, and Tower South reaches 380 meters.
+Input: {"question": "What is the height difference between Tower North and Tower South?"}
+Output: {"answer": "70 meters"}
+
+Context: The recipe calls for 200 grams of sugar, but the bowl currently contains only 145 grams.
+Input: {"question": "How many grams of sugar are missing from the current amount?"}
+Output: {"answer": "55 grams"}
+
+Context: Task One required 30 minutes to finish, whereas Task Two took 55 minutes.
+Input: {"question": "How many additional minutes did Task Two take compared to Task One?"}
+Output: {"answer": "25 minutes"}
+
+Context: The humidity in Miami was 85%, while the humidity in Denver was 40%.
+Input: {"question": "By what percentage was the humidity higher in Miami than in Denver?"}
+Output: {"answer": "45%"}
+
+Context: Campus Library East owns 15,000 volumes, and Campus Library West owns 11,200 volumes.
+Input: {"question": "How many more volumes does Library East have than Library West?"}
+Output: {"answer": "3,800 volumes"}

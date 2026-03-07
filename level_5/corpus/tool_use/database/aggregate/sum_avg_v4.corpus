@@ -1,0 +1,51 @@
+Available Tools: sum_column | avg_column | group_by_query | min_max_query
+Call Schema: { "func_call": "string", "table": "string", "column": "string", "group_by": "string", "where": "string" }
+Response Schema: { "result": number, "groups": [{ "key": "string", "value": number }] }
+---
+Question: What is the total energy consumption recorded for the 'downtown' district last month?
+Call: { "func_call": "sum_column", "table": "utility_logs", "column": "kwh_used", "group_by": "", "where": "district = 'downtown' AND date >= '2023-11-01'" }
+Response: { "result": 892340.00, "groups": [] }
+
+Question: Calculate the average delivery time in minutes for orders shipped via express courier.
+Call: { "func_call": "avg_column", "table": "shipments", "column": "delivery_minutes", "group_by": "", "where": "shipping_method = 'express'" }
+Response: { "result": 45.2, "groups": [] }
+
+Question: Get the sum of donation amounts for all contributions received during the winter campaign.
+Call: { "func_call": "sum_column", "table": "donations", "column": "amount", "group_by": "", "where": "campaign = 'winter_2023'" }
+Response: { "result": 56780.25, "groups": [] }
+
+Question: What is the average test score for students enrolled in the 'Biology 101' course?
+Call: { "func_call": "avg_column", "table": "exam_results", "column": "score", "group_by": "", "where": "course_name = 'Biology 101'" }
+Response: { "result": 78.9, "groups": [] }
+
+Question: Sum the total rainfall recorded grouped by weather station for the monsoon season.
+Call: { "func_call": "sum_column", "table": "weather_data", "column": "rainfall_mm", "group_by": "station_id", "where": "season = 'monsoon'" }
+Response: { "result": 0, "groups": [{ "key": "WS-01", "value": 450.5 }, { "key": "WS-02", "value": 380.2 }, { "key": "WS-03", "value": 510.8 }] }
+
+Question: Calculate the average salary of employees grouped by their department code.
+Call: { "func_call": "avg_column", "table": "employees", "column": "annual_salary", "group_by": "dept_code", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "ENG", "value": 95000.00 }, { "key": "HR", "value": 62000.50 }, { "key": "SALES", "value": 78500.75 }] }
+
+Question: What is the total number of tickets sold grouped by event type for the summer festival?
+Call: { "func_call": "sum_column", "table": "ticket_sales", "column": "quantity", "group_by": "event_type", "where": "festival = 'summer_2023'" }
+Response: { "result": 0, "groups": [{ "key": "Concert", "value": 15000 }, { "key": "Workshop", "value": 3200 }, { "key": "Exhibit", "value": 8500 }] }
+
+Question: Find the average fuel efficiency grouped by vehicle model for the fleet report.
+Call: { "func_call": "avg_column", "table": "fleet_logs", "column": "mpg", "group_by": "vehicle_model", "where": "" }
+Response: { "result": 0, "groups": [{ "key": "Model X", "value": 32.5 }, { "key": "Model Y", "value": 28.3 }, { "key": "Model Z", "value": 35.1 }] }
+
+Question: Sum the repair costs for all machinery maintained in the 'North Plant' facility.
+Call: { "func_call": "sum_column", "table": "maintenance_records", "column": "cost", "group_by": "", "where": "facility = 'North Plant' AND type = 'repair'" }
+Response: { "result": 14520.80, "groups": [] }
+
+Question: What is the average rating of movies directed by 'Christopher Nolan'?
+Call: { "func_call": "avg_column", "table": "movies", "column": "imdb_rating", "group_by": "", "where": "director = 'Christopher Nolan'" }
+Response: { "result": 8.65, "groups": [] }
+
+Question: Calculate the total website traffic grouped by traffic source for organic and paid channels.
+Call: { "func_call": "sum_column", "table": "web_analytics", "column": "visits", "group_by": "source_type", "where": "source_type IN ('organic', 'paid')" }
+Response: { "result": 0, "groups": [{ "key": "organic", "value": 450000 }, { "key": "paid", "value": 125000 }] }
+
+Question: Get the average insurance claim amount grouped by policy type for approved claims.
+Call: { "func_call": "avg_column", "table": "claims", "column": "payout_amount", "group_by": "policy_type", "where": "status = 'approved'" }
+Response: { "result": 0, "groups": [{ "key": "Auto", "value": 3200.50 }, { "key": "Home", "value": 15400.25 }, { "key": "Life", "value": 50000.00 }] }

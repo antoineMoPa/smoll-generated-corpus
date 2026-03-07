@@ -1,0 +1,51 @@
+Available Tools: create_subscription | cancel_subscription | pause_subscription | update_plan | get_subscription
+Call Schema: { "func_call": "string", "customer_id": "string", "plan_id": "string", "trial_days": number }
+Response Schema: { "subscription_id": "string", "status": "active|canceled|paused|trialing", "plan": "string", "current_period_end": "string" }
+---
+Question: Suspend the account for client cust_5091 immediately due to a security breach alert.
+Call: { "func_call": "pause_subscription", "customer_id": "cust_5091", "plan_id": "plan_security_pro", "trial_days": 0 }
+Response: { "subscription_id": "sub_10293", "status": "paused", "plan": "plan_security_pro", "current_period_end": "2024-06-14T00:00:00Z" }
+
+Question: Migrate customer cust_7722 from the lite monthly tier to the elite yearly tier with immediate proration.
+Call: { "func_call": "update_plan", "customer_id": "cust_7722", "plan_id": "plan_elite_yearly", "trial_days": 0 }
+Response: { "subscription_id": "sub_88412", "status": "active", "plan": "plan_elite_yearly", "current_period_end": "2025-01-20T00:00:00Z" }
+
+Question: Place a temporary hold on services for cust_3388 while they review their usage metrics.
+Call: { "func_call": "pause_subscription", "customer_id": "cust_3388", "plan_id": "plan_analytics_basic", "trial_days": 0 }
+Response: { "subscription_id": "sub_55129", "status": "paused", "plan": "plan_analytics_basic", "current_period_end": "2024-07-05T00:00:00Z" }
+
+Question: Upgrade cust_9944 to the maximum throughput plan effective immediately, billing the difference now.
+Call: { "func_call": "update_plan", "customer_id": "cust_9944", "plan_id": "plan_throughput_max", "trial_days": 0 }
+Response: { "subscription_id": "sub_66734", "status": "active", "plan": "plan_throughput_max", "current_period_end": "2024-08-11T00:00:00Z" }
+
+Question: Pause the subscription for cust_2255 at the end of the current billing cycle per user request.
+Call: { "func_call": "pause_subscription", "customer_id": "cust_2255", "plan_id": "plan_creator_monthly", "trial_days": 0 }
+Response: { "subscription_id": "sub_44982", "status": "paused", "plan": "plan_creator_monthly", "current_period_end": "2024-09-30T00:00:00Z" }
+
+Question: Switch cust_6611 from the standard annual package to the premium annual package with prorated fees.
+Call: { "func_call": "update_plan", "customer_id": "cust_6611", "plan_id": "plan_premium_annual", "trial_days": 0 }
+Response: { "subscription_id": "sub_33219", "status": "active", "plan": "plan_premium_annual", "current_period_end": "2025-02-14T00:00:00Z" }
+
+Question: Immediately suspend access for cust_8833 due to terms of service violation.
+Call: { "func_call": "pause_subscription", "customer_id": "cust_8833", "plan_id": "plan_community_plus", "trial_days": 0 }
+Response: { "subscription_id": "sub_77561", "status": "paused", "plan": "plan_community_plus", "current_period_end": "2024-05-22T00:00:00Z" }
+
+Question: Upgrade customer cust_1199 to the developer tier immediately, applying credits for the unused portion.
+Call: { "func_call": "update_plan", "customer_id": "cust_1199", "plan_id": "plan_developer_monthly", "trial_days": 0 }
+Response: { "subscription_id": "sub_99887", "status": "active", "plan": "plan_developer_monthly", "current_period_end": "2024-10-05T00:00:00Z" }
+
+Question: Pause the service for cust_4477 temporarily while their payment method is updated.
+Call: { "func_call": "pause_subscription", "customer_id": "cust_4477", "plan_id": "plan_startup_monthly", "trial_days": 0 }
+Response: { "subscription_id": "sub_22654", "status": "paused", "plan": "plan_startup_monthly", "current_period_end": "2024-11-12T00:00:00Z" }
+
+Question: Move cust_5522 from the quarterly basic plan to the quarterly advanced plan effective immediately.
+Call: { "func_call": "update_plan", "customer_id": "cust_5522", "plan_id": "plan_advanced_quarterly", "trial_days": 0 }
+Response: { "subscription_id": "sub_11432", "status": "active", "plan": "plan_advanced_quarterly", "current_period_end": "2024-12-01T00:00:00Z" }
+
+Question: Halt the subscription for cust_7766 immediately due to suspected unauthorized access.
+Call: { "func_call": "pause_subscription", "customer_id": "cust_7766", "plan_id": "plan_enterprise_lite", "trial_days": 0 }
+Response: { "subscription_id": "sub_88901", "status": "paused", "plan": "plan_enterprise_lite", "current_period_end": "2024-06-28T00:00:00Z" }
+
+Question: Upgrade cust_3344 to the global scale plan at the next renewal to minimize upfront costs.
+Call: { "func_call": "update_plan", "customer_id": "cust_3344", "plan_id": "plan_global_scale", "trial_days": 0 }
+Response: { "subscription_id": "sub_55678", "status": "active", "plan": "plan_global_scale", "current_period_end": "2025-03-15T00:00:00Z" }

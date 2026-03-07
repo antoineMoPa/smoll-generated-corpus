@@ -1,0 +1,39 @@
+| Context: The garden center stocked 40 bags of potting soil, 25 bags of mulch, and 60 bags of fertilizer for the spring season. Each pallet was tagged with the product name and weight. Staff arranged them by the entrance for easy access. | Input: {"question": "What quantities were stocked?"} | Output: {"answer": ["40 bags", "25 bags", "60 bags"]}
+
+| Context: At the auction, the antique vase sold for $1,200.00, the painting went for $3,500.00, and the sculpture fetched $850.00. The auctioneer closed the bidding promptly at 5 PM. Buyers collected their items the following day. | Input: {"question": "List all final sale prices."} | Output: {"answer": ["$1,200.00", "$3,500.00", "$850.00"]}
+
+| Context: The coding bootcamp lasted 12 weeks in total, with 4 weeks dedicated to frontend, 5 weeks to backend, and 3 weeks to capstone projects. Students worked in teams throughout the curriculum. Graduation ceremonies were held on Friday. | Input: {"question": "What were the durations for each module?"} | Output: {"answer": ["4 weeks", "5 weeks", "3 weeks"]}
+
+| Context: The catering order includes 200 napkins, 150 plates, and 300 cups for the corporate event. The vendor promised delivery by 8 AM sharp. Setup crews will arrange the tables immediately upon arrival. | Input: {"question": "What quantities were requested?"} | Output: {"answer": ["200 napkins", "150 plates", "300 cups"]}
+
+| Context: The smoothie recipe needs 1 cup of strawberries, 2 bananas, and 0.5 cups of yogurt. Blend until smooth and serve chilled. Optional honey can be added for sweetness. | Input: {"question": "List all ingredient amounts in the recipe."} | Output: {"answer": ["1 cup", "2 bananas", "0.5 cups"]}
+
+| Context: The landscaping job used 10 cubic yards of topsoil, 5 cubic yards of compost, and 2 cubic yards of river rock. The crew spread the materials evenly across the yard. The homeowner inspected the work before signing off. | Input: {"question": "What quantities of materials were used?"} | Output: {"answer": ["10 cubic yards", "5 cubic yards", "2 cubic yards"]}
+
+| Context: Entry fees for the museum are $15.00 for adults, $10.00 for seniors, and $8.00 for children under 12. Groups of ten or more receive a special discount rate. Tickets can be purchased online or at the door. | Input: {"question": "List all ticket prices mentioned."} | Output: {"answer": ["$15.00", "$10.00", "$8.00"]}
+
+| Context: The seedling grew 1.2cm in week one, 1.8cm in week two, and 2.1cm in week three. The botanist documented the acceleration in growth. Nutrient levels were adjusted to support further development. | Input: {"question": "What growth measurements were observed?"} | Output: {"answer": ["1.2cm", "1.8cm", "2.1cm"]}
+
+| Context: The laboratory maintains a pressure of 100 kPa, a temperature of 22°C, and a humidity level of 50%. Automated systems adjust these parameters constantly. Researchers rely on stable conditions for accurate results. | Input: {"question": "List all environmental settings mentioned."} | Output: {"answer": ["100 kPa", "22°C", "50%"]}
+
+| Context: He ordered 10 reams of paper, 4 boxes of pens, and 6 binders for the office supply closet. The shipment arrived via courier before lunch. Staff distributed the items to their respective desks. | Input: {"question": "What quantities were ordered?"} | Output: {"answer": ["10 reams", "4 boxes", "6 binders"]}
+
+| Context: The water bill listed charges of $45.30 for April, $52.15 for May, and $48.90 for June. Consumption increased slightly during the hotter months. The homeowner decided to install low-flow fixtures. | Input: {"question": "List all amounts billed."} | Output: {"answer": ["$45.30", "$52.15", "$48.90"]}
+
+| Context: The railway line covers 200 kilometers total, divided into a 80 kilometer urban section, a 90 kilometer rural section, and a 30 kilometer mountain pass. Trains reduce speed in the final segment. Maintenance crews inspect the tracks weekly. | Input: {"question": "What distances are specified for the sections?"} | Output: {"answer": ["200 kilometers", "80 kilometers", "90 kilometers", "30 kilometers"]}
+
+| Context: The bakery baked 800 loaves on Thursday, 920 on Friday, and 750 on Saturday. Demand surged over the weekend due to the local festival. Extra staff were hired to handle the volume. | Input: {"question": "What production numbers were recorded?"} | Output: {"answer": ["800 loaves", "920 loaves", "750 loaves"]}
+
+| Context: Mix 15ml of solution X, 30ml of solution Y, and 10ml of distilled water in the beaker. Heat the mixture gently over a low flame. A color change indicates the reaction is complete. | Input: {"question": "What volumes of liquids are required?"} | Output: {"answer": ["15ml", "30ml", "10ml"]}
+
+| Context: The car dealership advertised a sedan for $28,000, an SUV for $35,500, and a truck for $42,000. Test drives were available throughout the weekend. Financing options were discussed with every visitor. | Input: {"question": "List all vehicle prices shown."} | Output: {"answer": ["$28,000", "$35,500", "$42,000"]}
+
+| Context: The bus ride took 45 minutes to the city center, followed by a 15-minute transfer wait, and then 30 minutes to the stadium. Commuters checked their watches frequently. The total trip time was just over an hour. | Input: {"question": "What time intervals are mentioned for the journey?"} | Output: {"answer": ["45 minutes", "15 minutes", "30 minutes"]}
+
+| Context: The yoga studio charges $20.00 for a drop-in class, $150.00 for a 10-class pack, and $500.00 for an unlimited annual membership. First-time visitors get a free trial session. Classes fill up quickly in the evenings. | Input: {"question": "List all pricing options mentioned."} | Output: {"answer": ["$20.00", "$150.00", "$500.00"]}
+
+| Context: The pool holds 15,000 gallons of water, needs 3 pounds of chlorine, and requires 1 pound of pH stabilizer. Cleaning the filter takes about an hour. Swimmers can enter once chemical levels balance. | Input: {"question": "What quantities are needed for maintenance?"} | Output: {"answer": ["15,000 gallons", "3 pounds", "1 pound"]}
+
+| Context: The warehouse audit found 200 headphones, 150 speakers, and 300 microphones on the shelves. Some units were marked for return to the manufacturer. The supervisor logged the discrepancies in the system. | Input: {"question": "What item counts were discovered?"} | Output: {"answer": ["200 headphones", "150 speakers", "300 microphones"]}
+
+| Context: The epoxy resin mix needs 1 liter of part A, 1 liter of part B, and 0.1 liters of pigment. Pour the mixture slowly to avoid air bubbles. Curing takes exactly 24 hours at room temperature. | Input: {"question": "List all volume measurements for the resin."} | Output: {"answer": ["1 liter", "1 liter", "0.1 liters"]}

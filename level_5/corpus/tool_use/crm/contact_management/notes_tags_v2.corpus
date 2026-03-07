@@ -1,0 +1,79 @@
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Log a note for contact C-3392, James Wilson at CloudNine Systems, recording his request for a custom onboarding session next month.
+Call: { "func_call": "add_note", "contact_id": "C-3392", "name": "James Wilson", "email": "jwilson@cloudninesys.com", "company": "CloudNine Systems", "note": "James requested a tailored onboarding session focused on security protocols. Preferred dates are between the 15th and 20th of next month. Account manager to coordinate with the training team." }
+Response: { "contact_id": "C-3392", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Apply the 'Referral-Source' tag to contact C-4511, Maria Garcia at Swift Transport, as she referred three new prospects this week.
+Call: { "func_call": "add_tag", "contact_id": "C-4511", "name": "Maria Garcia", "email": "mgarcia@swifttrans.net", "company": "Swift Transport", "note": "Referral-Source" }
+Response: { "contact_id": "C-4511", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add a meeting recap for contact C-5678, Kevin Lee at Horizon Health, noting approval from the board for the annual subscription.
+Call: { "func_call": "add_note", "contact_id": "C-5678", "name": "Kevin Lee", "email": "klee@horizonhealth.org", "company": "Horizon Health", "note": "Board meeting concluded with unanimous approval for the annual enterprise subscription. Kevin will sign the final paperwork by Friday. Implementation kickoff scheduled for the first week of December." }
+Response: { "contact_id": "C-5678", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Tag contact C-6234, Rachel Green at Urban Plan, with 'City-Pilot' since her municipality was selected for the beta program.
+Call: { "func_call": "add_tag", "contact_id": "C-6234", "name": "Rachel Green", "email": "rgreen@urbanplan.gov", "company": "Urban Plan", "note": "City-Pilot" }
+Response: { "contact_id": "C-6234", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Record a support ticket summary for contact C-7890, Daniel Brown at TechFlow, regarding the API latency issues reported yesterday.
+Call: { "func_call": "add_note", "contact_id": "C-7890", "name": "Daniel Brown", "email": "dbrown@techflow.io", "company": "TechFlow", "note": "Support ticket #4421: Daniel reported intermittent API latency spikes affecting their dashboard load times. Engineering team identified a database indexing bottleneck and deployed a hotfix. Monitoring ongoing for the next 24 hours." }
+Response: { "contact_id": "C-7890", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Assign the 'Upsell-Opportunity' tag to contact C-8123, Sophie Martin at Bright Retail, due to her recent store expansion plans.
+Call: { "func_call": "add_tag", "contact_id": "C-8123", "name": "Sophie Martin", "email": "smartin@brightretail.com", "company": "Bright Retail", "note": "Upsell-Opportunity" }
+Response: { "contact_id": "C-8123", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Add a note to contact C-9456, Chris Evans at Peak Performance, summarizing the negotiation on volume discounts for the upcoming renewal.
+Call: { "func_call": "add_note", "contact_id": "C-9456", "name": "Chris Evans", "email": "cevans@peakperf.com", "company": "Peak Performance", "note": "Renewal negotiation update: Chris is seeking a 15% volume discount based on increased user count. Proposed a tiered pricing model that offers 10% immediately and an additional 5% upon reaching 500 active seats. Waiting for his feedback on the counter-offer." }
+Response: { "contact_id": "C-9456", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Tag contact C-1089, Laura White at DataStream, as 'Technical-Champion' after she led the successful internal demo.
+Call: { "func_call": "add_tag", "contact_id": "C-1089", "name": "Laura White", "email": "lwhite@datastream.co", "company": "DataStream", "note": "Technical-Champion" }
+Response: { "contact_id": "C-1089", "status": "success", "updated_fields": ["tags"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Log a feedback note for contact C-2345, Michael Scott at Paper Co, regarding his suggestion for a mobile app feature.
+Call: { "func_call": "add_note", "contact_id": "C-2345", "name": "Michael Scott", "email": "mscott@paperco.com", "company": "Paper Co", "note": "Product feedback: Michael suggested adding an offline mode to the mobile app for field workers with poor connectivity. This aligns with our Q3 roadmap. Product team to evaluate feasibility and provide an estimated timeline by next Friday." }
+Response: { "contact_id": "C-2345", "status": "success", "updated_fields": ["notes"] }
+
+Available Tools: create_contact | update_contact | delete_contact | add_note | add_tag
+Call Schema: { "func_call": "string", "contact_id": "string", "name": "string", "email": "string", "company": "string", "note": "string" }
+Response Schema: { "contact_id": "string", "status": "string", "updated_fields": ["string"] }
+---
+Question: Apply the 'VIP-Support' tag to contact C-3678, Jennifer Lopez at Star Media, given her high-profile account status.
+Call: { "func_call": "add_tag", "contact_id": "C-3678", "name": "Jennifer Lopez", "email": "jlopez@starmedia.tv", "company": "Star Media", "note": "VIP-Support" }
+Response: { "contact_id": "C-3678", "status": "success", "updated_fields": ["tags"] }

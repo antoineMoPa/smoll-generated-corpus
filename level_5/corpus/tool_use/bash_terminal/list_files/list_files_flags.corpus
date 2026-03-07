@@ -1,0 +1,51 @@
+Available Tools: ls | ls_la | ls_lh | ls_R
+Call Schema: { "func_call": "string", "path": "string", "flags": "string" }
+Response Schema: { "entries": ["string"], "count": number }
+---
+Question: List all files including hidden ones in the home directory with detailed info.
+Call: { "func_call": "ls_la", "path": "/home/alice", "flags": "-la" }
+Response: { "entries": ["drwxr-xr-x 5 alice alice 4096 Oct 10 09:23 .", "drwxr-xr-x 3 root root 4096 Sep 01 12:00 ..", "-rw------- 1 alice alice  234 Oct 10 09:23 .bash_history", "-rw-r--r-- 1 alice alice  892 Oct 10 08:15 .bashrc", "drwxr-xr-x 2 alice alice 4096 Oct 09 14:20 Documents"], "count": 5 }
+
+Question: Show human-readable file sizes in the downloads folder.
+Call: { "func_call": "ls_lh", "path": "/home/alice/Downloads", "flags": "-lh" }
+Response: { "entries": ["total 1.2G", "-rw-r--r-- 1 alice alice 450M Oct 11 10:00 ubuntu-24.04.iso", "-rw-r--r-- 1 alice alice  12M Oct 11 11:30 report_final.pdf", "-rw-r--r-- 1 alice alice 8.5K Oct 11 12:15 notes.txt"], "count": 4 }
+
+Question: Recursively list everything in the project src directory.
+Call: { "func_call": "ls_R", "path": "/var/www/project/src", "flags": "-R" }
+Response: { "entries": [".:", "index.html", "styles.css", "./components:", "header.js", "footer.js", "./utils:", "helpers.py"], "count": 7 }
+
+Question: List files in /etc sorted by size.
+Call: { "func_call": "ls", "path": "/etc", "flags": "--sort=size" }
+Response: { "entries": ["services", "passwd", "shadow", "hostname", "fstab"], "count": 5 }
+
+Question: Show hidden files only in the current directory.
+Call: { "func_call": "ls", "path": ".", "flags": "-a" }
+Response: { "entries": [".", "..", ".git", ".env", ".config"], "count": 5 }
+
+Question: List files in /var/log sorted by modification time.
+Call: { "func_call": "ls", "path": "/var/log", "flags": "-lt" }
+Response: { "entries": ["syslog", "auth.log", "kern.log", "dpkg.log", "alternatives.log"], "count": 5 }
+
+Question: Get a long listing of the /tmp directory with all files.
+Call: { "func_call": "ls_la", "path": "/tmp", "flags": "-la" }
+Response: { "entries": ["drwxrwxrwt 10 root root 4096 Oct 12 14:00 .", "drwxr-xr-x 18 root root 4096 Oct 01 00:00 ..", "-rw------- 1 user user 0 Oct 12 13:55 .X0-lock", "-rw-r--r-- 1 root root 120 Oct 12 12:00 systemd-private-xyz"], "count": 4 }
+
+Question: Display human-readable sizes for the backup volume.
+Call: { "func_call": "ls_lh", "path": "/mnt/backup/2023", "flags": "-lh" }
+Response: { "entries": ["total 4.5T", "drwxr-xr-x 2 root root 4.0K Jan 01 00:00 Q1", "drwxr-xr-x 2 root root 4.0K Apr 01 00:00 Q2", "-rw-r--r-- 1 root root 2.1T Dec 31 23:59 full_archive.tar.gz"], "count": 4 }
+
+Question: Recursive list of the node_modules folder depth.
+Call: { "func_call": "ls_R", "path": "/home/dev/webapp/node_modules", "flags": "-R" }
+Response: { "entries": [".:", "react", "lodash", "./react:", "index.js", "package.json", "./lodash:", "core.js"], "count": 7 }
+
+Question: List contents of /usr/bin sorted by file size descending.
+Call: { "func_call": "ls", "path": "/usr/bin", "flags": "--sort=size" }
+Response: { "entries": ["python3.11", "gcc", "make", "ls", "cat"], "count": 5 }
+
+Question: Show all entries including dotfiles in the .ssh directory.
+Call: { "func_call": "ls", "path": "/home/bob/.ssh", "flags": "-a" }
+Response: { "entries": [".", "..", "id_rsa", "id_rsa.pub", "authorized_keys", "known_hosts"], "count": 6 }
+
+Question: List recent logs in /var/log/journal sorted by time.
+Call: { "func_call": "ls", "path": "/var/log/journal", "flags": "-lt" }
+Response: { "entries": ["e8f2a1b2c3d4e5f6", "a1b2c3d4e5f6g7h8", "system.journal", "user-1000.journal"], "count": 4 }

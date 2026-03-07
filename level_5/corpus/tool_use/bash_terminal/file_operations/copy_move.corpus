@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Copy the configuration file from the home directory to the temporary folder.
+Call: { "func_call": "copy_file", "source": "/home/user/.bashrc", "destination": "/tmp/bashrc_backup" }
+Response: { "success": true, "message": "Successfully copied /home/user/.bashrc to /tmp/bashrc_backup" }
+
+Question: Move the old log archive to the backup directory.
+Call: { "func_call": "move_file", "source": "/var/log/syslog.1", "destination": "/var/backup/logs/syslog.1.gz" }
+Response: { "success": true, "message": "Successfully moved /var/log/syslog.1 to /var/backup/logs/syslog.1.gz" }
+
+Question: Create a backup copy of the database dump before updating.
+Call: { "func_call": "copy_file", "source": "/home/admin/db_dump.sql", "destination": "/var/backup/db/db_dump_20231027.sql" }
+Response: { "success": true, "message": "Successfully copied /home/admin/db_dump.sql to /var/backup/db/db_dump_20231027.sql" }
+
+Question: Relocate the downloaded installer to the software repository.
+Call: { "func_call": "move_file", "source": "/tmp/installer_v2.run", "destination": "/var/backup/software/installer_v2.run" }
+Response: { "success": true, "message": "Successfully moved /tmp/installer_v2.run to /var/backup/software/installer_v2.run" }
+
+Question: Duplicate the ssh key to a safe location in tmp for testing.
+Call: { "func_call": "copy_file", "source": "/home/user/.ssh/id_rsa", "destination": "/tmp/test_key" }
+Response: { "success": false, "message": "Permission denied: cannot read /home/user/.ssh/id_rsa" }
+
+Question: Move the temporary cache file to the permanent storage area.
+Call: { "func_call": "move_file", "source": "/tmp/cache_data.tmp", "destination": "/var/backup/cache/data_001.tmp" }
+Response: { "success": true, "message": "Successfully moved /tmp/cache_data.tmp to /var/backup/cache/data_001.tmp" }
+
+Question: Copy the nginx configuration to the backup folder with a date stamp.
+Call: { "func_call": "copy_file", "source": "/etc/nginx/nginx.conf", "destination": "/var/backup/configs/nginx.conf.bak" }
+Response: { "success": true, "message": "Successfully copied /etc/nginx/nginx.conf to /var/backup/configs/nginx.conf.bak" }
+
+Question: Move the user's resume to the documents archive.
+Call: { "func_call": "move_file", "source": "/home/john/resume_draft.docx", "destination": "/var/backup/users/john/resume_final.docx" }
+Response: { "success": true, "message": "Successfully moved /home/john/resume_draft.docx to /var/backup/users/john/resume_final.docx" }
+
+Question: Copy the script to the temporary execution directory.
+Call: { "func_call": "copy_file", "source": "/home/dev/scripts/cleanup.sh", "destination": "/tmp/cleanup_exec.sh" }
+Response: { "success": true, "message": "Successfully copied /home/dev/scripts/cleanup.sh to /tmp/cleanup_exec.sh" }
+
+Question: Move the rotated log file to long-term storage.
+Call: { "func_call": "move_file", "source": "/var/log/app/error.log.1", "destination": "/var/backup/logs/app/error.log.1" }
+Response: { "success": true, "message": "Successfully moved /var/log/app/error.log.1 to /var/backup/logs/app/error.log.1" }
+
+Question: Copy the hosts file to a backup location before editing.
+Call: { "func_call": "copy_file", "source": "/etc/hosts", "destination": "/var/backup/etc/hosts.pre-edit" }
+Response: { "success": true, "message": "Successfully copied /etc/hosts to /var/backup/etc/hosts.pre-edit" }
+
+Question: Move the large video file from tmp to the media archive.
+Call: { "func_call": "move_file", "source": "/tmp/render_output.mp4", "destination": "/var/backup/media/projects/render_output.mp4" }
+Response: { "success": false, "message": "No space left on device at /var/backup/media" }

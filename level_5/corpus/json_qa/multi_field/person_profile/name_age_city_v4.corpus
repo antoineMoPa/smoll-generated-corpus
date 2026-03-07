@@ -1,0 +1,29 @@
+Context: Rachel Green is a 31-year-old veterinarian living in San Diego. She recently opened a new animal clinic near the beach. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Rachel Green", "age": "31", "city": "San Diego"}
+
+Context: Living in Atlanta, Marcus Johnson celebrated his 44th birthday last month. He works as a logistics manager for a shipping company. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Marcus Johnson", "age": "44", "city": "Atlanta"}
+
+Context: At 58 years old, Fatima Al-Fayed resides in Houston and enjoys gardening in her backyard. She is a retired civil engineer. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Fatima Al-Fayed", "age": "58", "city": "Houston"}
+
+Context: Leo Rossi, a 26-year-old barista, has called Burlington home for three years. His coffee shop is famous for its homemade pastries. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Leo Rossi", "age": "26", "city": "Burlington"}
+
+Context: Aisha Khan is 20 and currently attends university in Toronto. She majors in environmental science and lives off-campus. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Aisha Khan", "age": "20", "city": "Toronto"}
+
+Context: In Las Vegas, 63-year-old Harold Miller runs a successful magic supply store. He moved there from Indiana fifteen years ago. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Harold Miller", "age": "63", "city": "Las Vegas"}
+
+Context: Yuki Tanaka is a 35-year-old photographer based in Kyoto. She specializes in traditional tea ceremony portraits. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Yuki Tanaka", "age": "35", "city": "Kyoto"}
+
+Context: Originally from Oslo, 52-year-old Lars Andersen now works as a marine biologist. He studies Arctic fish populations. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Lars Andersen", "age": "52", "city": "Oslo"}
+
+Context: Chloe Martin, aged 28, is a nurse practitioner stationed in Raleigh. She has worked in the pediatric ward since graduation. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Chloe Martin", "age": "28", "city": "Raleigh"}
+
+Context: Raj Sharma is 39 years old and works as a data analyst in Bangalore. He leads a team developing AI solutions for healthcare. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Raj Sharma", "age": "39", "city": "Bangalore"}
+
+Context: Beatrice Moreau, a 67-year-old retired librarian, spends her summers in Nice. She volunteers at the local museum during winter. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Beatrice Moreau", "age": "67", "city": "Nice"}
+
+Context: Daniel Costa is 42 and teaches high school chemistry in Rio de Janeiro. He coaches the school's robotics club after hours. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Daniel Costa", "age": "42", "city": "Rio de Janeiro"}
+
+Context: At the age of 23, Emma Wilson manages a vintage clothing store in Brighton. She is known for curating unique 1980s fashion collections. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Emma Wilson", "age": "23", "city": "Brighton"}
+
+Context: Noah Clark, 30, is an architect at a design firm in Melbourne. He focuses on sustainable housing projects for the region. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Noah Clark", "age": "30", "city": "Melbourne"}
+
+Context: Sofia Petrova is a 49-year-old sculptor living in Prague. She creates large-scale installations for public parks. | Input: {"extract": ["name", "age", "city"]} | Output: {"name": "Sofia Petrova", "age": "49", "city": "Prague"}

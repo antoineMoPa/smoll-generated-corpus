@@ -1,0 +1,59 @@
+Context: The florist arranged fifteen roses and ten lilies for the wedding.
+Input: {"question": "How many lilies did the florist arrange?"}
+Output: {"answer": "ten"}
+
+Context: There are four tires on a standard car excluding the spare.
+Input: {"question": "How many tires are on a standard car?"}
+Output: {"answer": "four"}
+
+Context: James purchased six notebooks, three pens, and one stapler at the store.
+Input: {"question": "How many pens did James purchase?"}
+Output: {"answer": "three"}
+
+Context: The new museum displays eighty ancient statues in the east wing.
+Input: {"question": "How many statues are in the east wing of the new museum?"}
+Output: {"answer": "eighty"}
+
+Context: At the conference, twelve engineers from robotics and five from AI were seated.
+Input: {"question": "How many engineers from AI were seated at the conference?"}
+Output: {"answer": "five"}
+
+Context: A chessboard consists of sixty-four squares alternating in color.
+Input: {"question": "How many squares are on a chessboard?"}
+Output: {"answer": "sixty-four"}
+
+Context: The cake recipe requires three eggs and half a cup of milk.
+Input: {"question": "How many eggs does the cake recipe require?"}
+Output: {"answer": "three"}
+
+Context: Eight volunteers signed up to clean the park this weekend.
+Input: {"question": "How many volunteers signed up to clean the park?"}
+Output: {"answer": "Eight"}
+
+Context: The Auditorium seats one thousand people but only six hundred attended the show.
+Input: {"question": "How many people attended the show?"}
+Output: {"answer": "six hundred"}
+
+Context: Her aunt worked at the bank for twenty-five years before retiring.
+Input: {"question": "How many years did her aunt work at the bank?"}
+Output: {"answer": "twenty-five"}
+
+Context: The crate holds thirty-six oranges packed in six layers.
+Input: {"question": "How many oranges are in the crate?"}
+Output: {"answer": "thirty-six"}
+
+Context: Nine squirrels were gathering nuts in the yard before the storm.
+Input: {"question": "How many squirrels were gathering nuts?"}
+Output: {"answer": "Nine"}
+
+Context: The cyclist finished the tour in two hours and forty minutes.
+Input: {"question": "How many hours did it take the cyclist to finish?"}
+Output: {"answer": "two"}
+
+Context: They ordered fourteen sandwiches to share among the group.
+Input: {"question": "How many sandwiches did they order?"}
+Output: {"answer": "fourteen"}
+
+Context: The bag contained seventy-five coins of different denominations.
+Input: {"question": "How many coins were in the bag?"}
+Output: {"answer": "seventy-five"}

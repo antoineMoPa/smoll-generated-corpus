@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Duplicate the environment variables file to the staging area.
+Call: { "func_call": "copy_file", "source": "/home/deploy/.env", "destination": "/tmp/staging/.env_copy" }
+Response: { "success": true, "message": "Successfully copied /home/deploy/.env to /tmp/staging/.env_copy" }
+
+Question: Transfer the compressed dataset to the analysis folder.
+Call: { "func_call": "move_file", "source": "/tmp/data_export.zip", "destination": "/var/analysis/datasets/export_2023.zip" }
+Response: { "success": true, "message": "Successfully moved /tmp/data_export.zip to /var/analysis/datasets/export_2023.zip" }
+
+Question: Create a snapshot of the firewall rules before modification.
+Call: { "func_call": "copy_file", "source": "/etc/iptables/rules.v4", "destination": "/var/backup/net/rules.v4.snapshot" }
+Response: { "success": true, "message": "Successfully copied /etc/iptables/rules.v4 to /var/backup/net/rules.v4.snapshot" }
+
+Question: Relocate the temporary screenshot to the user's pictures directory.
+Call: { "func_call": "move_file", "source": "/tmp/screenshot_1024.png", "destination": "/home/alice/Pictures/screenshot_1024.png" }
+Response: { "success": true, "message": "Successfully moved /tmp/screenshot_1024.png to /home/alice/Pictures/screenshot_1024.png" }
+
+Question: Copy the application secrets to the debug container volume.
+Call: { "func_call": "copy_file", "source": "/etc/app/secrets.json", "destination": "/var/lib/docker/volumes/debug/_data/secrets.json" }
+Response: { "success": false, "message": "Permission denied: cannot write to /var/lib/docker/volumes/debug/_data/secrets.json" }
+
+Question: Move the old kernel image to the legacy boot folder.
+Call: { "func_call": "move_file", "source": "/boot/vmlinuz-5.4.0", "destination": "/var/backup/boot/legacy/vmlinuz-5.4.0" }
+Response: { "success": true, "message": "Successfully moved /boot/vmlinuz-5.4.0 to /var/backup/boot/legacy/vmlinuz-5.4.0" }
+
+Question: Duplicate the crontab file for the root user to a safe backup path.
+Call: { "func_call": "copy_file", "source": "/var/spool/cron/crontabs/root", "destination": "/var/backup/cron/root_cron.bak" }
+Response: { "success": true, "message": "Successfully copied /var/spool/cron/crontabs/root to /var/backup/cron/root_cron.bak" }
+
+Question: Move the generated report PDF to the client delivery folder.
+Call: { "func_call": "move_file", "source": "/tmp/report_q3.pdf", "destination": "/var/www/reports/clients/report_q3.pdf" }
+Response: { "success": true, "message": "Successfully moved /tmp/report_q3.pdf to /var/www/reports/clients/report_q3.pdf" }
+
+Question: Copy the local database configuration to the remote sync directory.
+Call: { "func_call": "copy_file", "source": "/etc/mysql/my.cnf", "destination": "/mnt/sync/configs/my.cnf" }
+Response: { "success": false, "message": "Source file /etc/mysql/my.cnf is locked by another process" }
+
+Question: Move the temporary upload blob to the permanent asset store.
+Call: { "func_call": "move_file", "source": "/tmp/uploads/blob_a9f2.dat", "destination": "/var/assets/blobs/blob_a9f2.dat" }
+Response: { "success": true, "message": "Successfully moved /tmp/uploads/blob_a9f2.dat to /var/assets/blobs/blob_a9f2.dat" }
+
+Question: Copy the SSH authorized keys to the recovery partition.
+Call: { "func_call": "copy_file", "source": "/home/admin/.ssh/authorized_keys", "destination": "/mnt/recovery/keys/admin_keys" }
+Response: { "success": true, "message": "Successfully copied /home/admin/.ssh/authorized_keys to /mnt/recovery/keys/admin_keys" }
+
+Question: Move the failed job log to the error archive directory.
+Call: { "func_call": "move_file", "source": "/var/log/jobs/job_99.fail", "destination": "/var/backup/logs/errors/job_99.fail" }
+Response: { "success": false, "message": "Destination directory /var/backup/logs/errors does not exist" }

@@ -1,0 +1,51 @@
+Available Tools: copy_file | move_file | delete_file | create_dir
+Call Schema: { "func_call": "string", "source": "string", "destination": "string" }
+Response Schema: { "success": boolean, "message": "string" }
+---
+Question: Duplicate the environment variables file to the staging area.
+Call: { "func_call": "copy_file", "source": "/home/deploy/.env", "destination": "/opt/staging/configs/.env" }
+Response: { "success": true, "message": "Successfully copied /home/deploy/.env to /opt/staging/configs/.env" }
+
+Question: Transfer the uploaded image to the public assets folder.
+Call: { "func_call": "move_file", "source": "/tmp/uploads/avatar_99.png", "destination": "/var/www/assets/images/avatar_99.png" }
+Response: { "success": true, "message": "Successfully moved /tmp/uploads/avatar_99.png to /var/www/assets/images/avatar_99.png" }
+
+Question: Backup the cron schedule before modifying system tasks.
+Call: { "func_call": "copy_file", "source": "/etc/crontab", "destination": "/var/backup/system/crontab.bak" }
+Response: { "success": true, "message": "Successfully copied /etc/crontab to /var/backup/system/crontab.bak" }
+
+Question: Move the debug dump to the analysis directory.
+Call: { "func_call": "move_file", "source": "/tmp/core_dump_1234", "destination": "/var/analysis/dumps/core_dump_1234" }
+Response: { "success": false, "message": "Source file /tmp/core_dump_1234 not found" }
+
+Question: Copy the SSL certificate to the secure vault directory.
+Call: { "func_call": "copy_file", "source": "/etc/ssl/certs/site.pem", "destination": "/opt/vault/certs/site_backup.pem" }
+Response: { "success": true, "message": "Successfully copied /etc/ssl/certs/site.pem to /opt/vault/certs/site_backup.pem" }
+
+Question: Relocate the temporary dataset to the permanent data lake.
+Call: { "func_call": "move_file", "source": "/tmp/data_export.csv", "destination": "/mnt/data_lake/exports/data_export.csv" }
+Response: { "success": true, "message": "Successfully moved /tmp/data_export.csv to /mnt/data_lake/exports/data_export.csv" }
+
+Question: Duplicate the application config for the test environment.
+Call: { "func_call": "copy_file", "source": "/app/config/settings.json", "destination": "/app/test/config/settings.json" }
+Response: { "success": true, "message": "Successfully copied /app/config/settings.json to /app/test/config/settings.json" }
+
+Question: Move the old session file to the archive bucket.
+Call: { "func_call": "move_file", "source": "/var/run/sessions/sess_old_01", "destination": "/var/archive/sessions/sess_old_01" }
+Response: { "success": true, "message": "Successfully moved /var/run/sessions/sess_old_01 to /var/archive/sessions/sess_old_01" }
+
+Question: Copy the firewall rules to a safe recovery location.
+Call: { "func_call": "copy_file", "source": "/etc/iptables/rules.v4", "destination": "/root/backups/iptables_rules.v4" }
+Response: { "success": false, "message": "Permission denied: cannot write to /root/backups" }
+
+Question: Move the compiled binary from the build folder to the bin directory.
+Call: { "func_call": "move_file", "source": "/build/output/app_v3", "destination": "/usr/local/bin/app_v3" }
+Response: { "success": true, "message": "Successfully moved /build/output/app_v3 to /usr/local/bin/app_v3" }
+
+Question: Copy the user preferences file to the migration staging area.
+Call: { "func_call": "copy_file", "source": "/home/alice/.config/app_prefs.xml", "destination": "/mnt/migration/users/alice/prefs.xml" }
+Response: { "success": true, "message": "Successfully copied /home/alice/.config/app_prefs.xml to /mnt/migration/users/alice/prefs.xml" }
+
+Question: Move the temporary report to the final reports archive.
+Call: { "func_call": "move_file", "source": "/tmp/report_q3_draft.pdf", "destination": "/var/reports/final/2023/q3_report.pdf" }
+Response: { "success": true, "message": "Successfully moved /tmp/report_q3_draft.pdf to /var/reports/final/2023/q3_report.pdf" }

@@ -1,0 +1,51 @@
+Available Tools: get_transaction | list_transactions | search_transactions | get_balance
+Call Schema: { "func_call": "string", "transaction_id": "string", "customer_id": "string", "from_date": "string", "to_date": "string" }
+Response Schema: { "transactions": [{ "id": "string", "amount": number, "currency": "string", "status": "string", "created": "string" }], "total_count": number }
+---
+Question: Find all transactions for customer CUST-9921 between January 1st and January 31st, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-9921", "from_date": "2024-01-01", "to_date": "2024-01-31" }
+Response: { "transactions": [{ "id": "TXN-8821", "amount": 150.00, "currency": "USD", "status": "completed", "created": "2024-01-05T10:23:00Z" }, { "id": "TXN-8822", "amount": 45.50, "currency": "USD", "status": "pending", "created": "2024-01-12T14:45:00Z" }], "total_count": 2 }
+
+Question: Retrieve the specific details for transaction ID TXN-550192.
+Call: { "func_call": "get_transaction", "transaction_id": "TXN-550192", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TXN-550192", "amount": 299.99, "currency": "EUR", "status": "completed", "created": "2024-02-10T09:15:00Z" }], "total_count": 1 }
+
+Question: List the last 50 transactions for customer CUST-7734 without any date filtering.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "CUST-7734", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TXN-9901", "amount": 12.00, "currency": "GBP", "status": "completed", "created": "2024-03-01T08:00:00Z" }, { "id": "TXN-9902", "amount": 34.20, "currency": "GBP", "status": "failed", "created": "2024-03-02T11:30:00Z" }], "total_count": 2 }
+
+Question: Search for failed transactions for customer CUST-1122 in the last week, from March 10 to March 17, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-1122", "from_date": "2024-03-10", "to_date": "2024-03-17" }
+Response: { "transactions": [{ "id": "TXN-3341", "amount": 500.00, "currency": "USD", "status": "failed", "created": "2024-03-15T16:20:00Z" }], "total_count": 1 }
+
+Question: Get transaction TXN-1002003 for verification purposes.
+Call: { "func_call": "get_transaction", "transaction_id": "TXN-1002003", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TXN-1002003", "amount": 75.25, "currency": "CAD", "status": "refunded", "created": "2024-01-20T13:10:00Z" }], "total_count": 1 }
+
+Question: Show me all purchases made by customer CUST-5566 during Q4 2023, from October 1 to December 31.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-5566", "from_date": "2023-10-01", "to_date": "2023-12-31" }
+Response: { "transactions": [{ "id": "TXN-7788", "amount": 1200.00, "currency": "USD", "status": "completed", "created": "2023-11-25T09:00:00Z" }, { "id": "TXN-7789", "amount": 45.00, "currency": "USD", "status": "completed", "created": "2023-12-05T14:22:00Z" }, { "id": "TXN-7790", "amount": 89.99, "currency": "USD", "status": "completed", "created": "2023-12-24T18:45:00Z" }], "total_count": 3 }
+
+Question: Pull up the record for transaction TXN-445566 which was reported as duplicate.
+Call: { "func_call": "get_transaction", "transaction_id": "TXN-445566", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TXN-445566", "amount": 25.00, "currency": "USD", "status": "completed", "created": "2024-02-28T10:05:00Z" }], "total_count": 1 }
+
+Question: Find any transaction activity for customer CUST-3344 between February 14 and February 16, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-3344", "from_date": "2024-02-14", "to_date": "2024-02-16" }
+Response: { "transactions": [{ "id": "TXN-2211", "amount": 65.00, "currency": "EUR", "status": "completed", "created": "2024-02-14T20:00:00Z" }], "total_count": 1 }
+
+Question: List all recent activity for customer CUST-8899 to check for unauthorized charges.
+Call: { "func_call": "list_transactions", "transaction_id": "", "customer_id": "CUST-8899", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TXN-5544", "amount": 9.99, "currency": "USD", "status": "completed", "created": "2024-03-18T07:30:00Z" }, { "id": "TXN-5545", "amount": 1500.00, "currency": "USD", "status": "pending", "created": "2024-03-18T08:15:00Z" }], "total_count": 2 }
+
+Question: Retrieve details for transaction TXN-998877 associated with a refund request.
+Call: { "func_call": "get_transaction", "transaction_id": "TXN-998877", "customer_id": "", "from_date": "", "to_date": "" }
+Response: { "transactions": [{ "id": "TXN-998877", "amount": 320.50, "currency": "GBP", "status": "refunded", "created": "2024-01-05T11:20:00Z" }], "total_count": 1 }
+
+Question: Search for high-value transactions over $1000 for customer CUST-2233 in March 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-2233", "from_date": "2024-03-01", "to_date": "2024-03-31" }
+Response: { "transactions": [{ "id": "TXN-6677", "amount": 1500.00, "currency": "USD", "status": "completed", "created": "2024-03-10T12:00:00Z" }, { "id": "TXN-6678", "amount": 2100.00, "currency": "USD", "status": "completed", "created": "2024-03-22T15:30:00Z" }], "total_count": 2 }
+
+Question: Get the full history of transactions for customer CUST-4455 from the start of the year until today, January 1 to March 20, 2024.
+Call: { "func_call": "search_transactions", "transaction_id": "", "customer_id": "CUST-4455", "from_date": "2024-01-01", "to_date": "2024-03-20" }
+Response: { "transactions": [{ "id": "TXN-1122", "amount": 55.00, "currency": "USD", "status": "completed", "created": "2024-01-15T09:00:00Z" }, { "id": "TXN-1123", "amount": 120.00, "currency": "USD", "status": "completed", "created": "2024-02-10T10:00:00Z" }, { "id": "TXN-1124", "amount": 30.00, "currency": "USD", "status": "completed", "created": "2024-03-05T11:00:00Z" }], "total_count": 3 }

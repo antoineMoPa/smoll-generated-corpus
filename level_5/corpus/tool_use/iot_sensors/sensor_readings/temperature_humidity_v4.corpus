@@ -1,0 +1,51 @@
+Available Tools: get_sensor_reading | get_all_sensors | get_sensor_by_location | get_sensor_battery
+Call Schema: { "func_call": "string", "sensor_id": "string", "location": "string", "type": "temperature|humidity|motion|co2|light" }
+Response Schema: { "sensor_id": "string", "type": "string", "value": number, "unit": "string", "timestamp": "string", "battery_pct": number }
+---
+Question: What is the CO2 concentration in the conference room?
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Conference Room B", "type": "co2" }
+Response: { "sensor_id": "CR-CO2-03", "type": "co2", "value": 412.5, "unit": "ppm", "timestamp": "2023-10-27T15:00:00Z", "battery_pct": 89 }
+
+Question: Check the light intensity in the parking garage.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Parking Garage Level 2", "type": "light" }
+Response: { "sensor_id": "PG-LGT-09", "type": "light", "value": 150.0, "unit": "Lux", "timestamp": "2023-10-27T15:00:05Z", "battery_pct": 94 }
+
+Question: Get the reading from sensor ID MOT-ENT-01.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "MOT-ENT-01", "location": "", "type": "motion" }
+Response: { "sensor_id": "MOT-ENT-01", "type": "motion", "value": 1.0, "unit": "Boolean", "timestamp": "2023-10-27T14:59:55Z", "battery_pct": 42 }
+
+Question: How much CO2 is in the classroom?
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Classroom 101", "type": "co2" }
+Response: { "sensor_id": "CL-CO2-05", "type": "co2", "value": 680.2, "unit": "ppm", "timestamp": "2023-10-27T15:00:10Z", "battery_pct": 76 }
+
+Question: Retrieve the light level data for the atrium.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Central Atrium", "type": "light" }
+Response: { "sensor_id": "AT-LGT-00", "type": "light", "value": 850.5, "unit": "Lux", "timestamp": "2023-10-27T15:00:12Z", "battery_pct": 58 }
+
+Question: What does motion sensor SEC-HALL-04 report?
+Call: { "func_call": "get_sensor_reading", "sensor_id": "SEC-HALL-04", "location": "", "type": "motion" }
+Response: { "sensor_id": "SEC-HALL-04", "type": "motion", "value": 0.0, "unit": "Boolean", "timestamp": "2023-10-27T14:59:48Z", "battery_pct": 31 }
+
+Question: Is the server rack overheating? Check the temperature.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Server Rack 4", "type": "temperature" }
+Response: { "sensor_id": "SR-TEMP-04", "type": "temperature", "value": 28.9, "unit": "Celsius", "timestamp": "2023-10-27T15:00:15Z", "battery_pct": 86 }
+
+Question: Fetch the latest CO2 reading from the cafeteria.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Employee Cafeteria", "type": "co2" }
+Response: { "sensor_id": "CF-CO2-02", "type": "co2", "value": 520.1, "unit": "ppm", "timestamp": "2023-10-27T15:00:18Z", "battery_pct": 73 }
+
+Question: Get the light value for sensor ST-LGT-07.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "ST-LGT-07", "location": "", "type": "light" }
+Response: { "sensor_id": "ST-LGT-07", "type": "light", "value": 320.0, "unit": "Lux", "timestamp": "2023-10-27T14:59:50Z", "battery_pct": 51 }
+
+Question: What is the motion status in the elevator lobby?
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Elevator Lobby", "type": "motion" }
+Response: { "sensor_id": "EL-MOT-01", "type": "motion", "value": 1.0, "unit": "Boolean", "timestamp": "2023-10-27T15:00:20Z", "battery_pct": 97 }
+
+Question: Check the CO2 levels in the library study area.
+Call: { "func_call": "get_sensor_by_location", "sensor_id": "", "location": "Library Study Zone", "type": "co2" }
+Response: { "sensor_id": "LB-CO2-06", "type": "co2", "value": 450.8, "unit": "ppm", "timestamp": "2023-10-27T15:00:22Z", "battery_pct": 80 }
+
+Question: Read the motion data from sensor GYM-MOT-02.
+Call: { "func_call": "get_sensor_reading", "sensor_id": "GYM-MOT-02", "location": "", "type": "motion" }
+Response: { "sensor_id": "GYM-MOT-02", "type": "motion", "value": 1.0, "unit": "Boolean", "timestamp": "2023-10-27T14:59:58Z", "battery_pct": 64 }

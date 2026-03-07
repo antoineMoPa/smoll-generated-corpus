@@ -1,0 +1,51 @@
+Available Tools: get_balance | get_account_summary | get_available_credit | get_account_details
+Call Schema: { "func_call": "string", "account_id": "string", "account_type": "checking|savings|credit" }
+Response Schema: { "account_id": "string", "balance": number, "currency": "string", "available": number }
+---
+Question: What is the outstanding balance and remaining limit for my Sapphire Reserve card ending in 3910?
+Call: { "func_call": "get_available_credit", "account_id": "ACC-SR-3910", "account_type": "credit" }
+Response: { "account_id": "ACC-SR-3910", "balance": 2340.80, "currency": "USD", "available": 17659.20 }
+---
+Question: Could you provide the statement balance and available funds for my Discover It card 5567?
+Call: { "func_call": "get_account_summary", "account_id": "ACC-DI-5567", "account_type": "credit" }
+Response: { "account_id": "ACC-DI-5567", "balance": 560.25, "currency": "USD", "available": 4439.75 }
+---
+Question: How much do I owe on my World Elite Mastercard 8843, and what is my unused credit?
+Call: { "func_call": "get_available_credit", "account_id": "ACC-WE-8843", "account_type": "credit" }
+Response: { "account_id": "ACC-WE-8843", "balance": 980.00, "currency": "USD", "available": 29020.00 }
+---
+Question: I need the current balance and credit limit status for my retail store card 1029.
+Call: { "func_call": "get_account_summary", "account_id": "ACC-RS-1029", "account_type": "credit" }
+Response: { "account_id": "ACC-RS-1029", "balance": 125.50, "currency": "USD", "available": 874.50 }
+---
+Question: Please show the balance and available credit for my hotel loyalty card 6721.
+Call: { "func_call": "get_available_credit", "account_id": "ACC-HL-6721", "account_type": "credit" }
+Response: { "account_id": "ACC-HL-6721", "balance": 3450.90, "currency": "USD", "available": 6549.10 }
+---
+Question: What are the balance details and remaining limit for my corporate Amex card 4405?
+Call: { "func_call": "get_account_summary", "account_id": "ACC-CA-4405", "account_type": "credit" }
+Response: { "account_id": "ACC-CA-4405", "balance": 8920.15, "currency": "USD", "available": 41079.85 }
+---
+Question: Is there any unused credit on my starter Visa card 2298, and what is the total balance?
+Call: { "func_call": "get_available_credit", "account_id": "ACC-ST-2298", "account_type": "credit" }
+Response: { "account_id": "ACC-ST-2298", "balance": 45.00, "currency": "USD", "available": 455.00 }
+---
+Question: Retrieve the account summary for my infinite rewards card 9182, including balance and limit.
+Call: { "func_call": "get_account_summary", "account_id": "ACC-IR-9182", "account_type": "credit" }
+Response: { "account_id": "ACC-IR-9182", "balance": 0.00, "currency": "USD", "available": 25000.00 }
+---
+Question: What is the current balance and available credit on my gas station card 3376?
+Call: { "func_call": "get_available_credit", "account_id": "ACC-GS-3376", "account_type": "credit" }
+Response: { "account_id": "ACC-GS-3376", "balance": 210.40, "currency": "USD", "available": 789.60 }
+---
+Question: Check my grocery rewards card 5044 for the statement balance and available credit.
+Call: { "func_call": "get_account_summary", "account_id": "ACC-GR-5044", "account_type": "credit" }
+Response: { "account_id": "ACC-GR-5044", "balance": 330.75, "currency": "USD", "available": 2669.25 }
+---
+Question: Can you display the available credit and current balance for my charity donation card 7612?
+Call: { "func_call": "get_available_credit", "account_id": "ACC-CD-7612", "account_type": "credit" }
+Response: { "account_id": "ACC-CD-7612", "balance": 1500.00, "currency": "USD", "available": 3500.00 }
+---
+Question: What is the total balance and remaining credit limit on my online shopping card 8931?
+Call: { "func_call": "get_account_summary", "account_id": "ACC-OS-8931", "account_type": "credit" }
+Response: { "account_id": "ACC-OS-8931", "balance": 845.60, "currency": "USD", "available": 4154.40 }

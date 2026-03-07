@@ -1,0 +1,51 @@
+Available Tools: get_lab_results | get_latest_results | get_result_history | download_report
+Call Schema: { "func_call": "string", "patient_id": "string", "test_type": "string", "from_date": "string" }
+Response Schema: { "results": [{ "test": "string", "value": number, "unit": "string", "reference_range": "string", "status": "normal|high|low" }] }
+---
+Question: Get the latest blood glucose reading for patient P-8821.
+Call: { "func_call": "get_latest_results", "patient_id": "P-8821", "test_type": "glucose", "from_date": "" }
+Response: { "results": [{ "test": "Fasting Glucose", "value": 104, "unit": "mg/dL", "reference_range": "70-99", "status": "high" }] }
+
+Question: Retrieve the complete history of HbA1c tests for patient P-9932 starting from January 1st, 2023 to check trends.
+Call: { "func_call": "get_result_history", "patient_id": "P-9932", "test_type": "HbA1c", "from_date": "2023-01-01" }
+Response: { "results": [{ "test": "HbA1c", "value": 6.1, "unit": "%", "reference_range": "4.0-5.6", "status": "high" }, { "test": "HbA1c", "value": 5.9, "unit": "%", "reference_range": "4.0-5.6", "status": "high" }, { "test": "HbA1c", "value": 5.4, "unit": "%", "reference_range": "4.0-5.6", "status": "normal" }] }
+
+Question: Download the official PDF report for the lipid panel conducted on patient P-1102 last week.
+Call: { "func_call": "download_report", "patient_id": "P-1102", "test_type": "lipid_panel", "from_date": "2023-10-15" }
+Response: { "results": [{ "test": "Report Generated", "value": 20231022, "unit": "file_id", "reference_range": "N/A", "status": "normal" }] }
+
+Question: Pull all thyroid function test results for patient P-4455 since March 2022 to analyze long-term stability.
+Call: { "func_call": "get_result_history", "patient_id": "P-4455", "test_type": "TSH", "from_date": "2022-03-01" }
+Response: { "results": [{ "test": "TSH", "value": 2.5, "unit": "mIU/L", "reference_range": "0.4-4.0", "status": "normal" }, { "test": "TSH", "value": 4.8, "unit": "mIU/L", "reference_range": "0.4-4.0", "status": "high" }, { "test": "TSH", "value": 3.1, "unit": "mIU/L", "reference_range": "0.4-4.0", "status": "normal" }] }
+
+Question: Get the most recent complete blood count (CBC) for patient P-7788.
+Call: { "func_call": "get_latest_results", "patient_id": "P-7788", "test_type": "CBC", "from_date": "" }
+Response: { "results": [{ "test": "Hemoglobin", "value": 13.2, "unit": "g/dL", "reference_range": "12.0-16.0", "status": "normal" }, { "test": "White Blood Cells", "value": 11.5, "unit": "K/uL", "reference_range": "4.5-11.0", "status": "high" }, { "test": "Platelets", "value": 250, "unit": "K/uL", "reference_range": "150-400", "status": "normal" }] }
+
+Question: Fetch the specific lab results for creatinine levels for patient P-3321 recorded after June 1st, 2023.
+Call: { "func_call": "get_lab_results", "patient_id": "P-3321", "test_type": "creatinine", "from_date": "2023-06-01" }
+Response: { "results": [{ "test": "Creatinine", "value": 1.1, "unit": "mg/dL", "reference_range": "0.7-1.3", "status": "normal" }] }
+
+Question: Generate a downloadable summary report of all kidney function tests for patient P-5566 from the last year.
+Call: { "func_call": "download_report", "patient_id": "P-5566", "test_type": "kidney_function", "from_date": "2022-11-01" }
+Response: { "results": [{ "test": "Report Generated", "value": 20231105, "unit": "file_id", "reference_range": "N/A", "status": "normal" }] }
+
+Question: Show the trend of Vitamin D levels for patient P-2299 starting from the beginning of 2023.
+Call: { "func_call": "get_result_history", "patient_id": "P-2299", "test_type": "Vitamin_D", "from_date": "2023-01-01" }
+Response: { "results": [{ "test": "Vitamin D", "value": 22, "unit": "ng/mL", "reference_range": "30-100", "status": "low" }, { "test": "Vitamin D", "value": 28, "unit": "ng/mL", "reference_range": "30-100", "status": "low" }, { "test": "Vitamin D", "value": 35, "unit": "ng/mL", "reference_range": "30-100", "status": "normal" }] }
+
+Question: Retrieve the latest electrolyte panel results for patient P-6677.
+Call: { "func_call": "get_latest_results", "patient_id": "P-6677", "test_type": "electrolytes", "from_date": "" }
+Response: { "results": [{ "test": "Sodium", "value": 138, "unit": "mmol/L", "reference_range": "136-145", "status": "normal" }, { "test": "Potassium", "value": 5.2, "unit": "mmol/L", "reference_range": "3.5-5.0", "status": "high" }, { "test": "Chloride", "value": 101, "unit": "mmol/L", "reference_range": "98-106", "status": "normal" }] }
+
+Question: Get all liver enzyme test records for patient P-1234 since April 2023 to monitor recovery.
+Call: { "func_call": "get_result_history", "patient_id": "P-1234", "test_type": "liver_enzymes", "from_date": "2023-04-01" }
+Response: { "results": [{ "test": "ALT", "value": 65, "unit": "U/L", "reference_range": "7-56", "status": "high" }, { "test": "AST", "value": 58, "unit": "U/L", "reference_range": "10-40", "status": "high" }, { "test": "ALT", "value": 45, "unit": "U/L", "reference_range": "7-56", "status": "normal" }] }
+
+Question: Download the detailed PDF analysis for the coagulation profile of patient P-9090 performed yesterday.
+Call: { "func_call": "download_report", "patient_id": "P-9090", "test_type": "coagulation", "from_date": "2023-10-24" }
+Response: { "results": [{ "test": "Report Generated", "value": 20231025, "unit": "file_id", "reference_range": "N/A", "status": "normal" }] }
+
+Question: Check the specific troponin levels for patient P-5050 recorded during their ER visit on October 20th.
+Call: { "func_call": "get_lab_results", "patient_id": "P-5050", "test_type": "troponin", "from_date": "2023-10-20" }
+Response: { "results": [{ "test": "Troponin I", "value": 0.04, "unit": "ng/mL", "reference_range": "0.00-0.03", "status": "high" }] }

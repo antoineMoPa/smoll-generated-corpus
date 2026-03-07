@@ -1,0 +1,59 @@
+Context: Sarah drove her car to the Central Park to enjoy the sunny weather. She walked around the lake for an hour before heading home.
+Input: {"question": "Where did Sarah drive to?"}
+Output: {"answer": "Central Park"}
+
+Context: The team meeting is scheduled for 3 PM in the Conference Room B on the second floor. Please bring your laptops and project notes.
+Input: {"question": "Where is the team meeting scheduled?"}
+Output: {"answer": "Conference Room B"}
+
+Context: After work, Mark stopped by the Grocery Mart on Main Street to buy some milk and bread. He forgot to grab eggs but remembered them later.
+Input: {"question": "Where did Mark stop after work?"}
+Output: {"answer": "Grocery Mart"}
+
+Context: We are currently vacationing in Barcelona and plan to visit the Sagrada Familia tomorrow morning. The weather here is perfect for walking.
+Input: {"question": "Where are they currently vacationing?"}
+Output: {"answer": "Barcelona"}
+
+Context: The package was delivered to the front porch of 123 Oak Avenue while nobody was home. The neighbor saw the driver leave it there.
+Input: {"question": "Where was the package delivered?"}
+Output: {"answer": "front porch of 123 Oak Avenue"}
+
+Context: Dr. Evans sees patients every Tuesday at the City Medical Clinic downtown. You need to call ahead to schedule an appointment.
+Input: {"question": "Where does Dr. Evans see patients?"}
+Output: {"answer": "City Medical Clinic"}
+
+Context: During the storm, the family took shelter in the basement of their house until the wind died down. They listened to the radio for updates.
+Input: {"question": "Where did the family take shelter?"}
+Output: {"answer": "basement"}
+
+Context: The new coffee shop, Bean & Leaf, opened last week in the shopping mall near the food court. It is already very popular with students.
+Input: {"question": "Where did the new coffee shop open?"}
+Output: {"answer": "shopping mall"}
+
+Context: John left his umbrella at the library when he rushed to catch the bus this morning. He hopes someone turned it in to the desk.
+Input: {"question": "Where did John leave his umbrella?"}
+Output: {"answer": "library"}
+
+Context: The annual tech conference will be held at the Grand Convention Center in San Francisco next month. Tickets are selling out fast.
+Input: {"question": "Where will the annual tech conference be held?"}
+Output: {"answer": "Grand Convention Center"}
+
+Context: She decided to study for her exams in the quiet corner of the university cafeteria. It was the only place with enough space for her books.
+Input: {"question": "Where did she decide to study?"}
+Output: {"answer": "quiet corner of the university cafeteria"}
+
+Context: The flight from New York landed safely at Heathrow Airport just before noon. Passengers began disembarking immediately.
+Input: {"question": "Where did the flight land?"}
+Output: {"answer": "Heathrow Airport"}
+
+Context: Meet me at the bus station on 5th Street at 6 PM so we can catch the shuttle together. Do not be late or we will miss it.
+Input: {"question": "Where should we meet?"}
+Output: {"answer": "bus station"}
+
+Context: They found the best pizza in town at Tony's Pizzeria located in the old district. The crust is thin and the sauce is spicy.
+Input: {"question": "Where did they find the best pizza?"}
+Output: {"answer": "Tony's Pizzeria"}
+
+Context: The lost dog was spotted wandering near the playground in Riverside Park yesterday evening. The owner is offering a reward.
+Input: {"question": "Where was the lost dog spotted?"}
+Output: {"answer": "playground in Riverside Park"}

@@ -1,0 +1,51 @@
+Available Tools: ls | ls_la | ls_lh | ls_R
+Call Schema: { "func_call": "string", "path": "string", "flags": "string" }
+Response Schema: { "entries": ["string"], "count": number }
+---
+Question: Display items located in the root data volume.
+Call: { "func_call": "ls", "path": "/data", "flags": "" }
+Response: { "entries": ["archives", "backups", "exports", "imports", "temp_store"], "count": 5 }
+
+Question: Reveal hidden configuration dots in /etc/nginx.
+Call: { "func_call": "ls_la", "path": "/etc/nginx", "flags": "-a" }
+Response: { "entries": [".", "..", "nginx.conf", "sites-enabled", "sites-available", ".backup_cfg"], "count": 6 }
+
+Question: What is the size of files in /var/www/html?
+Call: { "func_call": "ls_lh", "path": "/var/www/html", "flags": "-lh" }
+Response: { "entries": ["index.html (4.5K)", "style.css (12K)", "logo.png (45K)", "robots.txt (120B)"], "count": 4 }
+
+Question: Traverse the entire /home/admin directory tree.
+Call: { "func_call": "ls_R", "path": "/home/admin", "flags": "-R" }
+Response: { "entries": ["scripts/deploy.sh", "scripts/backup.py", "logs/current.log", "docs/manual.pdf"], "count": 4 }
+
+Question: Enumerate resources inside the shared network drive.
+Call: { "func_call": "ls", "path": "/mnt/shared", "flags": "" }
+Response: { "entries": ["finance", "hr", "marketing", "legal", "public"], "count": 5 }
+
+Question: List executable tools found in /sbin.
+Call: { "func_call": "ls", "path": "/sbin", "flags": "" }
+Response: { "entries": ["init", "reboot", "shutdown", "fdisk", "mkfs", "ifconfig"], "count": 6 }
+
+Question: Show third-party applications installed in /opt/docker.
+Call: { "func_call": "ls", "path": "/opt/docker", "flags": "" }
+Response: { "entries": ["redis", "postgres", "mongo", "elasticsearch"], "count": 4 }
+
+Question: Provide a detailed view of secret keys in ~/.ssh.
+Call: { "func_call": "ls_la", "path": "~/.ssh", "flags": "-la" }
+Response: { "entries": [".", "..", "id_rsa", "id_rsa.pub", "authorized_keys", "known_hosts"], "count": 6 }
+
+Question: Inspect /var/cache with human-friendly byte counts.
+Call: { "func_call": "ls_lh", "path": "/var/cache", "flags": "-lh" }
+Response: { "entries": ["apt (150M)", "ldconfig (2.1M)", "man (45M)", "fontconfig (12M)"], "count": 4 }
+
+Question: Recursively map out the /usr/share/docs hierarchy.
+Call: { "func_call": "ls_R", "path": "/usr/share/docs", "flags": "-R" }
+Response: { "entries": ["linux/readme.txt", "linux/copyright", "bash/manual.gz", "coreutils/info"], "count": 4 }
+
+Question: Deep list all artifacts within ~/builds/output.
+Call: { "func_call": "ls_R", "path": "~/builds/output", "flags": "-R" }
+Response: { "entries": ["v1.0/app.bin", "v1.0/lib.so", "v1.1/app.bin", "v1.1/lib.so", "latest"], "count": 5 }
+
+Question: Examine /boot for hidden bootloader entries.
+Call: { "func_call": "ls_la", "path": "/boot", "flags": "-a" }
+Response: { "entries": [".", "..", "vmlinuz", "initrd.img", "config", ".secret_key"], "count": 6 }

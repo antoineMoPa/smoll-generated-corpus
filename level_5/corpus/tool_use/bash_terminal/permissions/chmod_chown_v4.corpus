@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Configure the analytics binary to be executable by the owner and readable by everyone else.
+Call: { "func_call": "chmod", "path": "/opt/analytics/bin/process", "mode": "755", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "755" }
+
+Question: Transfer the cache directory ownership to the redis user and the redis group.
+Call: { "func_call": "chown", "path": "/var/lib/redis/data", "mode": "", "owner": "redis:redis" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "755" }
+
+Question: Lock down the API key file so only the owner can read or modify it.
+Call: { "func_call": "chmod", "path": "/etc/secrets/api_key.json", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "600" }
+
+Question: Assign the media storage folder to the nginx user and the content team group.
+Call: { "func_call": "chown", "path": "/srv/media/uploads", "mode": "", "owner": "nginx:content_team" }
+Response: { "success": true, "previous_mode": "775", "new_mode": "775" }
+
+Question: Make the cleanup utility readable and executable for the owner and the operations group.
+Call: { "func_call": "chmod", "path": "/usr/local/sbin/cleanup_old_logs.sh", "mode": "750", "owner": "" }
+Response: { "success": true, "previous_mode": "700", "new_mode": "750" }
+
+Question: Change the owner of the audit log archive to the security officer and the compliance group.
+Call: { "func_call": "chown", "path": "/var/log/audit/archive_2024.zip", "mode": "", "owner": "sec_officer:compliance" }
+Response: { "success": true, "previous_mode": "640", "new_mode": "640" }
+
+Question: Permit global read access to the timezone configuration while restricting writes to the owner.
+Call: { "func_call": "chmod", "path": "/etc/timezone", "mode": "644", "owner": "" }
+Response: { "success": true, "previous_mode": "600", "new_mode": "644" }
+
+Question: Update the socket file ownership to the messaging service user and the queue group.
+Call: { "func_call": "chown", "path": "/run/rabbitmq/control.sock", "mode": "", "owner": "rabbitmq:queue_ops" }
+Response: { "success": true, "previous_mode": "777", "new_mode": "777" }
+
+Question: Secure the database credentials file to allow access only by the root account.
+Call: { "func_call": "chmod", "path": "/root/.db_credentials", "mode": "700", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "700" }
+
+Question: Reassign the print spooler directory to the lp user and the printer admins group.
+Call: { "func_call": "chown", "path": "/var/spool/cups/tmp", "mode": "", "owner": "lp:printer_admins" }
+Response: { "success": true, "previous_mode": "1777", "new_mode": "1777" }
+
+Question: Set the monitoring agent script to be executable by the owner and readable by the monitoring group.
+Call: { "func_call": "chmod", "path": "/opt/monitoring/agent_check.sh", "mode": "740", "owner": "" }
+Response: { "success": true, "previous_mode": "640", "new_mode": "740" }
+
+Question: Change the ownership of the container runtime socket to the docker user and the devops group.
+Call: { "func_call": "chown", "path": "/var/run/docker.sock", "mode": "", "owner": "docker:devops" }
+Response: { "success": true, "previous_mode": "660", "new_mode": "660" }

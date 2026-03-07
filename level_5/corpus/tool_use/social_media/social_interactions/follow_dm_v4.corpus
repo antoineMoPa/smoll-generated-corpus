@@ -1,0 +1,51 @@
+Available Tools: like_post | comment_on_post | share_post | follow_user | unfollow_user | send_dm
+Call Schema: { "func_call": "string", "post_id": "string", "user_id": "string", "content": "string" }
+Response Schema: { "action": "string", "status": "string", "timestamp": "string" }
+---
+Question: Please start following the chef 'MariaCooks' so I can see her new pasta recipes.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "maria_cooks_italy", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:12:05Z" }
+
+Question: Send a message to James Wilson asking if he wants to grab coffee tomorrow morning.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "james_wilson_biz", "content": "Hi James, are you free for a quick coffee tomorrow around 9 AM?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:15:30Z" }
+
+Question: I need to follow the news outlet 'CityDailyNews' to stay updated on local events.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "city_daily_news", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:18:45Z" }
+
+Question: Message the graphic designer 'PixelPerfect' to inquire about their rates for a logo project.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "pixel_perfect_studio", "content": "Hello! I'm interested in hiring you for a logo design. Could you share your rate card?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:22:10Z" }
+
+Question: Follow the musician 'JazzVibesLive' to get notifications about their upcoming concerts.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "jazz_vibes_live", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:25:33Z" }
+
+Question: Send a DM to Linda Garcia to confirm she received the invoice I sent yesterday.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "linda_garcia_acct", "content": "Hi Linda, just checking if you got the invoice I emailed over yesterday?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:28:50Z" }
+
+Question: Start following the pet account 'FluffyTheCat' because the videos are so cute.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "fluffy_the_cat_official", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:32:15Z" }
+
+Question: Message the event coordinator 'PartyPlannerPro' to ask about availability for a birthday party in November.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "party_planner_pro", "content": "Hey! Do you have any openings for a birthday party on Nov 12th?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:35:40Z" }
+
+Question: I want to follow the science educator 'DrQuantum' to learn more about physics concepts.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "dr_quantum_science", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:39:05Z" }
+
+Question: Send a direct message to Tom Harris to see if he wants to join the hiking group this weekend.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "tom_harris_outdoors", "content": "Hey Tom, we're going hiking Saturday morning. Want to come along?" }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:42:28Z" }
+
+Question: Follow the fashion brand 'UrbanStyleCo' to see their new winter collection launch.
+Call: { "func_call": "follow_user", "post_id": "", "user_id": "urban_style_co", "content": "" }
+Response: { "action": "follow_user", "status": "success", "timestamp": "2023-10-28T09:45:52Z" }
+
+Question: Message the real estate agent 'HomeFinderJane' to schedule a viewing for the apartment on Main Street.
+Call: { "func_call": "send_dm", "post_id": "", "user_id": "home_finder_jane", "content": "Hi Jane, I'd like to schedule a viewing for the Main Street apartment listed online." }
+Response: { "action": "send_dm", "status": "delivered", "timestamp": "2023-10-28T09:49:15Z" }

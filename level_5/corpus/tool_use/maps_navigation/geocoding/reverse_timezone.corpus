@@ -1,0 +1,51 @@
+Available Tools: geocode_address | reverse_geocode | validate_address | get_timezone
+Call Schema: { "func_call": "string", "address": "string", "lat": number, "lng": number }
+Response Schema: { "lat": number, "lng": number, "formatted_address": "string", "country": "string", "timezone": "string" }
+---
+Question: What location and timezone correspond to the coordinates 40.7128, -74.0060?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 40.7128, "lng": -74.0060 }
+Response: { "lat": 40.7128, "lng": -74.0060, "formatted_address": "New York, NY 10007, USA", "country": "United States", "timezone": "America/New_York" }
+
+Question: Can you identify the address and time zone for latitude 51.5074 and longitude -0.1278?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 51.5074, "lng": -0.1278 }
+Response: { "lat": 51.5074, "lng": -0.1278, "formatted_address": "Westminster, London SW1A 2AA, UK", "country": "United Kingdom", "timezone": "Europe/London" }
+
+Question: I need the reverse geocoded address and timezone for 35.6762, 139.6503.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 35.6762, "lng": 139.6503 }
+Response: { "lat": 35.6762, "lng": 139.6503, "formatted_address": "Chiyoda City, Tokyo 100-0001, Japan", "country": "Japan", "timezone": "Asia/Tokyo" }
+
+Question: Find the location details and timezone for the coordinates -33.8688, 151.2093.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": -33.8688, "lng": 151.2093 }
+Response: { "lat": -33.8688, "lng": 151.2093, "formatted_address": "Sydney NSW 2000, Australia", "country": "Australia", "timezone": "Australia/Sydney" }
+
+Question: What is the formatted address and timezone at 48.8566, 2.3522?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 48.8566, "lng": 2.3522 }
+Response: { "lat": 48.8566, "lng": 2.3522, "formatted_address": "75001 Paris, France", "country": "France", "timezone": "Europe/Paris" }
+
+Question: Please reverse geocode 52.5200, 13.4050 and tell me the timezone.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 52.5200, "lng": 13.4050 }
+Response: { "lat": 52.5200, "lng": 13.4050, "formatted_address": "10117 Berlin, Germany", "country": "Germany", "timezone": "Europe/Berlin" }
+
+Question: Identify the place and timezone for coordinates 1.3521, 103.8198.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 1.3521, "lng": 103.8198 }
+Response: { "lat": 1.3521, "lng": 103.8198, "formatted_address": "Singapore 018989", "country": "Singapore", "timezone": "Asia/Singapore" }
+
+Question: What address and timezone are associated with 41.9028, 12.4964?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 41.9028, "lng": 12.4964 }
+Response: { "lat": 41.9028, "lng": 12.4964, "formatted_address": "00120 Vatican City", "country": "Vatican City", "timezone": "Europe/Rome" }
+
+Question: Get the location name and timezone for 37.7749, -122.4194.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 37.7749, "lng": -122.4194 }
+Response: { "lat": 37.7749, "lng": -122.4194, "formatted_address": "San Francisco, CA 94102, USA", "country": "United States", "timezone": "America/Los_Angeles" }
+
+Question: Reverse geocode these coordinates: 25.2048, 55.2708. What is the timezone?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 25.2048, "lng": 55.2708 }
+Response: { "lat": 25.2048, "lng": 55.2708, "formatted_address": "Dubai - United Arab Emirates", "country": "United Arab Emirates", "timezone": "Asia/Dubai" }
+
+Question: Where is 55.7558, 37.6173 located and what is its timezone?
+Call: { "func_call": "reverse_geocode", "address": "", "lat": 55.7558, "lng": 37.6173 }
+Response: { "lat": 55.7558, "lng": 37.6173, "formatted_address": "Moscow, Russia, 101000", "country": "Russia", "timezone": "Europe/Moscow" }
+
+Question: Determine the address and timezone for coordinates -22.9068, -43.1729.
+Call: { "func_call": "reverse_geocode", "address": "", "lat": -22.9068, "lng": -43.1729 }
+Response: { "lat": -22.9068, "lng": -43.1729, "formatted_address": "Rio de Janeiro - RJ, 20040-020, Brazil", "country": "Brazil", "timezone": "America/Sao_Paulo" }

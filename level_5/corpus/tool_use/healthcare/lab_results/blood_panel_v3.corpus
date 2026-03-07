@@ -1,0 +1,51 @@
+Available Tools: get_lab_results | get_latest_results | get_result_history | download_report
+Call Schema: { "func_call": "string", "patient_id": "string", "test_type": "string", "from_date": "string" }
+Response Schema: { "results": [{ "test": "string", "value": number, "unit": "string", "reference_range": "string", "status": "normal|high|low" }] }
+---
+Question: Obtain the thyroid function panel for patient P-1045.
+Call: { "func_call": "get_latest_results", "patient_id": "P-1045", "test_type": "TSH Panel", "from_date": "" }
+Response: { "results": [{ "test": "TSH", "value": 2.5, "unit": "mIU/L", "reference_range": "0.4-4.0", "status": "normal" }, { "test": "Free T4", "value": 1.2, "unit": "ng/dL", "reference_range": "0.8-1.8", "status": "normal" }, { "test": "Free T3", "value": 3.1, "unit": "pg/mL", "reference_range": "2.3-4.2", "status": "normal" }] }
+
+Question: Retrieve the liver enzyme history for patient P-2987 since June 10, 2023.
+Call: { "func_call": "get_result_history", "patient_id": "P-2987", "test_type": "Liver Function", "from_date": "2023-06-10" }
+Response: { "results": [{ "test": "ALT", "value": 65, "unit": "U/L", "reference_range": "7-56", "status": "high" }, { "test": "AST", "value": 58, "unit": "U/L", "reference_range": "10-40", "status": "high" }, { "test": "Alkaline Phosphatase", "value": 120, "unit": "U/L", "reference_range": "44-147", "status": "normal" }] }
+
+Question: Check the vitamin D level for patient P-4456 to assess deficiency.
+Call: { "func_call": "get_lab_results", "patient_id": "P-4456", "test_type": "Vitamin D", "from_date": "" }
+Response: { "results": [{ "test": "Vitamin D 25-Hydroxy", "value": 18, "unit": "ng/mL", "reference_range": "30-100", "status": "low" }] }
+
+Question: Pull the most recent urinalysis report for patient P-6721.
+Call: { "func_call": "get_latest_results", "patient_id": "P-6721", "test_type": "Urinalysis", "from_date": "" }
+Response: { "results": [{ "test": "Specific Gravity", "value": 1.025, "unit": "", "reference_range": "1.005-1.030", "status": "normal" }, { "test": "pH", "value": 6.0, "unit": "", "reference_range": "4.5-8.0", "status": "normal" }, { "test": "Protein", "value": 15, "unit": "mg/dL", "reference_range": "0-20", "status": "normal" }] }
+
+Question: Fetch the iron studies for patient P-8832 starting from February 1, 2024.
+Call: { "func_call": "get_result_history", "patient_id": "P-8832", "test_type": "Iron Panel", "from_date": "2024-02-01" }
+Response: { "results": [{ "test": "Serum Iron", "value": 45, "unit": "mcg/dL", "reference_range": "60-170", "status": "low" }, { "test": "Ferritin", "value": 12, "unit": "ng/mL", "reference_range": "12-150", "status": "normal" }, { "test": "TIBC", "value": 420, "unit": "mcg/dL", "reference_range": "240-450", "status": "normal" }] }
+
+Question: Get the coagulation profile for patient P-3399 prior to surgery.
+Call: { "func_call": "get_lab_results", "patient_id": "P-3399", "test_type": "Coagulation", "from_date": "" }
+Response: { "results": [{ "test": "PT", "value": 13.5, "unit": "sec", "reference_range": "11.0-13.5", "status": "normal" }, { "test": "INR", "value": 1.1, "unit": "", "reference_range": "0.8-1.2", "status": "normal" }, { "test": "aPTT", "value": 38, "unit": "sec", "reference_range": "25-35", "status": "high" }] }
+
+Question: Retrieve the cortisol levels for patient P-5544 measured this morning.
+Call: { "func_call": "get_latest_results", "patient_id": "P-5544", "test_type": "Cortisol", "from_date": "" }
+Response: { "results": [{ "test": "Morning Cortisol", "value": 22, "unit": "mcg/dL", "reference_range": "5-23", "status": "normal" }] }
+
+Question: Download the cardiac marker results for patient P-7766.
+Call: { "func_call": "get_lab_results", "patient_id": "P-7766", "test_type": "Cardiac Markers", "from_date": "" }
+Response: { "results": [{ "test": "Troponin I", "value": 0.04, "unit": "ng/mL", "reference_range": "<0.04", "status": "high" }, { "test": "CK-MB", "value": 3.2, "unit": "ng/mL", "reference_range": "0-5.0", "status": "normal" }, { "test": "BNP", "value": 120, "unit": "pg/mL", "reference_range": "<100", "status": "high" }] }
+
+Question: Check the electrolyte balance for patient P-9911 since last week.
+Call: { "func_call": "get_result_history", "patient_id": "P-9911", "test_type": "Electrolytes", "from_date": "2024-05-20" }
+Response: { "results": [{ "test": "Sodium", "value": 128, "unit": "mEq/L", "reference_range": "136-145", "status": "low" }, { "test": "Chloride", "value": 98, "unit": "mEq/L", "reference_range": "96-106", "status": "normal" }, { "test": "CO2", "value": 24, "unit": "mEq/L", "reference_range": "23-29", "status": "normal" }] }
+
+Question: Fetch the PSA value for patient P-2233 for annual screening.
+Call: { "func_call": "get_latest_results", "patient_id": "P-2233", "test_type": "PSA", "from_date": "" }
+Response: { "results": [{ "test": "Prostate Specific Antigen", "value": 2.8, "unit": "ng/mL", "reference_range": "0-4.0", "status": "normal" }] }
+
+Question: Retrieve the rheumatoid factor and CRP for patient P-4477.
+Call: { "func_call": "get_lab_results", "patient_id": "P-4477", "test_type": "Inflammatory Markers", "from_date": "" }
+Response: { "results": [{ "test": "Rheumatoid Factor", "value": 18, "unit": "IU/mL", "reference_range": "<14", "status": "high" }, { "test": "C-Reactive Protein", "value": 8.5, "unit": "mg/L", "reference_range": "<3.0", "status": "high" }] }
+
+Question: Get the magnesium and phosphorus levels for patient P-6655 from April 5, 2024.
+Call: { "func_call": "get_result_history", "patient_id": "P-6655", "test_type": "Mineral Panel", "from_date": "2024-04-05" }
+Response: { "results": [{ "test": "Magnesium", "value": 1.5, "unit": "mg/dL", "reference_range": "1.7-2.2", "status": "low" }, { "test": "Phosphorus", "value": 3.8, "unit": "mg/dL", "reference_range": "2.5-4.5", "status": "normal" }] }

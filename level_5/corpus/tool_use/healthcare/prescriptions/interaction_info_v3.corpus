@@ -1,0 +1,51 @@
+Available Tools: get_prescriptions | request_refill | check_drug_interaction | get_medication_info
+Call Schema: { "func_call": "string", "patient_id": "string", "medication": "string", "dosage": "string" }
+Response Schema: { "prescription_id": "string", "medication": "string", "dosage": "string", "refills_remaining": number, "status": "string" }
+---
+Question: Determine if there is a conflict between Fluoxetine and Sumatriptan for patient P-1029.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-1029", "medication": "Fluoxetine, Sumatriptan", "dosage": "20mg, 50mg" }
+Response: { "prescription_id": "RX-30482", "medication": "Fluoxetine, Sumatriptan", "dosage": "20mg, 50mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: Increased risk of serotonin syndrome" }
+
+Question: Retrieve prescribing guidelines for Gabapentin for patient P-4488.
+Call: { "func_call": "get_medication_info", "patient_id": "P-4488", "medication": "Gabapentin", "dosage": "300mg" }
+Response: { "prescription_id": "RX-55901", "medication": "Gabapentin", "dosage": "300mg", "refills_remaining": 6, "status": "INFO_RETRIEVED: Anticonvulsant used for nerve pain and seizures" }
+
+Question: Verify safety of combining Spironolactone and Potassium supplements for patient P-7712.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-7712", "medication": "Spironolactone, Potassium", "dosage": "25mg, 20mEq" }
+Response: { "prescription_id": "RX-88123", "medication": "Spironolactone, Potassium", "dosage": "25mg, 20mEq", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: High risk of hyperkalemia" }
+
+Question: Look up administration instructions for Prednisone for patient P-2256.
+Call: { "func_call": "get_medication_info", "patient_id": "P-2256", "medication": "Prednisone", "dosage": "10mg" }
+Response: { "prescription_id": "RX-11987", "medication": "Prednisone", "dosage": "10mg", "refills_remaining": 0, "status": "INFO_RETRIEVED: Corticosteroid, take with food to prevent gastric irritation" }
+
+Question: Assess interaction potential between Ciprofloxacin and Theophylline for patient P-9933.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-9933", "medication": "Ciprofloxacin, Theophylline", "dosage": "500mg, 200mg" }
+Response: { "prescription_id": "RX-44567", "medication": "Ciprofloxacin, Theophylline", "dosage": "500mg, 200mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: Ciprofloxacin increases Theophylline toxicity" }
+
+Question: Get current medication details for Insulin Glargine for patient P-3301.
+Call: { "func_call": "get_medication_info", "patient_id": "P-3301", "medication": "Insulin Glargine", "dosage": "20 units" }
+Response: { "prescription_id": "RX-66789", "medication": "Insulin Glargine", "dosage": "20 units", "refills_remaining": 3, "status": "INFO_RETRIEVED: Long-acting basal insulin for diabetes management" }
+
+Question: Check for adverse reactions between Methotrexate and Ibuprofen for patient P-5567.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-5567", "medication": "Methotrexate, Ibuprofen", "dosage": "15mg, 600mg" }
+Response: { "prescription_id": "RX-22345", "medication": "Methotrexate, Ibuprofen", "dosage": "15mg, 600mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: NSAIDs reduce Methotrexate clearance" }
+
+Question: Provide usage information for Tamsulosin for patient P-8844.
+Call: { "func_call": "get_medication_info", "patient_id": "P-8844", "medication": "Tamsulosin", "dosage": "0.4mg" }
+Response: { "prescription_id": "RX-99001", "medication": "Tamsulosin", "dosage": "0.4mg", "refills_remaining": 4, "status": "INFO_RETRIEVED: Alpha blocker for benign prostatic hyperplasia" }
+
+Question: Evaluate risks of mixing Clarithromycin and Colchicine for patient P-6655.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-6655", "medication": "Clarithromycin, Colchicine", "dosage": "500mg, 0.6mg" }
+Response: { "prescription_id": "RX-33210", "medication": "Clarithromycin, Colchicine", "dosage": "500mg, 0.6mg", "refills_remaining": 0, "status": "CRITICAL_INTERACTION: Severe colchicine toxicity possible" }
+
+Question: Fetch prescription status for Montelukast for patient P-1144.
+Call: { "func_call": "get_medication_info", "patient_id": "P-1144", "medication": "Montelukast", "dosage": "10mg" }
+Response: { "prescription_id": "RX-77654", "medication": "Montelukast", "dosage": "10mg", "refills_remaining": 2, "status": "INFO_RETRIEVED: Leukotriene receptor antagonist for asthma and allergies" }
+
+Question: Analyze compatibility of Dabigatran and Aspirin for patient P-4421.
+Call: { "func_call": "check_drug_interaction", "patient_id": "P-4421", "medication": "Dabigatran, Aspirin", "dosage": "150mg, 81mg" }
+Response: { "prescription_id": "RX-55432", "medication": "Dabigatran, Aspirin", "dosage": "150mg, 81mg", "refills_remaining": 0, "status": "MAJOR_INTERACTION: Significantly increased bleeding risk" }
+
+Question: Retrieve dosing schedule for Escitalopram for patient P-9988.
+Call: { "func_call": "get_medication_info", "patient_id": "P-9988", "medication": "Escitalopram", "dosage": "10mg" }
+Response: { "prescription_id": "RX-12876", "medication": "Escitalopram", "dosage": "10mg", "refills_remaining": 5, "status": "INFO_RETRIEVED: SSRI antidepressant, take once daily morning or evening" }

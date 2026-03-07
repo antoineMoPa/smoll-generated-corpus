@@ -1,0 +1,51 @@
+Available Tools: search_flights | get_flight_details | filter_flights | get_seat_map
+Call Schema: { "func_call": "string", "origin": "string", "destination": "string", "departure_date": "string", "return_date": "string", "passengers": number, "cabin": "economy|business|first" }
+Response Schema: { "flights": [{ "flight_number": "string", "airline": "string", "departure": "string", "arrival": "string", "price": number, "duration_minutes": number }], "total": number }
+
+Question: Locate direct economy flights from Vancouver to Mexico City for three passengers on November 11th.
+Call: { "func_call": "filter_flights", "origin": "YVR", "destination": "MEX", "departure_date": "2024-11-11", "return_date": null, "passengers": 3, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AM675", "airline": "Aeromexico", "departure": "2024-11-11T09:00:00Z", "arrival": "2024-11-11T17:30:00Z", "price": 1450, "duration_minutes": 330 }, { "flight_number": "AC1982", "airline": "Air Canada", "departure": "2024-11-11T13:45:00Z", "arrival": "2024-11-11T22:15:00Z", "price": 1520, "duration_minutes": 330 }], "total": 2 }
+
+Question: Show me business class options with a stopover from Istanbul to Bangkok for two people on December 20th.
+Call: { "func_call": "filter_flights", "origin": "IST", "destination": "BKK", "departure_date": "2024-12-20", "return_date": null, "passengers": 2, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "TK054", "airline": "Turkish Airlines", "departure": "2024-12-20T01:30:00Z", "arrival": "2024-12-20T16:45:00Z", "price": 5800, "duration_minutes": 615 }, { "flight_number": "QR832", "airline": "Qatar Airways", "departure": "2024-12-20T08:15:00Z", "arrival": "2024-12-20T23:30:00Z", "price": 6100, "duration_minutes": 615 }], "total": 2 }
+
+Question: I need first class direct routes from San Francisco to London for one traveler on January 25th.
+Call: { "func_call": "filter_flights", "origin": "SFO", "destination": "LHR", "departure_date": "2025-01-25", "return_date": null, "passengers": 1, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "BA286", "airline": "British Airways", "departure": "2025-01-25T16:20:00Z", "arrival": "2025-01-26T10:35:00Z", "price": 14200, "duration_minutes": 615 }, { "flight_number": "UA901", "airline": "United Airlines", "departure": "2025-01-25T18:45:00Z", "arrival": "2025-01-26T13:00:00Z", "price": 13900, "duration_minutes": 615 }], "total": 2 }
+
+Question: List all economy flights with a layover from Phoenix to Orlando for six passengers on February 8th.
+Call: { "func_call": "filter_flights", "origin": "PHX", "destination": "MCO", "departure_date": "2025-02-08", "return_date": null, "passengers": 6, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "WN2245", "airline": "Southwest", "departure": "2025-02-08T06:30:00Z", "arrival": "2025-02-08T14:15:00Z", "price": 1680, "duration_minutes": 345 }, { "flight_number": "DL1890", "airline": "Delta", "departure": "2025-02-08T10:45:00Z", "arrival": "2025-02-08T18:30:00Z", "price": 1750, "duration_minutes": 345 }, { "flight_number": "AA3321", "airline": "American Airlines", "departure": "2025-02-08T14:00:00Z", "arrival": "2025-02-08T21:45:00Z", "price": 1620, "duration_minutes": 345 }], "total": 3 }
+
+Question: Find direct business class tickets from Mumbai to New York for four travelers on March 15th.
+Call: { "func_call": "filter_flights", "origin": "BOM", "destination": "JFK", "departure_date": "2025-03-15", "return_date": null, "passengers": 4, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "AI019", "airline": "Air India", "departure": "2025-03-15T02:00:00Z", "arrival": "2025-03-15T07:30:00Z", "price": 11200, "duration_minutes": 870 }, { "flight_number": "UA082", "airline": "United Airlines", "departure": "2025-03-15T14:30:00Z", "arrival": "2025-03-15T20:00:00Z", "price": 10800, "duration_minutes": 870 }], "total": 2 }
+
+Question: Search for economy options with a stopover from Lisbon to Athens for two people on April 22nd.
+Call: { "func_call": "filter_flights", "origin": "LIS", "destination": "ATH", "departure_date": "2025-04-22", "return_date": null, "passengers": 2, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "TP1234", "airline": "TAP Air Portugal", "departure": "2025-04-22T07:15:00Z", "arrival": "2025-04-22T13:40:00Z", "price": 420, "duration_minutes": 265 }, { "flight_number": "A3652", "airline": "Aegean Airlines", "departure": "2025-04-22T11:30:00Z", "arrival": "2025-04-22T17:55:00Z", "price": 390, "duration_minutes": 265 }], "total": 2 }
+
+Question: Get direct first class flights from Sydney to Los Angeles for three passengers on May 30th.
+Call: { "func_call": "filter_flights", "origin": "SYD", "destination": "LAX", "departure_date": "2025-05-30", "return_date": null, "passengers": 3, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "QF012", "airline": "Qantas", "departure": "2025-05-30T12:10:00Z", "arrival": "2025-05-30T06:45:00Z", "price": 21500, "duration_minutes": 755 }, { "flight_number": "UA863", "airline": "United Airlines", "departure": "2025-05-30T14:25:00Z", "arrival": "2025-05-30T09:00:00Z", "price": 20900, "duration_minutes": 755 }], "total": 2 }
+
+Question: Show economy flights with a layover from Dallas to Las Vegas for one person on June 18th.
+Call: { "func_call": "filter_flights", "origin": "DFW", "destination": "LAS", "departure_date": "2025-06-18", "return_date": null, "passengers": 1, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "AA2105", "airline": "American Airlines", "departure": "2025-06-18T08:20:00Z", "arrival": "2025-06-18T12:35:00Z", "price": 380, "duration_minutes": 255 }, { "flight_number": "WN1432", "airline": "Southwest", "departure": "2025-06-18T15:40:00Z", "arrival": "2025-06-18T19:55:00Z", "price": 350, "duration_minutes": 255 }], "total": 2 }
+
+Question: Find business class direct connections from Tokyo to Paris for five travelers on July 25th.
+Call: { "func_call": "filter_flights", "origin": "NRT", "destination": "CDG", "departure_date": "2025-07-25", "return_date": null, "passengers": 5, "cabin": "business" }
+Response: { "flights": [{ "flight_number": "AF275", "airline": "Air France", "departure": "2025-07-25T11:00:00Z", "arrival": "2025-07-25T16:30:00Z", "price": 13400, "duration_minutes": 750 }, { "flight_number": "JL415", "airline": "Japan Airlines", "departure": "2025-07-25T13:30:00Z", "arrival": "2025-07-25T19:00:00Z", "price": 13100, "duration_minutes": 750 }], "total": 2 }
+
+Question: List economy options with a stopover from Houston to San Diego for two people on August 9th.
+Call: { "func_call": "filter_flights", "origin": "IAH", "destination": "SAN", "departure_date": "2025-08-09", "return_date": null, "passengers": 2, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "UA1567", "airline": "United Airlines", "departure": "2025-08-09T07:00:00Z", "arrival": "2025-08-09T11:45:00Z", "price": 520, "duration_minutes": 285 }, { "flight_number": "WN3398", "airline": "Southwest", "departure": "2025-08-09T12:30:00Z", "arrival": "2025-08-09T17:15:00Z", "price": 490, "duration_minutes": 285 }], "total": 2 }
+
+Question: Search for direct first class seats from Zurich to Singapore for one passenger on September 14th.
+Call: { "func_call": "filter_flights", "origin": "ZRH", "destination": "SIN", "departure_date": "2025-09-14", "return_date": null, "passengers": 1, "cabin": "first" }
+Response: { "flights": [{ "flight_number": "LX178", "airline": "Swiss International", "departure": "2025-09-14T22:10:00Z", "arrival": "2025-09-15T17:40:00Z", "price": 16800, "duration_minutes": 690 }, { "flight_number": "SQ346", "airline": "Singapore Airlines", "departure": "2025-09-14T23:45:00Z", "arrival": "2025-09-15T19:15:00Z", "price": 17200, "duration_minutes": 690 }], "total": 2 }
+
+Question: Find economy flights with a layover from Copenhagen to Madrid for three travelers on October 28th.
+Call: { "func_call": "filter_flights", "origin": "CPH", "destination": "MAD", "departure_date": "2025-10-28", "return_date": null, "passengers": 3, "cabin": "economy" }
+Response: { "flights": [{ "flight_number": "SK1455", "airline": "SAS", "departure": "2025-10-28T06:45:00Z", "arrival": "2025-10-28T12:20:00Z", "price": 760, "duration_minutes": 335 }, { "flight_number": "IB3122", "airline": "Iberia", "departure": "2025-10-28T14:10:00Z", "arrival": "2025-10-28T19:45:00Z", "price": 710, "duration_minutes": 335 }], "total": 2 }

@@ -1,0 +1,51 @@
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Find all emails from Amazon regarding my recent order confirmation.
+Call: { "func_call": "search_emails", "query": "order confirmation", "from": "amazon.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_8921", "from": "auto-confirm@amazon.com", "subject": "Your Amazon.com order #112-3456789-0000000", "date": "2023-10-24T14:30:00Z" }, { "id": "msg_8922", "from": "orders@amazon.com", "subject": "Order Confirmation: Wireless Headphones", "date": "2023-10-22T09:15:00Z" }], "count": 2 }
+
+Question: Search for invoices sent by the accounting team at Acme Corp.
+Call: { "func_call": "search_emails", "query": "invoice", "from": "accounting@acmecorp.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_4401", "from": "billing@acmecorp.com", "subject": "Invoice #INV-2023-099 for October Services", "date": "2023-10-01T08:00:00Z" }, { "id": "msg_4402", "from": "finance@acmecorp.com", "subject": "RE: Invoice Payment Pending", "date": "2023-09-28T11:20:00Z" }, { "id": "msg_4403", "from": "accounts@acmecorp.com", "subject": "Invoice #INV-2023-085 Attached", "date": "2023-09-15T10:45:00Z" }], "count": 3 }
+
+Question: Look for password reset emails from the IT support portal.
+Call: { "func_call": "search_emails", "query": "password reset", "from": "support@itportal.net", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_7732", "from": "noreply@itportal.net", "subject": "Password Reset Request Received", "date": "2023-10-25T16:45:00Z" }], "count": 1 }
+
+Question: Find meeting invites from Sarah Jenkins about the Q4 planning session.
+Call: { "func_call": "search_emails", "query": "meeting", "from": "sarah.jenkins@example.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_5510", "from": "sarah.jenkins@example.com", "subject": "Meeting: Q4 Planning Session - Agenda", "date": "2023-10-20T13:00:00Z" }, { "id": "msg_5511", "from": "sarah.jenkins@example.com", "subject": "Updated Meeting Time: Q4 Review", "date": "2023-10-18T09:30:00Z" }], "count": 2 }
+
+Question: Search for order confirmations from Best Buy for electronics.
+Call: { "func_call": "search_emails", "query": "order confirmation", "from": "bestbuy.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_9921", "from": "orders@bestbuy.com", "subject": "Best Buy Order Confirmation #BBY01-998877", "date": "2023-10-23T18:20:00Z" }], "count": 1 }
+
+Question: Retrieve all invoices from FreelancerHub regarding web design work.
+Call: { "func_call": "search_emails", "query": "invoice", "from": "billing@freelancerhub.io", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_3321", "from": "invoices@freelancerhub.io", "subject": "Invoice #FH-1024: Web Design Phase 2", "date": "2023-10-15T10:00:00Z" }, { "id": "msg_3322", "from": "payments@freelancerhub.io", "subject": "Invoice #FH-0990: Initial Deposit", "date": "2023-09-30T14:15:00Z" }], "count": 2 }
+
+Question: Find any password reset notifications from Google Security.
+Call: { "func_call": "search_emails", "query": "password reset", "from": "accounts.google.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_6641", "from": "no-reply@accounts.google.com", "subject": "Google Account Password Changed", "date": "2023-10-21T07:55:00Z" }, { "id": "msg_6642", "from": "no-reply@accounts.google.com", "subject": "Security Alert: Password Reset Attempt", "date": "2023-10-10T22:10:00Z" }], "count": 2 }
+
+Question: Search for meeting updates from the Project Management Office.
+Call: { "func_call": "search_emails", "query": "meeting", "from": "pmo@enterprise.org", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_2210", "from": "scheduler@pmo.enterprise.org", "subject": "Meeting Rescheduled: Sprint Review", "date": "2023-10-24T11:00:00Z" }, { "id": "msg_2211", "from": "alerts@pmo.enterprise.org", "subject": "Reminder: Weekly Status Meeting", "date": "2023-10-23T08:45:00Z" }, { "id": "msg_2212", "from": "admin@pmo.enterprise.org", "subject": "Meeting Notes: Architecture Discussion", "date": "2023-10-19T15:30:00Z" }], "count": 3 }
+
+Question: Locate order confirmation emails from Uber Eats for lunch orders.
+Call: { "func_call": "search_emails", "query": "order confirmation", "from": "ubereats.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_1105", "from": "receipts@ubereats.com", "subject": "Your Uber Eats Order Confirmation #UE-554433", "date": "2023-10-25T12:30:00Z" }, { "id": "msg_1106", "from": "support@ubereats.com", "subject": "Order Confirmation and Receipt", "date": "2023-10-24T13:15:00Z" }], "count": 2 }
+
+Question: Find invoices from CloudServices Inc regarding server hosting.
+Call: { "func_call": "search_emails", "query": "invoice", "from": "billing@cloudservices.inc", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_8876", "from": "ar@cloudservices.inc", "subject": "Invoice #CS-2023-10: Monthly Hosting Fees", "date": "2023-10-05T09:00:00Z" }], "count": 1 }
+
+Question: Search for meeting minutes sent by the HR department.
+Call: { "func_call": "search_emails", "query": "meeting", "from": "hr@company.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_4455", "from": "hr.manager@company.com", "subject": "Meeting Summary: Benefits Enrollment", "date": "2023-10-17T14:00:00Z" }, { "id": "msg_4456", "from": "recruiting@company.com", "subject": "Interview Meeting Feedback", "date": "2023-10-12T10:20:00Z" }], "count": 2 }
+
+Question: Look for password reset links from the banking portal.
+Call: { "func_call": "search_emails", "query": "password reset", "from": "security@mybank.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_9988", "from": "alerts@mybank.com", "subject": "Secure Message: Password Reset Verification", "date": "2023-10-22T19:45:00Z" }], "count": 1 }

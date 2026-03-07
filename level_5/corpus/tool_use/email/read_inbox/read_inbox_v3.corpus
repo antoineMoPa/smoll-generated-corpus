@@ -1,0 +1,51 @@
+Available Tools: get_inbox | get_email | mark_as_read | mark_as_unread | get_unread_count
+Call Schema: { "func_call": "string", "folder": "string", "message_id": "string", "limit": number }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string", "read": boolean }], "total": number }
+---
+Question: Display the 7 most recent messages in my inbox.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 7 }
+Response: { "messages": [{ "id": "msg_8801", "from": "travel@airline.com", "subject": "Flight Confirmation: NYC to LON", "date": "2023-11-15T10:20:00Z", "read": false }, { "id": "msg_8800", "from": "boss@company.com", "subject": "Q4 Review Meeting", "date": "2023-11-15T09:45:00Z", "read": true }, { "id": "msg_8799", "from": "alerts@weather.gov", "subject": "Storm Warning for Your Area", "date": "2023-11-14T18:30:00Z", "read": false }, { "id": "msg_8798", "from": "friend@gmail.com", "subject": "Dinner plans this weekend?", "date": "2023-11-14T16:15:00Z", "read": true }, { "id": "msg_8797", "from": "noreply@linkedin.com", "subject": "You appeared in 5 searches this week", "date": "2023-11-14T12:00:00Z", "read": true }, { "id": "msg_8796", "from": "support@streaming.net", "subject": "Payment Method Update Required", "date": "2023-11-13T20:10:00Z", "read": false }, { "id": "msg_8795", "from": "news@dailypost.com", "subject": "Morning Briefing: Tech Stocks Rise", "date": "2023-11-13T07:00:00Z", "read": true }], "total": 7 }
+
+Question: Retrieve the full text of the flight confirmation email msg_8801.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8801", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8801", "from": "travel@airline.com", "subject": "Flight Confirmation: NYC to LON", "date": "2023-11-15T10:20:00Z", "read": false }], "total": 1 }
+
+Question: Count how many unread items are currently in my mailbox.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 50 }
+Response: { "messages": [{ "id": "msg_8801", "from": "travel@airline.com", "subject": "Flight Confirmation: NYC to LON", "date": "2023-11-15T10:20:00Z", "read": false }, { "id": "msg_8799", "from": "alerts@weather.gov", "subject": "Storm Warning for Your Area", "date": "2023-11-14T18:30:00Z", "read": false }, { "id": "msg_8796", "from": "support@streaming.net", "subject": "Payment Method Update Required", "date": "2023-11-13T20:10:00Z", "read": false }], "total": 3 }
+
+Question: Find the latest message from boss@company.com.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8800", "from": "boss@company.com", "subject": "Q4 Review Meeting", "date": "2023-11-15T09:45:00Z", "read": true }], "total": 1 }
+
+Question: Show me the details for the storm warning email msg_8799.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8799", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8799", "from": "alerts@weather.gov", "subject": "Storm Warning for Your Area", "date": "2023-11-14T18:30:00Z", "read": false }], "total": 1 }
+
+Question: List the top 5 emails to catch up on today.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 5 }
+Response: { "messages": [{ "id": "msg_8801", "from": "travel@airline.com", "subject": "Flight Confirmation: NYC to LON", "date": "2023-11-15T10:20:00Z", "read": false }, { "id": "msg_8800", "from": "boss@company.com", "subject": "Q4 Review Meeting", "date": "2023-11-15T09:45:00Z", "read": true }, { "id": "msg_8799", "from": "alerts@weather.gov", "subject": "Storm Warning for Your Area", "date": "2023-11-14T18:30:00Z", "read": false }, { "id": "msg_8798", "from": "friend@gmail.com", "subject": "Dinner plans this weekend?", "date": "2023-11-14T16:15:00Z", "read": true }, { "id": "msg_8797", "from": "noreply@linkedin.com", "subject": "You appeared in 5 searches this week", "date": "2023-11-14T12:00:00Z", "read": true }], "total": 5 }
+
+Question: I need to read the payment update from streaming.net, ID msg_8796.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8796", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8796", "from": "support@streaming.net", "subject": "Payment Method Update Required", "date": "2023-11-13T20:10:00Z", "read": false }], "total": 1 }
+
+Question: Pull the last 8 emails to check for any shipping notifications.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 8 }
+Response: { "messages": [{ "id": "msg_8801", "from": "travel@airline.com", "subject": "Flight Confirmation: NYC to LON", "date": "2023-11-15T10:20:00Z", "read": false }, { "id": "msg_8800", "from": "boss@company.com", "subject": "Q4 Review Meeting", "date": "2023-11-15T09:45:00Z", "read": true }, { "id": "msg_8799", "from": "alerts@weather.gov", "subject": "Storm Warning for Your Area", "date": "2023-11-14T18:30:00Z", "read": false }, { "id": "msg_8798", "from": "friend@gmail.com", "subject": "Dinner plans this weekend?", "date": "2023-11-14T16:15:00Z", "read": true }, { "id": "msg_8797", "from": "noreply@linkedin.com", "subject": "You appeared in 5 searches this week", "date": "2023-11-14T12:00:00Z", "read": true }, { "id": "msg_8796", "from": "support@streaming.net", "subject": "Payment Method Update Required", "date": "2023-11-13T20:10:00Z", "read": false }, { "id": "msg_8795", "from": "news@dailypost.com", "subject": "Morning Briefing: Tech Stocks Rise", "date": "2023-11-13T07:00:00Z", "read": true }, { "id": "msg_8794", "from": "shipping@amazon.com", "subject": "Your package has been delivered", "date": "2023-11-12T15:45:00Z", "read": false }], "total": 8 }
+
+Question: Open the LinkedIn notification with ID msg_8797.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8797", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8797", "from": "noreply@linkedin.com", "subject": "You appeared in 5 searches this week", "date": "2023-11-14T12:00:00Z", "read": true }], "total": 1 }
+
+Question: What is the very newest email in my inbox?
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8801", "from": "travel@airline.com", "subject": "Flight Confirmation: NYC to LON", "date": "2023-11-15T10:20:00Z", "read": false }], "total": 1 }
+
+Question: Fetch the delivery notification msg_8794 from Amazon.
+Call: { "func_call": "get_email", "folder": "INBOX", "message_id": "msg_8794", "limit": 1 }
+Response: { "messages": [{ "id": "msg_8794", "from": "shipping@amazon.com", "subject": "Your package has been delivered", "date": "2023-11-12T15:45:00Z", "read": false }], "total": 1 }
+
+Question: Show me the 6 most recent conversations.
+Call: { "func_call": "get_inbox", "folder": "INBOX", "message_id": "", "limit": 6 }
+Response: { "messages": [{ "id": "msg_8801", "from": "travel@airline.com", "subject": "Flight Confirmation: NYC to LON", "date": "2023-11-15T10:20:00Z", "read": false }, { "id": "msg_8800", "from": "boss@company.com", "subject": "Q4 Review Meeting", "date": "2023-11-15T09:45:00Z", "read": true }, { "id": "msg_8799", "from": "alerts@weather.gov", "subject": "Storm Warning for Your Area", "date": "2023-11-14T18:30:00Z", "read": false }, { "id": "msg_8798", "from": "friend@gmail.com", "subject": "Dinner plans this weekend?", "date": "2023-11-14T16:15:00Z", "read": true }, { "id": "msg_8797", "from": "noreply@linkedin.com", "subject": "You appeared in 5 searches this week", "date": "2023-11-14T12:00:00Z", "read": true }, { "id": "msg_8796", "from": "support@streaming.net", "subject": "Payment Method Update Required", "date": "2023-11-13T20:10:00Z", "read": false }], "total": 6 }

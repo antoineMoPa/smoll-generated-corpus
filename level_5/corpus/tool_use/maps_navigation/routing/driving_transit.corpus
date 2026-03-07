@@ -1,0 +1,51 @@
+Available Tools: get_directions | get_route_alternatives | get_travel_time | get_traffic_conditions
+Call Schema: { "func_call": "string", "origin": "string", "destination": "string", "mode": "driving|walking|cycling|transit" }
+Response Schema: { "distance_km": number, "duration_minutes": number, "steps": [{ "instruction": "string", "distance_km": number }] }
+---
+Question: How do I drive from Times Square to Central Park South in New York?
+Call: { "func_call": "get_directions", "origin": "Times Square, New York, NY", "destination": "Central Park South, New York, NY", "mode": "driving" }
+Response: { "distance_km": 2.1, "duration_minutes": 12, "steps": [ { "instruction": "Head north on Broadway toward W 47th St", "distance_km": 0.3 }, { "instruction": "Turn right onto W 59th St", "distance_km": 0.9 }, { "instruction": "Arrive at Central Park South", "distance_km": 0.0 } ] }
+
+Question: What are the transit directions from Union Station to Dodger Stadium in Los Angeles?
+Call: { "func_call": "get_directions", "origin": "Union Station, Los Angeles, CA", "destination": "Dodger Stadium, Los Angeles, CA", "mode": "transit" }
+Response: { "distance_km": 4.5, "duration_minutes": 25, "steps": [ { "instruction": "Board Metro Bus Line 260 at Union Station Patsaouras Transit Plaza", "distance_km": 0.1 }, { "instruction": "Ride for 18 minutes to Sunset Blvd & Chavez Ave", "distance_km": 4.2 }, { "instruction": "Walk 300 meters to Dodger Stadium Gate A", "distance_km": 0.3 } ] }
+
+Question: Give me driving directions from the Golden Gate Bridge toll plaza to Fisherman's Wharf in San Francisco.
+Call: { "func_call": "get_directions", "origin": "Golden Gate Bridge Toll Plaza, San Francisco, CA", "destination": "Fisherman's Wharf, San Francisco, CA", "mode": "driving" }
+Response: { "distance_km": 6.8, "duration_minutes": 15, "steps": [ { "instruction": "Continue south on US-101 S", "distance_km": 3.2 }, { "instruction": "Take exit 438 toward Lombard St", "distance_km": 0.4 }, { "instruction": "Turn left onto Lombard St and follow to The Embarcadero", "distance_km": 2.5 }, { "instruction": "Turn right onto Jefferson St", "distance_km": 0.7 } ] }
+
+Question: How can I take public transit from O'Hare Airport to Millennium Park in Chicago?
+Call: { "func_call": "get_directions", "origin": "O'Hare International Airport, Chicago, IL", "destination": "Millennium Park, Chicago, IL", "mode": "transit" }
+Response: { "distance_km": 29.4, "duration_minutes": 55, "steps": [ { "instruction": "Board the CTA Blue Line at O'Hare station", "distance_km": 0.2 }, { "instruction": "Ride downtown to Washington station (28.5 km)", "distance_km": 28.5 }, { "instruction": "Walk east on Washington St to Michigan Ave", "distance_km": 0.4 }, { "instruction": "Turn left into Millennium Park", "distance_km": 0.3 } ] }
+
+Question: I need driving instructions from Fenway Park to Logan Airport in Boston.
+Call: { "func_call": "get_directions", "origin": "Fenway Park, Boston, MA", "destination": "Logan International Airport, Boston, MA", "mode": "driving" }
+Response: { "distance_km": 7.2, "duration_minutes": 18, "steps": [ { "instruction": "Head east on Brookline Ave toward Ipswich St", "distance_km": 0.5 }, { "instruction": "Merge onto I-90 E via the ramp", "distance_km": 4.8 }, { "instruction": "Take exit 24A for Ted Williams Tunnel", "distance_km": 1.2 }, { "instruction": "Follow signs for Terminal B", "distance_km": 0.7 } ] }
+
+Question: What is the transit route from Pike Place Market to the Space Needle in Seattle?
+Call: { "func_call": "get_directions", "origin": "Pike Place Market, Seattle, WA", "destination": "Space Needle, Seattle, WA", "mode": "transit" }
+Response: { "distance_km": 2.3, "duration_minutes": 22, "steps": [ { "instruction": "Walk to 3rd Ave & Pine St bus stop", "distance_km": 0.2 }, { "instruction": "Board Bus Route 1 or 2 towards U-District", "distance_km": 0.1 }, { "instruction": "Disembark at Broad St & 5th Ave N", "distance_km": 1.8 }, { "instruction": "Walk north to Space Needle entrance", "distance_km": 0.2 } ] }
+
+Question: Drive me from the Lincoln Memorial to Georgetown University in Washington DC.
+Call: { "func_call": "get_directions", "origin": "Lincoln Memorial, Washington, DC", "destination": "Georgetown University, Washington, DC", "mode": "driving" }
+Response: { "distance_km": 4.1, "duration_minutes": 14, "steps": [ { "instruction": "Head north on 23rd St NW", "distance_km": 0.6 }, { "instruction": "Turn left onto K St NW", "distance_km": 1.5 }, { "instruction": "Turn right onto Wisconsin Ave NW", "distance_km": 1.8 }, { "instruction": "Turn left onto O St NW to reach campus", "distance_km": 0.2 } ] }
+
+Question: How do I get from South Station to Fenway Park via public transit in Boston?
+Call: { "func_call": "get_directions", "origin": "South Station, Boston, MA", "destination": "Fenway Park, Boston, MA", "mode": "transit" }
+Response: { "distance_km": 5.6, "duration_minutes": 28, "steps": [ { "instruction": "Enter South Station and board the Green Line (D Branch)", "distance_km": 0.1 }, { "instruction": "Transfer at Park Street to the Green Line (D Branch) towards Riverside", "distance_km": 0.0 }, { "instruction": "Exit at Kenmore Station", "distance_km": 5.2 }, { "instruction": "Walk 400 meters to Fenway Park", "distance_km": 0.4 } ] }
+
+Question: Provide driving directions from the Empire State Building to JFK Airport in New York.
+Call: { "func_call": "get_directions", "origin": "Empire State Building, New York, NY", "destination": "JFK International Airport, Queens, NY", "mode": "driving" }
+Response: { "distance_km": 26.3, "duration_minutes": 45, "steps": [ { "instruction": "Head south on 5th Ave toward W 33rd St", "distance_km": 0.4 }, { "instruction": "Merge onto I-495 E (Long Island Expy)", "distance_km": 18.5 }, { "instruction": "Take exit 19E toward Van Wyck Expy S/JFK Airport", "distance_km": 5.2 }, { "instruction": "Follow signs for your specific terminal", "distance_km": 2.2 } ] }
+
+Question: What are the transit directions from Wrigley Field to Navy Pier in Chicago?
+Call: { "func_call": "get_directions", "origin": "Wrigley Field, Chicago, IL", "destination": "Navy Pier, Chicago, IL", "mode": "transit" }
+Response: { "distance_km": 9.8, "duration_minutes": 42, "steps": [ { "instruction": "Walk to Addison Red Line station", "distance_km": 0.3 }, { "instruction": "Board the Red Line towards 95th/Dan Ryan", "distance_km": 0.2 }, { "instruction": "Transfer at State/Lake to the #65 Bus", "distance_km": 0.0 }, { "instruction": "Ride bus to Grand Ave & McClurg Ct", "distance_km": 8.9 }, { "instruction": "Walk east to Navy Pier entrance", "distance_km": 0.4 } ] }
+
+Question: Driving from Santa Monica Pier to Hollywood Bowl in Los Angeles.
+Call: { "func_call": "get_directions", "origin": "Santa Monica Pier, Santa Monica, CA", "destination": "Hollywood Bowl, Los Angeles, CA", "mode": "driving" }
+Response: { "distance_km": 24.7, "duration_minutes": 38, "steps": [ { "instruction": "Head east on Santa Monica Blvd", "distance_km": 1.2 }, { "instruction": "Merge onto I-10 E", "distance_km": 14.5 }, { "instruction": "Take exit 8A for US-101 N towards Hollywood", "distance_km": 6.8 }, { "instruction": "Exit at Highland Ave and turn left", "distance_km": 1.5 }, { "instruction": "Turn right onto Chevy Chase Dr", "distance_km": 0.7 } ] }
+
+Question: Transit route from Capitol Hill to Seattle-Tacoma International Airport.
+Call: { "func_call": "get_directions", "origin": "Capitol Hill Station, Seattle, WA", "destination": "Seattle-Tacoma International Airport, SeaTac, WA", "mode": "transit" }
+Response: { "distance_km": 22.5, "duration_minutes": 48, "steps": [ { "instruction": "Board the Link Light Line 1 Line southbound at Capitol Hill Station", "distance_km": 0.1 }, { "instruction": "Ride directly to SeaTac/Airport Station (no transfer required)", "distance_km": 22.2 }, { "instruction": "Follow signs to Terminal departure level via skybridge", "distance_km": 0.2 } ] }

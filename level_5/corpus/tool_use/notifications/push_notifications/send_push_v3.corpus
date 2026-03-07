@@ -1,0 +1,51 @@
+Available Tools: send_push | send_bulk_push | get_push_status | cancel_push
+Call Schema: { "func_call": "string", "user_id": "string", "title": "string", "body": "string", "data": {}, "device_token": "string" }
+Response Schema: { "notification_id": "string", "status": "sent|delivered|failed", "timestamp": "string" }
+---
+Question: Send a push notification to user usr_10293 about their grocery delivery arrival.
+Call: { "func_call": "send_push", "user_id": "usr_10293", "title": "Groceries Arriving Now", "body": "Your FreshMart order #8821 has arrived. The driver is at the front entrance.", "data": { "order_id": "8821", "type": "delivery_arrival", "driver": "Chris" }, "device_token": "fcm_tok_a1b2c3d4e5f6g7h8i9" }
+Response: { "notification_id": "notif_z9y8x7w6", "status": "sent", "timestamp": "2023-11-01T09:15:20Z" }
+
+Question: Notify user usr_56789 that their loan application was approved.
+Call: { "func_call": "send_push", "user_id": "usr_56789", "title": "Loan Approved", "body": "Congratulations! Your personal loan of $15,000 has been approved. Funds will transfer shortly.", "data": { "amount": "15000", "currency": "USD", "application_id": "app_334455" }, "device_token": "apns_tok_998877665544332211" }
+Response: { "notification_id": "notif_v5u4t3s2", "status": "delivered", "timestamp": "2023-11-01T10:45:12Z" }
+
+Question: Alert user usr_24680 about suspicious activity on their credit card.
+Call: { "func_call": "send_push", "user_id": "usr_24680", "title": "Suspicious Transaction", "body": "We detected a charge of $250 at Electronics Hub in Miami. Did you authorize this?", "data": { "location": "Miami, FL", "merchant": "Electronics Hub", "amount": "250.00" }, "device_token": "fcm_tok_p9o8n7m6l5k4j3i2h1" }
+Response: { "notification_id": "notif_r1q2p3o4", "status": "sent", "timestamp": "2023-11-01T11:30:05Z" }
+
+Question: Remind user usr_13579 about their vaccine booster shot next week.
+Call: { "func_call": "send_push", "user_id": "usr_13579", "title": "Vaccine Reminder", "body": "Your booster shot appointment is scheduled for next Tuesday at 2:30 PM at City Clinic.", "data": { "appointment_id": "med_554433", "time": "2:30 PM", "location": "City Clinic" }, "device_token": "apns_tok_112233445566778899" }
+Response: { "notification_id": "notif_n5m6l7k8", "status": "delivered", "timestamp": "2023-11-01T13:00:00Z" }
+
+Question: Inform user usr_97531 that their ride-share driver has arrived.
+Call: { "func_call": "send_push", "user_id": "usr_97531", "title": "Driver Here", "body": "Your Uber driver, Jennifer in a Blue Toyota Camry, has arrived at the pickup spot.", "data": { "driver_name": "Jennifer", "car_model": "Toyota Camry", "license_plate": "ABC-123" }, "device_token": "fcm_tok_q1w2e3r4t5y6u7i8o9" }
+Response: { "notification_id": "notif_j9i8h7g6", "status": "sent", "timestamp": "2023-11-01T14:22:45Z" }
+
+Question: Send a loyalty reward update to user usr_86420 for reaching Gold status.
+Call: { "func_call": "send_push", "user_id": "usr_86420", "title": "You Reached Gold Status!", "body": "Thanks to your recent purchases, you are now a Gold Member. Enjoy free shipping on all orders.", "data": { "tier": "Gold", "points_earned": 500, "benefit": "free_shipping" }, "device_token": "apns_tok_z1x2c3v4b5n6m7k8l9" }
+Response: { "notification_id": "notif_f5e4d3c2", "status": "delivered", "timestamp": "2023-11-01T15:10:30Z" }
+
+Question: Notify user usr_75319 that their package was delivered to the porch.
+Call: { "func_call": "send_push", "user_id": "usr_75319", "title": "Package Delivered", "body": "Your Amazon package #TBA998877 was left at your front porch. Enjoy your purchase!", "data": { "tracking_id": "TBA998877", "location": "front porch", "carrier": "Amazon" }, "device_token": "fcm_tok_a9s8d7f6g5h4j3k2l1" }
+Response: { "notification_id": "notif_b1a2z3y4", "status": "sent", "timestamp": "2023-11-01T16:45:18Z" }
+
+Question: Alert user usr_35791 about a firmware update for their smart thermostat.
+Call: { "func_call": "send_push", "user_id": "usr_35791", "title": "Firmware Update Available", "body": "A new update is ready for your Nest Thermostat. Install now to improve energy efficiency.", "data": { "device_name": "Nest Thermostat", "version": "2.4.1", "device_id": "therm_005" }, "device_token": "apns_tok_m1n2b3v4c5x6z7a8s9" }
+Response: { "notification_id": "notif_x7w6v5u4", "status": "delivered", "timestamp": "2023-11-01T17:20:55Z" }
+
+Question: Inform user usr_24601 that their table reservation is confirmed.
+Call: { "func_call": "send_push", "user_id": "usr_24601", "title": "Reservation Confirmed", "body": "Your table for 4 at Luigi's Italian Kitchen is confirmed for tonight at 7:00 PM.", "data": { "restaurant": "Luigi's Italian Kitchen", "time": "7:00 PM", "party_size": 4 }, "device_token": "fcm_tok_p0o9i8u7y6t5r4e3w2" }
+Response: { "notification_id": "notif_t3s2r1q0", "status": "sent", "timestamp": "2023-11-01T18:05:40Z" }
+
+Question: Notify user usr_13580 about a new message in their group chat.
+Call: { "func_call": "send_push", "user_id": "usr_13580", "title": "New Group Message", "body": "Maria sent a message in 'Weekend Trip Planning': 'Has everyone booked their flights yet?'", "data": { "group_id": "grp_112233", "sender": "Maria", "preview": "Has everyone booked..." }, "device_token": "apns_tok_l0k9j8h7g6f5d4s3a2" }
+Response: { "notification_id": "notif_p9o8n7m6", "status": "delivered", "timestamp": "2023-11-01T19:30:22Z" }
+
+Question: Send a traffic alert to user usr_98765 regarding an accident on their route.
+Call: { "func_call": "send_push", "user_id": "usr_98765", "title": "Traffic Alert: Accident Ahead", "body": "A multi-car accident on I-95 North is causing delays of up to 20 minutes. Consider an alternate route.", "data": { "route": "I-95 North", "delay_minutes": 20, "incident_type": "accident" }, "device_token": "fcm_tok_z0x9c8v7b6n5m4k3j2" }
+Response: { "notification_id": "notif_l5k4j3i2", "status": "sent", "timestamp": "2023-11-01T20:15:10Z" }
+
+Question: Confirm to user usr_11234 that their subscription renewal failed.
+Call: { "func_call": "send_push", "user_id": "usr_11234", "title": "Payment Failed", "body": "We couldn't process your Premium subscription renewal. Please update your payment method to continue.", "data": { "subscription_type": "Premium", "error_code": "card_declined", "retry_date": "2023-11-03" }, "device_token": "apns_tok_q1w2e3r4t5y6u7i8o0" }
+Response: { "notification_id": "notif_h1g2f3d4", "status": "delivered", "timestamp": "2023-11-01T21:00:05Z" }

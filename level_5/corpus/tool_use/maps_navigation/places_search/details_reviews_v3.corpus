@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Discover tapas bars near La Rambla in Barcelona within a 1.5 kilometer range.
+Call: { "func_call": "search_places", "query": "tapas bars", "location": "La Rambla, Barcelona, Spain", "radius_km": 1.5, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_bcn_037", "name": "Cal Pep", "address": "Plaça de les Olles, 8, 08003 Barcelona, Spain", "rating": 4.6, "open_now": true }, { "id": "pl_bcn_038", "name": "El Xampanyet", "address": "Carrer de Montcada, 22, 08003 Barcelona, Spain", "rating": 4.4, "open_now": true }, { "id": "pl_bcn_039", "name": "Quimet & Quimet", "address": "Carrer del Poeta Cabanyes, 25, 08004 Barcelona, Spain", "rating": 4.7, "open_now": false }], "total": 3 }
+
+Question: Locate ice skating rinks close to Rockefeller Center in New York City.
+Call: { "func_call": "search_places", "query": "ice skating rinks", "location": "Rockefeller Center, New York, NY", "radius_km": 0.5, "type": "sports_complex" }
+Response: { "places": [{ "id": "pl_nyc_040", "name": "The Rink at Rockefeller Center", "address": "45 Rockefeller Plaza, New York, NY 10111", "rating": 4.5, "open_now": true }, { "id": "pl_nyc_041", "name": "Bryant Park Winter Village", "address": "42nd St & 6th Ave, New York, NY 10018", "rating": 4.3, "open_now": true }, { "id": "pl_nyc_042", "name": "Wollman Rink Central Park", "address": "Mid-Park at 62nd Street, New York, NY 10019", "rating": 4.2, "open_now": false }], "total": 3 }
+
+Question: Find vegan bakeries near Friedrichshain in Berlin, Germany.
+Call: { "func_call": "search_places", "query": "vegan bakeries", "location": "Friedrichshain, Berlin, Germany", "radius_km": 2, "type": "bakery" }
+Response: { "places": [{ "id": "pl_ber_043", "name": "Bonanza Coffee Roasters", "address": "Oderberger Str. 35, 10435 Berlin, Germany", "rating": 4.8, "open_now": true }, { "id": "pl_ber_044", "name": "1990 Vegan Living", "address": "Boxhagener Str. 56, 10245 Berlin, Germany", "rating": 4.6, "open_now": true }, { "id": "pl_ber_045", "name": "Kuchi Cake", "address": "Simmannstraße 23, 10439 Berlin, Germany", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Search for antique shops within 4 kilometers of the French Quarter in New Orleans.
+Call: { "func_call": "search_places", "query": "antique shops", "location": "French Quarter, New Orleans, LA", "radius_km": 4, "type": "store" }
+Response: { "places": [{ "id": "pl_nola_046", "name": "Royal Street Antiques", "address": "900 Royal St, New Orleans, LA 70116", "rating": 4.7, "open_now": true }, { "id": "pl_nola_047", "name": "M.S. Rau Antiques", "address": "630 Royal St, New Orleans, LA 70130", "rating": 4.9, "open_now": true }, { "id": "pl_nola_048", "name": "Adelaide's Antiques", "address": "423 Chartres St, New Orleans, LA 70130", "rating": 4.4, "open_now": false }], "total": 3 }
+
+Question: Identify public libraries near the University of Toronto campus.
+Call: { "func_call": "search_places", "query": "public libraries", "location": "University of Toronto, Toronto, ON, Canada", "radius_km": 1, "type": "library" }
+Response: { "places": [{ "id": "pl_tor_049", "name": "Gerstein Science Information Centre", "address": "9 King's College Cir, Toronto, ON M5S 1A5, Canada", "rating": 4.6, "open_now": true }, { "id": "pl_tor_050", "name": "Robarts Library", "address": "130 St George St, Toronto, ON M5S 1A5, Canada", "rating": 4.8, "open_now": true }, { "id": "pl_tor_051", "name": "Thomas Fisher Rare Book Library", "address": "120 St George St, Toronto, ON M5S 1A5, Canada", "rating": 4.7, "open_now": false }], "total": 3 }
+
+Question: Look for rooftop bars with views of the skyline near Marina Bay Sands in Singapore.
+Call: { "func_call": "search_places", "query": "rooftop bars", "location": "Marina Bay Sands, Singapore", "radius_km": 1, "type": "bar" }
+Response: { "places": [{ "id": "pl_sgp_052", "name": "Ce La Vi", "address": "1 Bayfront Ave, Level 57, Singapore 018971", "rating": 4.3, "open_now": true }, { "id": "pl_sgp_053", "name": "Lantern Bar", "address": "80 Collyer Quay, Level 28, Singapore 049326", "rating": 4.5, "open_now": true }, { "id": "pl_sgp_054", "name": "Spago Bar & Lounge", "address": "10 Bayfront Ave, Level 57, Singapore 018956", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Find dog grooming salons near Golden Gate Park in San Francisco.
+Call: { "func_call": "search_places", "query": "dog grooming", "location": "Golden Gate Park, San Francisco, CA", "radius_km": 2.5, "type": "pet_store" }
+Response: { "places": [{ "id": "pl_sf_055", "name": "Wag Hotel", "address": "1232 9th Ave, San Francisco, CA 94122", "rating": 4.8, "open_now": true }, { "id": "pl_sf_056", "name": "Dirty Dog Self-Serve Dog Wash", "address": "2249 Irving St, San Francisco, CA 94122", "rating": 4.6, "open_now": true }, { "id": "pl_sf_057", "name": "Fur-Ever Clean", "address": "1545 Fillmore St, San Francisco, CA 94115", "rating": 4.4, "open_now": false }], "total": 3 }
+
+Question: Search for jazz clubs near Bourbon Street in New Orleans open late night.
+Call: { "func_call": "search_places", "query": "jazz clubs", "location": "Bourbon Street, New Orleans, LA", "radius_km": 0.8, "type": "night_club" }
+Response: { "places": [{ "id": "pl_nola_058", "name": "Preservation Hall", "address": "726 St Peter St, New Orleans, LA 70116", "rating": 4.7, "open_now": true }, { "id": "pl_nola_059", "name": "The Spotted Cat Music Club", "address": "623 Frenchmen St, New Orleans, LA 70116", "rating": 4.8, "open_now": true }, { "id": "pl_nola_060", "name": "Snug Harbor Jazz Bistro", "address": "626 Frenchmen St, New Orleans, LA 70116", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Locate hardware stores near Shinjuku Station in Tokyo.
+Call: { "func_call": "search_places", "query": "hardware stores", "location": "Shinjuku Station, Tokyo, Japan", "radius_km": 1.2, "type": "home_goods_store" }
+Response: { "places": [{ "id": "pl_tky_061", "name": "Tokyu Hands Shinjuku", "address": "5-24-2 Sendagaya, Shibuya City, Tokyo 151-0051, Japan", "rating": 4.5, "open_now": true }, { "id": "pl_tky_062", "name": "Homeac Center Minami", "address": "2-1-1 Yoyogi, Shibuya City, Tokyo 151-0053, Japan", "rating": 4.3, "open_now": true }, { "id": "pl_tky_063", "name": "Kohnan Shinjuku", "address": "3-38-1 Shinjuku, Shinjuku City, Tokyo 160-0022, Japan", "rating": 4.4, "open_now": false }], "total": 3 }
+
+Question: Find seafood restaurants near the waterfront in Cape Town, South Africa.
+Call: { "func_call": "search_places", "query": "seafood restaurants", "location": "V&A Waterfront, Cape Town, South Africa", "radius_km": 1, "type": "restaurant" }
+Response: { "places": [{ "id": "pl_cpt_064", "name": "The Codfather", "address": "The Biscuit Mill, 373 Albert Rd, Woodstock, Cape Town, 7925, South Africa", "rating": 4.7, "open_now": true }, { "id": "pl_cpt_065", "name": "Gold Restaurant", "address": "15 Bennett St, Green Point, Cape Town, 8005, South Africa", "rating": 4.5, "open_now": true }, { "id": "pl_cpt_066", "name": "Sevruga", "address": "Shop 6050, V&A Waterfront, Cape Town, 8001, South Africa", "rating": 4.6, "open_now": false }], "total": 3 }
+
+Question: Search for yoga studios near Copacabana Beach in Rio de Janeiro.
+Call: { "func_call": "search_places", "query": "yoga studios", "location": "Copacabana Beach, Rio de Janeiro, Brazil", "radius_km": 1.5, "type": "gym" }
+Response: { "places": [{ "id": "pl_rio_067", "name": "Yoga Studio Copacabana", "address": "Rua Barata Ribeiro, 500, Rio de Janeiro, RJ, Brazil", "rating": 4.8, "open_now": true }, { "id": "pl_rio_068", "name": "Espaço de Yoga Ipanema", "address": "Rua Visconde de Pirajá, 550, Rio de Janeiro, RJ, Brazil", "rating": 4.6, "open_now": true }, { "id": "pl_rio_069", "name": "Namastê Yoga", "address": "Av. Nossa Senhora de Copacabana, 664, Rio de Janeiro, RJ, Brazil", "rating": 4.5, "open_now": false }], "total": 3 }
+
+Question: Identify flower shops near Pike Place Market in Seattle for same-day delivery.
+Call: { "func_call": "search_places", "query": "flower shops", "location": "Pike Place Market, Seattle, WA", "radius_km": 0.5, "type": "florist" }
+Response: { "places": [{ "id": "pl_sea_070", "name": "Market Flowers", "address": "85 Pike St, Seattle, WA 98101", "rating": 4.9, "open_now": true }, { "id": "pl_sea_071", "name": "Flora by Noe", "address": "1501 Western Ave, Seattle, WA 98101", "rating": 4.7, "open_now": true }, { "id": "pl_sea_072", "name": "Seattle Flower Company", "address": "2001 Western Ave, Seattle, WA 98121", "rating": 4.5, "open_now": false }], "total": 3 }

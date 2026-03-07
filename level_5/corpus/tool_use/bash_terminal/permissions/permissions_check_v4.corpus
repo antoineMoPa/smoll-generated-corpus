@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Inspect the access rights for the Apache virtual host config at /etc/apache2/sites-available/default.conf.
+Call: { "func_call": "check_permissions", "path": "/etc/apache2/sites-available/default.conf", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Include the service account 'jenkins_ci' in the 'vagrant' group to enable VM provisioning.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "jenkins_ci:vagrant" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Restrict access to the MySQL credentials file /etc/mysql/cred.env so only the root user can read it.
+Call: { "func_call": "chmod", "path": "/etc/mysql/cred.env", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-rw-r--", "new_mode": "-rw-------" }
+
+Question: Reassign the ownership of the cache directory /var/cache/app to the 'app_user' and 'app_group'.
+Call: { "func_call": "chown", "path": "/var/cache/app", "mode": "", "owner": "app_user:app_group" }
+Response: { "success": true, "previous_mode": "drwxr-xr-x", "new_mode": "drwxr-xr-x" }
+
+Question: Validate the permission settings on the audit log /var/log/audit/audit.log prior to archiving.
+Call: { "func_call": "check_permissions", "path": "/var/log/audit/audit.log", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-------", "new_mode": "-rw-------" }
+
+Question: Enroll the analyst 'mike' into the 'finance_data' group for reporting access.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "mike:finance_data" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Configure the deployment hook /usr/local/bin/deploy_hook.sh to be executable by the owner and group only.
+Call: { "func_call": "chmod", "path": "/usr/local/bin/deploy_hook.sh", "mode": "750", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rwxr-x---" }
+
+Question: Update the owner of the application log /var/log/myapp/error.log to the 'logging_daemon' user.
+Call: { "func_call": "chown", "path": "/var/log/myapp/error.log", "mode": "", "owner": "logging_daemon:logging_daemon" }
+Response: { "success": true, "previous_mode": "-rw-r--r--", "new_mode": "-rw-r--r--" }
+
+Question: Examine the permissions on the SSH authorized keys file /root/.ssh/authorized_keys for security compliance.
+Call: { "func_call": "check_permissions", "path": "/root/.ssh/authorized_keys", "mode": "", "owner": "" }
+Response: { "success": true, "previous_mode": "-rw-------", "new_mode": "-rw-------" }
+
+Question: Assign the intern 'leo' to the 'interns' group to restrict resource usage.
+Call: { "func_call": "add_to_group", "path": "", "mode": "", "owner": "leo:interns" }
+Response: { "success": true, "previous_mode": "", "new_mode": "" }
+
+Question: Apply the setgid bit to the shared scanner directory /srv/scans so new files inherit the group ownership.
+Call: { "func_call": "chmod", "path": "/srv/scans", "mode": "2775", "owner": "" }
+Response: { "success": true, "previous_mode": "drwxrwxr-x", "new_mode": "drwxrwsr-x" }
+
+Question: Transfer the group ownership of the printer queue directory /var/spool/cups to 'lp' while retaining 'root' as user.
+Call: { "func_call": "chown", "path": "/var/spool/cups", "mode": "", "owner": "root:lp" }
+Response: { "success": true, "previous_mode": "drwxr-xr-x", "new_mode": "drwxr-xr-x" }

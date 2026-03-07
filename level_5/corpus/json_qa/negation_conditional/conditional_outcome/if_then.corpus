@@ -1,0 +1,59 @@
+Context: If the server temperature exceeds 85 degrees, the cooling fans will activate immediately. The system monitors this every ten seconds.
+Input: {"question": "What happens if the server temperature exceeds 85 degrees?"}
+Output: {"answer": "the cooling fans will activate immediately"}
+
+Context: Unless the payment is received by Friday, the subscription service will be suspended. Users will lose access to premium features.
+Input: {"question": "What will happen to the subscription service if the payment is not received by Friday?"}
+Output: {"answer": "the subscription service will be suspended"}
+
+Context: When the fire alarm sounds, all employees must evacuate through the nearest exit. Do not use the elevators during an emergency.
+Input: {"question": "What must employees do if the fire alarm sounds?"}
+Output: {"answer": "evacuate through the nearest exit"}
+
+Context: If the database connection fails, the application will switch to the backup server automatically. This process takes less than two seconds.
+Input: {"question": "What will the application do if the database connection fails?"}
+Output: {"answer": "switch to the backup server automatically"}
+
+Context: The warranty is void if the device is opened by anyone other than certified technicians. Attempting self-repair violates the agreement.
+Input: {"question": "What happens to the warranty if the device is opened by unauthorized personnel?"}
+Output: {"answer": "The warranty is void"}
+
+Context: If it rains during the parade, the event will be moved to the community center. The decision will be announced at 8 AM.
+Input: {"question": "Where will the event be moved if it rains during the parade?"}
+Output: {"answer": "the community center"}
+
+Context: Unless you submit the form before midnight, your application will be rejected automatically. Late submissions are not reviewed.
+Input: {"question": "What will happen to your application if you do not submit the form before midnight?"}
+Output: {"answer": "your application will be rejected automatically"}
+
+Context: When the battery level drops below 10%, the phone will enter power-saving mode. Screen brightness will be reduced significantly.
+Input: {"question": "What will the phone do if the battery level drops below 10%?"}
+Output: {"answer": "enter power-saving mode"}
+
+Context: If the package weight exceeds 50 pounds, an additional shipping fee will be applied at checkout. International rates differ.
+Input: {"question": "What happens if the package weight exceeds 50 pounds?"}
+Output: {"answer": "an additional shipping fee will be applied at checkout"}
+
+Context: The garden sprinklers will turn on if the soil moisture sensor reads dry. This ensures the plants receive water only when necessary.
+Input: {"question": "What will the garden sprinklers do if the soil moisture sensor reads dry?"}
+Output: {"answer": "turn on"}
+
+Context: If the user clicks the red button, the emergency shutdown sequence will initiate. All machinery will stop within five seconds.
+Input: {"question": "What happens if the user clicks the red button?"}
+Output: {"answer": "the emergency shutdown sequence will initiate"}
+
+Context: Unless the door is locked securely, the security alarm will sound continuously. Check the latch before leaving.
+Input: {"question": "What will happen if the door is not locked securely?"}
+Output: {"answer": "the security alarm will sound continuously"}
+
+Context: When the traffic light turns red, all vehicles must come to a complete stop. Pedestrians may then cross the street.
+Input: {"question": "What must vehicles do if the traffic light turns red?"}
+Output: {"answer": "come to a complete stop"}
+
+Context: If the interview candidate arrives late, the meeting will be rescheduled for next week. Punctuality is a key requirement.
+Input: {"question": "What will happen to the meeting if the interview candidate arrives late?"}
+Output: {"answer": "the meeting will be rescheduled for next week"}
+
+Context: The software update will install automatically if the computer is idle for more than thirty minutes. Save your work beforehand.
+Input: {"question": "What will the software update do if the computer is idle for more than thirty minutes?"}
+Output: {"answer": "install automatically"}

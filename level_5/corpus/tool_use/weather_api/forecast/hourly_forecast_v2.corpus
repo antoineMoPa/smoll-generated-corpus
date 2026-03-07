@@ -1,0 +1,51 @@
+Available Tools: get_forecast_daily | get_forecast_hourly | get_forecast_weekly
+Call Schema: { "func_call": "string", "location": "string", "days": number, "unit": "string" }
+Response Schema: { "location": "string", "forecast": [{ "date": "string", "high": number, "low": number, "condition": "string" }] }
+---
+Question: Can you provide the hourly forecast for Austin for the next day?
+Call: { "func_call": "get_forecast_hourly", "location": "Austin, TX", "days": 1, "unit": "imperial" }
+Response: { "location": "Austin, TX", "forecast": [{ "date": "2023-10-25T09:00:00", "high": 78, "low": 65, "condition": "Sunny", "precipitation_probability": 5 }, { "date": "2023-10-25T10:00:00", "high": 80, "low": 67, "condition": "Sunny", "precipitation_probability": 0 }, { "date": "2023-10-25T11:00:00", "high": 82, "low": 68, "condition": "Partly Cloudy", "precipitation_probability": 10 }] }
+
+Question: I need an hour-by-hour weather update for Vancouver for 48 hours.
+Call: { "func_call": "get_forecast_hourly", "location": "Vancouver, CA", "days": 2, "unit": "metric" }
+Response: { "location": "Vancouver, CA", "forecast": [{ "date": "2023-10-25T07:00:00", "high": 14, "low": 9, "condition": "Rain", "precipitation_probability": 80 }, { "date": "2023-10-25T08:00:00", "high": 15, "low": 10, "condition": "Rain", "precipitation_probability": 75 }, { "date": "2023-10-25T09:00:00", "high": 16, "low": 11, "condition": "Cloudy", "precipitation_probability": 40 }] }
+
+Question: What does the hourly outlook look like for Cairo tomorrow?
+Call: { "func_call": "get_forecast_hourly", "location": "Cairo, EG", "days": 1, "unit": "metric" }
+Response: { "location": "Cairo, EG", "forecast": [{ "date": "2023-10-25T12:00:00", "high": 34, "low": 22, "condition": "Clear", "precipitation_probability": 0 }, { "date": "2023-10-25T13:00:00", "high": 35, "low": 23, "condition": "Clear", "precipitation_probability": 0 }, { "date": "2023-10-25T14:00:00", "high": 36, "low": 24, "condition": "Sunny", "precipitation_probability": 0 }] }
+
+Question: Show me the hourly forecast for Oslo for the next 3 days in Celsius.
+Call: { "func_call": "get_forecast_hourly", "location": "Oslo, NO", "days": 3, "unit": "metric" }
+Response: { "location": "Oslo, NO", "forecast": [{ "date": "2023-10-25T06:00:00", "high": 4, "low": -1, "condition": "Snow", "precipitation_probability": 65 }, { "date": "2023-10-25T07:00:00", "high": 5, "low": 0, "condition": "Snow", "precipitation_probability": 70 }, { "date": "2023-10-25T08:00:00", "high": 6, "low": 1, "condition": "Cloudy", "precipitation_probability": 30 }] }
+
+Question: Get the hourly weather for Buenos Aires for the next 24 hours.
+Call: { "func_call": "get_forecast_hourly", "location": "Buenos Aires, AR", "days": 1, "unit": "metric" }
+Response: { "location": "Buenos Aires, AR", "forecast": [{ "date": "2023-10-25T15:00:00", "high": 26, "low": 19, "condition": "Partly Cloudy", "precipitation_probability": 20 }, { "date": "2023-10-25T16:00:00", "high": 27, "low": 20, "condition": "Sunny", "precipitation_probability": 10 }, { "date": "2023-10-25T17:00:00", "high": 25, "low": 18, "condition": "Cloudy", "precipitation_probability": 25 }] }
+
+Question: What is the hourly forecast for Bangkok for the next 2 days?
+Call: { "func_call": "get_forecast_hourly", "location": "Bangkok, TH", "days": 2, "unit": "metric" }
+Response: { "location": "Bangkok, TH", "forecast": [{ "date": "2023-10-25T19:00:00", "high": 33, "low": 28, "condition": "Thunderstorm", "precipitation_probability": 85 }, { "date": "2023-10-25T20:00:00", "high": 32, "low": 27, "condition": "Rain", "precipitation_probability": 90 }, { "date": "2023-10-25T21:00:00", "high": 31, "low": 26, "condition": "Cloudy", "precipitation_probability": 50 }] }
+
+Question: I need the hourly breakdown for Cape Town for tomorrow in Fahrenheit.
+Call: { "func_call": "get_forecast_hourly", "location": "Cape Town, ZA", "days": 1, "unit": "imperial" }
+Response: { "location": "Cape Town, ZA", "forecast": [{ "date": "2023-10-25T08:00:00", "high": 72, "low": 58, "condition": "Windy", "precipitation_probability": 15 }, { "date": "2023-10-25T09:00:00", "high": 74, "low": 60, "condition": "Windy", "precipitation_probability": 10 }, { "date": "2023-10-25T10:00:00", "high": 75, "low": 61, "condition": "Sunny", "precipitation_probability": 5 }] }
+
+Question: Check the hourly forecast for Reykjavik for the next 3 days.
+Call: { "func_call": "get_forecast_hourly", "location": "Reykjavik, IS", "days": 3, "unit": "metric" }
+Response: { "location": "Reykjavik, IS", "forecast": [{ "date": "2023-10-25T04:00:00", "high": 2, "low": -3, "condition": "Snow Showers", "precipitation_probability": 60 }, { "date": "2023-10-25T05:00:00", "high": 3, "low": -2, "condition": "Snow Showers", "precipitation_probability": 55 }, { "date": "2023-10-25T06:00:00", "high": 4, "low": -1, "condition": "Overcast", "precipitation_probability": 35 }] }
+
+Question: Show me the hour-by-hour weather for Las Vegas for the next 48 hours.
+Call: { "func_call": "get_forecast_hourly", "location": "Las Vegas, NV", "days": 2, "unit": "imperial" }
+Response: { "location": "Las Vegas, NV", "forecast": [{ "date": "2023-10-25T14:00:00", "high": 95, "low": 78, "condition": "Sunny", "precipitation_probability": 0 }, { "date": "2023-10-25T15:00:00", "high": 96, "low": 79, "condition": "Sunny", "precipitation_probability": 0 }, { "date": "2023-10-25T16:00:00", "high": 94, "low": 77, "condition": "Clear", "precipitation_probability": 0 }] }
+
+Question: What is the hourly outlook for Singapore for the next day?
+Call: { "func_call": "get_forecast_hourly", "location": "Singapore, SG", "days": 1, "unit": "metric" }
+Response: { "location": "Singapore, SG", "forecast": [{ "date": "2023-10-25T20:00:00", "high": 30, "low": 26, "condition": "Humid", "precipitation_probability": 40 }, { "date": "2023-10-25T21:00:00", "high": 29, "low": 25, "condition": "Thunderstorm", "precipitation_probability": 70 }, { "date": "2023-10-25T22:00:00", "high": 28, "low": 24, "condition": "Rain", "precipitation_probability": 65 }] }
+
+Question: Get the hourly forecast for Mexico City for the next 3 days in Celsius.
+Call: { "func_call": "get_forecast_hourly", "location": "Mexico City, MX", "days": 3, "unit": "metric" }
+Response: { "location": "Mexico City, MX", "forecast": [{ "date": "2023-10-25T10:00:00", "high": 24, "low": 14, "condition": "Partly Cloudy", "precipitation_probability": 20 }, { "date": "2023-10-25T11:00:00", "high": 25, "low": 15, "condition": "Sunny", "precipitation_probability": 10 }, { "date": "2023-10-25T12:00:00", "high": 26, "low": 16, "condition": "Clear", "precipitation_probability": 5 }] }
+
+Question: I need the hourly weather for Dublin for the next 24 hours.
+Call: { "func_call": "get_forecast_hourly", "location": "Dublin, IE", "days": 1, "unit": "metric" }
+Response: { "location": "Dublin, IE", "forecast": [{ "date": "2023-10-25T03:00:00", "high": 11, "low": 7, "condition": "Drizzle", "precipitation_probability": 55 }, { "date": "2023-10-25T04:00:00", "high": 12, "low": 8, "condition": "Cloudy", "precipitation_probability": 30 }, { "date": "2023-10-25T05:00:00", "high": 13, "low": 9, "condition": "Overcast", "precipitation_probability": 25 }] }

@@ -1,0 +1,51 @@
+Available Tools: create_report | get_report | list_reports | schedule_report | export_report
+Call Schema: { "func_call": "string", "report_id": "string", "name": "string", "metrics": ["string"], "dimensions": ["string"], "from_date": "string", "to_date": "string" }
+Response Schema: { "report_id": "string", "name": "string", "rows": [{}], "total_rows": number, "generated_at": "string" }
+---
+Question: Generate a new report titled "Winter Conversion Rates" measuring conversions and bounce rate by landing page from December 1st to December 31st.
+Call: { "func_call": "create_report", "report_id": "", "name": "Winter Conversion Rates", "metrics": ["conversions", "bounce_rate"], "dimensions": ["landing_page"], "from_date": "2023-12-01", "to_date": "2023-12-31" }
+Response: { "report_id": "rpt_1010m", "name": "Winter Conversion Rates", "rows": [{"landing_page": "/home", "conversions": 340, "bounce_rate": 45.2}, {"landing_page": "/products", "conversions": 520, "bounce_rate": 32.1}], "total_rows": 2, "generated_at": "2024-01-02T10:15:30Z" }
+
+Question: Fetch the details for report rpt_2020n which tracks average order value by user segment.
+Call: { "func_call": "get_report", "report_id": "rpt_2020n", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_2020n", "name": "AOV by Segment", "rows": [{"segment": "new", "avg_order_value": 45.50}, {"segment": "returning", "avg_order_value": 89.20}], "total_rows": 2, "generated_at": "2024-01-05T14:22:11Z" }
+
+Question: Create a report named "Spring Traffic Sources" analyzing users and pageviews by channel for March.
+Call: { "func_call": "create_report", "report_id": "", "name": "Spring Traffic Sources", "metrics": ["users", "pageviews"], "dimensions": ["channel"], "from_date": "2024-03-01", "to_date": "2024-03-31" }
+Response: { "report_id": "rpt_3030o", "name": "Spring Traffic Sources", "rows": [{"channel": "direct", "users": 12000, "pageviews": 45000}, {"channel": "social", "users": 8500, "pageviews": 22000}], "total_rows": 2, "generated_at": "2024-04-01T09:00:05Z" }
+
+Question: Retrieve the latest metrics for report rpt_4040p regarding exit rates by browser.
+Call: { "func_call": "get_report", "report_id": "rpt_4040p", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_4040p", "name": "Browser Exit Rates", "rows": [{"browser": "Chrome", "exit_rate": 22.5}, {"browser": "Safari", "exit_rate": 28.1}, {"browser": "Firefox", "exit_rate": 25.4}], "total_rows": 3, "generated_at": "2024-02-15T16:40:22Z" }
+
+Question: I need a report "Regional User Growth" comparing new users by region from January 10 to January 24.
+Call: { "func_call": "create_report", "report_id": "", "name": "Regional User Growth", "metrics": ["new_users"], "dimensions": ["region"], "from_date": "2024-01-10", "to_date": "2024-01-24" }
+Response: { "report_id": "rpt_5050q", "name": "Regional User Growth", "rows": [{"region": "North America", "new_users": 5400}, {"region": "Europe", "new_users": 3200}, {"region": "Asia", "new_users": 6100}], "total_rows": 3, "generated_at": "2024-01-25T11:10:45Z" }
+
+Question: Get the data for report rpt_6060r which measures session duration by device category.
+Call: { "func_call": "get_report", "report_id": "rpt_6060r", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_6060r", "name": "Session Duration by Device", "rows": [{"device_category": "mobile", "avg_session_duration": 145}, {"device_category": "desktop", "avg_session_duration": 320}], "total_rows": 2, "generated_at": "2024-03-10T13:55:18Z" }
+
+Question: Build a report "Q1 Bounce Analysis" focusing on bounce rate and exits by landing page for the first quarter.
+Call: { "func_call": "create_report", "report_id": "", "name": "Q1 Bounce Analysis", "metrics": ["bounce_rate", "exits"], "dimensions": ["landing_page"], "from_date": "2024-01-01", "to_date": "2024-03-31" }
+Response: { "report_id": "rpt_7070s", "name": "Q1 Bounce Analysis", "rows": [{"landing_page": "/blog", "bounce_rate": 65.0, "exits": 1200}, {"landing_page": "/checkout", "bounce_rate": 15.2, "exits": 450}], "total_rows": 2, "generated_at": "2024-04-02T08:30:12Z" }
+
+Question: Pull the current stats for report rpt_8080t regarding conversion rate by campaign.
+Call: { "func_call": "get_report", "report_id": "rpt_8080t", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_8080t", "name": "Campaign Conversion Rates", "rows": [{"campaign": "summer_sale", "conversion_rate": 3.4}, {"campaign": "newsletter", "conversion_rate": 1.8}], "total_rows": 2, "generated_at": "2024-05-20T17:25:40Z" }
+
+Question: Create "Platform Engagement May" to analyze pages per session by platform from May 1 to May 31.
+Call: { "func_call": "create_report", "report_id": "", "name": "Platform Engagement May", "metrics": ["pages_per_session"], "dimensions": ["platform"], "from_date": "2024-05-01", "to_date": "2024-05-31" }
+Response: { "report_id": "rpt_9090u", "name": "Platform Engagement May", "rows": [{"platform": "iOS", "pages_per_session": 4.2}, {"platform": "Android", "pages_per_session": 3.8}, {"platform": "Web", "pages_per_session": 5.1}], "total_rows": 3, "generated_at": "2024-06-01T10:05:55Z" }
+
+Question: Fetch report rpt_1111v which tracks revenue and tax by state for the fiscal year end.
+Call: { "func_call": "get_report", "report_id": "rpt_1111v", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_1111v", "name": "Fiscal Year End State Revenue", "rows": [{"state": "California", "revenue": 150000.00, "tax": 12500.00}, {"state": "Texas", "revenue": 98000.00, "tax": 8100.00}], "total_rows": 2, "generated_at": "2024-07-01T14:10:30Z" }
+
+Question: Generate " Weekend Traffic Spike" to view sessions and users by hour for last weekend.
+Call: { "func_call": "create_report", "report_id": "", "name": "Weekend Traffic Spike", "metrics": ["sessions", "users"], "dimensions": ["hour"], "from_date": "2024-06-15", "to_date": "2024-06-16" }
+Response: { "report_id": "rpt_2222w", "name": "Weekend Traffic Spike", "rows": [{"hour": "10:00", "sessions": 1200, "users": 950}, {"hour": "14:00", "sessions": 1800, "users": 1400}], "total_rows": 2, "generated_at": "2024-06-17T09:15:20Z" }
+
+Question: Retrieve the data for report rpt_3333x analyzing cart abandonment rate by device and browser.
+Call: { "func_call": "get_report", "report_id": "rpt_3333x", "name": "", "metrics": [], "dimensions": [], "from_date": "", "to_date": "" }
+Response: { "report_id": "rpt_3333x", "name": "Cart Abandonment Matrix", "rows": [{"device": "mobile", "browser": "Chrome", "abandonment_rate": 72.5}, {"device": "desktop", "browser": "Safari", "abandonment_rate": 55.2}], "total_rows": 2, "generated_at": "2024-08-05T11:45:10Z" }

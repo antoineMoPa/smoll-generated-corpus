@@ -1,0 +1,51 @@
+Available Tools: sum_column | avg_column | group_by_query | min_max_query
+Call Schema: { "func_call": "string", "table": "string", "column": "string", "group_by": "string", "where": "string" }
+Response Schema: { "result": number, "groups": [{ "key": "string", "value": number }] }
+---
+Question: What is the maximum sales amount for each region in the North American database?
+Call: { "func_call": "min_max_query", "table": "north_america_sales", "column": "sales_amount", "group_by": "region", "where": "year = 2023" }
+Response: { "result": 15420.50, "groups": [{ "key": "East", "value": 12300.00 }, { "key": "West", "value": 15420.50 }, { "key": "Central", "value": 9800.25 }] }
+
+Question: Find the minimum inventory count per warehouse for items stocked in Q4.
+Call: { "func_call": "min_max_query", "table": "inventory_logs", "column": "item_count", "group_by": "warehouse_id", "where": "quarter = 'Q4'" }
+Response: { "result": 12, "groups": [{ "key": "WH-001", "value": 45 }, { "key": "WH-002", "value": 12 }, { "key": "WH-003", "value": 89 }] }
+
+Question: Show the highest transaction value grouped by customer segment for last month.
+Call: { "func_call": "min_max_query", "table": "transactions", "column": "transaction_value", "group_by": "customer_segment", "where": "month = 'October'" }
+Response: { "result": 899.99, "groups": [{ "key": "Enterprise", "value": 899.99 }, { "key": "SMB", "value": 450.00 }, { "key": "Consumer", "value": 120.50 }] }
+
+Question: What is the lowest temperature recorded per city during the winter season?
+Call: { "func_call": "min_max_query", "table": "weather_data", "column": "temperature_c", "group_by": "city_name", "where": "season = 'Winter'" }
+Response: { "result": -15.2, "groups": [{ "key": "Chicago", "value": -12.0 }, { "key": "Minneapolis", "value": -15.2 }, { "key": "Boston", "value": -8.5 }] }
+
+Question: Identify the maximum discount applied per product category in the clearance sale.
+Call: { "func_call": "min_max_query", "table": "clearance_events", "column": "discount_percent", "group_by": "category", "where": "event_type = 'Clearance'" }
+Response: { "result": 75.0, "groups": [{ "key": "Electronics", "value": 50.0 }, { "key": "Clothing", "value": 75.0 }, { "key": "Home", "value": 60.0 }] }
+
+Question: Retrieve the minimum delivery time in hours for each shipping carrier used in 2023.
+Call: { "func_call": "min_max_query", "table": "shipping_manifest", "column": "delivery_time_hours", "group_by": "carrier_name", "where": "year = 2023" }
+Response: { "result": 18.5, "groups": [{ "key": "FedEx", "value": 24.0 }, { "key": "UPS", "value": 26.5 }, { "key": "DHL", "value": 18.5 }] }
+
+Question: What was the peak website traffic per hour on Black Friday?
+Call: { "func_call": "min_max_query", "table": "web_traffic_logs", "column": "visitor_count", "group_by": "hour_of_day", "where": "date = '2023-11-24'" }
+Response: { "result": 45200, "groups": [{ "key": "09:00", "value": 12000 }, { "key": "12:00", "value": 34000 }, { "key": "20:00", "value": 45200 }] }
+
+Question: Find the highest salary per department for employees hired before 2020.
+Call: { "func_call": "min_max_query", "table": "employee_records", "column": "annual_salary", "group_by": "department", "where": "hire_date < '2020-01-01'" }
+Response: { "result": 145000, "groups": [{ "key": "Engineering", "value": 145000 }, { "key": "Sales", "value": 130000 }, { "key": "HR", "value": 95000 }] }
+
+Question: Determine the minimum error rate per server cluster during the maintenance window.
+Call: { "func_call": "min_max_query", "table": "system_metrics", "column": "error_rate", "group_by": "cluster_id", "where": "window = 'Maintenance'" }
+Response: { "result": 0.02, "groups": [{ "key": "Cluster-A", "value": 0.05 }, { "key": "Cluster-B", "value": 0.02 }, { "key": "Cluster-C", "value": 0.08 }] }
+
+Question: What is the maximum order quantity per SKU for orders placed in December?
+Call: { "func_call": "min_max_query", "table": "order_details", "column": "quantity", "group_by": "sku", "where": "month = 'December'" }
+Response: { "result": 500, "groups": [{ "key": "SKU-101", "value": 200 }, { "key": "SKU-102", "value": 500 }, { "key": "SKU-103", "value": 150 }] }
+
+Question: Show the lowest fuel consumption per vehicle type for the fleet in Q1.
+Call: { "func_call": "min_max_query", "table": "fleet_logs", "column": "fuel_consumption_l", "group_by": "vehicle_type", "where": "quarter = 'Q1'" }
+Response: { "result": 6.5, "groups": [{ "key": "Sedan", "value": 6.5 }, { "key": "SUV", "value": 9.2 }, { "key": "Truck", "value": 14.0 }] }
+
+Question: Identify the highest customer satisfaction score per store location for the holiday season.
+Call: { "func_call": "min_max_query", "table": "survey_results", "column": "satisfaction_score", "group_by": "store_location", "where": "season = 'Holiday'" }
+Response: { "result": 9.8, "groups": [{ "key": "New York", "value": 9.2 }, { "key": "Los Angeles", "value": 9.8 }, { "key": "Miami", "value": 8.9 }] }

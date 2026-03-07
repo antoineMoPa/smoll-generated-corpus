@@ -1,0 +1,51 @@
+Available Tools: create_pr | list_prs | merge_pr | close_pr | add_pr_review | get_pr_diff
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "pr_number": number, "title": "string", "head": "string", "base": "string" }
+Response Schema: { "pr_number": number, "title": "string", "state": "open|merged|closed", "author": "string", "changed_files": number, "mergeable": boolean }
+---
+Question: Add an approving review to pull request 56 in the starlight-med/portal-app repository owned by ksmith.
+Call: { "func_call": "add_pr_review", "owner": "ksmith", "repo": "starlight-med/portal-app", "pr_number": 56, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 56, "title": "Fix patient intake form validation", "state": "open", "author": "jenny_front", "changed_files": 4, "mergeable": true }
+
+Question: Merge pull request 218 for the cloud-storage project under the org nano-systems.
+Call: { "func_call": "merge_pr", "owner": "nano-systems", "repo": "cloud-storage", "pr_number": 218, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 218, "title": "Enable multipart upload support", "state": "merged", "author": "raj_cloud", "changed_files": 18, "mergeable": true }
+
+Question: Request changes on PR 142 in the ml-training repo owned by ai-research because the model accuracy dropped.
+Call: { "func_call": "add_pr_review", "owner": "ai-research", "repo": "ml-training", "pr_number": 142, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 142, "title": "Update hyperparameter tuning script", "state": "open", "author": "zoe_ai", "changed_files": 6, "mergeable": true }
+
+Question: Attempt to merge PR 330 in the game-engine repository owned by pixel-studio, but it has conflicts.
+Call: { "func_call": "merge_pr", "owner": "pixel-studio", "repo": "game-engine", "pr_number": 330, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 330, "title": "Refactor physics collision detection", "state": "open", "author": "leo_game", "changed_files": 11, "mergeable": false }
+
+Question: Submit an approval review for PR 89 in the ci-cd-tools repo maintained by dev-flow.
+Call: { "func_call": "add_pr_review", "owner": "dev-flow", "repo": "ci-cd-tools", "pr_number": 89, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 89, "title": "Parallelize test execution steps", "state": "open", "author": "sam_devops", "changed_files": 3, "mergeable": true }
+
+Question: Merge the hotfix PR 405 in the billing-engine repo owned by fintech-core.
+Call: { "func_call": "merge_pr", "owner": "fintech-core", "repo": "billing-engine", "pr_number": 405, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 405, "title": "Correct tax calculation for EU region", "state": "merged", "author": "ana_finance", "changed_files": 2, "mergeable": true }
+
+Question: Leave a review requesting changes on PR 199 in the design-system repo under the owner brand-labs due to color contrast errors.
+Call: { "func_call": "add_pr_review", "owner": "brand-labs", "repo": "design-system", "pr_number": 199, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 199, "title": "Add dark mode color tokens", "state": "open", "author": "mia_design", "changed_files": 8, "mergeable": true }
+
+Question: Try to merge PR 67 in the cache-layer repo owned by speed-tech, but the branch is behind.
+Call: { "func_call": "merge_pr", "owner": "speed-tech", "repo": "cache-layer", "pr_number": 67, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 67, "title": "Implement Redis connection pooling", "state": "open", "author": "ben_perf", "changed_files": 5, "mergeable": false }
+
+Question: Add a positive review to PR 250 in the identity-mgmt repository owned by trust-net.
+Call: { "func_call": "add_pr_review", "owner": "trust-net", "repo": "identity-mgmt", "pr_number": 250, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 250, "title": "Support OIDC provider configuration", "state": "open", "author": "carl_sec", "changed_files": 9, "mergeable": true }
+
+Question: Merge pull request 1024 for the knowledge-base project under the owner help-desk.
+Call: { "func_call": "merge_pr", "owner": "help-desk", "repo": "knowledge-base", "pr_number": 1024, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 1024, "title": "Add search indexing for articles", "state": "merged", "author": "tina_writer", "changed_files": 14, "mergeable": true }
+
+Question: Request changes on PR 72 in the order-processing repo owned by shop-flow because the inventory lock logic is flawed.
+Call: { "func_call": "add_pr_review", "owner": "shop-flow", "repo": "order-processing", "pr_number": 72, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 72, "title": "Optimize checkout transaction speed", "state": "open", "author": "dan_retail", "changed_files": 10, "mergeable": true }
+
+Question: Attempt to merge PR 515 in the email-service repo owned by marketing-ops, but there are unresolved conflicts.
+Call: { "func_call": "merge_pr", "owner": "marketing-ops", "repo": "email-service", "pr_number": 515, "title": "", "head": "", "base": "" }
+Response: { "pr_number": 515, "title": "Integrate new newsletter template engine", "state": "open", "author": "ivy_comms", "changed_files": 7, "mergeable": false }

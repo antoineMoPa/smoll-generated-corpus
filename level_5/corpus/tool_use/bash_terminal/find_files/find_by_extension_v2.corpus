@@ -1,0 +1,51 @@
+Available Tools: find_by_name | find_by_extension | find_by_size | find_by_date
+Call Schema: { "func_call": "string", "path": "string", "pattern": "string", "type": "string" }
+Response Schema: { "matches": ["string"], "count": number }
+---
+Question: Retrieve all PDF documents from the downloads folder.
+Call: { "func_call": "find_by_extension", "path": "/home/user/downloads", "pattern": ".pdf", "type": "file" }
+Response: { "matches": ["/home/user/downloads/invoice_2023.pdf", "/home/user/downloads/manual_v2.pdf", "/home/user/downloads/report_q1.pdf"], "count": 3 }
+
+Question: Search for Python scripts in the development workspace.
+Call: { "func_call": "find_by_extension", "path": "/dev/workspace", "pattern": ".py", "type": "file" }
+Response: { "matches": ["/dev/workspace/main.py", "/dev/workspace/utils.py"], "count": 2 }
+
+Question: List all CSV data exports in the analytics directory.
+Call: { "func_call": "find_by_extension", "path": "/srv/analytics/exports", "pattern": ".csv", "type": "file" }
+Response: { "matches": ["/srv/analytics/exports/sales_jan.csv", "/srv/analytics/exports/users_feb.csv", "/srv/analytics/exports/inventory.csv"], "count": 3 }
+
+Question: Find all Markdown documentation files in the project root.
+Call: { "func_call": "find_by_extension", "path": "/opt/project", "pattern": ".md", "type": "file" }
+Response: { "matches": ["/opt/project/README.md", "/opt/project/CONTRIBUTING.md"], "count": 2 }
+
+Question: Identify any backup folders ending in .old in the archive path.
+Call: { "func_call": "find_by_extension", "path": "/mnt/archive", "pattern": ".old", "type": "dir" }
+Response: { "matches": ["/mnt/archive/db_2022.old", "/mnt/archive/logs_2021.old", "/mnt/archive/configs.old"], "count": 3 }
+
+Question: Look for log rotation files in the system logs.
+Call: { "func_call": "find_by_extension", "path": "/var/log/syslog", "pattern": ".log", "type": "file" }
+Response: { "matches": ["/var/log/syslog/auth.log", "/var/log/syslog/kern.log"], "count": 2 }
+
+Question: Recursively find all Ruby gems in the vendor bundle.
+Call: { "func_call": "find_by_extension", "path": "/app/vendor/bundle", "pattern": ".gem", "type": "file" }
+Response: { "matches": ["/app/vendor/bundle/rails.gem", "/app/vendor/bundle/sinatra.gem", "/app/vendor/bundle/puma.gem"], "count": 3 }
+
+Question: Search for YAML configuration files in the kubernetes manifests.
+Call: { "func_call": "find_by_extension", "path": "/k8s/manifests", "pattern": ".yaml", "type": "file" }
+Response: { "matches": ["/k8s/manifests/deployment.yaml", "/k8s/manifests/service.yaml"], "count": 2 }
+
+Question: Find all SQL dump files in the database backups.
+Call: { "func_call": "find_by_extension", "path": "/backup/db", "pattern": ".sql", "type": "file" }
+Response: { "matches": ["/backup/db/full_dump.sql", "/backup/db/users_only.sql", "/backup/db/schema.sql"], "count": 3 }
+
+Question: Locate any temporary directories with the .tmp extension in /scratch.
+Call: { "func_call": "find_by_extension", "path": "/scratch", "pattern": ".tmp", "type": "dir" }
+Response: { "matches": ["/scratch/render_01.tmp", "/scratch/compile_cache.tmp"], "count": 2 }
+
+Question: Find all HTML template files in the web server root.
+Call: { "func_call": "find_by_extension", "path": "/var/www/html/templates", "pattern": ".html", "type": "file" }
+Response: { "matches": ["/var/www/html/templates/index.html", "/var/www/html/templates/about.html", "/var/www/html/templates/contact.html"], "count": 3 }
+
+Question: Search for compressed tar archives in the storage volume.
+Call: { "func_call": "find_by_extension", "path": "/mnt/storage/archives", "pattern": ".tar.gz", "type": "file" }
+Response: { "matches": ["/mnt/storage/archives/media_2023.tar.gz", "/mnt/storage/archives/docs_backup.tar.gz"], "count": 2 }

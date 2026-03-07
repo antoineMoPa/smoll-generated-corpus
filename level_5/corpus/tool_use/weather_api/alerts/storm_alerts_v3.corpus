@@ -1,0 +1,51 @@
+Available Tools: get_weather_alerts | get_storm_warnings | get_air_quality_index
+Call Schema: { "func_call": "string", "location": "string", "severity": "string" }
+Response Schema: { "alerts": [{ "type": "string", "severity": "string", "message": "string", "expires": "string" }] }
+---
+Question: Are there any hurricane warnings currently active for Key West?
+Call: { "func_call": "get_storm_warnings", "location": "Key West, FL", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Hurricane Warning", "severity": "extreme", "message": "Sustained winds of 120 mph expected within 36 hours. Evacuate immediately if in a low-lying zone.", "expires": "2024-06-15T10:00:00Z" }] }
+
+Question: Check for heat advisories in Phoenix due to extreme temperatures.
+Call: { "func_call": "get_weather_alerts", "location": "Phoenix, AZ", "severity": "high" }
+Response: { "alerts": [{ "type": "Excessive Heat Warning", "severity": "high", "message": "Temperatures reaching 115°F expected. Drink plenty of fluids and stay in air-conditioned rooms.", "expires": "2024-06-16T20:00:00Z" }] }
+
+Question: Is there a severe thunderstorm watch issued for Atlanta?
+Call: { "func_call": "get_weather_alerts", "location": "Atlanta, GA", "severity": "severe" }
+Response: { "alerts": [{ "type": "Severe Thunderstorm Watch", "severity": "severe", "message": "Large hail and damaging winds up to 70 mph are possible this afternoon.", "expires": "2024-06-15T19:00:00Z" }] }
+
+Question: Get wind chill warnings for Anchorage regarding extreme cold.
+Call: { "func_call": "get_storm_warnings", "location": "Anchorage, AK", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Wind Chill Warning", "severity": "extreme", "message": "Wind chills as low as -50°F will cause frostbite on exposed skin in minutes.", "expires": "2024-06-17T08:00:00Z" }] }
+
+Question: Are there any ice storm warnings affecting Nashville?
+Call: { "func_call": "get_weather_alerts", "location": "Nashville, TN", "severity": "high" }
+Response: { "alerts": [{ "type": "Ice Storm Warning", "severity": "high", "message": "Significant ice accumulations expected. Power outages and tree damage are likely.", "expires": "2024-06-16T06:00:00Z" }] }
+
+Question: Check for high wind warnings in San Francisco bay area.
+Call: { "func_call": "get_storm_warnings", "location": "San Francisco, CA", "severity": "moderate" }
+Response: { "alerts": [{ "type": "High Wind Warning", "severity": "moderate", "message": "Northeast winds gusting up to 55 mph expected. Secure loose outdoor items.", "expires": "2024-06-15T22:00:00Z" }] }
+
+Question: Is there a dense fog advisory active for Seattle?
+Call: { "func_call": "get_weather_alerts", "location": "Seattle, WA", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Dense Fog Advisory", "severity": "moderate", "message": "Visibility reduced to less than one quarter mile. Drive slowly and use low beam headlights.", "expires": "2024-06-16T09:00:00Z" }] }
+
+Question: Retrieve any winter storm watches for Salt Lake City.
+Call: { "func_call": "get_storm_warnings", "location": "Salt Lake City, UT", "severity": "high" }
+Response: { "alerts": [{ "type": "Winter Storm Watch", "severity": "high", "message": "Heavy snow possible tonight into tomorrow morning. Total accumulations of 8 to 14 inches.", "expires": "2024-06-17T12:00:00Z" }] }
+
+Question: What severe weather alerts are active for Dallas regarding hail?
+Call: { "func_call": "get_weather_alerts", "location": "Dallas, TX", "severity": "severe" }
+Response: { "alerts": [{ "type": "Severe Thunderstorm Warning", "severity": "severe", "message": "Golf ball size hail and 60 mph wind gusts reported. Move to an interior room now.", "expires": "2024-06-15T17:30:00Z" }] }
+
+Question: Check for freezing rain alerts in Charlotte.
+Call: { "func_call": "get_weather_alerts", "location": "Charlotte, NC", "severity": "high" }
+Response: { "alerts": [{ "type": "Freezing Rain Advisory", "severity": "high", "message": "A light glaze of ice will make travel difficult, especially on bridges and overpasses.", "expires": "2024-06-16T07:00:00Z" }] }
+
+Question: Are there any dust storm warnings for Las Vegas?
+Call: { "func_call": "get_storm_warnings", "location": "Las Vegas, NV", "severity": "moderate" }
+Response: { "alerts": [{ "type": "Dust Storm Warning", "severity": "moderate", "message": "Visibility near zero in blowing dust. Do not drive unless absolutely necessary.", "expires": "2024-06-15T18:45:00Z" }] }
+
+Question: Get details on any lake effect snow warnings for Buffalo.
+Call: { "func_call": "get_weather_alerts", "location": "Buffalo, NY", "severity": "extreme" }
+Response: { "alerts": [{ "type": "Lake Effect Snow Warning", "severity": "extreme", "message": "Intense snow bands will drop 2 to 4 inches per hour. Travel will become impossible.", "expires": "2024-06-17T05:00:00Z" }] }

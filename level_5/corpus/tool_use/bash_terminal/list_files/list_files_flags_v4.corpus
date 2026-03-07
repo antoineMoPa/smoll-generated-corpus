@@ -1,0 +1,51 @@
+Available Tools: ls | ls_la | ls_lh | ls_R
+Call Schema: { "func_call": "string", "path": "string", "flags": "string" }
+Response Schema: { "entries": ["string"], "count": number }
+---
+Question: Display detailed file information for the music library including hidden tracks.
+Call: { "func_call": "ls_la", "path": "/home/carlos/Music", "flags": "-la" }
+Response: { "entries": ["drwxr-xr-x 4 carlos carlos 4096 Nov 05 16:45 .", "drwxr-xr-x 6 carlos carlos 4096 Oct 20 10:10 ..", "-rw------- 1 carlos carlos  156 Nov 05 16:40 .playlist_cache", "-rw-r--r-- 1 carlos carlos 3400 Nov 04 11:20 jazz_collection.flac", "drwxr-xr-x 2 carlos carlos 4096 Nov 03 09:00 Classical"], "count": 5 }
+
+Question: Show file sizes in human readable format for the video exports directory.
+Call: { "func_call": "ls_lh", "path": "/var/media/exports", "flags": "-lh" }
+Response: { "entries": ["total 850M", "-rw-r--r-- 1 editor editor 600M Nov 06 14:20 intro_render.mp4", "-rw-r--r-- 1 editor editor 200M Nov 06 15:10 outro_render.mp4", "-rw-r--r-- 1 editor editor  50M Nov 06 15:45 credits.mov"], "count": 4 }
+
+Question: Recursively list all dependencies in the python venv folder.
+Call: { "func_call": "ls_R", "path": "/opt/project/venv/lib", "flags": "-R" }
+Response: { "entries": [".:", "python3.9", "site-packages", "./python3.9:", "lib-dynload", "./site-packages:", "numpy", "pandas"], "count": 7 }
+
+Question: List configuration files in /boot sorted by size.
+Call: { "func_call": "ls", "path": "/boot", "flags": "--sort=size" }
+Response: { "entries": ["vmlinuz-6.5.0", "initrd.img-6.5.0", "System.map", "config-6.5.0", "grub.cfg"], "count": 5 }
+
+Question: Reveal all hidden system files in the root of the current drive.
+Call: { "func_call": "ls", "path": "/", "flags": "-a" }
+Response: { "entries": [".", "..", ".bash_history", ".profile", ".dockerenv", ".mounts"], "count": 6 }
+
+Question: List audit logs in /var/log/audit sorted by modification time.
+Call: { "func_call": "ls", "path": "/var/log/audit", "flags": "-lt" }
+Response: { "entries": ["audit.log", "audit.log.1", "audit.log.2.gz", "audit.log.3.gz", "audit.log.4.gz"], "count": 5 }
+
+Question: Get a verbose listing of the cache directory showing permissions.
+Call: { "func_call": "ls_la", "path": "/var/cache/apt", "flags": "-la" }
+Response: { "entries": ["drwxr-xr-x 4 root root 4096 Nov 07 08:30 .", "drwxr-xr-x 12 root root 4096 Sep 15 12:00 ..", "-rw-r--r-- 1 root root 0 Nov 07 08:25 .state", "-rw-r--r-- 1 _apt root 15M Nov 07 08:20 pkgcache.bin"], "count": 4 }
+
+Question: Display human-readable sizes for the database dump volume.
+Call: { "func_call": "ls_lh", "path": "/mnt/data/dumps/weekly", "flags": "-lh" }
+Response: { "entries": ["total 12G", "drwxr-xr-x 2 dbadmin dbadmin 4.0K Oct 30 02:00 week43", "drwxr-xr-x 2 dbadmin dbadmin 4.0K Nov 06 02:00 week44", "-rw-r--r-- 1 dbadmin dbadmin 8.5G Nov 06 02:30 full_backup.sql.gz"], "count": 4 }
+
+Question: Recursive list of the static assets folder structure.
+Call: { "func_call": "ls_R", "path": "/srv/www/static/assets", "flags": "-R" }
+Response: { "entries": [".:", "images", "fonts", "./images:", "logo.png", "banner.jpg", "./fonts:", "roboto.ttf", "open-sans.woff"], "count": 7 }
+
+Question: List binaries in /sbin sorted by file size descending.
+Call: { "func_call": "ls", "path": "/sbin", "flags": "--sort=size" }
+Response: { "entries": ["iptables", "fdisk", "mkfs.ext4", "reboot", "halt"], "count": 5 }
+
+Question: Show all keys and configs including dotfiles in the gpg directory.
+Call: { "func_call": "ls", "path": "/home/diana/.gnupg", "flags": "-a" }
+Response: { "entries": [".", "..", "pubring.kbx", "trustdb.gpg", "private-keys-v1.d", "S.gpg-agent"], "count": 6 }
+
+Question: List mail spool files in /var/spool/mail sorted by time.
+Call: { "func_call": "ls", "path": "/var/spool/mail", "flags": "-lt" }
+Response: { "entries": ["root", "daemon", "www-data", "postfix", "nobody"], "count": 5 }

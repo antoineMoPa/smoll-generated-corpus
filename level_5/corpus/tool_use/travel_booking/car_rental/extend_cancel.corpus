@@ -1,0 +1,51 @@
+Available Tools: search_cars | book_car | cancel_rental | get_rental_details | extend_rental
+Call Schema: { "func_call": "string", "location": "string", "pickup_date": "string", "return_date": "string", "car_type": "economy|compact|suv|luxury" }
+Response Schema: { "rental_id": "string", "car": "string", "pickup_location": "string", "daily_rate": number, "total_cost": number }
+---
+Question: I need to extend my current rental in Miami for two more days; I'm driving an SUV.
+Call: { "func_call": "extend_rental", "location": "Miami International Airport", "pickup_date": "2023-11-10", "return_date": "2023-11-15", "car_type": "suv" }
+Response: { "rental_id": "EXT-MIA-9921", "car": "Ford Explorer", "pickup_location": "Miami International Airport", "daily_rate": 85.00, "total_cost": 170.00 }
+
+Question: Please cancel my upcoming compact car reservation in Chicago scheduled for next Tuesday.
+Call: { "func_call": "cancel_rental", "location": "Chicago O'Hare International Airport", "pickup_date": "2023-12-05", "return_date": "2023-12-08", "car_type": "compact" }
+Response: { "rental_id": "CXL-ORD-4432", "car": "Toyota Corolla", "pickup_location": "Chicago O'Hare International Airport", "daily_rate": 45.00, "total_cost": 0.00 }
+
+Question: I'm running late returning my luxury car in Los Angeles, can you extend the return date by 24 hours?
+Call: { "func_call": "extend_rental", "location": "Los Angeles International Airport", "pickup_date": "2023-10-20", "return_date": "2023-10-26", "car_type": "luxury" }
+Response: { "rental_id": "EXT-LAX-7788", "car": "BMW 5 Series", "pickup_location": "Los Angeles International Airport", "daily_rate": 150.00, "total_cost": 150.00 }
+
+Question: Cancel my economy car booking in Seattle due to a change in travel plans.
+Call: { "func_call": "cancel_rental", "location": "Seattle-Tacoma International Airport", "pickup_date": "2023-11-15", "return_date": "2023-11-18", "car_type": "economy" }
+Response: { "rental_id": "CXL-SEA-1123", "car": "Nissan Versa", "pickup_location": "Seattle-Tacoma International Airport", "daily_rate": 35.00, "total_cost": 25.00 }
+
+Question: Extend my rental period in Denver for the weekend; I have a compact car.
+Call: { "func_call": "extend_rental", "location": "Denver International Airport", "pickup_date": "2023-09-14", "return_date": "2023-09-18", "car_type": "compact" }
+Response: { "rental_id": "EXT-DEN-5566", "car": "Honda Civic", "pickup_location": "Denver International Airport", "daily_rate": 50.00, "total_cost": 100.00 }
+
+Question: I need to cancel my SUV rental in Boston immediately; the pickup is tomorrow.
+Call: { "func_call": "cancel_rental", "location": "Boston Logan International Airport", "pickup_date": "2023-12-01", "return_date": "2023-12-04", "car_type": "suv" }
+Response: { "rental_id": "CXL-BOS-8899", "car": "Jeep Grand Cherokee", "pickup_location": "Boston Logan International Airport", "daily_rate": 90.00, "total_cost": 45.00 }
+
+Question: Can you add three days to my luxury car rental in Las Vegas?
+Call: { "func_call": "extend_rental", "location": "Harry Reid International Airport", "pickup_date": "2023-11-01", "return_date": "2023-11-06", "car_type": "luxury" }
+Response: { "rental_id": "EXT-LAS-3344", "car": "Mercedes-Benz C-Class", "pickup_location": "Harry Reid International Airport", "daily_rate": 135.00, "total_cost": 405.00 }
+
+Question: Please process a cancellation for my economy vehicle pickup in Atlanta next week.
+Call: { "func_call": "cancel_rental", "location": "Hartsfield-Jackson Atlanta International Airport", "pickup_date": "2023-12-10", "return_date": "2023-12-12", "car_type": "economy" }
+Response: { "rental_id": "CXL-ATL-2211", "car": "Hyundai Accent", "pickup_location": "Hartsfield-Jackson Atlanta International Airport", "daily_rate": 38.00, "total_cost": 0.00 }
+
+Question: I need to extend my return time for a compact car in Phoenix by one day due to traffic delays.
+Call: { "func_call": "extend_rental", "location": "Phoenix Sky Harbor International Airport", "pickup_date": "2023-10-05", "return_date": "2023-10-09", "car_type": "compact" }
+Response: { "rental_id": "EXT-PHX-6677", "car": "Mazda 3", "pickup_location": "Phoenix Sky Harbor International Airport", "daily_rate": 48.00, "total_cost": 48.00 }
+
+Question: Cancel my luxury car reservation in San Francisco; I found a better deal elsewhere.
+Call: { "func_call": "cancel_rental", "location": "San Francisco International Airport", "pickup_date": "2023-11-20", "return_date": "2023-11-25", "car_type": "luxury" }
+Response: { "rental_id": "CXL-SFO-9988", "car": "Audi A4", "pickup_location": "San Francisco International Airport", "daily_rate": 120.00, "total_cost": 60.00 }
+
+Question: Extend my SUV rental in Dallas for an extra two days for a business trip extension.
+Call: { "func_call": "extend_rental", "location": "Dallas/Fort Worth International Airport", "pickup_date": "2023-09-22", "return_date": "2023-09-27", "car_type": "suv" }
+Response: { "rental_id": "EXT-DFW-1234", "car": "Chevrolet Tahoe", "pickup_location": "Dallas/Fort Worth International Airport", "daily_rate": 95.00, "total_cost": 190.00 }
+
+Question: I need to cancel my compact car booking in Orlando because my flight was cancelled.
+Call: { "func_call": "cancel_rental", "location": "Orlando International Airport", "pickup_date": "2023-12-15", "return_date": "2023-12-20", "car_type": "compact" }
+Response: { "rental_id": "CXL-MCO-5678", "car": "Kia Forte", "pickup_location": "Orlando International Airport", "daily_rate": 42.00, "total_cost": 0.00 }

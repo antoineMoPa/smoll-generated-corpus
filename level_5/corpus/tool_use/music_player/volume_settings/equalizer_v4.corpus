@@ -1,0 +1,51 @@
+Available Tools: set_volume | get_volume | mute | unmute | set_equalizer
+Call Schema: { "func_call": "string", "level": number, "preset": "string" }
+Response Schema: { "volume": number, "muted": boolean, "equalizer_preset": "string" }
+---
+Question: Adjust the equalizer to the electronic preset for my workout.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "electronic" }
+Response: { "volume": 82, "muted": false, "equalizer_preset": "electronic" }
+
+Question: I'm watching a movie, please set the sound to cinema mode.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "cinema" }
+Response: { "volume": 68, "muted": false, "equalizer_preset": "cinema" }
+
+Question: Switch the audio profile to pop for this new single.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "pop" }
+Response: { "volume": 55, "muted": false, "equalizer_preset": "pop" }
+
+Question: Activate the vocal booster preset for the audiobook.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "vocal booster" }
+Response: { "volume": 44, "muted": false, "equalizer_preset": "vocal booster" }
+
+Question: Change the equalizer settings to the flat preset.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "flat" }
+Response: { "volume": 50, "muted": false, "equalizer_preset": "flat" }
+
+Question: Can you enable the reggae preset for this island tune?
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "reggae" }
+Response: { "volume": 63, "muted": false, "equalizer_preset": "reggae" }
+
+Question: Apply the metal equalizer preset right now.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "metal" }
+Response: { "volume": 78, "muted": false, "equalizer_preset": "metal" }
+
+Question: I need the news preset active for the morning broadcast.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "news" }
+Response: { "volume": 35, "muted": false, "equalizer_preset": "news" }
+
+Question: Turn on the treble boost for the violin recording.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "treble boost" }
+Response: { "volume": 47, "muted": false, "equalizer_preset": "treble boost" }
+
+Question: Set the equalizer to game mode for this RPG session.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "game" }
+Response: { "volume": 72, "muted": false, "equalizer_preset": "game" }
+
+Question: Switch to the acoustic preset immediately.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "acoustic" }
+Response: { "volume": 41, "muted": false, "equalizer_preset": "acoustic" }
+
+Question: Please configure the equalizer for techno music.
+Call: { "func_call": "set_equalizer", "level": 0, "preset": "techno" }
+Response: { "volume": 85, "muted": false, "equalizer_preset": "techno" }

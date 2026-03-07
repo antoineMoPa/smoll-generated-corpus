@@ -1,0 +1,51 @@
+Available Tools: check_availability | find_free_slot | get_busy_times | block_time
+Call Schema: { "func_call": "string", "user_id": "string", "date": "string", "duration_minutes": number }
+Response Schema: { "available": boolean, "free_slots": [{ "start": "string", "end": "string" }] }
+---
+Question: Verify if Thomas Wright has an opening on December 5th for a 20-minute standup.
+Call: { "func_call": "check_availability", "user_id": "thomas.wright@corp.com", "date": "2023-12-05", "duration_minutes": 20 }
+Response: { "available": true, "free_slots": [{ "start": "2023-12-05T10:00:00Z", "end": "2023-12-05T10:20:00Z" }, { "start": "2023-12-05T14:30:00Z", "end": "2023-12-05T14:50:00Z" }] }
+
+Question: Secure a 75-minute review slot for Olivia Martinez on next Monday afternoon.
+Call: { "func_call": "block_time", "user_id": "olivia.martinez@corp.com", "date": "2023-12-11", "duration_minutes": 75 }
+Response: { "available": true, "free_slots": [{ "start": "2023-12-11T13:00:00Z", "end": "2023-12-11T14:15:00Z" }] }
+
+Question: Show me when Nathan Clark is occupied on Thursday so we don't double book him.
+Call: { "func_call": "get_busy_times", "user_id": "nathan.clark@corp.com", "date": "2023-12-07", "duration_minutes": 0 }
+Response: { "available": false, "free_slots": [{ "start": "2023-12-07T08:30:00Z", "end": "2023-12-07T09:30:00Z" }, { "start": "2023-12-07T15:00:00Z", "end": "2023-12-07T16:00:00Z" }] }
+
+Question: Reserve 40 minutes for Sophia Lewis to prep for the board meeting on Friday.
+Call: { "func_call": "block_time", "user_id": "sophia.lewis@corp.com", "date": "2023-12-08", "duration_minutes": 40 }
+Response: { "available": true, "free_slots": [{ "start": "2023-12-08T09:20:00Z", "end": "2023-12-08T10:00:00Z" }] }
+
+Question: Does Daniel Hall have any free time on January 10th for a 30-minute interview?
+Call: { "func_call": "check_availability", "user_id": "daniel.hall@corp.com", "date": "2024-01-10", "duration_minutes": 30 }
+Response: { "available": false, "free_slots": [{ "start": "2024-01-10T11:30:00Z", "end": "2024-01-10T12:00:00Z" }] }
+
+Question: Block out 2.5 hours for Emily White to work on the budget draft next Tuesday.
+Call: { "func_call": "block_time", "user_id": "emily.white@corp.com", "date": "2024-01-09", "duration_minutes": 150 }
+Response: { "available": true, "free_slots": [{ "start": "2024-01-09T08:00:00Z", "end": "2024-01-09T10:30:00Z" }] }
+
+Question: List all conflicting appointments for William Harris on Wednesday afternoon.
+Call: { "func_call": "get_busy_times", "user_id": "william.harris@corp.com", "date": "2024-01-10", "duration_minutes": 0 }
+Response: { "available": false, "free_slots": [{ "start": "2024-01-10T13:00:00Z", "end": "2024-01-10T14:00:00Z" }, { "start": "2024-01-10T16:30:00Z", "end": "2024-01-10T17:00:00Z" }] }
+
+Question: Set aside 50 minutes for Charlotte Young to debrief with the design team on Thursday.
+Call: { "func_call": "block_time", "user_id": "charlotte.young@corp.com", "date": "2024-01-11", "duration_minutes": 50 }
+Response: { "available": true, "free_slots": [{ "start": "2024-01-11T15:10:00Z", "end": "2024-01-11T16:00:00Z" }] }
+
+Question: Check if Henry King is available for a quick 10-minute call on January 15th.
+Call: { "func_call": "check_availability", "user_id": "henry.king@corp.com", "date": "2024-01-15", "duration_minutes": 10 }
+Response: { "available": true, "free_slots": [{ "start": "2024-01-15T09:00:00Z", "end": "2024-01-15T09:10:00Z" }, { "start": "2024-01-15T17:50:00Z", "end": "2024-01-15T18:00:00Z" }] }
+
+Question: Add a 25-minute buffer for Grace Scott before her lunch meeting on Monday.
+Call: { "func_call": "block_time", "user_id": "grace.scott@corp.com", "date": "2024-01-08", "duration_minutes": 25 }
+Response: { "available": true, "free_slots": [{ "start": "2024-01-08T11:35:00Z", "end": "2024-01-08T12:00:00Z" }] }
+
+Question: Pull up the busy schedule for Jack Adams on Friday to find a gap for training.
+Call: { "func_call": "get_busy_times", "user_id": "jack.adams@corp.com", "date": "2024-01-12", "duration_minutes": 0 }
+Response: { "available": false, "free_slots": [{ "start": "2024-01-12T10:00:00Z", "end": "2024-01-12T11:30:00Z" }, { "start": "2024-01-12T14:00:00Z", "end": "2024-01-12T15:00:00Z" }] }
+
+Question: Block a 4-hour workshop session for Victoria Baker on next Wednesday morning.
+Call: { "func_call": "block_time", "user_id": "victoria.baker@corp.com", "date": "2024-01-17", "duration_minutes": 240 }
+Response: { "available": true, "free_slots": [{ "start": "2024-01-17T08:00:00Z", "end": "2024-01-17T12:00:00Z" }] }

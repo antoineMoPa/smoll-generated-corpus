@@ -1,0 +1,59 @@
+Context: First, Maria boiled water in the kettle. Next, she placed a tea bag in the mug. Finally, she poured the hot water over the bag.
+Input: {"question": "What happened first?"}
+Output: {"answer": "Maria boiled water in the kettle"}
+
+Context: The storm began with heavy thunder rolling across the plains. Winds picked up speed shortly after, tearing branches from trees. The rain finally stopped by midnight.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The rain finally stopped by midnight"}
+
+Context: To assemble the shelf, begin by laying out all the wooden panels. Then, screw the brackets into the side pieces. Wrap up the process by attaching the backboard.
+Input: {"question": "What happened first?"}
+Output: {"answer": "laying out all the wooden panels"}
+
+Context: James woke up at six, brushed his teeth, and then ate breakfast before leaving for work.
+Input: {"question": "What happened last?"}
+Output: {"answer": "leaving for work"}
+
+Context: The chemical reaction started when the catalyst was added to the solution. Bubbles formed immediately, and the liquid turned a deep blue. The mixture cooled down after ten minutes.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the catalyst was added to the solution"}
+
+Context: First, the architect drew the blueprints. Second, the construction crew poured the foundation. Third, the walls were erected. Lastly, the roof was installed.
+Input: {"question": "What happened last?"}
+Output: {"answer": "the roof was installed"}
+
+Context: She opened the laptop, typed her password, and accessed her email inbox.
+Input: {"question": "What happened first?"}
+Output: {"answer": "She opened the laptop"}
+
+Context: The parade commenced with the marching band playing loudly. Floats followed behind, showering candy to the crowd. The event concluded with a fireworks display.
+Input: {"question": "What happened last?"}
+Output: {"answer": "The event concluded with a fireworks display"}
+
+Context: Before baking the cake, preheat the oven to 350 degrees. Mix the flour and sugar in a large bowl. Pour the batter into the pan and bake for thirty minutes.
+Input: {"question": "What happened first?"}
+Output: {"answer": "preheat the oven to 350 degrees"}
+
+Context: The detective arrived at the crime scene, interviewed the witnesses, and then collected the evidence.
+Input: {"question": "What happened last?"}
+Output: {"answer": "collected the evidence"}
+
+Context: First, the seeds were planted in the garden soil. Weeks later, small sprouts emerged from the ground. Eventually, bright yellow flowers bloomed.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the seeds were planted in the garden soil"}
+
+Context: The software update downloaded in the background, installed automatically, and required a system restart.
+Input: {"question": "What happened last?"}
+Output: {"answer": "required a system restart"}
+
+Context: To change the tire, first loosen the lug nuts. Next, jack up the car until the wheel is off the ground. Remove the flat tire and replace it with the spare.
+Input: {"question": "What happened first?"}
+Output: {"answer": "loosen the lug nuts"}
+
+Context: The concert started with a slow ballad. The band played several upbeat songs in the middle. They finished the night with their most famous hit.
+Input: {"question": "What happened last?"}
+Output: {"answer": "They finished the night with their most famous hit"}
+
+Context: First, the hikers packed their bags. Then, they drove to the trailhead. After a long climb, they reached the summit.
+Input: {"question": "What happened first?"}
+Output: {"answer": "the hikers packed their bags"}

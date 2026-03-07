@@ -1,0 +1,51 @@
+Available Tools: start_instance | stop_instance | restart_instance | terminate_instance
+Call Schema: { "func_call": "string", "instance_id": "string", "region": "string" }
+Response Schema: { "instance_id": "string", "state": "string", "message": "string" }
+---
+Question: Restart the web server instance i-0a1b2c3d4e5f in us-east-1 for scheduled maintenance.
+Call: { "func_call": "restart_instance", "instance_id": "i-0a1b2c3d4e5f", "region": "us-east-1" }
+Response: { "instance_id": "i-0a1b2c3d4e5f", "state": "rebooting", "message": "Instance restart initiated for scheduled maintenance." }
+
+Question: Terminate the old batch processing node i-9z8y7x6w5v in eu-west-2 as part of the scale-down event.
+Call: { "func_call": "terminate_instance", "instance_id": "i-9z8y7x6w5v", "region": "eu-west-2" }
+Response: { "instance_id": "i-9z8y7x6w5v", "state": "shutting-down", "message": "Instance termination successful due to scale-down." }
+
+Question: We need to apply kernel updates; please restart instance i-1122334455 in ap-southeast-1.
+Call: { "func_call": "restart_instance", "instance_id": "i-1122334455", "region": "ap-southeast-1" }
+Response: { "instance_id": "i-1122334455", "state": "rebooting", "message": "Instance rebooting to apply kernel updates." }
+
+Question: The dev environment instance i-dev001 in us-west-1 is no longer needed; terminate it immediately.
+Call: { "func_call": "terminate_instance", "instance_id": "i-dev001", "region": "us-west-1" }
+Response: { "instance_id": "i-dev001", "state": "shutting-down", "message": "Development instance terminated successfully." }
+
+Question: Execute a restart on the database replica i-db-replica-09 in eu-central-1 to clear memory leaks.
+Call: { "func_call": "restart_instance", "instance_id": "i-db-replica-09", "region": "eu-central-1" }
+Response: { "instance_id": "i-db-replica-09", "state": "rebooting", "message": "Database replica restarting to resolve memory issues." }
+
+Question: Scale down the fleet by terminating instance i-worker-42 in us-east-2 which is idle.
+Call: { "func_call": "terminate_instance", "instance_id": "i-worker-42", "region": "us-east-2" }
+Response: { "instance_id": "i-worker-42", "state": "shutting-down", "message": "Idle worker instance terminated for cost optimization." }
+
+Question: Restart the application server i-app-srv-77 in ap-northeast-1 following the configuration push.
+Call: { "func_call": "restart_instance", "instance_id": "i-app-srv-77", "region": "ap-northeast-1" }
+Response: { "instance_id": "i-app-srv-77", "state": "rebooting", "message": "Application server restarting to load new configuration." }
+
+Question: Terminate the legacy cache node i-cache-old-05 in sa-east-1 as the migration is complete.
+Call: { "func_call": "terminate_instance", "instance_id": "i-cache-old-05", "region": "sa-east-1" }
+Response: { "instance_id": "i-cache-old-05", "state": "shutting-down", "message": "Legacy cache node terminated post-migration." }
+
+Question: Perform a forced restart on instance i-frontend-03 in us-east-1 to recover from a hang.
+Call: { "func_call": "restart_instance", "instance_id": "i-frontend-03", "region": "us-east-1" }
+Response: { "instance_id": "i-frontend-03", "state": "rebooting", "message": "Forced restart initiated to recover unresponsive instance." }
+
+Question: Remove the temporary testing instance i-test-temp-99 in eu-north-1 now that the suite has finished.
+Call: { "func_call": "terminate_instance", "instance_id": "i-test-temp-99", "region": "eu-north-1" }
+Response: { "instance_id": "i-test-temp-99", "state": "shutting-down", "message": "Temporary test instance terminated after suite completion." }
+
+Question: Restart the monitoring agent host i-mon-08 in us-west-2 to refresh its credentials.
+Call: { "func_call": "restart_instance", "instance_id": "i-mon-08", "region": "us-west-2" }
+Response: { "instance_id": "i-mon-08", "state": "rebooting", "message": "Monitoring host restarting to refresh credentials." }
+
+Question: Terminate the overflow compute instance i-overflow-12 in ap-south-1 as demand has decreased.
+Call: { "func_call": "terminate_instance", "instance_id": "i-overflow-12", "region": "ap-south-1" }
+Response: { "instance_id": "i-overflow-12", "state": "shutting-down", "message": "Overflow instance terminated due to decreased demand." }

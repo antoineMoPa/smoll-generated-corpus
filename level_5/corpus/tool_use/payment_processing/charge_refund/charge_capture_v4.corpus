@@ -1,0 +1,51 @@
+Available Tools: charge_card | partial_refund | full_refund | capture_payment | void_payment
+Call Schema: { "func_call": "string", "customer_id": "string", "amount": number, "currency": "string", "payment_method_id": "string", "description": "string" }
+Response Schema: { "transaction_id": "string", "status": "succeeded|failed|pending", "amount": number, "currency": "string" }
+---
+Question: Charge $85.20 to customer CUST-1029 for their quarterly cloud storage fee using card pm_CLOUD99.
+Call: { "func_call": "charge_card", "customer_id": "CUST-1029", "amount": 85.20, "currency": "USD", "payment_method_id": "pm_CLOUD99", "description": "Quarterly cloud storage fee" }
+Response: { "transaction_id": "txn_CLD_771122", "status": "succeeded", "amount": 85.20, "currency": "USD" }
+
+Question: Process a charge of ¥4,500 for customer CUST-5561 regarding the mobile game currency pack via pm_GAME45.
+Call: { "func_call": "charge_card", "customer_id": "CUST-5561", "amount": 4500, "currency": "JPY", "payment_method_id": "pm_GAME45", "description": "Mobile game currency pack" }
+Response: { "transaction_id": "txn_GM_334455", "status": "succeeded", "amount": 4500, "currency": "JPY" }
+
+Question: Capture the authorized payment of $320.00 for order #ORD-2288 belonging to customer CUST-7742.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-7742", "amount": 320.00, "currency": "USD", "payment_method_id": "pm_US2288", "description": "Capture payment for order #ORD-2288" }
+Response: { "transaction_id": "txn_CAP_889900", "status": "succeeded", "amount": 320.00, "currency": "USD" }
+
+Question: Charge customer CUST-9933 €22.50 for a single article access pass using their saved card pm_NEWS22.
+Call: { "func_call": "charge_card", "customer_id": "CUST-9933", "amount": 22.50, "currency": "EUR", "payment_method_id": "pm_NEWS22", "description": "Single article access pass" }
+Response: { "transaction_id": "txn_NWS_667788", "status": "succeeded", "amount": 22.50, "currency": "EUR" }
+
+Question: Execute a charge of £199.99 on customer CUST-4412 for the extended warranty plan via payment method pm_WARR19.
+Call: { "func_call": "charge_card", "customer_id": "CUST-4412", "amount": 199.99, "currency": "GBP", "payment_method_id": "pm_WARR19", "description": "Extended warranty plan" }
+Response: { "transaction_id": "txn_WRN_112233", "status": "succeeded", "amount": 199.99, "currency": "GBP" }
+
+Question: Capture the pending authorization of €875.50 for customer CUST-6621 related to graphic design services.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-6621", "amount": 875.50, "currency": "EUR", "payment_method_id": "pm_DESN87", "description": "Capture payment for graphic design services" }
+Response: { "transaction_id": "txn_DSN_556677", "status": "succeeded", "amount": 875.50, "currency": "EUR" }
+
+Question: Bill customer CUST-3308 $18.95 for handling fees on order #HF-441 using card pm_HAND18.
+Call: { "func_call": "charge_card", "customer_id": "CUST-3308", "amount": 18.95, "currency": "USD", "payment_method_id": "pm_HAND18", "description": "Handling fees for order #HF-441" }
+Response: { "transaction_id": "txn_HND_998877", "status": "succeeded", "amount": 18.95, "currency": "USD" }
+
+Question: Charge $450.00 to customer CUST-8890 for the enterprise tier upgrade using payment method pm_ENT45.
+Call: { "func_call": "charge_card", "customer_id": "CUST-8890", "amount": 450.00, "currency": "USD", "payment_method_id": "pm_ENT45", "description": "Enterprise tier upgrade" }
+Response: { "transaction_id": "txn_ENT_443322", "status": "succeeded", "amount": 450.00, "currency": "USD" }
+
+Question: Capture the pre-authorized amount of £115.75 for customer CUST-2256 regarding flight seat selection.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-2256", "amount": 115.75, "currency": "GBP", "payment_method_id": "pm_FLGT11", "description": "Flight seat selection capture" }
+Response: { "transaction_id": "txn_FLT_221100", "status": "succeeded", "amount": 115.75, "currency": "GBP" }
+
+Question: Process a charge of €35.00 for customer CUST-7719 for a weekly newsletter subscription via pm_NWSL35.
+Call: { "func_call": "charge_card", "customer_id": "CUST-7719", "amount": 35.00, "currency": "EUR", "payment_method_id": "pm_NWSL35", "description": "Weekly newsletter subscription" }
+Response: { "transaction_id": "txn_NSL_665544", "status": "succeeded", "amount": 35.00, "currency": "EUR" }
+
+Question: Charge customer CUST-1145 $210.00 for webinar attendance fees using their primary card pm_WEB21.
+Call: { "func_call": "charge_card", "customer_id": "CUST-1145", "amount": 210.00, "currency": "USD", "payment_method_id": "pm_WEB21", "description": "Webinar attendance fees" }
+Response: { "transaction_id": "txn_WEB_887766", "status": "succeeded", "amount": 210.00, "currency": "USD" }
+
+Question: Capture the held funds of £92.25 for customer CUST-5598 corresponding to a reserved tennis court slot.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-5598", "amount": 92.25, "currency": "GBP", "payment_method_id": "pm_TNS92", "description": "Reserved tennis court slot capture" }
+Response: { "transaction_id": "txn_TNS_332211", "status": "succeeded", "amount": 92.25, "currency": "GBP" }

@@ -1,0 +1,51 @@
+Available Tools: search_cars | book_car | cancel_rental | get_rental_details | extend_rental
+Call Schema: { "func_call": "string", "location": "string", "pickup_date": "string", "return_date": "string", "car_type": "economy|compact|suv|luxury" }
+Response Schema: { "rental_id": "string", "car": "string", "pickup_location": "string", "daily_rate": number, "total_cost": number }
+---
+Question: I need to find an economy car at JFK Airport for next week, picking up on Monday and returning the following Monday.
+Call: { "func_call": "search_cars", "location": "JFK Airport", "pickup_date": "2023-11-06", "return_date": "2023-11-13", "car_type": "economy" }
+Response: { "rental_id": "RC-89210", "car": "Toyota Corolla or similar", "pickup_location": "JFK Airport", "daily_rate": 45.00, "total_cost": 315.00 }
+
+Question: Please book a luxury SUV for my trip to LAX, arriving December 1st and leaving December 8th.
+Call: { "func_call": "book_car", "location": "LAX", "pickup_date": "2023-12-01", "return_date": "2023-12-08", "car_type": "suv" }
+Response: { "rental_id": "RC-99432", "car": "Cadillac Escalade or similar", "pickup_location": "LAX", "daily_rate": 125.50, "total_cost": 878.50 }
+
+Question: Can you search for compact cars available at Miami International Airport from January 10th to January 17th?
+Call: { "func_call": "search_cars", "location": "Miami International Airport", "pickup_date": "2024-01-10", "return_date": "2024-01-17", "car_type": "compact" }
+Response: { "rental_id": "RC-10293", "car": "Nissan Versa or similar", "pickup_location": "Miami International Airport", "daily_rate": 38.25, "total_cost": 267.75 }
+
+Question: I'd like to book a luxury sedan at Chicago O'Hare for a week starting February 5th.
+Call: { "func_call": "book_car", "location": "Chicago O'Hare", "pickup_date": "2024-02-05", "return_date": "2024-02-12", "car_type": "luxury" }
+Response: { "rental_id": "RC-55102", "car": "BMW 5 Series or similar", "pickup_location": "Chicago O'Hare", "daily_rate": 95.00, "total_cost": 665.00 }
+
+Question: Find me an economy vehicle at Seattle-Tacoma International Airport for pickup on March 3rd and return on March 10th.
+Call: { "func_call": "search_cars", "location": "Seattle-Tacoma International Airport", "pickup_date": "2024-03-03", "return_date": "2024-03-10", "car_type": "economy" }
+Response: { "rental_id": "RC-33819", "car": "Hyundai Accent or similar", "pickup_location": "Seattle-Tacoma International Airport", "daily_rate": 42.00, "total_cost": 294.00 }
+
+Question: Book a large SUV at Denver International Airport for the week of April 15th to April 22nd.
+Call: { "func_call": "book_car", "location": "Denver International Airport", "pickup_date": "2024-04-15", "return_date": "2024-04-22", "car_type": "suv" }
+Response: { "rental_id": "RC-77621", "car": "Chevrolet Tahoe or similar", "pickup_location": "Denver International Airport", "daily_rate": 110.00, "total_cost": 770.00 }
+
+Question: Search for compact cars at Boston Logan International Airport from May 1st to May 8th.
+Call: { "func_call": "search_cars", "location": "Boston Logan International Airport", "pickup_date": "2024-05-01", "return_date": "2024-05-08", "car_type": "compact" }
+Response: { "rental_id": "RC-44920", "car": "Honda Civic or similar", "pickup_location": "Boston Logan International Airport", "daily_rate": 48.50, "total_cost": 339.50 }
+
+Question: I need to reserve a luxury car at San Francisco International Airport for a week starting June 10th.
+Call: { "func_call": "book_car", "location": "San Francisco International Airport", "pickup_date": "2024-06-10", "return_date": "2024-06-17", "car_type": "luxury" }
+Response: { "rental_id": "RC-22105", "car": "Mercedes-Benz E-Class or similar", "pickup_location": "San Francisco International Airport", "daily_rate": 135.00, "total_cost": 945.00 }
+
+Question: Look for economy options at Phoenix Sky Harbor International Airport for pickup July 20th and return July 27th.
+Call: { "func_call": "search_cars", "location": "Phoenix Sky Harbor International Airport", "pickup_date": "2024-07-20", "return_date": "2024-07-27", "car_type": "economy" }
+Response: { "rental_id": "RC-66304", "car": "Kia Rio or similar", "pickup_location": "Phoenix Sky Harbor International Airport", "daily_rate": 39.99, "total_cost": 279.93 }
+
+Question: Please book an SUV at Atlanta Hartsfield-Jackson for the week of August 5th to August 12th.
+Call: { "func_call": "book_car", "location": "Atlanta Hartsfield-Jackson", "pickup_date": "2024-08-05", "return_date": "2024-08-12", "car_type": "suv" }
+Response: { "rental_id": "RC-88741", "car": "Ford Explorer or similar", "pickup_location": "Atlanta Hartsfield-Jackson", "daily_rate": 85.00, "total_cost": 595.00 }
+
+Question: Find a compact car at Dallas/Fort Worth International Airport from September 1st to September 8th.
+Call: { "func_call": "search_cars", "location": "Dallas/Fort Worth International Airport", "pickup_date": "2024-09-01", "return_date": "2024-09-08", "car_type": "compact" }
+Response: { "rental_id": "RC-11567", "car": "Mazda3 or similar", "pickup_location": "Dallas/Fort Worth International Airport", "daily_rate": 41.75, "total_cost": 292.25 }
+
+Question: Reserve a luxury vehicle at Las Vegas McCarran Airport for a week starting October 14th.
+Call: { "func_call": "book_car", "location": "Las Vegas McCarran Airport", "pickup_date": "2024-10-14", "return_date": "2024-10-21", "car_type": "luxury" }
+Response: { "rental_id": "RC-99008", "car": "Audi A6 or similar", "pickup_location": "Las Vegas McCarran Airport", "daily_rate": 115.00, "total_cost": 805.00 }

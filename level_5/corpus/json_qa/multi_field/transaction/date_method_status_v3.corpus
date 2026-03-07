@@ -1,0 +1,29 @@
+Context: On May 19, 2024, a payment of $120.50 was processed via Visa and the transaction status is verified. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "May 19, 2024", "method": "Visa", "status": "verified"}
+
+Context: The bank draft initiated on March 3rd was returned due to a stop payment order, leaving the status as cancelled. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "March 3rd", "method": "bank draft", "status": "cancelled"}
+
+Context: A Zelle transfer dated 09/14/2023 was instantly delivered with a status of successful. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "09/14/2023", "method": "Zelle", "status": "successful"}
+
+Context: Using Stripe on January 10, 2025, the merchant captured the funds, resulting in a status of captured. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "January 10, 2025", "method": "Stripe", "status": "captured"}
+
+Context: The cashier's check issued on December 5, 2022, has a current status of outstanding after two weeks. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "December 5, 2022", "method": "cashier's check", "status": "outstanding"}
+
+Context: A prepaid card transaction from August 22, 2023, expired before use, marking the final status as voided. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "August 22, 2023", "method": "prepaid card", "status": "voided"}
+
+Context: On 04/01/2024, a real-time payments (RTP) transfer was initiated and the system shows the status as pending. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "04/01/2024", "method": "real-time payments (RTP) transfer", "status": "pending"}
+
+Context: The Cash App payment sent on October 31, 2023, appears in the ledger with a status of delivered. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "October 31, 2023", "method": "Cash App", "status": "delivered"}
+
+Context: A traveler's check redeemed at the lobby on July 15, 2022, was authenticated and the status is now redeemed. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "July 15, 2022", "method": "traveler's check", "status": "redeemed"}
+
+Context: The Ethereum transfer executed on February 14, 2025, via MetaMask is currently showing a status of confirming. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "February 14, 2025", "method": "Ethereum transfer", "status": "confirming"}
+
+Context: On September 9, 2021, an Amazon Pay transaction was disputed by the buyer, changing the status to challenged. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "September 9, 2021", "method": "Amazon Pay", "status": "challenged"}
+
+Context: A postal money order purchased on June 18, 2024, has been lost, and the record status is marked as replaced. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "June 18, 2024", "method": "postal money order", "status": "replaced"}
+
+Context: The Fitbit Pay transaction from April 4, 2023, timed out during authentication, resulting in a status of expired. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "April 4, 2023", "method": "Fitbit Pay", "status": "expired"}
+
+Context: On 11/30/2024, a payroll deposit was received, and the banking system updated the status to available. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "11/30/2024", "method": "payroll deposit", "status": "available"}
+
+Context: A Clover terminal transaction dated March 12, 2025, using a chip card shows a status of settled. | Input: {"extract": ["date", "method", "status"]} | Output: {"date": "March 12, 2025", "method": "Clover terminal", "status": "settled"}

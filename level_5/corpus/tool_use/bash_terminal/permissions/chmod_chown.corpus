@@ -1,0 +1,51 @@
+Available Tools: chmod | chown | check_permissions | add_to_group
+Call Schema: { "func_call": "string", "path": "string", "mode": "string", "owner": "string" }
+Response Schema: { "success": boolean, "previous_mode": "string", "new_mode": "string" }
+---
+Question: Make the deployment script executable for everyone but writable only by the owner.
+Call: { "func_call": "chmod", "path": "/opt/scripts/deploy.sh", "mode": "755", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "755" }
+
+Question: Change the ownership of the database configuration file to the postgres user and group.
+Call: { "func_call": "chown", "path": "/etc/db/config.yml", "mode": "", "owner": "postgres:postgres" }
+Response: { "success": true, "previous_mode": "640", "new_mode": "640" }
+
+Question: Restrict access to the private SSH key so only the owner can read and write it.
+Call: { "func_call": "chmod", "path": "/home/alice/.ssh/id_rsa", "mode": "600", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "600" }
+
+Question: Transfer ownership of the web root directory to the www-data user and the www-data group.
+Call: { "func_call": "chown", "path": "/var/www/html", "mode": "", "owner": "www-data:www-data" }
+Response: { "success": true, "previous_mode": "755", "new_mode": "755" }
+
+Question: Set the log rotation script to be readable and executable by the owner and group only.
+Call: { "func_call": "chmod", "path": "/usr/local/bin/rotate_logs.sh", "mode": "750", "owner": "" }
+Response: { "success": true, "previous_mode": "700", "new_mode": "750" }
+
+Question: Assign the backup archive file to the backup administrator user and the audit group.
+Call: { "func_call": "chown", "path": "/mnt/backups/daily_2023_10_27.tar.gz", "mode": "", "owner": "bak_admin:audit" }
+Response: { "success": true, "previous_mode": "640", "new_mode": "640" }
+
+Question: Allow all users to read the public certificate file while keeping write access restricted to the owner.
+Call: { "func_call": "chmod", "path": "/etc/ssl/certs/server.crt", "mode": "644", "owner": "" }
+Response: { "success": true, "previous_mode": "600", "new_mode": "644" }
+
+Question: Change the owner of the application socket file to the app runner user and the docker group.
+Call: { "func_call": "chown", "path": "/run/myapp/app.sock", "mode": "", "owner": "app_runner:docker" }
+Response: { "success": true, "previous_mode": "777", "new_mode": "777" }
+
+Question: Secure the sensitive environment file so that only the root user has any access.
+Call: { "func_call": "chmod", "path": "/etc/myapp/.env.production", "mode": "700", "owner": "" }
+Response: { "success": true, "previous_mode": "644", "new_mode": "700" }
+
+Question: Update the ownership of the shared temp directory to the daemon user and the staff group.
+Call: { "func_call": "chown", "path": "/tmp/shared_cache", "mode": "", "owner": "daemon:staff" }
+Response: { "success": true, "previous_mode": "1777", "new_mode": "1777" }
+
+Question: Set the cron job script to be executable by the owner and readable by the group.
+Call: { "func_call": "chmod", "path": "/var/spool/cron/crontabs/admin_job", "mode": "740", "owner": "" }
+Response: { "success": true, "previous_mode": "640", "new_mode": "740" }
+
+Question: Reassign the mail queue directory to the mail service user and the mail group.
+Call: { "func_call": "chown", "path": "/var/spool/mqueue", "mode": "", "owner": "mail:mail" }
+Response: { "success": true, "previous_mode": "700", "new_mode": "700" }

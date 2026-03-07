@@ -1,0 +1,51 @@
+Available Tools: search_places | get_place_details | find_nearby | get_place_reviews
+Call Schema: { "func_call": "string", "query": "string", "location": "string", "radius_km": number, "type": "string" }
+Response Schema: { "places": [{ "id": "string", "name": "string", "address": "string", "rating": number, "open_now": boolean }], "total": number }
+---
+Question: Locate yoga studios near Venice Beach in Los Angeles.
+Call: { "func_call": "find_nearby", "query": "yoga studio", "location": "Venice Beach, Los Angeles, CA", "radius_km": 1.5, "type": "gym" }
+Response: { "places": [ { "id": "pl_la_2001", "name": "Sky Yoga Studio", "address": "1800 Ocean Front Walk, Venice, CA 90291", "rating": 4.7, "open_now": true }, { "id": "pl_la_2002", "name": "The Yoga Collective", "address": "25 Windward Ave, Venice, CA 90291", "rating": 4.5, "open_now": false } ], "total": 2 }
+
+Question: Find hardware stores within 5 kilometers of Fenway Park in Boston.
+Call: { "func_call": "search_places", "query": "hardware store", "location": "Fenway Park, Boston, MA", "radius_km": 5, "type": "hardware_store" }
+Response: { "places": [ { "id": "pl_bos_2101", "name": "Ace Hardware", "address": "1330 Boylston St, Boston, MA 02215", "rating": 4.2, "open_now": true }, { "id": "pl_bos_2102", "name": "Home Depot", "address": "700 VFW Parkway, Boston, MA 02132", "rating": 3.9, "open_now": true }, { "id": "pl_bos_2103", "name": "True Value", "address": "450 Huntington Ave, Boston, MA 02115", "rating": 4.0, "open_now": false } ], "total": 3 }
+
+Question: Are there any movie theaters near the Mall of America in Bloomington?
+Call: { "func_call": "search_places", "query": "movie theater", "location": "Mall of America, Bloomington, MN", "radius_km": 2, "type": "movie_theater" }
+Response: { "places": [ { "id": "pl_blm_2201", "name": "AMC Mall of America 14", "address": "60 E Broadway, Bloomington, MN 55425", "rating": 4.3, "open_now": true }, { "id": "pl_blm_2202", "name": "Harkins Theatres", "address": "8000 Normandale Blvd, Bloomington, MN 55435", "rating": 4.6, "open_now": true } ], "total": 2 }
+
+Question: Search for bicycle repair shops near Golden Gate Park in San Francisco.
+Call: { "func_call": "find_nearby", "query": "bike repair", "location": "Golden Gate Park, San Francisco, CA", "radius_km": 3, "type": "bicycle_store" }
+Response: { "places": [ { "id": "pl_sf_2301", "name": "Valencia Cyclery", "address": "3509 24th St, San Francisco, CA 94110", "rating": 4.8, "open_now": true }, { "id": "pl_sf_2302", "name": "Sports Basement", "address": "1590 Bryant St, San Francisco, CA 94103", "rating": 4.4, "open_now": true }, { "id": "pl_sf_2303", "name": "Mike's Bikes", "address": "1138 Howard St, San Francisco, CA 94103", "rating": 4.1, "open_now": false } ], "total": 3 }
+
+Question: I need a 24-hour convenience store near the Las Vegas Strip.
+Call: { "func_call": "search_places", "query": "convenience store", "location": "Las Vegas Strip, NV", "radius_km": 1, "type": "convenience_store" }
+Response: { "places": [ { "id": "pl_lv_2401", "name": "7-Eleven", "address": "3758 Las Vegas Blvd S, Las Vegas, NV 89109", "rating": 3.8, "open_now": true }, { "id": "pl_lv_2402", "name": "Circle K", "address": "150 E Tropicana Ave, Las Vegas, NV 89109", "rating": 3.5, "open_now": true } ], "total": 2 }
+
+Question: Find art galleries in the SoHo district of New York City.
+Call: { "func_call": "find_nearby", "query": "art gallery", "location": "SoHo, New York, NY", "radius_km": 2, "type": "art_gallery" }
+Response: { "places": [ { "id": "pl_nyc_2501", "name": "Gagosian Gallery", "address": "555 W 24th St, New York, NY 10011", "rating": 4.9, "open_now": true }, { "id": "pl_nyc_2502", "name": "David Zwirner", "address": "533 W 19th St, New York, NY 10011", "rating": 4.7, "open_now": true }, { "id": "pl_nyc_2503", "name": "Hauser & Wirth", "address": "511 W 18th St, New York, NY 10011", "rating": 4.8, "open_now": false } ], "total": 3 }
+
+Question: Locate playgrounds near Millennium Park in Chicago.
+Call: { "func_call": "search_places", "query": "playground", "location": "Millennium Park, Chicago, IL", "radius_km": 1.5, "type": "park" }
+Response: { "places": [ { "id": "pl_chi_2601", "name": "Maggie Daley Park", "address": "337 E Randolph St, Chicago, IL 60601", "rating": 4.8, "open_now": true }, { "id": "pl_chi_2602", "name": "Grant Park Playground", "address": "301 E Monroe St, Chicago, IL 60603", "rating": 4.2, "open_now": true } ], "total": 2 }
+
+Question: Show me seafood restaurants near the Seattle Waterfront.
+Call: { "func_call": "search_places", "query": "seafood restaurant", "location": "Seattle Waterfront, WA", "radius_km": 2, "type": "restaurant" }
+Response: { "places": [ { "id": "pl_sea_2701", "name": "Ivar's Acres of Clams", "address": "1001 Alaskan Way, Seattle, WA 98104", "rating": 4.3, "open_now": true }, { "id": "pl_sea_2702", "name": "The Crab Pot", "address": "1301 Alaskan Way, Seattle, WA 98101", "rating": 4.1, "open_now": true }, { "id": "pl_sea_2703", "name": "Elliott's Oyster House", "address": "1201 Alaskan Way, Seattle, WA 98101", "rating": 4.6, "open_now": false } ], "total": 3 }
+
+Question: Find bowling alleys within 4 kilometers of downtown Austin.
+Call: { "func_call": "find_nearby", "query": "bowling alley", "location": "Downtown Austin, TX", "radius_km": 4, "type": "bowling_alley" }
+Response: { "places": [ { "id": "pl_aus_2801", "name": "Highland Bowl", "address": "3020 Guadalupe St, Austin, TX 78705", "rating": 4.0, "open_now": true }, { "id": "pl_aus_2802", "name": "Pinballz Arcade", "address": "8940 Research Blvd, Austin, TX 78758", "rating": 4.5, "open_now": true } ], "total": 2 }
+
+Question: Are there any car washes near Hartsfield-Jackson Atlanta International Airport?
+Call: { "func_call": "search_places", "query": "car wash", "location": "Hartsfield-Jackson Airport, Atlanta, GA", "radius_km": 3, "type": "car_wash" }
+Response: { "places": [ { "id": "pl_atl_2901", "name": "Super Star Car Wash", "address": "4750 Old National Hwy, College Park, GA 30337", "rating": 4.4, "open_now": true }, { "id": "pl_atl_2902", "name": "Mister Car Wash", "address": "3885 Princeton Lakes Pkwy, Atlanta, GA 30331", "rating": 4.2, "open_now": false } ], "total": 2 }
+
+Question: Search for thrift stores near Haight-Ashbury in San Francisco.
+Call: { "func_call": "search_places", "query": "thrift store", "location": "Haight-Ashbury, San Francisco, CA", "radius_km": 1, "type": "clothing_store" }
+Response: { "places": [ { "id": "pl_sf_3001", "name": "Wasteland", "address": "1660 Haight St, San Francisco, CA 94117", "rating": 4.6, "open_now": true }, { "id": "pl_sf_3002", "name": "Buffalo Exchange", "address": "1356 Haight St, San Francisco, CA 94117", "rating": 4.3, "open_now": true }, { "id": "pl_sf_3003", "name": "Crossroads Trading", "address": "1652 Haight St, San Francisco, CA 94117", "rating": 4.1, "open_now": true } ], "total": 3 }
+
+Question: Find ice cream shops near the Navy Pier in Chicago.
+Call: { "func_call": "find_nearby", "query": "ice cream shop", "location": "Navy Pier, Chicago, IL", "radius_km": 1, "type": "cafe" }
+Response: { "places": [ { "id": "pl_chi_3101", "name": "Jeni's Splendid Ice Creams", "address": "600 E Grand Ave, Chicago, IL 60611", "rating": 4.7, "open_now": true }, { "id": "pl_chi_3102", "name": "Oberweis Dairy", "address": "700 N Lake Shore Dr, Chicago, IL 60611", "rating": 4.5, "open_now": true } ], "total": 2 }

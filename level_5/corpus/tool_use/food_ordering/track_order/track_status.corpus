@@ -1,0 +1,51 @@
+Available Tools: track_delivery | get_order_status | contact_driver | rate_order
+Call Schema: { "func_call": "string", "order_id": "string" }
+Response Schema: { "order_id": "string", "status": "string", "driver_name": "string", "eta_minutes": number, "location": "string" }
+---
+Question: Where is my order #FO-8821 right now?
+Call: { "func_call": "track_delivery", "order_id": "FO-8821" }
+Response: { "order_id": "FO-8821", "status": "preparing", "driver_name": null, "eta_minutes": 25, "location": "Burger Barn Kitchen" }
+
+Question: Has driver Marcus picked up order #FO-9904 yet?
+Call: { "func_call": "get_order_status", "order_id": "FO-9904" }
+Response: { "order_id": "FO-9904", "status": "picked up", "driver_name": "Marcus Chen", "eta_minutes": 18, "location": "Leaving Sushi Palace" }
+
+Question: Can you check the status of my pizza order #FO-3312?
+Call: { "func_call": "track_delivery", "order_id": "FO-3312" }
+Response: { "order_id": "FO-3312", "status": "on the way", "driver_name": "Sarah Jenkins", "eta_minutes": 7, "location": "2nd Ave and Main St" }
+
+Question: Did order #FO-7745 get delivered yet?
+Call: { "func_call": "get_order_status", "order_id": "FO-7745" }
+Response: { "order_id": "FO-7745", "status": "delivered", "driver_name": "David Ross", "eta_minutes": 0, "location": "Front Door" }
+
+Question: I need an update on order #FO-1129, is it still cooking?
+Call: { "func_call": "track_delivery", "order_id": "FO-1129" }
+Response: { "order_id": "FO-1129", "status": "preparing", "driver_name": null, "eta_minutes": 32, "location": "Taco Fiesta Grill" }
+
+Question: Who is delivering order #FO-5566 and how far away are they?
+Call: { "func_call": "get_order_status", "order_id": "FO-5566" }
+Response: { "order_id": "FO-5566", "status": "on the way", "driver_name": "Elena Rodriguez", "eta_minutes": 4, "location": "Oak Street Bridge" }
+
+Question: Check if order #FO-2298 has been picked up by the driver.
+Call: { "func_call": "track_delivery", "order_id": "FO-2298" }
+Response: { "order_id": "FO-2298", "status": "picked up", "driver_name": "James Wilson", "eta_minutes": 22, "location": "Highway 101 Northbound" }
+
+Question: What is the current location for order #FO-4431?
+Call: { "func_call": "get_order_status", "order_id": "FO-4431" }
+Response: { "order_id": "FO-4431", "status": "on the way", "driver_name": "Priya Patel", "eta_minutes": 12, "location": "Downtown Plaza" }
+
+Question: Confirm delivery status for order #FO-6677.
+Call: { "func_call": "track_delivery", "order_id": "FO-6677" }
+Response: { "order_id": "FO-6677", "status": "delivered", "driver_name": "Tom Haverford", "eta_minutes": 0, "location": "Lobby Desk" }
+
+Question: Is my salad order #FO-8890 ready for pickup?
+Call: { "func_call": "get_order_status", "order_id": "FO-8890" }
+Response: { "order_id": "FO-8890", "status": "preparing", "driver_name": null, "eta_minutes": 15, "location": "Green Leaf Cafe" }
+
+Question: Track order #FO-3344 and tell me the driver's name.
+Call: { "func_call": "track_delivery", "order_id": "FO-3344" }
+Response: { "order_id": "FO-3344", "status": "on the way", "driver_name": "Michael Chang", "eta_minutes": 9, "location": "Elm Street Intersection" }
+
+Question: Has order #FO-9921 arrived at my house?
+Call: { "func_call": "get_order_status", "order_id": "FO-9921" }
+Response: { "order_id": "FO-9921", "status": "delivered", "driver_name": "Lisa Wong", "eta_minutes": 0, "location": "Side Porch" }

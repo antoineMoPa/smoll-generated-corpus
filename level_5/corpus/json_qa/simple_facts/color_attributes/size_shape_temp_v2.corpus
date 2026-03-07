@@ -1,0 +1,59 @@
+Context: The vintage grandfather clock in the hallway is enormous and chimes loudly every hour. Its case is tall and imposing.
+Input: {"question": "How big is the vintage grandfather clock?"}
+Output: {"answer": "enormous"}
+
+Context: He spotted a microscopic speck of dust floating in the sunbeam near the window sill. It was barely visible to the naked eye.
+Input: {"question": "What size is the speck of dust he spotted?"}
+Output: {"answer": "microscopic"}
+
+Context: The artisan carved the wooden bowl into a perfect sphere before sanding it smooth.
+Input: {"question": "What shape is the wooden bowl?"}
+Output: {"answer": "sphere"}
+
+Context: After leaving the oven for an hour, the ceramic mug remained piping hot to the touch.
+Input: {"question": "How hot is the ceramic mug?"}
+Output: {"answer": "piping"}
+
+Context: The engineer drafted a triangular bracket to support the heavy shelf on the garage wall.
+Input: {"question": "What shape is the bracket drafted by the engineer?"}
+Output: {"answer": "triangular"}
+
+Context: Even in the dead of winter, the underground cave air stayed cool and damp for the explorers.
+Input: {"question": "How warm is the cave air?"}
+Output: {"answer": "cool"}
+
+Context: Tourists marveled at a gigantic meteorite displayed in the museum lobby, weighing several tons.
+Input: {"question": "How big is the meteorite in the museum?"}
+Output: {"answer": "gigantic"}
+
+Context: The potter shaped the clay into a tall cylinder before firing it in the kiln.
+Input: {"question": "What shape did the potter form the clay into?"}
+Output: {"answer": "cylinder"}
+
+Context: The soup served at the banquet was boiling, forcing the guests to blow on their spoons carefully.
+Input: {"question": "How hot was the soup at the banquet?"}
+Output: {"answer": "boiling"}
+
+Context: On the shelf sat a petite porcelain doll that fit snugly inside a matchbox.
+Input: {"question": "What size is the porcelain doll on the shelf?"}
+Output: {"answer": "petite"}
+
+Context: The yield sign on the rural road is a triangle, warning drivers to slow down for crossing traffic.
+Input: {"question": "What shape is the yield sign?"}
+Output: {"answer": "triangle"}
+
+Context: During the wildfire, the air near the perimeter became sweltering, making it hard to breathe.
+Input: {"question": "How hot did the air become near the fire?"}
+Output: {"answer": "sweltering"}
+
+Context: She selected a curved hook from the tackle box to catch the elusive trout.
+Input: {"question": "What shape is the hook she selected?"}
+Output: {"answer": "curved"}
+
+Context: The shipping yard contained massive containers that stacked three high along the dock.
+Input: {"question": "How big are the containers in the shipping yard?"}
+Output: {"answer": "massive"}
+
+Context: As night fell, the wind sweeping through the canyon grew frigid, demanding extra layers of clothing.
+Input: {"question": "How cold was the wind in the canyon?"}
+Output: {"answer": "frigid"}

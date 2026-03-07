@@ -1,0 +1,51 @@
+Available Tools: charge_card | partial_refund | full_refund | capture_payment | void_payment
+Call Schema: { "func_call": "string", "customer_id": "string", "amount": number, "currency": "string", "payment_method_id": "string", "description": "string" }
+Response Schema: { "transaction_id": "string", "status": "succeeded|failed|pending", "amount": number, "currency": "string" }
+---
+Question: Charge $85.25 to customer CUST-1029 for their quarterly insurance premium using card pm_INS404.
+Call: { "func_call": "charge_card", "customer_id": "CUST-1029", "amount": 85.25, "currency": "USD", "payment_method_id": "pm_INS404", "description": "Quarterly insurance premium" }
+Response: { "transaction_id": "txn_INS_771122", "status": "succeeded", "amount": 85.25, "currency": "USD" }
+
+Question: Process a charge of ¥3,450 for customer CUST-5581 regarding the limited edition figurine purchase via pm_FIG99.
+Call: { "func_call": "charge_card", "customer_id": "CUST-5581", "amount": 3450.00, "currency": "JPY", "payment_method_id": "pm_FIG99", "description": "Limited edition figurine purchase" }
+Response: { "transaction_id": "txn_FIG_334455", "status": "succeeded", "amount": 3450.00, "currency": "JPY" }
+
+Question: Capture the authorized payment of $620.00 for order #ORD-2288 belonging to customer CUST-7744.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-7744", "amount": 620.00, "currency": "USD", "payment_method_id": "pm_US8822", "description": "Capture payment for order #ORD-2288" }
+Response: { "transaction_id": "txn_CAP_990088", "status": "succeeded", "amount": 620.00, "currency": "USD" }
+
+Question: Charge customer CUST-9933 $22.50 for a single podcast episode unlock using their saved card pm_POD22.
+Call: { "func_call": "charge_card", "customer_id": "CUST-9933", "amount": 22.50, "currency": "USD", "payment_method_id": "pm_POD22", "description": "Single podcast episode unlock" }
+Response: { "transaction_id": "txn_POD_667788", "status": "succeeded", "amount": 22.50, "currency": "USD" }
+
+Question: Execute a charge of ₹1,200 on customer CUST-4455 for the mobile data top-up via payment method pm_DATA12.
+Call: { "func_call": "charge_card", "customer_id": "CUST-4455", "amount": 1200.00, "currency": "INR", "payment_method_id": "pm_DATA12", "description": "Mobile data top-up" }
+Response: { "transaction_id": "txn_DAT_112233", "status": "succeeded", "amount": 1200.00, "currency": "INR" }
+
+Question: Capture the pending authorization of $3,100.00 for customer CUST-2267 related to architectural design services.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-2267", "amount": 3100.00, "currency": "USD", "payment_method_id": "pm_ARCH31", "description": "Capture payment for architectural design services" }
+Response: { "transaction_id": "txn_ARC_445577", "status": "succeeded", "amount": 3100.00, "currency": "USD" }
+
+Question: Bill customer CUST-8812 $18.90 for handling fees on order #PK-551 using card pm_HAND19.
+Call: { "func_call": "charge_card", "customer_id": "CUST-8812", "amount": 18.90, "currency": "USD", "payment_method_id": "pm_HAND19", "description": "Handling fees for order #PK-551" }
+Response: { "transaction_id": "txn_HND_889900", "status": "succeeded", "amount": 18.90, "currency": "USD" }
+
+Question: Charge $450.00 to customer CUST-3366 for the enterprise plan migration using payment method pm_ENT45.
+Call: { "func_call": "charge_card", "customer_id": "CUST-3366", "amount": 450.00, "currency": "USD", "payment_method_id": "pm_ENT45", "description": "Enterprise plan migration" }
+Response: { "transaction_id": "txn_ENT_221100", "status": "succeeded", "amount": 450.00, "currency": "USD" }
+
+Question: Capture the pre-authorized amount of $195.50 for customer CUST-6621 regarding car rental deposit release.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-6621", "amount": 195.50, "currency": "USD", "payment_method_id": "pm_CAR195", "description": "Car rental deposit capture" }
+Response: { "transaction_id": "txn_CAR_556677", "status": "succeeded", "amount": 195.50, "currency": "USD" }
+
+Question: Process a charge of $9.99 for customer CUST-1144 for a cloud storage monthly add-on via pm_CLD10.
+Call: { "func_call": "charge_card", "customer_id": "CUST-1144", "amount": 9.99, "currency": "USD", "payment_method_id": "pm_CLD10", "description": "Cloud storage monthly add-on" }
+Response: { "transaction_id": "txn_CLD_332211", "status": "succeeded", "amount": 9.99, "currency": "USD" }
+
+Question: Charge customer CUST-5599 $135.00 for webinar access passes using their primary card pm_WEB13.
+Call: { "func_call": "charge_card", "customer_id": "CUST-5599", "amount": 135.00, "currency": "USD", "payment_method_id": "pm_WEB13", "description": "Webinar access passes" }
+Response: { "transaction_id": "txn_WEB_998877", "status": "succeeded", "amount": 135.00, "currency": "USD" }
+
+Question: Capture the held funds of $280.00 for customer CUST-7702 corresponding to a catered lunch order.
+Call: { "func_call": "capture_payment", "customer_id": "CUST-7702", "amount": 280.00, "currency": "USD", "payment_method_id": "pm_CAT28", "description": "Catered lunch order capture" }
+Response: { "transaction_id": "txn_CAT_443322", "status": "succeeded", "amount": 280.00, "currency": "USD" }

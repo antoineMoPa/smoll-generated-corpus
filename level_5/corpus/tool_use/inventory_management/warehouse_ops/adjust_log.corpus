@@ -1,0 +1,51 @@
+Available Tools: transfer_stock | receive_shipment | adjust_inventory | get_receiving_log
+Call Schema: { "func_call": "string", "sku": "string", "from_location": "string", "to_location": "string", "quantity": number, "reason": "string" }
+Response Schema: { "transaction_id": "string", "sku": "string", "quantity": number, "from": "string", "to": "string", "status": "string" }
+---
+Question: We found 3 units of SKU-8821 damaged in aisle 4 during the morning inspection; please write them off.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-8821", "from_location": "AISLE-04-BIN-12", "to_location": "DAMAGED-QUARANTINE", "quantity": 3, "reason": "Damage writeoff: crushed packaging" }
+Response: { "transaction_id": "TXN-99281", "sku": "SKU-8821", "quantity": 3, "from": "AISLE-04-BIN-12", "to": "DAMAGED-QUARANTINE", "status": "completed" }
+
+Question: The cycle count for SKU-4402 in the cold storage zone showed 15 extra units compared to the system; please adjust the inventory to match the physical count.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-4402", "from_location": "COLD-STORAGE-ZONE-A", "to_location": "COLD-STORAGE-ZONE-A", "quantity": 15, "reason": "Cycle count adjustment: physical surplus found" }
+Response: { "transaction_id": "TXN-99282", "sku": "SKU-4402", "quantity": 15, "from": "COLD-STORAGE-ZONE-A", "to": "COLD-STORAGE-ZONE-A", "status": "completed" }
+
+Question: Receiving log indicates shipment #SH-773 for SKU-1109 had a discrepancy; we received 50 but the manifest said 55. Adjust the inventory to reflect the actual received amount by removing the missing 5 from the pending receiving location.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-1109", "from_location": "RECEIVING-DOCK-02", "to_location": "VENDOR-RETURN-HOLD", "quantity": 5, "reason": "Receiving discrepancy: short shipment vs manifest" }
+Response: { "transaction_id": "TXN-99283", "sku": "SKU-1109", "quantity": 5, "from": "RECEIVING-DOCK-02", "to": "VENDOR-RETURN-HOLD", "status": "completed" }
+
+Question: During the weekly cycle count in the high-bay rack, we found 2 units of SKU-7754 missing. Please adjust the system to reflect this loss.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-7754", "from_location": "HIGH-BAY-RACK-09", "to_location": "INVENTORY-SHRINKAGE", "quantity": 2, "reason": "Cycle count adjustment: physical shortage" }
+Response: { "transaction_id": "TXN-99284", "sku": "SKU-7754", "quantity": 2, "from": "HIGH-BAY-RACK-09", "to": "INVENTORY-SHRINKAGE", "status": "completed" }
+
+Question: A pallet of SKU-3391 was dropped by the forklift operator near loading dock 3, resulting in 8 damaged units that need to be moved to quarantine.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-3391", "from_location": "LOADING-DOCK-03", "to_location": "DAMAGED-QUARANTINE", "quantity": 8, "reason": "Damage writeoff: forklift accident" }
+Response: { "transaction_id": "TXN-99285", "sku": "SKU-3391", "quantity": 8, "from": "LOADING-DOCK-03", "to": "DAMAGED-QUARANTINE", "status": "completed" }
+
+Question: The receiving team noted that shipment #SH-889 for SKU-5560 contained 10 units of the wrong color variant. Please adjust these out of the main inventory hold.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-5560", "from_location": "RECEIVING-HOLD-B", "to_location": "MIS-SORT-AREA", "quantity": 10, "reason": "Receiving discrepancy: incorrect variant received" }
+Response: { "transaction_id": "TXN-99286", "sku": "SKU-5560", "quantity": 10, "from": "RECEIVING-HOLD-B", "to": "MIS-SORT-AREA", "status": "completed" }
+
+Question: Cycle count in the bulk storage area revealed 4 additional units of SKU-2218 that were mislabeled; please correct the inventory count for this SKU.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-2218", "from_location": "BULK-STORAGE-SEC-C", "to_location": "BULK-STORAGE-SEC-C", "quantity": 4, "reason": "Cycle count adjustment: mislabel correction" }
+Response: { "transaction_id": "TXN-99287", "sku": "SKU-2218", "quantity": 4, "from": "BULK-STORAGE-SEC-C", "to": "BULK-STORAGE-SEC-C", "status": "completed" }
+
+Question: Water damage was discovered in the basement storage affecting 12 units of SKU-9012; move these to the damage queue immediately.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-9012", "from_location": "BASEMENT-STORAGE-01", "to_location": "DAMAGED-QUARANTINE", "quantity": 12, "reason": "Damage writeoff: water leakage" }
+Response: { "transaction_id": "TXN-99288", "sku": "SKU-9012", "quantity": 12, "from": "BASEMENT-STORAGE-01", "to": "DAMAGED-QUARANTINE", "status": "completed" }
+
+Question: Upon reconciling the receiving log for shipment #SH-992, we found 3 expired units of SKU-6643 mixed in with the fresh stock; please remove them from inventory.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-6643", "from_location": "RECEIVING-DOCK-05", "to_location": "EXPIRED-GOODS-BIN", "quantity": 3, "reason": "Receiving discrepancy: expired goods detected" }
+Response: { "transaction_id": "TXN-99289", "sku": "SKU-6643", "quantity": 3, "from": "RECEIVING-DOCK-05", "to": "EXPIRED-GOODS-BIN", "status": "completed" }
+
+Question: The annual cycle count for SKU-1024 in the electronics cage shows a deficit of 1 unit; please adjust the records to match the physical audit.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-1024", "from_location": "ELECTRONICS-CAGE-02", "to_location": "AUDIT-VARIANCE", "quantity": 1, "reason": "Cycle count adjustment: annual audit deficit" }
+Response: { "transaction_id": "TXN-99290", "sku": "SKU-1024", "quantity": 1, "from": "ELECTRONICS-CAGE-02", "to": "AUDIT-VARIANCE", "status": "completed" }
+
+Question: A box of SKU-5050 was opened during receiving and found to have 6 broken items due to poor internal padding; write these off.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-5050", "from_location": "RECEIVING-INSPECTION-01", "to_location": "DAMAGED-QUARANTINE", "quantity": 6, "reason": "Damage writeoff: internal packaging failure" }
+Response: { "transaction_id": "TXN-99291", "sku": "SKU-5050", "quantity": 6, "from": "RECEIVING-INSPECTION-01", "to": "DAMAGED-QUARANTINE", "status": "completed" }
+
+Question: During a spot check cycle count, 7 units of SKU-3030 were found in the wrong bin (Bin A instead of Bin B); adjust the location record to reflect they are now correctly accounted for in Bin B.
+Call: { "func_call": "adjust_inventory", "sku": "SKU-3030", "from_location": "AISLE-02-BIN-A", "to_location": "AISLE-02-BIN-B", "quantity": 7, "reason": "Cycle count adjustment: bin relocation correction" }
+Response: { "transaction_id": "TXN-99292", "sku": "SKU-3030", "quantity": 7, "from": "AISLE-02-BIN-A", "to": "AISLE-02-BIN-B", "status": "completed" }

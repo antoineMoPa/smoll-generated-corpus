@@ -1,0 +1,51 @@
+Available Tools: initiate_return | get_return_status | exchange_item | get_refund_status
+Call Schema: { "func_call": "string", "order_id": "string", "item_id": "string", "reason": "string" }
+Response Schema: { "return_id": "string", "status": "string", "refund_amount": number, "label_url": "string" }
+---
+Question: I need to return the keyboard (SKU-881) from order ORD-4421 because the keys are sticking and defective.
+Call: { "func_call": "initiate_return", "order_id": "ORD-4421", "item_id": "SKU-881", "reason": "defective" }
+Response: { "return_id": "RET-102938", "status": "approved", "refund_amount": 65.00, "label_url": "https://shipping.example.com/labels/RET-102938.pdf" }
+
+Question: Please start a return for item SKU-552 in order ORD-7733; the dress is the wrong size for me.
+Call: { "func_call": "initiate_return", "order_id": "ORD-7733", "item_id": "SKU-552", "reason": "wrong size" }
+Response: { "return_id": "RET-485762", "status": "approved", "refund_amount": 59.99, "label_url": "https://shipping.example.com/labels/RET-485762.pdf" }
+
+Question: The toaster (SKU-994, order ORD-1155) heats unevenly and is not as described in the manual. Initiate a return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-1155", "item_id": "SKU-994", "reason": "not as described" }
+Response: { "return_id": "RET-739201", "status": "pending_review", "refund_amount": 45.50, "label_url": "https://shipping.example.com/labels/RET-739201.pdf" }
+
+Question: I want to return the green hoodie (SKU-337) from order ORD-6688 because it is the wrong size.
+Call: { "func_call": "initiate_return", "order_id": "ORD-6688", "item_id": "SKU-337", "reason": "wrong size" }
+Response: { "return_id": "RET-294857", "status": "approved", "refund_amount": 38.00, "label_url": "https://shipping.example.com/labels/RET-294857.pdf" }
+
+Question: Start a return process for order ORD-2299, item SKU-776, due to a defective screen.
+Call: { "func_call": "initiate_return", "order_id": "ORD-2299", "item_id": "SKU-776", "reason": "defective" }
+Response: { "return_id": "RET-618394", "status": "approved", "refund_amount": 299.00, "label_url": "https://shipping.example.com/labels/RET-618394.pdf" }
+
+Question: The puzzle box for SKU-443 in order ORD-9900 is missing pieces and not as described. Please initiate a return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-9900", "item_id": "SKU-443", "reason": "not as described" }
+Response: { "return_id": "RET-827465", "status": "approved", "refund_amount": 22.50, "label_url": "https://shipping.example.com/labels/RET-827465.pdf" }
+
+Question: I received the wrong model for item SKU-221 in order ORD-5544. It does not fit, so consider it the wrong size. Initiate return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-5544", "item_id": "SKU-221", "reason": "wrong size" }
+Response: { "return_id": "RET-395817", "status": "approved", "refund_amount": 85.00, "label_url": "https://shipping.example.com/labels/RET-395817.pdf" }
+
+Question: The vacuum cleaner suction failed immediately (defective). Order is ORD-8877, item is SKU-119. Start the return.
+Call: { "func_call": "initiate_return", "order_id": "ORD-8877", "item_id": "SKU-119", "reason": "defective" }
+Response: { "return_id": "RET-504928", "status": "approved", "refund_amount": 180.75, "label_url": "https://shipping.example.com/labels/RET-504928.pdf" }
+
+Question: Please generate a return label for item SKU-665 in order ORD-3366. The color was not as described on the site.
+Call: { "func_call": "initiate_return", "order_id": "ORD-3366", "item_id": "SKU-665", "reason": "not as described" }
+Response: { "return_id": "RET-716283", "status": "approved", "refund_amount": 42.00, "label_url": "https://shipping.example.com/labels/RET-716283.pdf" }
+
+Question: Initiate a return for order ORD-1144, item SKU-992, because the boots are the wrong size.
+Call: { "func_call": "initiate_return", "order_id": "ORD-1144", "item_id": "SKU-992", "reason": "wrong size" }
+Response: { "return_id": "RET-928374", "status": "approved", "refund_amount": 135.00, "label_url": "https://shipping.example.com/labels/RET-928374.pdf" }
+
+Question: The monitor arrived with dead pixels (defective). Order ID is ORD-7755, item ID is SKU-338.
+Call: { "func_call": "initiate_return", "order_id": "ORD-7755", "item_id": "SKU-338", "reason": "defective" }
+Response: { "return_id": "RET-147258", "status": "approved", "refund_amount": 220.50, "label_url": "https://shipping.example.com/labels/RET-147258.pdf" }
+
+Question: Start a return for the scarf (SKU-559) in order ORD-4433. The fabric texture is completely different than advertised, so it is not as described.
+Call: { "func_call": "initiate_return", "order_id": "ORD-4433", "item_id": "SKU-559", "reason": "not as described" }
+Response: { "return_id": "RET-369147", "status": "pending_review", "refund_amount": 28.00, "label_url": "https://shipping.example.com/labels/RET-369147.pdf" }

@@ -1,0 +1,51 @@
+Available Tools: create_ticket | create_urgent_ticket | attach_file | link_order
+Call Schema: { "func_call": "string", "customer_id": "string", "subject": "string", "description": "string", "priority": "low|medium|high|urgent", "category": "string" }
+Response Schema: { "ticket_id": "string", "status": "open", "priority": "string", "assigned_to": "string", "created_at": "string" }
+---
+Question: My smart thermostat is disconnected from Wi-Fi and won't reconnect.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-5092", "subject": "Smart device Wi-Fi connection failure", "description": "Thermostat model T-300 shows 'Offline' status. User has rebooted router and device multiple times without success.", "priority": "medium", "category": "device_connectivity" }
+Response: { "ticket_id": "TKT-550112", "status": "open", "priority": "medium", "assigned_to": "iot_support_05", "created_at": "2023-11-14T11:20:15Z" }
+
+Question: Urgent: The warehouse door lock system is malfunctioning and stuck open.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-WH-88", "subject": "Security door lock failure", "description": "Main entrance electronic lock at Warehouse B is failing to engage. Facility is currently unsecured. Immediate technician dispatch required.", "priority": "urgent", "category": "physical_security" }
+Response: { "ticket_id": "TKT-550113", "status": "open", "priority": "urgent", "assigned_to": "security_ops_lead", "created_at": "2023-11-14T11:24:30Z" }
+
+Question: I was refunded the wrong amount for my returned headphones.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-6103", "subject": "Incorrect refund amount issued", "description": "Returned headphones priced at $120.00 but only $85.00 was credited to the card. Restocking fee was not disclosed at purchase.", "priority": "high", "category": "refund_dispute" }
+Response: { "ticket_id": "TKT-550114", "status": "open", "priority": "high", "assigned_to": "finance_claims_02", "created_at": "2023-11-14T11:28:45Z" }
+
+Question: The mobile app keeps logging me out every few minutes.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-7214", "subject": "Frequent automatic logout on mobile", "description": "Android app version 5.0.3 terminates session after 2 minutes of inactivity, despite settings showing 30 minutes.", "priority": "medium", "category": "session_management" }
+Response: { "ticket_id": "TKT-550115", "status": "open", "priority": "medium", "assigned_to": "mobile_dev_team_01", "created_at": "2023-11-14T11:33:10Z" }
+
+Question: My package shows as delivered but I never received it.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-8325", "subject": "Package marked delivered but missing", "description": "Tracking #TRK998877 shows delivered at 2 PM today. Porch camera confirms no delivery driver approached the house.", "priority": "high", "category": "missing_package" }
+Response: { "ticket_id": "TKT-550116", "status": "open", "priority": "high", "assigned_to": "logistics_investigator_03", "created_at": "2023-11-14T11:37:22Z" }
+
+Question: The blender jar cracked during the first use.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-9436", "subject": "Blender jar shattered on first use", "description": "Model BL-500 glass jar developed a large crack while blending ice. No impact occurred. Requesting replacement part.", "priority": "medium", "category": "product_defect" }
+Response: { "ticket_id": "TKT-550117", "status": "open", "priority": "medium", "assigned_to": "warranty_claims_04", "created_at": "2023-11-14T11:41:55Z" }
+
+Question: I cannot change my username in the profile settings.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-1547", "subject": "Unable to update username", "description": "Save button is greyed out when attempting to change display name. Browser console shows no errors.", "priority": "low", "category": "account_settings" }
+Response: { "ticket_id": "TKT-550118", "status": "open", "priority": "low", "assigned_to": "frontend_support_06", "created_at": "2023-11-14T11:45:30Z" }
+
+Question: Alert: Multiple failed login attempts detected on my admin account.
+Call: { "func_call": "create_urgent_ticket", "customer_id": "CUST-ADMIN-99", "subject": "Brute force attack detected", "description": "System flagged 50 failed login attempts from IP range 192.168.x.x within 10 minutes. Admin account locked automatically.", "priority": "urgent", "category": "security_threat" }
+Response: { "ticket_id": "TKT-550119", "status": "open", "priority": "urgent", "assigned_to": "cyber_security_unit", "created_at": "2023-11-14T11:48:12Z" }
+
+Question: The holiday discount code 'WINTER25' is being rejected at checkout.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-2658", "subject": "Holiday promo code invalid", "description": "Code WINTER25 returns 'Minimum order value not met' even though cart total is $150 and minimum is $50.", "priority": "low", "category": "promotion_error" }
+Response: { "ticket_id": "TKT-550120", "status": "open", "priority": "low", "assigned_to": "ecommerce_support_02", "created_at": "2023-11-14T11:52:40Z" }
+
+Question: I ordered a blue sofa but received a green one instead.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-3769", "subject": "Incorrect furniture color delivered", "description": "Order #ORD-5544 specified Navy Blue fabric. Delivered item is Forest Green. Customer requests pickup and redelivery.", "priority": "medium", "category": "shipping_error" }
+Response: { "ticket_id": "TKT-550121", "status": "open", "priority": "medium", "assigned_to": "freight_coordinator_01", "created_at": "2023-11-14T11:56:15Z" }
+
+Question: The reporting module is timing out when exporting large datasets.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-BIZ-202", "subject": "Report export timeout error", "description": "Exporting CSV files with over 10,000 rows causes the browser to hang and eventually display a 504 Gateway Timeout.", "priority": "high", "category": "system_performance" }
+Response: { "ticket_id": "TKT-550122", "status": "open", "priority": "high", "assigned_to": "backend_engineering_03", "created_at": "2023-11-14T12:01:05Z" }
+
+Question: I am unable to access my past tax documents from 2021.
+Call: { "func_call": "create_ticket", "customer_id": "CUST-4870", "subject": "Missing historical tax records", "description": "Documents tab only shows records from 2022 onwards. 2021 PDFs are missing from the archive section.", "priority": "low", "category": "document_access" }
+Response: { "ticket_id": "TKT-550123", "status": "open", "priority": "low", "assigned_to": "records_admin_05", "created_at": "2023-11-14T12:05:50Z" }

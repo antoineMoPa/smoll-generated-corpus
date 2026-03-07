@@ -1,0 +1,51 @@
+Available Tools: escalate_ticket | transfer_to_specialist | get_escalation_status | set_sla
+Call Schema: { "func_call": "string", "ticket_id": "string", "reason": "string", "target_team": "string" }
+Response Schema: { "ticket_id": "string", "escalated_to": "string", "reason": "string", "sla_hours": number, "status": "string" }
+---
+Question: A VIP client is unable to process payroll due to a sync error; escalate this to the billing team urgently.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-7734", "reason": "Payroll sync error preventing processing for VIP client", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-7734", "escalated_to": "billing_team", "reason": "Payroll sync error preventing processing for VIP client", "sla_hours": 2, "status": "escalated" }
+
+Question: Transfer ticket 9921 to a specialist because the user is experiencing latency issues across all global regions.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-9921", "reason": "Global latency issues affecting all regions", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-9921", "escalated_to": "tier_2_support", "reason": "Global latency issues affecting all regions", "sla_hours": 12, "status": "transferred" }
+
+Question: We have detected a security vulnerability in the authentication module; escalate to technical escalation immediately.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-3387", "reason": "Security vulnerability detected in authentication module", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-3387", "escalated_to": "technical_escalation", "reason": "Security vulnerability detected in authentication module", "sla_hours": 1, "status": "escalated" }
+
+Question: Move ticket 6612 to tier 2 support as the customer needs help customizing webhook payloads for third-party apps.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-6612", "reason": "Assistance required for custom webhook payload configuration", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-6612", "escalated_to": "tier_2_support", "reason": "Assistance required for custom webhook payload configuration", "sla_hours": 16, "status": "transferred" }
+
+Question: Escalate ticket 8845 because the payment gateway is rejecting valid credit cards from European banks.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-8845", "reason": "Payment gateway rejecting valid European credit cards", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-8845", "escalated_to": "billing_team", "reason": "Payment gateway rejecting valid European credit cards", "sla_hours": 3, "status": "escalated" }
+
+Question: Transfer this case to technical escalation since the automated backup system has failed for three consecutive nights.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-2256", "reason": "Automated backup system failure for three consecutive nights", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-2256", "escalated_to": "technical_escalation", "reason": "Automated backup system failure for three consecutive nights", "sla_hours": 4, "status": "transferred" }
+
+Question: The customer is disputing a prorated charge on their final invoice; escalate to the billing team for audit.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-5599", "reason": "Dispute regarding prorated charges on final invoice", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-5599", "escalated_to": "billing_team", "reason": "Dispute regarding prorated charges on final invoice", "sla_hours": 8, "status": "escalated" }
+
+Question: Send ticket 1178 to tier 2 support because the API rate limits are being incorrectly applied to enterprise accounts.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-1178", "reason": "Incorrect API rate limit application on enterprise accounts", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-1178", "escalated_to": "tier_2_support", "reason": "Incorrect API rate limit application on enterprise accounts", "sla_hours": 6, "status": "transferred" }
+
+Question: Escalate ticket 4432 to technical escalation due to unusual outbound traffic patterns suggesting a compromise.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-4432", "reason": "Unusual outbound traffic patterns indicating potential compromise", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-4432", "escalated_to": "technical_escalation", "reason": "Unusual outbound traffic patterns indicating potential compromise", "sla_hours": 1, "status": "escalated" }
+
+Question: Transfer ticket 7701 to the billing team as the tax calculation logic is failing for multi-state transactions.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-7701", "reason": "Tax calculation failure for multi-state transactions", "target_team": "billing_team" }
+Response: { "ticket_id": "TKT-7701", "escalated_to": "billing_team", "reason": "Tax calculation failure for multi-state transactions", "sla_hours": 10, "status": "transferred" }
+
+Question: Escalate ticket 3345 to tier 2 support because the Android application fails to upload large media files.
+Call: { "func_call": "escalate_ticket", "ticket_id": "TKT-3345", "reason": "Android app failure when uploading large media files", "target_team": "tier_2_support" }
+Response: { "ticket_id": "TKT-3345", "escalated_to": "tier_2_support", "reason": "Android app failure when uploading large media files", "sla_hours": 8, "status": "escalated" }
+
+Question: Move ticket 9088 to technical escalation as the primary DNS resolver is experiencing intermittent timeouts.
+Call: { "func_call": "transfer_to_specialist", "ticket_id": "TKT-9088", "reason": "Intermittent timeouts on primary DNS resolver", "target_team": "technical_escalation" }
+Response: { "ticket_id": "TKT-9088", "escalated_to": "technical_escalation", "reason": "Intermittent timeouts on primary DNS resolver", "sla_hours": 2, "status": "transferred" }

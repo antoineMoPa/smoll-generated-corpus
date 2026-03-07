@@ -1,0 +1,51 @@
+Available Tools: search_emails | filter_by_sender | filter_by_date | filter_by_label
+Call Schema: { "func_call": "string", "query": "string", "from": "string", "after": "string", "before": "string", "label": "string" }
+Response Schema: { "messages": [{ "id": "string", "from": "string", "subject": "string", "date": "string" }], "count": number }
+---
+Question: Locate shipping notifications from FedEx regarding my recent package.
+Call: { "func_call": "search_emails", "query": "shipping notification", "from": "fedex.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_1023", "from": "tracking@fedex.com", "subject": "Your FedEx package has shipped #794821003", "date": "2023-11-01T08:15:00Z" }, { "id": "msg_1024", "from": "updates@fedex.com", "subject": "Delivery Update: Out for Delivery", "date": "2023-11-02T09:30:00Z" }], "count": 2 }
+
+Question: Search for receipt emails from Starbucks for morning coffee runs.
+Call: { "func_call": "search_emails", "query": "receipt", "from": "starbucks.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_5567", "from": "receipts@starbucks.com", "subject": "Starbucks Receipt #SB-99281", "date": "2023-11-03T07:45:00Z" }], "count": 1 }
+
+Question: Find webinar invitations from TechCon 2023 organizers.
+Call: { "func_call": "search_emails", "query": "webinar", "from": "events@techcon2023.org", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_3341", "from": "register@techcon2023.org", "subject": "Invite: AI in Healthcare Webinar", "date": "2023-10-28T10:00:00Z" }, { "id": "msg_3342", "from": "info@techcon2023.org", "subject": "Reminder: Webinar Starts in 1 Hour", "date": "2023-10-28T14:00:00Z" }, { "id": "msg_3343", "from": "followup@techcon2023.org", "subject": "Recording Available: TechCon Webinar", "date": "2023-10-29T09:15:00Z" }], "count": 3 }
+
+Question: Retrieve all subscription renewal notices from Netflix.
+Call: { "func_call": "search_emails", "query": "renewal", "from": "info@netflix.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_7788", "from": "billing@netflix.com", "subject": "Your Netflix Subscription Renewed", "date": "2023-11-01T00:05:00Z" }, { "id": "msg_7789", "from": "accounts@netflix.com", "subject": "Payment Method Updated for Renewal", "date": "2023-10-30T12:20:00Z" }], "count": 2 }
+
+Question: Look for flight itinerary updates from Delta Airlines.
+Call: { "func_call": "search_emails", "query": "flight itinerary", "from": "delta.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_2299", "from": "travel@delta.com", "subject": "Your Delta Itinerary #DL44521", "date": "2023-10-26T16:30:00Z" }], "count": 1 }
+
+Question: Find survey requests from CustomerSuccess Team about recent support tickets.
+Call: { "func_call": "search_emails", "query": "survey", "from": "feedback@customersuccess.io", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_6612", "from": "surveys@customersuccess.io", "subject": "How did we do? Rate your support experience", "date": "2023-11-02T11:00:00Z" }, { "id": "msg_6613", "from": "manager@customersuccess.io", "subject": "Quick Survey: Help us improve", "date": "2023-10-29T14:45:00Z" }], "count": 2 }
+
+Question: Search for weekly newsletter digests from The Daily Tech.
+Call: { "func_call": "search_emails", "query": "newsletter", "from": "digest@dailytech.news", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_8834", "from": "editor@dailytech.news", "subject": "Daily Tech Weekly: Top Stories", "date": "2023-10-30T06:00:00Z" }, { "id": "msg_8835", "from": "editor@dailytech.news", "subject": "Daily Tech Weekly: Market Trends", "date": "2023-10-23T06:00:00Z" }, { "id": "msg_8836", "from": "editor@dailytech.news", "subject": "Daily Tech Weekly: Gadget Reviews", "date": "2023-10-16T06:00:00Z" }], "count": 3 }
+
+Question: Locate refund confirmation emails from Shopify stores.
+Call: { "func_call": "search_emails", "query": "refund", "from": "shopify.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_4471", "from": "refunds@shopify.com", "subject": "Refund Processed for Order #SH-7721", "date": "2023-11-01T13:10:00Z" }, { "id": "msg_4472", "from": "support@shopify.com", "subject": "Refund Status Update", "date": "2023-10-31T10:05:00Z" }], "count": 2 }
+
+Question: Find security alerts from Microsoft 365 Admin Center.
+Call: { "func_call": "search_emails", "query": "security alert", "from": "security@microsoft.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_9901", "from": "noreply@security.microsoft.com", "subject": "Alert: Unusual Sign-in Activity Detected", "date": "2023-10-27T22:15:00Z" }], "count": 1 }
+
+Question: Search for project kickoff emails from the Design Team lead.
+Call: { "func_call": "search_emails", "query": "kickoff", "from": "lead.designteam@studio.com", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_1156", "from": "lead.designteam@studio.com", "subject": "Project Kickoff: Brand Refresh Initiative", "date": "2023-10-25T09:00:00Z" }, { "id": "msg_1157", "from": "lead.designteam@studio.com", "subject": "Kickoff Meeting Materials Attached", "date": "2023-10-24T15:30:00Z" }], "count": 2 }
+
+Question: Retrieve expense report approvals from the Finance Bot.
+Call: { "func_call": "search_emails", "query": "expense report", "from": "bot@finance.internal", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_3389", "from": "approvals@finance.internal", "subject": "Expense Report #ER-2023-44 Approved", "date": "2023-11-02T08:20:00Z" }, { "id": "msg_3390", "from": "bot@finance.internal", "subject": "Action Required: Submit Missing Receipts", "date": "2023-10-31T11:45:00Z" }, { "id": "msg_3391", "from": "audit@finance.internal", "subject": "Expense Report #ER-2023-40 Flagged", "date": "2023-10-28T14:10:00Z" }], "count": 3 }
+
+Question: Look for appointment reminders from the Dental Clinic.
+Call: { "func_call": "search_emails", "query": "appointment", "from": "reminders@dentalclinic.care", "after": "", "before": "", "label": "" }
+Response: { "messages": [{ "id": "msg_5523", "from": "frontdesk@dentalclinic.care", "subject": "Reminder: Your Appointment Tomorrow at 2 PM", "date": "2023-10-29T17:00:00Z" }], "count": 1 }

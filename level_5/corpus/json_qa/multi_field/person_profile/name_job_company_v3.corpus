@@ -1,0 +1,29 @@
+Context: Liam Thompson operates as a Cloud Architect at SkyNet Technologies in Denver. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Liam Thompson", "job": "Cloud Architect", "company": "SkyNet Technologies"}
+
+Context: During the annual summit, Aisha Mohammed, the Chief Technology Officer of QuantuMix, unveiled the new AI platform. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Aisha Mohammed", "job": "Chief Technology Officer", "company": "QuantuMix"}
+
+Context: Noah Williams functions as the Senior Product Manager for Velocity Apps, where he directs the roadmap for Q4. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Noah Williams", "job": "Senior Product Manager", "company": "Velocity Apps"}
+
+Context: As the recently hired Logistics Director at FreshFlow Distributors, Emma Davis coordinates all warehouse activities. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Emma Davis", "job": "Logistics Director", "company": "FreshFlow Distributors"}
+
+Context: Lucas Brown, a Brand Strategist at Prism Creative, developed the visual identity for the rebranding initiative. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Lucas Brown", "job": "Brand Strategist", "company": "Prism Creative"}
+
+Context: Isabella Clark is the Director of Compliance at SafeGuard Finance, maintaining regulatory standards for regional banks. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Isabella Clark", "job": "Director of Compliance", "company": "SafeGuard Finance"}
+
+Context: Operating from a hub in Chicago, Mason Miller serves as a Technical Account Manager for DataSphere Inc. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Mason Miller", "job": "Technical Account Manager", "company": "DataSphere Inc"}
+
+Context: The contract was signed by Zoe Anderson, the Lead Environmental Scientist at EcoVision Consultants. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Zoe Anderson", "job": "Lead Environmental Scientist", "company": "EcoVision Consultants"}
+
+Context: Ethan Taylor joined Nexus Robotics as a Machine Learning Engineer three weeks ago. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Ethan Taylor", "job": "Machine Learning Engineer", "company": "Nexus Robotics"}
+
+Context: As the Regional Sales Director at TurboDrive Auto, Ava Martin secured the partnership with the Asian retailer. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Ava Martin", "job": "Regional Sales Director", "company": "TurboDrive Auto"}
+
+Context: Prof. Daniel White, the Head of Innovation at AeroSpace Dynamics, revealed his prototype for sustainable fuel today. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Daniel White", "job": "Head of Innovation", "company": "AeroSpace Dynamics"}
+
+Context: Mia Johnson works diligently as a Procurement Specialist for MegaBuild Supplies. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Mia Johnson", "job": "Procurement Specialist", "company": "MegaBuild Supplies"}
+
+Context: Alexander Lee, the Digital Media Manager at StreamLine Broadcast, finalized the broadcasting schedule. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Alexander Lee", "job": "Digital Media Manager", "company": "StreamLine Broadcast"}
+
+Context: Charlotte Harris acts as the Network Security Analyst at CyberFortress, assisting firms in preventing data breaches. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Charlotte Harris", "job": "Network Security Analyst", "company": "CyberFortress"}
+
+Context: Benjamin Walker, a Talent Acquisition Lead at Peak Performers, organized the campus recruiting drive. | Input: {"extract": ["name", "job", "company"]} | Output: {"name": "Benjamin Walker", "job": "Talent Acquisition Lead", "company": "Peak Performers"}

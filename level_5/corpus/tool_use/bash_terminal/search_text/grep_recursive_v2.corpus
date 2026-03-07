@@ -1,0 +1,47 @@
+Question: Locate all instances of "critical" in /var/log recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "critical", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/syslog", "line": 3055, "text": "Oct 13 14:22:10 server kernel: [critical] temperature threshold exceeded" }, { "file": "/var/log/app.log", "line": 89, "text": "2023-10-13 14:22:15 CRITICAL database connection lost" }], "count": 2 }
+
+Question: Search for "FIXME" in ~/codebase ignoring case and showing line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "FIXME", "path": "~/codebase", "flags": "-i -n" }
+Response: { "matches": [{ "file": "~/codebase/lib/utils.js", "line": 112, "text": "// FIXME: Handle null pointer exception" }, { "file": "~/codebase/src/controller.ts", "line": 45, "text": "/* fixme: optimize loop performance */" }], "count": 2 }
+
+Question: Count how many times "admin" appears in /etc recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "admin", "path": "/etc", "flags": "-i -r" }
+Response: { "matches": [], "count": 8 }
+
+Question: Recursively find "segmentation fault" in /var/log with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "segmentation fault", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/kern.log", "line": 772, "text": "Oct 13 09:05:33 server kernel: process[1234] caused segmentation fault" }], "count": 1 }
+
+Question: Search for "import sys" in ~/dev recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "import sys", "path": "~/dev", "flags": "-n" }
+Response: { "matches": [{ "file": "~/dev/tools/build.py", "line": 2, "text": "import sys" }, { "file": "~/dev/tests/regression.py", "line": 4, "text": "import sys" }, { "file": "~/dev/src/cli.py", "line": 1, "text": "import sys" }], "count": 3 }
+
+Question: Find "notice" in /var/log recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "notice", "path": "/var/log", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/mail.log", "line": 1500, "text": "Oct 13 12:00:00 server postfix: Notice: queue flushed" }, { "file": "/var/log/syslog", "line": 900, "text": "Oct 13 12:01:00 server systemd: Notice: service restarted" }], "count": 2 }
+
+Question: Count occurrences of "nobody" in /etc recursively.
+Call: { "func_call": "grep_count", "pattern": "nobody", "path": "/etc", "flags": "-r" }
+Response: { "matches": [], "count": 5 }
+
+Question: Search for "class Main" in ~/workspace recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "class Main", "path": "~/workspace", "flags": "-n" }
+Response: { "matches": [{ "file": "~/workspace/java/src/App.java", "line": 15, "text": "public class Main {" }, { "file": "~/workspace/java/test/Runner.java", "line": 8, "text": "class MainTest {" }], "count": 2 }
+
+Question: Find "denied" in /var/log recursively, case-insensitive, with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "denied", "path": "/var/log", "flags": "-i -n" }
+Response: { "matches": [{ "file": "/var/log/auth.log", "line": 204, "text": "Oct 13 10:10:10 server sshd: Access denied for user guest" }, { "file": "/var/log/secure", "line": 601, "text": "Oct 13 10:11:00 server sudo: user Bob : command denied" }], "count": 2 }
+
+Question: Recursively search for "192.168" in /etc with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "192.168", "path": "/etc", "flags": "-n" }
+Response: { "matches": [{ "file": "/etc/network/interfaces", "line": 5, "text": "address 192.168.1.50" }, { "file": "/etc/hosts", "line": 3, "text": "192.168.1.100 printer.local" }], "count": 2 }
+
+Question: Count "json" in ~/src recursively, case-insensitive.
+Call: { "func_call": "grep_count", "pattern": "json", "path": "~/src", "flags": "-i -r" }
+Response: { "matches": [], "count": 19 }
+
+Question: Find "500" in /var/log recursively with line numbers.
+Call: { "func_call": "grep_recursive", "pattern": "500", "path": "/var/log", "flags": "-n" }
+Response: { "matches": [{ "file": "/var/log/nginx/access.log", "line": 6022, "text": "10.0.0.5 - - [13/Oct/2023:16:30:00 +0000] \"POST /api/data HTTP/1.1\" 500 210" }, { "file": "/var/log/tomcat/catalina.out", "line": 412, "text": "SEVERE: Internal Server Error 500 at /submit" }], "count": 2 }

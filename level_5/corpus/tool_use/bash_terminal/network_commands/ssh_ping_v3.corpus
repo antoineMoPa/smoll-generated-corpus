@@ -1,0 +1,51 @@
+Available Tools: curl_get | curl_post | wget_download | ssh_command | ping_host
+Call Schema: { "func_call": "string", "url": "string", "host": "string", "options": "string" }
+Response Schema: { "status_code": number, "output": "string", "elapsed_ms": number }
+---
+Question: Test connectivity to the mail relay server mail-relay-dc3.corp.
+Call: { "func_call": "ping_host", "url": "", "host": "mail-relay-dc3.corp", "options": "-c 4 -i 0.5" }
+Response: { "status_code": 0, "output": "PING mail-relay-dc3.corp (10.20.30.40): 56 data bytes\n64 bytes from 10.20.30.40: icmp_seq=0 ttl=62 time=2.1 ms\n64 bytes from 10.20.30.40: icmp_seq=1 ttl=62 time=2.3 ms\n64 bytes from 10.20.30.40: icmp_seq=2 ttl=62 time=2.0 ms\n64 bytes from 10.20.30.40: icmp_seq=3 ttl=62 time=2.2 ms\n\n--- mail-relay-dc3.corp ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3ms", "elapsed_ms": 4 }
+---
+Question: Restart the postgresql service on the database replica db-replica-02.
+Call: { "func_call": "ssh_command", "url": "", "host": "db-replica-02", "options": "sudo systemctl restart postgresql" }
+Response: { "status_code": 0, "output": "", "elapsed_ms": 1850 }
+---
+Question: Verify network path to the load balancer at 172.31.50.10.
+Call: { "func_call": "ping_host", "url": "", "host": "172.31.50.10", "options": "-c 3 -W 1" }
+Response: { "status_code": 0, "output": "PING 172.31.50.10 (172.31.50.10): 56 data bytes\n64 bytes from 172.31.50.10: icmp_seq=0 ttl=64 time=0.9 ms\n64 bytes from 172.31.50.10: icmp_seq=1 ttl=64 time=0.8 ms\n64 bytes from 172.31.50.10: icmp_seq=2 ttl=64 time=0.9 ms\n\n--- 172.31.50.10 ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2ms", "elapsed_ms": 3 }
+---
+Question: Check available inodes on the storage volume mounted at /data on store-node-05.
+Call: { "func_call": "ssh_command", "url": "", "host": "store-node-05", "options": "df -i /data" }
+Response: { "status_code": 0, "output": "Filesystem      Inodes   IUsed    IFree IUse% Mounted on\n/dev/nvme0n1   6553600  120450  6433150    2% /data", "elapsed_ms": 290 }
+---
+Question: Ping the external API endpoint api.partner-service.io with TTL check.
+Call: { "func_call": "ping_host", "url": "", "host": "api.partner-service.io", "options": "-c 2 -t 64" }
+Response: { "status_code": 0, "output": "PING api.partner-service.io (203.0.113.99): 56 data bytes\n64 bytes from 203.0.113.99: icmp_seq=0 ttl=52 time=45.2 ms\n64 bytes from 203.0.113.99: icmp_seq=1 ttl=52 time=44.8 ms\n\n--- api.partner-service.io ping statistics ---\n2 packets transmitted, 2 received, 0% packet loss, time 1ms", "elapsed_ms": 91 }
+---
+Question: Display the last 15 entries of the system log on the audit server audit-box-01.
+Call: { "func_call": "ssh_command", "url": "", "host": "audit-box-01", "options": "tail -n 15 /var/log/syslog" }
+Response: { "status_code": 0, "output": "Nov 12 08:20:10 audit-box-01 kernel: [12345.67] USB device connected\nNov 12 08:20:15 audit-box-01 systemd[1]: Started Session 45 of user admin.\nNov 12 08:21:00 audit-box-01 CRON[9876]: (root) CMD (/usr/local/bin/backup.sh)\nNov 12 08:21:05 audit-box-01 backup.sh[9877]: Backup completed successfully.", "elapsed_ms": 165 }
+---
+Question: Measure round-trip time to the cache cluster node cache-redis-eu-central.
+Call: { "func_call": "ping_host", "url": "", "host": "cache-redis-eu-central", "options": "-c 5 -q" }
+Response: { "status_code": 0, "output": "PING cache-redis-eu-central (10.50.60.70) 56(84) bytes of data.\n\n--- cache-redis-eu-central ping statistics ---\n5 packets transmitted, 5 received, 0% packet loss, time 4ms\nrtt min/avg/max/mdev = 3.102/3.245/3.401/0.112 ms", "elapsed_ms": 5 }
+---
+Question: Show active processes sorted by memory usage on the analytics engine analytics-proc-07.
+Call: { "func_call": "ssh_command", "url": "", "host": "analytics-proc-07", "options": "ps aux --sort=-%mem | head -n 10" }
+Response: { "status_code": 0, "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nspark     1234  2.5 15.2 409600 245000 ?       Sl   09:00   1:20 /usr/bin/spark-submit\njava      5678  1.1  8.4 204800 135000 ?       Sl   09:05   0:45 java -jar analytics.jar\nroot         1  0.0  0.1  18500  2100 ?        Ss   08:00   0:02 /sbin/init", "elapsed_ms": 380 }
+---
+Question: Ping the backup gateway at 192.168.200.1 to ensure failover readiness.
+Call: { "func_call": "ping_host", "url": "", "host": "192.168.200.1", "options": "-c 3" }
+Response: { "status_code": 0, "output": "PING 192.168.200.1 (192.168.200.1): 56 data bytes\n64 bytes from 192.168.200.1: icmp_seq=0 ttl=64 time=1.5 ms\n64 bytes from 192.168.200.1: icmp_seq=1 ttl=64 time=1.4 ms\n64 bytes from 192.168.200.1: icmp_seq=2 ttl=64 time=1.6 ms\n\n--- 192.168.200.1 ping statistics ---\n3 packets transmitted, 3 received, 0% packet loss, time 2ms", "elapsed_ms": 4 }
+---
+Question: Inspect CPU temperature sensors on the edge computing unit edge-compute-alpha.
+Call: { "func_call": "ssh_command", "url": "", "host": "edge-compute-alpha", "options": "sensors | grep Core" }
+Response: { "status_code": 0, "output": "Core 0:        +45.0°C  (high = +80.0°C, crit = +100.0°C)\nCore 1:        +46.5°C  (high = +80.0°C, crit = +100.0°C)\nCore 2:        +44.2°C  (high = +80.0°C, crit = +100.0°C)\nCore 3:        +45.8°C  (high = +80.0°C, crit = +100.0°C)", "elapsed_ms": 230 }
+---
+Question: Verify reachability of the logging aggregator at log-aggregator.internal.net.
+Call: { "func_call": "ping_host", "url": "", "host": "log-aggregator.internal.net", "options": "-c 2 -W 3" }
+Response: { "status_code": 0, "output": "PING log-aggregator.internal.net (10.99.88.77): 56 data bytes\n64 bytes from 10.99.88.77: icmp_seq=0 ttl=63 time=5.2 ms\n64 bytes from 10.99.88.77: icmp_seq=1 ttl=63 time=5.1 ms\n\n--- log-aggregator.internal.net ping statistics ---\n2 packets transmitted, 2 received, 0% packet loss, time 1ms", "elapsed_ms": 11 }
+---
+Question: Install the latest security patches on the web server web-front-03 interactively.
+Call: { "func_call": "ssh_command", "url": "", "host": "web-front-03", "options": "sudo yum update --security" }
+Response: { "status_code": 0, "output": "Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\nResolving Dependencies\n--> Running transaction check\n---> Package kernel-security.x86_64 0:4.18.0-305.el8 will be updated\n---> Package kernel-security.x86_64 0:4.18.0-305.12.1.el8_4 will be an update\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package                   Arch   Version                       Repository  Size\n================================================================================\nUpdating:\n kernel-security           x86_64 4.18.0-305.12.1.el8_4         updates    45 M\n\nTransaction Summary\n================================================================================\nUpgrade  1 Package\n\nTotal download size: 45 M\nIs this ok [y/N]: y\nDownloading packages:\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Updating   : kernel-security-4.18.0-305.12.1.el8_4.x86_64          1/2 \n  Cleanup    : kernel-security-4.18.0-305.el8.x86_64                 2/2 \n  Verifying  : kernel-security-4.18.0-305.12.1.el8_4.x86_64          1/2 \n  Verifying  : kernel-security-4.18.0-305.el8.x86_64                 2/2 \n\nUpdated:\n  kernel-security.x86_64 0:4.18.0-305.12.1.el8_4                         \n\nComplete!", "elapsed_ms": 22300 }

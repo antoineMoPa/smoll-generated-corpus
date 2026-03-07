@@ -1,0 +1,51 @@
+Available Tools: update_record | update_batch | soft_delete | restore_record
+Call Schema: { "func_call": "string", "table": "string", "id": number, "data": {}, "where": "string" }
+Response Schema: { "affected_rows": number, "status": "string", "updated_at": "string" }
+---
+Question: Modify the username for user ID 5021 to 'j_doe_new'.
+Call: { "func_call": "update_record", "table": "users", "id": 5021, "data": { "username": "j_doe_new" }, "where": "id = 5021" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:12:44Z" }
+
+Question: Set the order status for ID 3345 to 'processing'.
+Call: { "func_call": "update_record", "table": "orders", "id": 3345, "data": { "status": "processing", "processed_by": "admin_01" }, "where": "id = 3345" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:13:22Z" }
+
+Question: Update the stock level of product ID 889 to 1200 units.
+Call: { "func_call": "update_record", "table": "products", "id": 889, "data": { "stock_quantity": 1200, "warehouse_loc": "B2" }, "where": "id = 889" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:14:05Z" }
+
+Question: Change the first name of user ID 774 to 'Elena'.
+Call: { "func_call": "update_record", "table": "users", "id": 774, "data": { "first_name": "Elena" }, "where": "id = 774" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:15:30Z" }
+
+Question: Mark order ID 2210 as 'cancelled' due to inventory shortage.
+Call: { "func_call": "update_record", "table": "orders", "id": 2210, "data": { "status": "cancelled", "cancel_reason": "Out of stock" }, "where": "id = 2210" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:16:18Z" }
+
+Question: Adjust the retail price of product ID 405 to 49.95.
+Call: { "func_call": "update_record", "table": "products", "id": 405, "data": { "price": 49.95, "currency": "EUR" }, "where": "id = 405" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:17:42Z" }
+
+Question: Update the emergency contact for user ID 9102 to +44-20-7946-0958.
+Call: { "func_call": "update_record", "table": "users", "id": 9102, "data": { "emergency_contact": "+44-20-7946-0958" }, "where": "id = 9102" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:18:55Z" }
+
+Question: Revise the billing address for order ID 5567 to 45 Oak Lane, Dublin.
+Call: { "func_call": "update_record", "table": "orders", "id": 5567, "data": { "billing_address": "45 Oak Lane, Dublin", "country": "IE" }, "where": "id = 5567" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:19:33Z" }
+
+Question: Enable the discount flag for product ID 332 with a 10% offer.
+Call: { "func_call": "update_record", "table": "products", "id": 332, "data": { "discount_percent": 10, "is_on_sale": true }, "where": "id = 332" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:20:11Z" }
+
+Question: Upgrade the subscription plan for user ID 45 to 'enterprise'.
+Call: { "func_call": "update_record", "table": "users", "id": 45, "data": { "subscription_plan": "enterprise", "renewal_date": "2024-11-15" }, "where": "id = 45" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:21:47Z" }
+
+Question: Switch the carrier for order ID 8834 to 'FedEx Overnight'.
+Call: { "func_call": "update_record", "table": "orders", "id": 8834, "data": { "carrier": "FedEx Overnight", "estimated_delivery": "2023-11-16" }, "where": "id = 8834" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:22:29Z" }
+
+Question: Update the manufacturer notes for product ID 601 regarding safety compliance.
+Call: { "func_call": "update_record", "table": "products", "id": 601, "data": { "manufacturer_notes": "Compliant with new 2024 safety standards." }, "where": "id = 601" }
+Response: { "affected_rows": 1, "status": "success", "updated_at": "2023-11-15T09:23:58Z" }

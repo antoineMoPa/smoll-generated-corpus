@@ -1,0 +1,59 @@
+Context: A massive earthquake shifted the tectonic plates, triggering a tsunami along the coast.
+Input: {"question": "What triggered a tsunami along the coast?"}
+Output: {"answer": "A massive earthquake shifted the tectonic plates"}
+
+Context: Due to a clogged drain in the bathroom, water flooded the entire hallway.
+Input: {"question": "What caused water to flood the entire hallway?"}
+Output: {"answer": "a clogged drain in the bathroom"}
+
+Context: The pilot's decision to ignore weather warnings resulted in a rough landing.
+Input: {"question": "What caused the rough landing?"}
+Output: {"answer": "The pilot's decision to ignore weather warnings"}
+
+Context: Because the garden hose was left running, the flower beds became completely waterlogged.
+Input: {"question": "What caused the flower beds to become waterlogged?"}
+Output: {"answer": "the garden hose was left running"}
+
+Context: A short circuit in the basement caused the lights to flicker and then go out.
+Input: {"question": "What caused the lights to go out?"}
+Output: {"answer": "A short circuit in the basement"}
+
+Context: The company's failure to adapt to market changes led to its bankruptcy last year.
+Input: {"question": "What caused the company's bankruptcy?"}
+Output: {"answer": "The company's failure to adapt to market changes"}
+
+Context: When the air conditioning unit broke down, the office temperature soared above ninety degrees.
+Input: {"question": "What caused the office temperature to soar?"}
+Output: {"answer": "the air conditioning unit broke down"}
+
+Context: Overwatering the succulent plants caused their roots to rot and the leaves to turn yellow.
+Input: {"question": "What caused the succulent leaves to turn yellow?"}
+Output: {"answer": "Overwatering the succulent plants"}
+
+Context: The delay of the cargo ship stranded essential medical supplies at the port.
+Input: {"question": "What caused the medical supplies to be stranded at the port?"}
+Output: {"answer": "The delay of the cargo ship"}
+
+Context: Since the new firmware had a compatibility issue, the smart lock failed to recognize keys.
+Input: {"question": "What caused the smart lock to fail recognizing keys?"}
+Output: {"answer": "the new firmware had a compatibility issue"}
+
+Context: A sudden drop in tourism revenue forced the local hotel to lay off twenty staff members.
+Input: {"question": "What caused the local hotel to lay off staff?"}
+Output: {"answer": "A sudden drop in tourism revenue"}
+
+Context: The baker's mistake of using baking soda instead of yeast made the cake taste bitter.
+Input: {"question": "What caused the cake to taste bitter?"}
+Output: {"answer": "The baker's mistake of using baking soda instead of yeast"}
+
+Context: Heavy snowfall collapsed the roof of the old barn, blocking the entrance.
+Input: {"question": "What caused the barn roof to collapse?"}
+Output: {"answer": "Heavy snowfall"}
+
+Context: Because the library missed the renewal deadline, it incurred heavy fines from the vendor.
+Input: {"question": "What caused the library to incur heavy fines?"}
+Output: {"answer": "the library missed the renewal deadline"}
+
+Context: The buildup of sediment in the filter prevented the coffee machine from brewing properly.
+Input: {"question": "What caused the coffee machine to fail brewing properly?"}
+Output: {"answer": "The buildup of sediment in the filter"}

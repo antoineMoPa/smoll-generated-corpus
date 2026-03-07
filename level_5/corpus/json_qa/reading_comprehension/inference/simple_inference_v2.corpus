@@ -1,0 +1,59 @@
+Context: Marcus pulled his umbrella from the bag as the rain started to pour heavily.
+Input: {"question": "What weather condition is occurring?"}
+Output: {"answer": "rain"}
+
+Context: The librarian shushed the noisy group and pointed to the silence sign on the wall.
+Input: {"question": "What action did the librarian take?"}
+Output: {"answer": "shushed"}
+
+Context: David stretched his arms and cracked his neck after sitting at the desk all day.
+Input: {"question": "How is David feeling physically?"}
+Output: {"answer": "stiff"}
+
+Context: The audience applauded enthusiastically when the magician pulled the rabbit from the hat.
+Input: {"question": "Who performed the trick?"}
+Output: {"answer": "magician"}
+
+Context: Maria checked her watch and ran faster because she was late for the meeting.
+Input: {"question": "Why did Maria run?"}
+Output: {"answer": "late"}
+
+Context: The grass in the park turned green and lush after three days of steady showers.
+Input: {"question": "What caused the grass to grow?"}
+Output: {"answer": "showers"}
+
+Context: Kevin grabbed his hiking boots and map before heading toward the mountain trail.
+Input: {"question": "What activity does Kevin plan to do?"}
+Output: {"answer": "hiking"}
+
+Context: The cyclist swerved sharply to miss the pothole that appeared in the bike lane.
+Input: {"question": "What obstacle was in the lane?"}
+Output: {"answer": "pothole"}
+
+Context: The kitten meowed softly until its owner opened a can of tuna for dinner.
+Input: {"question": "Who fed the kitten?"}
+Output: {"answer": "owner"}
+
+Context: Alex dug through the toolbox but could not locate the hammer, so he used a rock.
+Input: {"question": "What tool was missing?"}
+Output: {"answer": "hammer"}
+
+Context: The leaves changed color and began to fall as the temperature dropped significantly.
+Input: {"question": "What season is approaching?"}
+Output: {"answer": "autumn"}
+
+Context: Brian left his ticket on the kitchen counter and missed the concert entrance.
+Input: {"question": "What item did Brian forget?"}
+Output: {"answer": "ticket"}
+
+Context: The baker smelled the bread and reduced the oven temperature to prevent burning.
+Input: {"question": "What food was being cooked?"}
+Output: {"answer": "bread"}
+
+Context: The cat hid under the sofa and hissed when the vacuum cleaner started running.
+Input: {"question": "What caused the cat to hide?"}
+Output: {"answer": "vacuum"}
+
+Context: The artist mixed blue and yellow paint to create the perfect shade of green.
+Input: {"question": "What color did the artist make?"}
+Output: {"answer": "green"}

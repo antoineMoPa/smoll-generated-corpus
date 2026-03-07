@@ -1,0 +1,95 @@
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a one-time password to a user in New York for account verification.
+Call: { "func_call": "send_sms", "to": "+12125550198", "message": "Your VerifyNow OTP is 849201. Valid for 5 minutes.", "from": "VerifyNow" }
+Response: { "message_id": "msg_9a8b7c6d5e4f", "to": "+12125550198", "status": "sent", "cost": 0.0075, "timestamp": "2023-10-27T14:32:10Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Alert a customer in London about a suspicious login attempt.
+Call: { "func_call": "send_sms", "to": "+442079460123", "message": "ALERT: New login detected on your SecureBank account from Chrome on Windows. If this wasn't you, reply STOP.", "from": "SecureBank" }
+Response: { "message_id": "msg_1f2e3d4c5b6a", "to": "+442079460123", "status": "delivered", "cost": 0.042, "timestamp": "2023-10-27T14:33:45Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a delivery driver in Tokyo about a package update.
+Call: { "func_call": "send_sms", "to": "+81367890123", "message": "Package #JP99281 has been scanned at Shibuya Hub. Proceed to next stop.", "from": "FastShip" }
+Response: { "message_id": "msg_7g8h9i0j1k2l", "to": "+81367890123", "status": "sent", "cost": 0.055, "timestamp": "2023-10-27T14:35:22Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a flight status update to a traveler in Sydney.
+Call: { "func_call": "send_sms", "to": "+61298765432", "message": "Flight QF442 to Melbourne is now boarding at Gate 12. Please have your boarding pass ready.", "from": "QantasAir" }
+Response: { "message_id": "msg_3m4n5o6p7q8r", "to": "+61298765432", "status": "delivered", "cost": 0.038, "timestamp": "2023-10-27T14:36:55Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Confirm an appointment reminder for a patient in Toronto.
+Call: { "func_call": "send_sms", "to": "+14165559876", "message": "Reminder: Dr. Smith appointment tomorrow at 10:00 AM. Reply C to confirm or R to reschedule.", "from": "ClinicPlus" }
+Response: { "message_id": "msg_9s0t1u2v3w4x", "to": "+14165559876", "status": "sent", "cost": 0.008, "timestamp": "2023-10-27T14:38:12Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a two-factor authentication code to a user in Berlin.
+Call: { "func_call": "send_sms", "to": "+493012345678", "message": "Your DataGuard security code is 551902. Do not share this code with anyone.", "from": "DataGuard" }
+Response: { "message_id": "msg_5y6z7a8b9c0d", "to": "+493012345678", "status": "delivered", "cost": 0.045, "timestamp": "2023-10-27T14:39:30Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a resident in Mumbai about a scheduled power outage.
+Call: { "func_call": "send_sms", "to": "+919876543210", "message": "NOTICE: Planned maintenance in Sector 4 from 2 PM to 4 PM today. Power will be interrupted.", "from": "MumbaiElec" }
+Response: { "message_id": "msg_1e2f3g4h5i6j", "to": "+919876543210", "status": "sent", "cost": 0.022, "timestamp": "2023-10-27T14:41:05Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a payment confirmation to a client in Paris.
+Call: { "func_call": "send_sms", "to": "+33145678901", "message": "Payment of €125.50 received for Invoice #INV-2023-889. Thank you for your business.", "from": "PayFlow" }
+Response: { "message_id": "msg_7k8l9m0n1o2p", "to": "+33145678901", "status": "delivered", "cost": 0.048, "timestamp": "2023-10-27T14:42:40Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Alert a homeowner in Miami about a security system trigger.
+Call: { "func_call": "send_sms", "to": "+13055550142", "message": "WARNING: Motion detected at Back Door. Camera recording started. View live feed in the app.", "from": "SafeHome" }
+Response: { "message_id": "msg_3q4r5s6t7u8v", "to": "+13055550142", "status": "sent", "cost": 0.0075, "timestamp": "2023-10-27T14:44:15Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a verification code for a password reset to a user in Singapore.
+Call: { "func_call": "send_sms", "to": "+6591234567", "message": "Reset Code: 773491. Enter this code to reset your CloudStore password. Expires in 10 mins.", "from": "CloudStore" }
+Response: { "message_id": "msg_9w0x1y2z3a4b", "to": "+6591234567", "status": "delivered", "cost": 0.035, "timestamp": "2023-10-27T14:45:50Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Notify a subscriber in Chicago about a service outage resolution.
+Call: { "func_call": "send_sms", "to": "+17735550188", "message": "UPDATE: The internet service interruption in your area has been resolved. Services are restoring.", "from": "NetConnect" }
+Response: { "message_id": "msg_5c6d7e8f9g0h", "to": "+17735550188", "status": "sent", "cost": 0.008, "timestamp": "2023-10-27T14:47:25Z" }
+
+Available Tools: send_sms | send_bulk_sms | get_sms_status | get_sms_history
+Call Schema: { "func_call": "string", "to": "string", "message": "string", "from": "string" }
+Response Schema: { "message_id": "string", "to": "string", "status": "string", "cost": number, "timestamp": "string" }
+---
+Question: Send a delivery OTP to a customer in Dubai for package handover.
+Call: { "func_call": "send_sms", "to": "+971501234567", "message": "Your delivery OTP is 392847. Provide this code to the courier to receive your package.", "from": "ExpressDel" }
+Response: { "message_id": "msg_1i2j3k4l5m6n", "to": "+971501234567", "status": "delivered", "cost": 0.029, "timestamp": "2023-10-27T14:49:00Z" }

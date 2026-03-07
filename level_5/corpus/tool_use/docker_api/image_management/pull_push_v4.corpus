@@ -1,0 +1,47 @@
+Question: Pull the alpine 3.18 minimal image from the official Docker Hub library.
+Call: { "func_call": "pull_image", "image": "alpine", "tag": "3.18", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2", "repository": "docker.io/library/alpine", "tag": "3.18", "size_mb": 7.4, "created": "2023-06-12T10:00:00Z" }
+
+Question: Push the payment-gateway service tagged release-4.0 to the Quay.io enterprise registry.
+Call: { "func_call": "push_image", "image": "payment-gateway", "tag": "release-4.0", "registry": "quay.io/enterprise", "dockerfile": "" }
+Response: { "image_id": "sha256:2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3", "repository": "quay.io/enterprise/payment-gateway", "tag": "release-4.0", "size_mb": 288.9, "created": "2023-11-01T14:30:15Z" }
+
+Question: Download the golang 1.21-bullseye image for building microservices.
+Call: { "func_call": "pull_image", "image": "golang", "tag": "1.21-bullseye", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4", "repository": "docker.io/library/golang", "tag": "1.21-bullseye", "size_mb": 890.5, "created": "2023-09-05T08:20:45Z" }
+
+Question: Upload the ml-training-model image with tag gpu-enabled to the NVIDIA NGC registry.
+Call: { "func_call": "push_image", "image": "ml-training-model", "tag": "gpu-enabled", "registry": "nvcr.io/nvidia", "dockerfile": "" }
+Response: { "image_id": "sha256:4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5", "repository": "nvcr.io/nvidia/ml-training-model", "tag": "gpu-enabled", "size_mb": 4500.2, "created": "2023-10-25T16:45:30Z" }
+
+Question: Fetch the ruby 3.2-slim image from the default public registry.
+Call: { "func_call": "pull_image", "image": "ruby", "tag": "3.2-slim", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6", "repository": "docker.io/library/ruby", "tag": "3.2-slim", "size_mb": 135.7, "created": "2023-08-18T12:10:20Z" }
+
+Question: Push the notification-worker image tagged hotfix-12 to the private Artifactory registry.
+Call: { "func_call": "push_image", "image": "notification-worker", "tag": "hotfix-12", "registry": "artifactory.internal.net", "dockerfile": "" }
+Response: { "image_id": "sha256:6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7", "repository": "artifactory.internal.net/docker-local/notification-worker", "tag": "hotfix-12", "size_mb": 195.3, "created": "2023-11-03T09:55:10Z" }
+
+Question: Pull the mysql 8.0 image for setting up the staging database.
+Call: { "func_call": "pull_image", "image": "mysql", "tag": "8.0", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8", "repository": "docker.io/library/mysql", "tag": "8.0", "size_mb": 510.8, "created": "2023-07-22T14:35:50Z" }
+
+Question: Upload the config-server image with the v0.9.1 tag to the Oracle Cloud Registry.
+Call: { "func_call": "push_image", "image": "config-server", "tag": "v0.9.1", "registry": "iad.ocir.io/tenancy", "dockerfile": "" }
+Response: { "image_id": "sha256:8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9", "repository": "iad.ocir.io/tenancy/app/config-server", "tag": "v0.9.1", "size_mb": 112.4, "created": "2023-10-30T11:20:05Z" }
+
+Question: Download the php 8.2-apache image from the official library for web hosting.
+Call: { "func_call": "pull_image", "image": "php", "tag": "8.2-apache", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0", "repository": "docker.io/library/php", "tag": "8.2-apache", "size_mb": 430.6, "created": "2023-09-14T17:50:25Z" }
+
+Question: Push the analytics-dashboard image tagged beta-2 to the DigitalOcean Container Registry.
+Call: { "func_call": "push_image", "image": "analytics-dashboard", "tag": "beta-2", "registry": "registry.digitalocean.com", "dockerfile": "" }
+Response: { "image_id": "sha256:0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1", "repository": "registry.digitalocean.com/project/analytics-dashboard", "tag": "beta-2", "size_mb": 367.2, "created": "2023-11-05T13:40:33Z" }
+
+Question: Pull the elasticsearch 8.9 image for the logging stack implementation.
+Call: { "func_call": "pull_image", "image": "elasticsearch", "tag": "8.9", "registry": "docker.io", "dockerfile": "" }
+Response: { "image_id": "sha256:1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2", "repository": "docker.io/library/elasticsearch", "tag": "8.9", "size_mb": 1250.9, "created": "2023-08-28T09:15:40Z" }
+
+Question: Upload the email-sender utility image with tag prod-final to the Scaleway Registry.
+Call: { "func_call": "push_image", "image": "email-sender", "tag": "prod-final", "registry": "rg.fr-par.scw.cloud", "dockerfile": "" }
+Response: { "image_id": "sha256:2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3", "repository": "rg.fr-par.scw.cloud/namespace/email-sender", "tag": "prod-final", "size_mb": 98.5, "created": "2023-10-28T15:05:12Z" }

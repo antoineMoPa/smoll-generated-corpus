@@ -1,0 +1,51 @@
+Available Tools: search_contact | get_contact_by_id | find_contacts_by_company | find_contacts_by_tag
+Call Schema: { "func_call": "string", "query": "string", "field": "string", "limit": number }
+Response Schema: { "contacts": [{ "id": "string", "name": "string", "email": "string", "company": "string", "phone": "string" }], "total": number }
+---
+Question: Find anyone named Sarah Jenkins in the system.
+Call: { "func_call": "search_contact", "query": "Sarah Jenkins", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_8921", "name": "Sarah Jenkins", "email": "s.jenkins@techflow.com", "company": "TechFlow Solutions", "phone": "+1-555-0192" }], "total": 1 }
+
+Question: Look up the contact with email address mark.davis@globex.corp.
+Call: { "func_call": "search_contact", "query": "mark.davis@globex.corp", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_4402", "name": "Mark Davis", "email": "mark.davis@globex.corp", "company": "Globex Corporation", "phone": "+1-555-0834" }], "total": 1 }
+
+Question: Search for contacts named Elena Rodriguez.
+Call: { "func_call": "search_contact", "query": "Elena Rodriguez", "field": "name", "limit": 20 }
+Response: { "contacts": [{ "id": "c_1105", "name": "Elena Rodriguez", "email": "elena.r@nexus-dynamics.io", "company": "Nexus Dynamics", "phone": "+1-555-0221" }, { "id": "c_3398", "name": "Elena M. Rodriguez", "email": "erodriguez@stellar-logistics.net", "company": "Stellar Logistics", "phone": "+1-555-0998" }], "total": 2 }
+
+Question: Who owns the email address j.thorne@apex-industries.com?
+Call: { "func_call": "search_contact", "query": "j.thorne@apex-industries.com", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_7723", "name": "Julian Thorne", "email": "j.thorne@apex-industries.com", "company": "Apex Industries", "phone": "+1-555-0445" }], "total": 1 }
+
+Question: Find all contacts named Michael Chen.
+Call: { "func_call": "search_contact", "query": "Michael Chen", "field": "name", "limit": 15 }
+Response: { "contacts": [{ "id": "c_5512", "name": "Michael Chen", "email": "m.chen@bluewave-tech.com", "company": "BlueWave Tech", "phone": "+1-555-0677" }, { "id": "c_6601", "name": "Michael Chen", "email": "michael.chen@vertex-group.org", "company": "Vertex Group", "phone": "+1-555-0332" }], "total": 2 }
+
+Question: Search for the user with email a.patel@quantum-retail.co.
+Call: { "func_call": "search_contact", "query": "a.patel@quantum-retail.co", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_2290", "name": "Anita Patel", "email": "a.patel@quantum-retail.co", "company": "Quantum Retail", "phone": "+1-555-0519" }], "total": 1 }
+
+Question: Look for anyone named David O'Connor in the database.
+Call: { "func_call": "search_contact", "query": "David O'Connor", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_9981", "name": "David O'Connor", "email": "doconnor@summit-finance.biz", "company": "Summit Finance", "phone": "+1-555-0764" }], "total": 1 }
+
+Question: Identify the contact associated with lisa.wong@horizon-media.net.
+Call: { "func_call": "search_contact", "query": "lisa.wong@horizon-media.net", "field": "email", "limit": 3 }
+Response: { "contacts": [{ "id": "c_3345", "name": "Lisa Wong", "email": "lisa.wong@horizon-media.net", "company": "Horizon Media", "phone": "+1-555-0889" }], "total": 1 }
+
+Question: Search for contacts named Robert Miller.
+Call: { "func_call": "search_contact", "query": "Robert Miller", "field": "name", "limit": 25 }
+Response: { "contacts": [{ "id": "c_1029", "name": "Robert Miller", "email": "r.miller@ironclad-security.com", "company": "Ironclad Security", "phone": "+1-555-0112" }, { "id": "c_4456", "name": "Robert J. Miller", "email": "rmiller@greenleaf-agri.org", "company": "GreenLeaf Agri", "phone": "+1-555-0298" }, { "id": "c_7788", "name": "Bob Miller", "email": "bob.miller@city-transit.gov", "company": "City Transit Authority", "phone": "+1-555-0334" }], "total": 3 }
+
+Question: Find the owner of the email address k.svensson@nordic-design.se.
+Call: { "func_call": "search_contact", "query": "k.svensson@nordic-design.se", "field": "email", "limit": 1 }
+Response: { "contacts": [{ "id": "c_6677", "name": "Karin Svensson", "email": "k.svensson@nordic-design.se", "company": "Nordic Design Studio", "phone": "+46-8-555-0123" }], "total": 1 }
+
+Question: Search for a contact named James Wilson.
+Call: { "func_call": "search_contact", "query": "James Wilson", "field": "name", "limit": 10 }
+Response: { "contacts": [{ "id": "c_5543", "name": "James Wilson", "email": "jwilson@atlas-consulting.com", "company": "Atlas Consulting", "phone": "+1-555-0991" }], "total": 1 }
+
+Question: Who is using the email address maria.garcia@solaris-energy.es?
+Call: { "func_call": "search_contact", "query": "maria.garcia@solaris-energy.es", "field": "email", "limit": 5 }
+Response: { "contacts": [{ "id": "c_8832", "name": "Maria Garcia", "email": "maria.garcia@solaris-energy.es", "company": "Solaris Energy", "phone": "+34-91-555-0445" }], "total": 1 }

@@ -1,0 +1,59 @@
+Context: A sudden earthquake shattered the glass windows of the downtown library.
+Input: {"question": "What caused the glass windows to shatter?"}
+Output: {"answer": "A sudden earthquake"}
+
+Context: The pilot's decision to divert the flight delayed arrival by two hours.
+Input: {"question": "What caused the two-hour delay in arrival?"}
+Output: {"answer": "The pilot's decision to divert the flight"}
+
+Context: Improper storage conditions caused the milk to spoil before the expiration date.
+Input: {"question": "What caused the milk to spoil early?"}
+Output: {"answer": "Improper storage conditions"}
+
+Context: A massive data breach exposed the personal information of thousands of users.
+Input: {"question": "What caused the exposure of user personal information?"}
+Output: {"answer": "A massive data breach"}
+
+Context: The gardener's neglect to water the plants resulted in the wilting of the flower beds.
+Input: {"question": "What caused the flower beds to wilt?"}
+Output: {"answer": "The gardener's neglect to water the plants"}
+
+Context: Heavy traffic congestion made the ambulance arrive ten minutes late.
+Input: {"question": "What caused the ambulance to arrive ten minutes late?"}
+Output: {"answer": "Heavy traffic congestion"}
+
+Context: A manufacturing defect in the brake system triggered a voluntary recall of the vehicle model.
+Input: {"question": "What caused the voluntary recall of the vehicle model?"}
+Output: {"answer": "A manufacturing defect in the brake system"}
+
+Context: The artist's use of low-quality paint caused the mural colors to fade within a year.
+Input: {"question": "What caused the mural colors to fade quickly?"}
+Output: {"answer": "The artist's use of low-quality paint"}
+
+Context: Unexpected frost damage destroyed half of the citrus crop in the valley.
+Input: {"question": "What caused the destruction of half the citrus crop?"}
+Output: {"answer": "Unexpected frost damage"}
+
+Context: A miscommunication between the departments led to the duplication of efforts on the project.
+Input: {"question": "What caused the duplication of efforts on the project?"}
+Output: {"answer": "A miscommunication between the departments"}
+
+Context: The corrosion of the pipe joints caused a significant water leak in the basement.
+Input: {"question": "What caused the significant water leak in the basement?"}
+Output: {"answer": "The corrosion of the pipe joints"}
+
+Context: Extreme heat waves forced the school district to cancel outdoor activities for the week.
+Input: {"question": "What caused the cancellation of outdoor activities?"}
+Output: {"answer": "Extreme heat waves"}
+
+Context: A software glitch in the billing system generated incorrect invoices for all customers.
+Input: {"question": "What caused the generation of incorrect invoices?"}
+Output: {"answer": "A software glitch in the billing system"}
+
+Context: The photographer's failure to focus the lens resulted in blurry images from the event.
+Input: {"question": "What caused the images from the event to be blurry?"}
+Output: {"answer": "The photographer's failure to focus the lens"}
+
+Context: Rising sea levels have gradually submerged the coastal walking path.
+Input: {"question": "What caused the coastal walking path to be submerged?"}
+Output: {"answer": "Rising sea levels"}

@@ -1,0 +1,51 @@
+Available Tools: create_repo | delete_repo | fork_repo | get_repo_info | list_repos
+Call Schema: { "func_call": "string", "owner": "string", "repo": "string", "description": "string", "private": boolean }
+Response Schema: { "repo": "string", "owner": "string", "url": "string", "stars": number, "forks": number, "default_branch": "string" }
+
+Question: Establish a new public repository named "crypto-wallet" for user "blockchain-dev" with the description "Secure multi-chain wallet implementation in Rust".
+Call: { "func_call": "create_repo", "owner": "blockchain-dev", "repo": "crypto-wallet", "description": "Secure multi-chain wallet implementation in Rust", "private": false }
+Response: { "repo": "crypto-wallet", "owner": "blockchain-dev", "url": "https://github.com/blockchain-dev/crypto-wallet", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the project "image-processor" owned by "vision-labs" into my account for experimental modifications.
+Call: { "func_call": "fork_repo", "owner": "vision-labs", "repo": "image-processor", "description": "", "private": false }
+Response: { "repo": "image-processor", "owner": "current-user", "url": "https://github.com/current-user/image-processor", "stars": 782, "forks": 145, "default_branch": "main" }
+
+Question: Please set up a private repository called "hr-portal" for user "corp-tech" described as "Internal employee management dashboard using Angular".
+Call: { "func_call": "create_repo", "owner": "corp-tech", "repo": "hr-portal", "description": "Internal employee management dashboard using Angular", "private": true }
+Response: { "repo": "hr-portal", "owner": "corp-tech", "url": "https://github.com/corp-tech/hr-portal", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I want to fork the library "audio-synth-engine" from owner "sound-designers" to my workspace.
+Call: { "func_call": "fork_repo", "owner": "sound-designers", "repo": "audio-synth-engine", "description": "", "private": false }
+Response: { "repo": "audio-synth-engine", "owner": "current-user", "url": "https://github.com/current-user/audio-synth-engine", "stars": 419, "forks": 67, "default_branch": "master" }
+
+Question: Initialize a new public repo "drone-flight-log" for user "aero-researcher" with the description "Logging system for autonomous drone telemetry".
+Call: { "func_call": "create_repo", "owner": "aero-researcher", "repo": "drone-flight-log", "description": "Logging system for autonomous drone telemetry", "private": false }
+Response: { "repo": "drone-flight-log", "owner": "aero-researcher", "url": "https://github.com/aero-researcher/drone-flight-log", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "k8s-monitoring" owned by "cloud-ops-team" so I can test new alerts.
+Call: { "func_call": "fork_repo", "owner": "cloud-ops-team", "repo": "k8s-monitoring", "description": "", "private": false }
+Response: { "repo": "k8s-monitoring", "owner": "current-user", "url": "https://github.com/current-user/k8s-monitoring", "stars": 1530, "forks": 290, "default_branch": "main" }
+
+Question: Create a private repository named "payment-gateway" for user "fintech-startup" described as "Stripe integration layer for subscription services".
+Call: { "func_call": "create_repo", "owner": "fintech-startup", "repo": "payment-gateway", "description": "Stripe integration layer for subscription services", "private": true }
+Response: { "repo": "payment-gateway", "owner": "fintech-startup", "url": "https://github.com/fintech-startup/payment-gateway", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Make a fork of "nlp-training-kit" from the user "ai-academy" for my research project.
+Call: { "func_call": "fork_repo", "owner": "ai-academy", "repo": "nlp-training-kit", "description": "", "private": false }
+Response: { "repo": "nlp-training-kit", "owner": "current-user", "url": "https://github.com/current-user/nlp-training-kit", "stars": 923, "forks": 188, "default_branch": "develop" }
+
+Question: Set up a new public project "vr-showcase" for user "meta-creator" with the description "WebXR demos for virtual reality browsers".
+Call: { "func_call": "create_repo", "owner": "meta-creator", "repo": "vr-showcase", "description": "WebXR demos for virtual reality browsers", "private": false }
+Response: { "repo": "vr-showcase", "owner": "meta-creator", "url": "https://github.com/meta-creator/vr-showcase", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: Fork the repository "robotics-sim" owned by "mech-lab" to develop a new sensor module.
+Call: { "func_call": "fork_repo", "owner": "mech-lab", "repo": "robotics-sim", "description": "", "private": false }
+Response: { "repo": "robotics-sim", "owner": "current-user", "url": "https://github.com/current-user/robotics-sim", "stars": 654, "forks": 98, "default_branch": "main" }
+
+Question: Create a private repo "compliance-audit" for user "legal-tech" described as "Automated GDPR compliance checking tools".
+Call: { "func_call": "create_repo", "owner": "legal-tech", "repo": "compliance-audit", "description": "Automated GDPR compliance checking tools", "private": true }
+Response: { "repo": "compliance-audit", "owner": "legal-tech", "url": "https://github.com/legal-tech/compliance-audit", "stars": 0, "forks": 0, "default_branch": "main" }
+
+Question: I need to fork "graphql-schema-builder" from user "api-architects" to extend the type system.
+Call: { "func_call": "fork_repo", "owner": "api-architects", "repo": "graphql-schema-builder", "description": "", "private": false }
+Response: { "repo": "graphql-schema-builder", "owner": "current-user", "url": "https://github.com/current-user/graphql-schema-builder", "stars": 334, "forks": 71, "default_branch": "main" }
