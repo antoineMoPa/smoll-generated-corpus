@@ -1333,6 +1333,300 @@ TOOL_DOMAINS = {
 
 
 # ---------------------------------------------------------------------------
+# tool_use_2 — complex schemas, nested responses, batch ops, error handling
+# Same builder as tool_use; lives in corpus/tool_use_2/
+# All angles request 20 examples (vs 12 in tool_use) for more data per file.
+# ---------------------------------------------------------------------------
+
+BASE_2 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "corpus", "tool_use_2")
+
+TOOL_DOMAINS_2 = {
+    "complex_api": {
+        "nested_responses": {
+            "tools": "get_user_profile | get_order_with_items | get_dashboard_summary",
+            "call_schema": '{ "func_call": "string", "id": "string", "include": ["string"] }',
+            "response_schema": '{ "id": "string", "data": { "profile": {}, "stats": {}, "recent": [{}] } }',
+            "angles": [
+                ("user_profile_nested.corpus",
+                 "Generate 20 tool-use examples for fetching deeply nested user profile data. "
+                 "Responses must include nested objects: address {street, city, country}, preferences {theme, language}, stats {logins, purchases}. "
+                 "Use realistic names, emails, and nested field values."),
+                ("order_with_items.corpus",
+                 "Generate 20 tool-use examples for fetching an order with nested line items. "
+                 "Responses include: order metadata, items array (each with product_id, name, qty, unit_price), and a totals object {subtotal, tax, shipping, total}. "
+                 "Use realistic product names and prices."),
+            ],
+        },
+        "batch_operations": {
+            "tools": "batch_create | batch_update | batch_delete | batch_get",
+            "call_schema": '{ "func_call": "string", "items": [{}], "options": { "on_error": "stop|skip", "dry_run": boolean } }',
+            "response_schema": '{ "processed": number, "succeeded": number, "failed": number, "errors": [{ "index": number, "id": "string", "reason": "string" }], "results": [{}] }',
+            "angles": [
+                ("batch_create_users.corpus",
+                 "Generate 20 tool-use examples for batch-creating users or records. "
+                 "Input items arrays should have 3–5 elements each with realistic fields. "
+                 "Some responses should include partial failures with error reasons."),
+                ("batch_update_status.corpus",
+                 "Generate 20 tool-use examples for batch-updating status fields across orders, tickets, or accounts. "
+                 "Include dry_run=true examples and on_error=skip scenarios with realistic partial failure responses."),
+            ],
+        },
+        "paginated_results": {
+            "tools": "list_users | list_orders | list_events | list_products",
+            "call_schema": '{ "func_call": "string", "page": number, "page_size": number, "sort_by": "string", "sort_dir": "asc|desc", "filters": {} }',
+            "response_schema": '{ "items": [{}], "pagination": { "page": number, "page_size": number, "total_items": number, "total_pages": number, "has_next": boolean, "next_cursor": "string" } }',
+            "angles": [
+                ("paginate_users.corpus",
+                 "Generate 20 tool-use examples for paginating through user or customer lists. "
+                 "Vary page sizes (10, 25, 50, 100), sort fields, and filter combinations. "
+                 "Responses should include realistic pagination metadata and 3–5 item objects each."),
+                ("paginate_events_cursor.corpus",
+                 "Generate 20 tool-use examples for cursor-based pagination through event logs or order history. "
+                 "Include first page, middle page, and last page scenarios. "
+                 "Responses should have realistic next_cursor tokens and has_next values."),
+            ],
+        },
+        "error_responses": {
+            "tools": "get_resource | create_resource | update_resource | delete_resource",
+            "call_schema": '{ "func_call": "string", "id": "string", "data": {} }',
+            "response_schema": '{ "success": boolean, "error": { "code": "string", "message": "string", "field": "string", "details": {} } }',
+            "angles": [
+                ("not_found_unauthorized.corpus",
+                 "Generate 20 tool-use examples where the API call fails. "
+                 "Mix NOT_FOUND (resource doesn't exist), UNAUTHORIZED (missing/expired token), and FORBIDDEN (insufficient permissions) errors. "
+                 "Use realistic error messages and resource IDs."),
+                ("validation_rate_limit.corpus",
+                 "Generate 20 tool-use examples for validation errors and rate limit responses. "
+                 "Validation errors should include the failing field name and reason (required, too_short, invalid_format). "
+                 "Rate limit responses should include retry_after seconds."),
+            ],
+        },
+        "webhook_events": {
+            "tools": "handle_payment_event | handle_user_event | handle_order_event | handle_system_event",
+            "call_schema": '{ "func_call": "string", "event_type": "string", "event_id": "string", "timestamp": "string", "payload": {} }',
+            "response_schema": '{ "event_id": "string", "event_type": "string", "status": "processed|ignored|failed", "payload": { "object": "string", "data": {} } }',
+            "angles": [
+                ("payment_webhook.corpus",
+                 "Generate 20 tool-use examples for incoming payment webhook events (charge.succeeded, charge.failed, refund.created, subscription.renewed). "
+                 "Payloads should include nested customer, amount, and metadata objects with realistic values."),
+                ("user_order_webhook.corpus",
+                 "Generate 20 tool-use examples for user lifecycle and order status webhook events (user.created, user.deleted, order.shipped, order.delivered). "
+                 "Include realistic nested payload objects with timestamps, IDs, and status transitions."),
+            ],
+        },
+    },
+    "weather_api": {
+        "multi_location_forecast": {
+            "tools": "get_multi_location_forecast | compare_weather | get_regional_summary",
+            "call_schema": '{ "func_call": "string", "locations": ["string"], "days": number, "metrics": ["string"] }',
+            "response_schema": '{ "locations": [{ "name": "string", "country": "string", "forecast": [{ "date": "string", "high": number, "low": number, "precip_mm": number, "wind_kph": number, "condition": "string" }] }] }',
+            "angles": [
+                ("multi_city_forecast.corpus",
+                 "Generate 20 tool-use examples for fetching 5-day forecasts for 3–5 cities simultaneously. "
+                 "Responses include per-city forecast arrays with temperature, precipitation, and wind. "
+                 "Use real city groupings (European capitals, US coastal cities, Asian megacities)."),
+                ("compare_weather.corpus",
+                 "Generate 20 tool-use examples for comparing weather across multiple locations. "
+                 "Questions like 'Which city will be warmest this weekend?' or 'Compare rain in London and Amsterdam'. "
+                 "Responses include structured comparison data for each location."),
+            ],
+        },
+    },
+    "ecommerce": {
+        "cart_with_promotions": {
+            "tools": "get_cart_summary | apply_promotion | calculate_shipping | estimate_tax",
+            "call_schema": '{ "func_call": "string", "cart_id": "string", "promo_code": "string", "shipping_address": { "country": "string", "state": "string", "zip": "string" } }',
+            "response_schema": '{ "cart_id": "string", "items": [{ "sku": "string", "name": "string", "qty": number, "unit_price": number, "line_total": number }], "promotions": [{ "code": "string", "type": "string", "discount": number }], "totals": { "subtotal": number, "discount": number, "shipping": number, "tax": number, "grand_total": number } }',
+            "angles": [
+                ("cart_with_discount.corpus",
+                 "Generate 20 tool-use examples for cart summaries with applied discount codes. "
+                 "Carts should have 3–6 line items. Promotions include percent-off, flat discount, and free-shipping codes. "
+                 "Totals object must be arithmetically consistent."),
+                ("cart_shipping_tax.corpus",
+                 "Generate 20 tool-use examples for calculating shipping and tax on a cart. "
+                 "Use varied shipping addresses (US states, EU countries, Canada). "
+                 "Include flat-rate, weight-based, and free-over-threshold shipping scenarios."),
+            ],
+        },
+        "product_variants": {
+            "tools": "get_product_with_variants | get_variant_inventory | configure_product",
+            "call_schema": '{ "func_call": "string", "product_id": "string", "options": { "color": "string", "size": "string", "material": "string" } }',
+            "response_schema": '{ "product_id": "string", "name": "string", "variants": [{ "sku": "string", "options": {}, "price": number, "stock": number, "images": ["string"] }], "selected_variant": {} }',
+            "angles": [
+                ("clothing_variants.corpus",
+                 "Generate 20 tool-use examples for fetching clothing product variants (size × color combinations). "
+                 "Each response includes 4–8 variants with SKUs, prices, and stock levels. "
+                 "Use realistic clothing product names and option combinations."),
+                ("electronics_variants.corpus",
+                 "Generate 20 tool-use examples for electronics products with storage/color/model variants. "
+                 "Examples: phones (128GB/256GB × color), laptops (RAM/SSD combos). "
+                 "Responses include nested options and per-variant pricing."),
+            ],
+        },
+    },
+    "database": {
+        "complex_queries": {
+            "tools": "query_with_joins | subquery | window_function | upsert_record",
+            "call_schema": '{ "func_call": "string", "primary_table": "string", "joins": [{ "table": "string", "on": "string", "type": "inner|left|right" }], "select": ["string"], "where": "string", "order_by": "string", "limit": number }',
+            "response_schema": '{ "rows": [{}], "count": number, "query_ms": number, "explain": "string" }',
+            "angles": [
+                ("join_queries.corpus",
+                 "Generate 20 tool-use examples for multi-table JOIN queries. "
+                 "Use schemas like users+orders+products, employees+departments+salaries. "
+                 "Each response returns 3–6 row objects with fields from multiple tables."),
+                ("aggregate_window.corpus",
+                 "Generate 20 tool-use examples for aggregate and window function queries. "
+                 "Include GROUP BY with HAVING, running totals, rank/dense_rank, and rolling averages. "
+                 "Return realistic grouped result rows with computed columns."),
+            ],
+        },
+        "transactions": {
+            "tools": "begin_transaction | commit_transaction | rollback_transaction | savepoint",
+            "call_schema": '{ "func_call": "string", "transaction_id": "string", "operations": [{ "type": "insert|update|delete", "table": "string", "data": {} }] }',
+            "response_schema": '{ "transaction_id": "string", "status": "committed|rolled_back|pending", "operations_applied": number, "duration_ms": number, "error": {} }',
+            "angles": [
+                ("commit_rollback.corpus",
+                 "Generate 20 tool-use examples for database transactions with commit and rollback. "
+                 "Each transaction has 2–4 operations across related tables. "
+                 "Include successful commits and rollbacks due to constraint violations."),
+                ("partial_failure.corpus",
+                 "Generate 20 tool-use examples where a transaction partially fails and rolls back. "
+                 "Error objects should include the failing operation index, constraint name, and message. "
+                 "Use FK violations, unique constraint failures, and null violations."),
+            ],
+        },
+    },
+    "cloud_server_api": {
+        "infrastructure_as_code": {
+            "tools": "deploy_stack | update_stack | destroy_stack | get_stack_status | list_stack_resources",
+            "call_schema": '{ "func_call": "string", "stack_name": "string", "template": "string", "parameters": [{ "key": "string", "value": "string" }], "region": "string" }',
+            "response_schema": '{ "stack_id": "string", "stack_name": "string", "status": "string", "resources": [{ "type": "string", "name": "string", "state": "string", "id": "string" }], "outputs": [{ "key": "string", "value": "string" }] }',
+            "angles": [
+                ("deploy_stack.corpus",
+                 "Generate 20 tool-use examples for deploying infrastructure stacks. "
+                 "Stacks should contain 4–7 resources (EC2, RDS, S3, LoadBalancer, SecurityGroup, etc). "
+                 "Use realistic stack names, parameter sets, and output values (endpoint URLs, resource IDs)."),
+                ("update_destroy.corpus",
+                 "Generate 20 tool-use examples for updating and destroying stacks. "
+                 "Updates should show changed parameters and updated resource states. "
+                 "Include both clean destroys and destroy-with-retained-resources scenarios."),
+            ],
+        },
+    },
+    "crm": {
+        "activity_timeline": {
+            "tools": "get_contact_timeline | log_activity | get_engagement_score | get_touchpoint_summary",
+            "call_schema": '{ "func_call": "string", "contact_id": "string", "activity_type": "call|email|meeting|note|task", "subject": "string", "body": "string", "outcome": "string", "duration_minutes": number }',
+            "response_schema": '{ "contact_id": "string", "timeline": [{ "id": "string", "type": "string", "date": "string", "subject": "string", "outcome": "string", "rep": "string" }], "engagement_score": number, "last_touch": "string" }',
+            "angles": [
+                ("log_call_meeting.corpus",
+                 "Generate 20 tool-use examples for logging sales calls and meetings against a contact. "
+                 "Include outcomes (connected, voicemail, no-show, demo-completed) and realistic subject lines. "
+                 "Responses show the updated timeline with the new activity prepended."),
+                ("engagement_timeline.corpus",
+                 "Generate 20 tool-use examples for fetching contact engagement timelines. "
+                 "Timelines have 5–8 entries mixing calls, emails, and meetings. "
+                 "Include engagement score (0–100) and last-touch date."),
+            ],
+        },
+    },
+    "banking": {
+        "multi_account_summary": {
+            "tools": "get_portfolio_summary | get_account_group | get_net_worth | get_cashflow_analysis",
+            "call_schema": '{ "func_call": "string", "customer_id": "string", "include_accounts": ["string"], "currency": "string", "as_of_date": "string" }',
+            "response_schema": '{ "customer_id": "string", "accounts": [{ "id": "string", "type": "string", "balance": number, "currency": "string" }], "totals": { "assets": number, "liabilities": number, "net_worth": number }, "currency": "string" }',
+            "angles": [
+                ("portfolio_summary.corpus",
+                 "Generate 20 tool-use examples for fetching a customer's full portfolio across all account types. "
+                 "Include checking, savings, investment, mortgage, and credit card accounts. "
+                 "Totals must be arithmetically consistent. Use USD, EUR, and GBP."),
+                ("cashflow_analysis.corpus",
+                 "Generate 20 tool-use examples for monthly cashflow analysis. "
+                 "Responses include income breakdown, expense categories, and net cashflow. "
+                 "Use realistic transaction categories and amounts."),
+            ],
+        },
+    },
+    "hr_system": {
+        "performance_reviews": {
+            "tools": "submit_review | get_review | list_reviews | get_review_summary | set_goals",
+            "call_schema": '{ "func_call": "string", "employee_id": "string", "reviewer_id": "string", "period": "string", "ratings": { "performance": number, "communication": number, "teamwork": number, "leadership": number }, "comments": "string", "goals": ["string"] }',
+            "response_schema": '{ "review_id": "string", "employee": "string", "period": "string", "overall_score": number, "ratings": {}, "goals": [{ "goal": "string", "status": "not_started|in_progress|completed" }], "submitted_at": "string" }',
+            "angles": [
+                ("submit_review.corpus",
+                 "Generate 20 tool-use examples for submitting employee performance reviews. "
+                 "Include ratings (1–5) across 4 dimensions, written comments, and 2–4 goals. "
+                 "Use realistic employee names, roles, and review periods (Q1 2024, H2 2023)."),
+                ("review_summary.corpus",
+                 "Generate 20 tool-use examples for fetching review summaries and goal progress. "
+                 "Include averaged scores, goal completion status, and manager comments. "
+                 "Use varied performance profiles (high performer, needs improvement, on-track)."),
+            ],
+        },
+    },
+    "analytics": {
+        "cohort_analysis": {
+            "tools": "get_cohort_retention | get_cohort_revenue | get_churn_analysis",
+            "call_schema": '{ "func_call": "string", "cohort_period": "weekly|monthly", "start_date": "string", "end_date": "string", "segment": "string", "metric": "string" }',
+            "response_schema": '{ "cohort": "string", "cohort_size": number, "periods": [{ "period": number, "retained": number, "retention_rate": number, "revenue": number }] }',
+            "angles": [
+                ("retention_cohorts.corpus",
+                 "Generate 20 tool-use examples for cohort retention analysis. "
+                 "Responses should include 6–12 time periods with realistic retention curves (high early drop-off then plateau). "
+                 "Use monthly cohorts and segment by acquisition channel."),
+                ("revenue_churn.corpus",
+                 "Generate 20 tool-use examples for cohort revenue and churn analysis. "
+                 "Include MRR expansion, contraction, and churn per cohort period. "
+                 "Use SaaS-style metrics with realistic ARR ranges."),
+            ],
+        },
+        "ab_testing": {
+            "tools": "create_experiment | get_experiment_results | stop_experiment | get_significance",
+            "call_schema": '{ "func_call": "string", "experiment_id": "string", "name": "string", "variants": [{ "id": "string", "name": "string", "traffic_pct": number }], "metric": "string", "min_detectable_effect": number }',
+            "response_schema": '{ "experiment_id": "string", "status": "running|stopped|completed", "variants": [{ "id": "string", "name": "string", "visitors": number, "conversions": number, "conversion_rate": number, "lift_pct": number }], "winner": "string", "p_value": number, "significant": boolean }',
+            "angles": [
+                ("create_run_experiment.corpus",
+                 "Generate 20 tool-use examples for creating and checking A/B tests. "
+                 "Use 2–3 variants (control + 1–2 treatments) with realistic traffic splits. "
+                 "Test names should reflect real product experiments (button color, CTA text, checkout flow)."),
+                ("results_significance.corpus",
+                 "Generate 20 tool-use examples for fetching A/B test results and statistical significance. "
+                 "Include both significant winners (p < 0.05) and inconclusive tests. "
+                 "Use realistic conversion rates (1–8%) and visitor counts (1k–50k per variant)."),
+            ],
+        },
+    },
+}
+
+
+def build_tool_use_2_prompts() -> tuple[int, int]:
+    os.makedirs(BASE_2, exist_ok=True)
+    total_dirs = 0
+    total_prompts = 0
+
+    for domain, subdomains in TOOL_DOMAINS_2.items():
+        for subdomain, info in subdomains.items():
+            dirpath = os.path.join(BASE_2, domain, subdomain)
+            os.makedirs(dirpath, exist_ok=True)
+
+            lines = []
+            for filename, angle_prompt in info["angles"]:
+                prompt = build_prompt(domain, subdomain, info, filename, angle_prompt)
+                prompt_oneline = prompt.replace("\n", " | ")
+                lines.append(f"{filename} {prompt_oneline}")
+
+            prompts_path = os.path.join(dirpath, "prompts.txt")
+            with open(prompts_path, "w") as f:
+                f.write("\n".join(lines) + "\n")
+
+            total_dirs += 1
+            total_prompts += len(lines)
+            print(f"  tool_use_2/{domain}/{subdomain}/prompts.txt ({len(lines)} prompts)")
+
+    return total_dirs, total_prompts
+
+
+# ---------------------------------------------------------------------------
 # JSON QA — context / input / output extraction examples
 # ---------------------------------------------------------------------------
 
@@ -1538,6 +1832,199 @@ JSON_QA = {
 
 JSON_QA_BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "corpus", "json_qa")
 
+# ---------------------------------------------------------------------------
+# json_qa_2 — longer contexts, array output, nested extraction
+# Lives in corpus/json_qa_2/. Requests 20 examples per file.
+# ---------------------------------------------------------------------------
+
+JSON_QA_2_BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "corpus", "json_qa_2")
+
+JSON_QA_ARRAY_FORMAT = (
+    "Format for each example (use EXACTLY this layout):\n"
+    "Context: <3–6 sentences>\n"
+    'Input: {"question": "<natural language question>"}\n'
+    'Output: {"answer": ["item1", "item2", ...]}\n\n'
+    "Separate examples with a single blank line. "
+    "List items must be copied verbatim from the context. "
+    "Use varied topics and sentence structures."
+)
+
+JSON_QA_NESTED_FORMAT = (
+    "Format for each example (use EXACTLY this layout):\n"
+    "Context: <3–6 sentences>\n"
+    'Input: {"extract": "<what to extract>"}\n'
+    "Output: { <nested JSON object with 2–3 levels of nesting> }\n\n"
+    "Separate examples with a single blank line. "
+    "Values must be copied verbatim from the context. "
+    "Nested keys should be snake_case."
+)
+
+JSON_QA_2 = {
+    "paragraph_extraction": {
+        "news_article": [
+            ("news_who_what_where.corpus",
+             "Generate 20 JSON QA extraction examples using 4–6 sentence news-style paragraphs as context. "
+             "Each paragraph covers a distinct event (product launch, political announcement, sports result, natural disaster). "
+             "Questions ask for a single fact (who, what, where, when, how many). "
+             "Use the single-field format: Output: {\"answer\": \"...\"}. "
+             "Contexts should feel like real news leads."),
+            ("news_multi_field.corpus",
+             "Generate 20 JSON QA multi-field extraction examples using 4–6 sentence news paragraphs. "
+             'Input asks to extract 3–5 fields (e.g. ["who", "what", "location", "date", "outcome"]). '
+             "Output is a flat JSON object with those fields. "
+             "Use the multi-field format. Vary topics: business, politics, science, sports."),
+        ],
+        "biography": [
+            ("bio_single_fact.corpus",
+             "Generate 20 JSON QA extraction examples using 4–6 sentence biographical paragraphs. "
+             "Each paragraph describes a real-sounding person (name, birthplace, career, achievement). "
+             "Questions ask for one fact. Output: {\"answer\": \"...\"}. "
+             "Use the single-field format with varied question phrasings."),
+            ("bio_multi_field.corpus",
+             "Generate 20 JSON QA multi-field extraction examples from biographical paragraphs. "
+             'Input asks to extract ["name", "birth_year", "nationality", "profession", "known_for"]. '
+             "Output is a flat JSON object. Use the multi-field format. "
+             "Make the bios feel like encyclopedia entries."),
+        ],
+        "incident_report": [
+            ("incident_single.corpus",
+             "Generate 20 JSON QA extraction examples using 4–6 sentence incident or accident report paragraphs. "
+             "Scenarios: workplace accidents, vehicle collisions, data breaches, system outages. "
+             "Questions ask for one fact (time, location, cause, severity). Output: {\"answer\": \"...\"}. "
+             "Use the single-field format."),
+            ("incident_multi_field.corpus",
+             "Generate 20 JSON QA multi-field extraction examples from incident reports. "
+             'Input asks to extract ["incident_type", "date", "location", "cause", "severity", "resolved"]. '
+             "Output is a flat JSON object. Use the multi-field format."),
+        ],
+        "product_review": [
+            ("review_single.corpus",
+             "Generate 20 JSON QA extraction examples using 4–6 sentence product review paragraphs. "
+             "Reviews cover electronics, appliances, software, and clothing. "
+             "Questions ask for one fact (rating, product name, pros, cons, verdict). Output: {\"answer\": \"...\"}. "
+             "Use the single-field format."),
+            ("review_multi_field.corpus",
+             "Generate 20 JSON QA multi-field extraction examples from product reviews. "
+             'Input asks to extract ["product", "rating", "main_pro", "main_con", "recommended"]. '
+             "Output is a flat JSON object. Use the multi-field format."),
+        ],
+    },
+    "array_extraction": {
+        "list_entities": [
+            ("extract_people.corpus",
+             "Generate 20 JSON QA examples where the answer is a list of people's names. "
+             "Contexts (3–5 sentences) mention multiple named individuals in a scenario (meeting, event, team). "
+             'Questions: \'Who was present?\', \'Who signed the agreement?\'. '
+             "Output: {\"answer\": [\"Name1\", \"Name2\", ...]}. "
+             + JSON_QA_ARRAY_FORMAT),
+            ("extract_locations.corpus",
+             "Generate 20 JSON QA examples where the answer is a list of places or locations. "
+             "Contexts describe trips, delivery routes, or multi-city events. "
+             'Questions: \'Which cities were visited?\', \'Where did the shipment stop?\'. '
+             "Output: {\"answer\": [\"City1\", \"City2\", ...]}. "
+             + JSON_QA_ARRAY_FORMAT),
+        ],
+        "list_items": [
+            ("extract_ingredients.corpus",
+             "Generate 20 JSON QA examples where the answer is a list of ingredients or materials. "
+             "Contexts describe recipes, manufacturing processes, or supply lists. "
+             "Output: {\"answer\": [\"item1\", \"item2\", ...]}. "
+             + JSON_QA_ARRAY_FORMAT),
+            ("extract_steps.corpus",
+             "Generate 20 JSON QA examples where the answer is an ordered list of steps or actions. "
+             "Contexts describe procedures, instructions, or event sequences. "
+             'Questions: \'What steps were taken?\', \'List the actions in order.\'. '
+             "Output: {\"answer\": [\"step1\", \"step2\", ...]}. "
+             + JSON_QA_ARRAY_FORMAT),
+        ],
+        "extract_numbers": [
+            ("extract_quantities.corpus",
+             "Generate 20 JSON QA examples where the answer is a list of numeric values with units. "
+             "Contexts mention multiple measurements, prices, counts, or durations. "
+             'Questions: \'What quantities were ordered?\', \'List all prices mentioned.\'. '
+             "Output: {\"answer\": [\"12kg\", \"$45.00\", ...]}. "
+             + JSON_QA_ARRAY_FORMAT),
+            ("extract_dates.corpus",
+             "Generate 20 JSON QA examples where the answer is a list of dates or times. "
+             "Contexts describe schedules, timelines, or historical event sequences. "
+             'Questions: \'What dates are mentioned?\', \'When did each phase start?\'. '
+             "Output: {\"answer\": [\"2024-03-01\", \"2024-06-15\", ...]}. "
+             + JSON_QA_ARRAY_FORMAT),
+        ],
+    },
+    "nested_extraction": {
+        "person_with_address": [
+            ("person_address_nested.corpus",
+             "Generate 20 JSON QA examples where the output is a nested person object. "
+             "Contexts (3–5 sentences) describe a person including their contact details and location. "
+             'Input: {"extract": "person details"}. '
+             'Output: {"name": "...", "age": N, "contact": {"email": "...", "phone": "..."}, "address": {"street": "...", "city": "...", "country": "..."}}. '
+             + JSON_QA_NESTED_FORMAT),
+            ("person_employment.corpus",
+             "Generate 20 JSON QA examples with nested person + employment details. "
+             "Contexts describe someone's professional background. "
+             'Input: {"extract": "employment details"}. '
+             'Output: {"person": {"name": "...", "age": N}, "job": {"title": "...", "company": "...", "start_year": N, "salary": N}}. '
+             + JSON_QA_NESTED_FORMAT),
+        ],
+        "order_with_items": [
+            ("order_nested.corpus",
+             "Generate 20 JSON QA examples with a nested order object. "
+             "Contexts describe a purchase with multiple line items, shipping, and payment info. "
+             'Input: {"extract": "order details"}. '
+             'Output: {"order_id": "...", "customer": "...", "items": [{"name": "...", "qty": N, "price": N}], "totals": {"subtotal": N, "shipping": N, "total": N}}. '
+             + JSON_QA_NESTED_FORMAT),
+            ("shipment_nested.corpus",
+             "Generate 20 JSON QA examples with a nested shipment tracking object. "
+             "Contexts describe a delivery with carrier info, status, and tracking events. "
+             'Input: {"extract": "shipment details"}. '
+             'Output: {"tracking_number": "...", "carrier": "...", "status": "...", "events": [{"date": "...", "location": "...", "status": "..."}]}. '
+             + JSON_QA_NESTED_FORMAT),
+        ],
+        "event_with_participants": [
+            ("event_nested.corpus",
+             "Generate 20 JSON QA examples with a nested event object. "
+             "Contexts describe a meeting, conference, or ceremony with participants and outcomes. "
+             'Input: {"extract": "event details"}. '
+             'Output: {"event": "...", "date": "...", "location": "...", "organizer": "...", "participants": ["...", "..."], "outcome": "..."}. '
+             + JSON_QA_NESTED_FORMAT),
+            ("contract_nested.corpus",
+             "Generate 20 JSON QA examples with a nested contract or agreement object. "
+             "Contexts describe a business deal with parties, terms, and dates. "
+             'Input: {"extract": "contract details"}. '
+             'Output: {"parties": {"buyer": "...", "seller": "..."}, "terms": {"value": N, "currency": "...", "duration_months": N}, "signed_date": "...", "status": "..."}. '
+             + JSON_QA_NESTED_FORMAT),
+        ],
+    },
+}
+
+
+def build_json_qa_2_prompts() -> tuple[int, int]:
+    os.makedirs(JSON_QA_2_BASE, exist_ok=True)
+    total_dirs = 0
+    total_prompts = 0
+
+    for category, subcategories in JSON_QA_2.items():
+        for subcategory, angles in subcategories.items():
+            dirpath = os.path.join(JSON_QA_2_BASE, category, subcategory)
+            os.makedirs(dirpath, exist_ok=True)
+
+            lines = []
+            for filename, angle_prompt in angles:
+                prompt = f"Category: {category}/{subcategory}\n\n{angle_prompt}"
+                prompt_oneline = prompt.replace("\n", " | ")
+                lines.append(f"{filename} {prompt_oneline}")
+
+            prompts_path = os.path.join(dirpath, "prompts.txt")
+            with open(prompts_path, "w") as f:
+                f.write("\n".join(lines) + "\n")
+
+            total_dirs += 1
+            total_prompts += len(lines)
+            print(f"  json_qa_2/{category}/{subcategory}/prompts.txt ({len(lines)} prompts)")
+
+    return total_dirs, total_prompts
+
 
 def build_json_qa_prompt(category: str, subcategory: str, angle_prompt: str) -> str:
     if "multi_field" in category or JSON_QA_MULTI_FORMAT in angle_prompt:
@@ -1612,10 +2099,20 @@ def main():
             total_prompts += len(lines)
             print(f"  tool_use/{domain}/{subdomain}/prompts.txt ({len(lines)} prompts)")
 
+    print("\nBuilding tool_use_2 prompts...")
+    t2_dirs, t2_prompts = build_tool_use_2_prompts()
+    total_dirs += t2_dirs
+    total_prompts += t2_prompts
+
     print("\nBuilding json_qa prompts...")
     qa_dirs, qa_prompts = build_json_qa_prompts()
     total_dirs += qa_dirs
     total_prompts += qa_prompts
+
+    print("\nBuilding json_qa_2 prompts...")
+    qa2_dirs, qa2_prompts = build_json_qa_2_prompts()
+    total_dirs += qa2_dirs
+    total_prompts += qa2_prompts
 
     print(f"\nDone! Created {total_dirs} directories with {total_prompts} total prompts.")
 
