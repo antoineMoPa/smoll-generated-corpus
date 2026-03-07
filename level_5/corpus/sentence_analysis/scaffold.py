@@ -12,9 +12,7 @@ Scale: 5 languages × 8 categories × 3 angles = 120 corpus files
 
 import os
 
-CORPUS_DIR = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "..", "corpus", "sentence_analysis"
-)
+CORPUS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ---------------------------------------------------------------------------
 # Output format (embedded in every prompt)

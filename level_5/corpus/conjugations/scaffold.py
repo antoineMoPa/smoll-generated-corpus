@@ -7,7 +7,7 @@ Each corpus file contains 10 full conjugation tables.
 
 import os
 
-BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "corpus", "conjugations")
+BASE = os.path.dirname(os.path.abspath(__file__))
 
 BATCH_SIZE = 10
 

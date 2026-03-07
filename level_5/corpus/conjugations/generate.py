@@ -21,7 +21,7 @@ import time
 import urllib.request
 
 FAL_QUEUE_URL = "https://queue.fal.run/openrouter/router"
-CORPUS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "corpus", "conjugations")
+CORPUS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 SYSTEM_PROMPT = (
     "You are a linguistics dataset generator producing accurate verb conjugation tables "
