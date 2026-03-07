@@ -1,0 +1,184 @@
+Sentence: The doctor who treated me was very kind.
+The : definite article, specifies "doctor"
+doctor : common noun, singular, antecedent of the relative clause
+who : relative pronoun, refers to "doctor", introduces a restrictive clause
+treated : verb, past tense, action performed by "who"
+me : personal pronoun, object of "treated"
+was : linking verb, past tense
+very : adverb, modifies "kind"
+kind : adjective, subject complement describing "doctor"
+
+Sentence: My car, which is ten years old, still runs perfectly.
+My : possessive determiner, modifies "car"
+car : common noun, singular, antecedent of the relative clause
+, : punctuation, marks the beginning of a non-restrictive clause
+which : relative pronoun, refers to "car", introduces a non-restrictive clause
+is : linking verb, present tense
+ten : numeral, modifies "years"
+years : common noun, plural, unit of time
+old : adjective, describes the age of the car
+, : punctuation, marks the end of the non-restrictive clause
+still : adverb, modifies "runs"
+runs : verb, present tense, action of the subject "car"
+perfectly : adverb, modifies "runs"
+
+Sentence: The house that Jack built stands on the hill.
+The : definite article, specifies "house"
+house : common noun, singular, antecedent of the relative clause
+that : relative pronoun, refers to "house", introduces a restrictive clause
+Jack : proper noun, subject of "built"
+built : verb, past tense, action performed by "Jack"
+stands : verb, present tense, action of the subject "house"
+on : preposition, indicates location
+the : definite article, specifies "hill"
+hill : common noun, singular, object of the preposition
+
+Sentence: The woman whom I met yesterday is a famous author.
+The : definite article, specifies "woman"
+woman : common noun, singular, antecedent of the relative clause
+whom : relative pronoun, refers to "woman", object of "met", introduces a restrictive clause
+I : personal pronoun, subject of "met"
+met : verb, past tense, action performed by "I"
+yesterday : adverb, indicates time
+is : linking verb, present tense
+a : indefinite article, specifies "author"
+famous : adjective, modifies "author"
+author : common noun, singular, subject complement
+
+Sentence: The student whose laptop was stolen reported it to the police.
+The : definite article, specifies "student"
+student : common noun, singular, antecedent of the relative clause
+whose : relative pronoun, indicates possession for "student", introduces a restrictive clause
+laptop : common noun, singular, subject of "was stolen"
+was : auxiliary verb, past tense, part of passive voice
+stolen : past participle, main verb in passive voice
+reported : verb, past tense, action of "student"
+it : personal pronoun, object of "reported", refers to "laptop"
+to : preposition, indicates direction
+the : definite article, specifies "police"
+police : common noun, plural, object of the preposition
+
+Sentence: This is the park where we played soccer as children.
+This : demonstrative pronoun, subject
+is : linking verb, present tense
+the : definite article, specifies "park"
+park : common noun, singular, antecedent of the relative clause
+where : relative adverb, refers to "park", introduces a restrictive clause indicating place
+we : personal pronoun, subject of "played"
+played : verb, past tense, action of "we"
+soccer : common noun, singular, object of "played"
+as : preposition, indicates role or time
+children : common noun, plural, object of the preposition
+
+Sentence: I remember the day when we first arrived in Paris.
+I : personal pronoun, subject
+remember : verb, present tense, action of "I"
+the : definite article, specifies "day"
+day : common noun, singular, antecedent of the relative clause
+when : relative adverb, refers to "day", introduces a restrictive clause indicating time
+we : personal pronoun, subject of "arrived"
+first : adverb, modifies "arrived"
+arrived : verb, past tense, action of "we"
+in : preposition, indicates location
+Paris : proper noun, object of the preposition
+
+Sentence: The book, which I borrowed from the library, is overdue.
+The : definite article, specifies "book"
+book : common noun, singular, antecedent of the relative clause
+, : punctuation, marks the beginning of a non-restrictive clause
+which : relative pronoun, refers to "book", introduces a non-restrictive clause
+I : personal pronoun, subject of "borrowed"
+borrowed : verb, past tense, action of "I"
+from : preposition, indicates source
+the : definite article, specifies "library"
+library : common noun, singular, object of the preposition
+, : punctuation, marks the end of the non-restrictive clause
+is : linking verb, present tense
+overdue : adjective, subject complement describing "book"
+
+Sentence: Anyone that wants to join the team must sign up today.
+Anyone : indefinite pronoun, subject, antecedent of the relative clause
+that : relative pronoun, refers to "Anyone", introduces a restrictive clause
+wants : verb, present tense, action of "that"
+to : particle, part of the infinitive verb
+join : verb, infinitive, action desired by "that"
+the : definite article, specifies "team"
+team : common noun, singular, object of "join"
+must : modal verb, indicates necessity
+sign : verb, base form, main action required
+up : adverb, part of the phrasal verb "sign up"
+today : adverb, indicates time
+
+Sentence: The artist whose paintings are displayed here is from Spain.
+The : definite article, specifies "artist"
+artist : common noun, singular, antecedent of the relative clause
+whose : relative pronoun, indicates possession for "artist", introduces a restrictive clause
+paintings : common noun, plural, subject of "are displayed"
+are : auxiliary verb, present tense, part of passive voice
+displayed : past participle, main verb in passive voice
+here : adverb, indicates location
+is : linking verb, present tense
+from : preposition, indicates origin
+Spain : proper noun, object of the preposition
+
+Sentence: The man who lives next door owns a bakery.
+The : definite article, specifies "man"
+man : common noun, singular, antecedent of the relative clause
+who : relative pronoun, refers to "man", introduces a restrictive clause
+lives : verb, present tense, action of "who"
+next : adjective, modifies "door"
+door : common noun, singular, object of "next"
+owns : verb, present tense, action of "man"
+a : indefinite article, specifies "bakery"
+bakery : common noun, singular, object of "owns"
+
+Sentence: Her new phone, that she bought last week, already has a crack.
+Her : possessive determiner, modifies "phone"
+new : adjective, modifies "phone"
+phone : common noun, singular, antecedent of the relative clause
+, : punctuation, marks the beginning of a non-restrictive clause
+that : relative pronoun, refers to "phone", introduces a non-restrictive clause
+she : personal pronoun, subject of "bought"
+bought : verb, past tense, action of "she"
+last : adjective, modifies "week"
+week : common noun, singular, indicates time
+, : punctuation, marks the end of the non-restrictive clause
+already : adverb, modifies "has"
+has : verb, present tense, action of "phone"
+a : indefinite article, specifies "crack"
+crack : common noun, singular, object of "has"
+
+Sentence: The city where I was born has grown significantly.
+The : definite article, specifies "city"
+city : common noun, singular, antecedent of the relative clause
+where : relative adverb, refers to "city", introduces a restrictive clause indicating place
+I : personal pronoun, subject of "was born"
+was : auxiliary verb, past tense, part of passive voice
+born : past participle, main verb in passive voice
+has : auxiliary verb, present tense, part of present perfect
+grown : past participle, main verb
+significantly : adverb, modifies "grown"
+
+Sentence: The package which arrived this morning contains fragile items.
+The : definite article, specifies "package"
+package : common noun, singular, antecedent of the relative clause
+which : relative pronoun, refers to "package", introduces a restrictive clause
+arrived : verb, past tense, action of "which"
+this : demonstrative determiner, modifies "morning"
+morning : common noun, singular, indicates time
+contains : verb, present tense, action of "package"
+fragile : adjective, modifies "items"
+items : common noun, plural, object of "contains"
+
+Sentence: Mr. Thompson, whom everyone respects, is retiring next month.
+Mr. : title, part of the proper noun
+Thompson : proper noun, subject, antecedent of the relative clause
+, : punctuation, marks the beginning of a non-restrictive clause
+whom : relative pronoun, refers to "Thompson", object of "respects", introduces a non-restrictive clause
+everyone : indefinite pronoun, subject of "respects"
+respects : verb, present tense, action of "everyone"
+, : punctuation, marks the end of the non-restrictive clause
+is : auxiliary verb, present tense, part of present continuous
+retiring : present participle, main verb indicating future action
+next : adjective, modifies "month"
+month : common noun, singular, indicates time

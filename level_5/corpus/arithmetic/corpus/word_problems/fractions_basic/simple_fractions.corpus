@@ -1,0 +1,44 @@
+A pizza is cut into 8 slices and Tom eats 3 slices. How many slices are left? Output in json, format { "result": number }
+{ "result": 5 }
+
+Sarah has 15 apples and gives 1/3 of them to her friend. How many apples does she give away? Output in json, format { "result": number }
+{ "result": 5 }
+
+A runner completes 2/5 of a 20 kilometer race. How many kilometers has the runner covered? Output in json, format { "result": number }
+{ "result": 8 }
+
+There are 30 students in a class and 2/3 of them play soccer. How many students play soccer? Output in json, format { "result": number }
+{ "result": 20 }
+
+A bottle holds 40 liters of water and 1/5 of it is poured out. How many liters remain in the bottle? Output in json, format { "result": number }
+{ "result": 32 }
+
+Jack reads 1/8 of a 64-page book before dinner. How many pages did he read? Output in json, format { "result": number }
+{ "result": 8 }
+
+A fabric roll is 25 meters long and a tailor uses 2/5 of it for a dress. How many meters of fabric are used? Output in json, format { "result": number }
+{ "result": 10 }
+
+Emily spends 1/3 of her 12 hours working on a project. How many hours did she spend working? Output in json, format { "result": number }
+{ "result": 4 }
+
+A bag contains 50 marbles and 3/5 of them are blue. How many blue marbles are in the bag? Output in json, format { "result": number }
+{ "result": 30 }
+
+A cyclist rides 1/5 of a 35 kilometer path. What distance in kilometers did the cyclist cover? Output in json, format { "result": number }
+{ "result": 7 }
+
+A chef prepares 16 dishes and 3/8 of them are vegetarian. How many vegetarian dishes are prepared? Output in json, format { "result": number }
+{ "result": 6 }
+
+A tank holds 24 gallons of fuel and 1/8 of the fuel is consumed. How many gallons are consumed? Output in json, format { "result": number }
+{ "result": 3 }
+
+Lily has 18 stickers and gives 2/3 of them to her sister. How many stickers does Lily have left? Output in json, format { "result": number }
+{ "result": 6 }
+
+A garden has 40 flowers and 1/5 of them are roses. How many flowers are not roses? Output in json, format { "result": number }
+{ "result": 32 }
+
+Mark drives 2/3 of a 21 mile trip before stopping for gas. How many miles has Mark driven? Output in json, format { "result": number }
+{ "result": 14 }

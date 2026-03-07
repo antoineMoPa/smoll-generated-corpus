@@ -1,0 +1,30 @@
+Liam buys a sandwich for $4.75 and pays with a $10 bill. How much change does he receive? Output in json, format { "result": number }
+{ "result": 5.25 }
+Output in json, format { "result": number } — Sarah pays $20.00 for a book that costs $12.50. What is her change?
+{ "result": 7.5 }
+Marcus buys three notebooks at $2.00 each. Output in json, format { "result": number } How much change does he get from a $10 bill?
+{ "result": 4 }
+Emma purchases a juice box for $1.35 and hands the cashier a five-dollar bill. How much money back does she get? Output in json, format { "result": 0 }
+{ "result": 3.65 }
+A bus ticket costs $2.25 and you pay with a $5 bill. How much change is returned? Output in json.
+{ "result": 2.75 }
+Noah buys a pencil case for $8.99 and gives the clerk $15.00. What is the amount of change? Output in json, format { "result": number }
+{ "result": 6.01 }
+Output in json, format { "result": number } — A movie ticket is $9.50 and James pays with a $20 bill. How much change does he receive?
+{ "result": 10.5 }
+Olivia buys two apples for $0.80 each. Output in json, format { "result": number } If she pays with $5, how much change does she get?
+{ "result": 3.4 }
+Jake buys a magazine for $3.45 and pays with a $10 bill. How much change should he receive? Output in json, format { "result": 0 }
+{ "result": 6.55 }
+A cup of coffee costs $2.50 and you pay with a $10 bill. How much change do you get? Output in json.
+{ "result": 7.5 }
+Output in json, format { "result": number } — Maya buys a toy for $14.20 and pays with a $20 bill. What is her change?
+{ "result": 5.8 }
+Leo buys a bag of chips for $1.95 and a soda for $1.05. Output in json, format { "result": number } How much change does he get from $5?
+{ "result": 2 }
+Ava purchases a scarf for $22.50 and hands the cashier $30.00. How much change is returned? Output in json, format { "result": 0 }
+{ "result": 7.5 }
+Ben buys a ticket to the zoo for $18.75 and pays with a $50 bill. What is his change? Output in json.
+{ "result": 31.25 }
+Output in json, format { "result": number } — Chloe buys a hat for $24.99 and pays with $30. How much money does she get back?
+{ "result": 5.01 }

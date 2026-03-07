@@ -1,0 +1,44 @@
+A cyclist rides at 15 km/h for 2 hours. How far did they travel? Output in json, format { "result": number }
+{ "result": 30 }
+
+A train moves at 80 mph for 1.5 hours. What is the total distance covered? Output in json, format { "result": number }
+{ "result": 120 }
+
+Sarah runs at 10 km/h for 30 minutes. How many kilometers did she run? Output in json, format { "result": number }
+{ "result": 5 }
+
+A car travels at 60 mph for 45 minutes. What distance did the car cover? Output in json, format { "result": number }
+{ "result": 45 }
+
+A delivery truck drives at 50 km/h for 3 hours. How far does it go? Output in json, format { "result": number }
+{ "result": 150 }
+
+A jogger maintains a speed of 8 km/h for 1 hour and 15 minutes. What is the total distance? Output in json, format { "result": number }
+{ "result": 10 }
+
+A bus travels at 40 mph for 2.5 hours. How many miles does it cover? Output in json, format { "result": number }
+{ "result": 100 }
+
+A scooter rider goes at 25 km/h for 48 minutes. What distance did they travel? Output in json, format { "result": number }
+{ "result": 20 }
+
+A marathon runner averages 12 km/h for 2 hours. How far did they run? Output in json, format { "result": number }
+{ "result": 24 }
+
+A freight train moves at 100 km/h for 1 hour and 30 minutes. What is the distance traveled? Output in json, format { "result": number }
+{ "result": 150 }
+
+A family drives at 55 mph for 4 hours on a road trip. How far did they travel? Output in json, format { "result": number }
+{ "result": 220 }
+
+A pedestrian walks at 5 km/h for 50 minutes. How many kilometers did they walk? Output in json, format { "result": number }
+{ "result": 4.17 }
+
+A racing car speeds at 90 mph for 20 minutes. What distance does it cover? Output in json, format { "result": number }
+{ "result": 30 }
+
+A commuter cyclist rides at 18 km/h for 1 hour and 40 minutes. How far is the journey? Output in json, format { "result": number }
+{ "result": 30 }
+
+A taxi drives at 35 mph for 2 hours and 24 minutes. What is the total distance? Output in json, format { "result": number }
+{ "result": 84 }

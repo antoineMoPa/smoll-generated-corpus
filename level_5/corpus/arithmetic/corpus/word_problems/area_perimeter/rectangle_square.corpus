@@ -1,0 +1,44 @@
+A garden bed is 12 meters long and 8 meters wide. What is the total area in square meters? Output in json, format { "result": number }
+{ "result": 96 }
+
+Output in json, format { "result": number } — A square picture frame has sides of 15 inches. What is the total perimeter in inches?
+{ "result": 60 }
+
+A rectangular soccer field is 25 yards wide. Output in json, format { "result": number } If the area is 750 square yards, how long is the field?
+{ "result": 30 }
+
+A kitchen floor tile is a square with a side length of 9 inches. What is the perimeter of one tile? Output in json, format { "result": 0 }
+{ "result": 36 }
+
+A farmer needs to fence a rectangular pasture that is 20 feet by 14 feet. How many feet of fencing are required? Output in json.
+{ "result": 68 }
+
+Maria wants to put a border around her rectangular bedroom which is 10 feet by 12 feet. What is the total length of the border needed? Output in json, format { "result": number }
+{ "result": 44 }
+
+Output in json, format { "result": number } — A square stamp has an area of 16 square centimeters. How long is one side of the stamp?
+{ "result": 4 }
+
+A rectangular tablecloth is 30 inches long. Output in json, format { "result": number } If the perimeter is 80 inches, what is the width of the tablecloth?
+{ "result": 10 }
+
+A playground is shaped like a square with each side measuring 18 meters. What is the area of the playground in square meters? Output in json, format { "result": 0 }
+{ "result": 324 }
+
+Tom is building a rectangular sandbox that is 6 feet wide and 9 feet long. How many square feet of sand are needed to fill it? Output in json.
+{ "result": 54 }
+
+Output in json, format { "result": number } — A rectangular whiteboard has a perimeter of 24 feet and a width of 5 feet. What is the length of the whiteboard?
+{ "result": 7 }
+
+A square tile floor has a total area of 100 square feet. Output in json, format { "result": number } What is the length of one side of the square floor?
+{ "result": 10 }
+
+A rectangular banner is 20 feet long and 4 feet wide. What is the perimeter of the banner? Output in json, format { "result": 0 }
+{ "result": 48 }
+
+Output in json, format { "result": number } — A square garden has a perimeter of 32 meters. What is the area of the garden in square meters?
+{ "result": 64 }
+
+A rectangular sheet of paper is 11 inches long and 8.5 inches wide. What is the area of the paper? Output in json, format { "result": number }
+{ "result": 93.5 }

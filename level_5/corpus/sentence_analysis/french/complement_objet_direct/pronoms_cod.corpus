@@ -1,0 +1,108 @@
+Phrase : Je la vois demain.
+Je : pronom personnel, première personne du singulier, sujet du verbe «vois»
+la : pronom personnel, féminin singulier, complément d'objet direct du verbe «vois»
+vois : verbe «voir», 1re personne du singulier, présent de l'indicatif, voix active
+demain : adverbe de temps
+
+Phrase : Tu le comprends parfaitement.
+Tu : pronom personnel, deuxième personne du singulier, sujet du verbe «comprends»
+le : pronom personnel, masculin singulier, complément d'objet direct du verbe «comprends»
+comprends : verbe «comprendre», 2e personne du singulier, présent de l'indicatif, voix active
+parfaitement : adverbe de manière
+
+Phrase : Nous les invitons ce soir.
+Nous : pronom personnel, première personne du pluriel, sujet du verbe «invitons»
+les : pronom personnel, masculin ou féminin pluriel, complément d'objet direct du verbe «invitons»
+invitons : verbe «inviter», 1re personne du pluriel, présent de l'indicatif, voix active
+ce : déterminant démonstratif, masculin singulier
+soir : nom commun, masculin singulier, complément circonstanciel de temps
+
+Phrase : Elle me connaît depuis l'enfance.
+Elle : pronom personnel, troisième personne du singulier, féminin, sujet du verbe «connaît»
+me : pronom personnel, première personne du singulier, complément d'objet direct du verbe «connaît»
+connaît : verbe «connaître», 3e personne du singulier, présent de l'indicatif, voix active
+depuis : préposition
+l' : déterminant défini élidé, masculin ou féminin singulier
+enfance : nom commun, féminin singulier, complément du nom ou de temps
+
+Phrase : Vous nous écoutez attentivement.
+Vous : pronom personnel, deuxième personne du pluriel, sujet du verbe «écoutez»
+nous : pronom personnel, première personne du pluriel, complément d'objet direct du verbe «écoutez»
+écoutez : verbe «écouter», 2e personne du pluriel, présent de l'indicatif, voix active
+attentivement : adverbe de manière
+
+Phrase : Il te cherche partout.
+Il : pronom personnel, troisième personne du singulier, masculin, sujet du verbe «cherche»
+te : pronom personnel, deuxième personne du singulier, complément d'objet direct du verbe «cherche»
+cherche : verbe «chercher», 3e personne du singulier, présent de l'indicatif, voix active
+partout : adverbe de lieu
+
+Phrase : Marie l'a finie hier.
+Marie : nom propre, féminin singulier, sujet du verbe «a finie»
+l' : pronom personnel, masculin ou féminin singulier, complément d'objet direct du verbe «a finie»
+a : auxiliaire «avoir», 3e personne du singulier, présent de l'indicatif
+finie : participe passé du verbe «finir», accordé avec le complément d'objet direct «l'»
+hier : adverbe de temps
+
+Phrase : Les enfants vous attendent à la gare.
+Les : déterminant défini, masculin ou féminin pluriel
+enfants : nom commun, masculin pluriel, sujet du verbe «attendent»
+vous : pronom personnel, deuxième personne du singulier ou du pluriel, complément d'objet direct du verbe «attendent»
+attendent : verbe «attendre», 3e personne du pluriel, présent de l'indicatif, voix active
+à : préposition
+la : déterminant défini, féminin singulier
+gare : nom commun, féminin singulier, complément circonstanciel de lieu
+
+Phrase : Pierre nous a appelés ce matin.
+Pierre : nom propre, masculin singulier, sujet du verbe «a appelés»
+nous : pronom personnel, première personne du pluriel, complément d'objet direct du verbe «a appelés»
+a : auxiliaire «avoir», 3e personne du singulier, présent de l'indicatif
+appelés : participe passé du verbe «appeler», accordé avec le complément d'objet direct «nous»
+ce : déterminant démonstratif, masculin singulier
+matin : nom commun, masculin singulier, complément circonstanciel de temps
+
+Phrase : Je t'adore sincèrement.
+Je : pronom personnel, première personne du singulier, sujet du verbe «adore»
+t' : pronom personnel, deuxième personne du singulier, complément d'objet direct du verbe «adore»
+adore : verbe «adorer», 1re personne du singulier, présent de l'indicatif, voix active
+sincèrement : adverbe de manière
+
+Phrase : Ils les ont vendues rapidement.
+Ils : pronom personnel, troisième personne du pluriel, masculin, sujet du verbe «ont vendues»
+les : pronom personnel, masculin ou féminin pluriel, complément d'objet direct du verbe «ont vendues»
+ont : auxiliaire «avoir», 3e personne du pluriel, présent de l'indicatif
+vendues : participe passé du verbe «vendre», accordé avec le complément d'objet direct «les»
+rapidement : adverbe de manière
+
+Phrase : Ma sœur me recommande ce livre.
+Ma : déterminant possessif, féminin singulier
+sœur : nom commun, féminin singulier, sujet du verbe «recommande»
+me : pronom personnel, première personne du singulier, complément d'objet direct du verbe «recommande»
+recommande : verbe «recommander», 3e personne du singulier, présent de l'indicatif, voix active
+ce : déterminant démonstratif, masculin singulier
+livre : nom commun, masculin singulier, complément d'objet indirect ou second objet (selon analyse, ici ignored as focus is on 'me')
+
+Phrase : Le professeur vous félicite pour ce résultat.
+Le : déterminant défini, masculin singulier
+professeur : nom commun, masculin singulier, sujet du verbe «félicite»
+vous : pronom personnel, deuxième personne du pluriel, complément d'objet direct du verbe «félicite»
+félicite : verbe «féliciter», 3e personne du singulier, présent de l'indicatif, voix active
+pour : préposition
+ce : déterminant démonstratif, masculin singulier
+résultat : nom commun, masculin singulier, complément du nom ou de cause
+
+Phrase : Nous l'avons choisie ensemble.
+Nous : pronom personnel, première personne du pluriel, sujet du verbe «avons choisie»
+l' : pronom personnel, féminin singulier, complément d'objet direct du verbe «avons choisie»
+avons : auxiliaire «avoir», 1re personne du pluriel, présent de l'indicatif
+choisie : participe passé du verbe «choisir», accordé avec le complément d'objet direct «l'»
+ensemble : adverbe de manière
+
+Phrase : Tu les as trouvés dans le jardin.
+Tu : pronom personnel, deuxième personne du singulier, sujet du verbe «as trouvés»
+les : pronom personnel, masculin pluriel, complément d'objet direct du verbe «as trouvés»
+as : auxiliaire «avoir», 2e personne du singulier, présent de l'indicatif
+trouvés : participe passé du verbe «trouver», accordé avec le complément d'objet direct «les»
+dans : préposition
+le : déterminant défini, masculin singulier
+jardin : nom commun, masculin singulier, complément circonstanciel de lieu

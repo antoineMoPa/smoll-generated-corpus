@@ -1,0 +1,165 @@
+Sentence: Do sit down!
+Do : auxiliary verb, used for emphasis in imperative mood
+sit : main verb, base form, imperative mood
+down : adverb, indicates direction
+! : punctuation, exclamation mark
+Implicit subject: you (understood)
+Mood: imperative (emphatic)
+
+Sentence: Don't touch the wet paint.
+Don't : contraction of "do not", auxiliary verb for negative imperative
+touch : main verb, base form, imperative mood
+the : definite article, specifies the noun
+wet : adjective, describes the noun "paint"
+paint : noun, singular, direct object of "touch"
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (negative)
+
+Sentence: Let's go to the park.
+Let's : contraction of "let us", first person plural imperative marker
+go : main verb, base form, imperative mood
+to : preposition, indicates direction
+the : definite article, specifies the noun
+park : noun, singular, object of the preposition "to"
+. : punctuation, period
+Implicit subject: we (included in "Let's")
+Mood: imperative (hortatory)
+
+Sentence: Please close the door behind you.
+Please : adverb, polite marker for imperative
+close : main verb, base form, imperative mood
+the : definite article, specifies the noun
+door : noun, singular, direct object of "close"
+behind : preposition, indicates location
+you : pronoun, object of the preposition "behind"
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (polite)
+
+Sentence: Do be careful with that glass!
+Do : auxiliary verb, used for emphasis in imperative mood
+be : main verb (copula), base form, imperative mood
+careful : adjective, subject complement describing the implicit subject
+with : preposition, indicates association
+that : demonstrative adjective, specifies the noun
+glass : noun, singular, object of the preposition "with"
+! : punctuation, exclamation mark
+Implicit subject: you (understood)
+Mood: imperative (emphatic)
+
+Sentence: Let him finish his homework first.
+Let : main verb, base form, imperative mood
+him : pronoun, object of "let"
+finish : main verb, base form, bare infinitive complement
+his : possessive adjective, modifies "homework"
+homework : noun, uncountable, direct object of "finish"
+first : adverb, indicates time sequence
+. : punctuation, period
+Implicit subject: you (understood, commanding regarding "him")
+Mood: imperative (permissive)
+
+Sentence: Don't ever speak to me like that again.
+Don't : contraction of "do not", auxiliary verb for negative imperative
+ever : adverb, emphasizes the negative frequency
+speak : main verb, base form, imperative mood
+to : preposition, indicates recipient
+me : pronoun, object of the preposition "to"
+like : preposition, indicates manner
+that : demonstrative pronoun, object of the preposition "like"
+again : adverb, indicates repetition
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (negative, emphatic)
+
+Sentence: Let's not argue about trivial matters.
+Let's : contraction of "let us", first person plural imperative marker
+not : adverb, negates the following verb
+argue : main verb, base form, imperative mood
+about : preposition, indicates topic
+trivial : adjective, describes the noun "matters"
+matters : noun, plural, object of the preposition "about"
+. : punctuation, period
+Implicit subject: we (included in "Let's")
+Mood: imperative (negative hortatory)
+
+Sentence: Do try the chocolate cake; it's delicious.
+Do : auxiliary verb, used for emphasis in imperative mood
+try : main verb, base form, imperative mood
+the : definite article, specifies the noun
+chocolate : noun acting as adjective, describes "cake"
+cake : noun, singular, direct object of "try"
+; : punctuation, semicolon
+it's : contraction of "it is", pronoun and copula
+delicious : adjective, subject complement
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (emphatic suggestion)
+
+Sentence: Never forget where you came from.
+Never : adverb, negates the verb absolutely
+forget : main verb, base form, imperative mood
+where : subordinating conjunction, introduces the clause
+you : pronoun, subject of the subordinate clause
+came : verb, past tense, predicate of the subordinate clause
+from : preposition, part of the phrasal verb "came from"
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (negative absolute)
+
+Sentence: Let the dog out immediately.
+Let : main verb, base form, imperative mood
+the : definite article, specifies the noun
+dog : noun, singular, object of "let"
+out : adverb, indicates direction/result
+immediately : adverb, indicates time urgency
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (directive)
+
+Sentence: Do not hesitate to call if you need help.
+Do : auxiliary verb, part of negative construction
+not : adverb, negates the verb
+hesitate : main verb, base form, imperative mood
+to : particle, marks the infinitive
+call : verb, base form, infinitive complement
+if : subordinating conjunction, introduces condition
+you : pronoun, subject of the subordinate clause
+need : verb, present tense, predicate of the subordinate clause
+help : noun, uncountable, direct object of "need"
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (negative advice)
+
+Sentence: Let's celebrate our success tonight!
+Let's : contraction of "let us", first person plural imperative marker
+celebrate : main verb, base form, imperative mood
+our : possessive adjective, modifies "success"
+success : noun, uncountable, direct object of "celebrate"
+tonight : adverb, indicates time
+! : punctuation, exclamation mark
+Implicit subject: we (included in "Let's")
+Mood: imperative (hortatory)
+
+Sentence: Just ignore the noise and keep working.
+Just : adverb, softens the command or implies simplicity
+ignore : main verb, base form, imperative mood
+the : definite article, specifies the noun
+noise : noun, uncountable, direct object of "ignore"
+and : coordinating conjunction, links two verbs
+keep : main verb, base form, imperative mood
+working : gerund/participle, complement of "keep"
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (advisory)
+
+Sentence: Don't let the opportunity slip away.
+Don't : contraction of "do not", auxiliary verb for negative imperative
+let : main verb, base form, imperative mood
+the : definite article, specifies the noun
+opportunity : noun, singular, object of "let"
+slip : verb, base form, bare infinitive complement
+away : adverb, indicates direction/result
+. : punctuation, period
+Implicit subject: you (understood)
+Mood: imperative (negative warning)

@@ -1,0 +1,185 @@
+Sentence: I gave her my book because hers was lost.
+I : personal pronoun, first person singular, subject case
+gave : verb, past tense
+her : personal pronoun, third person singular, feminine, object case
+my : possessive adjective, first person singular
+book : common noun, singular, direct object of "gave"
+because : subordinating conjunction
+hers : possessive pronoun, third person singular, feminine
+was : verb, past tense, third person singular
+lost : adjective, predicate complement
+
+Sentence: They invited us to their party, but we declined their offer.
+They : personal pronoun, third person plural, subject case
+invited : verb, past tense
+us : personal pronoun, first person plural, object case
+to : preposition
+their : possessive adjective, third person plural
+party : common noun, singular, object of preposition
+but : coordinating conjunction
+we : personal pronoun, first person plural, subject case
+declined : verb, past tense
+their : possessive adjective, third person plural
+offer : common noun, singular, direct object of "declined"
+
+Sentence: He told him that his car was faster than mine.
+He : personal pronoun, third person singular, masculine, subject case
+told : verb, past tense
+him : personal pronoun, third person singular, masculine, object case
+that : subordinating conjunction
+his : possessive adjective, third person singular, masculine
+car : common noun, singular, subject of subordinate clause
+was : verb, past tense, third person singular
+faster : comparative adjective
+than : preposition
+mine : possessive pronoun, first person singular
+
+Sentence: She loves her dog, and it loves her back.
+She : personal pronoun, third person singular, feminine, subject case
+loves : verb, present tense, third person singular
+her : possessive adjective, third person singular, feminine
+dog : common noun, singular, direct object of "loves"
+and : coordinating conjunction
+it : personal pronoun, third person singular, neuter, subject case
+loves : verb, present tense, third person singular
+her : personal pronoun, third person singular, feminine, object case
+back : adverb
+
+Sentence: You should bring your friends so they can meet ours.
+You : personal pronoun, second person, subject case
+should : modal auxiliary verb
+bring : main verb, base form
+your : possessive adjective, second person
+friends : common noun, plural, direct object of "bring"
+so : subordinating conjunction
+they : personal pronoun, third person plural, subject case
+can : modal auxiliary verb
+meet : main verb, base form
+ours : possessive pronoun, first person plural
+
+Sentence: We saw them at the park, and they waved to us.
+We : personal pronoun, first person plural, subject case
+saw : verb, past tense
+them : personal pronoun, third person plural, object case
+at : preposition
+the : definite article
+park : common noun, singular, object of preposition
+and : coordinating conjunction
+they : personal pronoun, third person plural, subject case
+waved : verb, past tense
+to : preposition
+us : personal pronoun, first person plural, object case
+
+Sentence: Is this pen yours or is it hers?
+Is : verb, present tense, third person singular
+this : demonstrative adjective
+pen : common noun, singular, subject complement
+yours : possessive pronoun, second person
+or : coordinating conjunction
+is : verb, present tense, third person singular
+it : personal pronoun, third person singular, neuter, subject case
+hers : possessive pronoun, third person singular, feminine
+
+Sentence: My brother and I went to their house, but they were not home.
+My : possessive adjective, first person singular
+brother : common noun, singular, part of compound subject
+and : coordinating conjunction
+I : personal pronoun, first person singular, subject case
+went : verb, past tense
+to : preposition
+their : possessive adjective, third person plural
+house : common noun, singular, object of preposition
+but : coordinating conjunction
+they : personal pronoun, third person plural, subject case
+were : verb, past tense, plural
+not : adverb of negation
+home : adverb of place
+
+Sentence: The teacher asked me if I had finished my assignment.
+The : definite article
+teacher : common noun, singular, subject of "asked"
+asked : verb, past tense
+me : personal pronoun, first person singular, object case
+if : subordinating conjunction
+I : personal pronoun, first person singular, subject case
+had : auxiliary verb, past perfect
+finished : main verb, past participle
+my : possessive adjective, first person singular
+assignment : common noun, singular, direct object of "finished"
+
+Sentence: Nobody knows where he keeps his money or who owns it.
+Nobody : indefinite pronoun, subject of "knows"
+knows : verb, present tense, third person singular
+where : interrogative adverb
+he : personal pronoun, third person singular, masculine, subject case
+keeps : verb, present tense, third person singular
+his : possessive adjective, third person singular, masculine
+money : common noun, singular, direct object of "keeps"
+or : coordinating conjunction
+who : interrogative pronoun, subject of "owns"
+owns : verb, present tense, third person singular
+it : personal pronoun, third person singular, neuter, object case
+
+Sentence: Please give them our regards and tell them we miss them.
+Please : adverb of politeness
+give : verb, imperative mood
+them : personal pronoun, third person plural, indirect object
+our : possessive adjective, first person plural
+regards : common noun, plural, direct object of "give"
+and : coordinating conjunction
+tell : verb, imperative mood
+them : personal pronoun, third person plural, indirect object
+we : personal pronoun, first person plural, subject case
+miss : verb, present tense
+them : personal pronoun, third person plural, object case
+
+Sentence: Her idea was better than his, so we chose hers.
+Her : possessive adjective, third person singular, feminine
+idea : common noun, singular, subject of "was"
+was : verb, past tense, third person singular
+better : comparative adjective
+than : preposition
+his : possessive pronoun, third person singular, masculine
+so : coordinating conjunction
+we : personal pronoun, first person plural, subject case
+chose : verb, past tense
+hers : possessive pronoun, third person singular, feminine, direct object of "chose"
+
+Sentence: It is important for us to do our best for them.
+It : personal pronoun, third person singular, neuter, dummy subject
+is : verb, present tense, third person singular
+important : adjective
+for : preposition
+us : personal pronoun, first person plural, object of preposition
+to : particle marking infinitive
+do : verb, base form
+our : possessive adjective, first person plural
+best : noun phrase, direct object of "do"
+for : preposition
+them : personal pronoun, third person plural, object of preposition
+
+Sentence: You and she are the only ones who know our secret.
+You : personal pronoun, second person, part of compound subject
+and : coordinating conjunction
+she : personal pronoun, third person singular, feminine, part of compound subject
+are : verb, present tense, plural
+the : definite article
+only : adjective
+ones : common noun, plural, subject complement
+who : relative pronoun, subject of "know"
+know : verb, present tense
+our : possessive adjective, first person plural
+secret : common noun, singular, direct object of "know"
+
+Sentence: He bought himself a gift, but she got nothing for her.
+He : personal pronoun, third person singular, masculine, subject case
+bought : verb, past tense
+himself : reflexive pronoun, third person singular, masculine, indirect object
+a : indefinite article
+gift : common noun, singular, direct object of "bought"
+but : coordinating conjunction
+she : personal pronoun, third person singular, feminine, subject case
+got : verb, past tense
+nothing : indefinite pronoun, direct object of "got"
+for : preposition
+her : personal pronoun, third person singular, feminine, object of preposition

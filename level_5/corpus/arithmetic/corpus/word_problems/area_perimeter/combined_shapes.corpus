@@ -1,0 +1,44 @@
+A garden is shaped like a large rectangle 12 meters long and 8 meters wide with a smaller square pond 3 meters on each side removed from the center. What is the remaining area of the garden in square meters? Output in json, format { "result": number }
+{ "result": 87 }
+
+Two rectangular rugs, one 5 feet by 4 feet and another 6 feet by 3 feet, are placed side by side without overlapping on a floor. What is the total area covered by both rugs in square feet? Output in json, format { "result": number }
+{ "result": 38 }
+
+A painter needs to cover an L-shaped wall made of a 10 foot by 8 foot rectangle attached to a 4 foot by 6 foot rectangle along the shorter side. What is the total wall area to be painted in square feet? Output in json, format { "result": number }
+{ "result": 104 }
+
+A playground consists of a square sandbox 6 meters on each side attached to a rectangular swing set area 8 meters long and 4 meters wide. What is the total area of the playground in square meters? Output in json, format { "result": number }
+{ "result": 68 }
+
+A rectangular tablecloth measuring 14 inches by 10 inches has a square hole with 2 inch sides cut out for a centerpiece. What is the remaining area of the tablecloth in square inches? Output in json, format { "result": number }
+{ "result": 136 }
+
+A farmer fences a field shaped like two adjacent rectangles, one 15 yards by 5 yards and the other 15 yards by 7 yards sharing the 15 yard side. What is the total area of the field in square yards? Output in json, format { "result": number }
+{ "result": 180 }
+
+A cookie sheet is a rectangle 12 inches long and 9 inches wide, but a 3 inch by 3 inch corner is damaged and cannot be used. What is the usable area of the cookie sheet in square inches? Output in json, format { "result": number }
+{ "result": 99 }
+
+A running track surrounds a rectangular grass field that is 20 meters long and 10 meters wide, adding a 2 meter border all around. What is the area of just the track in square meters? Output in json, format { "result": number }
+{ "result": 136 }
+
+A bookshelf back panel is made by joining a 7 foot by 3 foot rectangle vertically with a 4 foot by 3 foot rectangle horizontally at the bottom. What is the total area of the panel in square feet? Output in json, format { "result": number }
+{ "result": 33 }
+
+A swimming pool is a large rectangle 18 feet by 12 feet with a smaller rectangular diving well 6 feet by 4 feet attached to one end. What is the total surface area of the water in square feet? Output in json, format { "result": number }
+{ "result": 240 }
+
+A quilt block is a 10 inch square with four smaller 2 inch squares removed from each corner. What is the area of the remaining fabric in square inches? Output in json, format { "result": number }
+{ "result": 84 }
+
+A parking lot is shaped like a T, formed by a horizontal rectangle 20 meters by 5 meters and a vertical rectangle 10 meters by 5 meters connected in the middle. What is the total area of the parking lot in square meters? Output in json, format { "result": number }
+{ "result": 150 }
+
+A piece of cardboard is 16 cm long and 10 cm wide, and a strip 2 cm wide is cut off the entire length of one side. What is the area of the remaining piece in square centimeters? Output in json, format { "result": number }
+{ "result": 128 }
+
+A floor tile design combines a 5 inch by 5 inch square and a 5 inch by 3 inch rectangle to form an L-shape. What is the total area of one tile in square inches? Output in json, format { "result": number }
+{ "result": 40 }
+
+A garden bed is a rectangle 11 feet by 7 feet, but a triangular section is not used; instead, calculate the area if a 3 foot by 3 foot square section is removed from a corner. What is the remaining area in square feet? Output in json, format { "result": number }
+{ "result": 68 }

@@ -1,0 +1,44 @@
+Tom has 15 marbles and finds 8 more. How many marbles does he have now? Output in json, format { "result": number }
+{ "result": 23 }
+
+Output in json, format { "result": number } — A bus had 42 passengers and 13 got off. How many passengers are left?
+{ "result": 29 }
+
+Sarah baked 35 cookies. Output in json, format { "result": number } How many more does she need to reach 50?
+{ "result": 15 }
+
+There are 60 books on the shelf. Output in json, format { "result": 0 } If 25 are borrowed, how many remain?
+{ "result": 35 }
+
+A garden has 12 red flowers and 18 yellow ones. How many flowers are there in total? Output in json.
+{ "result": 30 }
+
+Lisa scored 28 points in the first game and 15 in the second. What is her total score? Output in json, format { "result": number }
+{ "result": 43 }
+
+Output in json, format { "result": number } — A tank holds 80 liters of water. If 35 liters are used, how much is left?
+{ "result": 45 }
+
+Mike collected 45 shells on Monday. Output in json, format { "result": number } How many did he collect on Tuesday if he has 70 in total?
+{ "result": 25 }
+
+A store sold 55 hats. Output in json, format { "result": 0 } If they started with 90, how many are unsold?
+{ "result": 35 }
+
+There were 22 birds on a wire. Output in json. If 9 flew away, how many are left?
+{ "result": 13 }
+
+James bought a toy for 18 dollars and a book for 12 dollars. How much did he spend in total? Output in json, format { "result": number }
+{ "result": 30 }
+
+Output in json, format { "result": number } — A classroom has 30 desks. If 4 are broken, how many are usable?
+{ "result": 26 }
+
+Emma ran 40 meters. Output in json, format { "result": number } How many more meters must she run to complete 65 meters?
+{ "result": 25 }
+
+A box contains 75 candies. Output in json, format { "result": 0 } If 20 are eaten, how many are left?
+{ "result": 55 }
+
+A farmer harvested 50 pumpkins and sold 30. How many pumpkins does he have left? Output in json.
+{ "result": 20 }

@@ -1,0 +1,107 @@
+Phrase : Je te vois souvent.
+je : pronom personnel, 1re personne du singulier, fonction sujet du verbe «vois»
+te : pronom personnel, 2e personne du singulier, fonction complément d'objet direct du verbe «vois»
+vois : verbe «voir», 1re personne du singulier, présent de l'indicatif
+souvent : adverbe de fréquence
+
+Phrase : Elle lui a donné le livre.
+elle : pronom personnel, 3e personne du singulier, féminin, fonction sujet du verbe «a donné»
+lui : pronom personnel, 3e personne du singulier, fonction complément d'objet indirect du verbe «a donné»
+a : auxiliaire «avoir», 3e personne du singulier, présent de l'indicatif
+donné : participe passé du verbe «donner»
+le : déterminant défini, masculin singulier
+livre : nom commun, masculin singulier, complément d'objet direct du verbe «a donné»
+
+Phrase : Nous les attendons ici.
+nous : pronom personnel, 1re personne du pluriel, fonction sujet du verbe «attendons»
+les : pronom personnel, 3e personne du pluriel, fonction complément d'objet direct du verbe «attendons»
+attendons : verbe «attendre», 1re personne du pluriel, présent de l'indicatif
+ici : adverbe de lieu
+
+Phrase : Vous me parlez clairement.
+vous : pronom personnel, 2e personne du pluriel, fonction sujet du verbe «parlez»
+me : pronom personnel, 1re personne du singulier, fonction complément d'objet indirect du verbe «parlez»
+parlez : verbe «parler», 2e personne du pluriel, présent de l'indicatif
+clairement : adverbe de manière
+
+Phrase : C'est moi qui décide.
+c' : pronom démonstratif neutre, fonction sujet du verbe «est»
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+moi : pronom tonique, 1re personne du singulier, fonction attribut du sujet
+qui : pronom relatif, fonction sujet du verbe «décide»
+décide : verbe «décider», 3e personne du singulier, présent de l'indicatif
+
+Phrase : Il s'intéresse à toi.
+il : pronom personnel, 3e personne du singulier, masculin, fonction sujet du verbe «s'intéresse»
+s' : pronom personnel réfléchi, 3e personne du singulier, fonction complément d'objet indirect du verbe «intéresse»
+intéresse : verbe «s'intéresser», 3e personne du singulier, présent de l'indicatif
+à : préposition
+toi : pronom tonique, 2e personne du singulier, fonction complément d'objet indirect
+
+Phrase : Elles nous ont invités chez eux.
+elles : pronom personnel, 3e personne du pluriel, féminin, fonction sujet du verbe «ont invités»
+nous : pronom personnel, 1re personne du pluriel, fonction complément d'objet direct du verbe «ont invités»
+ont : auxiliaire «avoir», 3e personne du pluriel, présent de l'indicatif
+invités : participe passé du verbe «inviter», accordé avec «nous»
+chez : préposition
+eux : pronom tonique, 3e personne du pluriel, masculin, fonction complément circonstanciel de lieu
+
+Phrase : Tu leur écris une lettre.
+tu : pronom personnel, 2e personne du singulier, fonction sujet du verbe «écris»
+leur : pronom personnel, 3e personne du pluriel, fonction complément d'objet indirect du verbe «écris»
+écris : verbe «écrire», 2e personne du singulier, présent de l'indicatif
+une : déterminant indéfini, féminin singulier
+lettre : nom commun, féminin singulier, complément d'objet direct du verbe «écris»
+
+Phrase : Je pense à elle tout le temps.
+je : pronom personnel, 1re personne du singulier, fonction sujet du verbe «pense»
+pense : verbe «penser», 1re personne du singulier, présent de l'indicatif
+à : préposition
+elle : pronom tonique, 3e personne du singulier, féminin, fonction complément d'objet indirect
+tout : déterminant, masculin singulier
+le : déterminant défini, masculin singulier
+temps : nom commun, masculin singulier
+
+Phrase : Ils se regardent dans le miroir.
+ils : pronom personnel, 3e personne du pluriel, masculin, fonction sujet du verbe «se regardent»
+se : pronom personnel réfléchi, 3e personne du pluriel, fonction complément d'objet direct du verbe «regardent»
+regardent : verbe «regarder», 3e personne du pluriel, présent de l'indicatif
+dans : préposition
+le : déterminant défini, masculin singulier
+miroir : nom commun, masculin singulier, complément circonstanciel de lieu
+
+Phrase : Elle et moi partons ensemble.
+elle : pronom tonique, 3e personne du singulier, féminin, fonction partie du sujet composé
+et : conjonction de coordination
+moi : pronom tonique, 1re personne du singulier, fonction partie du sujet composé
+partons : verbe «partir», 1re personne du pluriel, présent de l'indicatif
+ensemble : adverbe de manière
+
+Phrase : On vous a vus hier.
+on : pronom indéfini, fonction sujet du verbe «a vus»
+vous : pronom personnel, 2e personne du pluriel, fonction complément d'objet direct du verbe «a vus»
+a : auxiliaire «avoir», 3e personne du singulier, présent de l'indicatif
+vus : participe passé du verbe «voir», accordé avec «vous»
+hier : adverbe de temps
+
+Phrase : Lui seul comprend la situation.
+lui : pronom tonique, 3e personne du singulier, masculin, fonction sujet du verbe «comprend»
+seul : adjectif qualificatif, masculin singulier, épithète de «lui»
+comprend : verbe «comprendre», 3e personne du singulier, présent de l'indicatif
+la : déterminant défini, féminin singulier
+situation : nom commun, féminin singulier, complément d'objet direct du verbe «comprend»
+
+Phrase : Nous leur parlons d'eux.
+nous : pronom personnel, 1re personne du pluriel, fonction sujet du verbe «parlons»
+leur : pronom personnel, 3e personne du pluriel, fonction complément d'objet indirect du verbe «parlons»
+parlons : verbe «parler», 1re personne du pluriel, présent de l'indicatif
+d' : préposition «de» élidée
+eux : pronom tonique, 3e personne du pluriel, masculin, fonction complément d'objet indirect
+
+Phrase : Je t'invite, toi et lui.
+je : pronom personnel, 1re personne du singulier, fonction sujet du verbe «invite»
+t' : pronom personnel, 2e personne du singulier, fonction complément d'objet direct du verbe «invite»
+invite : verbe «inviter», 1re personne du singulier, présent de l'indicatif
+toi : pronom tonique, 2e personne du singulier, fonction apposition au complément d'objet direct
+et : conjonction de coordination
+lui : pronom tonique, 3e personne du singulier, masculin, fonction apposition au complément d'objet direct

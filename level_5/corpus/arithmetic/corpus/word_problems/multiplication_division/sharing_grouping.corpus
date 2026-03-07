@@ -1,0 +1,44 @@
+A teacher has 48 pencils and wants to give an equal number to 6 students. How many pencils does each student get? Output in json, format { "result": number }
+{ "result": 8 }
+
+A bakery packs 90 cookies into boxes that hold 10 cookies each. How many boxes are needed? Output in json, format { "result": number }
+{ "result": 9 }
+
+Four friends split a $60 bill equally for lunch. How much does each person pay? Output in json, format { "result": number }
+{ "result": 15 }
+
+A farmer has 120 apples and places them equally into 8 baskets. How many apples are in each basket? Output in json, format { "result": number }
+{ "result": 15 }
+
+A bus company has 150 seats available and fills exactly 5 buses with equal passengers. How many passengers are on each bus? Output in json, format { "result": number }
+{ "result": 30 }
+
+There are 72 stickers to be shared equally among 9 children. How many stickers does each child receive? Output in json, format { "result": number }
+{ "result": 8 }
+
+A coach divides 100 players into 4 equal teams for a tournament. How many players are on each team? Output in json, format { "result": number }
+{ "result": 25 }
+
+A store has 144 bottles of water and stacks them in piles of 12. How many piles are made? Output in json, format { "result": number }
+{ "result": 12 }
+
+Six neighbors share a garden harvest of 180 tomatoes equally. How many tomatoes does each neighbor get? Output in json, format { "result": number }
+{ "result": 30 }
+
+A printer uses 200 sheets of paper to print 10 identical booklets. How many sheets are in each booklet? Output in json, format { "result": number }
+{ "result": 20 }
+
+A library received 168 new books and placed them on 7 shelves equally. How many books are on each shelf? Output in json, format { "result": number }
+{ "result": 24 }
+
+A factory produces 192 toys and packs them into boxes of 8. How many boxes are filled? Output in json, format { "result": number }
+{ "result": 24 }
+
+Eight hikers share 96 ounces of trail mix equally. How many ounces does each hiker get? Output in json, format { "result": number }
+{ "result": 12 }
+
+A school club raised $175 and decided to split the money equally among 5 charities. How much does each charity receive? Output in json, format { "result": number }
+{ "result": 35 }
+
+A chef has 135 eggs and needs to fill cartons that hold 9 eggs each. How many cartons will be filled? Output in json, format { "result": number }
+{ "result": 15 }

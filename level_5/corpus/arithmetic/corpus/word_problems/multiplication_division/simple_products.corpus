@@ -1,0 +1,30 @@
+A garden has 8 rows with 7 tomato plants in each row. How many tomato plants are there in total? Output in json, format { "result": number }
+{ "result": 56 }
+Output in json, format { "result": number } — A teacher divides 48 students into 6 equal teams. How many students are on each team?
+{ "result": 8 }
+A box holds 9 packs of markers. Output in json, format { "result": number } How many markers are there if each pack has 12 markers?
+{ "result": 108 }
+A baker made 36 cookies and put them into bags of 4. How many bags did she fill? Output in json, format { "result": 0 }
+{ "result": 9 }
+There are 5 shelves with 10 books on each shelf. How many books are there altogether? Output in json.
+{ "result": 50 }
+A bus has 12 seats per row and there are 9 rows. How many seats are on the bus? Output in json, format { "result": number }
+{ "result": 108 }
+Output in json, format { "result": number } — A factory produces 63 toys and packs them into boxes of 7. How many boxes are needed?
+{ "result": 9 }
+A recipe calls for 5 cups of flour for one batch. Output in json, format { "result": number } How many cups are needed for 8 batches?
+{ "result": 40 }
+Liam has 54 baseball cards and wants to share them equally among 6 friends. How many cards does each friend get? Output in json, format { "result": 0 }
+{ "result": 9 }
+A movie theater sells tickets for $8 each. If a group buys 11 tickets, how much do they pay in total? Output in json, format { "result": number }
+{ "result": 88 }
+Output in json, format { "result": number } — A runner completes 4 laps around a track that is 25 meters long. How many meters did the runner run?
+{ "result": 100 }
+A warehouse has 72 boxes stacked in 8 equal columns. Output in json, format { "result": number } How many boxes are in each column?
+{ "result": 9 }
+A pet store has 3 tanks with 11 fish in each tank. How many fish are there in total? Output in json, format { "result": 0 }
+{ "result": 33 }
+There are 100 pencils distributed evenly into 10 cups. How many pencils are in each cup? Output in json.
+{ "result": 10 }
+Output in json, format { "result": number } — A car travels 60 miles every hour. How far does it travel in 2 hours?
+{ "result": 120 }

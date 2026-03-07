@@ -1,0 +1,148 @@
+Phrase : L'homme qui parle est mon oncle.
+l' : déterminant défini, masculin singulier, élidé devant une voyelle
+homme : nom commun, masculin singulier, sujet du verbe «est»
+qui : pronom relatif, sujet du verbe «parle», antécédent «homme»
+parle : verbe «parler», 3e personne du singulier, présent de l'indicatif
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+mon : déterminant possessif, masculin singulier
+oncle : nom commun, masculin singulier, attribut du sujet
+
+Phrase : Le livre que je lis est passionnant.
+le : déterminant défini, masculin singulier
+livre : nom commun, masculin singulier, antécédent du pronom «que»
+que : pronom relatif, complément d'objet direct du verbe «lis»
+je : pronom personnel, 1re personne du singulier, sujet du verbe «lis»
+lis : verbe «lire», 1re personne du singulier, présent de l'indicatif
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+passionnant : adjectif qualificatif, masculin singulier, attribut du sujet
+
+Phrase : La femme dont tu parles habite ici.
+la : déterminant défini, féminin singulier
+femme : nom commun, féminin singulier, sujet du verbe «habite»
+dont : pronom relatif, complément du verbe «parles» (parler de), antécédent «femme»
+tu : pronom personnel, 2e personne du singulier, sujet du verbe «parles»
+parles : verbe «parler», 2e personne du singulier, présent de l'indicatif
+habite : verbe «habiter», 3e personne du singulier, présent de l'indicatif
+ici : adverbe de lieu
+
+Phrase : C'est la ville dans laquelle je suis né.
+c' : pronom démonstratif, élidé devant une voyelle
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+la : déterminant défini, féminin singulier
+ville : nom commun, féminin singulier, antécédent du pronom «laquelle»
+dans : préposition
+laquelle : pronom relatif composé, féminin singulier, complément de lieu
+je : pronom personnel, 1re personne du singulier, sujet du verbe «suis né»
+suis : auxiliaire «être», 1re personne du singulier, présent de l'indicatif
+né : participe passé du verbe «naître», masculin singulier
+
+Phrase : Celui qui travaille dur réussira.
+celui : pronom démonstratif, masculin singulier, sujet du verbe «réussira»
+qui : pronom relatif, sujet du verbe «travaille», antécédent «celui»
+travaille : verbe «travailler», 3e personne du singulier, présent de l'indicatif
+dur : adverbe de manière
+réussira : verbe «réussir», 3e personne du singulier, futur simple de l'indicatif
+
+Phrase : Prends celle qui est sur la table.
+prends : verbe «prendre», 2e personne du singulier, impératif présent
+celle : pronom démonstratif, féminin singulier, complément d'objet direct
+qui : pronom relatif, sujet du verbe «est», antécédent «celle»
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+sur : préposition
+la : déterminant défini, féminin singulier
+table : nom commun, féminin singulier, complément de lieu
+
+Phrase : J'aime ces fleurs, mais je préfère celles du jardin.
+j' : pronom personnel, 1re personne du singulier, élidé
+aime : verbe «aimer», 1re personne du singulier, présent de l'indicatif
+ces : déterminant démonstratif, pluriel
+fleurs : nom commun, féminin pluriel, complément d'objet direct
+mais : conjonction de coordination
+je : pronom personnel, 1re personne du singulier, sujet du verbe «préfère»
+préfère : verbe «préférer», 1re personne du singulier, présent de l'indicatif
+celles : pronom démonstratif, féminin pluriel, complément d'objet direct
+du : contraction de la préposition «de» et du déterminant «le»
+jardin : nom commun, masculin singulier, complément du nom
+
+Phrase : Voici ceux que j'ai invités à la fête.
+voici : verbe impersonnel ou locution verbale introduisant un objet
+ceux : pronom démonstratif, masculin pluriel, complément d'objet direct de «voici»
+que : pronom relatif, complément d'objet direct du verbe «ai invités»
+j' : pronom personnel, 1re personne du singulier, élidé
+ai : auxiliaire «avoir», 1re personne du singulier, présent de l'indicatif
+invités : participe passé du verbe «inviter», masculin pluriel, accord avec «que»
+à : préposition
+la : déterminant défini, féminin singulier
+fête : nom commun, féminin singulier, complément circonstanciel
+
+Phrase : Ce que tu dis est important.
+ce : pronom démonstratif neutre, antécédent du pronom «que»
+que : pronom relatif, complément d'objet direct du verbe «dis»
+tu : pronom personnel, 2e personne du singulier, sujet du verbe «dis»
+dis : verbe «dire», 2e personne du singulier, présent de l'indicatif
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+important : adjectif qualificatif, masculin singulier, attribut du sujet
+
+Phrase : Il a deux voitures, celle-ci est rapide et celle-là est lente.
+il : pronom personnel, 3e personne du masculin singulier, sujet du verbe «a»
+a : verbe «avoir», 3e personne du singulier, présent de l'indicatif
+deux : déterminant numéral cardinal
+voitures : nom commun, féminin pluriel, complément d'objet direct
+celle-ci : pronom démonstratif composé, féminin singulier, sujet du verbe «est»
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+rapide : adjectif qualificatif, invariable, attribut du sujet
+et : conjonction de coordination
+celle-là : pronom démonstratif composé, féminin singulier, sujet du verbe «est»
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+lente : adjectif qualificatif, féminin singulier, attribut du sujet
+
+Phrase : Le projet auquel je pense est complexe.
+le : déterminant défini, masculin singulier
+projet : nom commun, masculin singulier, antécédent du pronom «auquel»
+auquel : pronom relatif composé, masculin singulier, contraction de «à» et «lequel», complément du verbe «pense»
+je : pronom personnel, 1re personne du singulier, sujet du verbe «pense»
+pense : verbe «penser», 1re personne du singulier, présent de l'indicatif
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+complexe : adjectif qualificatif, invariable, attribut du sujet
+
+Phrase : Les outils avec lesquels il travaille sont neufs.
+les : déterminant défini, masculin pluriel
+outils : nom commun, masculin pluriel, sujet du verbe «sont»
+avec : préposition
+lesquels : pronom relatif composé, masculin pluriel, complément de moyen
+il : pronom personnel, 3e personne du masculin singulier, sujet du verbe «travaille»
+travaille : verbe «travailler», 3e personne du singulier, présent de l'indicatif
+sont : verbe «être», 3e personne du pluriel, présent de l'indicatif
+neufs : adjectif qualificatif, masculin pluriel, attribut du sujet
+
+Phrase : La maison dont le toit est rouge appartient à Paul.
+la : déterminant défini, féminin singulier
+maison : nom commun, féminin singulier, sujet du verbe «appartient»
+dont : pronom relatif, complément du nom «toit» (le toit de la maison)
+le : déterminant défini, masculin singulier
+toit : nom commun, masculin singulier, sujet du verbe «est»
+est : verbe «être», 3e personne du singulier, présent de l'indicatif
+rouge : adjectif qualificatif, invariable, attribut du sujet
+appartient : verbe «appartenir», 3e personne du singulier, présent de l'indicatif
+à : préposition
+paul : nom propre, masculin singulier, complément d'objet indirect
+
+Phrase : Choisis le cadeau qui te plaît le plus.
+choisis : verbe «choisir», 2e personne du singulier, impératif présent
+le : déterminant défini, masculin singulier
+cadeau : nom commun, masculin singulier, complément d'objet direct
+qui : pronom relatif, sujet du verbe «plaît», antécédent «cadeau»
+te : pronom personnel, 2e personne du singulier, complément d'objet indirect du verbe «plaît»
+plaît : verbe «plaire», 3e personne du singulier, présent de l'indicatif
+le : déterminant défini, masculin singulier, utilisé dans la locution adverbiale «le plus»
+plus : adverbe de quantité
+
+Phrase : Ce sont celles que nous avons vues hier.
+ce : pronom démonstratif neutre, sujet du verbe «sont»
+sont : verbe «être», 3e personne du pluriel, présent de l'indicatif
+celles : pronom démonstratif, féminin pluriel, attribut du sujet
+que : pronom relatif, complément d'objet direct du verbe «avons vues»
+nous : pronom personnel, 1re personne du pluriel, sujet du verbe «avons vues»
+avons : auxiliaire «avoir», 1re personne du pluriel, présent de l'indicatif
+vues : participe passé du verbe «voir», féminin pluriel, accord avec «que» (antécédent «celles»)
+hier : adverbe de temps

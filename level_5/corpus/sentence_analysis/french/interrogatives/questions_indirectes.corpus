@@ -1,0 +1,145 @@
+Phrase : Je me demande où il habite.
+je : pronom personnel, 1re personne du singulier, sujet du verbe «demande»
+me : pronom personnel réflexif, 1re personne du singulier, complément d'objet indirect du verbe «demande»
+demande : verbe «demander», 1re personne du singulier, présent de l'indicatif, voix active
+où : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+il : pronom personnel, 3e personne du masculin singulier, sujet du verbe «habite»
+habite : verbe «habiter», 3e personne du singulier, présent de l'indicatif, voix active
+
+Phrase : Elle veut savoir quand le train arrive.
+elle : pronom personnel, 3e personne du féminin singulier, sujet du verbe «veut»
+veut : verbe «vouloir», 3e personne du singulier, présent de l'indicatif, voix active
+savoir : verbe «savoir», infinitif présent, complément d'objet direct du verbe «veut»
+quand : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+le : déterminant défini, masculin singulier
+train : nom commun, masculin singulier, sujet du verbe «arrive»
+arrive : verbe «arriver», 3e personne du singulier, présent de l'indicatif, voix active
+
+Phrase : Dis-moi qui a pris mon parapluie.
+dis : verbe «dire», 2e personne du singulier, impératif présent, voix active
+moi : pronom personnel, 1re personne du singulier, complément d'objet indirect du verbe «dis»
+qui : pronom relatif ou interrogatif, sujet du verbe «a pris» dans la subordonnée
+a : auxiliaire «avoir», 3e personne du singulier, présent de l'indicatif
+pris : participe passé du verbe «prendre», accordé avec le sujet «qui»
+mon : déterminant possessif, masculin singulier
+parapluie : nom commun, masculin singulier, complément d'objet direct du verbe «a pris»
+
+Phrase : Nous ignorons pourquoi elle est partie si tôt.
+nous : pronom personnel, 1re personne du pluriel, sujet du verbe «ignorons»
+ignorons : verbe «ignorer», 1re personne du pluriel, présent de l'indicatif, voix active
+pourquoi : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+elle : pronom personnel, 3e personne du féminin singulier, sujet du verbe «est partie»
+est : auxiliaire «être», 3e personne du singulier, présent de l'indicatif
+partie : participe passé du verbe «partir», accordé avec le sujet «elle»
+si : adverbe d'intensité, modifie l'adverbe «tôt»
+tôt : adverbe de temps, modifie le verbe «est partie»
+
+Phrase : Ils cherchent à comprendre comment fonctionne ce moteur.
+ils : pronom personnel, 3e personne du masculin pluriel, sujet du verbe «cherchent»
+cherchent : verbe «chercher», 3e personne du pluriel, présent de l'indicatif, voix active
+à : préposition, introduit le complément infinitif
+comprendre : verbe «comprendre», infinitif présent, complément du verbe «cherchent»
+comment : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+fonctionne : verbe «fonctionner», 3e personne du singulier, présent de l'indicatif, voix active
+ce : déterminant démonstratif, masculin singulier
+moteur : nom commun, masculin singulier, sujet du verbe «fonctionne»
+
+Phrase : Peux-tu me dire quelle route nous devons prendre ?
+peux : verbe «pouvoir», 2e personne du singulier, présent de l'indicatif, voix active
+tu : pronom personnel, 2e personne du singulier, sujet du verbe «peux»
+me : pronom personnel, 1re personne du singulier, complément d'objet indirect du verbe «dire»
+dire : verbe «dire», infinitif présent, complément du verbe «peux»
+quelle : déterminant interrogatif, féminin singulier, accordé avec «route»
+route : nom commun, féminin singulier, complément d'objet direct du verbe «prendre»
+nous : pronom personnel, 1re personne du pluriel, sujet du verbe «devons»
+devons : verbe «devoir», 1re personne du pluriel, présent de l'indicatif, voix active
+prendre : verbe «prendre», infinitif présent, complément du verbe «devons»
+
+Phrase : Le professeur explique où se trouve la bibliothèque.
+le : déterminant défini, masculin singulier
+professeur : nom commun, masculin singulier, sujet du verbe «explique»
+explique : verbe «expliquer», 3e personne du singulier, présent de l'indicatif, voix active
+où : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+se : pronom personnel réflexif, 3e personne du singulier, partie du verbe pronominal «se trouve»
+trouve : verbe «se trouver», 3e personne du singulier, présent de l'indicatif, voix pronominale
+la : déterminant défini, féminin singulier
+bibliothèque : nom commun, féminin singulier, sujet du verbe «se trouve»
+
+Phrase : J'aimerais savoir combien coûte cette veste.
+j' : pronom personnel, 1re personne du singulier, élidé devant une voyelle, sujet du verbe «aimerais»
+aimerais : verbe «aimer», 1re personne du singulier, conditionnel présent, voix active
+savoir : verbe «savoir», infinitif présent, complément d'objet direct du verbe «aimerais»
+combien : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+coûte : verbe «coûter», 3e personne du singulier, présent de l'indicatif, voix active
+cette : déterminant démonstratif, féminin singulier
+veste : nom commun, féminin singulier, sujet du verbe «coûte»
+
+Phrase : Personne ne sait quand ils reviendront.
+personne : pronom indéfini négatif, sujet du verbe «sait»
+ne : adverbe de négation, première partie de la négation «ne...pas» (ici implicite avec personne)
+sait : verbe «savoir», 3e personne du singulier, présent de l'indicatif, voix active
+quand : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+ils : pronom personnel, 3e personne du masculin pluriel, sujet du verbe «reviendront»
+reviendront : verbe «revenir», 3e personne du pluriel, futur simple de l'indicatif, voix active
+
+Phrase : Il faut vérifier si la porte est fermée.
+il : pronom impersonnel, sujet apparent du verbe «faut»
+faut : verbe «falloir», 3e personne du singulier, présent de l'indicatif, voix active, impersonnel
+vérifier : verbe «vérifier», infinitif présent, sujet réel du verbe «faut»
+si : conjonction de subordination, introduit la proposition subordonnée interrogative indirecte (dubitative)
+la : déterminant défini, féminin singulier
+porte : nom commun, féminin singulier, sujet du verbe «est»
+est : auxiliaire «être», 3e personne du singulier, présent de l'indicatif
+fermée : participe passé du verbe «fermer», accordé avec le sujet «porte», attribut du sujet
+
+Phrase : Elle m'a demandé quel livre je préférais.
+elle : pronom personnel, 3e personne du féminin singulier, sujet du verbe «a demandé»
+m' : pronom personnel, 1re personne du singulier, complément d'objet indirect du verbe «a demandé»
+a : auxiliaire «avoir», 3e personne du singulier, présent de l'indicatif
+demandé : participe passé du verbe «demander», invariable car le COD est postposé ou absent
+quel : déterminant interrogatif, masculin singulier, accordé avec «livre»
+livre : nom commun, masculin singulier, complément d'objet direct du verbe «préférais»
+je : pronom personnel, 1re personne du singulier, sujet du verbe «préférais»
+préférais : verbe «préférer», 1re personne du singulier, imparfait de l'indicatif, voix active
+
+Phrase : Nous nous interrogeons sur ce qu'il veut faire.
+nous : pronom personnel, 1re personne du pluriel, sujet du verbe «interrogeons»
+nous : pronom personnel réflexif, 1re personne du pluriel, complément d'objet direct du verbe «interrogeons»
+interrogeons : verbe «s'interroger», 1re personne du pluriel, présent de l'indicatif, voix pronominale
+sur : préposition, introduit le complément du verbe
+ce : pronom démonstratif, antécédent du relatif «qu'»
+qu' : pronom relatif, complément d'objet direct du verbe «veut», élidé devant «il»
+il : pronom personnel, 3e personne du masculin singulier, sujet du verbe «veut»
+veut : verbe «vouloir», 3e personne du singulier, présent de l'indicatif, voix active
+faire : verbe «faire», infinitif présent, complément d'objet direct du verbe «veut»
+
+Phrase : Dites-nous où vous avez garé la voiture.
+dites : verbe «dire», 2e personne du pluriel, impératif présent, voix active
+nous : pronom personnel, 1re personne du pluriel, complément d'objet indirect du verbe «dites»
+où : adverbe interrogatif, introduit la proposition subordonnée interrogative indirecte
+vous : pronom personnel, 2e personne du pluriel, sujet du verbe «avez garé»
+avez : auxiliaire «avoir», 2e personne du pluriel, présent de l'indicatif
+garé : participe passé du verbe «garer», accordé avec le COD «la voiture» placé après
+la : déterminant défini, féminin singulier
+voiture : nom commun, féminin singulier, complément d'objet direct du verbe «avez garé»
+
+Phrase : Je ne sais pas s'il viendra demain.
+je : pronom personnel, 1re personne du singulier, sujet du verbe «sais»
+ne : adverbe de négation, première partie de la locution «ne...pas»
+sais : verbe «savoir», 1re personne du singulier, présent de l'indicatif, voix active
+pas : adverbe de négation, seconde partie de la locution «ne...pas»
+si : conjonction de subordination, introduit la proposition subordonnée interrogative indirecte
+il : pronom personnel, 3e personne du masculin singulier, sujet du verbe «viendra»
+viendra : verbe «venir», 3e personne du singulier, futur simple de l'indicatif, voix active
+demain : adverbe de temps, modifie le verbe «viendra»
+
+Phrase : Ils ont oublié à quelle heure commence le spectacle.
+ils : pronom personnel, 3e personne du masculin pluriel, sujet du verbe «ont oublié»
+ont : auxiliaire «avoir», 3e personne du pluriel, présent de l'indicatif
+oublié : participe passé du verbe «oublier», invariable car le COD est la proposition suivante
+à : préposition, introduit le complément de temps
+quelle : déterminant interrogatif, féminin singulier, accordé avec «heure»
+heure : nom commun, féminin singulier, complément de temps
+commence : verbe «commencer», 3e personne du singulier, présent de l'indicatif, voix active
+le : déterminant défini, masculin singulier
+spectacle : nom commun, masculin singulier, sujet du verbe «commence»

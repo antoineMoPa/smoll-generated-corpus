@@ -1,0 +1,44 @@
+You buy groceries totaling $45 and receive a $5 coupon. What is your final bill? Output in json, format { "result": number }
+{ "result": 40 }
+
+Output in json, format { "result": number } — A jacket costs $80 but is on sale for 25% off. What is the sale price?
+{ "result": 60 }
+
+A restaurant bill comes to $120 before tax. Output in json, format { "result": number } If the tax rate is 10%, what is the total amount due?
+{ "result": 132 }
+
+Three friends split a $75 dinner bill evenly after applying a $15 discount. How much does each person pay? Output in json, format { "result": 0 }
+{ "result": 20 }
+
+You purchase shoes for $60 and a hat for $20 with a 20% discount on the total. What do you pay? Output in json.
+{ "result": 64 }
+
+A toy store sells a game for $30 with a $7 discount. How much does the game cost now? Output in json, format { "result": number }
+{ "result": 23 }
+
+Output in json, format { "result": number } — A family buys tickets for $90 and gets a 10% senior discount. What is the final price?
+{ "result": 81 }
+
+You order pizza for $24. Output in json, format { "result": number } If delivery adds a $4 fee and tax is $2, what is the total?
+{ "result": 30 }
+
+A book costs $15, and you buy 4 copies with a $10 bulk discount. What is the total cost? Output in json, format { "result": 0 }
+{ "result": 50 }
+
+Buying a laptop for $150 includes a $20 rebate and 5% tax on the discounted price. What is the final cost? Output in json.
+{ "result": 139 }
+
+Output in json, format { "result": number } — A gym membership is $50 a month, but a promotion offers $10 off for the first three months. What is the total for three months?
+{ "result": 120 }
+
+You spend $35 on fruit and $25 on vegetables. Output in json, format { "result": number } If you have a $5 store credit, what is your new total?
+{ "result": 55 }
+
+A pair of jeans is marked $40 with a 15% discount. Output in json, format { "result": 0 } What is the price after the discount?
+{ "result": 34 }
+
+Output in json, format { "result": number } — A group buys snacks for $60 and splits the cost after a $12 discount. If there are 4 people, how much does each pay?
+{ "result": 12 }
+
+You buy a watch for $100 and a strap for $20. Output in json, format { "result": number } With a $15 holiday discount, what is the final amount?
+{ "result": 105 }

@@ -1,0 +1,140 @@
+Sentence: I want to visit Paris next summer.
+I : pronoun, first person singular, subject of the verb "want"
+want : verb "want", first person singular, present tense, active voice
+to : particle introducing the infinitive
+visit : verb "visit", infinitive form, complement of the verb "want"
+Paris : proper noun, city name, direct object of the infinitive "visit"
+next : adjective, temporal, modifies "summer"
+summer : noun, common, singular, temporal adverbial
+
+Sentence: She enjoys reading mystery novels on weekends.
+She : pronoun, third person singular, feminine, subject of the verb "enjoys"
+enjoys : verb "enjoy", third person singular, present tense, active voice
+reading : verb "read", gerund form, direct object of the verb "enjoys"
+mystery : noun, common, singular, acts as adjective modifying "novels"
+novels : noun, common, plural, direct object of the gerund "reading"
+on : preposition, introduces time phrase
+weekends : noun, common, plural, object of the preposition "on"
+
+Sentence: They stopped to buy groceries at the market.
+They : pronoun, third person plural, subject of the verb "stopped"
+stopped : verb "stop", past tense, active voice
+to : particle introducing the infinitive
+buy : verb "buy", infinitive form, adverbial of purpose modifying "stopped"
+groceries : noun, common, plural, direct object of the infinitive "buy"
+at : preposition, introduces location
+the : definite article, modifies "market"
+market : noun, common, singular, object of the preposition "at"
+
+Sentence: He stopped smoking cigarettes last year.
+He : pronoun, third person singular, masculine, subject of the verb "stopped"
+stopped : verb "stop", past tense, active voice
+smoking : verb "smoke", gerund form, direct object of the verb "stopped"
+cigarettes : noun, common, plural, direct object of the gerund "smoking"
+last : adjective, temporal, modifies "year"
+year : noun, common, singular, temporal adverbial
+
+Sentence: We plan to launch the project in April.
+We : pronoun, first person plural, subject of the verb "plan"
+plan : verb "plan", first person plural, present tense, active voice
+to : particle introducing the infinitive
+launch : verb "launch", infinitive form, complement of the verb "plan"
+the : definite article, modifies "project"
+project : noun, common, singular, direct object of the infinitive "launch"
+in : preposition, introduces time phrase
+April : proper noun, month name, object of the preposition "in"
+
+Sentence: Maria avoids driving during heavy rain.
+Maria : proper noun, person name, subject of the verb "avoids"
+avoids : verb "avoid", third person singular, present tense, active voice
+driving : verb "drive", gerund form, direct object of the verb "avoids"
+during : preposition, introduces time condition
+heavy : adjective, modifies "rain"
+rain : noun, common, singular, object of the preposition "during"
+
+Sentence: The team decided to extend the deadline.
+The : definite article, modifies "team"
+team : noun, common, singular, subject of the verb "decided"
+decided : verb "decide", past tense, active voice
+to : particle introducing the infinitive
+extend : verb "extend", infinitive form, complement of the verb "decided"
+the : definite article, modifies "deadline"
+deadline : noun, common, singular, direct object of the infinitive "extend"
+
+Sentence: Children love playing soccer in the park.
+Children : noun, common, plural, subject of the verb "love"
+love : verb "love", present tense, active voice
+playing : verb "play", gerund form, direct object of the verb "love"
+soccer : noun, common, singular, direct object of the gerund "playing"
+in : preposition, introduces location
+the : definite article, modifies "park"
+park : noun, common, singular, object of the preposition "in"
+
+Sentence: She paused to answer the phone call.
+She : pronoun, third person singular, feminine, subject of the verb "paused"
+paused : verb "pause", past tense, active voice
+to : particle introducing the infinitive
+answer : verb "answer", infinitive form, adverbial of purpose modifying "paused"
+the : definite article, modifies "phone"
+phone : noun, common, singular, part of compound noun "phone call"
+call : noun, common, singular, direct object of the infinitive "answer"
+
+Sentence: I dislike waiting in long lines at the bank.
+I : pronoun, first person singular, subject of the verb "dislike"
+dislike : verb "dislike", first person singular, present tense, active voice
+waiting : verb "wait", gerund form, direct object of the verb "dislike"
+in : preposition, introduces location/state
+long : adjective, modifies "lines"
+lines : noun, common, plural, object of the preposition "in"
+at : preposition, introduces location
+the : definite article, modifies "bank"
+bank : noun, common, singular, object of the preposition "at"
+
+Sentence: The manager agreed to sign the contract today.
+The : definite article, modifies "manager"
+manager : noun, common, singular, subject of the verb "agreed"
+agreed : verb "agree", past tense, active voice
+to : particle introducing the infinitive
+sign : verb "sign", infinitive form, complement of the verb "agreed"
+the : definite article, modifies "contract"
+contract : noun, common, singular, direct object of the infinitive "sign"
+today : adverb, temporal, modifies the clause
+
+Sentence: He keeps forgetting to lock the front door.
+He : pronoun, third person singular, masculine, subject of the verb "keeps"
+keeps : verb "keep", third person singular, present tense, active voice
+forgetting : verb "forget", gerund form, direct object of the verb "keeps"
+to : particle introducing the infinitive
+lock : verb "lock", infinitive form, complement of the gerund "forgetting"
+the : definite article, modifies "door"
+front : adjective, modifies "door"
+door : noun, common, singular, direct object of the infinitive "lock"
+
+Sentence: They considered moving to a new city.
+They : pronoun, third person plural, subject of the verb "considered"
+considered : verb "consider", past tense, active voice
+moving : verb "move", gerund form, direct object of the verb "considered"
+to : preposition, introduces destination
+a : indefinite article, modifies "city"
+new : adjective, modifies "city"
+city : noun, common, singular, object of the preposition "to"
+
+Sentence: My sister hopes to become a doctor soon.
+My : possessive adjective, first person singular, modifies "sister"
+sister : noun, common, singular, subject of the verb "hopes"
+hopes : verb "hope", third person singular, present tense, active voice
+to : particle introducing the infinitive
+become : verb "become", infinitive form, complement of the verb "hopes"
+a : indefinite article, modifies "doctor"
+doctor : noun, common, singular, subject complement of the infinitive "become"
+soon : adverb, temporal, modifies the clause
+
+Sentence: The dog started barking at the mail carrier.
+The : definite article, modifies "dog"
+dog : noun, common, singular, subject of the verb "started"
+started : verb "start", past tense, active voice
+barking : verb "bark", gerund form, direct object of the verb "started"
+at : preposition, introduces target
+the : definite article, modifies "carrier"
+mail : noun, common, singular, acts as adjective modifying "carrier"
+carrier : noun, common, singular, object of the preposition "at"

@@ -1,0 +1,44 @@
+A school bus leaves at 7:45 AM and arrives at 8:20 AM. How many minutes did the trip take? Output in json, format { "result": number }
+{ "result": 35 }
+
+Sarah starts baking cookies at 3:10 PM and they need to bake for 25 minutes. What time will they be done? Output in json, format { "result": number }
+{ "result": 335 }
+
+A movie starts at 1:50 PM and ends at 3:45 PM. How many minutes long is the movie? Output in json, format { "result": number }
+{ "result": 115 }
+
+Tom begins his homework at 4:30 PM and finishes at 5:15 PM. How many minutes did he spend working? Output in json, format { "result": number }
+{ "result": 45 }
+
+The train departs at 9:05 AM and the journey takes 50 minutes. What time does the train arrive? Output in json, format { "result": number }
+{ "result": 595 }
+
+A soccer practice starts at 10:20 AM and lasts for 40 minutes. What time does practice end? Output in json, format { "result": number }
+{ "result": 660 }
+
+Lily leaves the library at 2:55 PM and gets home at 3:25 PM. How many minutes was her walk home? Output in json, format { "result": number }
+{ "result": 30 }
+
+Dinner is served at 6:00 PM and dessert is served 35 minutes later. What time is dessert served? Output in json, format { "result": number }
+{ "result": 395 }
+
+A flight takes off at 11:40 AM and lands at 1:10 PM. How many minutes is the flight? Output in json, format { "result": number }
+{ "result": 90 }
+
+Mark starts reading at 8:15 AM and reads for 45 minutes. What time does he finish reading? Output in json, format { "result": number }
+{ "result": 540 }
+
+The art class begins at 9:30 AM and ends at 10:45 AM. How many minutes is the class? Output in json, format { "result": number }
+{ "result": 75 }
+
+A cake goes into the oven at 12:20 PM and comes out at 1:05 PM. How many minutes was it baking? Output in json, format { "result": number }
+{ "result": 45 }
+
+Jenna catches a bus at 7:50 AM which arrives 25 minutes later. What time does the bus arrive? Output in json, format { "result": number }
+{ "result": 495 }
+
+A gymnastics meet starts at 1:15 PM and finishes at 4:00 PM. How many minutes does the meet last? Output in json, format { "result": number }
+{ "result": 165 }
+
+David starts mowing the lawn at 10:50 AM and finishes at 11:35 AM. How many minutes did he work? Output in json, format { "result": number }
+{ "result": 45 }

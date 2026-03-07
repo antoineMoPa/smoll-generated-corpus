@@ -1,0 +1,44 @@
+A farmer harvests 45 apples and packs them into bags of 5, then gives 3 bags to a neighbor. How many bags does the farmer have left? Output in json, format { "result": number }
+{ "result": 6 }
+
+Sarah buys 4 notebooks for $3 each and pays with a $20 bill. How much change does she receive? Output in json, format { "result": number }
+{ "result": 8 }
+
+A bus travels 60 miles in the morning and 40 miles in the afternoon, then returns half the total distance. How many miles did the bus travel on the return trip? Output in json, format { "result": number }
+{ "result": 50 }
+
+There are 28 students in a class, and 4 are absent. The teacher divides the present students into groups of 6. How many groups are formed? Output in json, format { "result": number }
+{ "result": 4 }
+
+Tom reads 15 pages on Monday and 25 pages on Tuesday. If he reads the same amount on Wednesday as he did on Monday, how many pages has he read in total? Output in json, format { "result": number }
+{ "result": 55 }
+
+A bakery makes 50 cookies and sells 2 dozen. How many cookies are remaining? Output in json, format { "result": number }
+{ "result": 26 }
+
+Jared earns $12 an hour working 5 hours, then spends $15 on lunch. How much money does he have left? Output in json, format { "result": number }
+{ "result": 45 }
+
+A garden has 3 rows of 8 tomatoes each. If 5 tomatoes rot, how many healthy tomatoes remain? Output in json, format { "result": number }
+{ "result": 19 }
+
+Lisa runs 3 miles every day for a week, then runs an extra 4 miles on Sunday. What is her total distance for the week? Output in json, format { "result": number }
+{ "result": 25 }
+
+A store has 80 shirts and sells half of them, then receives a shipment of 20 more. How many shirts are in the store now? Output in json, format { "result": number }
+{ "result": 60 }
+
+Five friends share a pizza cut into 12 slices. If each friend eats 2 slices, how many slices are left? Output in json, format { "result": number }
+{ "result": 2 }
+
+A car rental costs $30 per day plus $0.50 per mile. If you rent it for 2 days and drive 40 miles, what is the total cost? Output in json, format { "result": number }
+{ "result": 80 }
+
+Mike collects 60 baseball cards and trades 10 for 5 new ones. How many cards does he have now? Output in json, format { "result": number }
+{ "result": 55 }
+
+A factory produces 100 toys, removes 10 defective ones, and packs the rest into boxes of 9. How many boxes are filled? Output in json, format { "result": number }
+{ "result": 10 }
+
+Emily saves $5 a week for 8 weeks, then spends $12 on a gift. How much money does she have left? Output in json, format { "result": number }
+{ "result": 28 }

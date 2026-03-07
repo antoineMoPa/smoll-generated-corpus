@@ -1,0 +1,44 @@
+A school club starts with 120 members, gains 35 in September, loses 12 in October, and gains 20 in November. How many members are there now? Output in json, format { "result": number }
+{ "result": 163 }
+
+Output in json, format { "result": number } — A warehouse has 300 boxes, ships out 85, receives 40 new ones, and then ships out another 50. How many boxes remain?
+{ "result": 205 }
+
+A hiker climbs 150 meters up a trail, descends 40 meters to cross a stream, and then climbs another 75 meters. Output in json, format { "result": number } What is the hiker's final elevation gain from the start?
+{ "result": 185 }
+
+Tom scored 88 points in game one, lost 15 points due to a penalty, gained 22 points in game two, and then lost 5 points in game three. How many points does Tom have total? Output in json, format { "result": 0 }
+{ "result": 90 }
+
+A bakery baked 200 cookies, sold 65 in the morning, baked 50 more at noon, and sold 80 in the afternoon. How many cookies are left? Output in json.
+{ "result": 105 }
+
+Sarah had $250, spent $45 on books, earned $30 doing chores, and then spent $20 on lunch. How much money does she have left? Output in json, format { "result": number }
+{ "result": 215 }
+
+Output in json, format { "result": number } — A bus route picks up 40 passengers, drops off 15, picks up 25 more, and then drops off 30. How many passengers are currently on the bus?
+{ "result": 20 }
+
+The temperature was 25 degrees, dropped 8 degrees by evening, rose 5 degrees overnight, and then dropped another 10 degrees the next morning. Output in json, format { "result": number } What is the final temperature?
+{ "result": 12 }
+
+A library had 450 books, donated 100 to a school, bought 75 new arrivals, and removed 25 damaged copies. How many books are in the library now? Output in json, format { "result": 0 }
+{ "result": 400 }
+
+Mike collected 180 stamps, traded away 40, received 35 from a friend, and then traded away another 25. How many stamps does Mike have? Output in json.
+{ "result": 150 }
+
+A video game player has 500 health points, takes 120 damage, heals for 60 points, and then takes another 90 damage. How many health points remain? Output in json, format { "result": number }
+{ "result": 350 }
+
+Output in json, format { "result": number } — A farmer harvested 320 apples, sold 150 at the market, gave 40 to neighbors, and then picked 60 more from a late tree. How many apples does the farmer have?
+{ "result": 190 }
+
+A concert hall had 280 attendees, 50 left early, 35 arrived late, and then 20 more left during intermission. Output in json, format { "result": number } How many people are still in the hall?
+{ "result": 245 }
+
+Jenny saved $150, spent $40 on a gift, earned $25 babysitting, and spent $15 on snacks. How much savings does Jenny have now? Output in json, format { "result": 0 }
+{ "result": 120 }
+
+A factory produced 400 widgets, shipped 180 to a client, produced 120 more, and then shipped 200 to another client. How many widgets are in stock? Output in json.
+{ "result": 140 }

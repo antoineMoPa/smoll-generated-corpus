@@ -1,0 +1,44 @@
+A store offers a 20% discount on a $50 jacket. How much money is saved? Output in json, format { "result": number }
+{ "result": 10 }
+
+In a survey of 80 people, 25% preferred tea over coffee. How many people chose tea? Output in json, format { "result": number }
+{ "result": 20 }
+
+A student scored 50% on a test with 40 questions. How many questions did they answer correctly? Output in json, format { "result": number }
+{ "result": 20 }
+
+A restaurant bill is $60, and you want to leave a 10% tip. How much is the tip? Output in json, format { "result": number }
+{ "result": 6 }
+
+A basket has 100 apples, and 75% of them are red. How many red apples are there? Output in json, format { "result": number }
+{ "result": 75 }
+
+A video game costs $80, but it is on sale for 25% off. What is the discount amount? Output in json, format { "result": number }
+{ "result": 20 }
+
+Out of 120 students, 50% walked to school today. How many students walked? Output in json, format { "result": number }
+{ "result": 60 }
+
+A farmer harvested 200 pounds of potatoes and sold 10% immediately. How many pounds were sold? Output in json, format { "result": number }
+{ "result": 20 }
+
+A team played 16 games and won 75% of them. How many games did they win? Output in json, format { "result": number }
+{ "result": 12 }
+
+A library has 150 books, and 20% are mystery novels. How many mystery books are there? Output in json, format { "result": number }
+{ "result": 30 }
+
+You saved $90 and spent 50% on a new shirt. How much did the shirt cost? Output in json, format { "result": number }
+{ "result": 45 }
+
+A cookie recipe makes 40 cookies, and you eat 25% of them. How many cookies did you eat? Output in json, format { "result": number }
+{ "result": 10 }
+
+A city has 180 parks, and 10% have playgrounds. How many parks have playgrounds? Output in json, format { "result": number }
+{ "result": 18 }
+
+A car trip is 100 miles long, and you have driven 75% of the way. How many miles have you driven? Output in json, format { "result": number }
+{ "result": 75 }
+
+A box contains 144 pencils, and 50% are blue. How many blue pencils are in the box? Output in json, format { "result": number }
+{ "result": 72 }

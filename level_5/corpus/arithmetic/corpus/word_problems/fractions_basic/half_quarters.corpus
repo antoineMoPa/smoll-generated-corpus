@@ -1,0 +1,44 @@
+A pizza is cut into 8 slices and you eat half of them. How many slices did you eat? Output in json, format { "result": number }
+{ "result": 4 }
+
+Output in json, format { "result": number } — A bag contains 20 marbles and one quarter of them are blue. How many blue marbles are there?
+{ "result": 5 }
+
+A ribbon is 16 inches long. Output in json, format { "result": number } What is the length of three quarters of the ribbon?
+{ "result": 12 }
+
+There are 32 students in a class and half of them brought lunch from home. How many students brought lunch? Output in json, format { "result": 0 }
+{ "result": 16 }
+
+A cake recipe calls for 1 cup of sugar, but you only want to make half the recipe. How much sugar do you need? Output in json.
+{ "result": 0.5 }
+
+Tom has 24 trading cards and gives one quarter of them to his friend. How many cards did he give away? Output in json, format { "result": number }
+{ "result": 6 }
+
+Output in json, format { "result": number } — A garden has 40 flowers and three quarters of them are roses. How many roses are in the garden?
+{ "result": 30 }
+
+A bottle holds 2 liters of water. Output in json, format { "result": number } How many liters are in one quarter of the bottle?
+{ "result": 0.5 }
+
+Sarah baked 12 cookies and ate half of them after dinner. How many cookies does she have left? Output in json, format { "result": 0 }
+{ "result": 6 }
+
+A piece of fabric is 20 meters long. Output in json, format { "result": number } If you cut off three quarters of it, how many meters did you cut?
+{ "result": 15 }
+
+Output in json, format { "result": number } — There are 16 apples in a basket and one quarter of them are rotten. How many rotten apples are there?
+{ "result": 4 }
+
+A movie is 2 hours long. Output in json, format { "result": number } How many hours have passed after watching half the movie?
+{ "result": 1 }
+
+Jake has 28 stickers and uses three quarters of them on his scrapbook. How many stickers did he use? Output in json, format { "result": 0 }
+{ "result": 21 }
+
+A tank holds 100 gallons of water. Output in json, format { "result": number } If the tank is one quarter full, how many gallons are inside?
+{ "result": 25 }
+
+A loaf of bread has 12 slices. Output in json, format { "result": number } If you eat half the loaf for breakfast and one quarter for lunch, how many slices did you eat in total?
+{ "result": 9 }

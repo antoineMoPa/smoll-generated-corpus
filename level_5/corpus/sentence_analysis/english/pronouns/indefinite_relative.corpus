@@ -1,0 +1,161 @@
+Sentence: Someone left their umbrella in the hallway.
+Someone : indefinite pronoun, singular, subject of the verb "left"
+left : verb "leave", past tense, third person singular
+their : possessive determiner, singular they, modifying "umbrella"
+umbrella : common noun, singular, direct object of the verb "left"
+in : preposition indicating location
+the : definite article, modifying "hallway"
+hallway : common noun, singular, object of the preposition "in"
+
+Sentence: Did anyone see the missing keys on the counter?
+Did : auxiliary verb, past tense, used to form a question
+anyone : indefinite pronoun, singular, subject of the verb "see"
+see : main verb, base form following auxiliary "did"
+the : definite article, modifying "keys"
+missing : adjective, modifying "keys"
+keys : common noun, plural, direct object of the verb "see"
+on : preposition indicating location
+the : definite article, modifying "counter"
+counter : common noun, singular, object of the preposition "on"
+
+Sentence: Everyone enjoyed the surprise party at Sarah's house.
+Everyone : indefinite pronoun, singular, subject of the verb "enjoyed"
+enjoyed : verb "enjoy", past tense, third person singular
+the : definite article, modifying "party"
+surprise : noun acting as an adjective, modifying "party"
+party : common noun, singular, direct object of the verb "enjoyed"
+at : preposition indicating location
+Sarah's : proper noun, possessive case, modifying "house"
+house : common noun, singular, object of the preposition "at"
+
+Sentence: Nobody knows the answer to that difficult question.
+Nobody : indefinite pronoun, singular, subject of the verb "knows"
+knows : verb "know", present tense, third person singular
+the : definite article, modifying "answer"
+answer : common noun, singular, direct object of the verb "knows"
+to : preposition connecting "answer" and "question"
+that : demonstrative determiner, modifying "question"
+difficult : adjective, modifying "question"
+question : common noun, singular, object of the preposition "to"
+
+Sentence: Something strange is happening in the old laboratory.
+Something : indefinite pronoun, singular, subject of the verb "is happening"
+strange : adjective, post-positive modifier for "something"
+is : auxiliary verb, present tense, third person singular
+happening : main verb "happen", present participle forming continuous aspect
+in : preposition indicating location
+the : definite article, modifying "laboratory"
+old : adjective, modifying "laboratory"
+laboratory : common noun, singular, object of the preposition "in"
+
+Sentence: Each student must submit their assignment by Friday.
+Each : indefinite determiner, singular, modifying "student"
+student : common noun, singular, subject of the verb "must submit"
+must : modal auxiliary verb indicating obligation
+submit : main verb, base form following modal "must"
+their : possessive determiner, singular they, modifying "assignment"
+assignment : common noun, singular, direct object of the verb "submit"
+by : preposition indicating deadline
+Friday : proper noun, singular, object of the preposition "by"
+
+Sentence: Every cloud has a silver lining eventually.
+Every : indefinite determiner, singular, modifying "cloud"
+cloud : common noun, singular, subject of the verb "has"
+has : verb "have", present tense, third person singular
+a : indefinite article, modifying "lining"
+silver : adjective, modifying "lining"
+lining : common noun, singular, direct object of the verb "has"
+eventually : adverb, modifying the entire clause or verb "has"
+
+Sentence: Both candidates offered excellent solutions during the debate.
+Both : indefinite determiner, plural, modifying "candidates"
+candidates : common noun, plural, subject of the verb "offered"
+offered : verb "offer", past tense, plural agreement
+excellent : adjective, modifying "solutions"
+solutions : common noun, plural, direct object of the verb "offered"
+during : preposition indicating time
+the : definite article, modifying "debate"
+debate : common noun, singular, object of the preposition "during"
+
+Sentence: You can choose either the red shirt or the blue one.
+You : personal pronoun, second person, subject of the verb "can choose"
+can : modal auxiliary verb indicating ability or permission
+choose : main verb, base form following modal "can"
+either : indefinite determiner, introducing the first of two options
+the : definite article, modifying "shirt"
+red : adjective, modifying "shirt"
+shirt : common noun, singular, first object of choice
+or : coordinating conjunction connecting two alternatives
+the : definite article, modifying "one"
+blue : adjective, modifying "one"
+one : pronoun, substituting for "shirt"
+
+Sentence: Neither option seems viable given the current budget constraints.
+Neither : indefinite determiner, singular, modifying "option"
+option : common noun, singular, subject of the verb "seems"
+seems : verb "seem", present tense, third person singular
+viable : adjective, subject complement describing "option"
+given : preposition meaning "considering"
+the : definite article, modifying "constraints"
+current : adjective, modifying "constraints"
+budget : noun acting as an adjective, modifying "constraints"
+constraints : common noun, plural, object of the preposition "given"
+
+Sentence: Someone called while you were out running errands.
+Someone : indefinite pronoun, singular, subject of the verb "called"
+called : verb "call", past tense, third person singular
+while : subordinating conjunction indicating time
+you : personal pronoun, second person, subject of the verb "were running"
+were : auxiliary verb, past tense, plural or second person
+out : adverb indicating absence from home
+running : main verb "run", present participle forming continuous aspect
+errands : common noun, plural, direct object of the verb "running"
+
+Sentence: Is there anything else we need to buy for the trip?
+Is : auxiliary verb, present tense, third person singular, inverted for question
+there : existential dummy subject
+anything : indefinite pronoun, singular, real subject of the sentence
+else : adverb, modifying "anything"
+we : personal pronoun, first person plural, subject of the verb "need"
+need : verb "need", present tense, plural agreement
+to : particle introducing the infinitive verb
+buy : main verb, infinitive form
+for : preposition indicating purpose
+the : definite article, modifying "trip"
+trip : common noun, singular, object of the preposition "for"
+
+Sentence: Everyone in the office agrees that the project is behind schedule.
+Everyone : indefinite pronoun, singular, subject of the verb "agrees"
+in : preposition indicating location
+the : definite article, modifying "office"
+office : common noun, singular, object of the preposition "in"
+agrees : verb "agree", present tense, third person singular
+that : subordinating conjunction introducing a noun clause
+the : definite article, modifying "project"
+project : common noun, singular, subject of the verb "is"
+is : linking verb, present tense, third person singular
+behind : preposition indicating status or location
+schedule : common noun, singular, object of the preposition "behind"
+
+Sentence: Nobody told me about the meeting change until noon.
+Nobody : indefinite pronoun, singular, subject of the verb "told"
+told : verb "tell", past tense, third person singular
+me : personal pronoun, first person singular, indirect object of "told"
+about : preposition indicating topic
+the : definite article, modifying "change"
+meeting : noun acting as an adjective, modifying "change"
+change : common noun, singular, object of the preposition "about"
+until : preposition indicating time
+noon : common noun, singular, object of the preposition "until"
+
+Sentence: Something delicious smells like it is cooking in the kitchen.
+Something : indefinite pronoun, singular, subject of the verb "smells"
+delicious : adjective, post-positive modifier for "something"
+smells : verb "smell", present tense, third person singular, linking verb
+like : conjunction introducing a clause of comparison
+it : personal pronoun, third person singular, subject of "is cooking"
+is : auxiliary verb, present tense, third person singular
+cooking : main verb "cook", present participle forming continuous aspect
+in : preposition indicating location
+the : definite article, modifying "kitchen"
+kitchen : common noun, singular, object of the preposition "in"

@@ -1,0 +1,300 @@
+The box contains 8 apples. How many apples are in the box? Output in json, format { "count": number }
+{ "count": 8 }
+The temperature sensor reads 22 celsius. What is the temperature value? Output in json, format { "value": number }
+{ "value": 22 }
+The train departs at 9 in the morning. At what hour does the train depart? Output in json, format { "hour": number }
+{ "hour": 9 }
+The meeting has 12 attendees. How many attendees are in the meeting? Output in json, format { "attendees": number }
+{ "attendees": 12 }
+The thermostat target is 21 degrees. What is the target temperature? Output in json, format { "temperature": number }
+{ "temperature": 21 }
+The order took 45 seconds to brew. How many seconds did the order take? Output in json, format { "estimated_seconds": number }
+{ "estimated_seconds": 45 }
+The sensor detected 5 motion events. How many motion events were detected? Output in json, format { "count": number }
+{ "count": 5 }
+The battery level is 87 percent. What is the battery percentage? Output in json, format { "level": number }
+{ "level": 87 }
+The file size is 4 megabytes. How many megabytes is the file? Output in json, format { "size_mb": number }
+{ "size_mb": 4 }
+The subscription costs 9 dollars per month. What is the monthly cost in dollars? Output in json, format { "price": number }
+{ "price": 9 }
+The playlist has 30 songs. How many songs are in the playlist? Output in json, format { "count": number }
+{ "count": 30 }
+The room has 3 windows. How many windows does the room have? Output in json, format { "windows": number }
+{ "windows": 3 }
+The package weighs 2 kilograms. How many kilograms does the package weigh? Output in json, format { "weight_kg": number }
+{ "weight_kg": 2 }
+The flight duration is 6 hours. How many hours is the flight? Output in json, format { "hours": number }
+{ "hours": 6 }
+The coffee machine brewed in 40 seconds. How many seconds did it take to brew? Output in json, format { "seconds": number }
+{ "seconds": 40 }
+The co2 sensor reading is 450 ppm. What is the co2 reading? Output in json, format { "co2_ppm": number }
+{ "co2_ppm": 450 }
+The volume is set to 75 percent. What is the current volume level? Output in json, format { "volume": number }
+{ "volume": 75 }
+The garage door opened in 8 seconds. How many seconds did the garage door take to open? Output in json, format { "seconds": number }
+{ "seconds": 8 }
+The ticket was created with priority 3. What is the ticket priority? Output in json, format { "priority": number }
+{ "priority": 3 }
+The hotel has 150 rooms. How many rooms does the hotel have? Output in json, format { "rooms": number }
+{ "rooms": 150 }
+The car rental costs 55 dollars per day. What is the daily rental cost in dollars? Output in json, format { "price_per_day": number }
+{ "price_per_day": 55 }
+The humidity reading is 65 percent. What is the humidity value? Output in json, format { "humidity": number }
+{ "humidity": 65 }
+The wind speed is 18 kilometers per hour. What is the wind speed? Output in json, format { "speed": number }
+{ "speed": 18 }
+The notification was scheduled for 10 in the morning. At what hour was it scheduled? Output in json, format { "hour": number }
+{ "hour": 10 }
+The payment amount is 120 dollars. What is the payment amount in dollars? Output in json, format { "amount": number }
+{ "amount": 120 }
+The coffee order size is large. What is the order size? Output in json, format { "size": string }
+{ "size": "large" }
+The thermostat mode is set to heat. What is the thermostat mode? Output in json, format { "mode": string }
+{ "mode": "heat" }
+The brew strength is strong. What is the brew strength? Output in json, format { "strength": string }
+{ "strength": "strong" }
+The payment status is confirmed. What is the payment status? Output in json, format { "status": string }
+{ "status": "confirmed" }
+The ticket status is open. What is the current ticket status? Output in json, format { "status": string }
+{ "status": "open" }
+The weather unit requested is celsius. What unit was requested? Output in json, format { "unit": string }
+{ "unit": "celsius" }
+The coffee milk type is oat. What type of milk is requested? Output in json, format { "milk": string }
+{ "milk": "oat" }
+The thermostat mode is cool. What mode is the thermostat in? Output in json, format { "mode": string }
+{ "mode": "cool" }
+The order status is brewing. What is the order status? Output in json, format { "status": string }
+{ "status": "brewing" }
+The brew size is medium. What is the brew size? Output in json, format { "size": string }
+{ "size": "medium" }
+The smart light color is blue. What color is the light set to? Output in json, format { "color": string }
+{ "color": "blue" }
+The car fuel type is electric. What is the fuel type of the car? Output in json, format { "fuel": string }
+{ "fuel": "electric" }
+The subscription plan is premium. What plan is the user on? Output in json, format { "plan": string }
+{ "plan": "premium" }
+The alert type is storm. What type of alert was issued? Output in json, format { "alert": string }
+{ "alert": "storm" }
+The payment method is card. What payment method was used? Output in json, format { "method": string }
+{ "method": "card" }
+The drive mode is auto. What is the drive mode? Output in json, format { "mode": string }
+{ "mode": "auto" }
+The coffee brew type is espresso. What type of coffee was brewed? Output in json, format { "type": string }
+{ "type": "espresso" }
+The door lock state is locked. What is the door lock state? Output in json, format { "state": string }
+{ "state": "locked" }
+The notification channel is email. What channel is the notification sent on? Output in json, format { "channel": string }
+{ "channel": "email" }
+The music genre is jazz. What genre is playing? Output in json, format { "genre": string }
+{ "genre": "jazz" }
+The door lock is engaged. Is the lock active? Output in json, format { "active": boolean }
+{ "active": true }
+The light is turned off. Is the light on? Output in json, format { "on": boolean }
+{ "on": false }
+The garage door is currently closed. Is the garage door open? Output in json, format { "open": boolean }
+{ "open": false }
+The alert has been acknowledged. Is the alert active? Output in json, format { "active": boolean }
+{ "active": false }
+The thermostat schedule is enabled. Is the schedule enabled? Output in json, format { "enabled": boolean }
+{ "enabled": true }
+The subscription is currently paused. Is the subscription active? Output in json, format { "active": boolean }
+{ "active": false }
+The sensor alert is triggered. Is the alert triggered? Output in json, format { "triggered": boolean }
+{ "triggered": true }
+The file upload has completed. Is the upload complete? Output in json, format { "complete": boolean }
+{ "complete": true }
+The payment has been refunded. Is the charge successful? Output in json, format { "success": boolean }
+{ "success": false }
+The motion sensor is armed. Is the sensor armed? Output in json, format { "armed": boolean }
+{ "armed": true }
+The ticket has been closed. Is the ticket open? Output in json, format { "open": boolean }
+{ "open": false }
+The notification is muted. Is the notification muted? Output in json, format { "muted": boolean }
+{ "muted": true }
+The coffee machine needs descaling. Does the machine need maintenance? Output in json, format { "needs_maintenance": boolean }
+{ "needs_maintenance": true }
+The channel is not verified. Is the channel verified? Output in json, format { "verified": boolean }
+{ "verified": false }
+The calendar event is recurring. Is the event recurring? Output in json, format { "recurring": boolean }
+{ "recurring": true }
+The sensor last read a temperature of 19 at 14:30. What was the temperature value? Output in json, format { "value": number }
+{ "value": 19 }
+The latte order was small with almond milk. What milk type was requested? Output in json, format { "milk": string }
+{ "milk": "almond" }
+The wind speed in Sydney was 12 and the humidity was 80. What was the wind speed? Output in json, format { "speed": number }
+{ "speed": 12 }
+The vending machine slot B3 costs 2 dollars and is available. How much does the item cost? Output in json, format { "price": number }
+{ "price": 2 }
+The pull request has 5 files changed and 3 reviewers. How many reviewers does it have? Output in json, format { "reviewers": number }
+{ "reviewers": 3 }
+The hotel booking costs 89 dollars per night and includes breakfast. What is the nightly cost? Output in json, format { "price_per_night": number }
+{ "price_per_night": 89 }
+The route from home to office is 7 kilometers by car. How many kilometers is the route? Output in json, format { "distance_km": number }
+{ "distance_km": 7 }
+The playlist shuffle mode is on and repeat is off. Is shuffle enabled? Output in json, format { "shuffle": boolean }
+{ "shuffle": true }
+The charge of 50 dollars was captured successfully. What was the charge amount? Output in json, format { "amount": number }
+{ "amount": 50 }
+The git branch has 4 commits ahead of main. How many commits ahead is the branch? Output in json, format { "commits_ahead": number }
+{ "commits_ahead": 4 }
+The weather forecast shows rain probability of 70 percent tomorrow. What is the rain probability? Output in json, format { "probability": number }
+{ "probability": 70 }
+The smart light brightness is 60 percent and the color is white. What is the brightness level? Output in json, format { "brightness": number }
+{ "brightness": 60 }
+The database query returned 25 rows. How many rows were returned? Output in json, format { "rows": number }
+{ "rows": 25 }
+The calendar shows 3 free slots on Tuesday. How many free slots are available? Output in json, format { "free_slots": number }
+{ "free_slots": 3 }
+The customer support ticket was escalated to tier 2. What tier was it escalated to? Output in json, format { "tier": number }
+{ "tier": 2 }
+What is 3 + 5? Output in json, format { "result": number }
+{ "result": 8 }
+What is 7 + 4? Output in json, format { "result": number }
+{ "result": 11 }
+What is 12 + 8? Output in json, format { "result": number }
+{ "result": 20 }
+What is 15 + 6? Output in json, format { "result": number }
+{ "result": 21 }
+What is 9 + 9? Output in json, format { "result": number }
+{ "result": 18 }
+What is 20 + 5? Output in json, format { "result": number }
+{ "result": 25 }
+What is 6 + 6? Output in json, format { "result": number }
+{ "result": 12 }
+What is 14 + 3? Output in json, format { "result": number }
+{ "result": 17 }
+What is 30 + 10? Output in json, format { "result": number }
+{ "result": 40 }
+What is 50 + 25? Output in json, format { "result": number }
+{ "result": 75 }
+What is 1 + 100? Output in json, format { "result": number }
+{ "result": 101 }
+What is 45 + 5? Output in json, format { "result": number }
+{ "result": 50 }
+What is 8 + 7? Output in json, format { "result": number }
+{ "result": 15 }
+What is 11 + 11? Output in json, format { "result": number }
+{ "result": 22 }
+What is 2 + 98? Output in json, format { "result": number }
+{ "result": 100 }
+What is 10 - 3? Output in json, format { "result": number }
+{ "result": 7 }
+What is 20 - 8? Output in json, format { "result": number }
+{ "result": 12 }
+What is 50 - 25? Output in json, format { "result": number }
+{ "result": 25 }
+What is 100 - 37? Output in json, format { "result": number }
+{ "result": 63 }
+What is 15 - 6? Output in json, format { "result": number }
+{ "result": 9 }
+What is 9 - 9? Output in json, format { "result": number }
+{ "result": 0 }
+What is 30 - 7? Output in json, format { "result": number }
+{ "result": 23 }
+What is 45 - 15? Output in json, format { "result": number }
+{ "result": 30 }
+What is 100 - 1? Output in json, format { "result": number }
+{ "result": 99 }
+What is 60 - 20? Output in json, format { "result": number }
+{ "result": 40 }
+What is 3 * 4? Output in json, format { "result": number }
+{ "result": 12 }
+What is 5 * 6? Output in json, format { "result": number }
+{ "result": 30 }
+What is 7 * 3? Output in json, format { "result": number }
+{ "result": 21 }
+What is 8 * 4? Output in json, format { "result": number }
+{ "result": 32 }
+What is 2 * 9? Output in json, format { "result": number }
+{ "result": 18 }
+What is 10 * 5? Output in json, format { "result": number }
+{ "result": 50 }
+What is 6 * 7? Output in json, format { "result": number }
+{ "result": 42 }
+What is 4 * 4? Output in json, format { "result": number }
+{ "result": 16 }
+What is 3 * 3? Output in json, format { "result": number }
+{ "result": 9 }
+What is 11 * 2? Output in json, format { "result": number }
+{ "result": 22 }
+Which is larger, 7 or 12? Output in json, format { "result": number }
+{ "result": 12 }
+Which is smaller, 5 or 3? Output in json, format { "result": number }
+{ "result": 3 }
+What is the maximum of 6 and 14? Output in json, format { "result": number }
+{ "result": 14 }
+What is the minimum of 9 and 3? Output in json, format { "result": number }
+{ "result": 3 }
+A store has 100 items and sells 35. How many remain? Output in json, format { "result": number }
+{ "result": 65 }
+You earn 8 dollars per hour. How much do you earn in 3 hours? Output in json, format { "result": number }
+{ "result": 24 }
+There are 7 days in a week. How many days are in 4 weeks? Output in json, format { "result": number }
+{ "result": 28 }
+A movie starts at 8 and lasts 2 hours. At what hour does it end? Output in json, format { "result": number }
+{ "result": 10 }
+You have 50 dollars and spend 18. How many dollars remain? Output in json, format { "result": number }
+{ "result": 32 }
+What is half of 40? Output in json, format { "result": number }
+{ "result": 20 }
+What is double 13? Output in json, format { "result": number }
+{ "result": 26 }
+A car travels at 60 km per hour for 2 hours. How many km did it travel? Output in json, format { "result": number }
+{ "result": 120 }
+You read 15 pages per day. How many pages in 5 days? Output in json, format { "result": number }
+{ "result": 75 }
+A box has 5 rows of 4 items each. How many items total? Output in json, format { "result": number }
+{ "result": 20 }
+A sensor fires every 10 seconds. How many times does it fire in 60 seconds? Output in json, format { "result": number }
+{ "result": 6 }
+Is 5 greater than 3? Output in json, format { "result": boolean }
+{ "result": true }
+Is 10 less than 7? Output in json, format { "result": boolean }
+{ "result": false }
+Is 6 equal to 6? Output in json, format { "result": boolean }
+{ "result": true }
+Is 4 divisible by 2? Output in json, format { "result": boolean }
+{ "result": true }
+Is 7 even? Output in json, format { "result": boolean }
+{ "result": false }
+Is 8 even? Output in json, format { "result": boolean }
+{ "result": true }
+Is 3 odd? Output in json, format { "result": boolean }
+{ "result": true }
+Is 100 divisible by 10? Output in json, format { "result": boolean }
+{ "result": true }
+Is 12 divisible by 5? Output in json, format { "result": boolean }
+{ "result": false }
+Is a dog an animal? Output in json, format { "result": boolean }
+{ "result": true }
+Is a whale a fish? Output in json, format { "result": boolean }
+{ "result": false }
+Is gold a metal? Output in json, format { "result": boolean }
+{ "result": true }
+Is the sun a star? Output in json, format { "result": boolean }
+{ "result": true }
+Is ice hot? Output in json, format { "result": boolean }
+{ "result": false }
+Is the moon a planet? Output in json, format { "result": boolean }
+{ "result": false }
+Is a shark a mammal? Output in json, format { "result": boolean }
+{ "result": false }
+Is a bicycle a vehicle? Output in json, format { "result": boolean }
+{ "result": true }
+Is water liquid at room temperature? Output in json, format { "result": boolean }
+{ "result": true }
+Is 15 greater than 20? Output in json, format { "result": boolean }
+{ "result": false }
+Is 9 divisible by 3? Output in json, format { "result": boolean }
+{ "result": true }
+Is 2 greater than 1? Output in json, format { "result": boolean }
+{ "result": true }
+Is bread food? Output in json, format { "result": boolean }
+{ "result": true }
+Is the earth flat? Output in json, format { "result": boolean }
+{ "result": false }
+Is a tomato a fruit? Output in json, format { "result": boolean }
+{ "result": true }
+Is 0 less than 1? Output in json, format { "result": boolean }
+{ "result": true }

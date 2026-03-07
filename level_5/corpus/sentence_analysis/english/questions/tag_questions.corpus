@@ -1,0 +1,153 @@
+Sentence: It is raining, isn't it?
+It : pronoun, subject of the verb "is"
+is : auxiliary verb "to be", 3rd person singular, present tense, positive polarity
+raining : main verb "rain", present participle, forming present continuous tense
+, : punctuation mark separating main clause from tag question
+isn't : contraction of "is not", auxiliary verb, 3rd person singular, negative polarity matching the positive main clause
+it : pronoun, subject of the tag question, referring back to "It"
+? : punctuation mark indicating a question
+
+Sentence: You don't like coffee, do you?
+You : pronoun, subject of the verb "like"
+don't : contraction of "do not", auxiliary verb, 2nd person, negative polarity
+like : main verb "like", base form, present tense
+coffee : noun, common, singular, direct object of the verb "like"
+, : punctuation mark separating main clause from tag question
+do : auxiliary verb "to do", 2nd person, positive polarity matching the negative main clause
+you : pronoun, subject of the tag question, referring back to "You"
+? : punctuation mark indicating a question
+
+Sentence: She has finished her work, hasn't she?
+She : pronoun, subject of the verb "has finished"
+has : auxiliary verb "to have", 3rd person singular, present tense, positive polarity
+finished : main verb "finish", past participle, forming present perfect tense
+her : possessive determiner, 3rd person singular, feminine
+work : noun, common, uncountable, direct object of the verb "finished"
+, : punctuation mark separating main clause from tag question
+hasn't : contraction of "has not", auxiliary verb, 3rd person singular, negative polarity matching the positive main clause
+she : pronoun, subject of the tag question, referring back to "She"
+? : punctuation mark indicating a question
+
+Sentence: They aren't coming to the party, are they?
+They : pronoun, subject of the verb "are coming"
+aren't : contraction of "are not", auxiliary verb "to be", 3rd person plural, negative polarity
+coming : main verb "come", present participle, forming present continuous tense
+to : preposition indicating direction
+the : definite determiner
+party : noun, common, singular, object of the preposition "to"
+, : punctuation mark separating main clause from tag question
+are : auxiliary verb "to be", 3rd person plural, positive polarity matching the negative main clause
+they : pronoun, subject of the tag question, referring back to "They"
+? : punctuation mark indicating a question
+
+Sentence: We should leave now, shouldn't we?
+We : pronoun, subject of the modal verb "should"
+should : modal auxiliary verb, positive polarity
+leave : main verb "leave", base form
+now : adverb of time
+, : punctuation mark separating main clause from tag question
+shouldn't : contraction of "should not", modal auxiliary verb, negative polarity matching the positive main clause
+we : pronoun, subject of the tag question, referring back to "We"
+? : punctuation mark indicating a question
+
+Sentence: He can swim very well, can't he?
+He : pronoun, subject of the modal verb "can"
+can : modal auxiliary verb, positive polarity
+swim : main verb "swim", base form
+very : adverb of degree modifying "well"
+well : adverb of manner modifying "swim"
+, : punctuation mark separating main clause from tag question
+can't : contraction of "cannot", modal auxiliary verb, negative polarity matching the positive main clause
+he : pronoun, subject of the tag question, referring back to "He"
+? : punctuation mark indicating a question
+
+Sentence: You were at the library yesterday, weren't you?
+You : pronoun, subject of the verb "were"
+were : auxiliary verb "to be", 2nd person, past tense, positive polarity
+at : preposition indicating location
+the : definite determiner
+library : noun, common, singular, object of the preposition "at"
+yesterday : adverb of time
+, : punctuation mark separating main clause from tag question
+weren't : contraction of "were not", auxiliary verb "to be", 2nd person, negative polarity matching the positive main clause
+you : pronoun, subject of the tag question, referring back to "You"
+? : punctuation mark indicating a question
+
+Sentence: That movie was boring, wasn't it?
+That : demonstrative determiner
+movie : noun, common, singular, subject of the verb "was"
+was : auxiliary verb "to be", 3rd person singular, past tense, positive polarity
+boring : adjective, subject complement describing "movie"
+, : punctuation mark separating main clause from tag question
+wasn't : contraction of "was not", auxiliary verb "to be", 3rd person singular, negative polarity matching the positive main clause
+it : pronoun, subject of the tag question, referring back to "That movie"
+? : punctuation mark indicating a question
+
+Sentence: I am late, aren't I?
+I : pronoun, subject of the verb "am"
+am : auxiliary verb "to be", 1st person singular, present tense, positive polarity
+late : adjective, subject complement describing "I"
+, : punctuation mark separating main clause from tag question
+aren't : contraction of "are not", auxiliary verb "to be", 1st person singular (irregular form for tag questions), negative polarity matching the positive main clause
+I : pronoun, subject of the tag question, referring back to "I"
+? : punctuation mark indicating a question
+
+Sentence: They didn't see the sign, did they?
+They : pronoun, subject of the verb "see"
+didn't : contraction of "did not", auxiliary verb "to do", 3rd person plural, past tense, negative polarity
+see : main verb "see", base form
+the : definite determiner
+sign : noun, common, singular, direct object of the verb "see"
+, : punctuation mark separating main clause from tag question
+did : auxiliary verb "to do", 3rd person plural, past tense, positive polarity matching the negative main clause
+they : pronoun, subject of the tag question, referring back to "They"
+? : punctuation mark indicating a question
+
+Sentence: Let's go for a walk, shall we?
+Let's : contraction of "Let us", imperative verb phrase suggesting an action including the speaker
+go : main verb "go", base form
+for : preposition indicating purpose
+a : indefinite determiner
+walk : noun, common, singular, object of the preposition "for"
+, : punctuation mark separating main clause from tag question
+shall : modal auxiliary verb, positive polarity (standard tag for "Let's")
+we : pronoun, subject of the tag question, referring back to the implied "us"
+? : punctuation mark indicating a question
+
+Sentence: Nothing happened, did it?
+Nothing : indefinite pronoun, subject of the verb "happened", carries negative meaning
+happened : main verb "happen", past tense, positive form but semantically negative due to subject
+, : punctuation mark separating main clause from tag question
+did : auxiliary verb "to do", 3rd person singular, past tense, positive polarity matching the negative sense of "Nothing"
+it : pronoun, subject of the tag question, referring back to "Nothing"
+? : punctuation mark indicating a question
+
+Sentence: Everyone knows the answer, don't they?
+Everyone : indefinite pronoun, subject of the verb "knows", treated as plural in tag questions
+knows : main verb "know", 3rd person singular, present tense, positive polarity
+the : definite determiner
+answer : noun, common, singular, direct object of the verb "knows"
+, : punctuation mark separating main clause from tag question
+don't : contraction of "do not", auxiliary verb "to do", 3rd person plural, negative polarity matching the positive main clause
+they : pronoun, subject of the tag question, referring back to "Everyone"
+? : punctuation mark indicating a question
+
+Sentence: You won't tell anyone, will you?
+You : pronoun, subject of the modal verb "will"
+won't : contraction of "will not", modal auxiliary verb, future tense, negative polarity
+tell : main verb "tell", base form
+anyone : indefinite pronoun, indirect object of the verb "tell"
+, : punctuation mark separating main clause from tag question
+will : modal auxiliary verb, future tense, positive polarity matching the negative main clause
+you : pronoun, subject of the tag question, referring back to "You"
+? : punctuation mark indicating a question
+
+Sentence: There is a problem, isn't there?
+There : existential pronoun, dummy subject
+is : auxiliary verb "to be", 3rd person singular, present tense, positive polarity
+a : indefinite determiner
+problem : noun, common, singular, logical subject of the sentence
+, : punctuation mark separating main clause from tag question
+isn't : contraction of "is not", auxiliary verb "to be", 3rd person singular, negative polarity matching the positive main clause
+there : existential pronoun, subject of the tag question, referring back to "There"
+? : punctuation mark indicating a question

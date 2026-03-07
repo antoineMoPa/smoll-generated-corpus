@@ -1,0 +1,44 @@
+The price of a jacket was $80 and increased by 25%. What is the new price? Output in json, format { "result": number }
+{ "result": 100 }
+
+Output in json, format { "result": number } — A town had 120 residents and the population grew by 10%. How many residents are there now?
+{ "result": 132 }
+
+A smartphone originally cost $150. Output in json, format { "result": number } What is the price after a 20% decrease?
+{ "result": 120 }
+
+The temperature was 40 degrees and dropped by 15%. What is the new temperature? Output in json, format { "result": 0 }
+{ "result": 34 }
+
+A company employed 50 people and hired 30% more staff. How many employees are there now? Output in json.
+{ "result": 65 }
+
+A video game console cost $200 but the price was reduced by 15%. What is the sale price? Output in json, format { "result": number }
+{ "result": 170 }
+
+Output in json, format { "result": number } — A school club had 40 members and gained 25% new members. What is the total membership now?
+{ "result": 50 }
+
+A pair of shoes was priced at $60. Output in json, format { "result": number } What is the final cost after a 10% discount?
+{ "result": 54 }
+
+The weight of a package was 100 kg and it increased by 40%. What is the new weight? Output in json, format { "result": 0 }
+{ "result": 140 }
+
+A bakery sold 90 loaves of bread yesterday and sales increased by 20% today. How many loaves were sold today? Output in json.
+{ "result": 108 }
+
+The value of a stock was $120 and it fell by 25%. What is the current value? Output in json, format { "result": number }
+{ "result": 90 }
+
+Output in json, format { "result": number } — A garden had 160 flowers and 10% of them wilted. How many flowers remain?
+{ "result": 144 }
+
+A worker earned $180 per week and received a 15% raise. Output in json, format { "result": number } What is the new weekly salary?
+{ "result": 207 }
+
+A car's fuel efficiency was 30 miles per gallon and improved by 20%. What is the new efficiency? Output in json, format { "result": 0 }
+{ "result": 36 }
+
+A store had 200 items in stock and sold 50% of them. How many items are left? Output in json.
+{ "result": 100 }

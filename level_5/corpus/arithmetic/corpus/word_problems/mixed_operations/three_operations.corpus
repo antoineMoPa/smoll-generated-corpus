@@ -1,0 +1,44 @@
+A school buys 3 boxes of pencils with 20 in each, gives away 15, and then buys 10 more. How many pencils do they have now? Output in json, format { "result": number }
+{ "result": 55 }
+
+Sarah runs 5 miles on Monday, 3 miles on Tuesday, and doubles her Tuesday distance on Wednesday. What is her total running distance? Output in json, format { "result": number }
+{ "result": 14 }
+
+A baker makes 40 cookies, eats 2, packs the rest into bags of 6, and sells 3 bags. How many cookies are left unsold? Output in json, format { "result": number }
+{ "result": 20 }
+
+Tom has $50, spends $12 on a shirt and $8 on lunch, then finds $5 on the ground. How much money does Tom have now? Output in json, format { "result": number }
+{ "result": 35 }
+
+A garden has 5 rows of 8 flowers, 10 flowers die, and the gardener plants 15 new ones. How many flowers are in the garden now? Output in json, format { "result": number }
+{ "result": 45 }
+
+A bus starts with 25 passengers, 7 get off at the first stop, 12 get on at the second, and 4 get off at the third. How many passengers are on the bus? Output in json, format { "result": number }
+{ "result": 26 }
+
+Jake reads 10 pages an hour for 3 hours, skips 5 pages he already read, and then reads 20 more. How many unique pages did he read in total? Output in json, format { "result": number }
+{ "result": 45 }
+
+A store has 100 apples, sells 30 in the morning, receives a delivery of 50, and sells 20 in the afternoon. How many apples remain? Output in json, format { "result": number }
+{ "result": 100 }
+
+Emily saves $10 a week for 6 weeks, spends $25 on a game, and then saves another $15. What is her total savings now? Output in json, format { "result": number }
+{ "result": 50 }
+
+A factory makes 60 toys, packages them in boxes of 10, ships 4 boxes, and makes 20 more toys. How many loose toys are left in the factory? Output in json, format { "result": number }
+{ "result": 40 }
+
+There are 4 teams with 9 players each, 5 players get injured, and 10 new players join. How many active players are there now? Output in json, format { "result": number }
+{ "result": 41 }
+
+A chef uses 3 pounds of meat for soup, buys 2 more packages of 5 pounds each, and uses 4 pounds for stew. How many pounds of meat are left? Output in json, format { "result": number }
+{ "result": 6 }
+
+Lisa buys 3 notebooks for $4 each, pays with a $20 bill, and splits the change equally between her two friends. How much does each friend get? Output in json, format { "result": number }
+{ "result": 4 }
+
+A movie theater has 8 rows of 10 seats, 20 seats are broken, and they add 5 portable chairs. How many usable seats are available? Output in json, format { "result": number }
+{ "result": 65 }
+
+Mark collects 12 stamps in January, triples his collection in February, and then gives 10 stamps to his sister. How many stamps does Mark have left? Output in json, format { "result": number }
+{ "result": 26 }

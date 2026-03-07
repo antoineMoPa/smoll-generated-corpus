@@ -1,0 +1,126 @@
+Sentence: Who called the manager yesterday?
+who : interrogative pronoun, subject of the verb "called"
+called : verb "call", past tense, active voice
+the : definite article, singular
+manager : common noun, singular, direct object of the verb "called"
+yesterday : adverb of time, adjunct indicating when the action occurred
+
+Sentence: What did you buy at the store?
+what : interrogative pronoun, direct object of the verb "buy"
+did : auxiliary verb "do", past tense, used for question formation
+you : personal pronoun, second person singular or plural, subject of the verb "buy"
+buy : main verb "buy", base form
+at : preposition introducing the location
+the : definite article, singular
+store : common noun, singular, object of the preposition "at"
+
+Sentence: Where are they going for their vacation?
+where : interrogative adverb, adjunct indicating location
+are : auxiliary verb "be", present tense, third person plural
+they : personal pronoun, third person plural, subject of the verb "going"
+going : main verb "go", present participle
+for : preposition indicating purpose
+their : possessive determiner, third person plural
+vacation : common noun, singular, object of the preposition "for"
+
+Sentence: When will the train arrive at the station?
+when : interrogative adverb, adjunct indicating time
+will : auxiliary verb, future tense marker
+the : definite article, singular
+train : common noun, singular, subject of the verb "arrive"
+arrive : main verb "arrive", base form
+at : preposition introducing the location
+the : definite article, singular
+station : common noun, singular, object of the preposition "at"
+
+Sentence: Why did she cancel the meeting?
+why : interrogative adverb, adjunct indicating reason
+did : auxiliary verb "do", past tense, used for question formation
+she : personal pronoun, third person singular feminine, subject of the verb "cancel"
+cancel : main verb "cancel", base form
+the : definite article, singular
+meeting : common noun, singular, direct object of the verb "cancel"
+
+Sentence: How does this machine work?
+how : interrogative adverb, adjunct indicating manner
+does : auxiliary verb "do", present tense, third person singular
+this : demonstrative determiner, singular
+machine : common noun, singular, subject of the verb "work"
+work : main verb "work", base form
+
+Sentence: Which book belongs to Sarah?
+which : interrogative determiner, modifying the noun "book"
+book : common noun, singular, subject of the verb "belongs"
+belongs : verb "belong", present tense, third person singular
+to : preposition indicating possession
+Sarah : proper noun, singular, object of the preposition "to"
+
+Sentence: Whose keys are on the table?
+whose : interrogative possessive determiner, modifying the noun "keys"
+keys : common noun, plural, subject of the verb "are"
+are : verb "be", present tense, third person plural
+on : preposition indicating location
+the : definite article, singular
+table : common noun, singular, object of the preposition "on"
+
+Sentence: Who wrote this famous novel?
+who : interrogative pronoun, subject of the verb "wrote"
+wrote : verb "write", past tense, active voice
+this : demonstrative determiner, singular
+famous : adjective, modifying the noun "novel"
+novel : common noun, singular, direct object of the verb "wrote"
+
+Sentence: What caused the power outage last night?
+what : interrogative pronoun, subject of the verb "caused"
+caused : verb "cause", past tense, active voice
+the : definite article, singular
+power : common noun, singular, part of the compound noun "power outage"
+outage : common noun, singular, direct object of the verb "caused"
+last : adjective, indicating time
+night : common noun, singular, adjunct indicating time
+
+Sentence: Where did you hide the treasure map?
+where : interrogative adverb, adjunct indicating location
+did : auxiliary verb "do", past tense, used for question formation
+you : personal pronoun, second person, subject of the verb "hide"
+hide : main verb "hide", base form
+the : definite article, singular
+treasure : common noun, singular, part of the compound noun "treasure map"
+map : common noun, singular, direct object of the verb "hide"
+
+Sentence: When is the next flight to London?
+when : interrogative adverb, adjunct indicating time
+is : verb "be", present tense, third person singular
+the : definite article, singular
+next : adjective, modifying the noun "flight"
+flight : common noun, singular, subject of the verb "is"
+to : preposition indicating destination
+London : proper noun, singular, object of the preposition "to"
+
+Sentence: Why are the streets so quiet today?
+why : interrogative adverb, adjunct indicating reason
+are : verb "be", present tense, third person plural
+the : definite article, plural
+streets : common noun, plural, subject of the verb "are"
+so : adverb of degree, modifying the adjective "quiet"
+quiet : adjective, subject complement describing "streets"
+today : adverb of time, adjunct indicating when the state exists
+
+Sentence: How many students passed the final exam?
+how : interrogative adverb, part of the phrase "how many"
+many : interrogative determiner, modifying the noun "students"
+students : common noun, plural, subject of the verb "passed"
+passed : verb "pass", past tense, active voice
+the : definite article, singular
+final : adjective, modifying the noun "exam"
+exam : common noun, singular, direct object of the verb "passed"
+
+Sentence: Which color do you prefer for the walls?
+which : interrogative determiner, modifying the noun "color"
+color : common noun, singular, direct object of the verb "prefer"
+do : auxiliary verb "do", present tense, used for question formation
+you : personal pronoun, second person, subject of the verb "prefer"
+prefer : main verb "prefer", base form
+for : preposition indicating purpose or association
+the : definite article, plural
+walls : common noun, plural, object of the preposition "for"
