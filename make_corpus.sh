@@ -1,11 +1,13 @@
 #!/bin/bash
 
+shopt -s nullglob
+
 for dir in ./level_*/; do
     # reset level corpus
     > $dir/corpus.corpus
-    for file in $dir/*.txt; do
+    for file in "${dir}"*.txt; do
         echo "Processing $file"
-        cat $file >> $dir/corpus.corpus
+        cat "$file" >> $dir/corpus.corpus
     done
 done
 
