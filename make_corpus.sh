@@ -55,10 +55,38 @@ pushd .
 cd level_5/
 # Start with previous levels
 cat ../level_4/corpus.corpus > corpus.corpus
-# Add all generated level_5 .corpus files with stop tokens
-for f in $(find corpus/ -name '*.corpus' -type f | sort); do
-    cat "$f" >> corpus.corpus
+
+# Non-JSON level_5 content: all files (no format tag)
+for dir in sentence_analysis conjugations english spanish french italian portuguese tables word_problems; do
+    for f in $(find corpus/$dir -name '*.corpus' -type f 2>/dev/null | sort); do
+        cat "$f" >> corpus.corpus
+        echo '<stop>' >> corpus.corpus
+    done
+done
+
+# JSON extraction QA: keep all files, prefix each prompt line with [json]
+# These are 2-line pairs (prompt / answer), so tag odd-numbered lines.
+for dir in json_qa json_qa_2 json_instruction; do
+    for f in $(find corpus/$dir -name '*.corpus' -type f 2>/dev/null | sort); do
+        awk 'NR%2==1{print "[json] " $0} NR%2==0{print}' "$f" >> corpus.corpus
+    done
+done
+
+# Tool-use API calls: sample to ~15% of total corpus lines.
+# Non-tool-use lines so far ≈ level4(52625) + sentence_analysis(15002) +
+# json_qa(9939) + conjugations(6772) + other(6459) ≈ 90797.
+# Target: tool_use_lines / (90797 + tool_use_lines) = 0.15
+#   => tool_use_lines ≈ 16023. Current files avg ~57 lines → need ~281 files.
+# We sample 30% of all tool_use + tool_use_2 files (904 total → ~271 files).
+ALL_TOOL_USE=$(find corpus/tool_use corpus/tool_use_2 -name '*.corpus' -type f 2>/dev/null)
+TOOL_USE_COUNT=$(echo "$ALL_TOOL_USE" | wc -l)
+TOOL_USE_SAMPLE=$(( TOOL_USE_COUNT * 30 / 100 ))
+echo "Sampling $TOOL_USE_SAMPLE / $TOOL_USE_COUNT tool_use files (~15% of total lines)"
+echo "$ALL_TOOL_USE" | shuf | head -n "$TOOL_USE_SAMPLE" | sort | while read f; do
+    # Prefix each Question: line with [json] so the model gates on that token
+    sed 's/^Question:/[json] Question:/' "$f" >> corpus.corpus
     echo '<stop>' >> corpus.corpus
 done
+
 du -h corpus.corpus
 popd
