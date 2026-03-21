@@ -555,3 +555,150 @@ What is double 25? Output in json, format { "result": number }
 
 What is half of 80? Output in json, format { "result": number }
 { "result": 40 }
+
+Is a bat a mammal? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is a salmon a mammal? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a dolphin a fish? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a cow a mammal? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is an eagle a bird? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is a frog a reptile? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a spider an insect? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a bee an insect? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is a cat a reptile? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a snake a mammal? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a penguin a bird? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is a crab a mammal? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a horse an animal? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is a rose a vegetable? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a carrot a vegetable? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is a banana a fruit? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is an apple a vegetable? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is salt sweet? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is sugar salty? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is milk a liquid? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is iron a metal? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is wood a metal? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is fire cold? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is oxygen a gas? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is the moon larger than the Earth? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is the sun a planet? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is snow warm? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is lead a metal? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is glass a liquid? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is Mars a planet? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is the Pacific Ocean a lake? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a car a vehicle? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is a hammer a food? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is a chair furniture? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 15 divisible by 5? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 7 greater than 10? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is 4 odd? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is 9 even? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is 6 divisible by 3? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 11 odd? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 20 less than 15? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is 8 divisible by 4? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 5 even? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is 12 divisible by 5? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is 3 greater than 2? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 100 divisible by 7? Output in json, format { "result": boolean }
+{ "result": false }
+
+Is 0 even? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 1 greater than 0? Output in json, format { "result": boolean }
+{ "result": true }
+
+Is 50 divisible by 6? Output in json, format { "result": boolean }
+{ "result": false }

@@ -64,11 +64,21 @@ for dir in sentence_analysis conjugations english spanish french italian portugu
     done
 done
 
-# JSON extraction QA: keep all files, prefix each prompt line with [json]
-# These are 2-line pairs (prompt / answer), so tag odd-numbered lines.
-for dir in json_qa json_qa_2 json_instruction; do
+# json_qa / json_qa_2: 3-line blocks (Context / Input / Output) + blank separator.
+# Do NOT use [json] prefix here — the 3-line format conflicts with the 2-line
+# json_instruction format and trains the model to output "Context:" after [json].
+for dir in json_qa json_qa_2; do
     for f in $(find corpus/$dir -name '*.corpus' -type f 2>/dev/null | sort); do
-        awk 'NR%2==1{print "[json] " $0} NR%2==0{print}' "$f" >> corpus.corpus
+        cat "$f" >> corpus.corpus
+        echo '<stop>' >> corpus.corpus
+    done
+done
+
+# json_instruction: true 2-line pairs (prompt / JSON answer) with blank separators.
+# Strip blank lines first so NR%2 aligns correctly regardless of separators.
+for dir in json_instruction; do
+    for f in $(find corpus/$dir -name '*.corpus' -type f 2>/dev/null | sort); do
+        grep -v '^$' "$f" | awk 'NR%2==1{print "[json] " $0} NR%2==0{print}' >> corpus.corpus
     done
 done
 
