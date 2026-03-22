@@ -8,6 +8,7 @@ for dir in ./level_*/; do
     for file in "${dir}"*.txt; do
         echo "Processing $file"
         cat "$file" >> $dir/corpus.corpus
+        echo '<stop>' >> $dir/corpus.corpus
     done
 done
 
@@ -23,10 +24,10 @@ popd
 
 pushd .
 cd level_3/
-shuf ../level_2/corpus.txt > corpus.1.corpus
-shuf ../level_2/corpus.txt >> corpus.1.corpus
-shuf ../level_2/corpus.txt >> corpus.1.corpus
-shuf corpus.txt >> corpus.1.corpus
+shuf ../level_2/corpus.txt | awk '{print; print "<stop>"}' > corpus.1.corpus
+shuf ../level_2/corpus.txt | awk '{print; print "<stop>"}' >> corpus.1.corpus
+shuf ../level_2/corpus.txt | awk '{print; print "<stop>"}' >> corpus.1.corpus
+shuf corpus.txt | awk '{print; print "<stop>"}' >> corpus.1.corpus
 ./auto_corpus.sh >> corpus.1.corpus
 # Include LLM-expanded rewrites if they exist
 if [ -f llm_expanded_corpus.txt ]; then
@@ -78,7 +79,7 @@ done
 # Strip blank lines first so NR%2 aligns correctly regardless of separators.
 for dir in json_instruction; do
     for f in $(find corpus/$dir -name '*.corpus' -type f 2>/dev/null | sort); do
-        grep -v '^$' "$f" | awk 'NR%2==1{print "[json] " $0} NR%2==0{print}' >> corpus.corpus
+        grep -v '^$' "$f" | awk 'NR%2==1{print "[json] " $0} NR%2==0{print; print "<stop>"}' >> corpus.corpus
     done
 done
 
